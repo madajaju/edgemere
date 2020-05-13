@@ -1,0 +1,22 @@
+@startuml
+
+partition "Common Physical Layer" {
+
+}
+
+partition User #cccccc {
+  (*) --> "Create Project"
+  --> "Write Code"
+}
+
+partition "Common Physical Layer" #lightblue {
+  "Write Code" --> "Test Code"
+  "Test Code" --> "Deploy Code"
+  "Deploy Code" --> (*)
+}
+
+partition Used #cccccc {
+  "Test Code" --> "Do Something"
+}
+
+@enduml

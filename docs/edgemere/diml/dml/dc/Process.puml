@@ -1,0 +1,22 @@
+@startuml
+
+partition "Data Controller" {
+
+}
+
+partition User #cccccc {
+  (*) --> "Create Project"
+  --> "Write Code"
+}
+
+partition "Data Controller" #lightblue {
+  "Write Code" --> "Test Code"
+  "Test Code" --> "Deploy Code"
+  "Deploy Code" --> (*)
+}
+
+partition Used #cccccc {
+  "Test Code" --> "Do Something"
+}
+
+@enduml

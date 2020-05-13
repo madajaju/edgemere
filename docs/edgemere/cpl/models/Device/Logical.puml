@@ -1,0 +1,44 @@
+@startuml
+
+class "Device" as Model {
+ string name
+ string ename
+ string type
+
+ addToHardware()
+ create()
+ disable()
+ enable()
+ getReservations()
+ provision()
+ reserve()
+ 
+}
+
+rectangle "PhysicalProfile" as PhysicalProfile {
+}
+
+Model o--> "1" PhysicalProfile : profile
+
+
+rectangle "Hardware" as Hardware {
+}
+
+Model *--> "n" Hardware : hardware
+
+
+rectangle "DataCenter" as DataCenter {
+}
+
+Model o--> "1" DataCenter : datacenter
+
+
+rectangle "AggregatedDevice" as AggregatedDevice {
+}
+
+Model o--> "1" AggregatedDevice : parent
+
+
+
+
+@enduml

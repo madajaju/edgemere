@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+const fs = require('fs');
+const path = require('path');
+const Client = require('node-rest-client').Client;
+const client = new Client();
+
+program
+    .version('0.0.1')
+    .option('--host <hostname:port>', 'Initalize the connection')
+    .parse(process.argv);
+
+let url = program.host + '/init';
+console.log(url);
+client.get(url, (data,response) => {
+    if(data.error) {
+        console.error('Error:', data.error);
+    }
+    else {
+        let config = {
+            host: program.host,
+            actions: data
+        };
+        fs.writeFileSync('.ailtire.js', "module.exports = " + JSON.stringify(config));
+    }
+});

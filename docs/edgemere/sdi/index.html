@@ -1,0 +1,293 @@
+<head>
+    <link rel="stylesheet/less" type="text/css" href="/styles/importer.less" />
+    <script src="/js/less.js" type="text/javascript"></script>
+</head>
+
+<h1>Software Defined Infrastructure</h1>
+Software Defined Infrastructure is a package that contains...
+
+
+
+<h2>Use Cases</h2>
+<ul>
+    <li> <a href='/doc/usecase/edgemere/sdi/ManageResources'>Manage Resources</a></li>
+
+</ul>
+
+<img src='./UseCases.puml'></img>
+<h2>Users</h2>
+<ul>
+    <li><a href='/doc/actor/itops'>IT Operations</a></li>
+
+</ul>
+
+<img src='./UserInteraction.puml'></img>
+
+<h2>Interface</h2>
+<ul>
+<li><a href='#Action--edgemere-sdi-getresources'>/edgemere/sdi/getresources(...)</a></li>
+<li><a href='#Action--edgemere-sdi-listresources'>/edgemere/sdi/listresources(...)</a></li>
+<li><a href='#Action--edgemere-sdi-releaseresources'>/edgemere/sdi/releaseresources(...)</a></li>
+<li><a href='#Action--edgemere-sdi-reserve'>/edgemere/sdi/reserve(...)</a></li>
+<li><a href='#Action--edgemere-sdi-sdi-getresources'>/edgemere/sdi/sdi/getresources(...)</a></li>
+
+</ul>
+
+<h2>Logical Artifacts</h2>
+The Data Model for the  Software Defined Infrastructure shows how the different objects and classes of object interact
+and their structure.
+
+<img src='./Logical.puml'>
+
+<h3>Sub Packages</h3>
+<ul>
+
+</ul>
+
+<h3>Classes</h3>
+<ul>
+<li><a href='/doc/model/edgemere/sdi/Cloud'>Cloud</a>
+<li><a href='/doc/model/edgemere/sdi/Request'>Request</a>
+<li><a href='/doc/model/edgemere/sdi/Reservation'>Reservation</a>
+<li><a href='/doc/model/edgemere/sdi/Resource'>Resource</a>
+
+</ul>
+
+
+
+<h2>Activities and Flows</h2>
+The Software Defined Infrastructure subsystem provides the following activities and flows.
+
+<img src='./Process.puml'></img>
+
+<h2>Deployment Architecture</h2>
+This subsystem is deployed using micro-services as shown in the diagram below. The 'micro' module is
+used to implement the micro-services in the system.
+The subsystem also has an CLI, REST and Web Interface exposed through a sailajs application. The sailsjs
+application will interface with the micro-services and can monitor and drive work-flows through the mesh of
+micro-services.
+
+<img src='./Deployment.puml'> </img>
+
+<h2>Physical Architecture</h2>
+The Software Defined Infrastructure subsystem is is physically laid out on a hybrid cloud infrastructure. Each microservice is shown
+how they connect to each other. All of the micro-services communicate to each other and the main app through a
+REST interface. A CLI, REST or Web interface for the app is how other subsystems or actors interact. Requests are
+forwarded to micro-services through the REST interface of each micro-service.
+
+<img src='./Physical.puml'> </img>
+
+<h2>Micro-Services</h2>
+These are the micro-services for the subsystem. The combination of the micro-services help implement
+the subsystem's logic.
+
+<h3>dev</h3>
+<ul>
+    
+        <li>frontend : _sdi_web</li>
+    
+        <li>gw : _sdi_gw</li>
+    
+</ul>
+
+<h3>test</h3>
+<ul>
+    
+        <li>frontend : _sdi_web</li>
+    
+        <li>gw : _sdi_gw</li>
+    
+</ul>
+
+<h3>prod</h3>
+<ul>
+    
+        <li>frontend : _sdi_web</li>
+    
+        <li>gw : _sdi_gw</li>
+    
+</ul>
+
+
+<h2>Interface Details</h2>
+<div id="Action--edgemere-sdi-getresources">
+<h3>/edgemere/sdi/getresources</h3>
+<ul>
+<li>REST - /edgemere/sdi/getresources</li>
+<li>bin -  edgemere sdi getresources</li>
+<li>js - .edgemere.sdi.getresources</li>
+</ul>
+
+Get Resources from the SDI Layer
+
+<table class="MethodTable">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>cloud</td>
+        <td>string</td>
+        <td>true</td>
+        <td>Cloud to request the Resources</td>
+    </tr>
+
+    <tr>
+        <td>name</td>
+        <td>string</td>
+        <td>true</td>
+        <td>The name of the Resource to create.</td>
+    </tr>
+
+    <tr>
+        <td>requirements</td>
+        <td>YAML</td>
+        <td>true</td>
+        <td>The Requirements to create the resource</td>
+    </tr>
+
+</table>
+
+
+</div>
+<div id="Action--edgemere-sdi-listresources">
+<h3>/edgemere/sdi/listresources</h3>
+<ul>
+<li>REST - /edgemere/sdi/listresources</li>
+<li>bin -  edgemere sdi listresources</li>
+<li>js - .edgemere.sdi.listresources</li>
+</ul>
+
+Release Resources from the SDI Layer with the given name
+
+<table class="MethodTable">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>cloud</td>
+        <td>string</td>
+        <td>true</td>
+        <td>Cloud to request the Resources</td>
+    </tr>
+
+</table>
+
+
+</div>
+<div id="Action--edgemere-sdi-releaseresources">
+<h3>/edgemere/sdi/releaseresources</h3>
+<ul>
+<li>REST - /edgemere/sdi/releaseresources</li>
+<li>bin -  edgemere sdi releaseresources</li>
+<li>js - .edgemere.sdi.releaseresources</li>
+</ul>
+
+Release Resources from the SDI Layer with the given name
+
+<table class="MethodTable">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>cloud</td>
+        <td>string</td>
+        <td>true</td>
+        <td>Cloud to request the Resources</td>
+    </tr>
+
+    <tr>
+        <td>name</td>
+        <td>string</td>
+        <td>true</td>
+        <td>The name of the Resource to create.</td>
+    </tr>
+
+</table>
+
+
+</div>
+<div id="Action--edgemere-sdi-reserve">
+<h3>/edgemere/sdi/reserve</h3>
+<ul>
+<li>REST - /edgemere/sdi/reserve</li>
+<li>bin -  edgemere sdi reserve</li>
+<li>js - .edgemere.sdi.reserve</li>
+</ul>
+
+Reserve Resources from the SDI Layer
+
+<table class="MethodTable">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>cloud</td>
+        <td>string</td>
+        <td>true</td>
+        <td>Cloud to request the Resources</td>
+    </tr>
+
+    <tr>
+        <td>name</td>
+        <td>string</td>
+        <td>true</td>
+        <td>The name of the reservation.</td>
+    </tr>
+
+    <tr>
+        <td>requirements</td>
+        <td>YAML</td>
+        <td>true</td>
+        <td>The Requirements to create the resource</td>
+    </tr>
+
+</table>
+
+
+</div>
+<div id="Action--edgemere-sdi-sdi-getresources">
+<h3>/edgemere/sdi/sdi/getresources</h3>
+<ul>
+<li>REST - /edgemere/sdi/sdi/getresources</li>
+<li>bin -  edgemere sdi sdi getresources</li>
+<li>js - .edgemere.sdi.sdi.getresources</li>
+</ul>
+
+Description of the action
+
+<table class="MethodTable">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>attr1</td>
+        <td>string</td>
+        <td>false</td>
+        <td>Description for the parameter</td>
+    </tr>
+
+</table>
+
+
+</div>
+

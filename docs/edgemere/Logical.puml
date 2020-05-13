@@ -1,0 +1,41 @@
+@startuml
+
+
+
+package "edgemere" #lightgreen {
+
+    interface "edgemere" as i {
+    
+    }
+
+
+    CLI ()-- i
+    REST ()-- i
+    Web ()-- i
+    
+
+
+package aml #white {
+}
+
+package cpl #white {
+}
+
+package diml #white {
+}
+
+package ia #white {
+}
+
+package sa #white {
+}
+
+package sml #white {
+}
+
+package sdi #white {
+}
+
+}
+
+@enduml

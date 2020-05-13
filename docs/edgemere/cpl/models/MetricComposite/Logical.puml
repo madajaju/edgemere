@@ -1,0 +1,26 @@
+@startuml
+
+class "MetricComposite" as Model {
+ string name
+ string value
+
+ create()
+ findMatchDeep()
+ lessThanEq()
+ minus()
+ plus()
+ copy()
+ factory()
+ greaterThanEq()
+ 
+}
+
+rectangle "Metric" as Metric {
+}
+
+Model *--> "n" Metric : values
+
+
+
+
+@enduml

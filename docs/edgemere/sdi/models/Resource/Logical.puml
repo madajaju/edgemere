@@ -1,0 +1,38 @@
+@startuml
+
+class "Resource" as Model {
+ string name
+ string ename
+ boolean disabled
+ string type
+
+ 
+}
+
+rectangle "PhysicalProfile" as PhysicalProfile {
+}
+
+Model *--> "1" PhysicalProfile : profile
+
+
+rectangle "Hardware" as Hardware {
+}
+
+Model o--> "n" Hardware : hardware
+
+
+rectangle "ServiceInstance" as ServiceInstance {
+}
+
+Model o--> "n" ServiceInstance : instances
+
+
+rectangle "Cloud" as Cloud {
+}
+
+Model o--> "1" Cloud : cloud
+
+
+
+
+@enduml

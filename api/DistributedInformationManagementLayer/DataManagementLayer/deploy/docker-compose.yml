@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+  frontend:
+    image: diml_dml_web
+    networks:
+      - sibling
+  gw:
+    image: diml_dml_gw
+    networks:
+      children:
+        aliases:
+          - parent
+          - top
+      sibling:
+        aliases:
+          - gateway
+
+networks:
+  children:
+    driver: overlay
+    attachable: true
+    name: ${APPNAME}_diml_dml_family
+  sibling:
+    driver: overlay
+  parent:
+    external: true
+    name: ${APPNAME}_diml_family

@@ -1,0 +1,11 @@
+@startuml
+
+
+Init --> Enabled : create
+
+Enabled --> Disabled : disable
+
+Disabled --> Enabled : enable
+
+
+@enduml

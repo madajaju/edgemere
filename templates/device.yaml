@@ -1,0 +1,46 @@
+name: hosta
+cabilities:
+  devicecap: 100
+hardware:
+  CPU1:
+    type: Compute
+    capabilities:
+      speed: 2.5GHz
+      cores: 24
+      memory: 1500 GB
+  CPU2:
+    type: Compute
+    capabilities:
+      speed: 2.5GHz
+      cores: 24
+      memory: 1500 GB
+  Storage1:
+    type: Storage
+    capabilities:
+      speed: fast
+      size: 3200 GB
+  Storage2:
+    type: Storage
+    capabilities:
+      speed: fast
+      size: 3200 GB
+  Storage3:
+    type: Storage
+    capabilities:
+      speed: fast
+      size: 3200 GB
+  Network1:
+    type: Network
+    capabilities:
+      speed: 1 Gb
+      size: 128
+  Network2:
+    type: Network
+    capabilities:
+      speed: 1 Gb
+      size: 128
+  Network3:
+    type: Network
+    capabilities:
+      speed: 1 Gb
+      size: 128

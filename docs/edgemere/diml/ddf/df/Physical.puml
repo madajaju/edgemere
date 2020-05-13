@@ -1,0 +1,38 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Data Flow" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component "edgemere/diml/ddf/df" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+  
+    file "node web/server.js" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+    file "node gateway/server.js" as gateway_container
+    REST --> gateway_container
+    socket ---> gateway_container
+  
+  }
+  folder images #ffffff {
+  
+      artifact diml_ddf_df_web
+      web_container --> diml_ddf_df_web
+    
+      artifact diml_ddf_df_gw
+      gateway_container --> diml_ddf_df_gw
+    
+  }
+}
+CLI -- binName
+Web - REST
+WebSocket -- socket
+
+@enduml

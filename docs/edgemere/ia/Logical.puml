@@ -1,0 +1,20 @@
+@startuml
+
+
+
+package "Identity Aspect" #lightblue {
+
+    interface "Identity Aspect" as i {
+    
+    }
+
+
+    CLI ()-- i
+    REST ()-- i
+    Web ()-- i
+    
+
+
+}
+
+@enduml

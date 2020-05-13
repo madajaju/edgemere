@@ -1,0 +1,32 @@
+@startuml
+
+
+
+package "Data Management Layer" #lightblue {
+
+    interface "Data Management Layer" as i {
+    
+    }
+
+
+    CLI ()-- i
+    REST ()-- i
+    Web ()-- i
+    
+
+
+package dc #white {
+}
+
+package do #white {
+}
+
+package fmdm #white {
+}
+
+package ge #white {
+}
+
+}
+
+@enduml

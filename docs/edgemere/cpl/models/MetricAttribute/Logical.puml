@@ -1,0 +1,19 @@
+@startuml
+
+class "MetricAttribute" as Model {
+ string name
+ string value
+
+ copy()
+ lessThanEq()
+ minus()
+ plus()
+ valueToString()
+ factory()
+ greaterThanEq()
+ 
+}
+
+
+
+@enduml

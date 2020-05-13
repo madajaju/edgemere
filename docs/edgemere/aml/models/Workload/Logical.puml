@@ -1,0 +1,17 @@
+@startuml
+
+class "Workload" as Model {
+ string attr1
+
+ 
+}
+
+rectangle "ModelName" as ModelName {
+}
+
+Model o--> "1" ModelName : assoc1
+
+
+
+
+@enduml

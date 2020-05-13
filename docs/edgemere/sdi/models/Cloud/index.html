@@ -1,0 +1,128 @@
+<head>
+    <link rel="stylesheet/less" type="text/css" href="/styles/importer.less" />
+    <script src="/js/less.js" type="text/javascript"></script>
+</head>
+
+<h1>Cloud</h1>
+This represents a cloud in the ecosystem. This can be public or private onprem or offprem
+
+<img src='./Logical.puml' > </img>
+
+<h2>Attributes</h2>
+<ul>
+
+<li>name:string - Name of the cloud</li>
+
+<li>ename:string - Extended name of the cloud. This gives the full path to the cloud in the system</li>
+
+</ul>
+
+<h2>Associations</h2>
+<table class="AssociationTable DocTable">
+    <tr>
+        <th>Name</th>
+        <th>Cardinality</th>
+        <th>Class</th>
+        <th>Composition</th>
+        <th>Owner</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>resources</td>
+        <td>n</td>
+        <td>Resource</td>
+        <td>false</td>
+        <td>true</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>devices</td>
+        <td>n</td>
+        <td>Device</td>
+        <td>false</td>
+        <td>false</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>adevices</td>
+        <td>n</td>
+        <td>AggregatedDevice</td>
+        <td>false</td>
+        <td>false</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>datacenters</td>
+        <td>n</td>
+        <td>DataCenter</td>
+        <td>false</td>
+        <td>false</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>reservations</td>
+        <td>n</td>
+        <td>Reservation</td>
+        <td>false</td>
+        <td>true</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>requests</td>
+        <td>n</td>
+        <td>Request</td>
+        <td>false</td>
+        <td>true</td>
+        <td></td>
+    </tr>
+
+</table>
+
+
+</table>
+
+<h2>Methods</h2>
+<ul>
+
+    <li> <a href="#Action-Cloud-reserve">reserve() - Reserve a resource</a>
+    
+</ul>
+<h2>Method Details</h2>
+    
+        <div id="Action-Cloud-reserve">
+<h3>reserve</h3>
+<ul>
+<li>REST - reserve</li>
+<li>bin - reserve</li>
+<li>js - reserve</li>
+</ul>
+
+Reserve a resource
+
+<table class="MethodTable">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>request</td>
+        <td>object</td>
+        <td>true</td>
+        <td>Request for the reservation</td>
+    </tr>
+
+</table>
+
+
+        </div>
+
+

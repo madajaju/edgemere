@@ -1,0 +1,16 @@
+@startuml
+
+
+usecase "Manage Applications" as ManageApplications
+
+Actor "DevOps Engineer" as devops
+
+devops --> ManageApplications
+
+Actor "Application Developer" as appdev
+
+appdev --> ManageApplications
+
+
+
+@enduml

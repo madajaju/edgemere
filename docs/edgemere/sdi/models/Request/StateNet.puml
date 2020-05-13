@@ -1,0 +1,11 @@
+@startuml
+
+
+Init --> Selected : confirm
+
+Selected --> Confirmed : confirm
+
+Selected --> Rejected : free
+
+
+@enduml

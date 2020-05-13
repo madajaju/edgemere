@@ -1,0 +1,16 @@
+@startuml
+
+
+usecase "Manage AI Models" as ManageAIModels
+
+Actor "Data Scientist" as datascientist
+
+datascientist --> ManageAIModels
+
+Actor "DevOps Engineer" as devops
+
+devops --> ManageAIModels
+
+
+
+@enduml

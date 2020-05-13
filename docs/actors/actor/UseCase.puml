@@ -1,0 +1,10 @@
+@startuml
+
+left to right direction
+
+
+Actor "Actor" as Actor
+
+
+
+@enduml

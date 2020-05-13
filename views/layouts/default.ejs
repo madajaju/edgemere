@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= app.name %></title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--STYLES-->
+    <link rel="stylesheet/less" type="text/css" href="/styles/importer.less" />
+    <!--STYLES END-->
+    <script src="/js/less.js" type="text/javascript"></script>
+    <script>
+        function toggleMenu(id) {
+            // let submenus = document.getElementsByClassName('sub-action-bar-div');
+            // for (let i = 0; i < submenus.length; i++) {
+            //     submenus[i].style.display = "none";
+            // }
+            let submenu = document.getElementById(id);
+            submenu.style.display = "block";
+        }
+        function selectItem(id) {
+            console.log(id);
+        }
+    </script>
+</head>
+
+<body>
+<header><h1><%= app.name %></h1></header>
+<div class="default-page">
+    <div class="header">
+        <div class="current-page">Home</div>
+    </div>
+    <div class="side-bar">
+        <ul class="action-bar">
+            <li class="action-bar-list"><b>edgemere</b></li>
+            <li class="action-bar-list"><a href="/">Home</a></li>
+            <li class="action-bar-list"><a onclick=toggleMenu('actor-sub-list');> Users</a></li>
+            <div class="sub-action-bar-div" id="actor-sub-list">
+                <ul class="sub-action-bar">
+                    <%
+                    for(let name in global.actors) {
+                        let actor = global.actors[name];
+                    %>
+                        <li class="sub-action-bar-list"><a onclick=toggleMenu('<%= actor.shortname %>-sub-list');><%= name %></a></li>
+                        <div class="sub-action-bar-div" id="<%= actor.shortname %>-sub-list">
+                            <ul class="sub-action-bar">
+                                <%
+                                for(let ucname in actor.usecases) {
+                                    let uc = actor.usecases[ucname];
+                                %>
+                                <li class="sub-action-bar-list"><a href="<%= uc.method %>" target="work-frame"><%= ucname %></a></li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    <% } %>
+                </ul>
+            </div>
+            <li class="action-bar-list"><a onclick=toggleMenu('package-sub-list');> Packages</a></li>
+            <div class="sub-action-bar-div" id="package-sub-list">
+                <ul class="sub-action-bar">
+                    <%
+                    for(let name in global.packages) {
+                        let package = global.packages[name];
+                    %>
+                    <li class="sub-action-bar-list"><a onclick=toggleMenu('<%= name %>-sub-list');><%= package.name %></a></li>
+                    <div class="sub-action-bar-div" id="<%= name %>-sub-list">
+                        <ul class="sub-action-bar">
+                            <%
+                            for(let ucname in package.usecases) {
+                            let uc = package.usecases[ucname];
+                            %>
+                            <li class="sub-action-bar-list"><a href="<%= uc.method %>" target="work-frame"><%= uc.name %></a></li>
+                            <% } %>
+                        </ul>
+                    </div>
+                    <% } %>
+                </ul>
+            </div>
+        </ul>
+    </div>
+    <div class="work-area">
+        <%- body %>
+    </div>
+</div>
+
+</body>
+<footer>Darren Pulsipher</footer>
+</html>

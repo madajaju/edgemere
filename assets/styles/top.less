@@ -1,0 +1,208 @@
+
+@actionbar-color: steelblue;
+@subactionbar-color: #4455aa;
+@actionbar-hover-color: #004488;
+@navbar-color: black;
+@navbar-background: white;
+@row-hover-color: #004488;
+@button-hover-bg: #88aaff;
+@button-hover-color: black;
+@hover-bg: yellow;
+@hover-color: black;
+@row-odd: #ddffff;
+@row-even: #ffffff;
+
+
+
+img {
+  max-width: 90%;
+}
+
+.table-actions {
+  margin: 5px;
+}
+
+body {
+  font: 12pt arial;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+tr:hover {
+  background: @row-hover-color;
+  color: white;
+  a {
+    color: white;
+  }
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 300px;
+  right: -1px;
+  height: 30px;
+  background: @navbar-background;
+  color: @navbar-color;
+}
+.current-page {
+  float: left;
+  padding-left: 50px;
+  padding-top: 5px;
+}
+
+.row-0 {
+  background: @row-even;
+}
+
+.row-1 {
+  background: @row-odd;
+}
+
+.side-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  background: @actionbar-color;
+  color: black;
+}
+.action-bar {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  list-style: none;
+  text-indent: 20px;
+  background: @actionbar-color;
+}
+
+.action-bar-list {
+  height: 36px;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+.action-bar-list:hover {
+  background: @actionbar-hover-color;
+  border-left: 5px solid white;
+
+}
+
+.work-area {
+  position: absolute;
+  top: 30px;
+  left: 300px;
+  width: ~"calc(100% - 205px)";
+  height: 100%;
+  overflow-y: scroll;
+  background: lightgray;
+}
+
+.gadget {
+  margin: 5px;
+  padding: 2px 2px 2px 2px;
+  background: #777777;
+  color: black;
+  float: left;
+  width: 300px;
+}
+
+.gadget-header {
+  padding: 5px;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30px;
+  color: white;
+  background: @actionbar-color;
+  a {
+    margin: 3px;
+    font-size: 10pt;
+    color: white;
+    text-decoration: none;
+  }
+  a:hover {
+    font-size: 10pt;
+    margin: 3px;
+    color: white;
+    background: @hover-bg;
+    color: @hover-color;
+    text-decoration: none;
+  }
+
+}
+
+.gadget-body {
+  background: white;
+  padding: 5px;
+  top: 30px;
+  left: 0;
+  height: 300px;
+}
+
+.policy-enabled {
+  background: lightgreen;
+}
+
+.policy-disabled {
+  background: pink;
+}
+
+.sub-action-bar-div {
+  padding-left: 10px;
+  display: none;
+}
+.sub-action-bar {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  list-style: none;
+  text-indent: 40px;
+  background: @subactionbar-color;
+}
+
+.sub-action-bar-list {
+  height: 30px;
+  background: @subactionbar-color;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+.sub-action-bar-list:hover {
+  background: @actionbar-hover-color;
+  border-left: 5px solid white;
+}
+
+.tooltip {
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  margin: 2px;
+  width: 250px;
+  background-color: @hover-bg;
+  color: @hover-color;
+  text-align: left;
+  text-indent: 0;
+  padding: 2px 5px 2px 5px;
+  border-radius: 6px;
+  font-size: smaller;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.actors-list {
+  list-style: none;
+}

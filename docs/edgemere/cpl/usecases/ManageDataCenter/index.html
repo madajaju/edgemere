@@ -1,0 +1,81 @@
+<head>
+    <link rel="stylesheet/less" type="text/css" href="/styles/importer.less" />
+    <script src="/js/less.js" type="text/javascript"></script>
+</head>
+
+<h1>Manage Data Center</h1>
+It Operations manages data centers by creating, deleting, enabling and disabling devicesand aggregated devices
+
+<img src='./Activities.puml'></img>
+
+<h2>Actors</h2>
+<ul>
+    <li><a href='/doc/actor/itops'>IT Operations</a></li>
+
+</ul>
+
+<h2>Detail Scenarios</h2>
+<ul>
+<li><a href='#Scenario-CreateDataCenter'>CreateDataCenter</a></li>
+<li><a href='#Scenario-DisableDataCenter'>DisableDataCenter</a></li>
+<li><a href='#Scenario-EnableDataCenter'>EnableDataCenter</a></li>
+<li><a href='#Scenario-RemoveDataCenter'>RemoveDataCenter</a></li>
+<li><a href='#Scenario-UpdateDataCenter'>UpdateDataCenter</a></li>
+
+</ul>
+<h3 id='Scenario-CreateDataCenter'>CreateDataCenter</h3>
+IT Operator creates data centers and allows them to add devices and aggregated devices
+<h4>Action</h4>
+<a href='/doc/package/edgemere/cpl#Action-datacenter-create'>datacenter/create(...)</a>
+<h4>Actors</h4>
+<ul>
+
+<li><a href='./doc/actor/itops'>IT Operations </a></li>
+</ul>
+
+
+<h3 id='Scenario-DisableDataCenter'>DisableDataCenter</h3>
+IT Operations can disable a data center that will disable all of the devices in the data center. This can be used to test business continuity, move data center devices or decomission a data center.
+<h4>Action</h4>
+<a href='/doc/package/edgemere/cpl#Action-datacenter-disable'>datacenter/disable(...)</a>
+<h4>Actors</h4>
+<ul>
+
+<li><a href='./doc/actor/itops'>IT Operations </a></li>
+</ul>
+
+
+<h3 id='Scenario-EnableDataCenter'>EnableDataCenter</h3>
+IT Operations can enable a data center that has been disabled
+<h4>Action</h4>
+<a href='/doc/package/edgemere/cpl#Action-datacenter-enable'>datacenter/enable(...)</a>
+<h4>Actors</h4>
+<ul>
+
+<li><a href='./doc/actor/itops'>IT Operations </a></li>
+</ul>
+
+
+<h3 id='Scenario-RemoveDataCenter'>RemoveDataCenter</h3>
+IT Operations can remove a Data Center and all of its devices and aggregated devices
+<h4>Action</h4>
+<a href='/doc/package/edgemere/cpl#Action-datacenter-remove'>datacenter/remove(...)</a>
+<h4>Actors</h4>
+<ul>
+
+<li><a href='./doc/actor/itops'>IT Operations </a></li>
+</ul>
+
+
+<h3 id='Scenario-UpdateDataCenter'>UpdateDataCenter</h3>
+IT Operations updates data center characteristics
+<h4>Action</h4>
+<a href='/doc/package/edgemere/cpl#Action-datacenter-update'>datacenter/update(...)</a>
+<h4>Actors</h4>
+<ul>
+
+<li><a href='./doc/actor/itops'>IT Operations </a></li>
+</ul>
+
+
+

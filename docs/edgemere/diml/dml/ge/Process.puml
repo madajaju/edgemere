@@ -1,0 +1,22 @@
+@startuml
+
+partition "Governance Engine" {
+
+}
+
+partition User #cccccc {
+  (*) --> "Create Project"
+  --> "Write Code"
+}
+
+partition "Governance Engine" #lightblue {
+  "Write Code" --> "Test Code"
+  "Test Code" --> "Deploy Code"
+  "Deploy Code" --> (*)
+}
+
+partition Used #cccccc {
+  "Test Code" --> "Do Something"
+}
+
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+
+partition "Blue Print Management" {
+
+}
+
+partition User #cccccc {
+  (*) --> "Create Project"
+  --> "Write Code"
+}
+
+partition "Blue Print Management" #lightblue {
+  "Write Code" --> "Test Code"
+  "Test Code" --> "Deploy Code"
+  "Deploy Code" --> (*)
+}
+
+partition Used #cccccc {
+  "Test Code" --> "Do Something"
+}
+
+@enduml

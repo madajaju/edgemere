@@ -1,0 +1,134 @@
+<head>
+    <link rel="stylesheet/less" type="text/css" href="/styles/importer.less" />
+    <script src="/js/less.js" type="text/javascript"></script>
+</head>
+
+<h1>edgemere</h1>
+Description needs to be written
+
+
+
+<h1>Actors</h1>
+<ul>
+
+    <li><a href="/doc/actor/actor">Actor</a></li>
+
+    <li><a href="/doc/actor/appdev">Application Developer</a></li>
+
+    <li><a href="/doc/actor/cdo">Chief Data Officer</a></li>
+
+    <li><a href="/doc/actor/analyst">Data Analyst</a></li>
+
+    <li><a href="/doc/actor/dataeng">Data Engineer</a></li>
+
+    <li><a href="/doc/actor/datascientist">Data Scientist</a></li>
+
+    <li><a href="/doc/actor/devops">DevOps Engineer</a></li>
+
+    <li><a href="/doc/actor/itops">IT Operations</a></li>
+
+</ul>
+
+<h1>UseCases</h1>
+<ul>
+    
+</ul>
+<img src='./UseCases.puml'></img>
+
+<h2>Interface</h2>
+<ul>
+    
+</ul>
+
+<h1>Solution Architecture</h1>
+The Data Model for the  edgemere shows how the different objects and classes of object interact
+and their structure.
+<ul>
+    
+        <li><a href="/doc/package/edgemere/aml">Application Management Layer</a></li>
+    
+        <li><a href="/doc/package/edgemere/cpl">Common Physical Layer</a></li>
+    
+        <li><a href="/doc/package/edgemere/diml">Distributed Information Management Layer</a></li>
+    
+        <li><a href="/doc/package/edgemere/ia">Identity Aspect</a></li>
+    
+        <li><a href="/doc/package/edgemere/sa">Security Aspect</a></li>
+    
+        <li><a href="/doc/package/edgemere/sml">Service Management Layer</a></li>
+    
+        <li><a href="/doc/package/edgemere/sdi">Software Defined Infrastructure</a></li>
+    
+</ul>
+
+<img src='./Logical.puml'>
+
+<h2>Activities and Flows</h2>
+The edgemere subsystem provides the following activities and flows.
+
+<img src='./Process.puml'></img>
+
+<h2>Deployment Architecture</h2>
+This subsystem is deployed using micro-services as shown in the diagram below. The 'micro' module is
+used to implement the micro-services in the system.
+The subsystem also has an CLI, REST and Web Interface exposed through a sailajs application. The sailsjs
+application will interface with the micro-services and can monitor and drive work-flows through the mesh of
+micro-services.
+
+<img src='./Deployment.puml'> </img>
+
+<h2>Physical Architecture</h2>
+The edgemere subsystem is is physically laid out on a hybrid cloud infrastructure. Each microservice is shown
+how they connect to each other. All of the micro-services communicate to each other and the main app through a
+REST interface. A CLI, REST or Web interface for the app is how other subsystems or actors interact. Requests are
+forwarded to micro-services through the REST interface of each micro-service.
+
+<img src='./Physical.puml'> </img>
+
+<h2>Micro-Services</h2>
+These are the micro-services for the subsystem. The combination of the micro-services help implement
+the subsystem's logic.
+
+<h3>dev</h3>
+<ul>
+    
+    <li>pubsub : redis</li>
+    
+    <li>frontend : traefik:latest</li>
+    
+    <li>web : edgemere_web</li>
+    
+    <li>doc : edgemere_doc</li>
+    
+</ul>
+
+<h3>test</h3>
+<ul>
+    
+    <li>pubsub : redis</li>
+    
+    <li>frontend : traefik:latest</li>
+    
+    <li>web : edgemere_web</li>
+    
+    <li>doc : edgemere_doc</li>
+    
+</ul>
+
+<h3>prod</h3>
+<ul>
+    
+    <li>pubsub : redis</li>
+    
+    <li>frontend : traefik:latest</li>
+    
+    <li>web : edgemere_web</li>
+    
+    <li>doc : edgemere_doc</li>
+    
+</ul>
+
+
+<h2>Interface Details</h2>
+
+

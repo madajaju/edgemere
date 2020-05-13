@@ -1,0 +1,15 @@
+@startuml
+
+
+Init --> Provisioning : provision
+
+Init --> Disabled : disable
+
+Provisioning --> Ready : finishedProvision
+
+Provisioning --> Failed : failedProvision
+
+Ready --> Disabled : disable
+
+
+@enduml

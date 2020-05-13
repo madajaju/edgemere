@@ -1,0 +1,46 @@
+@startuml
+
+class "PhysicalProfile" as Model {
+ string name
+
+ combine()
+ create()
+ propagate()
+ satisfies()
+ stats()
+ 
+}
+
+rectangle "MetricComposite" as MetricComposite {
+}
+
+Model *--> "1" MetricComposite : capabilities
+
+
+rectangle "MetricComposite" as MetricComposite {
+}
+
+Model *--> "1" MetricComposite : available
+
+
+rectangle "MetricComposite" as MetricComposite {
+}
+
+Model *--> "1" MetricComposite : reserved
+
+
+rectangle "MetricComposite" as MetricComposite {
+}
+
+Model *--> "1" MetricComposite : metrics
+
+
+rectangle "PhysicalProfile" as PhysicalProfile {
+}
+
+Model o--> "1" PhysicalProfile : parent
+
+
+
+
+@enduml

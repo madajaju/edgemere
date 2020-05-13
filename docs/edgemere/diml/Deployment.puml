@@ -1,0 +1,93 @@
+@startuml
+
+
+boundary __diml_family #blue
+
+
+entity __family #orange
+
+
+package  "Distributed Information Management Layer"  #lightblue {
+    card children #blue [
+        <b><color:white>children</color></b>
+    ]
+    
+    __diml_family -[#blue]- children
+    
+    
+    card sibling #red [
+        <b><color:white>sibling</color></b>
+    ]
+    
+    
+    card parent #orange [
+        <b><color:white>parent</color></b>
+    ]
+    
+    
+    __family -[#orange]- parent
+    
+    artifact images #ffffff {
+        
+        file _diml_web
+        
+        file _diml_gw
+        
+    }
+
+    node frontend
+    frontend .. _diml_web
+    
+        sibling -[#red]- frontend
+    
+
+    node gw
+    gw .. _diml_gw
+    
+        children -[#blue]- gw
+    
+        sibling -[#red]- gw
+    
+
+
+
+
+    
+}
+
+
+package  "cds"  #lightgray {
+    card cdsparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+    cdsparent ==[#blue]= children
+}
+
+
+package  "ddf"  #lightgray {
+    card ddfparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+    ddfparent ==[#blue]= children
+}
+
+
+package  "dml"  #lightgray {
+    card dmlparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+    dmlparent ==[#blue]= children
+}
+
+
+
+
+package edgemere #lightgray {
+    card edgemerechildren #orange [
+        <b><color:white>children</color></b>
+    ]
+    edgemerechildren ==[#orange]= parent
+}
+
+
+@enduml

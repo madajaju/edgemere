@@ -1,0 +1,29 @@
+@startuml
+
+
+
+package "Common Data Service" #lightblue {
+
+    interface "Common Data Service" as i {
+    
+    }
+
+
+    CLI ()-- i
+    REST ()-- i
+    Web ()-- i
+    
+
+
+package is #white {
+}
+
+package ss #white {
+}
+
+package ts #white {
+}
+
+}
+
+@enduml

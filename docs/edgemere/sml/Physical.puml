@@ -1,0 +1,38 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Service Management Layer" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component "edgemere/sml" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+  
+    file "node web/server.js" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+    file "node gateway/server.js" as gateway_container
+    REST --> gateway_container
+    socket ---> gateway_container
+  
+  }
+  folder images #ffffff {
+  
+      artifact _sml_web
+      web_container --> _sml_web
+    
+      artifact _sml_gw
+      gateway_container --> _sml_gw
+    
+  }
+}
+CLI -- binName
+Web - REST
+WebSocket -- socket
+
+@enduml

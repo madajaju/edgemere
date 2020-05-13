@@ -1,0 +1,20 @@
+@startuml
+
+
+
+package "Data Orchestrator" #lightblue {
+
+    interface "Data Orchestrator" as i {
+    
+    }
+
+
+    CLI ()-- i
+    REST ()-- i
+    Web ()-- i
+    
+
+
+}
+
+@enduml

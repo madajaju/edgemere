@@ -1,0 +1,9 @@
+@startuml
+
+left to right direction
+
+
+rectangle "Insite Services" #lightblue {
+}
+
+@enduml

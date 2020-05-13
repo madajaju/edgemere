@@ -1,0 +1,13 @@
+@startuml
+
+actor "IT Operations" as itops
+
+
+
+
+itops -> "Software Defined Infrastructure": Manage Resources
+"Software Defined Infrastructure" -> bin: /sdi/getResources
+bin -> REST: /sdi/getResources
+
+
+@enduml

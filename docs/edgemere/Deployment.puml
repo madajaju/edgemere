@@ -1,0 +1,154 @@
+@startuml
+
+
+card external #black [
+    <b><color:white>external</color></b>
+]
+    
+interface 80
+    
+interface 443
+    
+interface 8080
+    
+boundary _family #blue
+
+
+
+package  "edgemere"  #lightgreen {
+    card children #blue [
+        <b><color:white>children</color></b>
+    ]
+    
+    _family -[#blue]- children
+    
+    
+    card sibling #red [
+        <b><color:white>sibling</color></b>
+    ]
+    
+    
+    artifact images #ffffff {
+        
+        file redis
+        
+        file traefik:latest
+        
+        file edgemere_web
+        
+        file edgemere_doc
+        
+    }
+
+    node pubsub
+    pubsub .. redis
+    
+        children -[#blue]- pubsub
+    
+        sibling -[#red]- pubsub
+    
+
+    node frontend
+    frontend .. traefik:latest
+    
+        children -[#blue]- frontend
+    
+
+    node web
+    web .. edgemere_web
+    
+        sibling -[#red]- web
+    
+        children -[#blue]- web
+    
+
+    node doc
+    doc .. edgemere_doc
+    
+        sibling -[#red]- doc
+    
+        children -[#blue]- doc
+    
+
+
+
+    80 -[#black]- "80" external
+    external -[#black]- frontend
+
+    443 -[#black]- "443" external
+    external -[#black]- frontend
+
+    8080 -[#black]- "8080" external
+    external -[#black]- frontend
+
+
+    
+             frontend "80" -[#blue]-  "/pubsub" pubsub
+             
+             frontend "3000" -[#blue]-  "/web" web
+             
+             frontend "8088" -[#blue]-  "/doc" doc
+             
+}
+
+
+package  "aml"  #lightgray {
+    card amlparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+    amlparent ==[#blue]= children
+}
+
+
+package  "cpl"  #lightgray {
+    card cplparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+    cplparent ==[#blue]= children
+}
+
+
+package  "diml"  #lightgray {
+    card dimlparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+    dimlparent ==[#blue]= children
+}
+
+
+package  "ia"  #lightgray {
+    card iaparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+    iaparent ==[#blue]= children
+}
+
+
+package  "sa"  #lightgray {
+    card saparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+    saparent ==[#blue]= children
+}
+
+
+package  "sml"  #lightgray {
+    card smlparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+    smlparent ==[#blue]= children
+}
+
+
+package  "sdi"  #lightgray {
+    card sdiparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+    sdiparent ==[#blue]= children
+}
+
+
+
+
+
+@enduml

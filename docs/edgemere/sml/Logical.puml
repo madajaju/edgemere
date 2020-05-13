@@ -1,0 +1,32 @@
+@startuml
+
+
+
+package "Service Management Layer" #lightblue {
+
+    interface "Service Management Layer" as i {
+    
+    }
+
+
+    CLI ()-- i
+    REST ()-- i
+    Web ()-- i
+    
+
+
+package em #white {
+}
+
+package sc #white {
+}
+
+package so #white {
+}
+
+package sr #white {
+}
+
+}
+
+@enduml

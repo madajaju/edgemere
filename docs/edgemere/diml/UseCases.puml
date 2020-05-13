@@ -1,0 +1,9 @@
+@startuml
+
+left to right direction
+
+
+rectangle "Distributed Information Management Layer" #lightblue {
+}
+
+@enduml

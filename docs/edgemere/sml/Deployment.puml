@@ -1,0 +1,101 @@
+@startuml
+
+
+boundary __sml_family #blue
+
+
+entity __family #orange
+
+
+package  "Service Management Layer"  #lightblue {
+    card children #blue [
+        <b><color:white>children</color></b>
+    ]
+    
+    __sml_family -[#blue]- children
+    
+    
+    card sibling #red [
+        <b><color:white>sibling</color></b>
+    ]
+    
+    
+    card parent #orange [
+        <b><color:white>parent</color></b>
+    ]
+    
+    
+    __family -[#orange]- parent
+    
+    artifact images #ffffff {
+        
+        file _sml_web
+        
+        file _sml_gw
+        
+    }
+
+    node frontend
+    frontend .. _sml_web
+    
+        sibling -[#red]- frontend
+    
+
+    node gw
+    gw .. _sml_gw
+    
+        children -[#blue]- gw
+    
+        sibling -[#red]- gw
+    
+
+
+
+
+    
+}
+
+
+package  "em"  #lightgray {
+    card emparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+    emparent ==[#blue]= children
+}
+
+
+package  "sc"  #lightgray {
+    card scparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+    scparent ==[#blue]= children
+}
+
+
+package  "so"  #lightgray {
+    card soparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+    soparent ==[#blue]= children
+}
+
+
+package  "sr"  #lightgray {
+    card srparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+    srparent ==[#blue]= children
+}
+
+
+
+
+package edgemere #lightgray {
+    card edgemerechildren #orange [
+        <b><color:white>children</color></b>
+    ]
+    edgemerechildren ==[#orange]= parent
+}
+
+
+@enduml

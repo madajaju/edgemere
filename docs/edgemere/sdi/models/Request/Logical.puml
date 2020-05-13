@@ -1,0 +1,38 @@
+@startuml
+
+class "Request" as Model {
+ string name
+ string ename
+ string type
+
+ confirm()
+ 
+}
+
+rectangle "MetricComposite" as MetricComposite {
+}
+
+Model *--> "1" MetricComposite : requirements
+
+
+rectangle "Reservation" as Reservation {
+}
+
+Model *--> "n" Reservation : reservations
+
+
+rectangle "Cloud" as Cloud {
+}
+
+Model o--> "1" Cloud : cloud
+
+
+rectangle "LandscapeRequest" as LandscapeRequest {
+}
+
+Model o--> "1" LandscapeRequest : parent
+
+
+
+
+@enduml

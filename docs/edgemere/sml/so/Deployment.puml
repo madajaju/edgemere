@@ -1,0 +1,69 @@
+@startuml
+
+
+boundary _sml_so_family #blue
+
+
+entity _sml_family #orange
+
+
+package  "Service Orchestrator"  #lightblue {
+    card children #blue [
+        <b><color:white>children</color></b>
+    ]
+    
+    _sml_so_family -[#blue]- children
+    
+    
+    card sibling #red [
+        <b><color:white>sibling</color></b>
+    ]
+    
+    
+    card parent #orange [
+        <b><color:white>parent</color></b>
+    ]
+    
+    
+    _sml_family -[#orange]- parent
+    
+    artifact images #ffffff {
+        
+        file sml_so_web
+        
+        file sml_so_gw
+        
+    }
+
+    node frontend
+    frontend .. sml_so_web
+    
+        sibling -[#red]- frontend
+    
+
+    node gw
+    gw .. sml_so_gw
+    
+        children -[#blue]- gw
+    
+        sibling -[#red]- gw
+    
+
+
+
+
+    
+}
+
+
+
+
+package sml #lightgray {
+    card smlchildren #orange [
+        <b><color:white>children</color></b>
+    ]
+    smlchildren ==[#orange]= parent
+}
+
+
+@enduml

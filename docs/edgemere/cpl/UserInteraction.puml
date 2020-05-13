@@ -1,0 +1,17 @@
+@startuml
+
+actor "IT Operations" as itops
+
+
+
+
+itops -> "Common Physical Layer": Manage Data Center
+"Common Physical Layer" -> bin: datacenter/list
+bin -> REST: datacenter/list
+
+itops -> "Common Physical Layer": Manage Infrastructure
+"Common Physical Layer" -> bin: data/govern
+bin -> REST: data/govern
+
+
+@enduml

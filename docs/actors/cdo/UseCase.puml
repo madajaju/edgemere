@@ -1,0 +1,10 @@
+@startuml
+
+left to right direction
+
+
+Actor "Chief Data Officer" as ChiefDataOfficer
+
+
+
+@enduml

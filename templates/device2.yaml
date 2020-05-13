@@ -1,0 +1,16 @@
+name: hosta
+cabilities:
+  devicecap: 100
+hardware:
+  CPU1:
+    type: Compute
+    capabilities:
+      speed: 2.5GHz
+      cores: 4
+      memory: 1000 GB
+  CPU2:
+    type: Compute
+    capabilities:
+      speed: 3.1GHz
+      cores: 4
+      memory: 1000 GB

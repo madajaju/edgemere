@@ -1,0 +1,370 @@
+<head>
+    <link rel="stylesheet/less" type="text/css" href="/styles/importer.less" />
+    <script src="/js/less.js" type="text/javascript"></script>
+</head>
+
+<h1>Common Physical Layer</h1>
+Common Physical Layer is a package that contains...
+
+
+
+<h2>Use Cases</h2>
+<ul>
+    <li> <a href='/doc/usecase/edgemere/cpl/ManageDataCenter'>Manage Data Center</a></li>
+    <li> <a href='/doc/usecase/edgemere/cpl/ManageInfrastructure'>Manage Infrastructure</a></li>
+
+</ul>
+
+<img src='./UseCases.puml'></img>
+<h2>Users</h2>
+<ul>
+    <li><a href='/doc/actor/itops'>IT Operations</a></li>
+
+</ul>
+
+<img src='./UserInteraction.puml'></img>
+
+<h2>Interface</h2>
+<ul>
+<li><a href='#Action--edgemere-cpl-adddevices'>/edgemere/cpl/adddevices(...)</a></li>
+<li><a href='#Action--edgemere-cpl-provision'>/edgemere/cpl/provision(...)</a></li>
+<li><a href='#Action--edgemere-cpl-reserve'>/edgemere/cpl/reserve(...)</a></li>
+<li><a href='#Action--edgemere-cpl-data-govern'>/edgemere/cpl/data/govern(...)</a></li>
+<li><a href='#Action--edgemere-cpl-datacenter-list'>/edgemere/cpl/datacenter/list(...)</a></li>
+<li><a href='#Action--edgemere-cpl-device-disable'>/edgemere/cpl/device/disable(...)</a></li>
+<li><a href='#Action--edgemere-cpl-device-enable'>/edgemere/cpl/device/enable(...)</a></li>
+
+</ul>
+
+<h2>Logical Artifacts</h2>
+The Data Model for the  Common Physical Layer shows how the different objects and classes of object interact
+and their structure.
+
+<img src='./Logical.puml'>
+
+<h3>Sub Packages</h3>
+<ul>
+
+</ul>
+
+<h3>Classes</h3>
+<ul>
+<li><a href='/doc/model/edgemere/cpl/AcceleratorHardware'>AcceleratorHardware</a>
+<li><a href='/doc/model/edgemere/cpl/AggregatedDevice'>AggregatedDevice</a>
+<li><a href='/doc/model/edgemere/cpl/ComputeHardware'>ComputeHardware</a>
+<li><a href='/doc/model/edgemere/cpl/DataCenter'>DataCenter</a>
+<li><a href='/doc/model/edgemere/cpl/Device'>Device</a>
+<li><a href='/doc/model/edgemere/cpl/Hardware'>Hardware</a>
+<li><a href='/doc/model/edgemere/cpl/Metric'>Metric</a>
+<li><a href='/doc/model/edgemere/cpl/MetricAttribute'>MetricAttribute</a>
+<li><a href='/doc/model/edgemere/cpl/MetricComposite'>MetricComposite</a>
+<li><a href='/doc/model/edgemere/cpl/MetricConsumeable'>MetricConsumeable</a>
+<li><a href='/doc/model/edgemere/cpl/NetworkHardware'>NetworkHardware</a>
+<li><a href='/doc/model/edgemere/cpl/PhysicalProfile'>PhysicalProfile</a>
+<li><a href='/doc/model/edgemere/cpl/StorageHardware'>StorageHardware</a>
+
+</ul>
+
+
+
+<h2>Activities and Flows</h2>
+The Common Physical Layer subsystem provides the following activities and flows.
+
+<img src='./Process.puml'></img>
+
+<h2>Deployment Architecture</h2>
+This subsystem is deployed using micro-services as shown in the diagram below. The 'micro' module is
+used to implement the micro-services in the system.
+The subsystem also has an CLI, REST and Web Interface exposed through a sailajs application. The sailsjs
+application will interface with the micro-services and can monitor and drive work-flows through the mesh of
+micro-services.
+
+<img src='./Deployment.puml'> </img>
+
+<h2>Physical Architecture</h2>
+The Common Physical Layer subsystem is is physically laid out on a hybrid cloud infrastructure. Each microservice is shown
+how they connect to each other. All of the micro-services communicate to each other and the main app through a
+REST interface. A CLI, REST or Web interface for the app is how other subsystems or actors interact. Requests are
+forwarded to micro-services through the REST interface of each micro-service.
+
+<img src='./Physical.puml'> </img>
+
+<h2>Micro-Services</h2>
+These are the micro-services for the subsystem. The combination of the micro-services help implement
+the subsystem's logic.
+
+<h3>dev</h3>
+<ul>
+    
+        <li>frontend : _cpl_web</li>
+    
+        <li>gw : _cpl_gw</li>
+    
+</ul>
+
+<h3>test</h3>
+<ul>
+    
+        <li>frontend : _cpl_web</li>
+    
+        <li>gw : _cpl_gw</li>
+    
+</ul>
+
+<h3>prod</h3>
+<ul>
+    
+        <li>frontend : _cpl_web</li>
+    
+        <li>gw : _cpl_gw</li>
+    
+</ul>
+
+
+<h2>Interface Details</h2>
+<div id="Action--edgemere-cpl-adddevices">
+<h3>/edgemere/cpl/adddevices</h3>
+<ul>
+<li>REST - /edgemere/cpl/adddevices</li>
+<li>bin -  edgemere cpl adddevices</li>
+<li>js - .edgemere.cpl.adddevices</li>
+</ul>
+
+Add Devices to the Data Center
+
+<table class="MethodTable">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>item</td>
+        <td>object</td>
+        <td>true</td>
+        <td>Devices to add to the Data Center</td>
+    </tr>
+
+</table>
+
+
+</div>
+<div id="Action--edgemere-cpl-provision">
+<h3>/edgemere/cpl/provision</h3>
+<ul>
+<li>REST - /edgemere/cpl/provision</li>
+<li>bin -  edgemere cpl provision</li>
+<li>js - .edgemere.cpl.provision</li>
+</ul>
+
+Get Reservations from Devices, Aggregate Deivces, and DataCenters
+
+<table class="MethodTable">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>device</td>
+        <td>object</td>
+        <td>true</td>
+        <td>Device to provision</td>
+    </tr>
+
+    <tr>
+        <td>requirements</td>
+        <td>json</td>
+        <td>true</td>
+        <td>requirements to provision</td>
+    </tr>
+
+</table>
+
+
+</div>
+<div id="Action--edgemere-cpl-reserve">
+<h3>/edgemere/cpl/reserve</h3>
+<ul>
+<li>REST - /edgemere/cpl/reserve</li>
+<li>bin -  edgemere cpl reserve</li>
+<li>js - .edgemere.cpl.reserve</li>
+</ul>
+
+Get Reservations from Devices, Aggregate Deivces, and DataCenters
+
+<table class="MethodTable">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>datacenters</td>
+        <td>object</td>
+        <td>true</td>
+        <td>Devices to add to the Data Center</td>
+    </tr>
+
+    <tr>
+        <td>devices</td>
+        <td>object</td>
+        <td>true</td>
+        <td>Devices to add to the Data Center</td>
+    </tr>
+
+    <tr>
+        <td>aggregates</td>
+        <td>object</td>
+        <td>true</td>
+        <td>Devices to add to the Data Center</td>
+    </tr>
+
+    <tr>
+        <td>request</td>
+        <td>object</td>
+        <td>true</td>
+        <td>Request for the reservation</td>
+    </tr>
+
+</table>
+
+
+</div>
+<div id="Action--edgemere-cpl-data-govern">
+<h3>/edgemere/cpl/data/govern</h3>
+<ul>
+<li>REST - /edgemere/cpl/data/govern</li>
+<li>bin -  edgemere cpl data govern</li>
+<li>js - .edgemere.cpl.data.govern</li>
+</ul>
+
+Description of the action
+
+<table class="MethodTable">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>attr1</td>
+        <td>string</td>
+        <td>false</td>
+        <td>Description for the parameter</td>
+    </tr>
+
+</table>
+
+
+</div>
+<div id="Action--edgemere-cpl-datacenter-list">
+<h3>/edgemere/cpl/datacenter/list</h3>
+<ul>
+<li>REST - /edgemere/cpl/datacenter/list</li>
+<li>bin -  edgemere cpl datacenter list</li>
+<li>js - .edgemere.cpl.datacenter.list</li>
+</ul>
+
+Description of the action
+
+<table class="MethodTable">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>attr1</td>
+        <td>string</td>
+        <td>false</td>
+        <td>Description for the parameter</td>
+    </tr>
+
+</table>
+
+
+</div>
+<div id="Action--edgemere-cpl-device-disable">
+<h3>/edgemere/cpl/device/disable</h3>
+<ul>
+<li>REST - /edgemere/cpl/device/disable</li>
+<li>bin -  edgemere cpl device disable</li>
+<li>js - .edgemere.cpl.device.disable</li>
+</ul>
+
+Disable Device and all of its hardware
+
+<table class="MethodTable">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>name</td>
+        <td>string</td>
+        <td>false</td>
+        <td>Name of the device</td>
+    </tr>
+
+    <tr>
+        <td>id</td>
+        <td>string</td>
+        <td>false</td>
+        <td>ID of the device</td>
+    </tr>
+
+</table>
+
+
+</div>
+<div id="Action--edgemere-cpl-device-enable">
+<h3>/edgemere/cpl/device/enable</h3>
+<ul>
+<li>REST - /edgemere/cpl/device/enable</li>
+<li>bin -  edgemere cpl device enable</li>
+<li>js - .edgemere.cpl.device.enable</li>
+</ul>
+
+Enable Device and all of its hardware
+
+<table class="MethodTable">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>name</td>
+        <td>string</td>
+        <td>false</td>
+        <td>Name of the device</td>
+    </tr>
+
+    <tr>
+        <td>id</td>
+        <td>string</td>
+        <td>false</td>
+        <td>ID of the device</td>
+    </tr>
+
+</table>
+
+
+</div>
+

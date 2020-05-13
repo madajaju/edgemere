@@ -1,0 +1,32 @@
+@startuml
+
+
+
+package "Data Definition Framework" #lightblue {
+
+    interface "Data Definition Framework" as i {
+    
+    }
+
+
+    CLI ()-- i
+    REST ()-- i
+    Web ()-- i
+    
+
+
+package bpm #white {
+}
+
+package daf #white {
+}
+
+package df #white {
+}
+
+package dr #white {
+}
+
+}
+
+@enduml

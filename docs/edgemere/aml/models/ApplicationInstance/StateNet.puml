@@ -1,0 +1,17 @@
+@startuml
+
+
+Init --> Initializing : create
+
+Initializing --> Running : provisoned
+
+Running --> Stopping : kill
+
+Stopping --> Stopped : stopped
+
+Stopped --> Exit : exit
+
+Stopped --> Failed : failed
+
+
+@enduml

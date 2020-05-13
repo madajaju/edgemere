@@ -1,0 +1,32 @@
+@startuml
+
+class "Reservation" as Model {
+ number cost
+
+ confirm()
+ create()
+ free()
+ 
+}
+
+rectangle "Device" as Device {
+}
+
+Model o--> "1" Device : device
+
+
+rectangle "Request" as Request {
+}
+
+Model o--> "1" Request : request
+
+
+rectangle "Cloud" as Cloud {
+}
+
+Model o--> "1" Cloud : cloud
+
+
+
+
+@enduml

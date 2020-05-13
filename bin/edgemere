@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+const fs = require('fs');
+require('./lib/subcommander');
+let config;
+program
+    .version('0.0.1')
+    .command('init', 'Initalize the connection');
+try {
+    global.ailtire = { config: require('../.ailtire.js') };
+    let topCommands = {};
+    for(let path in global.ailtire.config.actions) {
+        let cmds = path.split('\/');
+        if(!topCommands.hasOwnProperty(cmds[1])) {
+            program.command(cmds[1] + " [cmds]", 'Top command for ' + cmds[1]);
+            topCommands[cmds[1]]= true;
+        }
+    }
+} catch (e) {
+    console.log("You must run init first!");
+}
+program.parse(process.argv);
+
+

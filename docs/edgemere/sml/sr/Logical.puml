@@ -1,0 +1,20 @@
+@startuml
+
+
+
+package "Service Repository" #lightblue {
+
+    interface "Service Repository" as i {
+    
+    }
+
+
+    CLI ()-- i
+    REST ()-- i
+    Web ()-- i
+    
+
+
+}
+
+@enduml

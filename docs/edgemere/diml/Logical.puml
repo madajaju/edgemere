@@ -1,0 +1,29 @@
+@startuml
+
+
+
+package "Distributed Information Management Layer" #lightblue {
+
+    interface "Distributed Information Management Layer" as i {
+    
+    }
+
+
+    CLI ()-- i
+    REST ()-- i
+    Web ()-- i
+    
+
+
+package cds #white {
+}
+
+package ddf #white {
+}
+
+package dml #white {
+}
+
+}
+
+@enduml

@@ -1,0 +1,19 @@
+@startuml
+
+class "ApplicationInstance" as Model {
+ string name
+ string status
+ string message
+
+ 
+}
+
+rectangle "ModelName" as ModelName {
+}
+
+Model o--> "1" ModelName : assoc1
+
+
+
+
+@enduml

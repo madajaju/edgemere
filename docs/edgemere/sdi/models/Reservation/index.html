@@ -1,0 +1,178 @@
+<head>
+    <link rel="stylesheet/less" type="text/css" href="/styles/importer.less" />
+    <script src="/js/less.js" type="text/javascript"></script>
+</head>
+
+<h1>Reservation</h1>
+A reservation fullfils the request to the system for resources. When a request for a resource is made from a cloud. A reservation for the resource request is created for each device or devices that can satistfy the request. When the request is fulfilled the reservations are then no longer needed.
+
+<img src='./Logical.puml' > </img>
+
+<h2>Attributes</h2>
+<ul>
+
+<li>cost:number - This is the cost of the reservation</li>
+
+</ul>
+
+<h2>Associations</h2>
+<table class="AssociationTable DocTable">
+    <tr>
+        <th>Name</th>
+        <th>Cardinality</th>
+        <th>Class</th>
+        <th>Composition</th>
+        <th>Owner</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>device</td>
+        <td>1</td>
+        <td>Device</td>
+        <td>false</td>
+        <td>false</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>request</td>
+        <td>1</td>
+        <td>Request</td>
+        <td>false</td>
+        <td>false</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>cloud</td>
+        <td>1</td>
+        <td>Cloud</td>
+        <td>false</td>
+        <td>false</td>
+        <td></td>
+    </tr>
+
+</table>
+
+
+<h2>State Net</h2>
+<img src='StateNet.puml'> </img>
+
+<table class="StateNetTable DocTable">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Events</th>
+    </tr>
+
+    <tr>
+        <td>Init</td>
+        <td></td>
+    
+        <td>construct-&gt;[object Object], </td>
+    
+    <tr>
+        <td>Created</td>
+        <td></td>
+    
+        <td>confirm-&gt;[object Object], free-&gt;[object Object], </td>
+    
+    <tr>
+        <td>Confirmed</td>
+        <td></td>
+    
+        <td></td>
+    
+    <tr>
+        <td>Rejected</td>
+        <td></td>
+    
+        <td></td>
+    
+    </tr>
+
+</table>
+
+<h2>Methods</h2>
+<ul>
+
+    <li> <a href="#Action-Reservation-confirm">confirm() - Confirm the Reservation</a>
+    
+    <li> <a href="#Action-Reservation-create">create() - Confirm the Reservation</a>
+    
+    <li> <a href="#Action-Reservation-free">free() - Confirm the Reservation</a>
+    
+</ul>
+<h2>Method Details</h2>
+    
+        <div id="Action-Reservation-confirm">
+<h3>confirm</h3>
+<ul>
+<li>REST - confirm</li>
+<li>bin - confirm</li>
+<li>js - confirm</li>
+</ul>
+
+Confirm the Reservation
+
+<table class="MethodTable">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </tr>
+
+</table>
+
+
+        </div>
+
+        <div id="Action-Reservation-create">
+<h3>create</h3>
+<ul>
+<li>REST - create</li>
+<li>bin - create</li>
+<li>js - create</li>
+</ul>
+
+Confirm the Reservation
+
+<table class="MethodTable">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </tr>
+
+</table>
+
+
+        </div>
+
+        <div id="Action-Reservation-free">
+<h3>free</h3>
+<ul>
+<li>REST - free</li>
+<li>bin - free</li>
+<li>js - free</li>
+</ul>
+
+Confirm the Reservation
+
+<table class="MethodTable">
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+    </tr>
+
+</table>
+
+
+        </div>
+
+

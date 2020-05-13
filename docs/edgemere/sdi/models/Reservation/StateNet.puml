@@ -1,0 +1,11 @@
+@startuml
+
+
+Init --> Created : construct
+
+Created --> Confirmed : confirm
+
+Created --> Rejected : free
+
+
+@enduml

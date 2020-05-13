@@ -1,0 +1,20 @@
+@startuml
+
+
+
+package "Analytics Services" #lightblue {
+
+    interface "Analytics Services" as i {
+    
+    }
+
+
+    CLI ()-- i
+    REST ()-- i
+    Web ()-- i
+    
+
+
+}
+
+@enduml

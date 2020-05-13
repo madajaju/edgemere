@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+  frontend:
+    image: sml_em_web
+    networks:
+      - sibling
+  gw:
+    image: sml_em_gw
+    networks:
+      children:
+        aliases:
+          - parent
+          - top
+      sibling:
+        aliases:
+          - gateway
+
+networks:
+  children:
+    driver: overlay
+    attachable: true
+    name: ${APPNAME}_sml_em_family
+  sibling:
+    driver: overlay
+  parent:
+    external: true
+    name: ${APPNAME}_sml_family

@@ -1,0 +1,175 @@
+@import 'color.less';
+
+#DrawingArea {
+  background: white;
+}
+.Selected {
+  background: @row-hover-color;
+  color: white;
+  a {
+    color: white
+  }
+}
+.links line {
+  stroke: #555555;
+  stroke-opacity: 0.8;
+}
+.typeDataCenter {
+  stroke: #cccccc;
+  stroke-width: 1.5px;
+  fill: black;
+  d: path("M-10,-10 L-10,10 L10,10 L10,-10 Z");
+}
+.typeAggregatedDevice {
+  stroke: #cccccc;
+  stroke-width: 1.5px;
+  fill: darkcyan;
+  d: path("M-5,-10 L5,-10 L10,10 L-10,10 L-5,-10");
+}
+.typeDevice {
+  stroke: #cccccc;
+  stroke-width: 1.5px;
+  fill: green;
+  d: path("M0,-10 L10,10 L-10,10 L0,-10");
+}
+
+.typeHardwareCompute {
+  stroke: #cccccc;
+  stroke-width: 1.5px;
+  fill: darkblue;
+  d: path("M -10 0 a 10,10 0 1,0 20,0 a 10,10 0 1,0 -20,0");
+}
+.typeHardwareNetwork {
+  stroke: #cccccc;
+  stroke-width: 1.5px;
+  fill: orange;
+  d: path("M-5 -5 h5 v5 h5 v5 h-5 v5 h-5 v-5 h-5 v-5 h5 z");
+}
+.typeHardwareStorage {
+  stroke: #cccccc;
+  stroke-width: 1.5px;
+  fill: darkmagenta;
+  d: path("M-10,-5 a10,5 0 1,0 20,0 a10,5 0 1,0 -20,0 M-10,-5 V5 a10,5 0 1,0 20,0 V-4");
+  r: 5;
+}
+.typeCloud {
+  stroke: #ffffff;
+  stroke-width: 1.5px;
+  fill: lightgray;
+  d: path("M 0,0 a 5,5 1 0,0 0,10 h 12 a 5,5 1 0,0 0,-10 a 2,2 1 0,0 -4,-2 a 4,2 1 0,0 -9,2  z");
+}
+
+.typeResourceCompute {
+  stroke: #ffffff;
+  stroke-width: 1.5px;
+  fill: blue;
+  d: path("M -10 0 a 10,10 0 1,0 20,0 a 10,10 0 1,0 -20,0");
+}
+.typeResourceNetwork {
+  stroke: #ffffff;
+  stroke-width: 1.5px;
+  d: path("M-5 -5 h5 v5 h5 v5 h-5 v5 h-5 v-5 h-5 v-5 h5 z");
+  fill: lightcoral;
+}
+.typeResourceStorage {
+  stroke: #ffffff;
+  stroke-width: 1.5px;
+  d: path("M-10,-5 a10,5 0 1,0 20,0 a10,5 0 1,0 -20,0 M-10,-5 V5 a10,5 0 1,0 20,0 V-4");
+  fill: magenta;
+}
+.typeLandscape {
+  stroke: #ffffff;
+  stroke-width: 1.5px;
+  fill: saddlebrown;
+  d: path("M -10 0 a 10,10 0 1,0 20,0 a 10,10 0 1,0 -20,0");
+}
+.typeDataReference {
+  stroke: #000000;
+  stroke-width: 1.5px;
+  fill: lightseagreen;
+  d: path("M -10 0 a 10,10 0 1,0 20,0 a 10,10 0 1,0 -20,0");
+}
+.typeRequest {
+  stroke: #ffffff;
+  stroke-width: 1.5px;
+  d: path("M0,-10 L5,0 L0,10 L-5,0 Z");
+  fill: purple;
+  r: 5;
+}
+
+.typeReservation {
+  stroke: #ffffff;
+  stroke-width: 1.5px;
+  d: path("M0,-10 L5,0 L0,10 L-5,0 Z");
+  fill: mediumpurple;
+  r: 5;
+}
+.typeEnvironment {
+  stroke: black;
+  stroke-width: 1.5px;
+  d: path("M-15,-5 L-15,5 L15,5 L15,-5 Z");
+  fill: gray;
+}
+.typeServicelet {
+  stroke: black;
+  stroke-width: 0.5px;
+  d: path("M0,-10 L10,10 L-10,10 L0,-10"); // Triangle
+  fill: #00ffff;
+}
+.typeStack {
+  stroke: black;
+  stroke-width: 0.5px;
+  d: path("M0,-10 L10,10 L-10,10 L0,-10 M0,10 L5,0 L-5,0 L0,10"); // Stacked Triangle
+  fill: #0000aa;
+}
+.typeStacklet {
+  stroke: black;
+  stroke-width: 0.5px;
+  d: path("M0,-10 L10,10 L-10,10 L0,-10 M0,10 L5,0 L-5,0 L0,10"); // Triangle
+  fill: #00aaff;
+}
+.typeStackInstance {
+  stroke: black;
+  stroke-width: 0.5px;
+  d: path("M0,-10 L10,10 L-10,10 L0,-10 M0,10 L5,0 L-5,0 L0,10"); // Triangle
+  fill: #ffaa00;
+}
+.typeServiceInstance {
+  stroke: black;
+  stroke-width: 0.5px;
+  d: path("M0,-10 L10,10 L-10,10 L0,-10"); // Triangle
+  fill: #ffcc00;
+}
+.typeApplication {
+  stroke: black;
+  stroke-width: 0.5px;
+  d: path("M0,10 L-10,-10 L10,-10 L0,10"); // Triangle
+  fill: #0000aa;
+}
+.typeApplicationInstance {
+  stroke: black;
+  stroke-width: 0.5px;
+  d: path("M0,10 L-10,-10 L10,-10 L0,10"); // Triangle
+  fill: #00aaff;
+}
+.levelApplicationManagementLayer {
+  fill: #ccffff;
+}
+.levelDistributedInformationManagementLayer {
+  fill: #ffddcc;
+}
+.levelServiceManagementLayer {
+  fill: #ddffdd;
+}
+.level {
+  fill: white;
+}
+.levelSoftwareDefinedInfrastructure {
+  fill: #ffffdd;
+}
+.levelSecurityAspect {
+  fill: #ffdddd
+}
+.levelCommandPhysicalLayer {
+  fill: #e0e0e0
+}
