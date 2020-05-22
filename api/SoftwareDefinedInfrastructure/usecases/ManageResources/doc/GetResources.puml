@@ -1,0 +1,38 @@
+@startuml
+actor "IT Operations"
+box sdi #lightyellow
+    boundary sdi #white
+    participant Cloud #white
+    participant Request #white
+    collections Reservation #white
+    participant "Selected Reservation" #white
+    participant Resource #white
+end box
+box cpl #lightgray
+boundary cpl #white
+end box
+entity EventBus
+"IT Operations" -> sdi: sdi/getresources(cloud, name, requirements)
+sdi -> sdi: getresources(cloud, name, requirements)
+sdi -> Cloud ** : find(cloud)
+sdi -> Request ** : new Request(name, cloud)
+sdi -> Cloud : reserve(Request)
+Cloud -> Request : fulfill()
+Request --/ EventBus : <<Request.Needed>>
+EventBus -\ cpl: reserve(datacenters, adevices, devices, request)
+cpl -> Reservation ** : create
+cpl --/ EventBus: <<Request.Evaluated>>
+EventBus -/ sdi : request.evaluate(request, reservations)
+sdi -> "Reservation" : free()
+"Reservation" --/ EventBus : <<Reservation.Rejected>>
+EventBus -/ "Reservation" !! : delete
+sdi -> "Selected Reservation" ** : selectReservation()
+sdi -> "Selected Reservation" : confirm()
+"Selected Reservation" --/ EventBus: <<Reservation.Confirmed>>
+EventBus -/ sdi : provision(Selected Reservation)
+sdi -> Resource ** : create
+sdi -> Resource : deploy()
+Resource --/ EventBus : <<Resource.Provisioning>>
+EventBus -/ cpl : provision(Resource)
+
+@enduml

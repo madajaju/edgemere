@@ -33,7 +33,7 @@ class Reservation {
         statenet: {
             Init: {
                 events: {
-                    construct: {
+                    create: {
                         Created: {}
                     }
                 }

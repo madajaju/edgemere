@@ -15,7 +15,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ailtire": "0.0.26",
+    "ailtire": "0.0.27",
     "commander": "^4.1.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",

@@ -1,5 +1,6 @@
 const path = require('path');
 const Service = require('ailtire/src/Server/Service');
+const AEvent = require('ailtire/src/Server/AEvent');
 
 module.exports = {
     friendlyName: 'reserve',
@@ -15,18 +16,18 @@ module.exports = {
 
     exits: {},
 
-    fn: async (obj, inputs, env) => {
+    fn: (obj, inputs, env) => {
         let reservations = [];
         // Iterate through the datacenters
-        reservations = await Service.call('cpl.reserve', {
-            request: inputs.request,
+        inputs.request.fulfill({
             datacenters: obj.datacenters,
             devices: obj.devices,
             aggregates: obj.adevices
         });
-        for (let i in reservations) {
+        /* for (let i in reservations) {
             obj.addToReservations(reservations[i]);
         }
         return reservations;
+         */
     }
 };

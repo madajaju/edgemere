@@ -17,12 +17,12 @@ class Request {
             type: {
                 type: 'string',
                 description: 'This is the type of resource being requested',
-            }
+            },
         },
         associations: {
             requirements: {
                 type: 'MetricComposite',
-                cardinality: '1',
+                cardinality: 1,
                 composition: true,
                 unique: true,
                 owner: true,
@@ -39,6 +39,27 @@ class Request {
                 composition: false,
                 owner: false,
             },
+            datacenters: {
+                type: 'DataCenter',
+                cardinality: 'n',
+                composition: false,
+                owner: false,
+                unique: true
+            },
+            devices: {
+                type: 'Device',
+                cardinality: 'n',
+                composition: false,
+                owner: false,
+                unique: true
+            },
+            aggregates: {
+                type: 'AggregatedDevice',
+                cardinality: 'n',
+                composition: false,
+                owner: false,
+                unique: true
+            },
             parent: {
                 type: 'LandscapeRequest',
                 cardinality: '1',
@@ -48,30 +69,53 @@ class Request {
         },
         statenet: {
             Init: {
+                description: "Initial state for the Request.",
                 events: {
-                    confirm: {
+                    fulfill: {
+                        Needed: {}
+                    },
+                }
+            },
+            Needed: {
+                description: "Request needs to be satisfied. Anyone that can satisfy it should be notified.",
+                events: {
+                    selected: {
                         Selected: {}
                     }
-
-                }
+                },
+                actions: {
+                },
+            },
+            Failed: {
+                description: 'The Request has failed to be fully satisfied. All reservations are rejected',
             },
             Selected: {
+                description: 'The Request has been selected for target. Reservations are created.',
+                evaluated: {
+                    Evaluated: {}
+                }
+            },
+            Satisfied: {
+                description: 'The Request if fully satisfied. The Reservations have been rejected or accepted',
                 events: {
-                    confirm: {
-                        Confirmed: {}
-                    },
-                    free: {
-                        Rejected: {}
+                    complete: {
+                        Completed: {}
                     }
                 }
             },
-            Failed: {
-            },
-            Satisfied: {
-            },
             Evaluated: {
+                description: 'The Request has been evaluated but not satisfied yet.',
+                events: {
+                    satisfied: {
+                        Satisfied: {}
+                    },
+                    failed: {
+                        Failed: {}
+                    }
+                }
             },
             Completed: {
+                description: 'The Request is completed.'
             }
         }
     }

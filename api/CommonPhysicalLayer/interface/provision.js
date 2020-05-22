@@ -1,28 +1,25 @@
 const path = require('path');
 
 module.exports = {
-    friendlyName: 'reserve',
-    description: 'Get Reservations from Devices, Aggregate Deivces, and DataCenters',
+    friendlyName: 'provision',
+    description: 'Provision the resources on the devices',
     static: false, // True is for Class methods. False is for object based.
     inputs: {
-        device: {
-            description: 'Device to provision',
+        obj: {
+            description: 'Resource to provision',
             type: 'object', // string|boolean|number|json
             required: true
         },
-        requirements: {
-            description: 'requirements to provision',
-            type: 'json', // string|boolean|number|json
-            required: true
-        },
     },
 
-    exits: {
-    },
+    exits: {},
 
     fn: function (inputs, env) {
-        let device = Device.find(inputs.device.id);
-        let hardware = device.provision({requirements: inputs.requirements});
+        let resource = inputs.obj;
+        //
+        // let hardware = device.provision({requirements: inputs.requirements});
+
+        resource.finishedProvision();
         return hardware;
     }
 };

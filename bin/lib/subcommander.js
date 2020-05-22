@@ -114,7 +114,7 @@ const _findHelpCommand = (args, baseDir) => {
         testString += "/" + args[i];
         i++;
         if (existsDir(testString)) {
-            console.log("Directory Found:", testString);
+            // console.log("Directory Found:", testString);
         } else if (exists(testString)) {
             bin = testString;
         } else if (exists(testString + '.js')) {
@@ -134,8 +134,8 @@ const findCommand = (args, baseDir) => {
         // Look for the bin in the interface definitions.
         let interfaceDir = path.resolve(baseDir + "/../src/interface");
         let serverDir = path.resolve(baseDir + "/../src/Server");
-        serverDir = serverDir.replace(/\\/g,'\\\\');
-        serverDir = serverDir.replace(/\//g,'\\\\');
+        serverDir = serverDir.replace(/\\/g, '\\\\');
+        serverDir = serverDir.replace(/\//g, '\\\\');
         let isAction = _findCommand(args, interfaceDir);
         if (isAction.bin) {
             var tdir = './.tmp/';
@@ -154,7 +154,7 @@ const findCommand = (args, baseDir) => {
             tempString += `program`;
             for (let iname in action.inputs) {
                 let input = action.inputs[iname];
-                if(!input.required) {
+                if (!input.required) {
                     tempString += `\n\t.option('--${iname} <${input.type}>', '${input.description}')`;
                 } else {
                     tempString += `\n\t.requiredOption('--${iname} <${input.type}>', '${input.description}')`;
@@ -182,7 +182,7 @@ const _findCommand = (args, localBin) => {
         testString += "/" + args[i];
         i++;
         if (existsDir(testString)) {
-            console.log("Directory Found:", testString);
+            // console.log("Directory Found:", testString);
         } else if (exists(testString)) {
             bin = testString;
         } else if (exists(testString + '.js')) {
@@ -266,14 +266,17 @@ const findAction = (args, localBin) => {
         tempString += "url += 'mode=json';\n";
         tempString += "let args = {headers: {'Content-Type': 'application/json'}, data: {}};\n";
         for (key in action.inputs) {
-            if(action.inputs[key].type.toUpperCase() === 'YAML') {
+            if (action.inputs[key].type.toUpperCase() === 'YAML') {
                 tempString += "if(program['" + key + "']) { args.data['" + key + "'] = YAML.load(program['" + key + "']); }\n";
-            }
-            else {
+            } else {
                 tempString += "if(program['" + key + "']) { args.data['" + key + "'] = program['" + key + "']; }\n";
             }
         }
         tempString += "client.post(url, args, (data, response) => {\n";
+        tempString += "console.log('URL:' + url);\n";
+        tempString += "console.log('ARGS:' + args);\n";
+        tempString += "console.log('DATA:' + data.toString());\n";
+        tempString += "console.log('RESPONSE:' + response.toString());\n";
         tempString += "if (data.error) { console.error('Error:' + data.error); }";
         tempString += " else { \n";
         tempString += "for(let item in data) { console.log(data[item].toString()); } }\n";
@@ -292,7 +295,7 @@ const _findAction = (args, localBin) => {
     if (!global.hasOwnProperty('ailtire')) {
         return {action: null, args: args};
     }
-    console.log("Find ", args, localBin);
+    // console.log("Find ", args, localBin);
     let action = 0;
     let i = 0;
     let aMap = actionMap();
@@ -300,17 +303,21 @@ const _findAction = (args, localBin) => {
     let pathString = "";
     let aIter = aMap;
     while (found && i < args.length) {
-        if (!aIter.hasOwnProperty(args[i])) {
+        let nCmd = args[i].toLowerCase();
+        if (!aIter.hasOwnProperty(nCmd)) {
             found = false;
         } else {
-            pathString += '/' + args[i];
-            action = aIter[args[i]].action;
-            action.path = pathString;
-            aIter = aIter[args[i]];
+            pathString += '/' + nCmd;
+            action = aIter[nCmd].action;
+            // Does not have a default Action. Go to subactions
+            if(action) {
+                action.path = pathString;
+            }
+            aIter = aIter[nCmd];
         }
         i++;
     }
-    return {action: action, args: args.slice(i-1)};
+    return {action: action, args: args.slice(i - 1)};
 };
 const _findHelpAction = (args, localBin) => {
     let action = 0;
@@ -351,19 +358,15 @@ const _helpCommand = (found) => {
 
         let tempString = '#!/usr/bin/env node\n\nconst program = require(\'commander\');\n\n';
         let action = found.action;
-        for (let name in action) {
-            if (name !== '_path') {
-                let desc = "Command with sub commands";
-                let options = "[cmds]";
-                if (action[name].hasOwnProperty('action')) {
-                    if (action[name].action.hasOwnProperty('description')) {
-                        desc = action[name].action.description;
-                    }
-                    tempString += `program.command('${name} [options]', '${desc}');\n`;
-                } else {
-                    tempString += `program.command('${name} ${options}', '${desc}');\n`;
-                }
+        let desc = "Command with sub commands";
+        let options = "[cmds]";
+        if (action.hasOwnProperty('action')) {
+            if (action.action.hasOwnProperty('description')) {
+                desc = action.action.description;
             }
+            tempString += `program.command('${action.action.name} [options]', '${desc}');\n`;
+        } else {
+            tempString += `program.command('${action.action.name} ${options}', '${desc}');\n`;
         }
         tempString += '\n';
         tempString += 'program.parse(process.argv);\n';
@@ -379,7 +382,11 @@ const _helpCommand = (found) => {
 const actionMap = () => {
     let actions = {};
     for (let path in global.ailtire.config.actions) {
-        let cmds = path.split('/');
+        let npath = path;
+        if(path[0] !== '/') {
+            npath = '/' + path;
+        }
+        let cmds = npath.split('/');
         let act = actions;
         cmds.shift();
         let pathString = '';

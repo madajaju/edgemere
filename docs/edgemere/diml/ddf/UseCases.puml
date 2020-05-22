@@ -1,9 +1,0 @@
-@startuml
-
-left to right direction
-
-
-rectangle "Data Definition Framework" #lightblue {
-}
-
-@enduml

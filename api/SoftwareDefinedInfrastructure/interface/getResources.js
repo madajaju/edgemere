@@ -23,20 +23,26 @@ module.exports = {
     exits: {},
 
 
-    fn: async function (inputs, env) {
+    fn: function (inputs, env) {
 
 
         // TODO: look at the polciies for provisioning resources on devices.
         inputs = env.req.body;
         let resources;
         let cloud = Cloud.find(inputs.cloud);
+        if(!cloud) {
+            env.res.json({error:"Could not find cloud:"+ inputs.cloud});
+            return;
+        }
 
         // Create a request for the requirements.
         let request = new Request({name: inputs.name, cloud: cloud});
         request.requirements = Metric.factory({name: "", value: inputs.requirements});
-        let reservations = cloud.reserve({request: request});
+        cloud.reserve({request: request});
+        env.res.json({request: request});
 
         // Select the reservation based on the policies that has the best match.
+        /*
         let selectedReservations = reservations;
 
         // now create the resources based on the selected reservations.
@@ -50,7 +56,6 @@ module.exports = {
             });
             reserve.request.confirm();
         }
-        /*
          // Only put reservations into the creation of the resource that match the cloud.
          for (let i in inputs.reservations) {
            if (inputs.reservations[i].cloud == cloud.id || inputs.reservations[i].cloud.id == cloud.id) {
@@ -64,7 +69,6 @@ module.exports = {
          return exits.success(resources);
 
          */
-        env.res.json({reservations: reservations});
 
     }
 

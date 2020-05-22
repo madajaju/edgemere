@@ -2,5 +2,7 @@ module.exports = {
     shortname: 'dml',
     name: 'Data Management Layer',
     description: 'Data Management Layer is a package that contains...',
-    color: '#lightblue'
+    color: '#lightblue',
+    depends: [ "Software Defined Infrastructure", "Security Aspect", "Service Management Layer", "Common Data Services" ]
+
 };
