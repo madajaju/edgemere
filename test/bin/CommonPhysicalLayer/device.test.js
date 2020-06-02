@@ -82,6 +82,7 @@ describe(' SDI Test Cases', () => {
             'bin/edgemere device create --name host5 --file ./templates/device.yaml',
             'bin/edgemere cpl device disable --name host5',
             'bin/edgemere cpl device enable --name host5',
+            'bin/edgemere cpl device disable --name host5',
         ];
         for (let i in commands) {
             let command = 'bash -c "' + commands[i] + '"';

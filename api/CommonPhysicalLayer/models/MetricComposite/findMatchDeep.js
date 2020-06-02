@@ -1,8 +1,6 @@
-const path = require('path');
-
 module.exports = {
-    friendlyName: 'plus',
-    description: 'Add metric to the current value',
+    friendlyName: 'findMatchDeep',
+    description: 'Find Metric with name',
     static: false, // True is for Class methods. False is for object based.
     inputs: {
         value: {

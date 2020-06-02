@@ -66,8 +66,8 @@ describe(' SDI Test Cases', () => {
             'bin/edgemere cloud create --name cloud2',
             'bin/edgemere cloud adddatacenters --name cloud2 --items dcB2',
             'bin/edgemere sdi getresources --name myRes --cloud cloud2 --requirements ./templates/requirements.yaml',
-            'bin/edgemere sdi getresources --name myRes2 --cloud cloud2 --requirements ./templates/requirements.yaml',
-            'bin/edgemere sdi getresources --name myRes3 --cloud cloud2 --requirements ./templates/requirements.yaml',
+            'bin/edgemere sdi getresources --name myRes2 --cloud cloud2 --requirements ./templates/requirements2.yaml',
+            'bin/edgemere sdi getresources --name myRes3 --cloud cloud2 --requirements ./templates/requirements3.yaml',
             'bin/edgemere sdi getresources --name myRes4 --cloud cloud2 --requirements ./templates/requirements.yaml',
         ];
         for (let i in commands) {

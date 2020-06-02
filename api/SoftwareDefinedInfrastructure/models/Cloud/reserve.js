@@ -18,16 +18,11 @@ module.exports = {
 
     fn: (obj, inputs, env) => {
         let reservations = [];
-        // Iterate through the datacenters
         inputs.request.fulfill({
+            cloud: obj,
             datacenters: obj.datacenters,
             devices: obj.devices,
             aggregates: obj.adevices
         });
-        /* for (let i in reservations) {
-            obj.addToReservations(reservations[i]);
-        }
-        return reservations;
-         */
     }
 };

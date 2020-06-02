@@ -5,7 +5,7 @@ module.exports = {
     description: 'Provision the resources on the devices',
     static: false, // True is for Class methods. False is for object based.
     inputs: {
-        obj: {
+        resource: {
             description: 'Resource to provision',
             type: 'object', // string|boolean|number|json
             required: true
@@ -15,11 +15,8 @@ module.exports = {
     exits: {},
 
     fn: function (inputs, env) {
-        let resource = inputs.obj;
-        //
-        // let hardware = device.provision({requirements: inputs.requirements});
-
+        let resource = inputs.resource;
+        // let hardware = resource.reservation.device.provision({requirements: inputs.requirements});
         resource.finishedProvision();
-        return hardware;
     }
 };

@@ -3,4 +3,5 @@ module.exports = {
     name: 'AI ML Services',
     description: 'AI ML Services is a package that contains...',
     color: '#lightblue',
+    depends: [ "Workflow Services" ]
 };

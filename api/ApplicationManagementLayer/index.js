@@ -5,5 +5,5 @@ module.exports = {
         'the development, test, deployment and updates of those applications and workloads',
 
     color: '#lightblue',
-    depends: [ "Distributed Information Management Layer", "Service Management Layer" ]
+    depends: [ "Distributed Information Management Layer", "Service Management Layer", "Security Aspect", "Identity Aspect" ]
 };

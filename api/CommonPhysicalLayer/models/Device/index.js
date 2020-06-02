@@ -48,6 +48,9 @@ class Device {
                 events: {
                     create: {
                         Enabled: {}
+                    },
+                    reserve: {
+                        Enabled: {}
                     }
                 }
             },

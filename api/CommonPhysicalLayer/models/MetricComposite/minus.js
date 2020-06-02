@@ -6,7 +6,7 @@ module.exports = {
     static: false, // True is for Class methods. False is for object based.
     inputs: {
         value: {
-            description: 'Value to add to the metric',
+            description: 'Value to subtract from the metric',
             type: 'object', // string|boolean|number|json
             required: true
         },

@@ -1,6 +1,6 @@
 module.exports = {
-    name: 'Application Developer',
-    shortname: 'appdev',
+    name: 'DataEngineer',
+    shortname: 'dataengineer',
     description: 'Long description' +
         ' Continued on next line',
 };

@@ -35,10 +35,17 @@ class Reservation {
                 events: {
                     create: {
                         Created: {}
+                    },
+                    confirm: {
+                        Confirmed: {}
+                    },
+                    free: {
+                        Rejected: {}
                     }
                 }
             },
             Created: {
+                description: 'Reservation is created and ready to be evaluated for best fit.',
                 events: {
                     confirm: {
                         Confirmed: {}
@@ -49,8 +56,10 @@ class Reservation {
                 }
             },
             Confirmed: {
+                description: 'Reservation is confirmed and the resources will be provisioned.',
             },
             Rejected: {
+                description: 'Reservation was rejected and devices freed up.',
             }
         }
     }

@@ -37,39 +37,10 @@ module.exports = {
 
         // Create a request for the requirements.
         let request = new Request({name: inputs.name, cloud: cloud});
+        cloud.addToRequests(request);
         request.requirements = Metric.factory({name: "", value: inputs.requirements});
         cloud.reserve({request: request});
         env.res.json({request: request});
-
-        // Select the reservation based on the policies that has the best match.
-        /*
-        let selectedReservations = reservations;
-
-        // now create the resources based on the selected reservations.
-        for (let i in selectedReservations) {
-            let reserve = selectedReservations[i];
-            reserve.confirm();
-            // Since we are talking across subsystems we should really send
-            let hardware = Service.call('cpl.provision', {
-                device: reserve.device,
-                requirement: reserve.request.requirements
-            });
-            reserve.request.confirm();
-        }
-         // Only put reservations into the creation of the resource that match the cloud.
-         for (let i in inputs.reservations) {
-           if (inputs.reservations[i].cloud == cloud.id || inputs.reservations[i].cloud.id == cloud.id) {
-             reservations.push(inputs.reservations[i]);
-           }
-         }
-         resources = await sails.helpers.softwaredefinedinfrastructure.resource.create.with({
-           name: inputs.name,
-           reservations: reservations
-         });
-         return exits.success(resources);
-
-         */
-
     }
 
 };

@@ -33,6 +33,29 @@ class AggregatedDevice {
                 owner: false,
             },
         },
+        statenet: {
+            Init: {
+                events: {
+                    create: {
+                        Enabled: {}
+                    },
+                }
+            },
+            Enabled: {
+                events: {
+                    disable: {
+                        Disabled: {}
+                    }
+                }
+            },
+            Disabled: {
+                events: {
+                    enable: {
+                        Enabled: {}
+                    }
+                }
+            }
+        }
     }
 }
 

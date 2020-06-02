@@ -17,6 +17,10 @@ describe(' SDI Test Cases', () => {
             'bin/edgemere datacenter adddevices --name DC1 --items host5,host4',
             'bin/edgemere datacenter addadevices --name DC1 --items ad1',
             'bin/edgemere datacenter addadevices --name DC2 --items ad2,ad1',
+            'bin/edgemere cpl datacenter disable --name DC2',
+            'bin/edgemere cpl datacenter enable --name DC2',
+            'bin/edgemere cpl datacenter disable --name DC2',
+
 
         ];
         for (let i in commands) {

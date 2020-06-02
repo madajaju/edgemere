@@ -22,6 +22,12 @@ class Resource {
             },
         },
         associations: {
+            request: {
+                type: 'Request',
+                cardinality: 1,
+                composition: false,
+                owner: false,
+            },
             profile: {
                 type: 'PhysicalProfile',
                 cardinality: '1',

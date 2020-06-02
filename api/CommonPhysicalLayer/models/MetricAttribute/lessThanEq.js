@@ -23,7 +23,13 @@ module.exports = {
                     return value.values.hasOwnProperty(obj.value);
                 }
                 else {
-                    return value.value.hasOwnProperty(obj.value);
+                    let flag = false;
+                    if(typeof value.value === 'object') {
+                        flag = value.value.hasOwnProperty(obj.value);
+                    } else  {
+                       flag = value.value.includes(obj.value);
+                    }
+                    return flag;
                 }
             }
         } else {

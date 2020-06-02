@@ -11,7 +11,7 @@ module.exports = {
 
     fn: function (obj, inputs, env) {
         for (let i in obj.hardware) {
-            obj.hardware.enable();
+            obj.hardware[i].enable();
         }
         obj.state = "Enable";
         return obj;

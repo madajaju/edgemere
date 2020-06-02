@@ -1,8 +1,8 @@
 const path = require('path');
 
 module.exports = {
-    friendlyName: 'combine',
-    description: 'Combine Physical Profile',
+    friendlyName: 'propagate',
+    description: 'Propagate Physical Profile',
     static: false, // True is for Class methods. False is for object based.
     inputs: {
         assoc: {

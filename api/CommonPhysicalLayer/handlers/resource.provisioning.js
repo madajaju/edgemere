@@ -2,14 +2,11 @@ module.exports = {
     name: 'resource.provisioning',
     handlers: [
         {
-            fn: function (data) {
-                console.log("Made it here Reservation Confirmed");
-                data.obj.device.profile.available.minus({value: data.obj.request.requirements});
-                data.obj.device.profile.propagate({assoc: 'available', operation:'minus', value: data.obj.request.requirements});
-            },
-        },
-        {
-            action: '',
+            action: '/cpl/provision',
+            fn: (data) => {
+                console.log("Data Conversion ===============================================");
+                return {resource: data.obj};
+            }
         }
     ]
 };

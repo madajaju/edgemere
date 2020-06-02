@@ -1,0 +1,9 @@
+Compute:
+    speed: 2.5GHz
+    cores: 22
+    memory: 64 GB
+Storage:
+    size: 10 GB
+Network:
+    speed: 1 Gb
+    size: 20

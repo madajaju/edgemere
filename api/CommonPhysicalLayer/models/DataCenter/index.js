@@ -32,7 +32,29 @@ class DataCenter {
                 via: 'datacenter'
             },
         },
-
+        statenet: {
+            Init: {
+                events: {
+                    create: {
+                        Enabled: {}
+                    },
+                }
+            },
+            Enabled: {
+                events: {
+                    disable: {
+                        Disabled: {}
+                    }
+                }
+            },
+            Disabled: {
+                events: {
+                    enable: {
+                        Enabled: {}
+                    }
+                }
+            }
+        }
     }
 }
 

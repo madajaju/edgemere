@@ -9,10 +9,12 @@ module.exports = {
     description: 'Data Scientist manages AI models and ties them to and application and data set. ' +
         'DevOps will make sure when applications and AI models are updated that they are updated' +
         'together.',
-    method: 'AIModel/list',
+    method: 'aimodel/list',
     actors: {
         'Data Scientist': 'uses',
-        'DevOps Engineer': 'uses'
+        'DevOps Engineer': 'uses',
+        'ApplicationDeveloper': 'uses',
+        'DataEngineer': 'uses',
     },
 };
 

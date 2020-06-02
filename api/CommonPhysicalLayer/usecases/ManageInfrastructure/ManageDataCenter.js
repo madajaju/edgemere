@@ -1,9 +1,9 @@
 module.exports = {
     name: 'Manage Data Center',
     description: 'Manage Data Center is the description',
-    method: "data/source/name",
+    method: "data/source",
     actors: {
-        'Actor': 'uses',
+        'IT Operations': 'uses',
     },
 };
 

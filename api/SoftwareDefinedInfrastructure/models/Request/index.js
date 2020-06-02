@@ -18,6 +18,10 @@ class Request {
                 type: 'string',
                 description: 'This is the type of resource being requested',
             },
+            message: {
+                type: 'string',
+                description: 'Last message about the request',
+            },
         },
         associations: {
             requirements: {
@@ -32,6 +36,13 @@ class Request {
                 cardinality: 'n',
                 composition: false,
                 owner: true,
+            },
+            resources: {
+                type: 'Resource',
+                cardinality: 'n',
+                composition: false,
+                owner: true,
+                via: 'request'
             },
             cloud: {
                 type: 'Cloud',
@@ -81,6 +92,9 @@ class Request {
                 events: {
                     selected: {
                         Selected: {}
+                    },
+                    failed: {
+                        Failed: {}
                     }
                 },
                 actions: {
@@ -91,8 +105,10 @@ class Request {
             },
             Selected: {
                 description: 'The Request has been selected for target. Reservations are created.',
-                evaluated: {
-                    Evaluated: {}
+                events: {
+                    evaluated: {
+                        Evaluated: {}
+                    }
                 }
             },
             Satisfied: {
