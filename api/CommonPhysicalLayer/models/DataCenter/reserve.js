@@ -20,19 +20,12 @@ module.exports = {
         if(obj.profile.satisfies({request:inputs.request})) {
             for(let name in obj.devices) {
                 let device = obj.devices[name];
-                let mres = device.reserve({request: inputs.request});
-                for(let i in mres) {
-                    reservations.push(mres[i]);
-                }
+                device.reserve({request: inputs.request});
             }
             for(let name in obj.adevices) {
                 let adevice = obj.adevices[name];
-                let mres = adevice.reserve({request:inputs.requirements});
-                for(let i in mres) {
-                    reservations.push(mres[i]);
-                }
+                adevice.reserve({request:inputs.requirements});
             }
         }
-        return reservations;
     }
 };

@@ -1,9 +1,9 @@
 module.exports = {
     name: 'Update Device',
     description: 'Update Device is the description',
-    method: "data/source/name",
+    method: "data/source",
     actors: {
-        'Actor': 'uses',
+        'IT Operations': 'uses',
     },
 };
 

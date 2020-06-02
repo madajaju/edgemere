@@ -1,0 +1,21 @@
+@startuml
+actor "IT Operations"
+box sdi #lightyellow
+    boundary sdi #white
+    participant Cloud #white
+    participant Request #white
+end box
+boundary cpl #lightgray
+entity EventBus
+"IT Operations" -> sdi: sdi/getresources(cloud, name, requirements)
+sdi -> sdi: getresources(cloud, name, requirements)
+sdi -> Cloud ** : find(cloud)
+sdi -> Request ** : new Request(name, cloud)
+sdi -> Cloud : reserve(Request)
+Cloud -> Request : fulfill()
+Request --/ EventBus : Request.Needed
+EventBus -\ cpl: reserve(datacenters, adevices, devices, request)
+cpl --> cpl: Create Reservations
+cpl --/ EventBus: Request.Evaluated
+EventBus --/ sdi : request.evaluate(request, reservations)
+@enduml

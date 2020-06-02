@@ -18,9 +18,7 @@ module.exports = {
     fn: function (obj, inputs, env) {
         if(obj.profile.satisfies({request:inputs.request})) {
             let reservation = new Reservation({request:inputs.request, device:obj});
-            return [reservation];
-        } else {
-            return [];
+            inputs.request.addToReservations(reservation);
         }
     }
 };

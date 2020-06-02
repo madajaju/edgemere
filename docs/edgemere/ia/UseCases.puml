@@ -1,9 +1,0 @@
-@startuml
-
-left to right direction
-
-
-rectangle "Identity Aspect" #lightblue {
-}
-
-@enduml

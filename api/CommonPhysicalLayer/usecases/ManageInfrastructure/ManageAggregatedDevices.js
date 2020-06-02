@@ -1,9 +1,9 @@
 module.exports = {
     name: 'Manage Aggregated Devices',
     description: 'Manage Aggregated Devices is the description',
-    method: "data/source/name",
+    method: "data/source",
     actors: {
-        'Actor': 'uses',
+        'IT Operations': 'uses',
     },
 };
 

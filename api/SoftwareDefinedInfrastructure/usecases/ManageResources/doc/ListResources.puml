@@ -1,0 +1,10 @@
+@startuml
+actor "IT Operations"
+box sdi #lightyellow
+    boundary sdi #white
+    participant Resource #white
+end box
+"IT Operations" -> sdi: sdi/list()
+sdi -> Resource: find()
+sdi --> "IT Operations" : resources
+@enduml

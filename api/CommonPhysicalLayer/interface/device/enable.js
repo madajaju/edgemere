@@ -24,6 +24,6 @@ module.exports = {
             obj = Device.find(inputs.id);
         }
         obj.enable();
-        return obj;
+        env.res.send({device:obj});
     }
 };

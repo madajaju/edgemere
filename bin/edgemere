@@ -12,9 +12,13 @@ try {
     let topCommands = {};
     for(let path in global.ailtire.config.actions) {
         let cmds = path.split('\/');
-        if(!topCommands.hasOwnProperty(cmds[1])) {
-            program.command(cmds[1] + " [cmds]", 'Top command for ' + cmds[1]);
-            topCommands[cmds[1]]= true;
+        let cmdName = cmds[0];
+        if(cmdName === '') {
+            cmdName = cmds[1];
+        }
+        if(!topCommands.hasOwnProperty(cmdName)) {
+            program.command(cmdName + " [cmds]", 'Top command for ' + cmds[1]);
+            topCommands[cmdName]= true;
         }
     }
 } catch (e) {
