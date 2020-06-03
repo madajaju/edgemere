@@ -1,6 +1,5 @@
-const Service = require('ailtire/src/Server/Service');
 module.exports = {
-    friendlyName: 'getResources',
+    friendlyName: 'get',
     description: 'Get Resources from the SDI Layer',
 
     inputs: {
@@ -21,17 +20,13 @@ module.exports = {
         }
     },
     exits: {},
-
-
     fn: function (inputs, env) {
-
-
         // TODO: look at the polciies for provisioning resources on devices.
         inputs = env.req.body;
         let resources;
         let cloud = Cloud.find(inputs.cloud);
-        if(!cloud) {
-            env.res.json({error:"Could not find cloud:"+ inputs.cloud});
+        if (!cloud) {
+            env.res.json({error: "Could not find cloud:" + inputs.cloud});
             return;
         }
 

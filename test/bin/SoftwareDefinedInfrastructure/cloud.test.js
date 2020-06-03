@@ -65,10 +65,10 @@ describe(' SDI Test Cases', () => {
             'bin/edgemere datacenter adddevices --name dcB2 --items hostB1,hostB2,hostB3,hostB4',
             'bin/edgemere cloud create --name cloud2',
             'bin/edgemere cloud adddatacenters --name cloud2 --items dcB2',
-            'bin/edgemere sdi getresources --name myRes --cloud cloud2 --requirements ./templates/requirements.yaml',
-            'bin/edgemere sdi getresources --name myRes2 --cloud cloud2 --requirements ./templates/requirements2.yaml',
-            'bin/edgemere sdi getresources --name myRes3 --cloud cloud2 --requirements ./templates/requirements3.yaml',
-            'bin/edgemere sdi getresources --name myRes4 --cloud cloud2 --requirements ./templates/requirements.yaml',
+            'bin/edgemere sdi resource get --name myRes --cloud cloud2 --requirements ./templates/requirements.yaml',
+            'bin/edgemere sdi resource get --name myRes2 --cloud cloud2 --requirements ./templates/requirements2.yaml',
+            'bin/edgemere sdi resource get --name myRes3 --cloud cloud2 --requirements ./templates/requirements3.yaml',
+            'bin/edgemere sdi resource get --name myRes4 --cloud cloud2 --requirements ./templates/requirements.yaml',
         ];
         for (let i in commands) {
             let command = 'bash -c "' + commands[i] + '"';

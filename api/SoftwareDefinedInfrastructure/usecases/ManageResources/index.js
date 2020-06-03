@@ -7,7 +7,7 @@
 module.exports = {
     name: 'Manage Resources',
     description: 'Manage Resources includes creating resources, listing and planning for resources.',
-    method: '/sdi/getResources',
+    method: 'resource/list',
     actors: {
         'IT Operations': 'uses'
     },
