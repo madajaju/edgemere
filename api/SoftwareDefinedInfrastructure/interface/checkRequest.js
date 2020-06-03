@@ -11,7 +11,6 @@ module.exports = {
     },
     exits: {},
 
-
     fn: function (inputs, env) {
         let rqst = inputs.request;
         let ready = true;

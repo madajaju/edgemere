@@ -3,7 +3,6 @@ module.exports = {
     handlers: [
         {
             fn: function (data) {
-                console.log("Made it here");
                 return {request: data.obj.request};
             },
         },
