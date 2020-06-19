@@ -1,0 +1,71 @@
+name: aws
+assetmap:
+  xsmall: t3.nano
+  small: t3.small
+  medium: t3.medium
+  large: t3.large
+  xlarge: t3.xlarge
+resourcetypes:
+  t3.nano:
+    type: Compute
+    capabilities:
+      cpucredits: 6
+      speed: 3.1 Ghz
+      cores: 2
+      memory: 0.5 GB
+      bandwidth: 2085 Mbps
+    costs:
+      ondemand: 0.0052
+      1year: 0.003
+      3year: 0.002
+  t3.small:
+    type: Compute
+    capabilities:
+      cpucredits: 24
+      speed: 3.1 Ghz
+      cores: 2
+      memory: 2.0 GB
+      bandwidth: 2085 Mbps
+    costs:
+      ondemand: 0.0209
+      1year: 0.012
+      3year: 0.008
+  t3.medium:
+    type: Compute
+    capabilities:
+      cpucredits: 24
+      speed: 3.1 Ghz
+      cores: 2
+      memory: 4.0 GB
+      disk-bandwidth: 2085 Mbps
+      network-bandwidth: 5 Gbps
+    costs:
+      ondemand: 0.0418
+      1year: 0.025
+      3year: 0.017
+  t3.large:
+    type: Compute
+    capabilities:
+      cpucredits: 36
+      speed: 3.1 Ghz
+      cores: 2
+      memory: 8.0 GB
+      disk-bandwidth: 2780 Mbps
+      network-bandwidth: 5 Gbps
+    costs:
+      ondemand: 0.0835
+      1year: 0.05
+      3year: 0.036
+  t3.xlarge:
+    type: Compute
+    capabilities:
+      cpucredits: 96
+      speed: 3.1 Ghz
+      cores: 4
+      memory: 16.0 GB
+      disk-bandwidth: 2780 Mbps
+      network-bandwidth: 5 Gbps
+    costs:
+      ondemand: 0.1670
+      1year: 0.099
+      3year: 0.067

@@ -5,3 +5,4 @@ module.exports = {
     color: '#lightgreen',
     depends: [ "Service Orchestrator" ]
 };
+
