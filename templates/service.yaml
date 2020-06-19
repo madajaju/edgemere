@@ -1,0 +1,28 @@
+name: common
+version: 0.0.1
+ports:
+  - 8080:80
+replicas: 5
+external-ports:
+  - 80
+internal-ports:
+  - 8080
+environments:
+  dev:
+    image: alpine
+    args:
+      arg1: value1
+      arg2: value2
+    replicas: 1
+    ports:
+      - 80
+      - 8080
+  local:
+    image: alpine
+    replicas: 1
+  test:
+    image: alpine
+    replicas: 1
+  prod:
+    image: alpine
+    replicas: 1
