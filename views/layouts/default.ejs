@@ -33,7 +33,7 @@
     </div>
     <div class="side-bar">
         <ul class="action-bar">
-            <li class="action-bar-list"><b>edgemere</b></li>
+            <li class="action-bar-list"><b>Edgemere</b></li>
             <li class="action-bar-list"><a href="/">Home</a></li>
             <li class="action-bar-list"><a onclick=toggleMenu('actor-sub-list');> Users</a></li>
             <div class="sub-action-bar-div" id="actor-sub-list">
@@ -49,7 +49,7 @@
                                 for(let ucname in actor.usecases) {
                                     let uc = actor.usecases[ucname];
                                 %>
-                                <li class="sub-action-bar-list"><a href="<%= uc.method %>" target="work-frame"><%= ucname %></a></li>
+                                <li class="sub-action-bar-list"><a href="/<%= uc.method %>" target="work-frame"><%= ucname %></a></li>
                                 <% } %>
                             </ul>
                         </div>

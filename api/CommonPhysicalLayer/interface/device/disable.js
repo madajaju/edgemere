@@ -24,6 +24,6 @@ module.exports = {
             obj = Device.find(inputs.id);
         }
         obj.disable();
-        env.res.send({device:obj});
+        env.res.send({device:obj.toJSON});
     }
 };

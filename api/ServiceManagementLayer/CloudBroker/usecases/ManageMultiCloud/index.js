@@ -6,10 +6,11 @@
 
 module.exports = {
     name: 'Manage Multi Cloud',
-    description: 'Manage Multi Cloud is the description',
-    method: 'data/govern',
+    description: 'Manage Multi Cloud allows actors to create multi-clouds by adding clouds. Management of policies' +
+        ' for the multi-cloud and all of the services deployed to a multi-cloud is performed by IT Operations.',
+    method: 'multicloud/list',
     actors: {
-        'Actor': 'uses'
+        'IT Operations': 'uses'
     },
 };
 

@@ -15,10 +15,10 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ailtire": "0.0.27",
+    "ailtire": "0.0.31",
     "commander": "^4.1.0",
-    "ejs": "^3.0.1",
+    "ejs": "^3.1.3",
     "express": "^4.17.1",
-    "mocha": "^7.0.0"
+    "mocha": "^7.2.0"
   }
 }

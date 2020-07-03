@@ -15,6 +15,12 @@ class Cloud {
 
         },
         associations: {
+            type: {
+                type: 'CloudType',
+                cardinality: 1,
+                composition: false,
+                owner: false
+            },
             resources: {
                 type: 'Resource',
                 cardinality: 'n',

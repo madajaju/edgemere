@@ -24,7 +24,7 @@ class Servicelet {
         associations: {
             resources: {
                 description: 'resource requests for the servicelet',
-                type: 'resource',
+                type: 'Resource',
                 cardinality: 'n',
                 composition: false,
                 owner: false,

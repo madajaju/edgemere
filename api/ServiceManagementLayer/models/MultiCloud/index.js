@@ -17,8 +17,8 @@ class MultiCloud {
                 owner: false,
             },
             polices: {
-                type: 'Policy',
-                cardinality: 'n',
+                type: 'PolicyCollection',
+                cardinality: 1,
                 composition: false,
                 owner: false,
             },

@@ -60,8 +60,8 @@ class Service {
             },
             policies: {
                 description: 'Policies of the Service',
-                type: 'Policy',
-                cardinality: 'n',
+                type: 'PolicyCollection',
+                cardinality: 1,
                 composition: false,
                 owner: false,
             },

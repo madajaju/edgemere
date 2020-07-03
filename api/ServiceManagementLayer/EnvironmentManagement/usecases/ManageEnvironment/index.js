@@ -6,7 +6,8 @@
 
 module.exports = {
     name: 'Manage Environment',
-    description: 'Manage Environment is the description',
+    description: 'Manage Environment allows the actors (IT Operations and Stack Developer) to create environments,' +
+        ' and establish policies for services running in the environment.',
     method: 'environment/list',
     actors: {
         'IT Operations': 'uses',

@@ -6,7 +6,7 @@
 
 module.exports = {
     name: 'Manage Stacks',
-    description: 'Manage Stacks is the description',
+    description: 'Manage Stacks allows the stack developer to create, update, and delete stacks.',
     method: 'stack/list',
     actors: {
         'Stack Developer': 'uses',

@@ -26,6 +26,7 @@ module.exports = {
             let cloudtype = CloudType.find(inputs.type);
             if(cloudtype) {
                 obj.type = cloudtype;
+                cloudtype.addToClouds(obj);
             }
             else {
                 throw new Error("Could not find the Cloud Type:", inputs.type);

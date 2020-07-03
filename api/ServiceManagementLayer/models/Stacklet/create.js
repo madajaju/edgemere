@@ -17,10 +17,12 @@ module.exports = {
         // obj.file.services = Contains the servics for the stacklet
         // obj.file.parameters = Parameters
         // obj.file.environment = Envoronment Variables
-        if(obj.hasOwnProperty('file')) {
+        if(inputs.hasOwnProperty('file')) {
+            /*
             for (let sname in obj.file.services) {
                 let
             }
+             */
         }
         for (let envName in inputs.file.environments) {
             // Check that the environment exists. If it does not create it.

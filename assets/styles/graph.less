@@ -10,10 +10,6 @@
     color: white
   }
 }
-.links line {
-  stroke: #555555;
-  stroke-opacity: 0.8;
-}
 .typeDataCenter {
   stroke: #cccccc;
   stroke-width: 1.5px;
@@ -56,9 +52,37 @@
   stroke: #ffffff;
   stroke-width: 1.5px;
   fill: lightgray;
-  d: path("M 0,0 a 5,5 1 0,0 0,10 h 12 a 5,5 1 0,0 0,-10 a 2,2 1 0,0 -4,-2 a 4,2 1 0,0 -9,2  z");
+  d: path("M -3 -4 a 7.5 7.5 1 0 0 0 15 h 21 a 7.5 7.5 1 0 0 0 -15 a 3 3 1 0 0 -4.5 -3 a 6 6 1 0 0 -17.25 3 z ");
+}
+.typeMultiCloud {
+  stroke: #ffffff;
+  stroke-width: 1.5px;
+  fill: lightgray;
+  d: path("M -3 -4 a 7.5 7.5 1 0 0 0 15 h 21 a 7.5 7.5 1 0 0 0 -15 a 3 3 1 0 0 -4.5 -3 a 6 6 1 0 0 -17.25 3 z M 3 2 a 4.5 4.5 1 0 0 0 9 h 11.25 a 4.5 4.5 1 0 0 0 -9 a 2.25 2.25 1 0 0 -3.375 -2.25 a 4.125 4.125 1 0 0 -8.625 2.25 z");
 }
 
+.typeCloudType {
+  stroke: #000000;
+  stroke-dasharray: 5,3;
+  stroke-width: 3px;
+  fill: #004488;
+  d: path("M 0 0 a 7.5 7.5 1 0 0 0 15 h 18 a 7.5 7.5 1 0 0 0 -15 a 3 3 1 0 0 -6 -3 a 6 3 1 0 0 -13.5 3 z");
+
+}
+.typeResourceInstanceType {
+  stroke: #000000;
+  stroke-dasharray: 5,3;
+  stroke-width: 1.5px;
+  fill: #77ccff;
+  d: path("M -10 0 a 10,10 0 1,0 20,0 a 10,10 0 1,0 -20,0");
+}
+.typeResourceMap {
+  stroke: #000000;
+  stroke-dasharray: 5,3;
+  stroke-width: 1.5px;
+  fill: #4488cc;
+  d: path("M-8,-8 L-8,8 L8,8 L8,-8 Z");
+}
 .typeComputeResource {
   stroke: #ffffff;
   stroke-width: 1.5px;
@@ -167,6 +191,12 @@
 .levelServiceManagementLayer {
   fill: #ddffdd;
 }
+.levelEnvironmentManagement {
+  fill: #aaffaa;
+}
+.levelCloudBroker {
+  fill: #ddffdd;
+}
 .level {
   fill: white;
 }
@@ -179,3 +209,26 @@
 .levelCommonPhysicalLayer {
   fill: #e0e0e0
 }
+.SelectedNode {
+  stroke: orange;
+  stroke-width: 3px;
+}
+.SelectedNodeRelative {
+  stroke: yellow;
+  stroke-width: 3px;
+}
+
+.Link {
+  stroke: #555555;
+  stroke-opacity: 0.8;
+}
+
+.SelectedLinktarget {
+  stroke: lime;
+  stroke-width: 3px;
+}
+.SelectedLinksource {
+  stroke: red;
+  stroke-width: 3px;
+}
+
