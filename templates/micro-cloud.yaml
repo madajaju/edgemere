@@ -1,0 +1,27 @@
+name: micro
+assetmap:
+  xsmall: xsmall
+  small: small
+resourcetypes:
+  xsmall:
+    type: Compute
+    capabilities:
+      speed: 3.1 Ghz
+      cores: 1
+      memory: 0.5 GB
+      bandwidth: 2085 Mbps
+    costs:
+      ondemand: 0.001
+      1year: 0.001
+      3year: 0.001
+  small:
+    type: Compute
+    capabilities:
+      speed: 3.1 Ghz
+      cores: 2
+      memory: 2.0 GB
+      bandwidth: 2085 Mbps
+    costs:
+      ondemand: 0.002
+      1year: 0.002
+      3year: 0.002

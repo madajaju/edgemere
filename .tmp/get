@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+
+const YAML = require('yamljs');
+const Client = require('node-rest-client').Client;
+const client = new Client();
+global.ailtire = { config: require('C:\\Users\\dwpulsip\\work\\edgemere\\bin\\lib/../../.ailtire.js') };
+program.command('get [options]', 'Get Resources from the SDI Layer')
+	.option('--cloud <string>', 'Cloud to request the Resources')
+	.option('--name <string>', 'The name of the Resource to create.')
+	.option('--requirements <YAML>', 'The Requirements to create the resource');
+program.parse(process.argv);
+let url = global.ailtire.config.host + '/sdi/resource/get?';
+url += 'mode=json';
+let args = {headers: {'Content-Type': 'application/json'}, data: {}};
+if(program['cloud']) { args.data['cloud'] = program['cloud']; }
+if(program['name']) { args.data['name'] = program['name']; }
+if(program['requirements']) { args.data['requirements'] = YAML.load(program['requirements']); }
+client.post(url, args, (data, response) => {
+console.log('URL:' + url);
+console.log('ARGS:' + args);
+console.log('DATA:' + data.toString());
+console.log('RESPONSE:' + response.toString());
+if (data.error) { console.error('Error:' + data.error); } else { 
+for(let item in data) { console.log(data[item].toString()); } }
+});

@@ -1,0 +1,58 @@
+name: azure
+assetmap:
+  xsmall: e2-micro
+  small: e2-small
+  medium: e2-medium
+  large: n2-standard-2
+  xlarge: n2-standard-4
+resourcetypes:
+  e2-micro:
+    type: Compute
+    capabilities:
+      speed: 3.1 Ghz
+      cores: 2
+      memory: 1 GB
+    costs:
+      ondemand: 0.00838
+      1year: 0.00528
+      3year: 0.00377
+  e2-small:
+    type: Compute
+    capabilities:
+      speed: 3.1 Ghz
+      cores: 2
+      memory: 2 GB
+    costs:
+      ondemand: 0.01675
+      1year: 0.01055
+      3year: 0.00754
+  e2-medium:
+    type: Compute
+    capabilities:
+      speed: 3.1 Ghz
+      cores: 2
+      memory: 4.0 GB
+    costs:
+      ondemand: 0.03354
+      1year: 0.02111
+      3year: 0.01508
+  n2-standard-2:
+    type: Compute
+    capabilities:
+      speed: 3.1 Ghz
+      cores: 2
+      memory: 8 GB
+    costs:
+      ondemand: 0.0971
+      1year: 0.0488
+      3year: 0.0314
+  n2-standard-4:
+    type: Compute
+    capabilities:
+      speed: 3.1 Ghz
+      cores: 4
+      memory: 16.0 GB
+    costs:
+      ondemand: 0.1942
+      1year: 0.0974
+      3year: 0.0627

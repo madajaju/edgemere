@@ -1,0 +1,75 @@
+name: myStack
+version: 0.0.1
+parameters:
+  param1: value1
+environments:
+  dev: # StackletDefinition
+    services: # StackletDefinition.services
+      service1: # ServiceContext
+        type: simple # ServicesRef
+        version: 0.0.1 # Version of the Service or StackDefinition
+        replicas: 1
+        args: # To the ServiceInstance
+          param1: param1
+        links:
+          - service2
+        resources: # For the Resources
+          compute: small
+        data: # Data Reference for the ServiceletDefinition
+          nameOfDataRef:
+            tag1: value1
+            tag2: value2
+          nameofDR2:
+            tag1: value1
+            tag2: value2
+      service2:
+        type: simple
+        replicas: 1
+        resources:
+          compute: large
+        data:
+          nameOfDataRef:
+            tag1: value1
+            tag2: value2
+          nameofDR2:
+            tag1: value1
+            tag2: value2
+  test:
+    services:
+      service1:
+        type: simple
+        version: 0.0.1
+        replicas: 1
+        args:
+          param1: param1
+        links:
+          - service2
+        service2:
+          type: simple
+          replicas: 1
+  local:
+    services:
+      service1:
+        type: simple
+        version: 0.0.1
+        replicas: 1
+        args:
+          param1: param1
+        links:
+          - service2
+        service2:
+          type: simple
+          replicas: 1
+  prod:
+    services:
+      service1:
+        type: simple
+        version: 0.0.1
+        replicas: 1
+        args:
+          param1: param1
+        links:
+          - service2
+        service2:
+          type: simple
+          replicas: 1

@@ -1,0 +1,59 @@
+name: azure
+assetmap:
+  xsmall: B1S
+  small: B1MS
+  medium: B2S
+  large: B2MS
+  xlarge: B4MS
+
+resourcetypes:
+  B1S:
+    type: Compute
+    capabilities:
+      speed: 3.1 Ghz
+      cores: 1
+      memory: 1 GB
+    costs:
+      ondemand: 0.0104
+      1year: 0.0061
+      3year: 0.0040
+  B1MS:
+    type: Compute
+    capabilities:
+      speed: 3.1 Ghz
+      cores: 1
+      memory: 2.0 GB
+    costs:
+      ondemand: 0.0207
+      1year: 0.0123
+      3year: 0.0079
+  B2S:
+    type: Compute
+    capabilities:
+      speed: 3.1 Ghz
+      cores: 2
+      memory: 4.0 GB
+    costs:
+      ondemand: 0.0416
+      1year: 0.0244
+      3year: 0.0157
+  B2MS:
+    type: Compute
+    capabilities:
+      speed: 3.1 Ghz
+      cores: 2
+      memory: 8.0 GB
+    costs:
+      ondemand: 0.0832
+      1year: 0.0488
+      3year: 0.0314
+  B4MS:
+    type: Compute
+    capabilities:
+      speed: 3.1 Ghz
+      cores: 4
+      memory: 16.0 GB
+    costs:
+      ondemand: 0.166
+      1year: 0.0974
+      3year: 0.0627

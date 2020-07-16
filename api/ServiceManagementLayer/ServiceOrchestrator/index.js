@@ -1,6 +1,9 @@
 module.exports = {
     shortname: 'so',
     name: 'Service Orchestrator',
-    description: 'Service Orchestrator is a package that contains...',
-    color: '#lightblue'
+    description: 'Service Orchestrator builds landscape requests for the service or stack. The Landscape Request' +
+        ' is generated from the service and stack deployments and coordinates with the Infrastructure Orchestrator' +
+        ' Data Orchestrator, and the Application Orchestrator.',
+    color: '#lightgreen',
+    depends: [ "Service Controller", "Service Repository", "Data Orchestrator", "Infrastructure Orchestrator" ]
 };

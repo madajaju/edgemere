@@ -24,6 +24,6 @@ module.exports = {
             obj = DataCenter.find(inputs.id);
         }
         obj.disable();
-        env.res.send({datacenter:obj});
+        env.res.send({datacenter:obj.toJSON});
     }
 };

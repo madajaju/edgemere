@@ -35,7 +35,7 @@ module.exports = {
         cloud.addToRequests(request);
         request.requirements = Metric.factory({name: "", value: inputs.requirements});
         cloud.reserve({request: request});
-        env.res.json({request: request});
+        env.res.send({request: request.toJSON});
     }
 
 };
