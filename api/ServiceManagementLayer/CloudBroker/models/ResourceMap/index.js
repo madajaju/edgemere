@@ -1,4 +1,3 @@
-
 class ResourceMap {
     static definition = {
         name: 'ResourceMap',
@@ -46,6 +45,35 @@ class ResourceMap {
             }
         }
         */
+        view: {
+            color: "#aaffaa",
+            object2d: (options) => {
+                // Triangle
+                let material = {color: "#aaffaa", border: "#000000"};
+                if (options) {
+                    material = options;
+                }
+
+                return `<rect x="5" y="5" width="15" height="15" style="fill:${material.color};stroke:${material.border};stroke-width:1;" />` +
+                    `<rect width="15" height="15" style="fill:none;stroke:${material.border};stroke-width:1;stroke-dasharray:3;" />` ;
+            },
+            object3d: (options) => {
+                let materials = {
+                    '': `color:#aaffaa; transparent:true, opacity:0.90;`,
+                    'Selected': `color:#ffff00; transparent:true, opacity:0.90;`,
+                    'Targeted': `color:#00ff00; transparent:true, opacity:0.90;`,
+                    'Sourced': `color:#ff0000; transparent:true, opacity:0.90;`
+                };
+                let retval = "";
+                for(let i in materials) {
+                    retval += `<a-entity id="ResourceMap3D${i}">` +
+                        `<a-box width="15" height="15" depth="15" material='${materials[i]}' ></a-box>` +
+                        `<a-box width="15" height="15" depth="15" position="5 5 5" material='${materials[i]} wireframe:true' ></a-box>` +
+                        `</a-entity>`;
+                }
+                return retval;
+            }
+        }
     }
 }
 

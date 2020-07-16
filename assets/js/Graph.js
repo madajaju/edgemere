@@ -142,8 +142,7 @@ class Graph {
             levels[sortedLevels[i]].height = this.height / numberOfLevels;
             if (levels[sortedLevels[i]].hasOwnProperty('groups')) {
                 let numberOfGroups = Object.keys(level.groups).length;
-                let y2offset = yoffset;
-                let gheight = levels[sortedLevels[i]].height / numberOfGroups;
+
                 let sortedGroups = Object.keys(level.groups).sort(function (a, b) {
                     // Check the order from the levels options.
                     return levels[sortedLevels[i]].groups[a].order - levels[sortedLevels[i]].groups[b].order;

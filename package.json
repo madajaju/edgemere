@@ -15,6 +15,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "3d-force-graph": "^1.65.1",
+    "aframe": "^1.0.4",
     "ailtire": "0.0.31",
     "commander": "^4.1.0",
     "ejs": "^3.1.3",
