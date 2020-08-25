@@ -4,6 +4,7 @@ class Stacklet {
         name: 'Stacklet',
         description: 'This is a combination of the stack with a specific environment. This allows for a stack to behave ' +
             'differently depending on the envionrment it is in.',
+        extends: 'Servicelet',
         attributes: {
             name: {
                 type: 'string',
@@ -20,15 +21,8 @@ class Stacklet {
         },
         associations: {
             stack: {
-                description: 'Stack for the Stacklet',
+                description: 'Parent Stack for the Stacklet',
                 type: 'Stack',
-                cardinality: 1,
-                composition: false,
-                owner: false,
-            },
-            env: {
-                description: 'Environment for the Stacklet',
-                type: 'Environment',
                 cardinality: 1,
                 composition: false,
                 owner: false,
@@ -40,13 +34,6 @@ class Stacklet {
                 composition: true,
                 owner:true,
                 via: 'stacklet'
-            },
-            data: {
-                description: 'Data References to the data in the Stacklet',
-                type: 'DataReference',
-                cardinality: 'n',
-                composition: false,
-                owner:false,
             },
         },
         /*

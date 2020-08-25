@@ -21,10 +21,9 @@ module.exports = {
                 console.log("Creating new Environment:", envName);
                 environ = new Environment({name: envName});
             }
-            let stacklet = new Stacklet({
+            let stacklet = obj.createlet({
                 name: obj.name + '-' + environ.name,
                 env: environ,
-                stack: obj,
                 file: inputs.file.environments[envName]
             });
             obj.addToStacklets(stacklet);

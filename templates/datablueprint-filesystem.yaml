@@ -1,0 +1,20 @@
+name: filesystem
+version: 0.0.1
+parameters:
+  host: value1
+  rootdir: value2
+identity:
+  username: user
+  password: password
+  cert: certkey
+adaptors:
+  mysource:
+    type: filesystem
+    args:
+      host: localhost
+      rootdir: /home/edgemere
+dataflows:
+  myFlow:
+    type: filesystembasic
+    sources:
+    - mysource

@@ -1,0 +1,19 @@
+name: filesystem
+version: 0.0.1
+parameters:
+  host: value1
+  rootdir: value2
+identity:
+  username: user
+  password: password
+  cert: certkey
+
+name: sql
+verison: 0.0.1
+parameters:
+  host: defaulthost
+  dbname: dfaultdbname
+identity:
+  username: user
+  password: password
+  cert: certkey

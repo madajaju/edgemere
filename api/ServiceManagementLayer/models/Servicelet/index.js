@@ -29,15 +29,22 @@ class Servicelet {
                 composition: false,
                 owner: false,
             },
-            stacklet: {
+            parent: {
                 description: 'Parent stacklet for the servicelet',
                 type: 'Stacklet',
                 cardinality: 1,
                 composition: false,
                 owner: false,
             },
+            instances: {
+                description: 'ServiceInstance for the servicelet',
+                type: 'ServiceInstance',
+                cardinality: 'n',
+                composition: false,
+                owner: false,
+            },
             service: {
-                description: 'Service for the servicelet',
+                description: 'Service for the servicelet, this is what service is run. This could be a service or a stack',
                 type: 'Service',
                 cardinality: 1,
                 composition: false,
@@ -49,6 +56,14 @@ class Servicelet {
                 cardinality: 1,
                 composition: false,
                 owner: false,
+            },
+            data: {
+                description: 'Data References to the data in the Stacklet',
+                type: 'DataReference',
+                cardinality: 'n',
+                composition: false,
+                owner:true,
+                via: 'parent'
             },
         },
         /*

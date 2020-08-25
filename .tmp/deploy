@@ -7,18 +7,18 @@ const Client = require('node-rest-client').Client;
 const client = new Client();
 global.ailtire = { config: require('C:\\Users\\dwpulsip\\work\\edgemere\\bin\\lib/../../.ailtire.js') };
 program.command('deploy [options]', 'Description of the action')
-	.option('--name <string>', 'Name of the stack to deploy')
-	.option('--tag <string>', 'Tag of the deployment of the stack. This is used to reference the deployed stack.')
-	.option('--env <string>', 'Name of the deployment environment')
-	.option('--args <json>', 'Arguments passed into the stack deployment');
+	.option('--name <string>', 'Name instance of the blueprint')
+	.option('--blueprint <string>', 'Name of the blueprint')
+	.option('--file <YAML>', 'File of with the parameters for the deployment')
+	.option('--sources <string>', 'Names and values of the sources for the blueprint');
 program.parse(process.argv);
-let url = global.ailtire.config.host + '/sml/so/stack/deploy?';
+let url = global.ailtire.config.host + '/diml/ddf/datablueprint/deploy?';
 url += 'mode=json';
 let args = {headers: {'Content-Type': 'application/json'}, data: {}};
 if(program['name']) { args.data['name'] = program['name']; }
-if(program['tag']) { args.data['tag'] = program['tag']; }
-if(program['env']) { args.data['env'] = program['env']; }
-if(program['args']) { args.data['args'] = program['args']; }
+if(program['blueprint']) { args.data['blueprint'] = program['blueprint']; }
+if(program['file']) { args.data['file'] = YAML.load(program['file']); }
+if(program['sources']) { args.data['sources'] = program['sources']; }
 client.post(url, args, (data, response) => {
 console.log('URL:' + url);
 console.log('ARGS:' + args);

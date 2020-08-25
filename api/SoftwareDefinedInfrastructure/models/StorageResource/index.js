@@ -21,7 +21,7 @@ class StorageResource {
             },
             object3d: (options) => {
                 let materials = {
-                    '': `color:#cccccc; transparent:true, opacity:0.90;`,
+                    '': `color:#ffffcc; transparent:true, opacity:0.90;`,
                     'Selected': `color:#ffff00; transparent:true, opacity:0.90;`,
                     'Targeted': `color:#00ff00; transparent:true, opacity:0.90;`,
                     'Sourced': `color:#ff0000; transparent:true, opacity:0.90;`

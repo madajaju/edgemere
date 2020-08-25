@@ -1,0 +1,14 @@
+parameters:
+  host: value1
+  rootdir: value2
+identity:
+  username: user
+  password: password
+  cert: certkey
+sources:
+  mysource:
+    adaptor: filesystem
+    parameters:
+      host: localhost
+      rootdir: /tmp/work
+

@@ -4,6 +4,6 @@ module.exports = {
     description: 'Application Management Layer is responsible for the management of applications and workflows and' +
         'the development, test, deployment and updates of those applications and workloads',
 
-    color: '#lightblue',
+    color: 'lightblue',
     depends: [ "Distributed Information Management Layer", "Service Management Layer", "Security Aspect", "Identity Aspect" ]
 };

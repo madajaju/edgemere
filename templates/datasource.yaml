@@ -1,0 +1,10 @@
+name: myfilesystem
+adaptor:
+  name: filesystem
+  version: 0.0.1
+parameters:
+  host: localhost
+  roodir: /tmp/work
+identity:
+  user: root
+  password: password

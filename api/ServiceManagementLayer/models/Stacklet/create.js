@@ -1,5 +1,4 @@
 const path = require('path');
-const Service = require('ailtire/src/Server/Service');
 const AEvent = require('ailtire/src/Server/AEvent');
 
 module.exports = {
@@ -12,32 +11,39 @@ module.exports = {
 
     fn: (obj, inputs, env) => {
         obj.name = inputs.name;
-        // obj.file.data = Contains data references
-        // obj.file.resources = Contains resource requirements for the stacklet
-        // obj.file.services = Contains the servics for the stacklet
-        // obj.file.parameters = Parameters
-        // obj.file.environment = Envoronment Variables
+        obj.env = inputs.env;
+        obj.stack = inputs.stack;
         if(inputs.hasOwnProperty('file')) {
-            /*
-            for (let sname in obj.file.services) {
-                let
+            // obj.file.data = Contains data references
+            for(let dname in inputs.file.data) {
+                let datum = inputs.file.data[dname];
+                let drefName = obj.name + '-' + dname;
+                let dref = new DataReference({name: drefName, shortName: dname, query: datum});
+                obj.addToData(dref);
             }
-             */
-        }
-        for (let envName in inputs.file.environments) {
-            // Check that the environment exists. If it does not create it.
-            let environ = Environment.find(envName);
-            if (!environ) {
-                console.log("Creating new Environment:", envName);
-                environ = new Environment({name: envName});
+            // obj.file.resources = Contains resource requirements for the stacklet
+            // obj.file.parameters = Parameters
+            // obj.file.environment = Environment Variables
+            // obj.file.services = Contains the services for the stacklet
+            for(let sname in inputs.file.services) {
+                let serviceName = inputs.file.services[sname].type;
+                let service = Service.find(serviceName);
+                if(!service) {
+                    console.error("Could not find the Service! ", serviceName);
+                }
+                else {
+
+                    let opts = {
+                        name: obj.name + '-' + sname,
+                        env: inputs.env,
+                        stacklet: obj,
+                        file: inputs.file.services[sname]
+                    }
+                    let slet = service.createlet(opts);
+                    // Servicelet or Stacklet depending on the type of Service.
+                    obj.addToServicelets(slet);
+                }
             }
-            let stacklet = new Stacklet({
-                name: obj.name + '-' + environ.name,
-                env: environ,
-                stack: obj,
-                file: inputs.file.environments[envName]
-            });
-            obj.addToStacklets(stacklet);
         }
         return obj;
     }

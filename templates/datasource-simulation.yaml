@@ -1,0 +1,48 @@
+template:
+  type: dir
+  tags:
+    filetypes:
+      - yaml
+      - dir
+    owner: darren
+    creation-date: 2020/08/17
+template/aws-cloud.yaml:
+  type: file
+  tags:
+    package: SML
+    filetypes:
+      - yaml
+    owner: darren
+    creation-date: 2020/07/17
+template/azure-cloud.yaml:
+  type: file
+  tags:
+    package: SML
+    filetypes:
+      - yaml
+    owner: darren
+    creation-date: 2020/07/17
+template/dataadaptor.yaml:
+  type: file
+  tags:
+    package: DIML
+    filetypes:
+      - yaml
+    owner: darren
+    creation-date: 2020/08/17
+template/dataadaptor-filesystem.yaml:
+  type: file
+  tags:
+    package: DIML
+    filetypes:
+      - yaml
+    owner: darren
+    creation-date: 2020/08/17
+template/datablueprint.yaml:
+  type: file
+  tags:
+    package: DIML
+    filetypes:
+      - yaml
+    owner: darren
+    creation-date: 2020/06/17

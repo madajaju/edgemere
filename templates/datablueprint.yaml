@@ -1,0 +1,33 @@
+name: blueprintname
+version: 0.0.1
+parameters:
+  param1: value1
+  param2: value2
+identity:
+  username: user
+  password: password
+  cert: certkey
+adaptors:
+  myAdaptorName:
+    type: adaptorType
+    parameters:
+      param1: value1
+      param2: value2
+  MyAdaptorName2:
+    type: adaptorType
+    parameters:
+      param1: value1
+      param2: value2
+  MyAdaptorName3:
+    type: adaptorType
+    parameters:
+      param1: value1
+      param2: value2
+dataflows:
+  myFlowName1:
+    type: dataflowtype
+    sources:
+      - MyAdaptorName2
+      - MyAdaptorName1
+    sinks:
+      - MyAdaptorName3

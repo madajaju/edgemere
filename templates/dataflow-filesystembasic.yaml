@@ -1,0 +1,8 @@
+name: filesystembasic
+version: 0.0.1
+parameters:
+  host: localhost
+  rootdir: /tmp
+sources:
+sinks:
+  edgemereMetaData

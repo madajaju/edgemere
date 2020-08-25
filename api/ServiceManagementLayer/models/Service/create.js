@@ -14,6 +14,7 @@ module.exports = {
         obj.name = inputs.name;
         obj.version = inputs.file.version;
         obj.parameters = inputs.file.parameters;
+        console.log("SERVICE CREATE:", inputs.name);
         for (let envName in inputs.file.environments) {
             // Check that the environment exists. If it does not create it.
             let environ = Environment.find(envName);

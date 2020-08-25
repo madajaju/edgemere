@@ -1,0 +1,9 @@
+name: filesystem
+version: 0.0.1
+parameters:
+  host: localhost
+  rootdir: /tmp
+identity:
+  username: user
+  password: password
+  cert: certkey

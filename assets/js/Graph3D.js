@@ -1,14 +1,39 @@
+const boundingBox = [
+    {x: 0, y: 0, z: 0},
+    {x: 0, y: 100, z: 0},
+    {x: 0, y: -100, z: 0},
+    {x: 100, y: 0, z: 0},
+    {x: -100, y: 0, z: 0},
+    {x: 0, y: 0, z: 100},
+    {x: 0, y: 0, z: -100},
+    {x: 100, y: 100, z: 0},
+    {x: 100, y: -100, z: 0},
+    {x: 100, y: 0, z: 100},
+    {x: 100, y: 0, z: -100},
+    {x: 100, y: 100, z: 100},
+    {x: 100, y: 100, z: -100},
+    {x: 100, y: -100, z: 100},
+    {x: 100, y: -100, z: -100},
+    {x: -100, y: 100, z: 0},
+    {x: -100, y: -100, z: 0},
+    {x: -100, y: 0, z: 100},
+    {x: -100, y: 0, z: -100},
+    {x: -100, y: 100, z: 100},
+    {x: -100, y: 100, z: -100},
+    {x: -100, y: -100, z: 100},
+    {x: -100, y: -100, z: -100},
+]
 
 class Graph3D {
     constructor(gdiv, data, options) {
         this.gdiv = gdiv;
         this.options = {
             width: 1000,
-            height:1000,
-            background:"#555500",
-            linkColor:"#000000"
+            height: 1000,
+            background: "#555500",
+            linkColor: "#000000"
         }
-        for(let i in options) {
+        for (let i in options) {
             this.options[i] = options[i];
         }
         this.selected = {
@@ -24,7 +49,7 @@ class Graph3D {
         }
         this.data = data;
         this.normalizeData();
-        this.graph = ForceGraph3D()
+        this.graph = ForceGraph3D({controlType:'orbit'})
         (document.getElementById(this.gdiv))
             .width(this.options.width)
             .height(this.options.height)
@@ -46,7 +71,7 @@ class Graph3D {
                     defaultID += "Sourced";
                 }
                 retval = document.querySelector(objID);
-                if(!retval) {
+                if (!retval) {
                     retval = document.querySelector(defaultID);
                 }
                 let obj3D = retval.object3D.clone();
@@ -87,6 +112,15 @@ class Graph3D {
             .linkColor(this.options.linkColor)
             .linkDirectionalParticleSpeed(0.006)
             .graphData(this.ndata)
+            .d3Force('x', d3.forceX()
+                .x(node => this.levels[node.level].x)
+                .strength(1))
+            .d3Force('y', d3.forceY()
+                .y(node => this.levels[node.level].y)
+                .strength(1))
+            .d3Force('z', d3.forceZ()
+                .z(node => this.levels[node.level].z)
+                .strength(1))
             .onNodeHover(node => {
                 this.selectNode(node);
             })
@@ -94,20 +128,47 @@ class Graph3D {
                 loadObjectChildren(this, node.group, node.id);
             });
         this.linkForce = this.graph
+            .d3Force('collide', d3.forceCollide(this.graph.nodeRelSize() + 30))
             .d3Force('link')
             .distance(link => link.value * 10 + 1);
 
+        for(let i in this.levels) {
+            const geo = new THREE.SphereGeometry(100);
+            const mat = new THREE.MeshPhongMaterial({color: 0xffffaa, opacity:0.05, transparent:true, refractionRatio:1, depthTest:false, depthWrite:false, side:THREE.DoubleSide});
+            const mesh = new THREE.Mesh(geo, mat);
+            mesh.position.set(this.levels[i].x, this.levels[i].y,this.levels[i].z);
+
+            this.graph.scene().add(mesh);
+        }
+
         window.graph = this;
-    }
-    ;
+    };
+
 
     normalizeData() {
         this.ndata = {
             links: [],
             nodes: []
         };
+        this.levels = {};
+        let totalItems = 0;
         for (let i in this.data.nodes) {
+            let level = this.data.nodes[i].level;
+            if (!this.levels.hasOwnProperty(level)) {
+                this.levels[level] = {x: 0, y: 0, z: 0, items: 0};
+            }
+            this.levels[level].items++;
+            totalItems++;
             this.ndata.nodes.push(this.data.nodes[i]);
+        }
+        let multiplier = Math.floor(totalItems/30) + 1;
+        let j = 0;
+        for (let i in this.levels) {
+            let level = this.levels[i];
+            level.x = boundingBox[j].x * multiplier;
+            level.y = boundingBox[j].y * multiplier;
+            level.z = boundingBox[j].z * multiplier;
+            j++;
         }
         for (let i in this.data.links) {
             let source = this.data.links[i].source;
@@ -138,6 +199,16 @@ class Graph3D {
             this.data.links.push(pLinks[i]);
         }
         this.normalizeData();
+
+        for(let i in this.levels) {
+            const geo = new THREE.SphereGeometry(100);
+            const mat = new THREE.MeshPhongMaterial({color: 0xffffaa, opacity:0.05, transparent:true, refractionRatio:1, depthTest:false, depthWrite:false, side:THREE.DoubleSide});
+            const mesh = new THREE.Mesh(geo, mat);
+            mesh.position.set(this.levels[i].x, this.levels[i].y,this.levels[i].z);
+
+            this.graph.scene().add(mesh);
+        }
+
         this.graph.graphData(this.ndata);
     }
     ;
@@ -238,7 +309,6 @@ function loadObjectChildren(graph, cls, objid) {
                     }
                     if (dobj.definition.associations[aname].cardinality === 1) {
                         let otype = dobj._associations[aname].definition.name;
-                        checkObject3D(dobj._associations[aname].definition);
                         let aobj = dobj._associations[aname];
                         let aoid = dobj._associations[aname]._attributes.id;
                         mnodes[aoid] = {
@@ -247,12 +317,12 @@ function loadObjectChildren(graph, cls, objid) {
                             group: otype,
                             level: aobj.definition.package.name.replace(/\s/g, ''),
                             view: otype + '3D'
+
                         };
                         mlinks.push({source: oid, target: aoid, value: linkValue});
                     } else {
                         for (let j in dobj._associations[aname]) {
                             let otype = dobj.definition.associations[aname].type;
-                            checkObject3D(dobj.definition.associations[aname].definition);
                             let aoid = '';
                             let aobj = dobj._associations[aname][j];
                             aoid = dobj._associations[aname][j]._attributes.id;
@@ -275,13 +345,4 @@ function loadObjectChildren(graph, cls, objid) {
     xhttp.open("GET", `/${cls}?mode=json&id=${objid}`, true);
     xhttp.send();
 }
-
-function checkObject3D(model) {
-    let object3D = document.querySelector(`#${model.name}3D`);
-    if(!object3D) {
-        let garden = document.querySelector("#ObjectGarden");
-        garden.innerHTML += model.view.object3d;
-    }
-}
-
 exports.Graph = Graph;

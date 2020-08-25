@@ -4,19 +4,8 @@ class Stack {
         description: 'A Stack is an aggregation of services in one context. The Stack can have any number ' +
             'of Services and has a stacklet for each environment in the system. Application typically ' +
             'have 1 or more stacks to define their applications.',
+        extends: 'Service',
         attributes: {
-            name: {
-                description: 'Name of the stack',
-                type: 'string',
-            },
-            version: {
-                description: 'Version of the stack',
-                type: 'string',
-            },
-            parameters: {
-                description: 'Parameters of the stack [ {name:value} ]',
-                type: 'json',
-            },
         },
         associations: {
             policies: {

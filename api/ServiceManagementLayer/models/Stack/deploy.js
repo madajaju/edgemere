@@ -61,6 +61,15 @@ module.exports = {
         // Calculate the args based on what was passed in and what is in the definition.
         args = "";
         let sinstance = new StackInstance({name:siname,stacklet:stacklet, args:args});
+        // Iterate over the stacklet and create instances for each stack or service.
+        for(let i in stacklet.servicelets) {
+            let servicelet = stacklet.servicelets[i];
+            let tag = inputs.siname + servicelet.name;
+            let args = inputs.args;
+            let servicei = servicelet.deploy(tag, deployEnv, args);
+            sinstance.addToServices(servicei);
+        }
+
         obj.addToInstances(sinstance);
         stacklet.addToInstances(sinstance);
         return sinstance;

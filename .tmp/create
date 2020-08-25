@@ -7,16 +7,18 @@ const Client = require('node-rest-client').Client;
 const client = new Client();
 global.ailtire = { config: require('C:\\Users\\dwpulsip\\work\\edgemere\\bin\\lib/../../.ailtire.js') };
 program.command('create [options]', 'create entity')
-	.option('--name <string>', 'Name of the cloud')
+	.option('--name <string>', 'name of the data source')
 	.option('--file <YAML>', 'file with the definition')
-	.option('--type <string>', 'Type of cloud');
+	.option('--adaptor <ref>', 'Adaptor for the data source')
+	.option('--parameters <string>', 'parameters comma separated name=value,vname2=value2');
 program.parse(process.argv);
-let url = global.ailtire.config.host + '/cloud/create?';
+let url = global.ailtire.config.host + '/datasource/create?';
 url += 'mode=json';
 let args = {headers: {'Content-Type': 'application/json'}, data: {}};
 if(program['name']) { args.data['name'] = program['name']; }
 if(program['file']) { args.data['file'] = YAML.load(program['file']); }
-if(program['type']) { args.data['type'] = program['type']; }
+if(program['adaptor']) { args.data['adaptor'] = program['adaptor']; }
+if(program['parameters']) { args.data['parameters'] = program['parameters']; }
 client.post(url, args, (data, response) => {
 console.log('URL:' + url);
 console.log('ARGS:' + args);
