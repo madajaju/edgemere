@@ -17,7 +17,7 @@
   "dependencies": {
     "3d-force-graph": "^1.65.1",
     "aframe": "^1.0.4",
-    "ailtire": "0.0.31",
+    "ailtire": "0.0.33",
     "commander": "^4.1.0",
     "d3-force-3d": "^2.1.0",
     "ejs": "^3.1.3",

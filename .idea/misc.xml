@@ -3,4 +3,7 @@
   <component name="ProjectRootManager">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
+  <component name="TaskProjectConfiguration">
+    <server type="JIRA" url="http://fedsa.atlassian.net" />
+  </component>
 </project>

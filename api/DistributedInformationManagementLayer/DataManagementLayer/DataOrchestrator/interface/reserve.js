@@ -5,10 +5,10 @@ module.exports = {
     description: 'Reserve a Data Instances from a Data Request',
     static: true, // True is for Class methods. False is for object based.
     inputs: {
-        datarequest: {
-            description: 'This is the data request to get the data reservations',
+        dataref: {
+            description: 'This is the data reference to create a data request',
             type: 'json', // string|boolean|number|json
-            required: false
+            required: true
         },
     },
 
@@ -21,6 +21,8 @@ module.exports = {
     },
 
     fn: function (inputs, env) {
-        let dreq = inputs.datarequest;
+        // Create a Data Request from the Data Reference
+        let dref = inputs.dataref;
+
     }
 };

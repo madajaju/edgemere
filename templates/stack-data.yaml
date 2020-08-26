@@ -1,0 +1,84 @@
+name: myStackData
+version: 0.0.1
+parameters:
+  param1: value1
+environments:
+  dev:
+    services:
+      service1:
+        type: complexServiceA
+        version: 0.0.1
+        replicas: 1
+        args:
+          param1: param1
+        links:
+          - service2
+        resources:
+          compute: small
+        data:
+          dataDarren:
+            owner: darren
+          dataDIML:
+            package: DIML
+      service2:
+        type: simple
+        replicas: 1
+        resources:
+          compute: large
+        data:
+          dataDir:
+            type: dir
+          dataDarren:
+            owner: darren
+      service3:
+        type: common
+        replicas: 1
+        resources:
+          compute: large
+  test:
+    services:
+      service1:
+        type: simple
+        version: 0.0.1
+        replicas: 1
+        args:
+          param1: param1
+        links:
+          - service2
+      service2:
+        type: simple
+        replicas: 1
+  local:
+    services:
+      service1:
+        type: simple
+        version: 0.0.1
+        replicas: 1
+        args:
+          param1: param1
+        links:
+          - service2
+      service2:
+        type: simple
+        replicas: 1
+  prod:
+    services:
+      service1:
+        type: simple
+        version: 0.0.1
+        replicas: 1
+        args:
+          param1: param1
+        links:
+          - service2
+        data:
+          dataDarren:
+            owner: darren
+          dataDIML:
+            package: DIML
+      service2:
+        type: simple
+        replicas: 1
+        data:
+          dataDir:
+            type: dir

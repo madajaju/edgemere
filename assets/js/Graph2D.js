@@ -31,36 +31,53 @@ class Graph2D {
         }
         this.data = data;
         this.normalizeData();
-        this.svg = d3.create("svg");
-        let linkForce = d3.forceLink(this.data.links)
+        this.svg = d3.select("svg");
+        let width = +this.svg.attr("width");
+        let height = +this.svg.attr("height");
+
+        let linkForce = d3.forceLink(this.ndata.links)
             .id((d) => {
                 return d.id;
             });
+
         this.graph = d3.forceSimulation()
-            .nodes(this.data.nodes)
+            .nodes(this.ndata.nodes)
             .force("links", linkForce)
             .force('charge', d3.forceManyBody())
+            .force('center', d3.forceCenter(width/2, height/2))
             .force('collision', d3.forceCollide().radius(function (node) {
-                return node.object.size;
+                return 40;
             }))
             .force("x", d3.forceX())
             .force("y", d3.forceY())
-            .on("tick", ticked);
-        let link = this.svg.append("g")
-            .attr("stroke", "#888888")
-            .attr("stroke-width", 1.5)
-            .selectAll("line");
-        let node = svg.append("g")
-            .attr("stroke", "#ffffff")
-            .attr("stroke-width", 1)
-            .data(this.data.nodes)
-            .enter()
-            .append("path")
-            .attr("d", (node) => {
-                return node.view.object2d;
-            })
-            .style("fill", (node) => {
-                return node.view.color;
+            .on("tick", () => {
+                links
+                    .attr("x1", d => d.source.x)
+                    .attr("y1", d => d.source.y)
+                    .attr("x2", d => d.target.x)
+                    .attr("y2", d => d.target.y);
+                nodes
+                    .attr("transform", (d) => { return "translate(" + d.x + "," + d.y + ")";} );
+            });
+
+        // add the links and the arrows
+
+        links = this.svg.append("g")
+            .attr("class", "links")
+            .selectAll("line")
+            .data(this.ndata.links)
+            .enter().append("line")
+            .attr("stroke-width", (d) => { return d.value; })
+            .attr("stroke", "black")
+            .attr("class", "link");
+
+        nodes = this.svg.append("g")
+            .attr("class", "nodes")
+            .selectAll("g")
+            .data(this.ndata.nodes)
+            .enter().append("g")
+            .attr("class", (node) => {
+                return node.group;
             })
             .on("mouseover", (node) => {
                 // highlight
@@ -72,7 +89,20 @@ class Graph2D {
             })
             .on("click", node => {
                 loadObjectChildren(this, node.group, node.id);
-            })
+            });
+
+        for (let i in this.data.nodes) {
+            let node = this.data.nodes[i];
+            let htmlText = '<circle cx=0 cy=0 r=10 fill="gray" stroke="black" />';
+            if(node.hasOwnProperty('view')) {
+                htmlText = node.view;
+            }
+            d3.selectAll(`.${node.group}`).html(htmlText);
+        }
+        nodes.append("title")
+            .text(function (d) {
+                return d.name;
+            });
         window.graph = this;
     };
 
@@ -148,6 +178,7 @@ class Graph2D {
             if (element) {
                 element.className = "";
             }
+            /*
             d3.select(this.selected.nodes.primary)
                 .select("path")
                 .attr("d", (node) => {
@@ -155,10 +186,13 @@ class Graph2D {
                 })
                 .style("fill", (node) => {
                     return node.view.color;
+
                 });
+             */
         }
         for (let i in this.selected.nodes.source) {
             let mnode = this.selected.nodes.source[i];
+            /*
             d3.select(mnode)
                 .select("path")
                 .attr("d", (node) => {
@@ -167,9 +201,12 @@ class Graph2D {
                 .style("fill", (node) => {
                     return node.view.color;
                 });
+
+             */
         }
         for (let i in this.selected.nodes.target) {
             let mnode = this.selected.nodes.target[i];
+            /*
             d3.select(mnode)
                 .select("path")
                 .attr("d", (node) => {
@@ -178,6 +215,8 @@ class Graph2D {
                 .style("fill", (node) => {
                     return node.view.color;
                 });
+
+             */
         }
         this.selected = {
             links: {

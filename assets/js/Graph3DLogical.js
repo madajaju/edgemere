@@ -24,7 +24,7 @@ const boundingBox = [
     {x: -100, y: -100, z: -100},
 ]
 
-class Graph3D {
+class Graph3DLogical {
     constructor(gdiv, data, options) {
         this.gdiv = gdiv;
         this.options = {
@@ -131,15 +131,16 @@ class Graph3D {
             .d3Force('collide', d3.forceCollide(this.graph.nodeRelSize() + 30))
             .d3Force('link')
             .distance(link => link.value * 10 + 1);
-        /* for(let i in this.levels) {
-            const geo = new THREE.SphereGeometry(10);
-            const mat = new THREE.MeshLambertMaterial({color: 0x000000, opacity:1.0, transparent:true});
+
+        for(let i in this.levels) {
+            const geo = new THREE.SphereGeometry(100);
+            const mat = new THREE.MeshPhongMaterial({color: 0xffffaa, opacity:0.05, transparent:true, refractionRatio:1, depthTest:false, depthWrite:false, side:THREE.DoubleSide});
             const mesh = new THREE.Mesh(geo, mat);
             mesh.position.set(this.levels[i].x, this.levels[i].y,this.levels[i].z);
 
             this.graph.scene().add(mesh);
         }
-         */
+
         window.graph = this;
     };
 
@@ -198,16 +199,16 @@ class Graph3D {
             this.data.links.push(pLinks[i]);
         }
         this.normalizeData();
-        /*
+
         for(let i in this.levels) {
-            const geo = new THREE.SphereGeometry(10);
-            const mat = new THREE.MeshLambertMaterial({color: 0x000000, opacity:1.0, transparent:true});
+            const geo = new THREE.SphereGeometry(100);
+            const mat = new THREE.MeshPhongMaterial({color: 0xffffaa, opacity:0.05, transparent:true, refractionRatio:1, depthTest:false, depthWrite:false, side:THREE.DoubleSide});
             const mesh = new THREE.Mesh(geo, mat);
             mesh.position.set(this.levels[i].x, this.levels[i].y,this.levels[i].z);
 
             this.graph.scene().add(mesh);
         }
-         */
+
         this.graph.graphData(this.ndata);
     }
     ;
