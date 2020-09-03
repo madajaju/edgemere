@@ -21,18 +21,28 @@ module.exports = {
         // This is a class being added.
         if (typeof inputs.value === 'object') {
             let syncedObj = obj.findMatchDeep(inputs);
-            if (inputs.value.definition) {
-                if (inputs.value.definition.name === 'MetricComposite') {
+            if (inputs.value.className) {
+                let vclsname = inputs.value.className;
+                if (vclsname === 'MetricComposite') {
                     for (let i in inputs.value.values) {
                         let val = inputs.value.values[i];
                         syncedObj.plus({value: val});
                     }
-                } else {
+                } else if(vclsname === 'MetricConsumeable') {
                     if (!syncedObj.hasInValues(inputs.value.name)) {
                         syncedObj.addToValues(inputs.value.copy());
                     } else {
                         syncedObj.values[inputs.value.name].plus({value: inputs.value});
                     }
+                } else if(vclsname === 'MetricAttribute') {
+                    if (!syncedObj.hasInValues(inputs.value.name)) {
+                        syncedObj.addToValues(inputs.value.copy());
+                    } else {
+                        syncedObj.values[inputs.value.name].plus({value: inputs.value});
+                    }
+                }
+                else {
+                    console.error("Could not add the attribute:", inputs.value)
                 }
             } else {
                 syncedObj.plus({value: inputs.value.value});

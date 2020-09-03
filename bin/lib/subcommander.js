@@ -114,7 +114,7 @@ const _findHelpCommand = (args, baseDir) => {
         testString += "/" + args[i];
         i++;
         if (existsDir(testString)) {
-            // console.log("Directory Found:", testString);
+            console.log("Directory Found:", testString);
         } else if (exists(testString)) {
             bin = testString;
         } else if (exists(testString + '.js')) {
@@ -182,7 +182,7 @@ const _findCommand = (args, localBin) => {
         testString += "/" + args[i];
         i++;
         if (existsDir(testString)) {
-            // console.log("Directory Found:", testString);
+            console.log("Directory Found:", testString);
         } else if (exists(testString)) {
             bin = testString;
         } else if (exists(testString + '.js')) {
@@ -248,39 +248,40 @@ const findAction = (args, localBin) => {
         // Look for the bin in the interface definitions.
         let tdir = './.tmp/';
         let tfile = tdir + found.action.path.split('/').pop();
-        let tempString = '#!/usr/bin/env node\n\nconst program = require(\'commander\');\n\n';
-        tempString += "const YAML = require('yamljs');\n";
-        tempString += "const Client = require('node-rest-client').Client;\n";
-        tempString += "const client = new Client();\n";
-        tempString += "global.ailtire = { config: require('" + __dirname.replace(/\\/g, '\\\\') + "/../../.ailtire.js') };\n";
         let action = found.action;
-        tempString += `program.command('${action.friendlyName} [options]', '${action.description}')`;
+        let tempString = `#!/user/bin/env node
+const bent = require('bent');
+const program = require('commander');
+const YAML = require('yamljs');
+global.ailtire = { config: require('${__dirname.replace(/\\/g, '\\\\')}/../../.ailtire.js') };
+program.command('${action.friendlyName} [options]', '${action.description}')`;
         for (let iname in action.inputs) {
             let input = action.inputs[iname];
             tempString += `\n\t.option('--${iname} <${input.type}>', '${input.description}')`;
         }
-        tempString += ';\n';
-        tempString += 'program.parse(process.argv);\n';
-        // Call the client call here
-        tempString += "let url = global.ailtire.config.host + '" + found.action.path + "?';\n";
-        tempString += "url += 'mode=json';\n";
-        tempString += "let args = {headers: {'Content-Type': 'application/json'}, data: {}};\n";
+        tempString += `;\n`;
+        tempString += `program.parse(process.argv);
+let url = global.ailtire.config.host;
+let args = {};
+let params = '${found.action.path}?';
+params += 'mode=json';
+`;
         for (key in action.inputs) {
             if (action.inputs[key].type.toUpperCase() === 'YAML') {
-                tempString += "if(program['" + key + "']) { args.data['" + key + "'] = YAML.load(program['" + key + "']); }\n";
+                tempString += `if(program['${key}']) { args['${key}'] = YAML.load(program['${key}']); }\n`;
             } else {
-                tempString += "if(program['" + key + "']) { args.data['" + key + "'] = program['" + key + "']; }\n";
+                tempString += `if(program['${key}']) { args['${key}'] = program['${key}']; }\n`;
             }
         }
-        tempString += "client.post(url, args, (data, response) => {\n";
-        tempString += "console.log('URL:' + url);\n";
-        tempString += "console.log('ARGS:' + args);\n";
-        tempString += "console.log('DATA:' + data.toString());\n";
-        tempString += "console.log('RESPONSE:' + response.toString());\n";
-        tempString += "if (data.error) { console.error('Error:' + data.error); }";
-        tempString += " else { \n";
-        tempString += "for(let item in data) { console.log(data[item].toString()); } }\n";
-        tempString += "});";
+        tempString += `
+const post = bent(url, 'POST', 'json', 200);
+(async () => {
+    const response = await post(params, args);
+    console.log(response.results);
+})().catch(e => {
+    // Deal with the fact the chain failed
+    console.error("Response Error:", e);
+});`;
 
         tfile = path.resolve(tfile);
         let dirname = path.dirname(tfile);
@@ -295,7 +296,7 @@ const _findAction = (args, localBin) => {
     if (!global.hasOwnProperty('ailtire')) {
         return {action: null, args: args};
     }
-    // console.log("Find ", args, localBin);
+
     let action = 0;
     let i = 0;
     let aMap = actionMap();
@@ -310,7 +311,7 @@ const _findAction = (args, localBin) => {
             pathString += '/' + nCmd;
             action = aIter[nCmd].action;
             // Does not have a default Action. Go to subactions
-            if(action) {
+            if (action) {
                 action.path = pathString;
             }
             aIter = aIter[nCmd];
@@ -351,39 +352,44 @@ const _findHelpAction = (args, localBin) => {
     return {action: act};
 };
 const _helpCommand = (found) => {
-    if (found.action) {
-        // Look for the bin in the interface definitions.
-        let tdir = './.tmp/';
-        let tfile = tdir + found.action._path.split('/').pop();
+        if (found.action) {
+            // Look for the bin in the interface definitions.
+            let tdir = './.tmp/';
+            let tfile = tdir + found.action._path.split('/').pop();
 
-        let tempString = '#!/usr/bin/env node\n\nconst program = require(\'commander\');\n\n';
-        let action = found.action;
-        let desc = "Command with sub commands";
-        let options = "[cmds]";
-        if (action.hasOwnProperty('action')) {
-            if (action.action.hasOwnProperty('description')) {
-                desc = action.action.description;
+            let tempString = '#!/usr/bin/env node\n\nconst program = require(\'commander\');\n\n';
+            let action = found.action;
+            for (let name in action) {
+                if (name !== '_path') {
+                    let desc = "Command with sub commands";
+                    let options = "[cmds]";
+                    if (action.hasOwnProperty('action')) {
+                        if (action.action.hasOwnProperty('description')) {
+                            desc = action.action.description;
+                        }
+                        tempString += `program.command('${action.action.name} [options]', '${desc}');\n`;
+                    } else {
+                        tempString += `program.command('${action.action.name} ${options}', '${desc}');\n`;
+                    }
+                    tempString += '\n';
+                    tempString += 'program.parse(process.argv);\n';
+                    console.log(tempString);
+                    tfile = path.resolve(tfile);
+                    let dirname = path.dirname(tfile);
+                    fs.mkdirSync(dirname, {recursive: true});
+                    fs.writeFileSync(tfile, tempString);
+                    found = {bin: tfile, args: ['help'], temp: true};
+                }
+                return found;
             }
-            tempString += `program.command('${action.action.name} [options]', '${desc}');\n`;
-        } else {
-            tempString += `program.command('${action.action.name} ${options}', '${desc}');\n`;
         }
-        tempString += '\n';
-        tempString += 'program.parse(process.argv);\n';
-        tfile = path.resolve(tfile);
-        let dirname = path.dirname(tfile);
-        fs.mkdirSync(dirname, {recursive: true});
-        fs.writeFileSync(tfile, tempString);
-        found = {bin: tfile, args: ['help'], temp: true};
-    }
-    return found;
-};
+}
 
 const actionMap = () => {
     let actions = {};
     for (let path in global.ailtire.config.actions) {
         let npath = path;
-        if(path[0] !== '/') {
+        if (path[0] !== '/') {
             npath = '/' + path;
         }
         let cmds = npath.split('/');
@@ -401,3 +407,4 @@ const actionMap = () => {
     }
     return actions;
 }
+

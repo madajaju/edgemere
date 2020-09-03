@@ -31,7 +31,13 @@ module.exports = {
         let retval = null;
         if (typeof inputs.value === 'object') {
             // inputs.id = inputs.name;
-            retval = new MetricComposite(inputs);
+            let vclsname = inputs.value.className;
+            if (vclsname) {
+                retval = new MetricComposite(inputs);
+            } else {
+                retval = new MetricComposite(inputs);
+            }
+
         } else if (!metricTypes.hasOwnProperty(inputs.name)) {
             // inputs.id = inputs.name;
             retval = new Metric(inputs);
