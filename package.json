@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "doc": "cd deploy/doc && npm install && npm start",
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
     "custom-tests": "mocha ./test/**/*.test.js",
@@ -16,8 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "3d-force-graph": "^1.66.7",
-    "aframe": "^1.0.4",
-    "ailtire": "0.0.33",
+    "ailtire": "latest",
     "bent": "^7.3.10",
     "commander": "^4.1.0",
     "d3-force-3d": "^2.1.0",

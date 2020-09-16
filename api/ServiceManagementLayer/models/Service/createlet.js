@@ -1,5 +1,4 @@
 const path = require('path');
-const Service = require('ailtire/src/Server/Service');
 const AEvent = require('ailtire/src/Server/AEvent');
 
 module.exports = {

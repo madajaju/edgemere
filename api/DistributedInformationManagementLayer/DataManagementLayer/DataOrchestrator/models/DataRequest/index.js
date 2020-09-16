@@ -16,6 +16,10 @@ class DataRequest {
                 type: 'string',
                 description: 'Extended Name of the Request being made. It Contains any parent request',
             },
+            query: {
+                type: 'json',
+                description: 'JSON structure for fdining the data in the data manager'
+            },
             message: {
                 type: 'string',
                 description: 'Last message about the data request'
