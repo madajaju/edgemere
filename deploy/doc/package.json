@@ -1,0 +1,17 @@
+{
+  "name": "edgemere",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node doc.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ailtire": "^0.1.0",
+    "node-plantuml": "^0.9.0",
+    "start": "^5.1.0"
+  }
+}

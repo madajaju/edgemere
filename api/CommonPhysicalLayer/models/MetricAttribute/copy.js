@@ -11,7 +11,7 @@ module.exports = {
 
     fn: function (obj, inputs) {
         // inputs contains the obj for the this method.
-        let retval = Metric.factory({name:obj.name, value:obj.value});
+        let retval = new MetricAttribute({name:obj.name, value:obj.value});
         return retval;
     }
 };

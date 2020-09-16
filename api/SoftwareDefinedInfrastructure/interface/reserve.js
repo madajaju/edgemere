@@ -25,7 +25,7 @@ module.exports = {
     fn: async function (inputs, env) {
 
 
-        // TODO: look at the polciies for provisioning resources on devices.
+        // TODO: look at the polcies for provisioning resources on devices.
         inputs = env.req.body;
         let resources;
         let cloud = Cloud.find(inputs.cloud);

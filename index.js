@@ -10,7 +10,6 @@ server.listen( {
     baseDir: '.',
     prefix: 'edgemere',
     routes: {
-        "/document": "/model/document"
     },
     listenPort: 3000
 });

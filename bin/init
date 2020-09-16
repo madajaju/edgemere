@@ -3,25 +3,26 @@
 const program = require('commander');
 const fs = require('fs');
 const path = require('path');
-const Client = require('node-rest-client').Client;
-const client = new Client();
+const bent = require('bent');
 
 program
     .version('0.0.1')
     .option('--host <hostname:port>', 'Initalize the connection')
     .parse(process.argv);
 
-let url = program.host + '/init';
-console.log(url);
-client.get(url, (data,response) => {
-    if(data.error) {
-        console.error('Error:', data.error);
-    }
-    else {
-        let config = {
-            host: program.host,
-            actions: data
-        };
-        fs.writeFileSync('.ailtire.js', "module.exports = " + JSON.stringify(config));
-    }
+let url = program.host;
+let params = '/init';
+const getJSON = bent(url, 'GET', 'json', 200);
+(async () => {
+    const response = await getJSON(params);
+    console.log(`Registered with ${program.host}`);
+
+    let config = {
+        host: program.host,
+        actions: response
+    };
+    fs.writeFileSync('.ailtire.js', "module.exports = " + JSON.stringify(config));
+})().catch(e => {
+    // Deal with the fact the chain failed
+    console.error("Response Error:", e);
 });
