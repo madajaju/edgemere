@@ -7,7 +7,7 @@ if(!fs.existsSync('./node_modules')) {
 const server = require('ailtire');
 
 server.doc( {
-    baseDir: '../..',
+    baseDir: '.',
     prefix: 'edgemere',
     routes: {
     },

@@ -1,5 +1,72 @@
 version: "3.7"
 services:
+  admin:
+    image: edgemere:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - AILTIRE_STACKNAME=${AILTIRE_APPNAME}
+      - AILTIRE_PARENT=${AILTIRE_APPNAME}
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+    networks:
+      children:
+        aliases:
+          - admin
+    deploy:
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=${AILTIRE_APPNAME}_family
+        - traefik.http.services.admin.loadbalancer.server.port=3000
+        - traefik.http.routers.admin.rule=PathPrefix(`/admin`)
+        - traefik.http.routers.admin.service=admin
+        - traefik.http.routers.admin.entrypoints=http
+  aml:
+    image: aml:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_APPNAME}
+      - AILTIRE_PARENTHOST=admin
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+    networks:
+      - children
+  cpl:
+    image: cpl:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_APPNAME}
+      - AILTIRE_PARENTHOST=admin
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+    networks:
+      - children
+  diml:
+    image: diml:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_APPNAME}
+      - AILTIRE_PARENTHOST=admin
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+    networks:
+      - children
   pubsub:
     image: redis
     networks:
