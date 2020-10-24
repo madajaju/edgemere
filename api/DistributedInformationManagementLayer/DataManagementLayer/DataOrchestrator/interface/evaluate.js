@@ -36,17 +36,25 @@ module.exports = {
                 return null;
             }
         }
-        // Find all of the data that could match the request.S
-        // Query the Meta-Data Manager.
-        let data = await AService.call('fmdm.query', {expression:dreq.query});
-        // Create a Data Reservation for each data item returned
-        for(let i in data) {
-            let datum = data[i];
-            let datares = new DataReservation({data:datum, request:dreq});
-            dreq.addToReservations(datares);
+        // Now find all of the sources
+        // Check against policies and determine what to do with the data.
+        // 1. leave the data where it is
+        // 2. move the data
+        // 3. mount the data.
+        // 4. ...
+        for(let i in dreq.reservations) {
+           let dres = dreq.reservations[i];
+           // For now leave the data where it is.
+            // in the future change the datasource on the data element after the data has been moved or mounted.
         }
-
-        dreq.selected();
+        // Now provision the data instance at the with the data in the new locations.
+        for(let i in dreq.reservations) {
+            let dres = dreq.reservations[i];
+            let datai = new DataInstance({name: dreq.name});
+            datai.addToData(dres.data);
+            dreq.addToInstances(datai);
+        }
+        dreq.satisfied();
         if(env.res) {
             env.res.end({results: dreq.toJSON()});
         }

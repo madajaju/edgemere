@@ -1,4 +1,4 @@
-const Service = require('ailtire/src/Server/Service');
+
 module.exports = {
     friendlyName: 'checkRequest',
     description: 'Check the status of the request',
