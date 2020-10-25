@@ -10,7 +10,7 @@ COPY deploy/doc/. .
 
 RUN apk add openjdk8
 
-RUN npm install
+# RUN npm install
 
 COPY . .
 

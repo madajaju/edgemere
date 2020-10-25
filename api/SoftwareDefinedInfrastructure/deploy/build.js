@@ -4,7 +4,7 @@ module.exports = {
         dir: '..',
         cmd: 'node web/server.js',
         file: 'web/Dockerfile',
-        tag: '_sdi_web',
+        tag: 'sdi_web',
         env: {
 
         }
@@ -13,7 +13,7 @@ module.exports = {
         dir: '..',
         cmd: 'node gateway/server.js',
         file: 'gateway/Dockerfile',
-        tag: '_sdi_gw',
+        tag: 'sdi_gw',
         env: {
 
         }

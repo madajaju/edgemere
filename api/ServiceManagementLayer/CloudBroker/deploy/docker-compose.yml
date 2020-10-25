@@ -19,9 +19,9 @@ networks:
   children:
     driver: overlay
     attachable: true
-    name: ${APPNAME}_sml_cb_family
+    name: ${AILTIRE_APPNAME}_sml_cb_family
   sibling:
     driver: overlay
   parent:
     external: true
-    name: ${APPNAME}_sml_family
+    name: ${AILTIRE_APPNAME}_sml_family

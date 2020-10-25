@@ -19,9 +19,9 @@ networks:
   children:
     driver: overlay
     attachable: true
-    name: ${APPNAME}_aml_ds_family
+    name: ${AILTIRE_APPNAME}_aml_ds_family
   sibling:
     driver: overlay
   parent:
     external: true
-    name: ${APPNAME}_aml_family
+    name: ${AILTIRE_APPNAME}_aml_family

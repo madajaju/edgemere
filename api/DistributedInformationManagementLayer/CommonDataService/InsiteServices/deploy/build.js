@@ -4,7 +4,7 @@ module.exports = {
         dir: '..',
         cmd: 'node web/server.js',
         file: 'web/Dockerfile',
-        tag: 'diml_cds_is_web',
+        tag: 'diml_cds_insite_web',
         env: {
 
         }
@@ -13,7 +13,7 @@ module.exports = {
         dir: '..',
         cmd: 'node gateway/server.js',
         file: 'gateway/Dockerfile',
-        tag: 'diml_cds_is_gw',
+        tag: 'diml_cds_insite_gw',
         env: {
 
         }

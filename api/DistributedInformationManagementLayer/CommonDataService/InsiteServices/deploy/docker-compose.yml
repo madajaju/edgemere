@@ -1,11 +1,11 @@
 version: "3.7"
 services:
   frontend:
-    image: diml_cds_is_web
+    image: diml_cds_insite_web
     networks:
       - sibling
   gw:
-    image: diml_cds_is_gw
+    image: diml_cds_insite_gw
     networks:
       children:
         aliases:
@@ -19,9 +19,9 @@ networks:
   children:
     driver: overlay
     attachable: true
-    name: ${APPNAME}_diml_cds_is_family
+    name: ${AILTIRE_APPNAME}_diml_cds_insite_family
   sibling:
     driver: overlay
   parent:
     external: true
-    name: ${APPNAME}_diml_cds_family
+    name: ${AILTIRE_APPNAME}_diml_cds_family
