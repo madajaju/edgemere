@@ -7,11 +7,11 @@ if(!fs.existsSync('./node_modules')) {
 const server = require('ailtire');
 
 let host = process.env.AITIRE_HOST || 'localhost'
-let port = process.env.AITIRE_PORT || 8088
+let port = process.env.AITIRE_PORT || 80
 let urlPrefix = process.env.AITIRE_BASEURL || '/docs'
 
 
-server.doc( {
+server.docBuild( {
     baseDir: '.',
     prefix: 'edgemere',
     routes: {
@@ -20,4 +20,3 @@ server.doc( {
     urlPrefix: urlPrefix,
     listenPort: port
 });
-

@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   orchestrator:
-    image: sdi_io:latest
+    image: sdi_io
     stop_grace_period: 1m
     stop_signal: SIGINT
     volumes:
