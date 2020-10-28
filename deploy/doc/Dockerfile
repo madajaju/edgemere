@@ -8,9 +8,9 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY deploy/doc/. .
 
-# RUN npm install
-
 COPY . .
+
+RUN npm install
 
 COPY deploy/doc/package.json .
 

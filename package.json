@@ -17,7 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "3d-force-graph": "^1.67.2",
-    "ailtire": "^0.1.4",
+    "ailtire": "^0.1.7",
     "bent": "^7.3.12",
     "commander": "^4.1.0",
     "d3-force-3d": "^2.1.0",

@@ -47,6 +47,7 @@ services:
       - --api.insecure=true
       - --api.debug=true
       - --accesslog=true
+      - --log.level=DEBUG
       - --providers.docker=true
       - --providers.docker.swarmMode=true
       - --providers.docker.network=children
@@ -71,7 +72,7 @@ services:
         - traefik.enable=true
         - traefik.docker.network=${AILTIRE_APPNAME}_family
         - traefik.http.services.web.loadbalancer.server.port=3000
-        - traefik.http.routers.web_http.rule=Path(`/web`)
+        - traefik.http.routers.web_http.rule=PathPrefix(`/web`)
         - traefik.http.routers.web_http.service=web
         - traefik.http.routers.web_http.entrypoints=http
   doc:
@@ -84,7 +85,7 @@ services:
         - traefik.enable=true
         - traefik.docker.network=${AILTIRE_APPNAME}_family
         - traefik.http.services.doc.loadbalancer.server.port=8088
-        - traefik.http.routers.doc_http.rule=Path(`/docstop`)
+        - traefik.http.routers.doc_http.rule=PathPrefix(`/docs`)
         - traefik.http.routers.doc_http.service=doc
         - traefik.http.routers.doc_http.entrypoints=http
 networks:
