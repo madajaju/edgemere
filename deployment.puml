@@ -1,0 +1,228 @@
+# Networks are shown as queues
+# external networks
+# external ports
+# external stacks
+# Main stack for the name of the stack
+# The networks
+# The volumes?
+# frontend server with all of the mappings routes
+# all of the other services
+# End the main stack
+# line from external to front end
+# arrow from frontend routes to service
+# line from service to networks if network is attached then longer lines
+# dotted from service to images of the services (artifact or collections)
+# arrow from collections to stack
+# arrow from network in external stack to attached network
+@startuml
+
+left to right direction
+
+queue external #black [
+    <b><color:white>external</color></b>
+]
+interface 80
+interface 443
+interface 8080
+
+boundary _family #blue
+
+stack  "aml" as pkgaml #lightgray {
+    queue amlparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+
+
+
+stack  "cpl" as pkgcpl #lightgray {
+    queue cplparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+
+
+
+stack  "diml" as pkgdiml #lightgray {
+    queue dimlparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+
+
+
+stack  "ia" as pkgia #lightgray {
+    queue iaparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+
+
+
+stack  "sa" as pkgsa #lightgray {
+    queue saparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+
+
+
+stack  "sml" as pkgsml #lightgray {
+    queue smlparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+
+
+
+stack  "sdi" as pkgsdi #lightgray {
+    queue sdiparent #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+stack  "edgemere" #lavender {
+    queue children #blue [
+        <b><color:white>children</color></b>
+    ]
+
+    queue sibling #red [
+        <b><color:white>sibling</color></b>
+    ]
+
+    node "admin" as adminNode #white
+
+    node "sml" as smlNode
+
+
+
+    agent "aml" as amlNode
+
+
+
+    node "cpl" as cplNode
+
+
+
+    node "diml" as dimlNode #white
+
+
+
+    node "ia" as iaNode
+
+
+
+    node "sa" as saNode
+
+
+
+
+
+    node "sdi" as sdiNode
+
+
+
+    node "pubsub" as pubsubNode
+
+
+
+    node "web" as webNode
+    node "doc" as docNode
+
+    node "frontend" as frontendNode {
+        card "/aml" as frontendaml
+        card "/sml" as frontendsml
+        card "/sdi" as frontendsdi
+        card "/sa" as frontendsa
+        card "/ia" as frontendia
+        card "/diml" as frontenddiml
+        card "/cpl" as frontendcpl
+        card "/pubsub" as frontendpubsub
+        card "/web" as frontendweb
+        card "/doc" as frontenddoc
+        card "/admin" as frontendadmin
+    }
+
+    collections "sa:latest" as salatest
+    collections "sml:latest" as smllatest
+    collections "aml:latest" as amllatest
+    collections "diml:latest" as dimllatest
+    artifact "web:latest" as weblatest
+    artifact "redis:latest" as redislatest
+    collections "cpl:latest" as cpllatest
+    collections "sdi:latest" as sdilatest
+    artifact "admin:latest" as adminlatest
+    collections "ia:latest" as ialatest
+    artifact "doc:latest" as doclatest
+
+}
+
+children --[#blue]-- _family
+pubsubNode -[#red]- sibling
+
+frontendaml "3000" -[#blue]-> amlNode
+frontendsml "3000" -[#blue]-> smlNode
+frontendsdi "3000" -[#blue]-> sdiNode
+frontendsa "3000" -[#blue]-> saNode
+frontendia "3000" -[#blue]-> iaNode
+frontenddiml "3000" -[#blue]-> dimlNode
+frontendcpl "3000" -[#blue]-> cplNode
+frontendpubsub "4386" -[#blue]-> pubsubNode
+frontendweb "4386" -[#blue]-> webNode
+frontenddoc "4386" -[#blue]-> docNode
+frontendadmin "4386" -[#blue]-> adminNode
+
+    external -[#black]- frontendNode
+
+webNode --[#blue]- children
+docNode --[#blue]- children
+dimlNode --[#blue]- children
+iaNode --[#blue]- children
+adminNode --[#blue]- children
+sdiNode --[#blue]- children
+cplNode --[#blue]- children
+amlNode --[#blue]- children
+saNode --[#blue]- children
+smlNode --[#blue]- children
+pubsubNode --[#blue]- children
+webNode -[#red]- sibling
+saNode .... salatest
+cplNode .... cpllatest
+adminNode .... adminlatest
+amlNode .... amllatest
+sdiNode .... sdilatest
+smlNode .... smllatest
+pubsubNode .... redislatest
+iaNode .... ialatest
+dimlNode .... dimllatest
+webNode .... weblatest
+docNode .... doclatest
+
+
+docNode -[#red]- sibling
+
+80 -[#black]- "80" external
+443 -[#black]- "443" external
+8080 -[#black]- "8080" external
+
+sdiparent -[#blue]- _family
+sdilatest --> pkgsdi
+
+smlparent -[#blue]- _family
+smllatest --> pkgsml
+
+dimlparent -[#blue]- _family
+dimllatest --> pkgdiml
+
+iaparent -[#blue]- _family
+ialatest --> pkgia
+
+amlparent -[#blue]- _family
+amllatest --> pkgaml
+
+cplparent -[#blue]- _family
+cpllatest --> pkgcpl
+
+saparent -[#blue]- _family
+salatest --> pkgsa
+
+@enduml
