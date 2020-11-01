@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+  frontend:
+    image: cpl_dm_web
+    networks:
+      - sibling
+  gw:
+    image: cpl_dm_gw
+    networks:
+      children:
+        aliases:
+          - parent
+          - top
+      sibling:
+        aliases:
+          - gateway
+
+networks:
+  children:
+    driver: overlay
+    attachable: true
+    name: ${APPNAME}_cpl_dm_family
+  sibling:
+    driver: overlay
+  parent:
+    external: true
+    name: ${APPNAME}_cpl_family
