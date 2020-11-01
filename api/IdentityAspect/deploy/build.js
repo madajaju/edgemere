@@ -4,7 +4,7 @@ module.exports = {
         dir: '..',
         cmd: 'node web/server.js',
         file: 'web/Dockerfile',
-        tag: '_ia_web',
+        tag: 'ia_web',
         env: {
 
         }
@@ -13,7 +13,7 @@ module.exports = {
         dir: '..',
         cmd: 'node gateway/server.js',
         file: 'gateway/Dockerfile',
-        tag: '_ia_gw',
+        tag: 'ia_gw',
         env: {
 
         }

@@ -4,7 +4,7 @@ module.exports = {
         dir: '..',
         cmd: 'node web/server.js',
         file: 'web/Dockerfile',
-        tag: '_sml_web',
+        tag: 'sml_web',
         env: {
 
         }
@@ -13,7 +13,7 @@ module.exports = {
         dir: '..',
         cmd: 'node gateway/server.js',
         file: 'gateway/Dockerfile',
-        tag: '_sml_gw',
+        tag: 'sml_gw',
         env: {
 
         }

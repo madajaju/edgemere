@@ -1,0 +1,201 @@
+version: "3.7"
+services:
+  admin:
+    image: edgemere:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - AILTIRE_STACKNAME=${AILTIRE_APPNAME}
+      - AILTIRE_PARENT=${AILTIRE_APPNAME}
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+    networks:
+      children:
+        aliases:
+          - admin
+    deploy:
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=${AILTIRE_APPNAME}_family
+        - traefik.http.services.admin.loadbalancer.server.port=3000
+        - traefik.http.routers.admin.rule=PathPrefix(`/admin`)
+        - traefik.http.routers.admin.service=admin
+        - traefik.http.routers.admin.entrypoints=http
+  aml:
+    image: aml:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_APPNAME}
+      - AILTIRE_PARENTHOST=admin
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+    networks:
+      - children
+  cpl:
+    image: cpl:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_APPNAME}
+      - AILTIRE_PARENTHOST=admin
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+    networks:
+      - children
+  diml:
+    image: diml:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_APPNAME}
+      - AILTIRE_PARENTHOST=admin
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+    networks:
+      - children
+  ia:
+    image: ia:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_APPNAME}
+      - AILTIRE_PARENTHOST=admin
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+    networks:
+      - children
+  sa:
+    image: sa:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_APPNAME}
+      - AILTIRE_PARENTHOST=admin
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+    networks:
+      - children
+  sml:
+    image: sml:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_APPNAME}
+      - AILTIRE_PARENTHOST=admin
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+    networks:
+      - children
+  sdi:
+    image: sdi:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_APPNAME}
+      - AILTIRE_PARENTHOST=admin
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+    networks:
+      - children
+  pubsub:
+    image: redis
+    networks:
+      children:
+        aliases:
+          - redis
+      sibling:
+        aliases:
+          - redis
+    deploy:
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=${AILTIRE_APPNAME}_family
+        - traefik.http.services.pubsub.loadbalancer.server.port=80
+        - traefik.http.routers.pubsub_http.rule=PathPrefix(`/pubsub`)
+        - traefik.http.routers.pubsub_http.service=pubsub
+        - traefik.http.routers.pubsub_http.entrypoints=http
+  frontend:
+    image: traefik:latest
+    command:
+      - --api=true
+      - --api.dashboard=true
+      - --api.insecure=true
+      - --api.debug=true
+      - --log.level=DEBUG
+      - --providers.docker=true
+      - --providers.docker.swarmMode=true
+      - --providers.docker.network=children
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.http.address=:80
+      - --entrypoints.https.address=:443
+    ports:
+      - '80:80'
+      - '8080:8080'
+      - '443:443'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - children
+  web:
+    image: edgemere_web
+    networks:
+      - sibling
+      - children
+    deploy:
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=${AILTIRE_APPNAME}_family
+        - traefik.http.services.web.loadbalancer.server.port=3000
+        - traefik.http.routers.web_http.rule=PathPrefix(`/web`)
+        - traefik.http.routers.web_http.service=web
+        - traefik.http.routers.web_http.entrypoints=http
+  doc:
+    image: edgemere_doc
+    networks:
+      - sibling
+      - children
+    deploy:
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=${AILTIRE_APPNAME}_family
+        - traefik.http.services.doc.loadbalancer.server.port=8088
+        - traefik.http.routers.doc_http.rule=PathPrefix(`/docs`)
+        - traefik.http.routers.doc_http.service=doc
+        - traefik.http.routers.doc_http.entrypoints=http
+networks:
+  children:
+    driver: overlay
+    attachable: true
+    name: ${AILTIRE_APPNAME}_family
+  sibling:
+    driver: overlay

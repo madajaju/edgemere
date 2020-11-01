@@ -4,7 +4,7 @@ module.exports = {
         dir: '..',
         cmd: 'node web/server.js',
         file: 'web/Dockerfile',
-        tag: '_cpl_web',
+        tag: 'cpl_web',
         env: {
 
         }
@@ -13,9 +13,8 @@ module.exports = {
         dir: '..',
         cmd: 'node gateway/server.js',
         file: 'gateway/Dockerfile',
-        tag: '_cpl_gw',
+        tag: 'cpl_gw',
         env: {
-
         }
     }
 }

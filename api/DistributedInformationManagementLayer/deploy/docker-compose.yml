@@ -1,11 +1,11 @@
 version: "3.7"
 services:
   frontend:
-    image: _diml_web
+    image: diml_web
     networks:
       - sibling
   gw:
-    image: _diml_gw
+    image: diml_gw
     networks:
       children:
         aliases:
@@ -19,9 +19,9 @@ networks:
   children:
     driver: overlay
     attachable: true
-    name: ${APPNAME}__diml_family
+    name: ${AILTIRE_APPNAME}_diml_family
   sibling:
     driver: overlay
   parent:
     external: true
-    name: ${APPNAME}__family
+    name: ${AILTIRE_APPNAME}_family

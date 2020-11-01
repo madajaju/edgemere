@@ -1,5 +1,5 @@
 module.exports = {
-    shortname: 'is',
+    shortname: 'insite',
     name: 'Insite Services',
     description: 'Insite Services is a package that contains...',
     color: '#lightblue'

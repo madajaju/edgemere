@@ -11,7 +11,7 @@ let port = process.env.AITIRE_PORT || 8088
 let urlPrefix = process.env.AITIRE_BASEURL || '/docs'
 
 
-server.doc( {
+server.docBuild( {
     baseDir: '.',
     prefix: 'edgemere',
     routes: {
@@ -20,4 +20,3 @@ server.doc( {
     urlPrefix: urlPrefix,
     listenPort: port
 });
-

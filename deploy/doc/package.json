@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node doc.js"
+    "start": "node doc.js",
+    "buildAll": "node docbuild.js && cd docs && java -jar plantuml.jar -tsvg \"**/*.puml\"; exit 0"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ailtire": "^0.1.0",
+    "ailtire": "^0.1.7",
+    "glob": "^7.1.6",
     "node-plantuml": "^0.9.0",
-    "start": "^5.1.0"
+    "start": "^5.1.0",
+    "three": "latest"
   }
 }

@@ -6,5 +6,8 @@ module.exports = {
         'Application Developer': 'uses',
         'Data Scientist': 'uses',
     },
-};
+    steps: [
+        {action:'aimodel/create', parameters: {name: 'name1' } }
+    ]
+}
 

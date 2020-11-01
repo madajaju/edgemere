@@ -1,4 +1,3 @@
-const THREE = require('three');
 
 class StorageResource {
     static definition = {
