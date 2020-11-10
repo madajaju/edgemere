@@ -24,4 +24,4 @@ networks:
     driver: overlay
   parent:
     external: true
-    name: ${AILTIRE_APPNAME}_family
+    name: ${AILTIRE_PARENT_NETWORK}

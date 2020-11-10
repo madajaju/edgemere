@@ -8,13 +8,5 @@ module.exports = {
         env: {
 
         }
-    },
-    gateway: {
-        dir: '..',
-        cmd: 'node gateway/server.js',
-        file: 'gateway/Dockerfile',
-        tag: 'cpl_gw',
-        env: {
-        }
     }
 }

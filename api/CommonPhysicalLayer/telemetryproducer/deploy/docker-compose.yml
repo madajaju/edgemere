@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  producer:
+    image: cpl_tp_producer:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_STACKNAME}
+      - AILTIRE_PARENTHOST=${AILTIRE_PARENTHOST}
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+    networks:
+      - parent
+      - telemetry
+networks:
+  parent:
+    external: true
+    name: ${AILTIRE_PARENT_NETWORK}_family
+  telemetry:
+    external: true
+    name: ${EDGEMERE_AILTIRE_PARENT_NETWORK}_family

@@ -1,21 +1,12 @@
 
 module.exports = {
-    web: {
+    controller: {
         dir: '..',
         cmd: 'node web/server.js',
-        file: 'web/Dockerfile',
-        tag: 'diml_dml_dc_web',
+        file: 'controller/Dockerfile',
+        tag: 'diml_dml_dc_controller',
         env: {
 
         }
     },
-    gateway: {
-        dir: '..',
-        cmd: 'node gateway/server.js',
-        file: 'gateway/Dockerfile',
-        tag: 'diml_dml_dc_gw',
-        env: {
-
-        }
-    }
 }

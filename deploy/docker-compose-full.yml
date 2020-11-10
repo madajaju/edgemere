@@ -16,6 +16,7 @@ services:
           - admin
     deploy:
       labels:
+        - traefik.tags=_family
         - traefik.enable=true
         - traefik.docker.network=${AILTIRE_APPNAME}_family
         - traefik.http.services.admin.loadbalancer.server.port=3000
@@ -45,6 +46,14 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     deploy:
       replicas: 1
+      labels:
+        - traefik.tags=_family
+        - traefik.enable=true
+        - traefik.docker.network=${AILTIRE_APPNAME}_family
+        - traefik.http.services.cpl.loadbalancer.server.port=3000
+        - traefik.http.routers.cpl.rule=PathPrefix(`/cpl`)
+        - traefik.http.routers.cpl.service=cpl
+        - traefik.http.routers.cpl.entrypoints=http
     environment:
       - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
       - AILTIRE_PARENT=${AILTIRE_APPNAME}
@@ -138,6 +147,7 @@ services:
           - redis
     deploy:
       labels:
+        - traefik.tags=_family
         - traefik.enable=true
         - traefik.docker.network=${AILTIRE_APPNAME}_family
         - traefik.http.services.pubsub.loadbalancer.server.port=80
@@ -158,6 +168,7 @@ services:
       - --providers.docker.exposedbydefault=false
       - --entrypoints.http.address=:80
       - --entrypoints.https.address=:443
+      - --providers.docker.constraints=Label(`traefik.tags`,`_family`)
     ports:
       - '80:80'
       - '8080:8080'
@@ -173,6 +184,7 @@ services:
       - children
     deploy:
       labels:
+        - traefik.tags=_family
         - traefik.enable=true
         - traefik.docker.network=${AILTIRE_APPNAME}_family
         - traefik.http.services.web.loadbalancer.server.port=3000
@@ -186,6 +198,7 @@ services:
       - children
     deploy:
       labels:
+        - traefik.tags=_family
         - traefik.enable=true
         - traefik.docker.network=${AILTIRE_APPNAME}_family
         - traefik.http.services.doc.loadbalancer.server.port=8088

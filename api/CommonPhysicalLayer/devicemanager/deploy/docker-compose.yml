@@ -1,0 +1,84 @@
+version: "3.7"
+services:
+  data_orchestrator:
+    image: diml_dml_do:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_STACKNAME}
+      - AILTIRE_PARENTHOST=${AILTIRE_PARENTHOST}
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+      - AILTIRE_PARENT_NETWORK=${AILTIRE_APPNAME}_cpl_dm
+    networks:
+      - children
+      - parent
+  policy_engine:
+    image: sa_pe:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_STACKNAME}
+      - AILTIRE_PARENTHOST=${AILTIRE_PARENTHOST}
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+      - AILTIRE_PARENT_NETWORK=${AILTIRE_APPNAME}_cpl_dm
+    networks:
+      - children
+      - parent
+  service_orchestrator:
+    image: sml_so:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_STACKNAME}
+      - AILTIRE_PARENTHOST=${AILTIRE_PARENTHOST}
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+      - AILTIRE_PARENT_NETWORK=${AILTIRE_APPNAME}_cpl_dm
+    networks:
+      - children
+      - parent
+  telemetry_aggregator:
+    image: cpl_ta:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_STACKNAME}
+      - AILTIRE_PARENTHOST=${AILTIRE_PARENTHOST}
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+      - AILTIRE_PARENT_NETWORK=${AILTIRE_APPNAME}_cpl_dm
+    networks:
+      - children
+      - parent
+  frontend:
+    image: cpl_dm_web
+    networks:
+      - sibling
+networks:
+  children:
+    driver: overlay
+    attachable: true
+    name: ${AILTIRE_APPNAME}_cpl_dm_family
+  sibling:
+    driver: overlay
+  parent:
+    external: true
+    name: ${AILTIRE_APPNAME}_cpl_family

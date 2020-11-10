@@ -1,21 +1,133 @@
 version: "3.7"
 services:
+  web:
+    image: cpl_web:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+      labels:
+        - traefik.tags=${AILTIRE_APPNAME}_cpl_family
+        - traefik.enable=true
+        - traefik.docker.network=${AILTIRE_APPNAME}_cpl_family
+        - traefik.http.services.web.loadbalancer.server.port=3000
+        - traefik.http.routers.web.rule=PathPrefix(`/web`)
+        - traefik.http.routers.web_http.service=web
+        - traefik.http.routers.web_http.entrypoints=http
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_STACKNAME}
+      - AILTIRE_PARENTHOST=${AILTIRE_PARENTHOST}
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+    networks:
+      - children
+      - parent
+  deviceagent:
+    image: cpl_da:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+      labels:
+        - traefik.enable=true
+        - traefik.tags=_cpl_family
+        - traefik.docker.network=${AILTIRE_APPNAME}_cpl_family
+        - traefik.http.services.deviceagent.loadbalancer.server.port=3000
+        - traefik.http.routers.deviceagent_http.rule=PathPrefix(`/da`)
+        - traefik.http.routers.deviceagent_http.service=deviceagent
+        - traefik.http.routers.deviceagent_http.entrypoints=http
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_STACKNAME}
+      - AILTIRE_PARENTHOST=${AILTIRE_PARENTHOST}
+      - AILTIRE_PARENT_NETWORK=${AILTIRE_APPNAME}_cpl
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+      - EDGEMERE_TELEMETRY_NETWORK=${AILTIRE_APPNAME}_telemetry_family
+    networks:
+      - children
+      - parent
+  devicemanager:
+    image: cpl_dm:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+      labels:
+        - traefik.tags=_cpl_family
+        - traefik.enable=true
+        - traefik.docker.network=${AILTIRE_APPNAME}_cpl_family
+        - traefik.http.services.devicemanager.loadbalancer.server.port=3000
+        - traefik.http.routers.devicemanager_http.rule=PathPrefix(`/dm`)
+        - traefik.http.routers.devicemanager_http.service=devicemanager
+        - traefik.http.routers.devicemanager_http.entrypoints=http
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_STACKNAME}
+      - AILTIRE_PARENTHOST=${AILTIRE_PARENTHOST}
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+      - AILTIRE_PARENT_NETWORK=${AILTIRE_APPNAME}_cpl
+      - EDGEMERE_TELEMETRY_NETWORK=${AILTIRE_APPNAME}_telemetry_family
+    networks:
+      - children
+      - parent
+  telemetry:
+    image: cpl_tc:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+      labels:
+        - traefik.tags=_cpl_family
+        - traefik.enable=true
+        - traefik.docker.network=${AILTIRE_APPNAME}_cpl_family
+        - traefik.http.services.telemetry.loadbalancer.server.port=3000
+        - traefik.http.routers.telemetry.rule=PathPrefix(`/telemetry`)
+        - traefik.http.routers.telemetry.service=telemetry
+        - traefik.http.routers.telemetry.entrypoints=http
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_STACKNAME}
+      - AILTIRE_PARENTHOST=${AILTIRE_PARENTHOST}
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+      - AILTIRE_PARENT_NETWORK=${AILTIRE_APPNAME}_cpl
+      - EDGEMERE_TELEMETRY_NETWORK=${AILTIRE_APPNAME}_telemetry_family
+    networks:
+      - children
+      - parent
+      - telemetry
   frontend:
-    image: cpl_web
+    image: traefik:latest
+    command:
+      - --api=true
+      - --api.dashboard=true
+      - --api.insecure=true
+      - --api.debug=true
+      - --accesslog=true
+      - --log.level=DEBUG
+      - --providers.docker=true
+      - --providers.docker.swarmMode=true
+      - --providers.docker.network=children
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.http.address=:80
+      - --entrypoints.https.address=:443
+      - --providers.docker.constraints=Label(`traefik.tags`,`${AILTIRE_APPNAME}_cpl_family`)
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     networks:
-      - sibling
-  gw:
-    image: cpl_gw
-    networks:
-      children:
-        aliases:
-          - parent
-          - top
-      sibling:
-        aliases:
-          - gateway
-
+      - children
 networks:
+  telemetry:
+    driver: overlay
+    attachable: true
+    name: ${AILTIRE_APPNAME}_telemetry_family
   children:
     driver: overlay
     attachable: true
