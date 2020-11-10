@@ -24,4 +24,4 @@ networks:
     driver: overlay
   parent:
     external: true
-    name: ${AILTIRE_APPNAME}_diml_dml_family
+    name: ${AILTIRE_PARENT_NETWORK}_family

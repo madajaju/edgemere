@@ -1,0 +1,32 @@
+version: "3.7"
+services:
+  aggregator:
+    image: cpl_ta_web:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_STACKNAME}
+      - AILTIRE_PARENTHOST=${AILTIRE_PARENTHOST}
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+    networks:
+      - sibling
+  pubsub:
+    image: redis:latest
+    networks:
+      - sibling
+      - parent
+networks:
+  sibling:
+    driver: overlay
+  parent:
+    external: true
+    name: ${AILTIRE_PARENT_NETWORK}_family
+  children:
+    driver: overlay
+    attachable: true
+    name: ${AILTIRE_APPNAME}_${AILTIRE_STACKNAME}_family

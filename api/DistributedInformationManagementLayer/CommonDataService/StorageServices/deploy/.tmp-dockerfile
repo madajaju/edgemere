@@ -1,0 +1,11 @@
+FROM ailtire_service:swarm
+
+WORKDIR /usr/src/app
+
+COPY ./docker-compose.yml .
+
+EXPOSE 3000
+
+ENTRYPOINT [ "node" ]
+
+CMD [ "./server.js" ]

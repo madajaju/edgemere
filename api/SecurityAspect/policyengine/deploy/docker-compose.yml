@@ -1,0 +1,44 @@
+version: "3.7"
+services:
+  web:
+    image: sa_pe_web:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_STACKNAME}
+      - AILTIRE_PARENTHOST=${AILTIRE_PARENTHOST}
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+    networks:
+      - children
+      - parent
+engine:
+  image: sa_pe_engine:latest
+  stop_grace_period: 1m
+  stop_signal: SIGINT
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+  deploy:
+    replicas: 1
+  environment:
+    - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+    - AILTIRE_PARENT=${AILTIRE_STACKNAME}
+    - AILTIRE_PARENTHOST=${AILTIRE_PARENTHOST}
+    - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+  networks:
+    - children
+    - parent
+networks:
+  children:
+    driver: overlay
+    attachable: true
+    name: ${AILTIRE_APPNAME}_sa_pe_family
+  sibling:
+    driver: overlay
+  parent:
+    external: true
+    name: ${AILTIRE_PARENT_NETWORK}_family
