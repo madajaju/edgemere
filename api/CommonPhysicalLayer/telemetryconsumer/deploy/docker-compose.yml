@@ -1,39 +1,21 @@
 version: "3.7"
 services:
-  web:
+  consumer:
     image: cpl_tc_web:latest
-    stop_grace_period: 1m
-    stop_signal: SIGINT
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    deploy:
-      replicas: 1
+    ports:
+    - "3001:3001"
     environment:
       - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
       - AILTIRE_PARENT=${AILTIRE_STACKNAME}
       - AILTIRE_PARENTHOST=${AILTIRE_PARENTHOST}
       - AILTIRE_APPNAME=${AILTIRE_APPNAME}
-    networks:
-      - children
-      - parent
-  pubsub:
-    image: redis:latest
-    networks:
-      children:
-        aliases:
-          - parent
-          - top
-      sibling:
-        aliases:
-          - gateway
-
-networks:
-  children:
-    driver: overlay
-    attachable: true
-    name: ${AILTIRE_APPNAME}_cpl_tc_family
-  sibling:
-    driver: overlay
-  parent:
-    external: true
-    name: ${AILTIRE_PARENT_NETWORK}_family
+      - AILTIRE_BASEURL=/
+      - EDGEMERE_PORT=3001
+  producer:
+    image: cpl_tp_producer:latest
+    deploy:
+      replicas: 5
+    environment:
+      - EDGEMERE_TELEMETRY_PARENT=consumer:3001
+      - EDGEMERE_DEVICE_NAME={{.Service.Name}}-{{.Task.Slot}}
+      - EDGEMERE_PORT=3000

@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  socket-server:
+    image: cpl_tp_producer:latest
+    environment:
+    - EDGEMERE_TELEMETRY_BUS=redis:6379
+    - EDGEMERE_DEVICE_NAME={{.Service.Name}}-{{.Task.Slot}}
+  redis:
+    image: redis:5.0

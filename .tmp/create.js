@@ -2,16 +2,15 @@
 
 const program = require('commander');
 
-const action = require('C:\\Users\\dwpulsip\\work\\edgemere\\node_modules\\ailtire\\src\\interface\\package\\install.js');
+const action = require('C:\\Users\\dwpulsip\\work\\edgemere\\node_modules\\ailtire\\src\\interface\\model\\create.js');
 const ActionHandler = require('C:\\Users\\dwpulsip\\work\\edgemere\\node_modules\\ailtire\\src\\Server/Action.js');
 global.ailtire = { config: require('C:\\Users\\dwpulsip\\work\\edgemere\\node_modules\\ailtire\\bin\\lib/../../.ailtire.js') };
 program
 	.storeOptionsAsProperties(false)
 	.passCommandToAction(false);
 program
-	.requiredOption('--env <string>', 'Environment to Build')
-	.option('--name <string>', 'Name of the Build')
-	.requiredOption('--package <string>', 'Name of the Package');
+	.requiredOption('--name <string>', 'The name of the model')
+	.option('--package <string>', 'The name of the package');
 program.parse(process.argv);
 let results = ActionHandler.execute(action,program.opts(), {});
 console.log(results);

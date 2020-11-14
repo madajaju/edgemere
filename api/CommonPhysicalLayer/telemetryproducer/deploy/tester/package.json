@@ -15,7 +15,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ailtire": "latest",
-    "systeminformation": "^4.30.0"
+    "ailtire": "latest"
   }
 }

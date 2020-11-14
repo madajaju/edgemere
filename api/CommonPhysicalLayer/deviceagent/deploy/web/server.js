@@ -1,15 +1,27 @@
 const fs = require('fs');
-// Check for node_modules directory. If it exists then continue. If not ask to run npm install.
-if(!fs.existsSync('./node_modules')) {
-   console.error('Error: you must run "npm install" first');
-   return;
-}
 const server = require('ailtire');
+const bent = require('bent');
 
-server.micro( {
+let hostname = process.env.HOSTNAME;
+let port = process.env.EDGEMERE_PORT || 3000;
+let urlPrefix = process.env.AILTIRE_BASEURL || '/cpl/da';
+let deviceManagerURL = process.env.EDGEMERE_DEVICE_MANAGER || 'localhost:3000';
+
+let url = `http://${deviceManagerURL}/`;
+global.parentPost = bent(url);
+await global.parentPost('register', {name: 'here', url:hostname});
+
+let intervalID = setInterval(async () => {
+    console.log("Getting Stats");
+    let stats = await AService.call("stats.get", {});
+    await AService.call("stats.send", {name: deviceName, stats: stats});
+}, 60000);
+
+server.micro({
     baseDir: '.',
     prefix: 'cpl/da',
-    routes: {
-    },
-    listenPort: 3000
+    routes: {},
+    host: hostname,
+    urlPrefix: urlPrefix,
+    listenPort: port
 });
