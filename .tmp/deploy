@@ -1,0 +1,28 @@
+#!/user/bin/env node
+const bent = require('bent');
+const program = require('commander');
+const YAML = require('yamljs');
+global.ailtire = { config: require('/mnt/c/Users/dwpulsip/work/edgemere/bin/lib/../../.ailtire.js') };
+program.command('deploy [options]', 'Description of the action')
+	.option('--name <string>', 'Name instance of the blueprint')
+	.option('--blueprint <string>', 'Name of the blueprint')
+	.option('--file <YAML>', 'File of with the parameters for the deployment')
+	.option('--sources <string>', 'Names and values of the sources for the blueprint');
+program.parse(process.argv);
+let url = global.ailtire.config.host;
+let args = {};
+let params = '/diml/ddf/datablueprint/deploy?';
+params += 'mode=json';
+if(program['name']) { args['name'] = program['name']; }
+if(program['blueprint']) { args['blueprint'] = program['blueprint']; }
+if(program['file']) { args['file'] = YAML.load(program['file']); }
+if(program['sources']) { args['sources'] = program['sources']; }
+
+const post = bent(url, 'POST', 'json', 200);
+(async () => {
+    const response = await post(params, args);
+    console.log(response.results);
+})().catch(e => {
+    // Deal with the fact the chain failed
+    console.error("Response Error:", e);
+});

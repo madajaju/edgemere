@@ -12,6 +12,10 @@ class Device {
                 type: 'string',
                 description: 'Extended Name of the device'
             },
+            hostname: {
+                type: 'string',
+                description: 'Hostname of the device'
+            },
             type: {
                 type: 'string',
                 description: 'Type of the Device'

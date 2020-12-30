@@ -40,7 +40,7 @@ module.exports = {
 
         } else if (!metricTypes.hasOwnProperty(inputs.name)) {
             // inputs.id = inputs.name;
-            retval = new Metric(inputs);
+            retval = new MetricAttribute(inputs);
         } else {
             // inputs.id = inputs.name;
             retval = new global.classes[metricTypes[inputs.name]](inputs);

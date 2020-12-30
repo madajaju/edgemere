@@ -1,3 +1,5 @@
+
+
 const boundingBox = [
     {x: 0, y: 0, z: 0},
     {x: 0, y: 100, z: 0},
@@ -47,6 +49,10 @@ class Graph3D {
                 target: {},
             }
         }
+
+        if(options.expandObject) {
+            this.expandObject = options.expandObject;
+        }
         this.data = data;
         this.normalizeData();
         this.graph = ForceGraph3D({controlType:'orbit'})
@@ -54,6 +60,8 @@ class Graph3D {
             .width(this.options.width)
             .height(this.options.height)
             .backgroundColor(this.options.background)
+            .nodeVal('size')
+            .nodeRelSize(10)
             .nodeThreeObject(node => {
                 let retval = null;
                 let objID = "#" + node.view;
@@ -66,6 +74,7 @@ class Graph3D {
                 } else if (this.selected.nodes.target.hasOwnProperty(node.id)) {
                     objID += "Targeted";
                     defaultID += "Targeted";
+
                 } else if (this.selected.nodes.source.hasOwnProperty(node.id)) {
                     objID += "Sourced";
                     defaultID += "Sourced";
@@ -95,9 +104,9 @@ class Graph3D {
             })
             .linkDirectionalParticleColor(link => {
                 if (this.selected.links.target.has(link)) {
-                    return "#ff0000";
-                } else if (this.selected.links.source.has(link)) {
                     return "#00ff00";
+                } else if (this.selected.links.source.has(link)) {
+                    return "#ffff00";
                 }
                 return this.options.linkColor;
             })
@@ -111,26 +120,29 @@ class Graph3D {
             })
             .linkColor(this.options.linkColor)
             .linkDirectionalParticleSpeed(0.006)
+            .enableNodeDrag(true)
             .graphData(this.ndata)
-            .d3Force('x', d3.forceX()
-                .x(node => this.levels[node.level].x)
+            /*.d3Force('x', d3.forceX()
+                .x(node => this.levels[node.level][node.group].x)
                 .strength(1))
             .d3Force('y', d3.forceY()
-                .y(node => this.levels[node.level].y)
+                .y(node => this.levels[node.level][node.group].y)
                 .strength(1))
             .d3Force('z', d3.forceZ()
-                .z(node => this.levels[node.level].z)
-                .strength(1))
-            .onNodeHover(node => {
+                .z(node => this.levels[node.level][node.group].z)
+                .strength(1))*/
+            .onNodeClick(node => {
                 this.selectNode(node);
             })
-            .onNodeClick(node => {
-                loadObjectChildren(this, node.group, node.id);
+            .onNodeRightClick(node => {
+                if(this.expandObject) {
+                    this.expandObject(`${node.group}?id=${node.id}`);
+                }
             });
-        this.linkForce = this.graph
+        /*this.linkForce = this.graph
             .d3Force('collide', d3.forceCollide(this.graph.nodeRelSize() + 30))
             .d3Force('link')
-            .distance(link => link.value * 10 + 1);
+            .distance(link => link.value * 10 + 1);*/
         /* for(let i in this.levels) {
             const geo = new THREE.SphereGeometry(10);
             const mat = new THREE.MeshLambertMaterial({color: 0x000000, opacity:1.0, transparent:true});
@@ -140,10 +152,18 @@ class Graph3D {
             this.graph.scene().add(mesh);
         }
          */
+        this.graph.numDimensions(3);
         window.graph = this;
     };
 
-
+    resize(opts) {
+       let gdiv = document.getElementById(this.gdiv)
+       gdiv.style.width = `${opts.width}px`;
+       gdiv.style.height = `${opts.height}px`;
+       this.graph.width(opts.width);
+       this.graph.height(opts.height);
+       this.graph.zoomToFit();
+    }
     normalizeData() {
         this.ndata = {
             links: [],
@@ -153,22 +173,32 @@ class Graph3D {
         let totalItems = 0;
         for (let i in this.data.nodes) {
             let level = this.data.nodes[i].level;
+            let group = this.data.nodes[i].group;
             if (!this.levels.hasOwnProperty(level)) {
-                this.levels[level] = {x: 0, y: 0, z: 0, items: 0};
+                this.levels[level] = {};
             }
-            this.levels[level].items++;
+            if(!this.levels[level].hasOwnProperty(group)) {
+                this.levels[level][group] = {x: 0, y: 0, z: 0, items: 0};
+            }
+            this.levels[level][group].items++;
             totalItems++;
+            this.data.nodes[i].size = 30;
             this.ndata.nodes.push(this.data.nodes[i]);
         }
         let multiplier = Math.floor(totalItems/30) + 1;
         let j = 0;
         for (let i in this.levels) {
             let level = this.levels[i];
-            level.x = boundingBox[j].x * multiplier;
-            level.y = boundingBox[j].y * multiplier;
-            level.z = boundingBox[j].z * multiplier;
+            let numOfGroups = Object.keys(level).length;
+            for(let k in level) {
+                // Check how many groups in the level
+                level[k].x = boundingBox[j].x * multiplier;
+                level[k].y = (boundingBox[j].y + (100/numOfGroups) ) * multiplier;
+                level[k].z = boundingBox[j].z * multiplier;
+            }
             j++;
         }
+        // Cleanup links to non-objects
         for (let i in this.data.links) {
             let source = this.data.links[i].source;
             let target = this.data.links[i].target;
@@ -185,9 +215,13 @@ class Graph3D {
                 this.ndata.links.push(this.data.links[i]);
             }
         }
-    }
-    ;
-
+    };
+    setData(pNodes, pLinks) {
+        this.data.nodes = pNodes;
+        this.data.links = pLinks;
+        this.normalizeData(); // Creates the ndata. Normalizedd Data
+        this.graph.graphData(this.ndata);
+    };
     addData(pNodes, pLinks) {
         for (let i in pNodes) {
             if (!this.data.nodes.hasOwnProperty(i)) {
@@ -209,16 +243,16 @@ class Graph3D {
         }
          */
         this.graph.graphData(this.ndata);
-    }
-    ;
+    };
 
     selectNode(node) {
         this.unSelectNodes();
         this.selected.nodes.primary = node;
         if (node) {
-            let element = document.getElementById(node.id);
-            if (element) {
-                element.className = "Selected";
+            // select the element in the list.
+            // This should be done with a callback for the select.
+            if(this.options.selectCallback) {
+                this.options.selectCallback(node.id);
             }
             this.selectRelNodes(node, "source");
             this.selectRelNodes(node, "target");
@@ -227,15 +261,23 @@ class Graph3D {
             .nodeThreeObject(this.graph.nodeThreeObject())
             .linkWidth(this.graph.linkWidth())
             .linkDirectionalParticles(this.graph.linkDirectionalParticles());
-    }
-    ;
+    };
 
     selectNodeByID(id) {
         if (this.data.nodes.hasOwnProperty(id)) {
+            let node = this.data.nodes[id]
             this.selectNode(this.data.nodes[id]);
+            // Aim at node from outside it
+            const distance = 300;
+            const distRatio = 1 + distance/Math.hypot(node.x, node.y, node.z);
+            this.graph.cameraPosition(
+                { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio }, // new position
+                node, // lookAt ({ x, y, z })
+                3000  // ms transition duration.
+            );
         }
-    }
-    ;
+    };
+
 
     unSelectNodes() {
         if (this.selected.nodes.primary) {
@@ -255,8 +297,7 @@ class Graph3D {
                 target: {},
             }
         }
-    }
-    ;
+    };
 
     selectRelNodes(node, direction) {
         let bdir = "target";
@@ -289,59 +330,4 @@ class Graph3D {
     }
 }
 
-function loadObjectChildren(graph, cls, objid) {
-    let xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            let dobj = JSON.parse(this.responseText).obj;
-            let oid = dobj._attributes.id;
-            let mnodes = {};
-            let mlinks = [];
-            for (let aname in dobj.definition.associations) {
-                if (dobj._associations[aname]) {
-                    let linkValue = 10;
-                    if (dobj.definition.associations[aname].owner) {
-                        linkValue = 5;
-                    }
-                    if (dobj.definition.associations[aname].composition) {
-                        linkValue = 1;
-                    }
-                    if (dobj.definition.associations[aname].cardinality === 1) {
-                        let otype = dobj._associations[aname].definition.name;
-                        let aobj = dobj._associations[aname];
-                        let aoid = dobj._associations[aname]._attributes.id;
-                        mnodes[aoid] = {
-                            id: aoid,
-                            name: aobj._attributes.name,
-                            group: otype,
-                            level: aobj.definition.package.name.replace(/\s/g, ''),
-                            view: otype + '3D'
-
-                        };
-                        mlinks.push({source: oid, target: aoid, value: linkValue});
-                    } else {
-                        for (let j in dobj._associations[aname]) {
-                            let otype = dobj.definition.associations[aname].type;
-                            let aoid = '';
-                            let aobj = dobj._associations[aname][j];
-                            aoid = dobj._associations[aname][j]._attributes.id;
-                            otype = dobj._associations[aname][j].definition.name;
-                            mnodes[aoid] = {
-                                id: aoid,
-                                name: aobj._attributes.name,
-                                group: otype,
-                                level: aobj.definition.package.name.replace(/\s/g, ''),
-                                view: otype + '3D'
-                            };
-                            mlinks.push({source: oid, target: aoid, value: linkValue});
-                        }
-                    }
-                }
-            }
-            graph.addData(mnodes, mlinks);
-        }
-    };
-    xhttp.open("GET", `/${cls}?mode=json&id=${objid}`, true);
-    xhttp.send();
-}
 exports.Graph = Graph;

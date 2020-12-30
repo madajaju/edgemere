@@ -19,6 +19,8 @@ describe(' SDI Test Cases', () => {
                     return done();
                 }
                 catch (e) {
+                    console.error(e.stdout.toString());
+                    console.error(e.stderr.toString());
                     console.error(e);
                     return done(e);
                 }

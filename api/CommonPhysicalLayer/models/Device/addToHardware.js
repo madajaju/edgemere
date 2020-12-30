@@ -11,7 +11,7 @@ module.exports = {
 
     fn: function (obj, inputs) {
         // inputs contains the obj for the this method.
-        obj.profile = obj.profile.combine({profile: inputs.profile});
+        // obj.profile = obj.profile.combine({profile: inputs.profile});
         return obj;
     }
 };

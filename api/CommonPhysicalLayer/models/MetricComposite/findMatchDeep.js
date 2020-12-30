@@ -14,9 +14,9 @@ module.exports = {
 
     fn: function (obj, inputs) {
         // inputs contains the obj for the this method.
-        // Check if the input  is a MetricComposite. If so then iterate over the values and call plus.
+        // Check if the input  is a MetricComposite. If so then iterate over the values.
         if (inputs.value.className !== 'MetricComposite') {
-            let retval = obj;
+            // Check if the inputs.value is name value pair
             return obj;
         }
         if (!inputs.value.name && inputs.value.name.length === 0) {
@@ -26,7 +26,7 @@ module.exports = {
         }
         let retval = _findMatchDeep(obj, inputs.value);
         if (!retval) {
-            retval = new MetricComposite({name: inputs.value.name, values: inputs.value.values});
+            retval = new MetricComposite({name: inputs.value.name, value: inputs.value.values});
         }
         obj.addToValues(retval);
         return retval;

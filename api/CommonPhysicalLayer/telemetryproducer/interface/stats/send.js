@@ -1,6 +1,7 @@
 const path = require('path');
 const si = require('systeminformation');
 const bent = require('bent');
+const AEvent = require('ailtire/src/Server/AEvent');
 
 module.exports = {
     friendlyName: 'send',
@@ -30,20 +31,18 @@ module.exports = {
     fn: async function (inputs, env) {
         let stats = inputs.stats;
         console.log("Sending Data:");
+        storeStats(stats);
+        AEvent.emit("device.stats", {name:inputs.name, stats: global.telemetry.stats});
         // This is set when the socket is connected.
         // If the socket is not connected then don't send it.
         if (global.parentPost) {
             try {
-                storeStats(stats);
-                await global.parentPost('report', {name: inputs.name, stats: global.telemetry.stats});
+                // await global.parentPost('report', {name: inputs.name, stats: global.telemetry.stats});
                 // Clear the stats when it is successful;
                 global.telemetry.stats = null;
             } catch (e) {
                 console.log("Error Posting data:", e);
-                storeStats(stats);
             }
-        } else {
-            storeStats(stats);
         }
     }
 };

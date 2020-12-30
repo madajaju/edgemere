@@ -6,7 +6,7 @@
 
 module.exports = {
     name: 'Manage Data Center',
-    description: 'It Operations manages data centers by creating, deleting, enabling and disabling devices' +
+    description: 'IT Operations manages data centers by creating, deleting, enabling and disabling devices' +
         'and aggregated devices',
     method: 'datacenter/list',
     actors: {

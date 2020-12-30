@@ -29,7 +29,8 @@ module.exports = {
         // inputs contains the obj for the this method.
         // Store the agents in a agent list.
         let agent = new Agent({name: inputs.name, url: inputs.url});
-        agent.
-        env.res.end("Done");
+        if(env && env.res) {
+            env.res.end("Done");
+        }
     }
 };

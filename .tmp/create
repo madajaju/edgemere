@@ -1,0 +1,26 @@
+#!/user/bin/env node
+const bent = require('bent');
+const program = require('commander');
+const YAML = require('yamljs');
+global.ailtire = { config: require('/mnt/c/Users/dwpulsip/work/edgemere/bin/lib/../../.ailtire.js') };
+program.command('create [options]', 'create entity')
+	.option('--name <string>', 'Name of the cloud')
+	.option('--file <YAML>', 'file with the definition')
+	.option('--type <string>', 'Type of cloud');
+program.parse(process.argv);
+let url = global.ailtire.config.host;
+let args = {};
+let params = '/cloud/create?';
+params += 'mode=json';
+if(program['name']) { args['name'] = program['name']; }
+if(program['file']) { args['file'] = YAML.load(program['file']); }
+if(program['type']) { args['type'] = program['type']; }
+
+const post = bent(url, 'POST', 'json', 200);
+(async () => {
+    const response = await post(params, args);
+    console.log(response.results);
+})().catch(e => {
+    // Deal with the fact the chain failed
+    console.error("Response Error:", e);
+});

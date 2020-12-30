@@ -25,6 +25,7 @@ module.exports = {
     },
 
     fn: async function (inputs, env) {
+        console.log("Report:", inputs.name);
         if(!global.hasOwnProperty('telemetry')) {
             global.telemetry = {
                 stats: {}
@@ -37,6 +38,8 @@ module.exports = {
             global.telemetry.stats[inputs.name] = {};
         }
         global.telemetry.stats[inputs.name] = inputs.stats;
-        env.res.end("Done");
+        if(env && env.res) {
+            env.res.end("Done");
+        }
     }
 };

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "testsocket": "node testsocket.js",
     "doc": "cd deploy/doc && npm install && npm start",
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
@@ -17,13 +18,15 @@
   "license": "MIT",
   "dependencies": {
     "3d-force-graph": "^1.67.3",
-    "ailtire": "^0.1.12",
+    "ailtire": "^0.1.14",
     "bent": "^7.3.12",
     "commander": "^4.1.0",
     "d3-force-3d": "^2.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "jquery": "^3.5.1",
     "mocha": "^7.2.0",
+    "socket.io": "^3.0.4",
     "systeminformation": "^4.30.1"
   }
 }

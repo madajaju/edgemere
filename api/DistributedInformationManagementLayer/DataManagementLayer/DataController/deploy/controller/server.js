@@ -6,10 +6,33 @@ if(!fs.existsSync('./node_modules')) {
 }
 const server = require('ailtire');
 
-server.micro( {
+let hostname = process.env.HOSTNAME;
+let port = process.env.EDGEMERE_PORT || 3000;
+let urlPrefix = process.env.AILTIRE_BASEURL || '/diml/dml/dc';
+let redisUrl = process.env.AILTIRE_REDIS_URL || null;
+let managingService = process.env.EDGEMERE_ADMIN_URL || 'localhost:3000';
+
+let config = {
+    name: 'datacontoller',
     baseDir: '.',
     prefix: 'diml/dml/dc',
-    routes: {
-    },
-    listenPort: 3000
-});
+    routes: {},
+    host: hostname,
+    urlPrefix: urlPrefix,
+    listenPort: port,
+    servers: [
+        { pattern: "*", url: managingService }
+    ],
+};
+
+if(redisUrl) {
+    let items = redisUrl.split(':');
+    let redisHost = items[0] || 'redis';
+    let redisPort = items[1] || '6374';
+    config.redis =  {
+        host: redisHost,
+        port: redisPort
+    }
+}
+
+server.micro(config);
