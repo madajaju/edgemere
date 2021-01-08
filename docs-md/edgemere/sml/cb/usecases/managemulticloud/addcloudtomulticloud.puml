@@ -1,0 +1,20 @@
+@startuml
+
+actor "IT Operations"
+
+
+entity EventBus
+
+box Cloud Broker #lightgreen
+    boundary cb #white
+end box
+
+
+
+"IT Operations" -> cb: Add Cloud to Multi Cloud
+
+
+
+
+EventBus --/ cb : method2()
+@enduml

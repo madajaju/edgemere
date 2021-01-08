@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="312px" preserveAspectRatio="none" style="width:183px;height:312px;" version="1.1" viewBox="0 0 183 312" width="183px" zoomAndPan="magnify"><defs><filter height="300%" id="f1r14f0796zw3a" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--entity ResourceInstanceType--><rect fill="#ADD8E6" filter="url(#f1r14f0796zw3a)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="166" x="6" y="264"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="146" x="16" y="288.5332">ResourceInstanceType</text><!--entity CloudType--><rect fill="#90EE90" filter="url(#f1r14f0796zw3a)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="89" x="44.5" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="69" x="54.5" y="32.5332">CloudType</text><!--class Model--><rect fill="#FEFECE" filter="url(#f1r14f0796zw3a)" height="61.8359" id="Model" style="stroke: #A80036; stroke-width: 1.5;" width="109" x="34.5" y="124"/><ellipse cx="49.5" cy="140" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M52.2656,135.875 Q52.4219,135.6563 52.6094,135.5469 Q52.7969,135.4375 53.0156,135.4375 Q53.3906,135.4375 53.625,135.7031 Q53.8594,135.9531 53.8594,136.5625 L53.8594,138.0156 Q53.8594,138.625 53.625,138.8906 Q53.3906,139.1563 53.0156,139.1563 Q52.6719,139.1563 52.4688,138.9531 Q52.2656,138.7656 52.1563,138.25 Q52.1094,137.8906 51.9219,137.7031 Q51.5938,137.3281 50.9844,137.1094 Q50.375,136.8906 49.75,136.8906 Q48.9844,136.8906 48.3438,137.2188 Q47.7188,137.5469 47.2188,138.2969 Q46.7344,139.0469 46.7344,140.0781 L46.7344,141.1719 Q46.7344,142.4063 47.625,143.2344 Q48.5156,144.0469 50.1094,144.0469 Q51.0469,144.0469 51.7031,143.7969 Q52.0938,143.6406 52.5156,143.2031 Q52.7813,142.9375 52.9219,142.8594 Q53.0781,142.7813 53.2813,142.7813 Q53.6094,142.7813 53.8594,143.0469 Q54.125,143.2969 54.125,143.6406 Q54.125,143.9844 53.7813,144.3906 Q53.2813,144.9688 52.4844,145.2969 Q51.4063,145.75 50.1094,145.75 Q48.5938,145.75 47.3906,145.125 Q46.4063,144.625 45.7188,143.5625 Q45.0313,142.4844 45.0313,141.2031 L45.0313,140.0469 Q45.0313,138.7188 45.6406,137.5781 Q46.2656,136.4219 47.3594,135.8125 Q48.4531,135.1875 49.6875,135.1875 Q50.4219,135.1875 51.0625,135.3594 Q51.7188,135.5156 52.2656,135.875 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="77" x="63.5" y="144.9102">ResourceMap</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="35.5" x2="142.5" y1="156" y2="156"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="56" x="40.5" y="171.4189">string name</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="35.5" x2="142.5" y1="177.8359" y2="177.8359"/><!--link Model to ResourceInstanceType--><path d="M89,199.325 C89,216.1922 89,235.1503 89,250.6534 " fill="none" id="Model-ResourceInstanceType" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="89,263.7606,93,254.7606,89,258.7606,85,254.7606,89,263.7606" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="89" x2="89.0001" y1="258.7606" y2="250.7606"/><polygon fill="#FFFFFF" points="89,186.18,85,192.18,89,198.18,93,192.18,89,186.18" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="29" x="90" y="230.4951">value</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="80.9281" y="253.0273">1</text><!--link CloudType to Model--><path d="M50.3815,54.92 C39.3864,66.049 31.6626,79.692 37,94 C39.5293,100.78 43.2082,107.303 47.4587,113.389 " fill="none" id="CloudType-Model" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="55.6023,123.832,53.2222,114.2751,52.5276,119.8891,46.9136,119.1945,55.6023,123.832" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="52.5276" x2="47.6082" y1="119.8891" y2="113.581"/><polygon fill="#A80036" points="60.172,46.203,53.0309,47.2051,51.2093,54.1823,58.3504,53.1802,60.172,46.203" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="57" x="38" y="90.4951">assetmap</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="40.9921" y="113.3019">n</text><!--link CloudType to Model--><path d="M97.2148,59.188 C98.3734,64.75 99.3799,70.518 100,76 C101.2677,87.207 100.5771,99.288 99.0583,110.517 " fill="none" id="CloudType-Model-1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="96.871,123.675,102.2925,115.4526,97.6908,118.7427,94.4007,114.141,96.871,123.675" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="97.6908" x2="99.0028" y1="118.7427" y2="110.851"/><polygon fill="#A80036" points="94.1547,46.068,91.6221,52.8197,96.8804,57.7543,99.413,51.0026,94.1547,46.068" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="61" x="101" y="90.4951">metricmap</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="90.7725" y="113.1125">n</text><!--
+@startuml
+
+class "ResourceMap" as Model {
+ string name
+
+ 
+}
+
+rectangle "ResourceInstanceType" as ResourceInstanceType #lightblue {
+}
+
+Model o- -> "1" ResourceInstanceType : value
+
+
+
+
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *- -> "n" Model : "assetmap"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *- -> "n" Model : "metricmap"
+    
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

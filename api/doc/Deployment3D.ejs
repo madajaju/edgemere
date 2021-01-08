@@ -59,7 +59,7 @@
         let data = {nodes: {}, links: []};
         // data.nodes["<%= package.name %>"] = {id:"<%= package.name %>", name:"<%= package.name %>", group: "package", color: "<%= package.color %>", level:"top", view:'package3D'};
         <%
-        if(Object.keys(deploy.ports).length > 0) {
+        if(deploy && Object.keys(deploy.ports).length > 0) {
         %>
             data.nodes["external"] = {id:"external", name:"external", group: "network", color: "gray", level:"top", view:'net3D'};
         <% for(let port in deploy.ports) {

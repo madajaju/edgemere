@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="987px" preserveAspectRatio="none" style="width:665px;height:987px;" version="1.1" viewBox="0 0 665 987" width="665px" zoomAndPan="magnify"><defs><filter height="300%" id="f1h8o2r2xg4kvu" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster sdi--><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="656" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="631.5" x="22" y="24"/><rect fill="#FFFFFF" height="622.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="625.5" x="25" y="54.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="22" x2="653.5" y1="51.6094" y2="51.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="18" x="328.75" y="42.5332">sdi</text><!--cluster sdiresource--><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="442" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="128" x="46" y="68"/><rect fill="#FFFFFF" height="408.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="122" x="49" y="98.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="46" x2="174" y1="95.6094" y2="95.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="56" x="82" y="86.5332">resource</text><!--cluster sdirequest--><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="357" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="105" x="272" y="88"/><rect fill="#FFFFFF" height="323.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="99" x="275" y="118.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="272" x2="377" y1="115.6094" y2="115.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="53" x="298" y="106.5332">Request</text><!--cluster sdireservation--><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="187" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="114" x="267.5" y="469"/><rect fill="#FFFFFF" height="153.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="108" x="270.5" y="499.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="267.5" x2="381.5" y1="496.6094" y2="496.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="76" x="286.5" y="487.5332">Reservation</text><!--cluster sdiio--><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="187" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="159" x="470.5" y="352"/><rect fill="#FFFFFF" height="153.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="153" x="473.5" y="382.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="470.5" x2="629.5" y1="379.6094" y2="379.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="11" x="544.5" y="370.5332">io</text><!--cluster cpl--><rect fill="#D3D3D3" filter="url(#f1h8o2r2xg4kvu)" height="272" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="109" x="495.5" y="704"/><rect fill="#FFFFFF" height="238.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="103" x="498.5" y="734.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="495.5" x2="604.5" y1="731.6094" y2="731.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="18" x="541" y="722.5332">cpl</text><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="127" x="486.5" y="124"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="486.5" x2="613.5" y1="151.6094" y2="151.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="107" x="496.5" y="143.5332">Custom Function</text><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="105" x="57.5" y="529"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="57.5" x2="162.5" y1="556.6094" y2="556.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="85" x="67.5" y="548.5332">checkrequest</text><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="68" x="76" y="614"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="76" x2="144" y1="641.6094" y2="641.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="48" x="86" y="633.5332">reserve</text><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="50" x="85" y="104"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="85" x2="135" y1="131.6094" y2="131.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="20" x="100" y="123.5332">get</text><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="50" x="85" y="189"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="85" x2="135" y1="216.6094" y2="216.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="17" x="101.5" y="208.5332">list</text><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="67" x="76.5" y="274"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="76.5" x2="143.5" y1="301.6094" y2="301.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="47" x="86.5" y="293.5332">release</text><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="56" x="82" y="359"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="82" x2="138" y1="386.6094" y2="386.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="36" x="92" y="378.5332">ready</text><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="96" x="62" y="444"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="62" x2="158" y1="471.6094" y2="471.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="76" x="72" y="463.5332">provisioning</text><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="72" x="288.5" y="124"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="288.5" x2="360.5" y1="151.6094" y2="151.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="52" x="298.5" y="143.5332">satisfied</text><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="68" x="290.5" y="209"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="290.5" x2="358.5" y1="236.6094" y2="236.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="48" x="300.5" y="228.5332">reserve</text><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="68" x="290.5" y="379"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="290.5" x2="358.5" y1="406.6094" y2="406.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="48" x="300.5" y="398.5332">needed</text><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="73" x="288" y="294"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="288" x2="361" y1="321.6094" y2="321.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="53" x="298" y="313.5332">selected</text><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="71" x="289" y="590"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="289" x2="360" y1="617.6094" y2="617.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="51" x="299" y="609.5332">rejected</text><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="82" x="283.5" y="505"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="283.5" x2="365.5" y1="532.6094" y2="532.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="62" x="293.5" y="524.5332">confirmed</text><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="127" x="486.5" y="388"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="486.5" x2="613.5" y1="415.6094" y2="415.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="107" x="496.5" y="407.5332">evaluateRequest</text><rect fill="#FFFFE0" filter="url(#f1h8o2r2xg4kvu)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="77" x="511.5" y="473"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="511.5" x2="588.5" y1="500.6094" y2="500.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="57" x="521.5" y="492.5332">provision</text><rect fill="#D3D3D3" filter="url(#f1h8o2r2xg4kvu)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="75" x="512.5" y="825"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="512.5" x2="587.5" y1="852.6094" y2="852.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="55" x="522.5" y="844.5332">Function</text><rect fill="#D3D3D3" filter="url(#f1h8o2r2xg4kvu)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="68" x="516" y="740"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="516" x2="584" y1="767.6094" y2="767.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="48" x="526" y="759.5332">reserve</text><rect fill="#D3D3D3" filter="url(#f1h8o2r2xg4kvu)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="77" x="511.5" y="910"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="511.5" x2="588.5" y1="937.6094" y2="937.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="57" x="521.5" y="929.5332">provision</text><!--link sdirequestsatisfied to sdifunction--><path d="M360.914,149 C393.073,149 441.389,149 480.997,149 " fill="none" id="sdirequestsatisfied-sdifunction" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="486.277,149,477.277,145,481.277,149,477.277,153,486.277,149" style="stroke: #A80036; stroke-width: 1.0;"/><!--link sdiresourceready to sdirequestreserve--><path d="M138.257,368.812 C151.733,360.974 168.055,350.981 182,341 C218.556,314.834 223.423,302.823 259.5,276 C267.932,269.731 277.26,263.328 286.127,257.472 " fill="none" id="sdiresourceready-sdirequestreserve" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="290.436,254.644,280.7169,256.2373,286.2556,257.3871,285.1058,262.9259,290.436,254.644" style="stroke: #A80036; stroke-width: 1.0;"/><!--link sdirequestneeded to cplfunction--><path d="M349.079,429.311 C362.779,445.313 379.299,467.057 389.5,489 C420.157,554.943 417.234,751.084 462.5,808 C473.8,822.209 491.11,831.925 507.283,838.401 " fill="none" id="sdirequestneeded-cplfunction" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="512.258,840.309,505.2865,833.3521,507.5894,838.519,502.4225,840.8219,512.258,840.309" style="stroke: #A80036; stroke-width: 1.0;"/><!--link sdirequestneeded to cplreserve--><path d="M345.653,429.08 C358.691,445.705 375.736,468.205 389.5,489 C446.875,575.682 505.921,683.746 533.299,735.15 " fill="none" id="sdirequestneeded-cplreserve" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="535.69,739.648,534.994,729.8238,533.3415,735.2339,527.9314,733.5813,535.69,739.648" style="stroke: #A80036; stroke-width: 1.0;"/><!--link sdireservationrejected to cplfunction--><path d="M338.053,640.289 C359.026,680.383 404.651,759.001 462.5,808 C475.661,819.147 492.287,828.137 507.438,834.896 " fill="none" id="sdireservationrejected-cplfunction" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="512.087,836.922,505.4336,829.6603,507.5031,834.925,502.2384,836.9946,512.087,836.922" style="stroke: #A80036; stroke-width: 1.0;"/><!--link sdiresourceprovisioning to cplprovision--><path d="M158.19,482.606 C166.793,486.587 175.188,491.638 182,498 C239.161,551.387 216.496,590.668 259.5,656 C335.755,771.846 352.703,808.266 462.5,893 C475.68,903.1714 491.718,911.7918 506.387,918.5261 " fill="none" id="sdiresourceprovisioning-cplprovision" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="511.303,920.7371,504.7363,913.3969,506.7432,918.6858,501.4542,920.6926,511.303,920.7371" style="stroke: #A80036; stroke-width: 1.0;"/><!--link sdirequestselected to sdiioevaluaterequest--><path d="M361.437,342.688 C380.004,354.182 403.361,367.519 425.5,377 C443.14,384.554 462.851,391.093 481.256,396.447 " fill="none" id="sdirequestselected-sdiioevaluaterequest" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="486.409,397.925,478.8626,391.5963,481.6032,396.545,476.6546,399.2856,486.409,397.925" style="stroke: #A80036; stroke-width: 1.0;"/><!--link sdireservationconfirmed to sdiioprovision--><path d="M365.715,524.242 C405.287,518.576 465.503,509.955 506.008,504.156 " fill="none" id="sdireservationconfirmed-sdiioprovision" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="511.34,503.392,501.864,500.7077,506.3905,504.1005,502.9976,508.6269,511.34,503.392" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+left to right direction
+
+
+state "sdi" as sdi #lightyellow {
+}
+
+
+state sdi #lightyellow {
+    state "Custom Function" as sdifunction {
+    }
+}
+
+        state "sdi" as sdi #lightyellow {
+state "checkrequest" as sdicheckrequest #lightyellow {
+}
+}
+
+
+        state "sdi" as sdi #lightyellow {
+state "reserve" as sdireserve #lightyellow {
+}
+}
+
+
+        state "sdi" as sdi #lightyellow {
+state "resource" as sdiresource #lightyellow {
+state "get" as sdiresourceget #lightyellow {
+}
+}
+}
+
+
+        state "sdi" as sdi #lightyellow {
+state "resource" as sdiresource #lightyellow {
+state "list" as sdiresourcelist #lightyellow {
+}
+}
+}
+
+
+        state "sdi" as sdi #lightyellow {
+state "resource" as sdiresource #lightyellow {
+state "release" as sdiresourcerelease #lightyellow {
+}
+}
+}
+
+
+
+
+    state "sdi" as sdi #lightyellow {
+state "Request" as sdirequest #lightyellow {
+state "satisfied" as sdirequestsatisfied #lightyellow {
+}
+}
+}
+
+    
+    state "sdi" as sdi #lightyellow {
+state "Function" as sdifunction #lightyellow {
+}
+}
+
+    sdirequestsatisfied - - -> sdifunction
+  
+
+    state "sdi" as sdi #lightyellow {
+state "Resource" as sdiresource #lightyellow {
+state "ready" as sdiresourceready #lightyellow {
+}
+}
+}
+
+    
+    state "sdi" as sdi #lightyellow {
+state "request" as sdirequest #lightyellow {
+state "reserve" as sdirequestreserve #lightyellow {
+}
+}
+}
+
+    sdiresourceready - - -> sdirequestreserve
+  
+
+
+    state "sdi" as sdi #lightyellow {
+state "Request" as sdirequest #lightyellow {
+state "needed" as sdirequestneeded #lightyellow {
+}
+}
+}
+
+    state "cpl" as cpl #lightgray {
+state "Function" as cplfunction #lightgray {
+}
+}
+
+        sdirequestneeded - - -> cplfunction
+       
+    
+    state "cpl" as cpl #lightgray {
+state "reserve" as cplreserve #lightgray {
+}
+}
+
+        sdirequestneeded - - -> cplreserve
+       
+    state "sdi" as sdi #lightyellow {
+state "Reservation" as sdireservation #lightyellow {
+state "rejected" as sdireservationrejected #lightyellow {
+}
+}
+}
+
+    
+        sdireservationrejected - - -> cplfunction
+       
+    state "sdi" as sdi #lightyellow {
+state "Resource" as sdiresource #lightyellow {
+state "provisioning" as sdiresourceprovisioning #lightyellow {
+}
+}
+}
+
+    state "cpl" as cpl #lightgray {
+state "provision" as cplprovision #lightgray {
+}
+}
+
+        sdiresourceprovisioning - - -> cplprovision
+       
+    state "sdi" as sdi #lightyellow {
+state "Request" as sdirequest #lightyellow {
+state "selected" as sdirequestselected #lightyellow {
+}
+}
+}
+
+    state "sdi" as sdi #lightyellow {
+state "io" as sdiio #lightyellow {
+state "evaluateRequest" as sdiioevaluaterequest #lightyellow {
+}
+}
+}
+
+        sdirequestselected - - -> sdiioevaluaterequest
+       
+    state "sdi" as sdi #lightyellow {
+state "Reservation" as sdireservation #lightyellow {
+state "confirmed" as sdireservationconfirmed #lightyellow {
+}
+}
+}
+
+    state "sdi" as sdi #lightyellow {
+state "io" as sdiio #lightyellow {
+state "provision" as sdiioprovision #lightyellow {
+}
+}
+}
+
+        sdireservationconfirmed - - -> sdiioprovision
+       
+    
+    
+        
+       
+    
+    state "sdi" as sdi #lightyellow {
+state "request" as sdirequest #lightyellow {
+state "reserve" as sdirequestreserve #lightyellow {
+}
+}
+}
+
+        
+       
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

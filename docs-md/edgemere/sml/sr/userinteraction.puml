@@ -1,0 +1,13 @@
+@startuml
+
+actor "Actor" as actor
+
+
+
+
+actor -> "Service Repository": Manage Assets
+"Service Repository" -> bin: data/govern
+bin -> REST: data/govern
+
+
+@enduml

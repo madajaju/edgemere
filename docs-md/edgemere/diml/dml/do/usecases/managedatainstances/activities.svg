@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="303px" preserveAspectRatio="none" style="width:562px;height:303px;" version="1.1" viewBox="0 0 562 303" width="562px" zoomAndPan="magnify"><defs><filter height="300%" id="fejs4xbaz0edd" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><ellipse cx="275.035" cy="173.307" fill="#FEFECE" filter="url(#fejs4xbaz0edd)" rx="89.535" ry="20.307" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="149" x="200.535" y="178.6117">Manage Data Instances</text><!--entity DataScientist--><ellipse cx="201" cy="18" fill="#FEFECE" filter="url(#fejs4xbaz0edd)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M201,26 L201,53 M188,34 L214,34 M201,53 L188,68 M201,53 L214,68 " fill="none" filter="url(#fejs4xbaz0edd)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="157.5" y="89.5332">Data Scientist</text><!--entity ApplicationDeveloper--><ellipse cx="349" cy="18" fill="#FEFECE" filter="url(#fejs4xbaz0edd)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M349,26 L349,53 M336,34 L362,34 M349,53 L336,68 M349,53 L362,68 " fill="none" filter="url(#fejs4xbaz0edd)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="138" x="280" y="89.5332">Application Developer</text><ellipse cx="85.8574" cy="272.8715" fill="#D3D3D3" filter="url(#fejs4xbaz0edd)" rx="79.8574" ry="18.3715" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="126" x="22.8574" y="278.1762">CreateDataInstance</text><ellipse cx="274.8401" cy="273.168" fill="#D3D3D3" filter="url(#fejs4xbaz0edd)" rx="73.8401" ry="17.168" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="111" x="219.3401" y="278.4727">FindDataInstance</text><ellipse cx="468.0873" cy="273.1175" fill="#D3D3D3" filter="url(#fejs4xbaz0edd)" rx="83.5873" ry="19.1175" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="135" x="400.5873" y="278.4221">RemoveDataInstance</text><!--link DataScientist to ManageDataInstances--><path d="M226.467,93.141 C237.855,111.762 250.862,133.032 260.543,148.861 " fill="none" id="DataScientist-ManageDataInstances" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="263.181,153.175,261.8982,143.41,260.5725,148.9094,255.0732,147.5837,263.181,153.175" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloper to ManageDataInstances--><path d="M323.533,93.141 C312.145,111.762 299.138,133.032 289.457,148.861 " fill="none" id="ApplicationDeveloper-ManageDataInstances" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="286.819,153.175,294.9268,147.5837,289.4275,148.9094,288.1018,143.41,286.819,153.175" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageDataInstances to CreateDataInstance--><path d="M239.893,192.6105 C206.179,210.003 155.503,236.1455 121.618,253.6258 " fill="none" id="ManageDataInstances-CreateDataInstance" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="117.158,255.9263,126.9902,255.354,121.6013,253.6336,123.3218,248.2447,117.158,255.9263" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageDataInstances to FindDataInstance--><path d="M275,194.2306 C275,210.5282 275,233.6292 275,250.4165 " fill="none" id="ManageDataInstances-FindDataInstance" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="275,255.8486,279,246.8486,275,250.8486,271,246.8486,275,255.8486" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageDataInstances to RemoveDataInstance--><path d="M310.399,192.383 C344.455,209.5875 395.759,235.5052 430.503,253.057 " fill="none" id="ManageDataInstances-RemoveDataInstance" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="435.079,255.3689,428.8491,247.7407,430.616,253.1146,425.2422,254.8815,435.079,255.3689" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+
+
+usecase "Manage Data Instances" as ManageDataInstances
+
+Actor "Data Scientist" as DataScientist
+
+DataScientist - -> ManageDataInstances
+
+Actor "Application Developer" as ApplicationDeveloper
+
+ApplicationDeveloper - -> ManageDataInstances
+
+
+
+usecase "CreateDataInstance" as CreateDataInstance #lightgrey
+
+ManageDataInstances - -> CreateDataInstance
+
+usecase "FindDataInstance" as FindDataInstance #lightgrey
+
+ManageDataInstances - -> FindDataInstance
+
+usecase "RemoveDataInstance" as RemoveDataInstance #lightgrey
+
+ManageDataInstances - -> RemoveDataInstance
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

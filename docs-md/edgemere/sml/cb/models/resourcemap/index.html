@@ -1,0 +1,202 @@
+<head>
+    <base href="http://localhost/web/" >
+
+    <link rel="stylesheet/less" type="text/css" href="styles/importer.less" />
+    <script src="js/less.js" type="text/javascript"></script>
+    <script src="js/aframe.js"></script>
+</head>
+
+<h1>ResourceMap</h1>
+This maps generalized resource name/requirement to one or more requirements for the specific cloud resource.
+
+<img src='./Logical.puml' > </img>
+
+<div class="modelGraph">
+    <svg width="960" height="300" id="DrawingArea2D"></svg>
+    <script src="js/d3.js"></script>
+    <script src="js/Graph2D.js"></script>
+    <script type="module">
+        let data = {nodes:{}, links:[]};
+        let mname = 'ResourceMap';
+        let pkgName = 'Cloud Broker';
+        let view = null;
+        
+        view = '<rect x="5" y="5" width="15" height="15" style="fill:#aaffaa;stroke:#000000;stroke-width:1;" /><rect width="15" height="15" style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:3;" />';
+        
+
+        data.nodes[mname] = {id:mname, name:mname, group: mname, level:pkgName, view:view};
+        
+            data.nodes["ResourceInstanceType"] = {id:"ResourceInstanceType", name:"ResourceInstanceType", group: 'ResourceInstanceType', level: 'Cloud Broker', view: '<rect width="15" height="15" style="fill:#aaffaa;stroke:#000000;stroke-width:1;" />'};
+            
+                data.links.push({source: mname, target:"ResourceInstanceType", value: 1, distance: 9} );
+            
+        let dname;
+        let dview = null;
+        let dpkg;
+        
+            dview = null;
+            dname = 'CloudType';
+        
+                dview = '<path d="M -3 -4 a 7.5 7.5 1 0 0 0 15 h 21 a 7.5 7.5 1 0 0 0 -15 a 3 3 1 0 0 -4.5 -3 a 6 6 1 0 0 -17.25 3 z" style="fill:#aaffaa;stroke:#000000;stroke-width:1;stroke-dasharray:3;" />';
+           
+            dpkg = 'Cloud Broker';
+            if(dview) {
+                data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg, view:dview};
+            } else {
+                data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg};
+            }
+            data.links.push({source:dname, target:mname, value: 1, distance: 10} );
+        
+            dview = null;
+            dname = 'CloudType';
+        
+                dview = '<path d="M -3 -4 a 7.5 7.5 1 0 0 0 15 h 21 a 7.5 7.5 1 0 0 0 -15 a 3 3 1 0 0 -4.5 -3 a 6 6 1 0 0 -17.25 3 z" style="fill:#aaffaa;stroke:#000000;stroke-width:1;stroke-dasharray:3;" />';
+           
+            dpkg = 'Cloud Broker';
+            if(dview) {
+                data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg, view:dview};
+            } else {
+                data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg};
+            }
+            data.links.push({source:dname, target:mname, value: 1, distance: 10} );
+        
+
+        let graph = new Graph2D("DrawingArea2D", data);
+    </script>
+</div>
+
+<head>
+    <script src="js/three.js"></script>
+    <script src="js/3d-force-graph.js"></script>
+    <script src="js/d3-force-3d.js"></script>
+    <script src="js/d3-octree.js"></script>
+    <script src="js/Graph3D.js"></script>
+</head>
+<div style="display:none;">
+<div id="scratchspace" style="display:none;">
+    <a-scene embedded height="0px" width="0px">
+        <a-entity position="-10 20 -100">
+            <a-sphere id="default3D" position="0 0 0" radius="10" color="#cccccc"></a-sphere>
+            <a-sphere id="default3DSelected" position="0 0 0" radius="10" color="#ffff00"></a-sphere>
+            <a-sphere id="default3DTargeted" position="0 0 0" radius="10" color="#ff0000"></a-sphere>
+            <a-sphere id="default3DSourced" position="0 0 0" radius="10" color="#00ff00"></a-sphere>
+    
+        <a-entity id="ResourceMap3D"><a-box width="15" height="15" depth="15" material='color:#aaffaa; transparent:true, opacity:0.90;' ></a-box><a-box width="15" height="15" depth="15" position="5 5 5" material='color:#aaffaa; transparent:true, opacity:0.90; wireframe:true' ></a-box></a-entity><a-entity id="ResourceMap3DSelected"><a-box width="15" height="15" depth="15" material='color:#ffff00; transparent:true, opacity:0.90;' ></a-box><a-box width="15" height="15" depth="15" position="5 5 5" material='color:#ffff00; transparent:true, opacity:0.90; wireframe:true' ></a-box></a-entity><a-entity id="ResourceMap3DTargeted"><a-box width="15" height="15" depth="15" material='color:#00ff00; transparent:true, opacity:0.90;' ></a-box><a-box width="15" height="15" depth="15" position="5 5 5" material='color:#00ff00; transparent:true, opacity:0.90; wireframe:true' ></a-box></a-entity><a-entity id="ResourceMap3DSourced"><a-box width="15" height="15" depth="15" material='color:#ff0000; transparent:true, opacity:0.90;' ></a-box><a-box width="15" height="15" depth="15" position="5 5 5" material='color:#ff0000; transparent:true, opacity:0.90; wireframe:true' ></a-box></a-entity>
+    
+            <a-entity id="ResourceInstanceType3D"><a-box width="15" height="15" depth="15" material='color:#aaffaa; transparent:true, opacity:0.90;' ></a-box></a-entity><a-entity id="ResourceInstanceType3DSelected"><a-box width="15" height="15" depth="15" material='color:#ffff00; transparent:true, opacity:0.90;' ></a-box></a-entity><a-entity id="ResourceInstanceType3DTargeted"><a-box width="15" height="15" depth="15" material='color:#00ff00; transparent:true, opacity:0.90;' ></a-box></a-entity><a-entity id="ResourceInstanceType3DSourced"><a-box width="15" height="15" depth="15" material='color:#ff0000; transparent:true, opacity:0.90;' ></a-box></a-entity>
+        
+            <a-entity id="CloudType3D"><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" material='color:#aaffaa; transparent:true, opacity:0.90; wireframe:true;' ></a-torus-knot></a-entity><a-entity id="CloudType3DSelected"><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" material='color:#ffff00; transparent:true, opacity:0.90; wireframe:true;' ></a-torus-knot></a-entity><a-entity id="CloudType3DTargeted"><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" material='color:#00ff00; transparent:true, opacity:0.90; wireframe:true;' ></a-torus-knot></a-entity><a-entity id="CloudType3DSourced"><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" material='color:#ff0000; transparent:true, opacity:0.90; wireframe:true;' ></a-torus-knot></a-entity>
+            
+        
+            <a-entity id="CloudType3D"><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" material='color:#aaffaa; transparent:true, opacity:0.90; wireframe:true;' ></a-torus-knot></a-entity><a-entity id="CloudType3DSelected"><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" material='color:#ffff00; transparent:true, opacity:0.90; wireframe:true;' ></a-torus-knot></a-entity><a-entity id="CloudType3DTargeted"><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" material='color:#00ff00; transparent:true, opacity:0.90; wireframe:true;' ></a-torus-knot></a-entity><a-entity id="CloudType3DSourced"><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" material='color:#ff0000; transparent:true, opacity:0.90; wireframe:true;' ></a-torus-knot></a-entity>
+            
+        
+        </a-entity>
+    </a-scene>
+</div>
+</div>
+<div class="modelGraph" id="DrawingArea3D">
+    <script type="module">
+        let data = {nodes:{}, links:[]};
+        let mname = 'ResourceMap';
+        let pkgName = 'Cloud Broker';
+        let view = null;
+        data.nodes[mname] = {id:mname, name:mname, group: mname, level:pkgName, view:mname +'3D'};
+        
+            data.nodes["ResourceInstanceType"] = {id:"ResourceInstanceType", name:"ResourceInstanceType", group: 'ResourceInstanceType', level: 'Cloud Broker', view: 'ResourceInstanceType3D'};
+            
+                data.links.push({source: mname, target:"ResourceInstanceType", value: 20, distance:20} );
+            
+        let dname;
+        let dview = null;
+        let dpkg;
+        
+            dview = null;
+            dname = 'CloudType';
+            dview = 'CloudType3D';
+            dpkg = 'Cloud Broker';
+            data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg, view:dview};
+            data.links.push({source:dname, target:mname, value: 20, distance: 20} );
+        
+            dview = null;
+            dname = 'CloudType';
+            dview = 'CloudType3D';
+            dpkg = 'Cloud Broker';
+            data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg, view:dview};
+            data.links.push({source:dname, target:mname, value: 20, distance: 20} );
+        
+        let graph = new Graph3D("DrawingArea3D", data, {width:1000, height:300, background:"#444488", linkColor:"#ffffff"});
+    </script>
+</div>
+
+
+<h2>Attributes</h2>
+<ul>
+
+<li>name:string - Name of the resource reference</li>
+
+</ul>
+
+<h2>Associations</h2>
+<table class="AssociationTable DocTable">
+    <tr>
+        <th>Name</th>
+        <th>Cardinality</th>
+        <th>Class</th>
+        <th>Composition</th>
+        <th>Owner</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>value</td>
+        <td>1</td>
+        <td><a href="doc/model/ResourceInstanceType">ResourceInstanceType</a></td>
+        <td>false</td>
+        <td>false</td>
+        <td></td>
+    </tr>
+
+</table>
+
+<h2>Users of the Model</h2>
+<table class="AssociationTable DocTable">
+    <tr>
+        <th>Name</th>
+        <th>Cardinality</th>
+        <th>Class</th>
+        <th>Composition</th>
+        <th>Owner</th>
+        <th>Description</th>
+    </tr>
+    
+    <tr>
+        <td>assetmap</td>
+        <td>n</td>
+        <td><a href="doc/model/CloudType">CloudType</a></td>
+        <td>true</td>
+        <td>true</td>
+        <td>This map allows mapping normalized resource types to specific cloud resource types for this cloud type</td>
+    </tr>
+    
+    <tr>
+        <td>metricmap</td>
+        <td>n</td>
+        <td><a href="doc/model/CloudType">CloudType</a></td>
+        <td>true</td>
+        <td>true</td>
+        <td>This maps metrics from the cloud to the normalized metrics</td>
+    </tr>
+    
+</table>
+
+
+</table>
+
+<h2>Methods</h2>
+<ul>
+
+</ul>
+<h2>Method Details</h2>
+    
+

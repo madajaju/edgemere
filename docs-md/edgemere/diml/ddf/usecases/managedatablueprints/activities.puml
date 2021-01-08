@@ -1,0 +1,16 @@
+@startuml
+
+
+usecase "Manage Data Blue Prints" as ManageDataBluePrints
+
+Actor "DataEngineer" as DataEngineer
+
+DataEngineer --> ManageDataBluePrints
+
+Actor "Data Scientist" as DataScientist
+
+DataScientist --> ManageDataBluePrints
+
+
+
+@enduml

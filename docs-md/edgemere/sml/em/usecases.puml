@@ -1,0 +1,15 @@
+@startuml
+
+left to right direction
+Actor "IT Operations" as ITOperations
+Actor "Stack Developer" as StackDeveloper
+
+
+rectangle "Environment Management" #lightgreen {
+usecase "ManageEnvironment" as ManageEnvironment
+    ITOperations --> ManageEnvironment
+    StackDeveloper --> ManageEnvironment
+    }
+
+
+@enduml

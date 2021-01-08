@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="300px" preserveAspectRatio="none" style="width:563px;height:300px;" version="1.1" viewBox="0 0 563 300" width="563px" zoomAndPan="magnify"><defs><filter height="300%" id="f1b0s6uwen55sl" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><ellipse cx="280.7471" cy="173.0494" fill="#FEFECE" filter="url(#f1b0s6uwen55sl)" rx="88.2471" ry="20.0494" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="146" x="207.7471" y="178.3541">Manage Data Adaptors</text><!--entity DataEngineer--><ellipse cx="219.5" cy="18" fill="#FEFECE" filter="url(#f1b0s6uwen55sl)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M219.5,26 L219.5,53 M206.5,34 L232.5,34 M219.5,53 L206.5,68 M219.5,53 L232.5,68 " fill="none" filter="url(#f1b0s6uwen55sl)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="176" y="89.5332">DataEngineer</text><!--entity DataScientist--><ellipse cx="341.5" cy="18" fill="#FEFECE" filter="url(#f1b0s6uwen55sl)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M341.5,26 L341.5,53 M328.5,34 L354.5,34 M341.5,53 L328.5,68 M341.5,53 L354.5,68 " fill="none" filter="url(#f1b0s6uwen55sl)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="298" y="89.5332">Data Scientist</text><ellipse cx="86.2678" cy="271.4536" fill="#D3D3D3" filter="url(#f1b0s6uwen55sl)" rx="80.2678" ry="18.4536" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="127" x="22.7678" y="276.7582">AttachDataBluePrint</text><ellipse cx="280.6328" cy="271.6266" fill="#D3D3D3" filter="url(#f1b0s6uwen55sl)" rx="78.6328" ry="18.1266" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="123" x="219.1328" y="276.9312">CreateDataAdaptor</text><ellipse cx="473.4481" cy="271.2896" fill="#D3D3D3" filter="url(#f1b0s6uwen55sl)" rx="79.4481" ry="18.2896" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="125" x="410.9481" y="276.5943">UpdateDataAdaptor</text><!--link DataEngineer to ManageDataAdaptors--><path d="M240.664,93.307 C249.957,111.664 260.529,132.55 268.446,148.189 " fill="none" id="DataEngineer-ManageDataAdaptors" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="270.814,152.866,270.3178,143.0297,268.5557,148.4051,263.1803,146.643,270.814,152.866" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataScientist to ManageDataAdaptors--><path d="M320.336,93.307 C311.043,111.664 300.471,132.55 292.554,148.189 " fill="none" id="DataScientist-ManageDataAdaptors" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="290.186,152.866,297.8197,146.643,292.4443,148.4051,290.6822,143.0297,290.186,152.866" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageDataAdaptors to AttachDataBluePrint--><path d="M245.368,191.4754 C210.884,208.6288 158.494,234.6884 123.41,252.1402 " fill="none" id="ManageDataAdaptors-AttachDataBluePrint" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="118.792,254.4372,128.6316,254.0097,123.2686,252.2101,125.0682,246.8471,118.792,254.4372" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageDataAdaptors to CreateDataAdaptor--><path d="M280.5,193.0653 C280.5,208.857 280.5,231.3297 280.5,248.0011 " fill="none" id="ManageDataAdaptors-CreateDataAdaptor" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="280.5,253.4144,284.5,244.4144,280.5,248.4144,276.5,244.4144,280.5,253.4144" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageDataAdaptors to UpdateDataAdaptor--><path d="M315.451,191.4754 C349.758,208.6288 401.877,234.6884 436.78,252.1402 " fill="none" id="ManageDataAdaptors-UpdateDataAdaptor" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="441.374,254.4372,435.1125,246.835,436.9017,252.2014,431.5353,253.9906,441.374,254.4372" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+
+
+usecase "Manage Data Adaptors" as ManageDataAdaptors
+
+Actor "DataEngineer" as DataEngineer
+
+DataEngineer - -> ManageDataAdaptors
+
+Actor "Data Scientist" as DataScientist
+
+DataScientist - -> ManageDataAdaptors
+
+
+
+usecase "AttachDataBluePrint" as AttachDataBluePrint #lightgrey
+
+ManageDataAdaptors - -> AttachDataBluePrint
+
+usecase "CreateDataAdaptor" as CreateDataAdaptor #lightgrey
+
+ManageDataAdaptors - -> CreateDataAdaptor
+
+usecase "UpdateDataAdaptor" as UpdateDataAdaptor #lightgrey
+
+ManageDataAdaptors - -> UpdateDataAdaptor
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

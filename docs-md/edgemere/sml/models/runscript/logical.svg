@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="312px" preserveAspectRatio="none" style="width:280px;height:312px;" version="1.1" viewBox="0 0 280 312" width="280px" zoomAndPan="magnify"><defs><filter height="300%" id="fohels0d2270o" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--entity ModelName--><rect fill="#ADD8E6" filter="url(#fohels0d2270o)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="94" x="93" y="264"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="74" x="103" y="288.5332">ModelName</text><!--entity ServiceInstance--><rect fill="#90EE90" filter="url(#fohels0d2270o)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="120" x="6" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="100" x="16" y="32.5332">ServiceInstance</text><!--entity StackInstance--><rect fill="#90EE90" filter="url(#fohels0d2270o)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="108" x="161" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="171" y="32.5332">StackInstance</text><!--class Model--><rect fill="#FEFECE" filter="url(#fohels0d2270o)" height="61.8359" id="Model" style="stroke: #A80036; stroke-width: 1.5;" width="86" x="97" y="124"/><ellipse cx="112" cy="140" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M114.7656,135.875 Q114.9219,135.6563 115.1094,135.5469 Q115.2969,135.4375 115.5156,135.4375 Q115.8906,135.4375 116.125,135.7031 Q116.3594,135.9531 116.3594,136.5625 L116.3594,138.0156 Q116.3594,138.625 116.125,138.8906 Q115.8906,139.1563 115.5156,139.1563 Q115.1719,139.1563 114.9688,138.9531 Q114.7656,138.7656 114.6563,138.25 Q114.6094,137.8906 114.4219,137.7031 Q114.0938,137.3281 113.4844,137.1094 Q112.875,136.8906 112.25,136.8906 Q111.4844,136.8906 110.8438,137.2188 Q110.2188,137.5469 109.7188,138.2969 Q109.2344,139.0469 109.2344,140.0781 L109.2344,141.1719 Q109.2344,142.4063 110.125,143.2344 Q111.0156,144.0469 112.6094,144.0469 Q113.5469,144.0469 114.2031,143.7969 Q114.5938,143.6406 115.0156,143.2031 Q115.2813,142.9375 115.4219,142.8594 Q115.5781,142.7813 115.7813,142.7813 Q116.1094,142.7813 116.3594,143.0469 Q116.625,143.2969 116.625,143.6406 Q116.625,143.9844 116.2813,144.3906 Q115.7813,144.9688 114.9844,145.2969 Q113.9063,145.75 112.6094,145.75 Q111.0938,145.75 109.8906,145.125 Q108.9063,144.625 108.2188,143.5625 Q107.5313,142.4844 107.5313,141.2031 L107.5313,140.0469 Q107.5313,138.7188 108.1406,137.5781 Q108.7656,136.4219 109.8594,135.8125 Q110.9531,135.1875 112.1875,135.1875 Q112.9219,135.1875 113.5625,135.3594 Q114.2188,135.5156 114.7656,135.875 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="54" x="126" y="144.9102">RunScript</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="98" x2="182" y1="156" y2="156"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="52" x="103" y="171.4189">string attr1</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="98" x2="182" y1="177.8359" y2="177.8359"/><!--link Model to ModelName--><path d="M140,199.325 C140,216.1922 140,235.1503 140,250.6534 " fill="none" id="Model-ModelName" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="140,263.7606,144,254.7606,140,258.7606,136,254.7606,140,263.7606" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="140" x2="140" y1="258.7606" y2="250.7606"/><polygon fill="#FFFFFF" points="140,186.18,136,192.18,140,198.18,144,192.18,140,186.18" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="42" x="141" y="230.4951">assoc1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="131.9281" y="253.0273">1</text><!--link ServiceInstance to Model--><path d="M83.1869,57.264 C92.8126,73.654 104.9758,94.364 115.576,112.413 " fill="none" id="ServiceInstance-Model" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="122.274,123.817,121.1649,114.0308,119.7417,119.5057,114.2668,118.0825,122.274,123.817" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="119.7417" x2="115.6905" y1="119.5057" y2="112.6075"/><polygon fill="#A80036" points="76.6024,46.053,76.1922,53.2524,82.68,56.4001,83.0902,49.2007,76.6024,46.053" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="59" x="104" y="90.4951">runScripts</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="110.8961" y="113.2838">n</text><!--link StackInstance to Model--><path d="M197.581,57.264 C187.825,73.654 175.498,94.364 164.754,112.413 " fill="none" id="StackInstance-Model" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="157.966,123.817,166.0067,118.1295,160.5235,119.5206,159.1324,114.0375,157.966,123.817" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="160.5235" x2="164.615" y1="119.5206" y2="112.6465"/><polygon fill="#A80036" points="204.254,46.053,197.7479,49.1627,198.116,56.3644,204.6221,53.2547,204.254,46.053" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="59" x="187" y="90.4951">runScripts</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="153.9496" y="113.2838">n</text><!--
+@startuml
+
+class "RunScript" as Model {
+ string attr1
+
+ 
+}
+
+rectangle "ModelName" as ModelName #lightblue {
+}
+
+Model o- -> "1" ModelName : assoc1
+
+
+
+
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *- -> "n" Model : "runScripts"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   *- -> "n" Model : "runScripts"
+    
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,13 @@
+@startuml
+
+left to right direction
+Actor "Actor" as Actor
+
+
+rectangle "Service Repository" #lightgreen {
+usecase "ManageAssets" as ManageAssets
+    Actor --> ManageAssets
+    }
+
+
+@enduml

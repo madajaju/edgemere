@@ -1,0 +1,200 @@
+<head>
+    <base href="http://localhost/web/" >
+
+    <link rel="stylesheet/less" type="text/css" href="styles/importer.less" />
+    <script src="js/less.js" type="text/javascript"></script>
+    <script src="js/aframe.js"></script>
+</head>
+
+<h1>RunScript</h1>
+Description long description
+
+<img src='./Logical.puml' > </img>
+
+<div class="modelGraph">
+    <svg width="960" height="300" id="DrawingArea2D"></svg>
+    <script src="js/d3.js"></script>
+    <script src="js/Graph2D.js"></script>
+    <script type="module">
+        let data = {nodes:{}, links:[]};
+        let mname = 'RunScript';
+        let pkgName = 'Service Management Layer';
+        let view = null;
+        
+        view = '<g transform="rotate(45)" ><rect x="-2.5" y="-10" width="5" height="20" style="fill:#aaffaa;stroke:#000000;stroke-width:1;" /><rect x="-10" y="-2.5" width="20" height="5" style="fill:#aaffaa;stroke:#000000;stroke-width:1;" /></g><rect x="-2.5" y="-10" width="5" height="20" width="20" height="5" style="fill:#aaffaa;stroke:#000000;stroke-width:1;" /><rect x="-10" y="-2.5" width="20" height="5" style="fill:#aaffaa;stroke:#000000;stroke-width:1;" /><circle cx="0" cy="0" r="7" style="fill:#aaffaa;stroke:#000000;stroke-width:1;" />';
+        
+
+        data.nodes[mname] = {id:mname, name:mname, group: mname, level:pkgName, view:view};
+        
+            data.nodes["ModelName"] = {id:"ModelName", name:"ModelName", group: 'ModelName', level: 'Service Management Layer', view: ''};
+            
+                data.links.push({source: mname, target:"ModelName", value: 1, distance: 9} );
+            
+        let dname;
+        let dview = null;
+        let dpkg;
+        
+            dview = null;
+            dname = 'ServiceInstance';
+        
+                dview = '<circle cx="-8" cy="8" r="6" style="fill:#cccccc;stroke:#888888;stroke-width:1" /><polygon points="-10,10 10,10 5,-10 -5,-10 -10,10" style="fill:#aaffaa;stroke:#000000;stroke-width:1" />';
+           
+            dpkg = 'Service Orchestrator';
+            if(dview) {
+                data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg, view:dview};
+            } else {
+                data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg};
+            }
+            data.links.push({source:dname, target:mname, value: 1, distance: 10} );
+        
+            dview = null;
+            dname = 'StackInstance';
+        
+                dview = '<polygon points="-7,7 7,7 3.5,-7 -3.5,-7 -7,7" style="fill:#aaffaa;stroke:#000000;stroke-width:1" /> <polygon points="-14,21 0,21 -3.5,7 -10.5,7 -14,21" style="fill:#aaffaa;stroke:#000000;stroke-width:1" /><polygon points="0,21 14,21 10.5,7 3.5,7 0,21" style="fill:#aaffaa;stroke:#000000;stroke-width:1" /><circle cx="0" cy="5" r="7" style="fill:#cccccc;stroke:#888888;stroke-width:1" />';
+           
+            dpkg = 'Service Orchestrator';
+            if(dview) {
+                data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg, view:dview};
+            } else {
+                data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg};
+            }
+            data.links.push({source:dname, target:mname, value: 1, distance: 10} );
+        
+
+        let graph = new Graph2D("DrawingArea2D", data);
+    </script>
+</div>
+
+<head>
+    <script src="js/three.js"></script>
+    <script src="js/3d-force-graph.js"></script>
+    <script src="js/d3-force-3d.js"></script>
+    <script src="js/d3-octree.js"></script>
+    <script src="js/Graph3D.js"></script>
+</head>
+<div style="display:none;">
+<div id="scratchspace" style="display:none;">
+    <a-scene embedded height="0px" width="0px">
+        <a-entity position="-10 20 -100">
+            <a-sphere id="default3D" position="0 0 0" radius="10" color="#cccccc"></a-sphere>
+            <a-sphere id="default3DSelected" position="0 0 0" radius="10" color="#ffff00"></a-sphere>
+            <a-sphere id="default3DTargeted" position="0 0 0" radius="10" color="#ff0000"></a-sphere>
+            <a-sphere id="default3DSourced" position="0 0 0" radius="10" color="#00ff00"></a-sphere>
+    
+        <a-entity id="RunScript3D"><a-cylinder radius="8" height="5"  material='color:#aaffaa; transparent:true, opacity:0.90;' ></a-cylinder><a-box width="20" height="5" depth="5" material='color:#aaffaa; transparent:true, opacity:0.90;' ></a-box-knot><a-box width="20" height="5" depth="5" rotation="0 45 0" material='color:#aaffaa; transparent:true, opacity:0.90;' ></a-box><a-box width="20" height="5" depth="5" rotation="0 90 0" material='color:#aaffaa; transparent:true, opacity:0.90;' ></a-box><a-box width="20" height="5" depth="5" rotation="0 135 0" material='color:#aaffaa; transparent:true, opacity:0.90;' ></a-box></a-entity><a-entity id="RunScript3DSelected"><a-cylinder radius="8" height="5"  material='color:#ffff00; transparent:true, opacity:0.90;' ></a-cylinder><a-box width="20" height="5" depth="5" material='color:#ffff00; transparent:true, opacity:0.90;' ></a-box-knot><a-box width="20" height="5" depth="5" rotation="0 45 0" material='color:#ffff00; transparent:true, opacity:0.90;' ></a-box><a-box width="20" height="5" depth="5" rotation="0 90 0" material='color:#ffff00; transparent:true, opacity:0.90;' ></a-box><a-box width="20" height="5" depth="5" rotation="0 135 0" material='color:#ffff00; transparent:true, opacity:0.90;' ></a-box></a-entity><a-entity id="RunScript3DTargeted"><a-cylinder radius="8" height="5"  material='color:#00ff00; transparent:true, opacity:0.90;' ></a-cylinder><a-box width="20" height="5" depth="5" material='color:#00ff00; transparent:true, opacity:0.90;' ></a-box-knot><a-box width="20" height="5" depth="5" rotation="0 45 0" material='color:#00ff00; transparent:true, opacity:0.90;' ></a-box><a-box width="20" height="5" depth="5" rotation="0 90 0" material='color:#00ff00; transparent:true, opacity:0.90;' ></a-box><a-box width="20" height="5" depth="5" rotation="0 135 0" material='color:#00ff00; transparent:true, opacity:0.90;' ></a-box></a-entity><a-entity id="RunScript3DSourced"><a-cylinder radius="8" height="5"  material='color:#ff0000; transparent:true, opacity:0.90;' ></a-cylinder><a-box width="20" height="5" depth="5" material='color:#ff0000; transparent:true, opacity:0.90;' ></a-box-knot><a-box width="20" height="5" depth="5" rotation="0 45 0" material='color:#ff0000; transparent:true, opacity:0.90;' ></a-box><a-box width="20" height="5" depth="5" rotation="0 90 0" material='color:#ff0000; transparent:true, opacity:0.90;' ></a-box><a-box width="20" height="5" depth="5" rotation="0 135 0" material='color:#ff0000; transparent:true, opacity:0.90;' ></a-box></a-entity>
+    
+            <a-entity id="ServiceInstance3D"><a-cone radius-bottom="10" radius-top="5" height="20" radialSegments="10" position="0 0 0" material="color:#aaffaa; transparent:true, opacity:0.90;" ></a-cone><a-sphere radius="6" position="-6 -6 -6" material="color:#ffffff; transparent:true; opacity:0.60"></a-sphere></a-entity><a-entity id="ServiceInstance3DSelected"><a-cone radius-bottom="10" radius-top="5" height="20" radialSegments="10" position="0 0 0" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-cone><a-sphere radius="6" position="-6 -6 -6" material="color:#ffffff; transparent:true; opacity:0.60"></a-sphere></a-entity><a-entity id="ServiceInstance3DTargeted"><a-cone radius-bottom="10" radius-top="5" height="20" radialSegments="10" position="0 0 0" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-cone><a-sphere radius="6" position="-6 -6 -6" material="color:#ffffff; transparent:true; opacity:0.60"></a-sphere></a-entity><a-entity id="ServiceInstance3DSourced"><a-cone radius-bottom="10" radius-top="5" height="20" radialSegments="10" position="0 0 0" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-cone><a-sphere radius="6" position="-6 -6 -6" material="color:#ffffff; transparent:true; opacity:0.60"></a-sphere></a-entity>
+            
+        
+            <a-entity id="StackInstance3D"><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="0 0 0" material="color:#aaffaa; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="-8 -14 2" material="color:#aaffaa; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="8 -14 2" material="color:#aaffaa; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="0 -14 -10" material="color:#aaffaa; transparent:true, opacity:0.90;" ></a-cone><a-sphere radius="8" position="0 -7 0" material="color:#ffffff; transparent:false; opacity:0.90"></a-sphere></a-entity><a-entity id="StackInstance3DSelected"><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="0 0 0" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="-8 -14 2" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="8 -14 2" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="0 -14 -10" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-cone><a-sphere radius="8" position="0 -7 0" material="color:#ffffff; transparent:false; opacity:0.90"></a-sphere></a-entity><a-entity id="StackInstance3DTargeted"><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="0 0 0" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="-8 -14 2" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="8 -14 2" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="0 -14 -10" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-cone><a-sphere radius="8" position="0 -7 0" material="color:#ffffff; transparent:false; opacity:0.90"></a-sphere></a-entity><a-entity id="StackInstance3DSourced"><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="0 0 0" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="-8 -14 2" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="8 -14 2" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="0 -14 -10" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-cone><a-sphere radius="8" position="0 -7 0" material="color:#ffffff; transparent:false; opacity:0.90"></a-sphere></a-entity>
+            
+        
+        </a-entity>
+    </a-scene>
+</div>
+</div>
+<div class="modelGraph" id="DrawingArea3D">
+    <script type="module">
+        let data = {nodes:{}, links:[]};
+        let mname = 'RunScript';
+        let pkgName = 'Service Management Layer';
+        let view = null;
+        data.nodes[mname] = {id:mname, name:mname, group: mname, level:pkgName, view:mname +'3D'};
+        
+            data.nodes["ModelName"] = {id:"ModelName", name:"ModelName", group: 'ModelName', level: 'Service Management Layer', view: 'default3D'};
+            
+                data.links.push({source: mname, target:"ModelName", value: 20, distance:20} );
+            
+        let dname;
+        let dview = null;
+        let dpkg;
+        
+            dview = null;
+            dname = 'ServiceInstance';
+            dview = 'ServiceInstance3D';
+            dpkg = 'Service Orchestrator';
+            data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg, view:dview};
+            data.links.push({source:dname, target:mname, value: 20, distance: 20} );
+        
+            dview = null;
+            dname = 'StackInstance';
+            dview = 'StackInstance3D';
+            dpkg = 'Service Orchestrator';
+            data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg, view:dview};
+            data.links.push({source:dname, target:mname, value: 20, distance: 20} );
+        
+        let graph = new Graph3D("DrawingArea3D", data, {width:1000, height:300, background:"#444488", linkColor:"#ffffff"});
+    </script>
+</div>
+
+
+<h2>Attributes</h2>
+<ul>
+
+<li>attr1:string - description long description</li>
+
+</ul>
+
+<h2>Associations</h2>
+<table class="AssociationTable DocTable">
+    <tr>
+        <th>Name</th>
+        <th>Cardinality</th>
+        <th>Class</th>
+        <th>Composition</th>
+        <th>Owner</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>assoc1</td>
+        <td>1</td>
+        <td><a href="doc/model/ModelName">ModelName</a></td>
+        <td>false</td>
+        <td>false</td>
+        <td></td>
+    </tr>
+
+</table>
+
+<h2>Users of the Model</h2>
+<table class="AssociationTable DocTable">
+    <tr>
+        <th>Name</th>
+        <th>Cardinality</th>
+        <th>Class</th>
+        <th>Composition</th>
+        <th>Owner</th>
+        <th>Description</th>
+    </tr>
+    
+    <tr>
+        <td>runScripts</td>
+        <td>n</td>
+        <td><a href="doc/model/ServiceInstance">ServiceInstance</a></td>
+        <td>true</td>
+        <td>true</td>
+        <td>Scripts to run for the different actions performed in the service</td>
+    </tr>
+    
+    <tr>
+        <td>runScripts</td>
+        <td>n</td>
+        <td><a href="doc/model/StackInstance">StackInstance</a></td>
+        <td>true</td>
+        <td>true</td>
+        <td>Scripts to run for the different actions performed in the service</td>
+    </tr>
+    
+</table>
+
+
+</table>
+
+<h2>Methods</h2>
+<ul>
+
+</ul>
+<h2>Method Details</h2>
+    
+

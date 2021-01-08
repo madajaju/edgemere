@@ -1,0 +1,12 @@
+@startuml
+
+
+usecase "Manage Data Policies" as ManageDataPolicies
+
+Actor "Chief Data Officer" as ChiefDataOfficer
+
+ChiefDataOfficer --> ManageDataPolicies
+
+
+
+@enduml

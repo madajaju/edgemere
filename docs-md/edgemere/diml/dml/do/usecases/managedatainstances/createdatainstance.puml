@@ -1,0 +1,20 @@
+@startuml
+
+actor "Application Developer"
+
+
+entity EventBus
+
+box Data Orchestrator #lightblue
+    boundary do #white
+end box
+
+
+
+"Application Developer" -> do: Create Data Instance
+
+
+
+
+EventBus --/ do : method2()
+@enduml

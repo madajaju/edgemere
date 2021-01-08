@@ -1,0 +1,32 @@
+@startuml
+left to right direction
+
+
+state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "fmdm" as dimldmlfmdm #lightblue {
+}
+}
+}
+
+
+state dimldmlfmdm #lightblue {
+    state "Custom Function" as fmdmfunction {
+    }
+}
+
+        state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "fmdm" as dimldmlfmdm #lightblue {
+state "query" as dimldmlfmdmquery #lightblue {
+}
+}
+}
+}
+
+
+
+
+
+
+@enduml

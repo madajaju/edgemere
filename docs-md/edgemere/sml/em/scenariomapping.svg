@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="835px" preserveAspectRatio="none" style="width:610px;height:835px;" version="1.1" viewBox="0 0 610 835" width="610px" zoomAndPan="magnify"><defs><filter height="300%" id="f1jgn7amcgrnj6" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster ITOperations--><rect fill="#FEFECE" filter="url(#f1jgn7amcgrnj6)" height="646" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="333" x="22" y="52"/><rect fill="#FFFFFF" height="612.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="327" x="25" y="82.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="22" x2="355" y1="79.6094" y2="79.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="86" x="145.5" y="70.5332">IT Operations</text><!--cluster ITOperationsManageEnvironment--><rect fill="#FEFECE" filter="url(#f1jgn7amcgrnj6)" height="562" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="269" x="54" y="104"/><rect fill="#FFFFFF" height="528.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="263" x="57" y="134.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="54" x2="323" y1="131.6094" y2="131.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="134" x="121.5" y="122.5332">Manage Environment</text><!--cluster sml--><rect fill="#90EE90" filter="url(#f1jgn7amcgrnj6)" height="748" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="219" x="379" y="24"/><rect fill="#FFFFFF" height="714.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="213" x="382" y="54.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="379" x2="598" y1="51.6094" y2="51.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="21" x="478" y="42.5332">sml</text><!--cluster smlem--><rect fill="#90EE90" filter="url(#f1jgn7amcgrnj6)" height="680" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="171" x="403" y="68"/><rect fill="#FFFFFF" height="646.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="165" x="406" y="98.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="403" x2="574" y1="95.6094" y2="95.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="19" x="479" y="86.5332">em</text><!--cluster smlemenvironment--><rect fill="#90EE90" filter="url(#f1jgn7amcgrnj6)" height="612" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="123" x="427" y="112"/><rect fill="#FFFFFF" height="578.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="117" x="430" y="142.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="427" x2="550" y1="139.6094" y2="139.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="78" x="449.5" y="130.5332">environment</text><!--cluster StackDeveloper--><rect fill="#FEFECE" filter="url(#f1jgn7amcgrnj6)" height="102" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="186" x="95.5" y="722"/><rect fill="#FFFFFF" height="68.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="180" x="98.5" y="752.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="95.5" x2="281.5" y1="749.6094" y2="749.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="104" x="136.5" y="740.5332">Stack Developer</text><rect fill="#FEFECE" filter="url(#f1jgn7amcgrnj6)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="146" x="115.5" y="148"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="115.5" x2="261.5" y1="175.6094" y2="175.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="126" x="125.5" y="167.5332">Create Environment</text><rect fill="#FEFECE" filter="url(#f1jgn7amcgrnj6)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="144" x="116.5" y="233"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="116.5" x2="260.5" y1="260.6094" y2="260.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="124" x="126.5" y="252.5332">Delete Environment</text><rect fill="#FEFECE" filter="url(#f1jgn7amcgrnj6)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="150" x="113.5" y="318"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="113.5" x2="263.5" y1="345.6094" y2="345.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="130" x="123.5" y="337.5332">Disable Environment</text><rect fill="#FEFECE" filter="url(#f1jgn7amcgrnj6)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="147" x="115" y="403"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="115" x2="262" y1="430.6094" y2="430.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="127" x="125" y="422.5332">Enable Environment</text><rect fill="#FEFECE" filter="url(#f1jgn7amcgrnj6)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="221" x="78" y="488"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="78" x2="299" y1="515.6094" y2="515.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="201" x="88" y="507.5332">Manage Policies in Environment</text><rect fill="#FEFECE" filter="url(#f1jgn7amcgrnj6)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="148" x="114.5" y="573"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="114.5" x2="262.5" y1="600.6094" y2="600.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="128" x="124.5" y="592.5332">Update Environment</text><rect fill="#90EE90" filter="url(#f1jgn7amcgrnj6)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="50" x="463.5" y="658"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="463.5" x2="513.5" y1="685.6094" y2="685.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="17" x="480" y="677.5332">list</text><rect fill="#90EE90" filter="url(#f1jgn7amcgrnj6)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="60" x="458.5" y="148"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="458.5" x2="518.5" y1="175.6094" y2="175.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="40" x="468.5" y="167.5332">create</text><rect fill="#90EE90" filter="url(#f1jgn7amcgrnj6)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="67" x="455" y="233"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="455" x2="522" y1="260.6094" y2="260.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="47" x="465" y="252.5332">destroy</text><rect fill="#90EE90" filter="url(#f1jgn7amcgrnj6)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="65" x="456" y="318"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="456" x2="521" y1="345.6094" y2="345.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="45" x="466" y="337.5332">disable</text><rect fill="#90EE90" filter="url(#f1jgn7amcgrnj6)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="63" x="457" y="403"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="457" x2="520" y1="430.6094" y2="430.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="43" x="467" y="422.5332">enable</text><rect fill="#90EE90" filter="url(#f1jgn7amcgrnj6)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="91" x="443" y="488"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="443" x2="534" y1="515.6094" y2="515.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="71" x="453" y="507.5332">addpolicies</text><rect fill="#90EE90" filter="url(#f1jgn7amcgrnj6)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="64" x="456.5" y="573"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="456.5" x2="520.5" y1="600.6094" y2="600.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="44" x="466.5" y="592.5332">update</text><rect fill="#FEFECE" filter="url(#f1jgn7amcgrnj6)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="154" x="111.5" y="758"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="111.5" x2="265.5" y1="785.6094" y2="785.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="134" x="121.5" y="777.5332">Manage Environment</text><!--link ITOperationsManageEnvironment to smlemenvironmentlist--><path d="M285.487,666.0526 C285.9246,666.0893 286.3629,666.1261 286.8019,666.1629 C290.3139,666.4575 293.8696,666.7558 297.4599,667.057 C354.9035,671.876 421.1735,677.4355 458.324,680.552 " fill="none" id="ITOperationsManageEnvironment-smlemenvironmentlist" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="463.468,680.984,454.8344,676.2447,458.4855,680.5655,454.1648,684.2166,463.468,680.984" style="stroke: #A80036; stroke-width: 1.0;"/><!--link StackDeveloperManageEnvironment to smlemenvironmentlist--><path d="M264.313,757.8949 C327.231,736.781 413.844,707.717 458.41,692.762 " fill="none" id="StackDeveloperManageEnvironment-smlemenvironmentlist" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="463.371,691.097,453.5659,690.1696,458.631,692.6884,456.1122,697.7535,463.371,691.097" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageEnvironmentCreateEnvironment to smlemenvironmentcreate--><path d="M261.637,173 C322.343,173 406.488,173 453.044,173 " fill="none" id="ITOperationsManageEnvironmentCreateEnvironment-smlemenvironmentcreate" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="458.256,173,449.256,169,453.256,173,449.256,177,458.256,173" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageEnvironmentDeleteEnvironment to smlemenvironmentdestroy--><path d="M260.878,258 C320.189,258 402.265,258 449.631,258 " fill="none" id="ITOperationsManageEnvironmentDeleteEnvironment-smlemenvironmentdestroy" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="454.668,258,445.668,254,449.668,258,445.668,262,454.668,258" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageEnvironmentDisableEnvironment to smlemenvironmentdisable--><path d="M263.546,343 C322.966,343 403.892,343 450.43,343 " fill="none" id="ITOperationsManageEnvironmentDisableEnvironment-smlemenvironmentdisable" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="455.654,343,446.654,339,450.654,343,446.654,347,455.654,343" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageEnvironmentEnableEnvironment to smlemenvironmentenable--><path d="M262.018,428 C322.07,428 404.862,428 451.599,428 " fill="none" id="ITOperationsManageEnvironmentEnableEnvironment-smlemenvironmentenable" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="456.839,428,447.839,424,451.839,428,447.839,432,456.839,428" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageEnvironmentManagePoliciesinEnvironment to smlemenvironmentaddpolicies--><path d="M299.195,513 C346.648,513 399.829,513 437.54,513 " fill="none" id="ITOperationsManageEnvironmentManagePoliciesinEnvironment-smlemenvironmentaddpolicies" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="442.99,513,433.99,509,437.99,513,433.99,517,442.99,513" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageEnvironmentUpdateEnvironment to smlemenvironmentupdate--><path d="M262.781,598 C322.519,598 404.373,598 451.014,598 " fill="none" id="ITOperationsManageEnvironmentUpdateEnvironment-smlemenvironmentupdate" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="456.247,598,447.247,594,451.247,598,447.247,602,456.247,598" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+left to right direction
+
+
+
+state "IT Operations" as ITOperations {
+    state "Manage Environment" as ITOperationsManageEnvironment {
+    }
+}
+state "sml" as sml #lightgreen {
+state "em" as smlem #lightgreen {
+state "environment" as smlemenvironment #lightgreen {
+state "list" as smlemenvironmentlist #lightgreen {
+}
+}
+}
+}
+
+ITOperationsManageEnvironment - -> smlemenvironmentlist
+
+state "Stack Developer" as StackDeveloper {
+    state "Manage Environment" as StackDeveloperManageEnvironment {
+    }
+}
+state "sml" as sml #lightgreen {
+state "em" as smlem #lightgreen {
+state "environment" as smlemenvironment #lightgreen {
+state "list" as smlemenvironmentlist #lightgreen {
+}
+}
+}
+}
+
+StackDeveloperManageEnvironment - -> smlemenvironmentlist
+
+
+    state "IT Operations" as ITOperations {
+        state "Manage Environment" as ITOperationsManageEnvironment {
+            state "Create Environment" as ITOperationsManageEnvironmentCreateEnvironment {
+            }
+        }
+    }
+    state "sml" as sml #lightgreen {
+state "emenvironment" as smlemenvironment #lightgreen {
+state "create" as smlemenvironmentcreate #lightgreen {
+}
+}
+}
+
+    ITOperationsManageEnvironmentCreateEnvironment - -> smlemenvironmentcreate
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Environment" as ITOperationsManageEnvironment {
+            state "Delete Environment" as ITOperationsManageEnvironmentDeleteEnvironment {
+            }
+        }
+    }
+    state "sml" as sml #lightgreen {
+state "emenvironment" as smlemenvironment #lightgreen {
+state "destroy" as smlemenvironmentdestroy #lightgreen {
+}
+}
+}
+
+    ITOperationsManageEnvironmentDeleteEnvironment - -> smlemenvironmentdestroy
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Environment" as ITOperationsManageEnvironment {
+            state "Disable Environment" as ITOperationsManageEnvironmentDisableEnvironment {
+            }
+        }
+    }
+    state "sml" as sml #lightgreen {
+state "emenvironment" as smlemenvironment #lightgreen {
+state "disable" as smlemenvironmentdisable #lightgreen {
+}
+}
+}
+
+    ITOperationsManageEnvironmentDisableEnvironment - -> smlemenvironmentdisable
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Environment" as ITOperationsManageEnvironment {
+            state "Enable Environment" as ITOperationsManageEnvironmentEnableEnvironment {
+            }
+        }
+    }
+    state "sml" as sml #lightgreen {
+state "emenvironment" as smlemenvironment #lightgreen {
+state "enable" as smlemenvironmentenable #lightgreen {
+}
+}
+}
+
+    ITOperationsManageEnvironmentEnableEnvironment - -> smlemenvironmentenable
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Environment" as ITOperationsManageEnvironment {
+            state "Manage Policies in Environment" as ITOperationsManageEnvironmentManagePoliciesinEnvironment {
+            }
+        }
+    }
+    state "sml" as sml #lightgreen {
+state "emenvironment" as smlemenvironment #lightgreen {
+state "addpolicies" as smlemenvironmentaddpolicies #lightgreen {
+}
+}
+}
+
+    ITOperationsManageEnvironmentManagePoliciesinEnvironment - -> smlemenvironmentaddpolicies
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Environment" as ITOperationsManageEnvironment {
+            state "Update Environment" as ITOperationsManageEnvironmentUpdateEnvironment {
+            }
+        }
+    }
+    state "sml" as sml #lightgreen {
+state "emenvironment" as smlemenvironment #lightgreen {
+state "update" as smlemenvironmentupdate #lightgreen {
+}
+}
+}
+
+    ITOperationsManageEnvironmentUpdateEnvironment - -> smlemenvironmentupdate
+    
+ 
+ 
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="365px" preserveAspectRatio="none" style="width:866px;height:365px;" version="1.1" viewBox="0 0 866 365" width="866px" zoomAndPan="magnify"><defs><filter height="300%" id="f10w060h4dep5v" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster cpl_tp--><polygon fill="#D3D3D3" filter="url(#f10w060h4dep5v)" points="22,24,71,24,78,47.6094,844,47.6094,844,204,22,204,22,24" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="22" x2="78" y1="47.6094" y2="47.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="43" x="26" y="40.5332">cpl_tp</text><!--entity parentnet--><path d="M210,97 L266,97 C271,97 271,110.8047 271,110.8047 C271,110.8047 271,124.6094 266,124.6094 L210,124.6094 C205,124.6094 205,110.8047 205,110.8047 C205,110.8047 205,97 210,97 " fill="#000000" filter="url(#f10w060h4dep5v)" style="stroke: #A80036; stroke-width: 1.5;"/><path d="M266,97 C261,97 261,110.8047 261,110.8047 C261,124.6094 266,124.6094 266,124.6094 " fill="none" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="46" x="210" y="116.5332">parent</text><!--entity telemetrynet--><path d="M200,160 L276,160 C281,160 281,173.8047 281,173.8047 C281,173.8047 281,187.6094 276,187.6094 L200,187.6094 C195,187.6094 195,173.8047 195,173.8047 C195,173.8047 195,160 200,160 " fill="#0000FF" filter="url(#f10w060h4dep5v)" style="stroke: #A80036; stroke-width: 1.5;"/><path d="M276,160 C271,160 271,173.8047 271,173.8047 C271,187.6094 276,187.6094 276,187.6094 " fill="none" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="66" x="200" y="179.5332">telemetry</text><!--entity producerService--><polygon fill="#FEFECE" filter="url(#f10w060h4dep5v)" points="38,97,48,87,135,87,135,124.6094,125,134.6094,38,134.6094,38,97" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="125" x2="134" y1="97" y2="88"/><line style="stroke: #000000; stroke-width: 1.5;" x1="38" x2="125" y1="97" y2="97"/><line style="stroke: #000000; stroke-width: 1.5;" x1="125" x2="125" y1="97" y2="134.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="57" x="53" y="121.5332">producer</text><!--entity cpl_tp_producerlatestimage--><rect fill="#FEFECE" filter="url(#f10w060h4dep5v)" height="40.6094" style="stroke: #000000; stroke-width: 1.5;" width="171" x="657" y="60.5"/><polygon fill="#FEFECE" points="811,65.5,811,79.5,823,79.5,823,71.5,817,65.5,811,65.5" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="817" x2="817" y1="65.5" y2="71.5"/><line style="stroke: #000000; stroke-width: 1.5;" x1="823" x2="817" y1="71.5" y2="71.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="141" x="667" y="88.0332">cpl_tp_producer:latest</text><!--entity ailtire_parent_network_family--><path d="M448.5,224 L448.5,248 M448.5,236 L465.5,236 " fill="none" filter="url(#f10w060h4dep5v)" style="stroke: #A80036; stroke-width: 2.0;"/><ellipse cx="477.5" cy="236" fill="#000000" filter="url(#f10w060h4dep5v)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="184" x="377" y="266.5332">ailtire_parent_network_family</text><!--entity edgemere_ailtire_parent_network_family--><path d="M448.5,309 L448.5,333 M448.5,321 L465.5,321 " fill="none" filter="url(#f10w060h4dep5v)" style="stroke: #A80036; stroke-width: 2.0;"/><ellipse cx="477.5" cy="321" fill="#0000FF" filter="url(#f10w060h4dep5v)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="256" x="341" y="351.5332">edgemere_ailtire_parent_network_family</text><!--link parentnet to ailtire_parent_network_family--><path d="M259.609,125.166 C266.594,130.238 274.316,136.152 281,142 C309.859,167.251 308.451,183.728 341,204 C352.013,210.859 364.285,216.68 376.739,221.587 " fill="none" id="parentnet-ailtire_parent_network_family" style="stroke: #000000; stroke-width: 1.0;"/><!--link telemetrynet to edgemere_ailtire_parent_network_family--><path d="M247.928,188.064 C263.806,211.98 299.241,260.6324 341,288 C351.003,294.5557 362.121,300.1735 373.501,304.9655 " fill="none" id="telemetrynet-edgemere_ailtire_parent_network_family" style="stroke: #0000FF; stroke-width: 1.0;"/><!--link producerService to parentnet--><path d="M135.214,111 C157.944,111 184.53,111 204.83,111 " fill="none" id="producerService-parentnet" style="stroke: #000000; stroke-width: 1.0;"/><!--link producerService to telemetrynet--><path d="M135.214,131.107 C157.432,140.47 183.333,151.384 203.446,159.86 " fill="none" id="producerService-telemetrynet" style="stroke: #0000FF; stroke-width: 1.0;"/><!--link producerService to cpl_tp_producerlatestimage--><path d="M135.262,93.555 C153.668,87.692 175.056,81.905 195,79 C356.957,55.406 548.787,64.517 656.696,72.97 " fill="none" id="producerService-cpl_tp_producerlatestimage" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><!--
+@startuml
+
+left to right direction
+
+
+boundary ailtire_parent_network_family #black
+boundary edgemere_ailtire_parent_network_family #blue
+
+
+
+
+
+package "cpl_tp" #lightgray {
+    queue parentnet #black [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#black]- ailtire_parent_network_family
+    
+    queue telemetrynet #blue [
+            <b><color:white>telemetry</color></b>
+    ]
+    
+    telemetrynet -[#blue]- edgemere_ailtire_parent_network_family
+    
+
+node "producer" as producerService
+
+
+        artifact "cpl_tp_producer:latest" as cpl_tp_producerlatestimage
+    
+}
+
+producerService -[#black]- parentnet
+
+producerService -[#blue]- telemetrynet
+producerService .... cpl_tp_producerlatestimage
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

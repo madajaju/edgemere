@@ -1,0 +1,270 @@
+@startuml
+
+
+package "Common Physical Layer" #lightgray {
+    
+        class PhysicalProfile {
+        }
+    
+        class Hardware {
+        }
+    
+        class DataCenter {
+        }
+    
+        class AggregatedDevice {
+        }
+    
+        class Device {
+        }
+    
+        class Metric {
+        }
+    
+        class MetricComposite {
+        }
+    }
+
+package "Software Defined Infrastructure" #lightyellow {
+    
+        class Resource {
+        }
+    }
+
+
+package "Common Physical Layer" #lightgray {
+
+    interface "Common Physical Layer" as i {
+            /edgemere/cpl/adddevices()
+            /edgemere/cpl/provision()
+            /edgemere/cpl/reserve()
+            /edgemere/cpl/data/govern()
+            /edgemere/cpl/data/source()
+            /edgemere/cpl/datacenter/create()
+            /edgemere/cpl/datacenter/disable()
+            /edgemere/cpl/datacenter/enable()
+            /edgemere/cpl/datacenter/list()
+            /edgemere/cpl/datacenter/remove()
+            /edgemere/cpl/datacenter/update()
+            /edgemere/cpl/device/disable()
+            /edgemere/cpl/device/enable()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Common Physical Layer" #lightgray {
+        class "Device" {
+                 string name
+                 string ename
+                 string hostname
+                 string type
+                             addToHardware()
+                     create()
+                     disable()
+                     enable()
+                     getReservations()
+                     provision()
+                     reserve()
+            }
+                Device o--> "1" PhysicalProfile : profile
+                        Device *--> "n" Hardware : hardware
+                        Device o--> "1" DataCenter : datacenter
+                        Device o--> "1" AggregatedDevice : parent
+            
+    
+    class "AggregatedDevice" {
+                 string name
+                 string ename
+                 string hostname
+                 string type
+                             addDevices()
+                     disable()
+                     enable()
+                     reserve()
+                     addToHardware()
+                     create()
+                     getReservations()
+                     provision()
+            }
+                AggregatedDevice *--> "n" Device : devices
+                        AggregatedDevice o--> "1" PhysicalProfile : profile
+                        AggregatedDevice o--> "1" DataCenter : datacenter
+                        AggregatedDevice *--> "n" Hardware : hardware
+                        AggregatedDevice o--> "1" AggregatedDevice : parent
+            
+    
+        Device <|-- AggregatedDevice
+    
+    class "Metric" {
+                 string name
+                 string value
+                             consume()
+                     copy()
+                     factory()
+                     greaterThanEq()
+                     lessThanEq()
+                     minus()
+                     plus()
+                     set()
+            }
+    
+    
+    class "MetricAttribute" {
+                 string name
+                 string value
+                             consume()
+                     copy()
+                     lessThanEq()
+                     minus()
+                     plus()
+                     valueToString()
+                     factory()
+                     greaterThanEq()
+                     set()
+            }
+    
+    
+        Metric <|-- MetricAttribute
+    
+    class "MetricComposite" {
+                 string name
+                 string value
+                             consume()
+                     copy()
+                     create()
+                     findDeep()
+                     findMatchDeep()
+                     lessThanEq()
+                     minus()
+                     plus()
+                     set()
+                     factory()
+                     greaterThanEq()
+            }
+                MetricComposite *--> "n" Metric : values
+            
+    
+        Metric <|-- MetricComposite
+    
+    class "MetricConsumeable" {
+                 string name
+                 string value
+                             create()
+                     valueToString()
+                     consume()
+                     copy()
+                     factory()
+                     greaterThanEq()
+                     lessThanEq()
+                     minus()
+                     plus()
+                     set()
+            }
+    
+    
+        Metric <|-- MetricConsumeable
+    
+    class "PhysicalProfile" {
+                 string name
+                             combine()
+                     consume()
+                     create()
+                     propagate()
+                     satisfies()
+                     stats()
+            }
+                PhysicalProfile *--> "1" MetricComposite : capabilities
+                        PhysicalProfile *--> "1" MetricComposite : available
+                        PhysicalProfile *--> "1" MetricComposite : reserved
+                        PhysicalProfile *--> "1" MetricComposite : metrics
+                        PhysicalProfile o--> "1" PhysicalProfile : parent
+            
+    
+    class "Hardware" {
+                 string name
+                 string ename
+                             addStats()
+                     create()
+                     disable()
+                     enable()
+                     factory()
+            }
+                Hardware o--> "1" PhysicalProfile : profile
+                        Hardware o--> "1" Device : device
+                        Hardware o--> "n" Resource : resources
+            
+    
+    class "ComputeHardware" {
+                 string name
+                 string ename
+                             addStats()
+                     create()
+                     disable()
+                     enable()
+                     factory()
+            }
+                ComputeHardware o--> "1" PhysicalProfile : profile
+                        ComputeHardware o--> "1" Device : device
+                        ComputeHardware o--> "n" Resource : resources
+            
+    
+        Hardware <|-- ComputeHardware
+    
+    class "NetworkHardware" {
+                 string name
+                 string ename
+                             addStats()
+                     create()
+                     disable()
+                     enable()
+                     factory()
+            }
+                NetworkHardware o--> "1" PhysicalProfile : profile
+                        NetworkHardware o--> "1" Device : device
+                        NetworkHardware o--> "n" Resource : resources
+            
+    
+        Hardware <|-- NetworkHardware
+    
+    class "StorageHardware" {
+                 string name
+                 string ename
+                             addStats()
+                     create()
+                     disable()
+                     enable()
+                     factory()
+            }
+                StorageHardware o--> "1" PhysicalProfile : profile
+                        StorageHardware o--> "1" Device : device
+                        StorageHardware o--> "n" Resource : resources
+            
+    
+        Hardware <|-- StorageHardware
+    
+    class "AcceleratorHardware" {
+                 string name
+                 string ename
+                             addStats()
+                     create()
+                     disable()
+                     enable()
+                     factory()
+            }
+                AcceleratorHardware o--> "1" PhysicalProfile : profile
+                        AcceleratorHardware o--> "1" Device : device
+                        AcceleratorHardware o--> "n" Resource : resources
+            
+    
+        Hardware <|-- AcceleratorHardware
+    
+
+}
+
+
+
+@enduml

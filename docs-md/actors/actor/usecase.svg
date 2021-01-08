@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="128px" preserveAspectRatio="none" style="width:263px;height:128px;" version="1.1" viewBox="0 0 263 128" width="263px" zoomAndPan="magnify"><defs><filter height="300%" id="f1o9q70lp9xka1" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster sr--><rect fill="#90EE90" filter="url(#f1o9q70lp9xka1)" height="84" style="stroke: #000000; stroke-width: 1.5;" width="169" x="83" y="24"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="134" x="100.5" y="40.5332">Service Repository</text><ellipse cx="167.5005" cy="76.1001" fill="#FEFECE" filter="url(#f1o9q70lp9xka1)" rx="68.5005" ry="16.1001" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="97" x="119.0005" y="81.4048">Manage Assets</text><!--entity Actor--><ellipse cx="22.5" cy="43.5" fill="#FEFECE" filter="url(#f1o9q70lp9xka1)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M22.5,51.5 L22.5,78.5 M9.5,59.5 L35.5,59.5 M22.5,78.5 L9.5,93.5 M22.5,78.5 L35.5,93.5 " fill="none" filter="url(#f1o9q70lp9xka1)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="33" x="6" y="115.0332">Actor</text><!--link Actor to ManageAssets--><path d="M39.0757,76 C52.4889,76 72.8831,76 93.4486,76 " fill="none" id="Actor-ManageAssets" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="98.6766,76,89.6766,72,93.6766,76,89.6766,80,98.6766,76" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+
+left to right direction
+
+
+Actor "Actor" as Actor
+
+
+rectangle "Service Repository" as sr #lightgreen {
+        usecase "Manage Assets" as ManageAssets
+    Actor - -> ManageAssets
+
+}
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,26 @@
+@startuml
+
+left to right direction
+
+
+Actor "Chief Data Officer" as ChiefDataOfficer
+
+
+rectangle "Data Definition Framework" as ddf #ffcc88 {
+        usecase "Manage Data Procedures" as ManageDataProcedures
+    ChiefDataOfficer --> ManageDataProcedures
+
+}
+
+rectangle "Data Management Layer" as dml #ffcc88 {
+        usecase "Manage Data Governance" as ManageDataGovernance
+    ChiefDataOfficer --> ManageDataGovernance
+    usecase "Manage Data Policies" as ManageDataPolicies
+    ChiefDataOfficer --> ManageDataPolicies
+    usecase "Manage Data Strategy" as ManageDataStrategy
+    ChiefDataOfficer --> ManageDataStrategy
+
+}
+
+
+@enduml

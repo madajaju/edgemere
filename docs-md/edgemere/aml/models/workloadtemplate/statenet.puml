@@ -1,0 +1,13 @@
+@startuml
+
+
+
+state WorkloadTemplate #lightblue {
+
+}
+
+
+
+
+
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+
+class "Agent" as Model {
+ string name
+ string url
+
+ 
+}
+
+
+
+
+@enduml

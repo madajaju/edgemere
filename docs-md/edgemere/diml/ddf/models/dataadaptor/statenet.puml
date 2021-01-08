@@ -1,0 +1,13 @@
+@startuml
+
+
+
+state DataAdaptor #ffcc88 {
+
+}
+
+
+
+
+
+@enduml

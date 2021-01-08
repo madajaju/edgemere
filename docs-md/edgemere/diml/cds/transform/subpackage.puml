@@ -1,0 +1,23 @@
+@startuml
+
+
+
+package "Transform Services" #lightblue {
+
+    interface "Transform Services" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Transform Services" #lightblue {
+
+
+}
+
+
+
+@enduml

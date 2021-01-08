@@ -1,0 +1,12 @@
+@startuml
+
+
+usecase "ManageBilling" as ManageBilling
+
+Actor "IT Operations" as ITOperations
+
+ITOperations --> ManageBilling
+
+
+
+@enduml

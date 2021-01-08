@@ -1,0 +1,97 @@
+@startuml
+left to right direction
+
+
+
+state "DataScientist" as DataScientist {
+    state "Manage Data Instances" as DataScientistManageDataInstances {
+    }
+}
+state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "do" as dimldmldo #lightblue {
+state "datainstance" as dimldmldodatainstance #lightblue {
+state "list" as dimldmldodatainstancelist #lightblue {
+}
+}
+}
+}
+}
+
+DataScientistManageDataInstances --> dimldmldodatainstancelist
+
+state "ApplicationDeveloper" as ApplicationDeveloper {
+    state "Manage Data Instances" as ApplicationDeveloperManageDataInstances {
+    }
+}
+state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "do" as dimldmldo #lightblue {
+state "datainstance" as dimldmldodatainstance #lightblue {
+state "list" as dimldmldodatainstancelist #lightblue {
+}
+}
+}
+}
+}
+
+ApplicationDeveloperManageDataInstances --> dimldmldodatainstancelist
+
+
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Data Instances" as ApplicationDeveloperManageDataInstances {
+            state "Create Data Instance" as ApplicationDeveloperManageDataInstancesCreateDataInstance {
+            }
+        }
+    }
+    state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "dodatainstance" as dimldmldodatainstance #ffcc88 {
+state "create" as dimldmldodatainstancecreate #ffcc88 {
+}
+}
+}
+}
+
+    ApplicationDeveloperManageDataInstancesCreateDataInstance --> dimldmldodatainstancecreate
+    
+ 
+    state "Actor" as Actor {
+        state "Manage Data Instances" as ActorManageDataInstances {
+            state "Find Data Instance" as ActorManageDataInstancesFindDataInstance {
+            }
+        }
+    }
+    state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "dodatainstance" as dimldmldodatainstance #ffcc88 {
+state "find" as dimldmldodatainstancefind #ffcc88 {
+}
+}
+}
+}
+
+    ActorManageDataInstancesFindDataInstance --> dimldmldodatainstancefind
+    
+ 
+    state "Actor" as Actor {
+        state "Manage Data Instances" as ActorManageDataInstances {
+            state "Remove Data Instance" as ActorManageDataInstancesRemoveDataInstance {
+            }
+        }
+    }
+    state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "dodatainstance" as dimldmldodatainstance #ffcc88 {
+state "destroy" as dimldmldodatainstancedestroy #ffcc88 {
+}
+}
+}
+}
+
+    ActorManageDataInstancesRemoveDataInstance --> dimldmldodatainstancedestroy
+    
+ 
+ 
+
+@enduml

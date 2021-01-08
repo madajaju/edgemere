@@ -1,0 +1,28 @@
+@startuml
+
+
+
+state AggregatedDevice #lightgray {
+
+    state Init #lightgray {
+    }
+
+    state Enabled #lightgray {
+    }
+
+    state Disabled #lightgray {
+    }
+
+}
+
+
+Init --> Enabled : create
+
+Enabled --> Disabled : disable
+
+Disabled --> Enabled : enable
+
+
+
+
+@enduml

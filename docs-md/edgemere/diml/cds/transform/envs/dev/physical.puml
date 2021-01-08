@@ -1,0 +1,46 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Transform Services" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " edgemere diml cds transform" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as transform_container
+      REST --> transform_container
+
+  
+    file "node web/server.js" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+    file "node gateway/server.js" as gateway_container
+    REST --> gateway_container
+    socket ---> gateway_container
+  
+  }
+  folder images #ffffff {
+    collections "transform" as transformimage
+    artifact "ailtire:swarm" as ailtireswarm
+    transformimage <|-- ailtireswarm
+    transform_container --> transformimage
+
+  
+      artifact diml_cds_transform_web
+      web_container --> diml_cds_transform_web
+    
+      artifact diml_cds_transform_gw
+      gateway_container --> diml_cds_transform_gw
+    
+  }
+}
+CLI " edgemere diml cds transform" -- binName
+Web "/edgemere/diml/cds/transform" - REST
+WebSocket ".edgemere.diml.cds.transform" -- socket
+
+@enduml

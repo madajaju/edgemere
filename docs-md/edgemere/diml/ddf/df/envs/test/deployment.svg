@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="346px" preserveAspectRatio="none" style="width:917px;height:346px;" version="1.1" viewBox="0 0 917 346" width="917px" zoomAndPan="magnify"><defs><filter height="300%" id="f1uxjyhk93n3he" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster diml_ddf_df--><polygon fill="#ADD8E6" filter="url(#f1uxjyhk93n3he)" points="22,24,110,24,117,47.6094,895,47.6094,895,270,22,270,22,24" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="22" x2="117" y1="47.6094" y2="47.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="82" x="26" y="40.5332">diml_ddf_df</text><!--entity childrennet--><path d="M260,220 L328,220 C333,220 333,233.8047 333,233.8047 C333,233.8047 333,247.6094 328,247.6094 L260,247.6094 C255,247.6094 255,233.8047 255,233.8047 C255,233.8047 255,220 260,220 " fill="#000000" filter="url(#f1uxjyhk93n3he)" style="stroke: #A80036; stroke-width: 1.5;"/><path d="M328,220 C323,220 323,233.8047 323,233.8047 C323,247.6094 328,247.6094 328,247.6094 " fill="none" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="58" x="260" y="239.5332">children</text><!--entity siblingnet--><path d="M265.5,119 L322.5,119 C327.5,119 327.5,132.8047 327.5,132.8047 C327.5,132.8047 327.5,146.6094 322.5,146.6094 L265.5,146.6094 C260.5,146.6094 260.5,132.8047 260.5,132.8047 C260.5,132.8047 260.5,119 265.5,119 " fill="#0000FF" filter="url(#f1uxjyhk93n3he)" style="stroke: #A80036; stroke-width: 1.5;"/><path d="M322.5,119 C317.5,119 317.5,132.8047 317.5,132.8047 C317.5,146.6094 322.5,146.6094 322.5,146.6094 " fill="none" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="47" x="265.5" y="138.5332">sibling</text><!--entity parentnet--><path d="M56.5,226 L112.5,226 C117.5,226 117.5,239.8047 117.5,239.8047 C117.5,239.8047 117.5,253.6094 112.5,253.6094 L56.5,253.6094 C51.5,253.6094 51.5,239.8047 51.5,239.8047 C51.5,239.8047 51.5,226 56.5,226 " fill="#FF0000" filter="url(#f1uxjyhk93n3he)" style="stroke: #A80036; stroke-width: 1.5;"/><path d="M112.5,226 C107.5,226 107.5,239.8047 107.5,239.8047 C107.5,253.6094 112.5,253.6094 112.5,253.6094 " fill="none" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="46" x="56.5" y="245.5332">parent</text><!--entity frontendService--><polygon fill="#FEFECE" filter="url(#f1uxjyhk93n3he)" points="38,70,48,60,131,60,131,97.6094,121,107.6094,38,107.6094,38,70" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="121" x2="130" y1="70" y2="61"/><line style="stroke: #000000; stroke-width: 1.5;" x1="38" x2="121" y1="70" y2="70"/><line style="stroke: #000000; stroke-width: 1.5;" x1="121" x2="121" y1="70" y2="107.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="53" x="53" y="94.5332">frontend</text><!--entity gwService--><polygon fill="#FEFECE" filter="url(#f1uxjyhk93n3he)" points="56,153,66,143,113,143,113,180.6094,103,190.6094,56,190.6094,56,153" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="103" x2="112" y1="153" y2="144"/><line style="stroke: #000000; stroke-width: 1.5;" x1="56" x2="103" y1="153" y2="153"/><line style="stroke: #000000; stroke-width: 1.5;" x1="103" x2="103" y1="153" y2="190.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="17" x="71" y="177.5332">gw</text><!--entity diml_ddf_df_webimage--><rect fill="#FEFECE" filter="url(#f1uxjyhk93n3he)" height="40.6094" style="stroke: #000000; stroke-width: 1.5;" width="136" x="743" y="62.5"/><polygon fill="#FEFECE" points="862,67.5,862,81.5,874,81.5,874,73.5,868,67.5,862,67.5" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="868" x2="868" y1="67.5" y2="73.5"/><line style="stroke: #000000; stroke-width: 1.5;" x1="874" x2="868" y1="73.5" y2="73.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="106" x="753" y="90.0332">diml_ddf_df_web</text><!--entity diml_ddf_df_gwimage--><rect fill="#FEFECE" filter="url(#f1uxjyhk93n3he)" height="40.6094" style="stroke: #000000; stroke-width: 1.5;" width="128" x="747" y="162.5"/><polygon fill="#FEFECE" points="858,167.5,858,181.5,870,181.5,870,173.5,864,167.5,858,167.5" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="864" x2="864" y1="167.5" y2="173.5"/><line style="stroke: #000000; stroke-width: 1.5;" x1="870" x2="864" y1="173.5" y2="173.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="98" x="757" y="190.0332">diml_ddf_df_gw</text><!--entity ailtire_appname_diml_ddf_family--><path d="M273.5,290 L273.5,314 M273.5,302 L290.5,302 " fill="none" filter="url(#f1uxjyhk93n3he)" style="stroke: #A80036; stroke-width: 2.0;"/><ellipse cx="302.5" cy="302" fill="#FF0000" filter="url(#f1uxjyhk93n3he)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="206" x="191" y="332.5332">ailtire_appname_diml_ddf_family</text><!--entity ailtire_appname_diml_ddf_df_family--><ellipse cx="570" cy="302" fill="#000000" filter="url(#f1uxjyhk93n3he)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><line style="stroke: #A80036; stroke-width: 2.0;" x1="558" x2="582" y1="316" y2="316"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="226" x="457" y="332.5332">ailtire_appname_diml_ddf_df_family</text><!--link childrennet to ailtire_appname_diml_ddf_df_family--><path d="M333.099,244.7065 C370.889,255.3266 430.179,271.9882 479.863,285.9504 " fill="none" id="childrennet-ailtire_appname_diml_ddf_df_family" style="stroke: #000000; stroke-width: 1.0;"/><!--link parentnet to ailtire_appname_diml_ddf_family--><path d="M117.922,251.0937 C145.05,260.3761 184.788,273.9733 219.551,285.8681 " fill="none" id="parentnet-ailtire_appname_diml_ddf_family" style="stroke: #FF0000; stroke-width: 1.0;"/><!--link frontendService to siblingnet--><path d="M131.037,94.753 C170.167,103.994 225.631,117.091 260.443,125.312 " fill="none" id="frontendService-siblingnet" style="stroke: #0000FF; stroke-width: 1.0;"/><!--link gwService to childrennet--><path d="M113.054,175.897 C149.434,187.644 213.671,208.385 254.743,221.647 " fill="none" id="gwService-childrennet" style="stroke: #000000; stroke-width: 1.0;"/><!--link gwService to siblingnet--><path d="M113.054,162.485 C151.088,156.253 219.569,145.032 260.195,138.375 " fill="none" id="gwService-siblingnet" style="stroke: #0000FF; stroke-width: 1.0;"/><!--link frontendService to diml_ddf_df_webimage--><path d="M131.095,83.937 C254.798,83.766 597.209,83.294 742.941,83.093 " fill="none" id="frontendService-diml_ddf_df_webimage" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><!--link gwService to diml_ddf_df_gwimage--><path d="M113.017,167.608 C218.086,169.928 595.66,178.266 746.8,181.604 " fill="none" id="gwService-diml_ddf_df_gwimage" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><!--
+@startuml
+
+left to right direction
+
+
+boundary ailtire_appname_diml_ddf_family #red
+
+
+entity ailtire_appname_diml_ddf_df_family #black
+
+
+
+
+package "diml_ddf_df" #lightblue {
+    queue childrennet #black [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#black]- ailtire_appname_diml_ddf_df_family
+    
+    queue siblingnet #blue [
+            <b><color:white>sibling</color></b>
+    ]
+    
+    queue parentnet #red [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#red]- ailtire_appname_diml_ddf_family
+    
+
+node "frontend" as frontendService
+node "gw" as gwService
+
+
+        artifact "diml_ddf_df_web" as diml_ddf_df_webimage
+    
+        artifact "diml_ddf_df_gw" as diml_ddf_df_gwimage
+    
+}
+
+frontendService -[#blue]- siblingnet
+
+gwService -[#black]- childrennet
+
+gwService -[#blue]- siblingnet
+frontendService .... diml_ddf_df_webimage
+gwService .... diml_ddf_df_gwimage
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

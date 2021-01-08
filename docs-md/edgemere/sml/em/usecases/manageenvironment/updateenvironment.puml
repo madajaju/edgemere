@@ -1,0 +1,25 @@
+@startuml
+
+actor "IT Operations"
+
+
+entity EventBus
+
+box Environment Management #lightgreen
+    boundary em #white
+end box
+
+
+
+"IT Operations" -> em: Update Environment
+
+
+
+box "Service Orchestrator" #lightgreen
+    boundary so #white
+end box
+EventBus -\ so: method()
+so --/ EventBus: Model.Event2
+
+EventBus --/ em : method2()
+@enduml

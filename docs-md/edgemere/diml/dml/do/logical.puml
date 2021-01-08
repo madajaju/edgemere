@@ -1,0 +1,81 @@
+@startuml
+
+
+package "Data Management Layer" #ffcc88 {
+    
+        class DataReference {
+        }
+    
+        class Data {
+        }
+    }
+
+package "Data Orchestrator" #lightblue {
+    
+        class DataReservation {
+        }
+    
+        class DataInstance {
+        }
+    
+        class DataRequest {
+        }
+    }
+
+package "Data Definition Framework" #ffcc88 {
+    
+        class DataSource {
+        }
+    }
+
+
+package "Data Orchestrator" #lightblue {
+
+    interface "Data Orchestrator" as i {
+            /edgemere/diml/dml/do/evaluate()
+            /edgemere/diml/dml/do/reserve()
+            /edgemere/diml/dml/do/datainstance/create()
+            /edgemere/diml/dml/do/datainstance/destroy()
+            /edgemere/diml/dml/do/datainstance/find()
+            /edgemere/diml/dml/do/datainstance/list()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Data Orchestrator" #lightblue {
+        class "DataInstance" {
+                 string name
+                    }
+                DataInstance o--> "1" DataReference : reference
+                        DataInstance o--> "n" Data : data
+            
+    
+    class "DataRequest" {
+                 string name
+                 string ename
+                 json query
+                 string message
+                    }
+                DataRequest o--> "1" DataReference : dataReference
+                        DataRequest *--> "n" DataReservation : reservations
+                        DataRequest o--> "n" DataInstance : instances
+            
+    
+    class "DataReservation" {
+                 number cost
+                    }
+                DataReservation o--> "1" Data : data
+                        DataReservation o--> "1" DataSource : source
+                        DataReservation o--> "1" DataRequest : request
+            
+    
+
+}
+
+
+
+@enduml

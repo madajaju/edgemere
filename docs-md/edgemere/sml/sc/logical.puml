@@ -1,0 +1,27 @@
+@startuml
+
+
+package "Provision Engine" #lightgreen {
+    }
+
+
+package "Service Controller" #lightgreen {
+
+    interface "Service Controller" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Service Controller" #lightgreen {
+    
+}
+
+
+    "Service Controller" --> "Provision Engine"
+
+
+@enduml

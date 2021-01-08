@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+
+
+state "sa" as sa #pink {
+state "pe" as sape #pink {
+}
+}
+
+
+state sape #pink {
+    state "Custom Function" as pefunction {
+    }
+}
+
+
+
+
+
+@enduml

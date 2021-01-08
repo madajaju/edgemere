@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="138px" preserveAspectRatio="none" style="width:352px;height:138px;background:#000000;" version="1.1" viewBox="0 0 352 138" width="352px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="234" x="5" y="19.5332">[From deployment.puml (line 23) ]</text><line style="stroke: #33FF02; stroke-width: 1.0;" x1="5" x2="350" y1="27.6094" y2="27.6094"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="160" x="5" y="47.1426">... (skipping 19 lines) ...</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="64.752"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="252" x="5" y="82.3613">entity ailtire_appname_family #black</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="99.9707"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="345" x="5" y="117.5801">stack "edgemere" as edgemereStack #lavender {</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="135.1895"/><text fill="#FF0000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="95" x="9" y="135.1895">Syntax Error?</text><!--
+@startuml
+
+left to right direction
+
+
+queue external #black [
+    <b><color:white>external</color></b>
+]
+    
+interface 80
+80 - - external
+    
+interface 443
+443 - - external
+    
+interface 8080
+8080 - - external
+    
+
+
+entity ailtire_appname_family #black
+
+stack "edgemere" as edgemereStack #lavender {
+    queue edgemereStacksnet #black [
+        <b><color:white>parent</color></b>
+    ]
+}
+
+
+
+package "edgemere" #lavender {
+    queue childrennet #black [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#black]- ailtire_appname_family
+    
+    queue siblingnet #blue [
+            <b><color:white>sibling</color></b>
+    ]
+    
+
+
+node "frontend" as frontendService {
+    card "/web" as webmap
+    card "/docs" as docsmap
+    
+}
+node "admin" as adminService
+node "pubsub" as pubsubService
+node "web" as webService
+node "doc" as docService
+
+        collections "edgemere:latest" as edgemerelatestimage
+    
+        artifact "redis" as redisimage
+    
+        artifact "traefik:latest" as traefiklatestimage
+    
+        artifact "edgemere_web" as edgemere_webimage
+    
+        artifact "edgemere_doc" as edgemere_docimage
+    
+}
+
+external -[#black]- frontendService
+
+webmap -[#black]-> webService
+
+docsmap -[#black]-> docService
+
+adminService -[#black]- childrennet
+
+pubsubService -[#black]- childrennet
+
+pubsubService -[#blue]- siblingnet
+
+webService -[#blue]- siblingnet
+
+webService -[#black]- childrennet
+
+docService -[#blue]- siblingnet
+
+docService -[#black]- childrennet
+adminService .... edgemerelatestimage
+pubsubService .... redisimage
+webService .... edgemere_webimage
+docService .... edgemere_docimage
+
+frontendService .... traefiklatestimage
+
+edgemerelatestimage - -> edgemereStack
+    
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

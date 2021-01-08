@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="196px" preserveAspectRatio="none" style="width:346px;height:196px;" version="1.1" viewBox="0 0 346 196" width="346px" zoomAndPan="magnify"><defs><filter height="300%" id="fr62ckzh8z5b7" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster Common Physical Layer--><rect fill="#D3D3D3" filter="url(#fr62ckzh8z5b7)" height="161" style="stroke: #000000; stroke-width: 1.5;" width="199" x="136" y="24"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="164" x="153.5" y="40.5332">Common Physical Layer</text><ellipse cx="235.5399" cy="78.208" fill="#FEFECE" filter="url(#fr62ckzh8z5b7)" rx="79.0399" ry="18.208" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="124" x="173.5399" y="83.5127">ManageDataCenter</text><ellipse cx="235.5873" cy="150.1175" fill="#FEFECE" filter="url(#fr62ckzh8z5b7)" rx="83.5873" ry="19.1175" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="135" x="168.0873" y="155.4221">ManageInfrastructure</text><!--entity ITOperations--><ellipse cx="49" cy="81.5" fill="#FEFECE" filter="url(#fr62ckzh8z5b7)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M49,89.5 L49,116.5 M36,97.5 L62,97.5 M49,116.5 L36,131.5 M49,116.5 L62,131.5 " fill="none" filter="url(#fr62ckzh8z5b7)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="86" x="6" y="153.0332">IT Operations</text><!--link ITOperations to ManageDataCenter--><path d="M92.328,105.7409 C115.268,101.2648 144.102,95.639 169.796,90.625 " fill="none" id="ITOperations-ManageDataCenter" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="174.891,89.631,165.2917,87.428,169.9835,90.5882,166.8232,95.28,174.891,89.631" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperations to ManageInfrastructure--><path d="M92.328,122.2591 C114.271,126.5406 141.606,131.8743 166.428,136.7176 " fill="none" id="ITOperations-ManageInfrastructure" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="171.356,137.6793,163.2882,132.0304,166.4485,136.7221,161.7567,139.8824,171.356,137.6793" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+
+left to right direction
+Actor "IT Operations" as ITOperations
+Actor "IT Operations" as ITOperations
+
+
+rectangle "Common Physical Layer" #lightgray {
+usecase "ManageDataCenter" as ManageDataCenter
+    ITOperations - -> ManageDataCenter
+    usecase "ManageInfrastructure" as ManageInfrastructure
+    ITOperations - -> ManageInfrastructure
+    }
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

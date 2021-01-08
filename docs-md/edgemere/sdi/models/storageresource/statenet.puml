@@ -1,0 +1,13 @@
+@startuml
+
+
+
+state StorageResource #lightyellow {
+
+}
+
+
+
+
+
+@enduml

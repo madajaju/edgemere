@@ -1,0 +1,36 @@
+@startuml
+
+actor "IT Operations"
+
+
+entity EventBus
+
+box Common Physical Layer #lightgray
+    boundary cpl #white
+end box
+
+
+box Common Physical Layer #lightgray
+            participant device
+    end box
+
+
+"IT Operations" -> cpl: Add Device
+
+    cpl -> "device": create (name: hostad1,file: ./templates/device.yaml)
+
+
+    cpl -> "cpl/device": disable (name: hostad1)
+
+
+    cpl -> "cpl/device": enable (name: hostad1)
+
+
+    cpl -> "cpl/device": disable (name: hostad1)
+
+
+
+
+
+EventBus --/ cpl : method2()
+@enduml

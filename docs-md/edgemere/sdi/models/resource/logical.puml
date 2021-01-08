@@ -1,0 +1,102 @@
+@startuml
+
+class "Resource" as Model {
+ string name
+ string ename
+ boolean disabled
+ string type
+
+ factory()
+ provision()
+ 
+}
+
+rectangle "Request" as Request #lightblue {
+}
+
+Model o--> "1" Request : request
+
+
+rectangle "PhysicalProfile" as PhysicalProfile #lightblue {
+}
+
+Model *--> "1" PhysicalProfile : profile
+
+
+rectangle "Hardware" as Hardware #lightblue {
+}
+
+Model o--> "n" Hardware : hardware
+
+
+rectangle "ServiceInstance" as ServiceInstance #lightblue {
+}
+
+Model o--> "n" ServiceInstance : instances
+
+
+rectangle "Cloud" as Cloud #lightblue {
+}
+
+Model o--> "1" Cloud : cloud
+
+
+
+
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "n" Model : "resources"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "n" Model : "resources"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "n" Model : "resources"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "n" Model : "resources"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "n" Model : "resources"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "n" Model : "resources"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "n" Model : "resources"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "n" Model : "resources"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "n" Model : "resources"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   *--> "n" Model : "resources"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   *--> "n" Model : "resources"
+    
+
+@enduml

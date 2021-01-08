@@ -1,0 +1,36 @@
+@startuml
+
+class "ComputeHardware" as Model {
+ string name
+ string ename
+
+ addStats()
+ create()
+ disable()
+ enable()
+ factory()
+ 
+}
+
+rectangle "PhysicalProfile" as PhysicalProfile #lightblue {
+}
+
+Model o--> "1" PhysicalProfile : profile
+
+
+rectangle "Device" as Device #lightblue {
+}
+
+Model o--> "1" Device : device
+
+
+rectangle "Resource" as Resource #lightblue {
+}
+
+Model o--> "n" Resource : resources
+
+
+
+
+
+@enduml

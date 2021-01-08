@@ -1,0 +1,278 @@
+<head>
+    <base href="http://localhost/web/" >
+
+    <link rel="stylesheet/less" type="text/css" href="styles/importer.less" />
+    <script src="js/less.js" type="text/javascript"></script>
+    <script src="js/aframe.js"></script>
+</head>
+
+<h1>Environment</h1>
+An environment represents a group of clouds, and policies that service are deployed. Examples of environments are development, test, production
+
+<img src='./Logical.puml' > </img>
+
+<div class="modelGraph">
+    <svg width="960" height="300" id="DrawingArea2D"></svg>
+    <script src="js/d3.js"></script>
+    <script src="js/Graph2D.js"></script>
+    <script type="module">
+        let data = {nodes:{}, links:[]};
+        let mname = 'Environment';
+        let pkgName = 'Environment Management';
+        let view = null;
+        
+        view = '<rect x="-15" y="-15" width="30" height="30" style="fill:#aaffaa;stroke:#000000;stroke-width:1;" />';
+        
+
+        data.nodes[mname] = {id:mname, name:mname, group: mname, level:pkgName, view:view};
+        
+            data.nodes["MultiCloud"] = {id:"MultiCloud", name:"MultiCloud", group: 'MultiCloud', level: 'Service Management Layer', view: '<path d="M -3 -4 a 7.5 7.5 1 0 0 0 15 h 21 a 7.5 7.5 1 0 0 0 -15 a 3 3 1 0 0 -4.5 -3 a 6 6 1 0 0 -17.25 3 z M 3 2 a 4.5 4.5 1 0 0 0 9 h 11.25 a 4.5 4.5 1 0 0 0 -9 a 2.25 2.25 1 0 0 -3.375 -2.25 a 4.125 4.125 1 0 0 -8.625 2.25 z" style="fill:#aaffaa;stroke:#888888;stroke-width:1" />'};
+            
+                data.links.push({source:mname, target:"MultiCloud", value: 1, multiple:true, distance: 9});
+            
+            data.nodes["PolicyCollection"] = {id:"PolicyCollection", name:"PolicyCollection", group: 'PolicyCollection', level: 'Security Aspect', view: '<circle cx="0" cy="0" r="4" length="3.14" style="fill:#ffaaaa;stroke:#000000;stroke-width:1" /><circle cx="0" cy="0" r="2" style="fill:white;stroke:#000000;stroke-width:1" /><rect width="10" height="8" x="-5" y="0" style="fill:#ffaaaa;stroke:#000000;stroke-width:1" /><circle cx="5" cy="7" r="4" length="3.14" style="fill:#ffaaaa;stroke:#000000;stroke-width:1" /><circle cx="5" cy="7" r="2" style="fill:white;stroke:#000000;stroke-width:1" /><rect width="10" height="8" x="0" y="7" style="fill:#ffaaaa;stroke:#000000;stroke-width:1" /><circle cx="-5" cy="7" r="4" length="3.14" style="fill:#ffaaaa;stroke:#000000;stroke-width:1" /><circle cx="-5" cy="7" r="2" style="fill:white;stroke:#000000;stroke-width:1" /><rect width="10" height="8" x="-10" y="7" style="fill:#ffaaaa;stroke:#000000;stroke-width:1" />'};
+            
+                data.links.push({source: mname, target:"PolicyCollection", value: 1, distance: 9} );
+            
+        let dname;
+        let dview = null;
+        let dpkg;
+        
+            dview = null;
+            dname = 'Servicelet';
+        
+                dview = '<rect width="30" height="3" x="-15" y="10" style="fill:#cccccc;stroke:#888888;stroke-width:1" /><polygon points="-10,10 10,10 5,-10 -5,-10 -10,10" style="fill:#aaffaa;stroke:#000000;stroke-width:1" />';
+           
+            dpkg = 'Service Management Layer';
+            if(dview) {
+                data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg, view:dview};
+            } else {
+                data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg};
+            }
+            data.links.push({source:dname, target:mname, value: 1, distance: 10} );
+        
+            dview = null;
+            dname = 'Stacklet';
+        
+                dview = '<polygon points="-7,7 7,7 3.5,-7 -3.5,-7 -7,7" style="fill:#aaffaa;stroke:#000000;stroke-width:1" /> </polygon><polygon points="-14,21 0,21 -3.5,7 -10.5,7 -14,21" style="fill:#aaffaa;stroke:#000000;stroke-width:1" /><polygon points="0,21 14,21 10.5,7 3.5,7 0,21" style="fill:#aaffaa;stroke:#000000;stroke-width:1" /><rect width="30" height="3" x="-15" y="21" style="fill:#cccccc;stroke:#888888;stroke-width:1" />';
+           
+            dpkg = 'Service Management Layer';
+            if(dview) {
+                data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg, view:dview};
+            } else {
+                data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg};
+            }
+            data.links.push({source:dname, target:mname, value: 1, distance: 10} );
+        
+            dview = null;
+            dname = 'StackletDefinition';
+        
+            dpkg = 'Service Management Layer';
+            if(dview) {
+                data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg, view:dview};
+            } else {
+                data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg};
+            }
+            data.links.push({source:dname, target:mname, value: 1, distance: 10} );
+        
+
+        let graph = new Graph2D("DrawingArea2D", data);
+    </script>
+</div>
+
+<head>
+    <script src="js/three.js"></script>
+    <script src="js/3d-force-graph.js"></script>
+    <script src="js/d3-force-3d.js"></script>
+    <script src="js/d3-octree.js"></script>
+    <script src="js/Graph3D.js"></script>
+</head>
+<div style="display:none;">
+<div id="scratchspace" style="display:none;">
+    <a-scene embedded height="0px" width="0px">
+        <a-entity position="-10 20 -100">
+            <a-sphere id="default3D" position="0 0 0" radius="10" color="#cccccc"></a-sphere>
+            <a-sphere id="default3DSelected" position="0 0 0" radius="10" color="#ffff00"></a-sphere>
+            <a-sphere id="default3DTargeted" position="0 0 0" radius="10" color="#ff0000"></a-sphere>
+            <a-sphere id="default3DSourced" position="0 0 0" radius="10" color="#00ff00"></a-sphere>
+    
+        <a-entity id="Environment3D"><a-box depth="5" width="30" height="30" material='color:#ffffaa; transparent:true, opacity:0.90;' ></a-box-knot></a-entity><a-entity id="Environment3DSelected"><a-box depth="5" width="30" height="30" material='color:#ffff00; transparent:true, opacity:0.90;' ></a-box-knot></a-entity><a-entity id="Environment3DTargeted"><a-box depth="5" width="30" height="30" material='color:#00ff00; transparent:true, opacity:0.90;' ></a-box-knot></a-entity><a-entity id="Environment3DSourced"><a-box depth="5" width="30" height="30" material='color:#ff0000; transparent:true, opacity:0.90;' ></a-box-knot></a-entity>
+    
+            <a-entity id="MultiCloud3D"><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" material='color:#aaffaa; transparent:true, opacity:0.90;' ></a-torus-knot><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" position="0 17 0" material='color:#aaffaa; transparent:true, opacity:0.90;' ></a-torus-knot><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" position="0 -17 0" material='color:#aaffaa; transparent:true, opacity:0.90;' ></a-torus-knot></a-entity><a-entity id="MultiCloud3DSelected"><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" material='color:#ffff00; transparent:true, opacity:0.90;' ></a-torus-knot><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" position="0 17 0" material='color:#ffff00; transparent:true, opacity:0.90;' ></a-torus-knot><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" position="0 -17 0" material='color:#ffff00; transparent:true, opacity:0.90;' ></a-torus-knot></a-entity><a-entity id="MultiCloud3DTargeted"><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" material='color:#00ff00; transparent:true, opacity:0.90;' ></a-torus-knot><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" position="0 17 0" material='color:#00ff00; transparent:true, opacity:0.90;' ></a-torus-knot><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" position="0 -17 0" material='color:#00ff00; transparent:true, opacity:0.90;' ></a-torus-knot></a-entity><a-entity id="MultiCloud3DSourced"><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" material='color:#ff0000; transparent:true, opacity:0.90;' ></a-torus-knot><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" position="0 17 0" material='color:#ff0000; transparent:true, opacity:0.90;' ></a-torus-knot><a-torus-knot radius="7" radius-tubular="10" segments-radial="64" segments-tubular="14" p="4" q="7" position="0 -17 0" material='color:#ff0000; transparent:true, opacity:0.90;' ></a-torus-knot></a-entity>
+        
+            <a-entity id="PolicyCollection3D"><a-torus radius="3" radius-tubular="0.5" material="color:#ffaaaa; transparent:true, opacity:0.90;" ></a-cone><a-box width="8" height="10" depth="4" position="5 0 0" material="color:#ffaaaa; transparent:true, opacity:0.90;" ></a-box><a-torus radius="3" radius-tubular="0.5" position="5 7 5" material="color:#ffaaaa; transparent:true, opacity:0.90;" ></a-cone><a-box width="8" height="10" depth="4" position="5 0 0" material="color:#ffaaaa; transparent:true, opacity:0.90;" ></a-box><a-torus radius="3" radius-tubular="0.5" position="0 -12 0" material="color:#ffaaaa; transparent:true, opacity:0.90;" ></a-cone><a-box width="8" height="10" depth="4" position="5 0 0" material="color:#ffaaaa; transparent:true, opacity:0.90;" ></a-box></a-entity><a-entity id="PolicyCollection3DSelected"><a-torus radius="3" radius-tubular="0.5" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-cone><a-box width="8" height="10" depth="4" position="5 0 0" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-box><a-torus radius="3" radius-tubular="0.5" position="5 7 5" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-cone><a-box width="8" height="10" depth="4" position="5 0 0" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-box><a-torus radius="3" radius-tubular="0.5" position="0 -12 0" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-cone><a-box width="8" height="10" depth="4" position="5 0 0" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-box></a-entity><a-entity id="PolicyCollection3DTargeted"><a-torus radius="3" radius-tubular="0.5" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-cone><a-box width="8" height="10" depth="4" position="5 0 0" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-box><a-torus radius="3" radius-tubular="0.5" position="5 7 5" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-cone><a-box width="8" height="10" depth="4" position="5 0 0" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-box><a-torus radius="3" radius-tubular="0.5" position="0 -12 0" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-cone><a-box width="8" height="10" depth="4" position="5 0 0" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-box></a-entity><a-entity id="PolicyCollection3DSourced"><a-torus radius="3" radius-tubular="0.5" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-cone><a-box width="8" height="10" depth="4" position="5 0 0" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-box><a-torus radius="3" radius-tubular="0.5" position="5 7 5" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-cone><a-box width="8" height="10" depth="4" position="5 0 0" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-box><a-torus radius="3" radius-tubular="0.5" position="0 -12 0" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-cone><a-box width="8" height="10" depth="4" position="5 0 0" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-box></a-entity>
+        
+            <a-entity id="Servicelet3D"><a-cone radius-bottom="10" radius-top="5" height="20" radialSegments="10" position="0 0 0" material="color:#aaffaa; transparent:true, opacity:0.90;" ></a-cone><a-box width="30" height="30" depth="3" position="0 -11 0" rotation="90 0 0" material="color:#ffffff; transparent:true; opacity:0.60"></a-box></a-entity><a-entity id="Servicelet3DSelected"><a-cone radius-bottom="10" radius-top="5" height="20" radialSegments="10" position="0 0 0" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-cone><a-box width="30" height="30" depth="3" position="0 -11 0" rotation="90 0 0" material="color:#ffffff; transparent:true; opacity:0.60"></a-box></a-entity><a-entity id="Servicelet3DTargeted"><a-cone radius-bottom="10" radius-top="5" height="20" radialSegments="10" position="0 0 0" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-cone><a-box width="30" height="30" depth="3" position="0 -11 0" rotation="90 0 0" material="color:#ffffff; transparent:true; opacity:0.60"></a-box></a-entity><a-entity id="Servicelet3DSourced"><a-cone radius-bottom="10" radius-top="5" height="20" radialSegments="10" position="0 0 0" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-cone><a-box width="30" height="30" depth="3" position="0 -11 0" rotation="90 0 0" material="color:#ffffff; transparent:true; opacity:0.60"></a-box></a-entity>
+            
+        
+            <a-entity id="Stacklet3D"><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="0 0 0" material="color:#aaffaa; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="-8 -14 2" material="color:#aaffaa; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="8 -14 2" material="color:#aaffaa; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="0 -14 -10" material="color:#aaffaa; transparent:true, opacity:0.90;" ></a-cone><a-box width="30" height="30" depth="3" position="0 -21 0" rotation="90 0 0" material="color:#ffffff; transparent:true; opacity:0.60"></a-box></a-entity><a-entity id="Stacklet3DSelected"><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="0 0 0" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="-8 -14 2" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="8 -14 2" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="0 -14 -10" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-cone><a-box width="30" height="30" depth="3" position="0 -21 0" rotation="90 0 0" material="color:#ffffff; transparent:true; opacity:0.60"></a-box></a-entity><a-entity id="Stacklet3DTargeted"><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="0 0 0" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="-8 -14 2" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="8 -14 2" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="0 -14 -10" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-cone><a-box width="30" height="30" depth="3" position="0 -21 0" rotation="90 0 0" material="color:#ffffff; transparent:true; opacity:0.60"></a-box></a-entity><a-entity id="Stacklet3DSourced"><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="0 0 0" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="-8 -14 2" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="8 -14 2" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-cone><a-cone radius-bottom="7" radius-top="3.5" height="14" radialSegments="10" position="0 -14 -10" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-cone><a-box width="30" height="30" depth="3" position="0 -21 0" rotation="90 0 0" material="color:#ffffff; transparent:true; opacity:0.60"></a-box></a-entity>
+            
+        
+        </a-entity>
+    </a-scene>
+</div>
+</div>
+<div class="modelGraph" id="DrawingArea3D">
+    <script type="module">
+        let data = {nodes:{}, links:[]};
+        let mname = 'Environment';
+        let pkgName = 'Environment Management';
+        let view = null;
+        data.nodes[mname] = {id:mname, name:mname, group: mname, level:pkgName, view:mname +'3D'};
+        
+            data.nodes["MultiCloud"] = {id:"MultiCloud", name:"MultiCloud", group: 'MultiCloud', level: 'Service Management Layer', view: 'MultiCloud3D'};
+            
+                data.links.push({source:mname, target:"MultiCloud", value: 20, multiple:true, distance:20});
+            
+            data.nodes["PolicyCollection"] = {id:"PolicyCollection", name:"PolicyCollection", group: 'PolicyCollection', level: 'Security Aspect', view: 'PolicyCollection3D'};
+            
+                data.links.push({source: mname, target:"PolicyCollection", value: 20, distance:20} );
+            
+        let dname;
+        let dview = null;
+        let dpkg;
+        
+            dview = null;
+            dname = 'Servicelet';
+            dview = 'Servicelet3D';
+            dpkg = 'Service Management Layer';
+            data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg, view:dview};
+            data.links.push({source:dname, target:mname, value: 20, distance: 20} );
+        
+            dview = null;
+            dname = 'Stacklet';
+            dview = 'Stacklet3D';
+            dpkg = 'Service Management Layer';
+            data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg, view:dview};
+            data.links.push({source:dname, target:mname, value: 20, distance: 20} );
+        
+            dview = null;
+            dname = 'StackletDefinition';
+            dview = 'StackletDefinition3D';
+            dpkg = 'Service Management Layer';
+            data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg, view:dview};
+            data.links.push({source:dname, target:mname, value: 20, distance: 20} );
+        
+        let graph = new Graph3D("DrawingArea3D", data, {width:1000, height:300, background:"#444488", linkColor:"#ffffff"});
+    </script>
+</div>
+
+
+<h2>Attributes</h2>
+<ul>
+
+<li>name:string - Name of the environment</li>
+
+</ul>
+
+<h2>Associations</h2>
+<table class="AssociationTable DocTable">
+    <tr>
+        <th>Name</th>
+        <th>Cardinality</th>
+        <th>Class</th>
+        <th>Composition</th>
+        <th>Owner</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>clouds</td>
+        <td>n</td>
+        <td><a href="doc/model/MultiCloud">MultiCloud</a></td>
+        <td>false</td>
+        <td>false</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>policies</td>
+        <td>1</td>
+        <td><a href="doc/model/PolicyCollection">PolicyCollection</a></td>
+        <td>false</td>
+        <td>false</td>
+        <td></td>
+    </tr>
+
+</table>
+
+<h2>Users of the Model</h2>
+<table class="AssociationTable DocTable">
+    <tr>
+        <th>Name</th>
+        <th>Cardinality</th>
+        <th>Class</th>
+        <th>Composition</th>
+        <th>Owner</th>
+        <th>Description</th>
+    </tr>
+    
+    <tr>
+        <td>env</td>
+        <td>1</td>
+        <td><a href="doc/model/Servicelet">Servicelet</a></td>
+        <td>false</td>
+        <td>false</td>
+        <td>Environment for the Servicelet</td>
+    </tr>
+    
+    <tr>
+        <td>env</td>
+        <td>1</td>
+        <td><a href="doc/model/Stacklet">Stacklet</a></td>
+        <td>false</td>
+        <td>false</td>
+        <td>Environment for the Servicelet</td>
+    </tr>
+    
+    <tr>
+        <td>env</td>
+        <td>1</td>
+        <td><a href="doc/model/StackletDefinition">StackletDefinition</a></td>
+        <td>false</td>
+        <td>false</td>
+        <td>Environment for the Stacklet</td>
+    </tr>
+    
+</table>
+
+
+<h2>State Net</h2>
+<img src='StateNet.puml'> </img>
+
+<table class="StateNetTable DocTable">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Events</th>
+    </tr>
+
+    <tr>
+        <td>Init</td>
+        <td>Initial State</td>
+    
+        <td>create-&gt;Enabled, </td>
+    
+    <tr>
+        <td>Enabled</td>
+        <td>Environment is available to be used</td>
+    
+        <td>disable-&gt;Disabled, </td>
+    
+    <tr>
+        <td>Disabled</td>
+        <td>Environment is not available to be used</td>
+    
+        <td>enable-&gt;Enabled, </td>
+    
+    </tr>
+
+</table>
+
+<h2>Methods</h2>
+<ul>
+
+</ul>
+<h2>Method Details</h2>
+    
+

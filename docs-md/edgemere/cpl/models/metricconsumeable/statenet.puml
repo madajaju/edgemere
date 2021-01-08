@@ -1,0 +1,13 @@
+@startuml
+
+
+
+state MetricConsumeable #lightgray {
+
+}
+
+
+
+
+
+@enduml

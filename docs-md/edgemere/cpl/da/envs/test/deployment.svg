@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="138px" preserveAspectRatio="none" style="width:314px;height:138px;background:#000000;" version="1.1" viewBox="0 0 314 138" width="314px" zoomAndPan="magnify"><defs/><g><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="234" x="5" y="19.5332">[From deployment.puml (line 10) ]</text><line style="stroke: #33FF02; stroke-width: 1.0;" x1="5" x2="312" y1="27.6094" y2="27.6094"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="152" x="5" y="47.1426">... (skipping 6 lines) ...</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="64.752"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="306" x="5" y="82.3613">entity ailtire_appname_cpl_da_family #black</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="99.9707"/><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="307" x="5" y="117.5801">stack "sml_sc" as sml_scStack #lightgreen {</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="0" x="9" y="135.1895"/><text fill="#FF0000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="95" x="9" y="135.1895">Syntax Error?</text><!--
+@startuml
+
+left to right direction
+
+
+
+
+entity ailtire_appname_cpl_da_family #black
+
+stack "sml_sc" as sml_scStack #lightgreen {
+    queue sml_scStacksnet #black [
+        <b><color:white>parent</color></b>
+    ]
+}
+
+
+
+package "cpl_da" #lightgray {
+    queue childrennet #black [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#black]- ailtire_appname_cpl_da_family
+    
+    queue siblingnet #blue [
+            <b><color:white>sibling</color></b>
+    ]
+    
+
+
+node "frontend" as frontendService {
+    
+}
+node "datacontroller" as datacontrollerService
+node "policyengine" as policyengineService
+node "servicecontroller" as servicecontrollerService
+node "telemetry_producer" as telemetry_producerService
+node "portal" as portalService
+
+
+        artifact "diml_dml_dc_controller:latest" as diml_dml_dc_controllerlatestimage
+    
+        artifact "sa_pe_engine:latest" as sa_pe_enginelatestimage
+            collections "sml_sc:latest" as sml_sclatestimage
+    
+        artifact "cpl_tp_producer:latest" as cpl_tp_producerlatestimage
+    
+        artifact "cpl_da_web" as cpl_da_webimage
+    
+        artifact "traefik:latest" as traefiklatestimage
+    
+}
+
+external -[#black]- frontendService
+
+datacontrollerService -[#black]- childrennet
+
+policyengineService -[#black]- childrennet
+
+servicecontrollerService -[#black]- childrennet
+
+telemetry_producerService -[#blue]- siblingnet
+
+portalService -[#blue]- siblingnet
+datacontrollerService .... diml_dml_dc_controllerlatestimage
+policyengineService .... sa_pe_enginelatestimage
+servicecontrollerService .... sml_sclatestimage
+telemetry_producerService .... cpl_tp_producerlatestimage
+portalService .... cpl_da_webimage
+
+frontendService .... traefiklatestimage
+
+sml_sclatestimage - -> sml_scStack
+    
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,15 @@
+@startuml
+
+left to right direction
+Actor "DataScientist" as DataScientist
+Actor "ApplicationDeveloper" as ApplicationDeveloper
+
+
+rectangle "Data Orchestrator" #lightblue {
+usecase "ManageDataInstances" as ManageDataInstances
+    DataScientist --> ManageDataInstances
+    ApplicationDeveloper --> ManageDataInstances
+    }
+
+
+@enduml

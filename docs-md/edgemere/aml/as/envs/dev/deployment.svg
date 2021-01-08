@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="346px" preserveAspectRatio="none" style="width:830px;height:346px;" version="1.1" viewBox="0 0 830 346" width="830px" zoomAndPan="magnify"><defs><filter height="300%" id="feh6hltckxg4a" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster amlas--><polygon fill="#ADD8E6" filter="url(#feh6hltckxg4a)" points="22,24,68,24,75,47.6094,808,47.6094,808,270,22,270,22,24" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="22" x2="75" y1="47.6094" y2="47.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="40" x="26" y="40.5332">amlas</text><!--entity childrennet--><path d="M244.5,220 L312.5,220 C317.5,220 317.5,233.8047 317.5,233.8047 C317.5,233.8047 317.5,247.6094 312.5,247.6094 L244.5,247.6094 C239.5,247.6094 239.5,233.8047 239.5,233.8047 C239.5,233.8047 239.5,220 244.5,220 " fill="#000000" filter="url(#feh6hltckxg4a)" style="stroke: #A80036; stroke-width: 1.5;"/><path d="M312.5,220 C307.5,220 307.5,233.8047 307.5,233.8047 C307.5,247.6094 312.5,247.6094 312.5,247.6094 " fill="none" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="58" x="244.5" y="239.5332">children</text><!--entity siblingnet--><path d="M250,119 L307,119 C312,119 312,132.8047 312,132.8047 C312,132.8047 312,146.6094 307,146.6094 L250,146.6094 C245,146.6094 245,132.8047 245,132.8047 C245,132.8047 245,119 250,119 " fill="#0000FF" filter="url(#feh6hltckxg4a)" style="stroke: #A80036; stroke-width: 1.5;"/><path d="M307,119 C302,119 302,132.8047 302,132.8047 C302,146.6094 307,146.6094 307,146.6094 " fill="none" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="47" x="250" y="138.5332">sibling</text><!--entity parentnet--><path d="M56.5,226 L112.5,226 C117.5,226 117.5,239.8047 117.5,239.8047 C117.5,239.8047 117.5,253.6094 112.5,253.6094 L56.5,253.6094 C51.5,253.6094 51.5,239.8047 51.5,239.8047 C51.5,239.8047 51.5,226 56.5,226 " fill="#FF0000" filter="url(#feh6hltckxg4a)" style="stroke: #A80036; stroke-width: 1.5;"/><path d="M112.5,226 C107.5,226 107.5,239.8047 107.5,239.8047 C107.5,253.6094 112.5,253.6094 112.5,253.6094 " fill="none" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="46" x="56.5" y="245.5332">parent</text><!--entity frontendService--><polygon fill="#FEFECE" filter="url(#feh6hltckxg4a)" points="38,70,48,60,131,60,131,97.6094,121,107.6094,38,107.6094,38,70" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="121" x2="130" y1="70" y2="61"/><line style="stroke: #000000; stroke-width: 1.5;" x1="38" x2="121" y1="70" y2="70"/><line style="stroke: #000000; stroke-width: 1.5;" x1="121" x2="121" y1="70" y2="107.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="53" x="53" y="94.5332">frontend</text><!--entity gwService--><polygon fill="#FEFECE" filter="url(#feh6hltckxg4a)" points="56,153,66,143,113,143,113,180.6094,103,190.6094,56,190.6094,56,153" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="103" x2="112" y1="153" y2="144"/><line style="stroke: #000000; stroke-width: 1.5;" x1="56" x2="103" y1="153" y2="153"/><line style="stroke: #000000; stroke-width: 1.5;" x1="103" x2="103" y1="153" y2="190.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="17" x="71" y="177.5332">gw</text><!--entity aml_as_webimage--><rect fill="#FEFECE" filter="url(#feh6hltckxg4a)" height="40.6094" style="stroke: #000000; stroke-width: 1.5;" width="108" x="684" y="62.5"/><polygon fill="#FEFECE" points="775,67.5,775,81.5,787,81.5,787,73.5,781,67.5,775,67.5" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="781" x2="781" y1="67.5" y2="73.5"/><line style="stroke: #000000; stroke-width: 1.5;" x1="787" x2="781" y1="73.5" y2="73.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="78" x="694" y="90.0332">aml_as_web</text><!--entity aml_as_gwimage--><rect fill="#FEFECE" filter="url(#feh6hltckxg4a)" height="40.6094" style="stroke: #000000; stroke-width: 1.5;" width="100" x="688" y="162.5"/><polygon fill="#FEFECE" points="771,167.5,771,181.5,783,181.5,783,173.5,777,167.5,771,167.5" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="777" x2="777" y1="167.5" y2="173.5"/><line style="stroke: #000000; stroke-width: 1.5;" x1="783" x2="777" y1="173.5" y2="173.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="70" x="698" y="190.0332">aml_as_gw</text><!--entity ailtire_appname_aml_family--><path d="M258,290 L258,314 M258,302 L275,302 " fill="none" filter="url(#feh6hltckxg4a)" style="stroke: #A80036; stroke-width: 2.0;"/><ellipse cx="287" cy="302" fill="#FF0000" filter="url(#feh6hltckxg4a)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="175" x="191" y="332.5332">ailtire_appname_aml_family</text><!--entity ailtire_appname_aml_as_family--><ellipse cx="525" cy="302" fill="#000000" filter="url(#feh6hltckxg4a)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><line style="stroke: #A80036; stroke-width: 2.0;" x1="513" x2="537" y1="316" y2="316"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="198" x="426" y="332.5332">ailtire_appname_aml_as_family</text><!--link childrennet to ailtire_appname_aml_as_family--><path d="M317.703,246.0312 C351.482,256.669 401.852,272.5322 444.364,285.9205 " fill="none" id="childrennet-ailtire_appname_aml_as_family" style="stroke: #000000; stroke-width: 1.0;"/><!--link parentnet to ailtire_appname_aml_family--><path d="M117.636,251.8838 C142.724,261.1608 178.459,274.3756 209.784,285.9591 " fill="none" id="parentnet-ailtire_appname_aml_family" style="stroke: #FF0000; stroke-width: 1.0;"/><!--link frontendService to siblingnet--><path d="M131.001,95.612 C166.043,104.555 213.635,116.701 244.937,124.69 " fill="none" id="frontendService-siblingnet" style="stroke: #0000FF; stroke-width: 1.0;"/><!--link gwService to childrennet--><path d="M113.009,176.599 C146.19,188.178 202.149,207.706 239.452,220.723 " fill="none" id="gwService-childrennet" style="stroke: #000000; stroke-width: 1.0;"/><!--link gwService to siblingnet--><path d="M113.009,162.129 C147.849,155.959 207.802,145.342 244.903,138.772 " fill="none" id="gwService-siblingnet" style="stroke: #0000FF; stroke-width: 1.0;"/><!--link frontendService to aml_as_webimage--><path d="M131.053,83.93 C247.996,83.751 558.369,83.274 683.546,83.082 " fill="none" id="frontendService-aml_as_webimage" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><!--link gwService to aml_as_gwimage--><path d="M113.078,167.677 C213.225,170.137 558.562,178.618 687.729,181.79 " fill="none" id="gwService-aml_as_gwimage" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><!--
+@startuml
+
+left to right direction
+
+
+boundary ailtire_appname_aml_family #red
+
+
+entity ailtire_appname_aml_as_family #black
+
+
+
+
+package "amlas" #lightblue {
+    queue childrennet #black [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#black]- ailtire_appname_aml_as_family
+    
+    queue siblingnet #blue [
+            <b><color:white>sibling</color></b>
+    ]
+    
+    queue parentnet #red [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#red]- ailtire_appname_aml_family
+    
+
+node "frontend" as frontendService
+node "gw" as gwService
+
+
+        artifact "aml_as_web" as aml_as_webimage
+    
+        artifact "aml_as_gw" as aml_as_gwimage
+    
+}
+
+frontendService -[#blue]- siblingnet
+
+gwService -[#black]- childrennet
+
+gwService -[#blue]- siblingnet
+frontendService .... aml_as_webimage
+gwService .... aml_as_gwimage
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

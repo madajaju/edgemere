@@ -1,0 +1,26 @@
+@startuml
+
+
+
+package "Telemetry Producer" #lightgray {
+
+    interface "Telemetry Producer" as i {
+            /edgemere/cpl/tp/setparent()
+            /edgemere/cpl/tp/stats/get()
+            /edgemere/cpl/tp/stats/send()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Telemetry Producer" #lightgray {
+
+
+}
+
+
+
+@enduml

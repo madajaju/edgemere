@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="265px" preserveAspectRatio="none" style="width:600px;height:265px;" version="1.1" viewBox="0 0 600 265" width="600px" zoomAndPan="magnify"><defs><filter height="300%" id="fl0y54lf47qj1" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--entity Request--><rect fill="#ADD8E6" filter="url(#fl0y54lf47qj1)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="73" x="6" y="217"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="53" x="16" y="241.5332">Request</text><!--entity PhysicalProfile--><rect fill="#ADD8E6" filter="url(#fl0y54lf47qj1)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="112" x="114.5" y="217"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="92" x="124.5" y="241.5332">PhysicalProfile</text><!--entity Hardware--><rect fill="#ADD8E6" filter="url(#fl0y54lf47qj1)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="80" x="261.5" y="217"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="60" x="271.5" y="241.5332">Hardware</text><!--entity ServiceInstance--><rect fill="#ADD8E6" filter="url(#fl0y54lf47qj1)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="120" x="376.5" y="217"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="100" x="386.5" y="241.5332">ServiceInstance</text><!--entity Cloud--><rect fill="#ADD8E6" filter="url(#fl0y54lf47qj1)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="57" x="532" y="217"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="37" x="542" y="241.5332">Cloud</text><!--class Model--><rect fill="#FEFECE" filter="url(#fl0y54lf47qj1)" height="131.0156" id="Model" style="stroke: #A80036; stroke-width: 1.5;" width="129" x="237" y="8"/><ellipse cx="252" cy="24" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M254.7656,19.875 Q254.9219,19.6563 255.1094,19.5469 Q255.2969,19.4375 255.5156,19.4375 Q255.8906,19.4375 256.125,19.7031 Q256.3594,19.9531 256.3594,20.5625 L256.3594,22.0156 Q256.3594,22.625 256.125,22.8906 Q255.8906,23.1563 255.5156,23.1563 Q255.1719,23.1563 254.9688,22.9531 Q254.7656,22.7656 254.6563,22.25 Q254.6094,21.8906 254.4219,21.7031 Q254.0938,21.3281 253.4844,21.1094 Q252.875,20.8906 252.25,20.8906 Q251.4844,20.8906 250.8438,21.2188 Q250.2188,21.5469 249.7188,22.2969 Q249.2344,23.0469 249.2344,24.0781 L249.2344,25.1719 Q249.2344,26.4063 250.125,27.2344 Q251.0156,28.0469 252.6094,28.0469 Q253.5469,28.0469 254.2031,27.7969 Q254.5938,27.6406 255.0156,27.2031 Q255.2813,26.9375 255.4219,26.8594 Q255.5781,26.7813 255.7813,26.7813 Q256.1094,26.7813 256.3594,27.0469 Q256.625,27.2969 256.625,27.6406 Q256.625,27.9844 256.2813,28.3906 Q255.7813,28.9688 254.9844,29.2969 Q253.9063,29.75 252.6094,29.75 Q251.0938,29.75 249.8906,29.125 Q248.9063,28.625 248.2188,27.5625 Q247.5313,26.4844 247.5313,25.2031 L247.5313,24.0469 Q247.5313,22.7188 248.1406,21.5781 Q248.7656,20.4219 249.8594,19.8125 Q250.9531,19.1875 252.1875,19.1875 Q252.9219,19.1875 253.5625,19.3594 Q254.2188,19.5156 254.7656,19.875 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="97" x="266" y="28.9102">StorageResource</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="238" x2="365" y1="40" y2="40"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="56" x="243" y="55.4189">string name</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="62" x="243" y="69.2549">string ename</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="243" y="83.0908">boolean disabled</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="51" x="243" y="96.9268">string type</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="238" x2="365" y1="103.3438" y2="103.3438"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="43" x="243" y="118.7627">factory()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="52" x="243" y="132.5986">provision()</text><!--link Model to Request--><path d="M225.709,121.467 C179.015,150.403 120.999,186.355 82.9197,209.9523 " fill="none" id="Model-Request" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="71.7767,216.8575,81.5339,215.5169,76.0268,214.2238,77.3199,208.7167,71.7767,216.8575" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="76.0268" x2="82.827" y1="214.2238" y2="210.0097"/><polygon fill="#FFFFFF" points="236.811,114.587,229.6039,114.3479,226.6112,120.9087,233.8183,121.1478,236.811,114.587" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="43" x="150.5" y="183.4951">request</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="72.6708" y="206.1539">1</text><!--link Model to PhysicalProfile--><path d="M240.216,149.585 C223.642,169.8911 206.707,190.6399 193.678,206.6022 " fill="none" id="Model-PhysicalProfile" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="185.335,216.824,194.1247,212.3808,188.4966,212.9504,187.9269,207.3223,185.335,216.824" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="188.4966" x2="193.555" y1="212.9504" y2="206.7528"/><polygon fill="#A80036" points="248.595,139.319,241.7023,141.4381,241.0074,148.6156,247.9001,146.4965,248.595,139.319" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="34" x="225.5" y="183.4951">profile</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="181.8063" y="206.1101">1</text><!--link Model to Hardware--><path d="M301.5,152.587 C301.5,170.6084 301.5,188.7756 301.5,203.4494 " fill="none" id="Model-Hardware" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="301.5,216.824,305.5,207.824,301.5,211.824,297.5,207.824,301.5,216.824" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="301.5" x2="301.5" y1="211.824" y2="203.8241"/><polygon fill="#FFFFFF" points="301.5,139.319,297.5,145.319,301.5,151.319,305.5,145.319,301.5,139.319" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="52" x="302.5" y="183.4951">hardware</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="293.4281" y="206.1101">n</text><!--link Model to ServiceInstance--><path d="M364.656,149.585 C381.736,169.8911 399.188,190.6399 412.614,206.6022 " fill="none" id="Model-ServiceInstance" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="421.212,216.824,418.4798,207.3617,417.9935,212.9976,412.3576,212.5113,421.212,216.824" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="417.9935" x2="412.844" y1="212.9976" y2="206.8754"/><polygon fill="#FFFFFF" points="356.021,139.319,356.8217,146.4855,363.7449,148.5028,362.9442,141.3362,356.021,139.319" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="56" x="394.5" y="183.4951">instances</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="408.4582" y="206.1101">n</text><!--link Model to Cloud--><path d="M377.418,119.077 C403.566,134.65 432.944,152.391 459.5,169 C480.384,182.0615 503.393,197.0495 522.168,209.4382 " fill="none" id="Model-Cloud" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="533.255,216.7756,527.9572,208.473,529.0854,214.0162,523.5422,215.1444,533.255,216.7756" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="529.0854" x2="522.414" y1="214.0162" y2="209.6008"/><polygon fill="#FFFFFF" points="366.042,112.317,369.1565,118.8209,376.3579,118.4475,373.2434,111.9436,366.042,112.317" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="31" x="488.5" y="183.4951">cloud</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="516.8393" y="206.0469">1</text><!--
+@startuml
+
+class "StorageResource" as Model {
+ string name
+ string ename
+ boolean disabled
+ string type
+
+ factory()
+ provision()
+ 
+}
+
+rectangle "Request" as Request #lightblue {
+}
+
+Model o- -> "1" Request : request
+
+
+rectangle "PhysicalProfile" as PhysicalProfile #lightblue {
+}
+
+Model *- -> "1" PhysicalProfile : profile
+
+
+rectangle "Hardware" as Hardware #lightblue {
+}
+
+Model o- -> "n" Hardware : hardware
+
+
+rectangle "ServiceInstance" as ServiceInstance #lightblue {
+}
+
+Model o- -> "n" ServiceInstance : instances
+
+
+rectangle "Cloud" as Cloud #lightblue {
+}
+
+Model o- -> "1" Cloud : cloud
+
+
+
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

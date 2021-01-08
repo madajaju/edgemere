@@ -1,0 +1,30 @@
+@startuml
+partition "Application Developer" #lightgray {
+    (*) --> "Define Application"
+}
+
+partition "Application Management Layer" #lightblue {
+    partition "Workflow Services" #white {
+        "Define Application" -> "Create Application"
+        -> "Deploy Application"
+        -> "Update Application"
+        -> "Sleep Application"
+        -> "Shutdown Application"
+        -> "Destroy Application"
+        -> (*)
+        "Deploy Workload" #lightgray  --> "Deploy Application"
+        "Deploy Application" --> "Monitor Application"
+        "Deploy Application" --> "Rebalance Application"
+        "Deploy Application" --> "Debug Application"
+    }
+}
+partition "Service Management Layer" #lightgreen {
+    "Deploy Application" --> "Create Service" #lightgray
+    "Create Service" --> "Deploy Service" #lightgray
+    "Update Application" --> "Update Service" #lightgray
+    "Sleep Application" --> "Sleep Service" #lightgray
+    "Shutdown Application" --> "Shutdown Service" #lightgray
+    "Destroy Application" --> "Destroy Service" #lightgray
+    "Monitor Application" --> "Monitor Service" #lightgray
+}
+@enduml

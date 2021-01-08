@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="426px" preserveAspectRatio="none" style="width:461px;height:426px;" version="1.1" viewBox="0 0 461 426" width="461px" zoomAndPan="magnify"><defs><filter height="300%" id="fr9mdxclas66k" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster ITOperations--><rect fill="#FEFECE" filter="url(#fr9mdxclas66k)" height="391" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="256" x="22" y="24"/><rect fill="#FFFFFF" height="357.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="250" x="25" y="54.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="22" x2="278" y1="51.6094" y2="51.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="86" x="107" y="42.5332">IT Operations</text><!--cluster ITOperationsManageResources--><rect fill="#FEFECE" filter="url(#fr9mdxclas66k)" height="307" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="192" x="54" y="76"/><rect fill="#FFFFFF" height="273.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="186" x="57" y="106.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="54" x2="246" y1="103.6094" y2="103.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="123" x="88.5" y="94.5332">Manage Resources</text><!--cluster sdi--><rect fill="#FFFFE0" filter="url(#fr9mdxclas66k)" height="340" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="147" x="302" y="40"/><rect fill="#FFFFFF" height="306.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="141" x="305" y="70.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="302" x2="449" y1="67.6094" y2="67.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="18" x="366.5" y="58.5332">sdi</text><!--cluster sdiresource--><rect fill="#E6E6FA" filter="url(#fr9mdxclas66k)" height="272" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="99" x="326" y="84"/><rect fill="#FFFFFF" height="238.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="93" x="329" y="114.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="326" x2="425" y1="111.6094" y2="111.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="56" x="347.5" y="102.5332">resource</text><rect fill="#FEFECE" filter="url(#fr9mdxclas66k)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="115" x="92.5" y="120"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="92.5" x2="207.5" y1="147.6094" y2="147.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="95" x="102.5" y="139.5332">Get Resources</text><rect fill="#FEFECE" filter="url(#fr9mdxclas66k)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="114" x="93" y="290"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="93" x2="207" y1="317.6094" y2="317.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="94" x="103" y="309.5332">List Resources</text><rect fill="#FEFECE" filter="url(#fr9mdxclas66k)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="144" x="78" y="205"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="78" x2="222" y1="232.6094" y2="232.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="124" x="88" y="224.5332">Release Resources</text><rect fill="#E6E6FA" filter="url(#fr9mdxclas66k)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="50" x="350.5" y="290"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="350.5" x2="400.5" y1="317.6094" y2="317.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="17" x="367" y="309.5332">list</text><rect fill="#E6E6FA" filter="url(#fr9mdxclas66k)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="50" x="350.5" y="120"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="350.5" x2="400.5" y1="147.6094" y2="147.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="20" x="365.5" y="139.5332">get</text><rect fill="#E6E6FA" filter="url(#fr9mdxclas66k)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="67" x="342" y="205"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="342" x2="409" y1="232.6094" y2="232.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="47" x="352" y="224.5332">release</text><!--link ITOperationsManageResources to sdiresourcelist--><path d="M246.0892,365.2102 C246.3266,365.1675 246.5641,365.1247 246.8016,365.0817 C248.7016,364.7377 250.6032,364.382 252.5039,364.0142 C256.3051,363.2785 260.1022,362.4944 263.8727,361.6586 C271.4138,359.9872 278.849,358.1093 286,356 C306.784,349.8694 328.903,339.6229 345.829,330.907 " fill="none" id="ITOperationsManageResources-sdiresourcelist" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="350.46,328.494,340.6303,329.1073,346.0263,330.8053,344.3283,336.2013,350.46,328.494" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageResourcesGetResources to sdiresourceget--><path d="M207.687,145 C251.389,145 310.069,145 344.918,145 " fill="none" id="ITOperationsManageResourcesGetResources-sdiresourceget" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="350.301,145,341.301,141,345.301,145,341.301,149,350.301,145" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageResourcesListResources to sdiresourcelist--><path d="M207.11,315 C250.928,315 310.07,315 345.056,315 " fill="none" id="ITOperationsManageResourcesListResources-sdiresourcelist" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="350.458,315,341.458,311,345.458,315,341.458,319,350.458,315" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageResourcesReleaseResources to sdiresourcerelease--><path d="M222.024,230 C259.965,230 305.161,230 336.448,230 " fill="none" id="ITOperationsManageResourcesReleaseResources-sdiresourcerelease" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="341.735,230,332.735,226,336.735,230,332.735,234,341.735,230" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+left to right direction
+
+
+
+state "IT Operations" as ITOperations {
+    state "Manage Resources" as ITOperationsManageResources {
+    }
+}
+state "sdi" as sdi #lightyellow {
+state "resource" as sdiresource #lightyellow {
+state "list" as sdiresourcelist #lightyellow {
+}
+}
+}
+
+ITOperationsManageResources - -> sdiresourcelist
+
+
+    state "IT Operations" as ITOperations {
+        state "Manage Resources" as ITOperationsManageResources {
+            state "Get Resources" as ITOperationsManageResourcesGetResources {
+            }
+        }
+    }
+    state "sdiresource" as sdiresource #lavender {
+state "get" as sdiresourceget #lavender {
+}
+}
+
+    ITOperationsManageResourcesGetResources - -> sdiresourceget
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Resources" as ITOperationsManageResources {
+            state "List Resources" as ITOperationsManageResourcesListResources {
+            }
+        }
+    }
+    state "sdiresource" as sdiresource #lavender {
+state "list" as sdiresourcelist #lavender {
+}
+}
+
+    ITOperationsManageResourcesListResources - -> sdiresourcelist
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Resources" as ITOperationsManageResources {
+            state "Release Resources" as ITOperationsManageResourcesReleaseResources {
+            }
+        }
+    }
+    state "sdiresource" as sdiresource #lavender {
+state "release" as sdiresourcerelease #lavender {
+}
+}
+
+    ITOperationsManageResourcesReleaseResources - -> sdiresourcerelease
+    
+ 
+ 
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

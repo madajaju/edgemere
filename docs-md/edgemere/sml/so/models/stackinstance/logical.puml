@@ -1,0 +1,76 @@
+@startuml
+
+class "StackInstance" as Model {
+ string name
+
+ 
+}
+
+rectangle "ApplicationInstance" as ApplicationInstance #lightblue {
+}
+
+Model o--> "1" ApplicationInstance : app
+
+
+rectangle "Stack" as Stack #lightblue {
+}
+
+Model o--> "1" Stack : stack
+
+
+rectangle "Stacklet" as Stacklet #lightblue {
+}
+
+Model o--> "1" Stacklet : stacklet
+
+
+rectangle "ServiceInstance" as ServiceInstance #lightblue {
+}
+
+Model *--> "n" ServiceInstance : services
+
+
+rectangle "Image" as Image #lightblue {
+}
+
+Model o--> "1" Image : image
+
+
+rectangle "DataInstance" as DataInstance #lightblue {
+}
+
+Model o--> "n" DataInstance : data
+
+
+rectangle "Resource" as Resource #lightblue {
+}
+
+Model o--> "n" Resource : resources
+
+
+rectangle "Servicelet" as Servicelet #lightblue {
+}
+
+Model o--> "1" Servicelet : servicelet
+
+
+rectangle "RunScript" as RunScript #lightblue {
+}
+
+Model *--> "n" RunScript : runScripts
+
+
+
+
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+
+@enduml

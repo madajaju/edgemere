@@ -1,0 +1,63 @@
+@startuml
+
+
+package "Data Orchestrator" #lightblue {
+    
+        class DataInstance {
+        }
+    }
+
+package "Data Management Layer" #ffcc88 {
+    
+        class Data {
+        }
+    }
+
+
+package "Federated Meta Data Management" #lightblue {
+
+    interface "Federated Meta Data Management" as i {
+            /edgemere/diml/dml/fmdm/query()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Federated Meta Data Management" #lightblue {
+        class "LineageMetaData" {
+                 string creationAction
+                 string name
+                 string value
+                    }
+                LineageMetaData o--> "n" DataInstance : parents
+                        LineageMetaData o--> "1" Data : data
+            
+    
+        MetaData <|-- LineageMetaData
+    
+    class "MetaData" {
+                 string name
+                 string value
+                    }
+                MetaData o--> "1" Data : data
+            
+    
+    class "SourceMetaData" {
+                 string connection
+                 string name
+                 string value
+                    }
+                SourceMetaData o--> "1" Data : data
+            
+    
+        MetaData <|-- SourceMetaData
+    
+
+}
+
+
+
+@enduml

@@ -1,0 +1,90 @@
+@startuml
+left to right direction
+
+
+state "sml" as sml #lightgreen {
+state "em" as smlem #lightgreen {
+}
+}
+
+
+state smlem #lightgreen {
+    state "Custom Function" as emfunction {
+    }
+}
+
+        state "sml" as sml #lightgreen {
+state "em" as smlem #lightgreen {
+state "environment" as smlemenvironment #lightgreen {
+state "addpolicies" as smlemenvironmentaddpolicies #lightgreen {
+}
+}
+}
+}
+
+
+        state "sml" as sml #lightgreen {
+state "em" as smlem #lightgreen {
+state "environment" as smlemenvironment #lightgreen {
+state "create" as smlemenvironmentcreate #lightgreen {
+}
+}
+}
+}
+
+
+        state "sml" as sml #lightgreen {
+state "em" as smlem #lightgreen {
+state "environment" as smlemenvironment #lightgreen {
+state "destroy" as smlemenvironmentdestroy #lightgreen {
+}
+}
+}
+}
+
+
+        state "sml" as sml #lightgreen {
+state "em" as smlem #lightgreen {
+state "environment" as smlemenvironment #lightgreen {
+state "disable" as smlemenvironmentdisable #lightgreen {
+}
+}
+}
+}
+
+
+        state "sml" as sml #lightgreen {
+state "em" as smlem #lightgreen {
+state "environment" as smlemenvironment #lightgreen {
+state "enable" as smlemenvironmentenable #lightgreen {
+}
+}
+}
+}
+
+
+        state "sml" as sml #lightgreen {
+state "em" as smlem #lightgreen {
+state "environment" as smlemenvironment #lightgreen {
+state "list" as smlemenvironmentlist #lightgreen {
+}
+}
+}
+}
+
+
+        state "sml" as sml #lightgreen {
+state "em" as smlem #lightgreen {
+state "environment" as smlemenvironment #lightgreen {
+state "update" as smlemenvironmentupdate #lightgreen {
+}
+}
+}
+}
+
+
+
+
+
+
+@enduml

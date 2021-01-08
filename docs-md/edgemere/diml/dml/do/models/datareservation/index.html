@@ -1,0 +1,244 @@
+<head>
+    <base href="http://localhost/web/" >
+
+    <link rel="stylesheet/less" type="text/css" href="styles/importer.less" />
+    <script src="js/less.js" type="text/javascript"></script>
+    <script src="js/aframe.js"></script>
+</head>
+
+<h1>DataReservation</h1>
+Resrevation for utilixzing data and creating a data instance.
+
+<img src='./Logical.puml' > </img>
+
+<div class="modelGraph">
+    <svg width="960" height="300" id="DrawingArea2D"></svg>
+    <script src="js/d3.js"></script>
+    <script src="js/Graph2D.js"></script>
+    <script type="module">
+        let data = {nodes:{}, links:[]};
+        let mname = 'DataReservation';
+        let pkgName = 'Data Orchestrator';
+        let view = null;
+        
+        view = '<polygon points="-5,0 0,10 5,0 0,-10 -5,0" style="fill:#ffcc88;stroke:#000000;stroke-width:1" />';
+        
+
+        data.nodes[mname] = {id:mname, name:mname, group: mname, level:pkgName, view:view};
+        
+            data.nodes["Data"] = {id:"Data", name:"Data", group: 'Data', level: 'Data Management Layer', view: '<path d="m -4 -12 l 12 8 l -4 14 l -14 0 l -4 -14 z" style="fill:#ffcc88;stroke:#000000;stroke-width:1;" />'};
+            
+                data.links.push({source: mname, target:"Data", value: 1, distance: 9} );
+            
+            data.nodes["DataSource"] = {id:"DataSource", name:"DataSource", group: 'DataSource', level: 'Data Definition Framework', view: '<rect width="24" height="12" x="-16" y="12" style="fill:#cccccc;stroke:#777777;stroke-width:1" /><ellipse cx="-4" cy="12" rx="12" ry="5" style="fill:#cccccc;stroke:#777777;stroke-width:1" /><path d="m -4 -12 l 12 8 l -4 14 l -14 0 l -4 -14 z" style="fill:#ffcc88;stroke:#000000;stroke-width:1;" />'};
+            
+                data.links.push({source: mname, target:"DataSource", value: 1, distance: 9} );
+            
+            data.nodes["DataRequest"] = {id:"DataRequest", name:"DataRequest", group: 'DataRequest', level: 'Data Orchestrator', view: '<polygon points="-5,0 0,10 5,0 0,-10 -5,0" style="fill:#ffcc88;stroke:#000000;stroke-width:1" /><polygon points="-2,3 3,13 8,3 3,-7 -2,3" style="fill:#ffcc88;stroke:#000000;stroke-width:1" />'};
+            
+                data.links.push({source: mname, target:"DataRequest", value: 1, distance: 9} );
+            
+        let dname;
+        let dview = null;
+        let dpkg;
+        
+            dview = null;
+            dname = 'DataRequest';
+        
+                dview = '<polygon points="-5,0 0,10 5,0 0,-10 -5,0" style="fill:#ffcc88;stroke:#000000;stroke-width:1" /><polygon points="-2,3 3,13 8,3 3,-7 -2,3" style="fill:#ffcc88;stroke:#000000;stroke-width:1" />';
+           
+            dpkg = 'Data Orchestrator';
+            if(dview) {
+                data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg, view:dview};
+            } else {
+                data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg};
+            }
+            data.links.push({source:dname, target:mname, value: 1, distance: 10} );
+        
+
+        let graph = new Graph2D("DrawingArea2D", data);
+    </script>
+</div>
+
+<head>
+    <script src="js/three.js"></script>
+    <script src="js/3d-force-graph.js"></script>
+    <script src="js/d3-force-3d.js"></script>
+    <script src="js/d3-octree.js"></script>
+    <script src="js/Graph3D.js"></script>
+</head>
+<div style="display:none;">
+<div id="scratchspace" style="display:none;">
+    <a-scene embedded height="0px" width="0px">
+        <a-entity position="-10 20 -100">
+            <a-sphere id="default3D" position="0 0 0" radius="10" color="#cccccc"></a-sphere>
+            <a-sphere id="default3DSelected" position="0 0 0" radius="10" color="#ffff00"></a-sphere>
+            <a-sphere id="default3DTargeted" position="0 0 0" radius="10" color="#ff0000"></a-sphere>
+            <a-sphere id="default3DSourced" position="0 0 0" radius="10" color="#00ff00"></a-sphere>
+    
+        <a-entity id="DataReservation3D"><a-octahedron radius="3" material="color:#ffcc88; transparent:true, opacity:0.90;" ></a-cyu></a-entity><a-entity id="DataReservation3DSelected"><a-octahedron radius="3" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-cyu></a-entity><a-entity id="DataReservation3DTargeted"><a-octahedron radius="3" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-cyu></a-entity><a-entity id="DataReservation3DSourced"><a-octahedron radius="3" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-cyu></a-entity>
+    
+            <a-entity id="Data3D"><a-dodecahedron radius="10" segments-height="5" segments-radial="5" position="0 0 0" material='color:#ffcc88; transparent:true, opacity:0.90;' ></a-dodecohydon></a-entity><a-entity id="Data3DSelected"><a-dodecahedron radius="10" segments-height="5" segments-radial="5" position="0 0 0" material='color:#ffff00; transparent:true, opacity:0.90;' ></a-dodecohydon></a-entity><a-entity id="Data3DTargeted"><a-dodecahedron radius="10" segments-height="5" segments-radial="5" position="0 0 0" material='color:#00ff00; transparent:true, opacity:0.90;' ></a-dodecohydon></a-entity><a-entity id="Data3DSourced"><a-dodecahedron radius="10" segments-height="5" segments-radial="5" position="0 0 0" material='color:#ff0000; transparent:true, opacity:0.90;' ></a-dodecohydon></a-entity>
+        
+            <a-entity id="DataSource3D"><a-dodecahedron radius="10" segments-height="5" segments-radial="5" position="0 0 0" material='color:#ffcc88; transparent:true, opacity:0.90;' ></a-dodecohydon><a-cylinder height="10" radius="10" position="0 -10 0" material="color:#cccccc;transparent:false;opacity:1.00;" ></a-cylinder></a-entity><a-entity id="DataSource3DSelected"><a-dodecahedron radius="10" segments-height="5" segments-radial="5" position="0 0 0" material='color:#ffff00; transparent:true, opacity:0.90;' ></a-dodecohydon><a-cylinder height="10" radius="10" position="0 -10 0" material="color:#cccccc;transparent:false;opacity:1.00;" ></a-cylinder></a-entity><a-entity id="DataSource3DTargeted"><a-dodecahedron radius="10" segments-height="5" segments-radial="5" position="0 0 0" material='color:#00ff00; transparent:true, opacity:0.90;' ></a-dodecohydon><a-cylinder height="10" radius="10" position="0 -10 0" material="color:#cccccc;transparent:false;opacity:1.00;" ></a-cylinder></a-entity><a-entity id="DataSource3DSourced"><a-dodecahedron radius="10" segments-height="5" segments-radial="5" position="0 0 0" material='color:#ff0000; transparent:true, opacity:0.90;' ></a-dodecohydon><a-cylinder height="10" radius="10" position="0 -10 0" material="color:#cccccc;transparent:false;opacity:1.00;" ></a-cylinder></a-entity>
+        
+            <a-entity id="DataRequest3D"><a-octahedron radius="3" material="color:#ffcc88; transparent:true, opacity:0.90;" ></a-cyu><a-octahedron radius="3" position="3 3 3" material="color:#ffcc88; transparent:true, opacity:0.90;" ></a-cyu></a-entity><a-entity id="DataRequest3DSelected"><a-octahedron radius="3" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-cyu><a-octahedron radius="3" position="3 3 3" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-cyu></a-entity><a-entity id="DataRequest3DTargeted"><a-octahedron radius="3" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-cyu><a-octahedron radius="3" position="3 3 3" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-cyu></a-entity><a-entity id="DataRequest3DSourced"><a-octahedron radius="3" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-cyu><a-octahedron radius="3" position="3 3 3" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-cyu></a-entity>
+        
+            <a-entity id="DataRequest3D"><a-octahedron radius="3" material="color:#ffcc88; transparent:true, opacity:0.90;" ></a-cyu><a-octahedron radius="3" position="3 3 3" material="color:#ffcc88; transparent:true, opacity:0.90;" ></a-cyu></a-entity><a-entity id="DataRequest3DSelected"><a-octahedron radius="3" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-cyu><a-octahedron radius="3" position="3 3 3" material="color:#ffff00; transparent:true, opacity:0.90;" ></a-cyu></a-entity><a-entity id="DataRequest3DTargeted"><a-octahedron radius="3" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-cyu><a-octahedron radius="3" position="3 3 3" material="color:#00ff00; transparent:true, opacity:0.90;" ></a-cyu></a-entity><a-entity id="DataRequest3DSourced"><a-octahedron radius="3" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-cyu><a-octahedron radius="3" position="3 3 3" material="color:#ff0000; transparent:true, opacity:0.90;" ></a-cyu></a-entity>
+            
+        
+        </a-entity>
+    </a-scene>
+</div>
+</div>
+<div class="modelGraph" id="DrawingArea3D">
+    <script type="module">
+        let data = {nodes:{}, links:[]};
+        let mname = 'DataReservation';
+        let pkgName = 'Data Orchestrator';
+        let view = null;
+        data.nodes[mname] = {id:mname, name:mname, group: mname, level:pkgName, view:mname +'3D'};
+        
+            data.nodes["Data"] = {id:"Data", name:"Data", group: 'Data', level: 'Data Management Layer', view: 'Data3D'};
+            
+                data.links.push({source: mname, target:"Data", value: 20, distance:20} );
+            
+            data.nodes["DataSource"] = {id:"DataSource", name:"DataSource", group: 'DataSource', level: 'Data Definition Framework', view: 'DataSource3D'};
+            
+                data.links.push({source: mname, target:"DataSource", value: 20, distance:20} );
+            
+            data.nodes["DataRequest"] = {id:"DataRequest", name:"DataRequest", group: 'DataRequest', level: 'Data Orchestrator', view: 'DataRequest3D'};
+            
+                data.links.push({source: mname, target:"DataRequest", value: 20, distance:20} );
+            
+        let dname;
+        let dview = null;
+        let dpkg;
+        
+            dview = null;
+            dname = 'DataRequest';
+            dview = 'DataRequest3D';
+            dpkg = 'Data Orchestrator';
+            data.nodes[dname] = {id:dname, name:dname, group:dname, level:dpkg, view:dview};
+            data.links.push({source:dname, target:mname, value: 20, distance: 20} );
+        
+        let graph = new Graph3D("DrawingArea3D", data, {width:1000, height:300, background:"#444488", linkColor:"#ffffff"});
+    </script>
+</div>
+
+
+<h2>Attributes</h2>
+<ul>
+
+<li>cost:number - Cost of using the data</li>
+
+</ul>
+
+<h2>Associations</h2>
+<table class="AssociationTable DocTable">
+    <tr>
+        <th>Name</th>
+        <th>Cardinality</th>
+        <th>Class</th>
+        <th>Composition</th>
+        <th>Owner</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>data</td>
+        <td>1</td>
+        <td><a href="doc/model/Data">Data</a></td>
+        <td>false</td>
+        <td>false</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>source</td>
+        <td>1</td>
+        <td><a href="doc/model/DataSource">DataSource</a></td>
+        <td>false</td>
+        <td>false</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>request</td>
+        <td>1</td>
+        <td><a href="doc/model/DataRequest">DataRequest</a></td>
+        <td>false</td>
+        <td>false</td>
+        <td></td>
+    </tr>
+
+</table>
+
+<h2>Users of the Model</h2>
+<table class="AssociationTable DocTable">
+    <tr>
+        <th>Name</th>
+        <th>Cardinality</th>
+        <th>Class</th>
+        <th>Composition</th>
+        <th>Owner</th>
+        <th>Description</th>
+    </tr>
+    
+    <tr>
+        <td>reservations</td>
+        <td>n</td>
+        <td><a href="doc/model/DataRequest">DataRequest</a></td>
+        <td>false</td>
+        <td>true</td>
+        <td></td>
+    </tr>
+    
+</table>
+
+
+<h2>State Net</h2>
+<img src='StateNet.puml'> </img>
+
+<table class="StateNetTable DocTable">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Events</th>
+    </tr>
+
+    <tr>
+        <td>Init</td>
+        <td></td>
+    
+        <td>create-&gt;Created, confirm-&gt;Confirmed, free-&gt;Rejected, </td>
+    
+    <tr>
+        <td>Created</td>
+        <td>Reservation is created and ready to be evaluated for best fit.</td>
+    
+        <td>confirm-&gt;Confirmed, free-&gt;Rejected, </td>
+    
+    <tr>
+        <td>Confirmed</td>
+        <td>Reservation is confirmed and the resources will be provisioned.</td>
+    
+        <td></td>
+    
+    <tr>
+        <td>Rejected</td>
+        <td>Reservation was rejected and devices freed up.</td>
+    
+        <td></td>
+    
+    </tr>
+
+</table>
+
+<h2>Methods</h2>
+<ul>
+
+</ul>
+<h2>Method Details</h2>
+    
+
