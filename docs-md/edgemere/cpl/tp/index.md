@@ -2,13 +2,8 @@
 layout: default
 title: Telemetry Producer
 permalink: package--edgemere-cpl-tp
-
-parent: Telemetry Producer
-
-
-grand_parent: [object Object]
-
-
+parent: Common Physical Layer
+grand_parent: edgemere
 ---
 # Telemetry Producer
 

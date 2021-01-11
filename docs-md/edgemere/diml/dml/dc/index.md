@@ -2,13 +2,8 @@
 layout: default
 title: Data Controller
 permalink: package--edgemere-diml-dml-dc
-
-parent: Data Controller
-
-
-grand_parent: [object Object]
-
-
+parent: Data Management Layer
+grand_parent: Distributed Information Management Layer
 ---
 # Data Controller
 

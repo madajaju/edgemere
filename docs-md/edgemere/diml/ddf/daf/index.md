@@ -2,13 +2,8 @@
 layout: default
 title: Data Adaptor Framework
 permalink: package--edgemere-diml-ddf-daf
-
-parent: Data Adaptor Framework
-
-
-grand_parent: [object Object]
-
-
+parent: Data Definition Framework
+grand_parent: Distributed Information Management Layer
 ---
 # Data Adaptor Framework
 

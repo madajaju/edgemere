@@ -2,13 +2,8 @@
 layout: default
 title: Governance Engine
 permalink: package--edgemere-diml-dml-ge
-
-parent: Governance Engine
-
-
-grand_parent: [object Object]
-
-
+parent: Data Management Layer
+grand_parent: Distributed Information Management Layer
 ---
 # Governance Engine
 

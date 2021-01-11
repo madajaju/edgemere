@@ -1,12 +1,13 @@
 ---
 layout: default
-title: Actor Chief Data Officer
+title: Chief Data Officer
 permalink: actor-cdo
+parent: All Actors
 ---
 
 # Chief Data Officer
 
-Long description Continued on next line
+Responsible for setting strategy and governance of data in the organization.
 
 
 
@@ -18,7 +19,7 @@ Long description Continued on next line
 * [Manage Data Strategy](usecase-ManageDataStrategy)
 
   
-![Use Case Diagram](./UseCase.svg)
+![Use Case Diagram](./usecase.svg)
 
 ## User Interface
 TBD

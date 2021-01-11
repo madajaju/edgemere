@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Usecase Manage Stacks
+title: Manage Stacks
 permalink: usecase-ManageStacks
-parent: Usecases
+parent: usecases
 ---
 
 # Manage Stacks

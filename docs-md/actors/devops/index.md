@@ -1,12 +1,13 @@
 ---
 layout: default
-title: Actor DevOps Engineer
+title: DevOps Engineer
 permalink: actor-devops
+parent: All Actors
 ---
 
 # DevOps Engineer
 
-Long description Continued on next line
+Responsible for the management of the automation of the delivery of applications and solutions in the organization.
 
 
 
@@ -17,7 +18,7 @@ Long description Continued on next line
 * [Manage Workloads](usecase-ManageWorkloads)
 
   
-![Use Case Diagram](./UseCase.svg)
+![Use Case Diagram](./usecase.svg)
 
 ## User Interface
 TBD

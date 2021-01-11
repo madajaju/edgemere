@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Usecase Manage Data
+title: Manage Data
 permalink: usecase-ManageData
-parent: Usecases
+parent: usecases
 ---
 
 # Manage Data

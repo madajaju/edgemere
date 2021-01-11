@@ -1,12 +1,13 @@
 ---
 layout: default
-title: Actor IT Operations
+title: IT Operations
 permalink: actor-itops
+parent: All Actors
 ---
 
 # IT Operations
 
-Long description Continued on next line
+Responsible for the management of the infrastructure.
 
 
 
@@ -25,7 +26,7 @@ Long description Continued on next line
 * [Manage Resources](usecase-ManageResources)
 
   
-![Use Case Diagram](./UseCase.svg)
+![Use Case Diagram](./usecase.svg)
 
 ## User Interface
 TBD

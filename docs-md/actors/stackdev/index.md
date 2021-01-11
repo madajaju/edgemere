@@ -1,12 +1,13 @@
 ---
 layout: default
-title: Actor Stack Developer
+title: Stack Developer
 permalink: actor-stackdev
+parent: All Actors
 ---
 
 # Stack Developer
 
-Long description Continued on next line
+Responsible for developing reusable micro-services and application stacks in the organization.
 
 
 
@@ -17,7 +18,7 @@ Long description Continued on next line
 * [Manage Services](usecase-ManageServices)
 
   
-![Use Case Diagram](./UseCase.svg)
+![Use Case Diagram](./usecase.svg)
 
 ## User Interface
 TBD

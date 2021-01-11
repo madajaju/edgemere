@@ -2,13 +2,8 @@
 layout: default
 title: Developer Services
 permalink: package--edgemere-aml-ds
-
-parent: Developer Services
-
-
-grand_parent: [object Object]
-
-
+parent: Application Management Layer
+grand_parent: edgemere
 ---
 # Developer Services
 

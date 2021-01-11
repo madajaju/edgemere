@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Usecase Manage Data Instances
+title: Manage Data Instances
 permalink: usecase-ManageDataInstances
-parent: Usecases
+parent: usecases
 ---
 
 # Manage Data Instances

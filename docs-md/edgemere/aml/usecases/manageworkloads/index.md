@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Usecase Manage Workloads
+title: Manage Workloads
 permalink: usecase-ManageWorkloads
-parent: Usecases
+parent: usecases
 ---
 
 # Manage Workloads

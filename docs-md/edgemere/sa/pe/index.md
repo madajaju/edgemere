@@ -2,13 +2,8 @@
 layout: default
 title: Policy Engine
 permalink: package--edgemere-sa-pe
-
-parent: Policy Engine
-
-
-grand_parent: [object Object]
-
-
+parent: Security Aspect
+grand_parent: edgemere
 ---
 # Policy Engine
 

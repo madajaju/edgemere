@@ -2,15 +2,9 @@
 layout: default
 title: Data Definition Framework
 permalink: package--edgemere-diml-ddf
-
-parent: Data Definition Framework
-
-
-grand_parent: [object Object]
-
-
+parent: Distributed Information Management Layer
+grand_parent: edgemere
 has_children: true
-
 ---
 # Data Definition Framework
 

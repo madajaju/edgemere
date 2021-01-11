@@ -2,13 +2,8 @@
 layout: default
 title: Analytics Services
 permalink: package--edgemere-aml-as
-
-parent: Analytics Services
-
-
-grand_parent: [object Object]
-
-
+parent: Application Management Layer
+grand_parent: edgemere
 ---
 # Analytics Services
 

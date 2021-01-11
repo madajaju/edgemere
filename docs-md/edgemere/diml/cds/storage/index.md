@@ -2,13 +2,8 @@
 layout: default
 title: Storage Services
 permalink: package--edgemere-diml-cds-storage
-
-parent: Storage Services
-
-
-grand_parent: [object Object]
-
-
+parent: Common Data Service
+grand_parent: Distributed Information Management Layer
 ---
 # Storage Services
 

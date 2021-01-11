@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Usecase Manage Clouds
+title: Manage Clouds
 permalink: usecase-ManageClouds
-parent: Usecases
+parent: usecases
 ---
 
 # Manage Clouds

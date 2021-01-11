@@ -2,13 +2,8 @@
 layout: default
 title: Blue Print Management
 permalink: package--edgemere-diml-ddf-bpm
-
-parent: Blue Print Management
-
-
-grand_parent: [object Object]
-
-
+parent: Data Definition Framework
+grand_parent: Distributed Information Management Layer
 ---
 # Blue Print Management
 

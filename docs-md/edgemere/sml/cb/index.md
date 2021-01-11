@@ -2,13 +2,8 @@
 layout: default
 title: Cloud Broker
 permalink: package--edgemere-sml-cb
-
-parent: Cloud Broker
-
-
-grand_parent: [object Object]
-
-
+parent: Service Management Layer
+grand_parent: edgemere
 ---
 # Cloud Broker
 

@@ -1,12 +1,13 @@
 ---
 layout: default
-title: Actor Application Developer
+title: Application Developer
 permalink: actor-applicationdeveloper
+parent: All Actors
 ---
 
 # Application Developer
 
-Long description Continued on next line
+The Application Developer work in coordination with DevOps to manage services, applications and workloads through the development pipeline.
 
 
 
@@ -20,7 +21,7 @@ Long description Continued on next line
 * [Manage Services](usecase-ManageServices)
 
   
-![Use Case Diagram](./UseCase.svg)
+![Use Case Diagram](./usecase.svg)
 
 ## User Interface
 TBD

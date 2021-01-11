@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Usecase ManageCostModel
+title: ManageCostModel
 permalink: usecase-ManageCostModel
-parent: Usecases
+parent: usecases
 ---
 
 # ManageCostModel

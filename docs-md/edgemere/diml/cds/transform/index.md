@@ -2,13 +2,8 @@
 layout: default
 title: Transform Services
 permalink: package--edgemere-diml-cds-transform
-
-parent: Transform Services
-
-
-grand_parent: [object Object]
-
-
+parent: Common Data Service
+grand_parent: Distributed Information Management Layer
 ---
 # Transform Services
 

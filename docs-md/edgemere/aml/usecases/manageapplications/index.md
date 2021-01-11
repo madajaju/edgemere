@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Usecase Manage Applications
+title: Manage Applications
 permalink: usecase-ManageApplications
-parent: Usecases
+parent: usecases
 ---
 
 # Manage Applications

@@ -2,13 +2,8 @@
 layout: default
 title: Application Management Layer
 permalink: package--edgemere-aml
-
-parent: Application Management Layer
-
-
-
+parent: edgemere
 has_children: true
-
 ---
 # Application Management Layer
 
@@ -22,7 +17,7 @@ the [Distributed Information Management Layer](package--edgemere-dml) and the
 [Service Management Layer](package--edgemere-sml). It also leverages the
 [Identity Aspect](package--edgemere-ia) and [Security Aspect](package--edgemere-sa) layers.
 
-![AML Overall](./AML.png)
+![AML Overall](./aml.png)
 
 The AML contains for sub packages that group common off the shelf tools integrated together.
 In the Analytics Services package common tools for analytics can be found including collection,
@@ -38,7 +33,7 @@ There are several tool suites that have been built to aid SecDevOps. These tools
 grouped together in the SecDevOps Services and include Automation Frameworks (Salt,Chef,
 puppet, ansible), CICD tools (Gitlab, GitHub, Jenkins, etc...) and Environment Management.
 
-![AML details](AMLDetail.png)
+![AML details](amldetail.png)
 
 
 ## Use Cases

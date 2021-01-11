@@ -2,13 +2,8 @@
 layout: default
 title: Insite Services
 permalink: package--edgemere-diml-cds-insite
-
-parent: Insite Services
-
-
-grand_parent: [object Object]
-
-
+parent: Common Data Service
+grand_parent: Distributed Information Management Layer
 ---
 # Insite Services
 

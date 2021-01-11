@@ -2,13 +2,8 @@
 layout: default
 title: Device Manager
 permalink: package--edgemere-cpl-dm
-
-parent: Device Manager
-
-
-grand_parent: [object Object]
-
-
+parent: Common Physical Layer
+grand_parent: edgemere
 ---
 # Device Manager
 

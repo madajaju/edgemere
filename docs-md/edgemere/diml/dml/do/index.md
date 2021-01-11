@@ -2,13 +2,8 @@
 layout: default
 title: Data Orchestrator
 permalink: package--edgemere-diml-dml-do
-
-parent: Data Orchestrator
-
-
-grand_parent: [object Object]
-
-
+parent: Data Management Layer
+grand_parent: Distributed Information Management Layer
 ---
 # Data Orchestrator
 

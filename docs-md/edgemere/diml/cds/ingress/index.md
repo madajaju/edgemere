@@ -2,13 +2,8 @@
 layout: default
 title: Ingress Services
 permalink: package--edgemere-diml-cds-ingress
-
-parent: Ingress Services
-
-
-grand_parent: [object Object]
-
-
+parent: Common Data Service
+grand_parent: Distributed Information Management Layer
 ---
 # Ingress Services
 

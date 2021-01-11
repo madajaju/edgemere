@@ -2,13 +2,8 @@
 layout: default
 title: Service Repository
 permalink: package--edgemere-sml-sr
-
-parent: Service Repository
-
-
-grand_parent: [object Object]
-
-
+parent: Service Management Layer
+grand_parent: edgemere
 ---
 # Service Repository
 

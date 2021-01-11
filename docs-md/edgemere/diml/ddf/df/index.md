@@ -2,13 +2,8 @@
 layout: default
 title: Data Flow
 permalink: package--edgemere-diml-ddf-df
-
-parent: Data Flow
-
-
-grand_parent: [object Object]
-
-
+parent: Data Definition Framework
+grand_parent: Distributed Information Management Layer
 ---
 # Data Flow
 

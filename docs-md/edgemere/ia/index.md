@@ -2,11 +2,7 @@
 layout: default
 title: Identity Aspect
 permalink: package--edgemere-ia
-
-parent: Identity Aspect
-
-
-
+parent: edgemere
 ---
 # Identity Aspect
 
@@ -19,7 +15,7 @@ Having a common indentity management system is key to having consistency in the 
 trusted means that I can establish a trusted ecosystem in which data, applications and hardware can deliver
 solutions that can be trusted.
 
-![IA Diagram](./IA.png)
+![IA Diagram](./ia.png)
 
 
 The Identity Aspect has key sub-systems that help in managing identity: Access, Authorization, Authentication and

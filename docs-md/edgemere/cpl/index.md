@@ -2,13 +2,8 @@
 layout: default
 title: Common Physical Layer
 permalink: package--edgemere-cpl
-
-parent: Common Physical Layer
-
-
-
+parent: edgemere
 has_children: true
-
 ---
 # Common Physical Layer
 
@@ -31,7 +26,7 @@ The CPL sits at the bottom of the Architectural stack and is the foundation for 
 architecture. It does rely on the [Security](package--edgemere-sa) and [Identify](package--edgemere-ia) sspects to
 establish hardware root of trust, identity and encryption of data at the lowest levels.
 
-![CPL High](./CPLHigh.png)
+![CPL High](./cplhigh.png)
 
 The CPL establishes a taxonomy of hardware devices that are generalized. This makes it easier to create common services
 and operating models for the devices. This includes devices in Public Clouds, Private Clouds, Legacy Infrastructure, and
@@ -41,7 +36,7 @@ Edge Devices. All of these devices have common [hardware](class-hardware):
 each [device](class-device) can have a unique set of capabilities that are delivered from the unique hardware of the
 device is key to establishing a common management control plane.
 
-![CPL Hardware](./CPLHW.png)
+![CPL Hardware](./cplhw.png)
 
 The key element in this layer is the [Device](class-device). It is represented by a model that contains
 several [hardware](class-hardware) elements. The [device](class-device) has a profile that shows the capabilities of
@@ -50,7 +45,7 @@ the [device](class-device). The [device](class-device) is has a simple interface
 the [software defined infrastructure layer - SDI](package--edgemere-sdi) so [applications](class-application)
 and [services](class-service) can be deployed to the [device](class-device) and its (hardware)[class-hardware].
 
-![CPL Edge Device](./CPLEdgeDevice.png)
+![CPL Edge Device](./cpledgedevice.png)
 
 With the explosion of the number IoT devices, the complexity of managing the devices inconjunction with devices in the
 cloud and the datacenter. Managing the large number of devices can become overwhelming for
@@ -61,7 +56,7 @@ devices. [Aggregated devices](class-aggregateddevice) can contain [devices](clas
 other [aggregated devices](class-aggregatedevice)
 which gives the ability to have an infinite number of layers in the hierarchy of devices.
 
-![CPL device](./CPLDevice.png)
+![CPL device](./cpldevice.png)
 
 In this example a topology of devices have been established to give the [IT operations engineer](actor-itops)
 the ability to manage all of the devices connected to a data center. In "Data Center 1"
@@ -69,7 +64,7 @@ there are 4 Edge Devices, Data Center 2 has 4 Edge Devices and Data Center 3 has
 Device. Aggregation of devices can happen along geographic, device capabilities, security profiles, etc... The key is
 that the topology is established to help with the physical management of the devices.
 
-![CPL Topology](./CPLTopology.png)
+![CPL Topology](./cpltopology.png)
 
 Many times organizations combine the physical management and the logical management of devices. Basically combining the
 Cloud topology and the Control Topology together. This architecture separates the two topologies giving the flexibility
@@ -77,7 +72,7 @@ to establish clouds that span multip physical domains. Including establishing a 
 centers, public clouds and edge devices. Giving the ability to schedule and manage applications and services across
 traditional boundaries.
 
-![CPL Cloud topology](./CPLCloudTopology.png)
+![CPL Cloud topology](./cplcloudtopology.png)
 
 In this example you can see three clouds that share devices and span the control topology that was established for
 optmized IT operations. This flexibility allows for clouds (logical devices) to adapt to changing environments. Theses

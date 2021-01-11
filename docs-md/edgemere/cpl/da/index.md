@@ -2,13 +2,8 @@
 layout: default
 title: Device Agent
 permalink: package--edgemere-cpl-da
-
-parent: Device Agent
-
-
-grand_parent: [object Object]
-
-
+parent: Common Physical Layer
+grand_parent: edgemere
 ---
 # Device Agent
 

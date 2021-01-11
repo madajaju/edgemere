@@ -2,14 +2,14 @@ The Software Defined Infrastructure Layer (SDI) is a middleware layer in the arc
 [Common Physical](package--edgemere-cpl) and the [Distributed Information Management](package--edgemere-diml) and
 [Service Management](package--edgemere-sml) layers.
 
-![SDI](./SDI.png)
+![SDI](./sdi.png)
 
 It is primarily responsible for IaaS operations and management. SDI architectural elements are very well known and
 established in the industry with commercial and open source product offerings available (VMWare, OpenStack, Nutanix,
 etc...). The key elements to and SDI layer are Orchestration and Control, Infrastructure elements (Storage, Network,
 Compute/Accelerators, and Security), and a Common Infrastructure API Gateway.
 
-![SDIDetail](./SDIDetail.png)
+![SDIDetail](./sdidetail.png)
 
 This key architectural elements are minimal viable elements for a common interface to IaaS solutions to be used in a
 [Common Physical Layer](package--edgemere-cpl). The ability to interact with a common API interface reguardless of the
@@ -18,7 +18,7 @@ to include [Edge Devices](class-device) into the ecosystem the concept of a micr
 minimal Common Infrastructure API. This concept extends the boundaries of the cloud to the edge and gives the ability to
 manage infrastructure and applications across a traditionally difficult boundary.
 
-![Clouds](./Clouds.png)
+![Clouds](./clouds.png)
 
 The common infrastructure API allows Multi-Cloud Orchestrator from the
 [Service Management Layer](package--edgemere-sml) to request infrastructure (Bare metal, Virtual or

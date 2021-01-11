@@ -2,13 +2,8 @@
 layout: default
 title: Service Controller
 permalink: package--edgemere-sml-sc
-
-parent: Service Controller
-
-
-grand_parent: [object Object]
-
-
+parent: Service Management Layer
+grand_parent: edgemere
 ---
 # Service Controller
 

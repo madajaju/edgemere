@@ -1,12 +1,13 @@
 ---
 layout: default
-title: Actor Data Analyst
+title: Data Analyst
 permalink: actor-analyst
+parent: All Actors
 ---
 
 # Data Analyst
 
-Long description Continued on next line
+Uses Data solutions produced by the Data Scientist and Data Engineer to provide business value to the organization.
 
 
 
@@ -15,7 +16,7 @@ Long description Continued on next line
 * [Manage Data](usecase-ManageData)
 
   
-![Use Case Diagram](./UseCase.svg)
+![Use Case Diagram](./usecase.svg)
 
 ## User Interface
 TBD

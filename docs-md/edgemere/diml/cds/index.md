@@ -2,15 +2,9 @@
 layout: default
 title: Common Data Service
 permalink: package--edgemere-diml-cds
-
-parent: Common Data Service
-
-
-grand_parent: [object Object]
-
-
+parent: Distributed Information Management Layer
+grand_parent: edgemere
 has_children: true
-
 ---
 # Common Data Service
 

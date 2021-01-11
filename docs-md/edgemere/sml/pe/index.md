@@ -2,13 +2,8 @@
 layout: default
 title: Provision Engine
 permalink: package--edgemere-sml-pe
-
-parent: Provision Engine
-
-
-grand_parent: [object Object]
-
-
+parent: Service Management Layer
+grand_parent: edgemere
 ---
 # Provision Engine
 

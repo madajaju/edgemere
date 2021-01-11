@@ -2,13 +2,8 @@
 layout: default
 title: Environment Management
 permalink: package--edgemere-sml-em
-
-parent: Environment Management
-
-
-grand_parent: [object Object]
-
-
+parent: Service Management Layer
+grand_parent: edgemere
 ---
 # Environment Management
 

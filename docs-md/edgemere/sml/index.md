@@ -2,13 +2,8 @@
 layout: default
 title: Service Management Layer
 permalink: package--edgemere-sml
-
-parent: Service Management Layer
-
-
-
+parent: edgemere
 has_children: true
-
 ---
 # Service Management Layer
 
@@ -21,7 +16,7 @@ the [Software Defined Infrastructure](package--edgemere-sdi). It takes requests 
 the [Application Management Layer](package--edgemere-aml) for deployment of services that make up applications and
 workflows.
 
-![SML](./SML.png)
+![SML](./sml.png)
 
 The main goal of the SML is to provide the [Application Developer](actor-applicationdeveloper) a simple, repeatable,
 roboust mechanism to deploy services into the multi-cloud ecosystem. It also needs to provide
@@ -33,7 +28,7 @@ services are deployed and managed automatically with out human interaction. Deci
 should be automatically based on the IT policies established not determined by
 the [Application Developer](actor-applicationdeveloper) or [IT Operations Engineer](actor-itops).
 
-![MHCloud](./MHCloud.png)
+![MHCloud](./mhcloud.png)
 
 The SML has has several actors that interact with the sub-system. Each one of these actors has a different motivator for
 using the system. Eventhough some of their uses of the systems are the same. The reason they are using the system is
@@ -49,7 +44,7 @@ very different.
 * [Stack Developer](actor-stackdev) - Motivators include - Deliverying solutions in quick iterations, Very short break,
   fix, deploy cycle
 
-![UseCasesHighLevel](./UseCasesHighLevel.png)
+![UseCasesHighLevel](./usecaseshighlevel.png)
 
 The SML spaces is full of tools that can be integrated together to deliver the use cases demanded by the actors in this
 space. The tools can be categorized into three major categories:
@@ -64,7 +59,7 @@ space. The tools can be categorized into three major categories:
 These tool sets have been developed by and for specific actors over the years. And the integration of these tools
 together help cover the current gaps that exist in the individual tools.
 
-![Three](./Three.png)
+![Three](./three.png)
 
 The SML has sub-systems as part of the architecture and include Orchestration and Control elements.
 
@@ -78,7 +73,7 @@ The SML has sub-systems as part of the architecture and include Orchestration an
 * [Provision Enginer](package--edgemere-sml-pe) - provisions software stacks and services on infrastructure
 * [Cloud Broker](package--edgemere-sml-cb) - manages the clouds and which clouds can manage which requests
 
-![HMCloudDetail](./HMCloudDetail.png)
+![HMCloudDetail](./hmclouddetail.png)
 
 
 ## Use Cases

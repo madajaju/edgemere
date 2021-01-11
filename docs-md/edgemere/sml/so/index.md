@@ -2,13 +2,8 @@
 layout: default
 title: Service Orchestrator
 permalink: package--edgemere-sml-so
-
-parent: Service Orchestrator
-
-
-grand_parent: [object Object]
-
-
+parent: Service Management Layer
+grand_parent: edgemere
 ---
 # Service Orchestrator
 

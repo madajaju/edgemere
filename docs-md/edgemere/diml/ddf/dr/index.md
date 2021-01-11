@@ -2,13 +2,8 @@
 layout: default
 title: Data Repository
 permalink: package--edgemere-diml-ddf-dr
-
-parent: Data Repository
-
-
-grand_parent: [object Object]
-
-
+parent: Data Definition Framework
+grand_parent: Distributed Information Management Layer
 ---
 # Data Repository
 

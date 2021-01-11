@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Actor Actor
+title: Actor
 permalink: actor-actor
+parent: All Actors
 ---
 
 # Actor
@@ -15,7 +16,7 @@ Long description Continued on next line
 * [Manage Assets](usecase-ManageAssets)
 
   
-![Use Case Diagram](./UseCase.svg)
+![Use Case Diagram](./usecase.svg)
 
 ## User Interface
 TBD

@@ -1,12 +1,13 @@
 ---
 layout: default
-title: Actor DataEngineer
+title: DataEngineer
 permalink: actor-dataengineer
+parent: All Actors
 ---
 
 # DataEngineer
 
-Long description Continued on next line
+Responsible for operationalization of data pipeline and the automation and deployment of data solutions. They work closely with the Data Scientist to deliver solutions to data analyst.
 
 
 
@@ -21,7 +22,7 @@ Long description Continued on next line
 * [Manage Data Sources](usecase-ManageDataSources)
 
   
-![Use Case Diagram](./UseCase.svg)
+![Use Case Diagram](./usecase.svg)
 
 ## User Interface
 TBD

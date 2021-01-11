@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Usecase Manage Data Governance
+title: Manage Data Governance
 permalink: usecase-ManageDataGovernance
-parent: Usecases
+parent: usecases
 ---
 
 # Manage Data Governance

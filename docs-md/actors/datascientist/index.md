@@ -1,12 +1,13 @@
 ---
 layout: default
-title: Actor Data Scientist
+title: Data Scientist
 permalink: actor-datascientist
+parent: All Actors
 ---
 
 # Data Scientist
 
-Long description Continued on next line
+Responsible for the architecture and development of data analytic models and solutions. They work closely with the Data engineer to deliver solutions to the Data Analyst.
 
 
 
@@ -20,7 +21,7 @@ Long description Continued on next line
 * [Manage Data Instances](usecase-ManageDataInstances)
 
   
-![Use Case Diagram](./UseCase.svg)
+![Use Case Diagram](./usecase.svg)
 
 ## User Interface
 TBD
