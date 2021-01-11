@@ -1,3 +1,10 @@
+---
+layout: default
+title: Environment test
+permalink: environment--edgemere-diml-dml-do-test
+nav_exclude: true
+---
+
 ### test
 
 

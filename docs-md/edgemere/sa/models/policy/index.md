@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class Policy
+permalink: class-Policy
+parent: classes
+---
+
 # Policy
 
 policy can be applied to any entity in the system including Applications, Stacks, Resource, Devices, ...

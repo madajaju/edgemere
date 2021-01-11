@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class DataPipeline
+permalink: class-DataPipeline
+parent: classes
+---
+
 # DataPipeline
 
 Data Pipeline describes a pipeline to process a data source.

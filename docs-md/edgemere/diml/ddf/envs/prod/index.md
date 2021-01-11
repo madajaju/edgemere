@@ -1,3 +1,10 @@
+---
+layout: default
+title: Environment prod
+permalink: environment--edgemere-diml-ddf-prod
+nav_exclude: true
+---
+
 ### prod
 
 

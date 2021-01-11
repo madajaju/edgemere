@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class ResourceInstanceType
+permalink: class-ResourceInstanceType
+parent: classes
+---
+
 # ResourceInstanceType
 
 This represents a resoure instance type in the different clouds.

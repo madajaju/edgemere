@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class Request
+permalink: class-Request
+parent: classes
+---
+
 # Request
 
 This represents a request being made for a resource in the cloud. This is only the request a set of reservations will be created for each request. When the request is satisfied the requestwill change state to Satisfied, and be returned to the requesterlong description
@@ -56,20 +63,21 @@ This represents a request being made for a resource in the cloud. This is only t
 
 ## Methods
 
-* [confirm() - Description of the method](#Action-confirm)
+* [confirm() - Description of the method](#action-confirm)
 
-* [evaluated() - The Request is evaluated](#Action-evaluated)
+* [evaluated() - The Request is evaluated](#action-evaluated)
 
-* [failed() - Request Failed](#Action-failed)
+* [failed() - Request Failed](#action-failed)
 
-* [fulfill() - Fulfill the request, the state of the request is moved to needed](#Action-fulfill)
+* [fulfill() - Fulfill the request, the state of the request is moved to needed](#action-fulfill)
 
-* [satisfied() - The Request is staisfied](#Action-satisfied)
+* [satisfied() - The Request is staisfied](#action-satisfied)
 
 
 <h2>Method Details</h2>
     
-### request.confirm
+### Action request confirm
+
 * REST - request/confirm
 * bin - request confirm
 * js - request.confirm
@@ -83,7 +91,8 @@ Description of the method
 
 
 
-### request.evaluated
+### Action request evaluated
+
 * REST - request/evaluated
 * bin - request evaluated
 * js - request.evaluated
@@ -96,7 +105,8 @@ The Request is evaluated
 
 
 
-### request.failed
+### Action request failed
+
 * REST - request/failed
 * bin - request failed
 * js - request.failed
@@ -110,7 +120,8 @@ Request Failed
 
 
 
-### request.fulfill
+### Action request fulfill
+
 * REST - request/fulfill
 * bin - request fulfill
 * js - request.fulfill
@@ -126,7 +137,8 @@ Fulfill the request, the state of the request is moved to needed
 
 
 
-### request.satisfied
+### Action request satisfied
+
 * REST - request/satisfied
 * bin - request satisfied
 * js - request.satisfied

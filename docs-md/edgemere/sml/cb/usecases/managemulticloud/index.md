@@ -1,3 +1,10 @@
+---
+layout: default
+title: Usecase Manage Multi Cloud
+permalink: usecase-ManageMultiCloud
+parent: Usecases
+---
+
 # Manage Multi Cloud
 
 Manage Multi Cloud allows actors to create multi-clouds by adding clouds. Management of policies for the multi-cloud and all of the services deployed to a multi-cloud is performed by IT Operations.
@@ -6,13 +13,14 @@ Manage Multi Cloud allows actors to create multi-clouds by adding clouds. Manage
 
 ## Actors
 
-* [IT Operations](/actors/ITOperations/index.md)
+* [IT Operations](actor-itops)
 
 
 ## Detail Scenarios
-* [Manage Multi Cloud](#Scenario-AddCloudtoMultiCloud)
-* [Manage Multi Cloud](#Scenario-ManagePoliciesforMultiCloud)
-* [Manage Multi Cloud](#Scenario-RemoveCloudfromMultiCloud)
+
+* [Manage Multi Cloud](#scenario-AddCloudtoMultiCloud)
+* [Manage Multi Cloud](#scenario-ManagePoliciesforMultiCloud)
+* [Manage Multi Cloud](#scenario-RemoveCloudfromMultiCloud)
 
   
 ### Scenario Add Cloud to Multi Cloud
@@ -28,7 +36,7 @@ It Operations adds clouds to the multicloud
 
 #### Actors
 
-* [IT Operations](actors/itops/index.md)
+* [IT Operations](actor-itops)
 
 
 ### Scenario Manage Policies for Multi Cloud
@@ -44,7 +52,7 @@ IT Operations adds,removes,enables and disables policies to a multicloud
 
 #### Actors
 
-* [IT Operations](actors/itops/index.md)
+* [IT Operations](actor-itops)
 
 
 ### Scenario Manage Policies for Multi Cloud
@@ -60,8 +68,7 @@ IT Operations removes or adds policies from Multi Cloud
 
 #### Actors
 
-* [IT Operations](actors/itops/index.md)
-
+* [IT Operations](actor-itops)
 
 
 

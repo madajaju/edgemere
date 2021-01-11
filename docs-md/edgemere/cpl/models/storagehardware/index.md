@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class StorageHardware
+permalink: class-StorageHardware
+parent: classes
+---
+
 # StorageHardware
 
 This represents storage hardware in the common layer
@@ -30,20 +37,21 @@ This represents storage hardware in the common layer
 
 ## Methods
 
-* [addStats() - Add Stats to the Hardware](#Action-addStats)
+* [addStats() - Add Stats to the Hardware](#action-addStats)
 
-* [create() - Create Hardware](#Action-create)
+* [create() - Create Hardware](#action-create)
 
-* [disable() - Disable Device and its hardware](#Action-disable)
+* [disable() - Disable Device and its hardware](#action-disable)
 
-* [enable() - Enable Device to be used.](#Action-enable)
+* [enable() - Enable Device to be used.](#action-enable)
 
-* [factory() - Create Hardware based on properties](#Action-factory)
+* [factory() - Create Hardware based on properties](#action-factory)
 
 
 <h2>Method Details</h2>
     
-### storagehardware.addStats
+### Action storagehardware addStats
+
 * REST - storagehardware/addStats
 * bin - storagehardware addStats
 * js - storagehardware.addStats
@@ -57,7 +65,8 @@ Add Stats to the Hardware
 
 
 
-### storagehardware.create
+### Action storagehardware create
+
 * REST - storagehardware/create
 * bin - storagehardware create
 * js - storagehardware.create
@@ -72,7 +81,8 @@ Create Hardware
 
 
 
-### storagehardware.disable
+### Action storagehardware disable
+
 * REST - storagehardware/disable
 * bin - storagehardware disable
 * js - storagehardware.disable
@@ -85,7 +95,8 @@ Disable Device and its hardware
 
 
 
-### storagehardware.enable
+### Action storagehardware enable
+
 * REST - storagehardware/enable
 * bin - storagehardware enable
 * js - storagehardware.enable
@@ -98,7 +109,8 @@ Enable Device to be used.
 
 
 
-### storagehardware.factory
+### Action storagehardware factory
+
 * REST - storagehardware/factory
 * bin - storagehardware factory
 * js - storagehardware.factory

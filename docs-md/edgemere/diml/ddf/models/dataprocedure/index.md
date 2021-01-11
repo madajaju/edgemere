@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class DataProcedure
+permalink: class-DataProcedure
+parent: classes
+---
+
 # DataProcedure
 
 Procedure run on the Data Source

@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class NetworkHardware
+permalink: class-NetworkHardware
+parent: classes
+---
+
 # NetworkHardware
 
 This represents network hardware
@@ -30,20 +37,21 @@ This represents network hardware
 
 ## Methods
 
-* [addStats() - Add Stats to the Hardware](#Action-addStats)
+* [addStats() - Add Stats to the Hardware](#action-addStats)
 
-* [create() - Create Hardware](#Action-create)
+* [create() - Create Hardware](#action-create)
 
-* [disable() - Disable Device and its hardware](#Action-disable)
+* [disable() - Disable Device and its hardware](#action-disable)
 
-* [enable() - Enable Device to be used.](#Action-enable)
+* [enable() - Enable Device to be used.](#action-enable)
 
-* [factory() - Create Hardware based on properties](#Action-factory)
+* [factory() - Create Hardware based on properties](#action-factory)
 
 
 <h2>Method Details</h2>
     
-### networkhardware.addStats
+### Action networkhardware addStats
+
 * REST - networkhardware/addStats
 * bin - networkhardware addStats
 * js - networkhardware.addStats
@@ -57,7 +65,8 @@ Add Stats to the Hardware
 
 
 
-### networkhardware.create
+### Action networkhardware create
+
 * REST - networkhardware/create
 * bin - networkhardware create
 * js - networkhardware.create
@@ -72,7 +81,8 @@ Create Hardware
 
 
 
-### networkhardware.disable
+### Action networkhardware disable
+
 * REST - networkhardware/disable
 * bin - networkhardware disable
 * js - networkhardware.disable
@@ -85,7 +95,8 @@ Disable Device and its hardware
 
 
 
-### networkhardware.enable
+### Action networkhardware enable
+
 * REST - networkhardware/enable
 * bin - networkhardware enable
 * js - networkhardware.enable
@@ -98,7 +109,8 @@ Enable Device to be used.
 
 
 
-### networkhardware.factory
+### Action networkhardware factory
+
 * REST - networkhardware/factory
 * bin - networkhardware factory
 * js - networkhardware.factory

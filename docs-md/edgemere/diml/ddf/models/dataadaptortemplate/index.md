@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class DataAdaptorTemplate
+permalink: class-DataAdaptorTemplate
+parent: classes
+---
+
 # DataAdaptorTemplate
 
 Data Adaptor with the arguments waiting to be filled out. This allows for the late binding of the data adaptor in the blue print.

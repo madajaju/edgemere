@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class PolicyCollection
+permalink: class-PolicyCollection
+parent: classes
+---
+
 # PolicyCollection
 
 Any entity that has policies should have a Policy Collection association

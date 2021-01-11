@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class MultiCloud
+permalink: class-MultiCloud
+parent: classes
+---
+
 # MultiCloud
 
 Multi Cloud is an aggregation of cloud tied together with policies that services are deployed.

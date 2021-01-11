@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class MetricAttribute
+permalink: class-MetricAttribute
+parent: classes
+---
+
 # MetricAttribute
 
 Attribute type of Metric. This is for metrics that are descriptiive not consumable
@@ -27,28 +34,29 @@ Attribute type of Metric. This is for metrics that are descriptiive not consumab
 
 ## Methods
 
-* [consume() - Consume attribute metric to the current value](#Action-consume)
+* [consume() - Consume attribute metric to the current value](#action-consume)
 
-* [copy() - Copy Metric](#Action-copy)
+* [copy() - Copy Metric](#action-copy)
 
-* [lessThanEq() - Test less than or equal to the value passed in](#Action-lessThanEq)
+* [lessThanEq() - Test less than or equal to the value passed in](#action-lessThanEq)
 
-* [minus() - Add attribute metric to the current value](#Action-minus)
+* [minus() - Add attribute metric to the current value](#action-minus)
 
-* [plus() - Add attribute metric to the current value](#Action-plus)
+* [plus() - Add attribute metric to the current value](#action-plus)
 
-* [valueToString() - Change to string Metric Consumeable](#Action-valueToString)
+* [valueToString() - Change to string Metric Consumeable](#action-valueToString)
 
-* [factory() - Create a metric based on the metrictype table](#Action-factory)
+* [factory() - Create a metric based on the metrictype table](#action-factory)
 
-* [greaterThanEq() - Test greater than or equal to the value passed in](#Action-greaterThanEq)
+* [greaterThanEq() - Test greater than or equal to the value passed in](#action-greaterThanEq)
 
-* [set() - Add value to a metric](#Action-set)
+* [set() - Add value to a metric](#action-set)
 
 
 <h2>Method Details</h2>
     
-### metricattribute.consume
+### Action metricattribute consume
+
 * REST - metricattribute/consume
 * bin - metricattribute consume
 * js - metricattribute.consume
@@ -62,7 +70,8 @@ Consume attribute metric to the current value
 
 
 
-### metricattribute.copy
+### Action metricattribute copy
+
 * REST - metricattribute/copy
 * bin - metricattribute copy
 * js - metricattribute.copy
@@ -75,7 +84,8 @@ Copy Metric
 
 
 
-### metricattribute.lessThanEq
+### Action metricattribute lessThanEq
+
 * REST - metricattribute/lessThanEq
 * bin - metricattribute lessThanEq
 * js - metricattribute.lessThanEq
@@ -89,7 +99,8 @@ Test less than or equal to the value passed in
 
 
 
-### metricattribute.minus
+### Action metricattribute minus
+
 * REST - metricattribute/minus
 * bin - metricattribute minus
 * js - metricattribute.minus
@@ -103,7 +114,8 @@ Add attribute metric to the current value
 
 
 
-### metricattribute.plus
+### Action metricattribute plus
+
 * REST - metricattribute/plus
 * bin - metricattribute plus
 * js - metricattribute.plus
@@ -117,7 +129,8 @@ Add attribute metric to the current value
 
 
 
-### metricattribute.valueToString
+### Action metricattribute valueToString
+
 * REST - metricattribute/valueToString
 * bin - metricattribute valueToString
 * js - metricattribute.valueToString
@@ -130,7 +143,8 @@ Change to string Metric Consumeable
 
 
 
-### metricattribute.factory
+### Action metricattribute factory
+
 * REST - metricattribute/factory
 * bin - metricattribute factory
 * js - metricattribute.factory
@@ -145,7 +159,8 @@ Create a metric based on the metrictype table
 
 
 
-### metricattribute.greaterThanEq
+### Action metricattribute greaterThanEq
+
 * REST - metricattribute/greaterThanEq
 * bin - metricattribute greaterThanEq
 * js - metricattribute.greaterThanEq
@@ -159,7 +174,8 @@ Test greater than or equal to the value passed in
 
 
 
-### metricattribute.set
+### Action metricattribute set
+
 * REST - metricattribute/set
 * bin - metricattribute set
 * js - metricattribute.set

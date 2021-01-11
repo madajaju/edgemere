@@ -7,21 +7,21 @@ left to right direction
 queue external #black [
     <b><color:white>external</color></b>
 ]
-
+    
 interface 80
 80 - - external
-
+    
 interface 443
 443 - - external
-
+    
 interface 8080
 8080 - - external
+    
 
 
+entity ailtire_appname_family #black
 
-entity "ailtire_appname_family" #black
-
-entity edgemereStack #lavender {
+stack "edgemere" as edgemereStack #lavender {
     queue edgemereStacksnet #black [
         <b><color:white>parent</color></b>
     ]
@@ -68,19 +68,19 @@ package "edgemere" #lavender {
     queue childrennet #black [
             <b><color:white>children</color></b>
     ]
-
+    
     childrennet -[#black]- ailtire_appname_family
-
+    
     queue siblingnet #blue [
             <b><color:white>sibling</color></b>
     ]
-
+    
 
 
 node "frontend" as frontendService {
     card "/web" as webmap
     card "/docs" as docsmap
-
+    
 }
 node "admin" as adminService
 node "aml" as amlService
@@ -102,15 +102,15 @@ node "doc" as docService
             collections "sa:latest" as salatestimage
             collections "sml:latest" as smllatestimage
             collections "sdi:latest" as sdilatestimage
-
+    
         artifact "redis" as redisimage
-
+    
         artifact "traefik:latest" as traefiklatestimage
-
+    
         artifact "edgemere_web" as edgemere_webimage
-
+    
         artifact "edgemere_doc" as edgemere_docimage
-
+    
 }
 
 external -[#black]- frontendService
@@ -161,33 +161,33 @@ docService .... edgemere_docimage
 frontendService .... traefiklatestimage
 
 edgemerelatestimage - -> edgemereStack
-
+    
 amllatestimage - -> amlStack
-
+    
 amlStacksnet - -[#black]- - ailtire_appname_family
-
+    
 cpllatestimage - -> cplStack
-
+    
 cplStacksnet - -[#black]- - ailtire_appname_family
-
+    
 dimllatestimage - -> dimlStack
-
+    
 dimlStacksnet - -[#black]- - ailtire_appname_family
-
+    
 ialatestimage - -> iaStack
-
+    
 iaStacksnet - -[#black]- - ailtire_appname_family
-
+    
 salatestimage - -> saStack
-
+    
 smllatestimage - -> smlStack
-
+    
 smlStacksnet - -[#black]- - ailtire_appname_family
-
+    
 sdilatestimage - -> sdiStack
-
+    
 sdiStacksnet - -[#black]- - ailtire_appname_family
-
+    
 
 @enduml
 

@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class DataStrategy
+permalink: class-DataStrategy
+parent: classes
+---
+
 # DataStrategy
 
 Description long description

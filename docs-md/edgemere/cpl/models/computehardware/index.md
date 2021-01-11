@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class ComputeHardware
+permalink: class-ComputeHardware
+parent: classes
+---
+
 # ComputeHardware
 
 This represents compute/CPU hardware
@@ -30,20 +37,21 @@ This represents compute/CPU hardware
 
 ## Methods
 
-* [addStats() - Add Stats to the Hardware](#Action-addStats)
+* [addStats() - Add Stats to the Hardware](#action-addStats)
 
-* [create() - Create Hardware](#Action-create)
+* [create() - Create Hardware](#action-create)
 
-* [disable() - Disable Device and its hardware](#Action-disable)
+* [disable() - Disable Device and its hardware](#action-disable)
 
-* [enable() - Enable Device to be used.](#Action-enable)
+* [enable() - Enable Device to be used.](#action-enable)
 
-* [factory() - Create Hardware based on properties](#Action-factory)
+* [factory() - Create Hardware based on properties](#action-factory)
 
 
 <h2>Method Details</h2>
     
-### computehardware.addStats
+### Action computehardware addStats
+
 * REST - computehardware/addStats
 * bin - computehardware addStats
 * js - computehardware.addStats
@@ -57,7 +65,8 @@ Add Stats to the Hardware
 
 
 
-### computehardware.create
+### Action computehardware create
+
 * REST - computehardware/create
 * bin - computehardware create
 * js - computehardware.create
@@ -72,7 +81,8 @@ Create Hardware
 
 
 
-### computehardware.disable
+### Action computehardware disable
+
 * REST - computehardware/disable
 * bin - computehardware disable
 * js - computehardware.disable
@@ -85,7 +95,8 @@ Disable Device and its hardware
 
 
 
-### computehardware.enable
+### Action computehardware enable
+
 * REST - computehardware/enable
 * bin - computehardware enable
 * js - computehardware.enable
@@ -98,7 +109,8 @@ Enable Device to be used.
 
 
 
-### computehardware.factory
+### Action computehardware factory
+
 * REST - computehardware/factory
 * bin - computehardware factory
 * js - computehardware.factory

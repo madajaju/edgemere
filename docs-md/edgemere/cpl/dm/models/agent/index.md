@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class Agent
+permalink: class-Agent
+parent: classes
+---
+
 # Agent
 
 This is the Device Agent that the Device Manager connects to

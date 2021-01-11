@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class DataFlowInstance
+permalink: class-DataFlowInstance
+parent: classes
+---
+
 # DataFlowInstance
 
 This is an instance of the data flow when a blue print is instantiated.
@@ -31,12 +38,13 @@ This is an instance of the data flow when a blue print is instantiated.
 
 ## Methods
 
-* [create() - Create a Data Flow Instance](#Action-create)
+* [create() - Create a Data Flow Instance](#action-create)
 
 
 <h2>Method Details</h2>
     
-### dataflowinstance.create
+### Action dataflowinstance create
+
 * REST - dataflowinstance/create
 * bin - dataflowinstance create
 * js - dataflowinstance.create

@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class ServiceInstance
+permalink: class-ServiceInstance
+parent: classes
+---
+
 # ServiceInstance
 
 This is an instance of a service running on resources. The Instance is allocated to resources based on the environment and policies of the Service and the Servicelet. A set of actions can be performed on the instance as defined by the runScripts association. 

@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class Service
+permalink: class-Service
+parent: classes
+---
+
 # Service
 
 A Service is an orchestratable element that represents a container or vm running against a resource. The actual execution of the service is tracked by the ServiceInstance. A stack is made up of multiple services.
@@ -42,14 +49,15 @@ A Service is an orchestratable element that represents a container or vm running
 
 ## Methods
 
-* [create() - Create a Service](#Action-create)
+* [create() - Create a Service](#action-create)
 
-* [createlet() - Create a Stack](#Action-createlet)
+* [createlet() - Create a Stack](#action-createlet)
 
 
 <h2>Method Details</h2>
     
-### service.create
+### Action service create
+
 * REST - service/create
 * bin - service create
 * js - service.create
@@ -62,7 +70,8 @@ Create a Service
 
 
 
-### service.createlet
+### Action service createlet
+
 * REST - service/createlet
 * bin - service createlet
 * js - service.createlet

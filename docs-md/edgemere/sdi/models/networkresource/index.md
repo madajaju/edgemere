@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class NetworkResource
+permalink: class-NetworkResource
+parent: classes
+---
+
 # NetworkResource
 
 Logical Resource of Network that are provisioned
@@ -34,14 +41,15 @@ Logical Resource of Network that are provisioned
 
 ## Methods
 
-* [factory() - Create a Resource based on the hardware to resource table](#Action-factory)
+* [factory() - Create a Resource based on the hardware to resource table](#action-factory)
 
-* [provision() - Provision the Resource](#Action-provision)
+* [provision() - Provision the Resource](#action-provision)
 
 
 <h2>Method Details</h2>
     
-### networkresource.factory
+### Action networkresource factory
+
 * REST - networkresource/factory
 * bin - networkresource factory
 * js - networkresource.factory
@@ -56,7 +64,8 @@ Create a Resource based on the hardware to resource table
 
 
 
-### networkresource.provision
+### Action networkresource provision
+
 * REST - networkresource/provision
 * bin - networkresource provision
 * js - networkresource.provision

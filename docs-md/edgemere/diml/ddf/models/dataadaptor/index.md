@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class DataAdaptor
+permalink: class-DataAdaptor
+parent: classes
+---
+
 # DataAdaptor
 
 The Data Adaptor is the mechanism that is a proxy to the data in the physical form. For example there is a Data Adaptor for a filesystem, SQL database, or a data stream. Data Adaptors handle the ingestion of the data, management of the data, and access to the data.
@@ -31,12 +38,13 @@ The Data Adaptor is the mechanism that is a proxy to the data in the physical fo
 
 ## Methods
 
-* [create() - Create a Data Adaptor](#Action-create)
+* [create() - Create a Data Adaptor](#action-create)
 
 
 <h2>Method Details</h2>
     
-### dataadaptor.create
+### Action dataadaptor create
+
 * REST - dataadaptor/create
 * bin - dataadaptor create
 * js - dataadaptor.create

@@ -1,3 +1,10 @@
+---
+layout: default
+title: Usecase Manage Environment
+permalink: usecase-ManageEnvironment
+parent: Usecases
+---
+
 # Manage Environment
 
 Manage Environment allows the actors (IT Operations and Stack Developer) to create environments, and establish policies for services running in the environment.
@@ -6,17 +13,18 @@ Manage Environment allows the actors (IT Operations and Stack Developer) to crea
 
 ## Actors
 
-* [IT Operations](/actors/ITOperations/index.md)
-* [Stack Developer](/actors/StackDeveloper/index.md)
+* [IT Operations](actor-itops)
+* [Stack Developer](actor-stackdev)
 
 
 ## Detail Scenarios
-* [Manage Environment](#Scenario-CreateEnvironment)
-* [Manage Environment](#Scenario-DeleteEnvironment)
-* [Manage Environment](#Scenario-DisableEnvironment)
-* [Manage Environment](#Scenario-EnableEnvironment)
-* [Manage Environment](#Scenario-ManagePoliciesinEnvironment)
-* [Manage Environment](#Scenario-UpdateEnvironment)
+
+* [Manage Environment](#scenario-CreateEnvironment)
+* [Manage Environment](#scenario-DeleteEnvironment)
+* [Manage Environment](#scenario-DisableEnvironment)
+* [Manage Environment](#scenario-EnableEnvironment)
+* [Manage Environment](#scenario-ManagePoliciesinEnvironment)
+* [Manage Environment](#scenario-UpdateEnvironment)
 
   
 ### Scenario Create Environment
@@ -32,7 +40,7 @@ IT Opererations create environments and assigns a Multi Cloud to the Environment
 
 #### Actors
 
-* [IT Operations](actors/itops/index.md)
+* [IT Operations](actor-itops)
 
 
 ### Scenario Delete Environment
@@ -48,7 +56,7 @@ Delete Environment allows IT Operations to delete an environment and suspend all
 
 #### Actors
 
-* [IT Operations](actors/itops/index.md)
+* [IT Operations](actor-itops)
 
 
 ### Scenario Disable Environment
@@ -64,7 +72,7 @@ IT Operations disables an environment so services are suspended and cannot launc
 
 #### Actors
 
-* [IT Operations](actors/itops/index.md)
+* [IT Operations](actor-itops)
 
 
 ### Scenario Enable Environment
@@ -80,7 +88,7 @@ IT Operations has the ability to enable an environment to manage services
 
 #### Actors
 
-* [IT Operations](actors/itops/index.md)
+* [IT Operations](actor-itops)
 
 
 ### Scenario Manage Policies in Environment
@@ -96,7 +104,7 @@ IT Operations adds and removes policies from the environment
 
 #### Actors
 
-* [IT Operations](actors/itops/index.md)
+* [IT Operations](actor-itops)
 
 
 ### Scenario Update Environment
@@ -112,8 +120,7 @@ IT Operations updates attributes of the environment
 
 #### Actors
 
-* [IT Operations](actors/itops/index.md)
-
+* [IT Operations](actor-itops)
 
 
 

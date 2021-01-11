@@ -1,3 +1,10 @@
+---
+layout: default
+title: Environment test
+permalink: environment--edgemere-cpl-tp-test
+nav_exclude: true
+---
+
 ### test
 
 

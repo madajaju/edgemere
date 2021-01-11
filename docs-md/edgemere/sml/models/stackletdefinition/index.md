@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class StackletDefinition
+permalink: class-StackletDefinition
+parent: classes
+---
+
 # StackletDefinition
 
 This is a combination of the stack with a specific environment. This allows for a stack to behave differently depending on the envionrment it is in.
@@ -32,12 +39,13 @@ This is a combination of the stack with a specific environment. This allows for 
 
 ## Methods
 
-* [create() - Create a Stack](#Action-create)
+* [create() - Create a Stack](#action-create)
 
 
 <h2>Method Details</h2>
     
-### stackletdefinition.create
+### Action stackletdefinition create
+
 * REST - stackletdefinition/create
 * bin - stackletdefinition create
 * js - stackletdefinition.create

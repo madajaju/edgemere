@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class PhysicalProfile
+permalink: class-PhysicalProfile
+parent: classes
+---
+
 # PhysicalProfile
 
 The Physical Profile contains the capabilities, availability, reserves andmetrics of the element in the physical domain
@@ -46,22 +53,23 @@ The Physical Profile contains the capabilities, availability, reserves andmetric
 
 ## Methods
 
-* [combine() - Combine Physical Profile](#Action-combine)
+* [combine() - Combine Physical Profile](#action-combine)
 
-* [consume() - Consume the requirements, part or all of the requirements](#Action-consume)
+* [consume() - Consume the requirements, part or all of the requirements](#action-consume)
 
-* [create() - Create Physical Profile](#Action-create)
+* [create() - Create Physical Profile](#action-create)
 
-* [propagate() - Propagate Physical Profile](#Action-propagate)
+* [propagate() - Propagate Physical Profile](#action-propagate)
 
-* [satisfies() - Satisfies the requirements, part or all of the requirements](#Action-satisfies)
+* [satisfies() - Satisfies the requirements, part or all of the requirements](#action-satisfies)
 
-* [stats() - get the Stats for the physical profile](#Action-stats)
+* [stats() - get the Stats for the physical profile](#action-stats)
 
 
 <h2>Method Details</h2>
     
-### physicalprofile.combine
+### Action physicalprofile combine
+
 * REST - physicalprofile/combine
 * bin - physicalprofile combine
 * js - physicalprofile.combine
@@ -75,7 +83,8 @@ Combine Physical Profile
 
 
 
-### physicalprofile.consume
+### Action physicalprofile consume
+
 * REST - physicalprofile/consume
 * bin - physicalprofile consume
 * js - physicalprofile.consume
@@ -89,7 +98,8 @@ Consume the requirements, part or all of the requirements
 
 
 
-### physicalprofile.create
+### Action physicalprofile create
+
 * REST - physicalprofile/create
 * bin - physicalprofile create
 * js - physicalprofile.create
@@ -103,7 +113,8 @@ Create Physical Profile
 
 
 
-### physicalprofile.propagate
+### Action physicalprofile propagate
+
 * REST - physicalprofile/propagate
 * bin - physicalprofile propagate
 * js - physicalprofile.propagate
@@ -119,7 +130,8 @@ Propagate Physical Profile
 
 
 
-### physicalprofile.satisfies
+### Action physicalprofile satisfies
+
 * REST - physicalprofile/satisfies
 * bin - physicalprofile satisfies
 * js - physicalprofile.satisfies
@@ -133,7 +145,8 @@ Satisfies the requirements, part or all of the requirements
 
 
 
-### physicalprofile.stats
+### Action physicalprofile stats
+
 * REST - physicalprofile/stats
 * bin - physicalprofile stats
 * js - physicalprofile.stats

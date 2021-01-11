@@ -1,15 +1,20 @@
+---
+layout: default
+title: All Actors
+permalink: all-actors
+---
 # Actors
 
-* [Actor](./actor/index.md) - Long description Continued on next line
-* [Application Developer](./applicationdeveloper/index.md) - Long description Continued on next line
-* [Chief Data Officer](./cdo/index.md) - Long description Continued on next line
-* [Data Analyst](./analyst/index.md) - Long description Continued on next line
-* [DataEngineer](./dataengineer/index.md) - Long description Continued on next line
-* [Data Scientist](./datascientist/index.md) - Long description Continued on next line
-* [Data Steward](./datasteward/index.md) - Long description Continued on next line
-* [DevOps Engineer](./devops/index.md) - Long description Continued on next line
-* [IT Operations](./itops/index.md) - Long description Continued on next line
-* [Stack Developer](./stackdev/index.md) - Long description Continued on next line
+* [Actor](actor-actor) - Long description Continued on next line
+* [Application Developer](actor-applicationdeveloper) - Long description Continued on next line
+* [Chief Data Officer](actor-cdo) - Long description Continued on next line
+* [Data Analyst](actor-analyst) - Long description Continued on next line
+* [DataEngineer](actor-dataengineer) - Long description Continued on next line
+* [Data Scientist](actor-datascientist) - Long description Continued on next line
+* [Data Steward](actor-datasteward) - Long description Continued on next line
+* [DevOps Engineer](actor-devops) - Long description Continued on next line
+* [IT Operations](actor-itops) - Long description Continued on next line
+* [Stack Developer](actor-stackdev) - Long description Continued on next line
 
 
-![All Actors](./All.svg)
+![All Actors](./actors.svg)

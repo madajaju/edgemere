@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class Device
+permalink: class-Device
+parent: classes
+---
+
 # Device
 
 Representation of a device in a datacenter
@@ -52,24 +59,25 @@ Representation of a device in a datacenter
 
 ## Methods
 
-* [addToHardware() - Create a Device](#Action-addToHardware)
+* [addToHardware() - Create a Device](#action-addToHardware)
 
-* [create() - Create a Device](#Action-create)
+* [create() - Create a Device](#action-create)
 
-* [disable() - Disable Device and its hardware](#Action-disable)
+* [disable() - Disable Device and its hardware](#action-disable)
 
-* [enable() - Enable Device to be used.](#Action-enable)
+* [enable() - Enable Device to be used.](#action-enable)
 
-* [getReservations() - Get reservation from the requirements](#Action-getReservations)
+* [getReservations() - Get reservation from the requirements](#action-getReservations)
 
-* [provision() - Provision Hardware to meet the requirements](#Action-provision)
+* [provision() - Provision Hardware to meet the requirements](#action-provision)
 
-* [reserve() - Reserve a resource](#Action-reserve)
+* [reserve() - Reserve a resource](#action-reserve)
 
 
 <h2>Method Details</h2>
     
-### device.addToHardware
+### Action device addToHardware
+
 * REST - device/addToHardware
 * bin - device addToHardware
 * js - device.addToHardware
@@ -82,7 +90,8 @@ Create a Device
 
 
 
-### device.create
+### Action device create
+
 * REST - device/create
 * bin - device create
 * js - device.create
@@ -97,7 +106,8 @@ Create a Device
 
 
 
-### device.disable
+### Action device disable
+
 * REST - device/disable
 * bin - device disable
 * js - device.disable
@@ -110,7 +120,8 @@ Disable Device and its hardware
 
 
 
-### device.enable
+### Action device enable
+
 * REST - device/enable
 * bin - device enable
 * js - device.enable
@@ -123,7 +134,8 @@ Enable Device to be used.
 
 
 
-### device.getReservations
+### Action device getReservations
+
 * REST - device/getReservations
 * bin - device getReservations
 * js - device.getReservations
@@ -137,7 +149,8 @@ Get reservation from the requirements
 
 
 
-### device.provision
+### Action device provision
+
 * REST - device/provision
 * bin - device provision
 * js - device.provision
@@ -151,7 +164,8 @@ Provision Hardware to meet the requirements
 
 
 
-### device.reserve
+### Action device reserve
+
 * REST - device/reserve
 * bin - device reserve
 * js - device.reserve

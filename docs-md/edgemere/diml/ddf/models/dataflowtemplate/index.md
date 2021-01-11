@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class DataFlowTemplate
+permalink: class-DataFlowTemplate
+parent: classes
+---
+
 # DataFlowTemplate
 
 Data Flow Template is how a Blue Print refrences a Data Flow with late binding of sources and sinks when data sources are added to a blueprint.
@@ -30,12 +37,13 @@ Data Flow Template is how a Blue Print refrences a Data Flow with late binding o
 
 ## Methods
 
-* [create() - Create a Data Flow Template](#Action-create)
+* [create() - Create a Data Flow Template](#action-create)
 
 
 <h2>Method Details</h2>
     
-### dataflowtemplate.create
+### Action dataflowtemplate create
+
 * REST - dataflowtemplate/create
 * bin - dataflowtemplate create
 * js - dataflowtemplate.create

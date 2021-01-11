@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class MetricComposite
+permalink: class-MetricComposite
+parent: classes
+---
+
 # MetricComposite
 
 Composite type of Metric. This is for metrics that are a group of metrics
@@ -33,32 +40,33 @@ Composite type of Metric. This is for metrics that are a group of metrics
 
 ## Methods
 
-* [consume() - Substract metric to the current value up to zero](#Action-consume)
+* [consume() - Substract metric to the current value up to zero](#action-consume)
 
-* [copy() - Copy Metric](#Action-copy)
+* [copy() - Copy Metric](#action-copy)
 
-* [create() - Create Composite Metric](#Action-create)
+* [create() - Create Composite Metric](#action-create)
 
-* [findDeep() - Find Metric with name](#Action-findDeep)
+* [findDeep() - Find Metric with name](#action-findDeep)
 
-* [findMatchDeep() - Find Metric with name](#Action-findMatchDeep)
+* [findMatchDeep() - Find Metric with name](#action-findMatchDeep)
 
-* [lessThanEq() - Test less than or equal to the value passed in](#Action-lessThanEq)
+* [lessThanEq() - Test less than or equal to the value passed in](#action-lessThanEq)
 
-* [minus() - Substract metric to the current value](#Action-minus)
+* [minus() - Substract metric to the current value](#action-minus)
 
-* [plus() - Add metric to the current value](#Action-plus)
+* [plus() - Add metric to the current value](#action-plus)
 
-* [set() - Set metric to the current value](#Action-set)
+* [set() - Set metric to the current value](#action-set)
 
-* [factory() - Create a metric based on the metrictype table](#Action-factory)
+* [factory() - Create a metric based on the metrictype table](#action-factory)
 
-* [greaterThanEq() - Test greater than or equal to the value passed in](#Action-greaterThanEq)
+* [greaterThanEq() - Test greater than or equal to the value passed in](#action-greaterThanEq)
 
 
 <h2>Method Details</h2>
     
-### metriccomposite.consume
+### Action metriccomposite consume
+
 * REST - metriccomposite/consume
 * bin - metriccomposite consume
 * js - metriccomposite.consume
@@ -72,7 +80,8 @@ Substract metric to the current value up to zero
 
 
 
-### metriccomposite.copy
+### Action metriccomposite copy
+
 * REST - metriccomposite/copy
 * bin - metriccomposite copy
 * js - metriccomposite.copy
@@ -85,7 +94,8 @@ Copy Metric
 
 
 
-### metriccomposite.create
+### Action metriccomposite create
+
 * REST - metriccomposite/create
 * bin - metriccomposite create
 * js - metriccomposite.create
@@ -100,7 +110,8 @@ Create Composite Metric
 
 
 
-### metriccomposite.findDeep
+### Action metriccomposite findDeep
+
 * REST - metriccomposite/findDeep
 * bin - metriccomposite findDeep
 * js - metriccomposite.findDeep
@@ -114,7 +125,8 @@ Find Metric with name
 
 
 
-### metriccomposite.findMatchDeep
+### Action metriccomposite findMatchDeep
+
 * REST - metriccomposite/findMatchDeep
 * bin - metriccomposite findMatchDeep
 * js - metriccomposite.findMatchDeep
@@ -128,7 +140,8 @@ Find Metric with name
 
 
 
-### metriccomposite.lessThanEq
+### Action metriccomposite lessThanEq
+
 * REST - metriccomposite/lessThanEq
 * bin - metriccomposite lessThanEq
 * js - metriccomposite.lessThanEq
@@ -142,7 +155,8 @@ Test less than or equal to the value passed in
 
 
 
-### metriccomposite.minus
+### Action metriccomposite minus
+
 * REST - metriccomposite/minus
 * bin - metriccomposite minus
 * js - metriccomposite.minus
@@ -156,7 +170,8 @@ Substract metric to the current value
 
 
 
-### metriccomposite.plus
+### Action metriccomposite plus
+
 * REST - metriccomposite/plus
 * bin - metriccomposite plus
 * js - metriccomposite.plus
@@ -170,7 +185,8 @@ Add metric to the current value
 
 
 
-### metriccomposite.set
+### Action metriccomposite set
+
 * REST - metriccomposite/set
 * bin - metriccomposite set
 * js - metriccomposite.set
@@ -184,7 +200,8 @@ Set metric to the current value
 
 
 
-### metriccomposite.factory
+### Action metriccomposite factory
+
 * REST - metriccomposite/factory
 * bin - metriccomposite factory
 * js - metriccomposite.factory
@@ -199,7 +216,8 @@ Create a metric based on the metrictype table
 
 
 
-### metriccomposite.greaterThanEq
+### Action metriccomposite greaterThanEq
+
 * REST - metriccomposite/greaterThanEq
 * bin - metriccomposite greaterThanEq
 * js - metriccomposite.greaterThanEq

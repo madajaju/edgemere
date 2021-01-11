@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class MetricConsumeable
+permalink: class-MetricConsumeable
+parent: classes
+---
+
 # MetricConsumeable
 
 Consumeable Metric that is consumed when a resource is utilized
@@ -27,30 +34,31 @@ Consumeable Metric that is consumed when a resource is utilized
 
 ## Methods
 
-* [create() - Create Composite Metric](#Action-create)
+* [create() - Create Composite Metric](#action-create)
 
-* [valueToString() - Change to string Metric Consumeable](#Action-valueToString)
+* [valueToString() - Change to string Metric Consumeable](#action-valueToString)
 
-* [consume() - Consume value from a metric](#Action-consume)
+* [consume() - Consume value from a metric](#action-consume)
 
-* [copy() - Copy Metric](#Action-copy)
+* [copy() - Copy Metric](#action-copy)
 
-* [factory() - Create a metric based on the metrictype table](#Action-factory)
+* [factory() - Create a metric based on the metrictype table](#action-factory)
 
-* [greaterThanEq() - Test greater than or equal to the value passed in](#Action-greaterThanEq)
+* [greaterThanEq() - Test greater than or equal to the value passed in](#action-greaterThanEq)
 
-* [lessThanEq() - Test less than or equal to the value passed in](#Action-lessThanEq)
+* [lessThanEq() - Test less than or equal to the value passed in](#action-lessThanEq)
 
-* [minus() - Add value to a metric](#Action-minus)
+* [minus() - Add value to a metric](#action-minus)
 
-* [plus() - Add value to a metric](#Action-plus)
+* [plus() - Add value to a metric](#action-plus)
 
-* [set() - Add value to a metric](#Action-set)
+* [set() - Add value to a metric](#action-set)
 
 
 <h2>Method Details</h2>
     
-### metricconsumeable.create
+### Action metricconsumeable create
+
 * REST - metricconsumeable/create
 * bin - metricconsumeable create
 * js - metricconsumeable.create
@@ -65,7 +73,8 @@ Create Composite Metric
 
 
 
-### metricconsumeable.valueToString
+### Action metricconsumeable valueToString
+
 * REST - metricconsumeable/valueToString
 * bin - metricconsumeable valueToString
 * js - metricconsumeable.valueToString
@@ -78,7 +87,8 @@ Change to string Metric Consumeable
 
 
 
-### metricconsumeable.consume
+### Action metricconsumeable consume
+
 * REST - metricconsumeable/consume
 * bin - metricconsumeable consume
 * js - metricconsumeable.consume
@@ -92,7 +102,8 @@ Consume value from a metric
 
 
 
-### metricconsumeable.copy
+### Action metricconsumeable copy
+
 * REST - metricconsumeable/copy
 * bin - metricconsumeable copy
 * js - metricconsumeable.copy
@@ -105,7 +116,8 @@ Copy Metric
 
 
 
-### metricconsumeable.factory
+### Action metricconsumeable factory
+
 * REST - metricconsumeable/factory
 * bin - metricconsumeable factory
 * js - metricconsumeable.factory
@@ -120,7 +132,8 @@ Create a metric based on the metrictype table
 
 
 
-### metricconsumeable.greaterThanEq
+### Action metricconsumeable greaterThanEq
+
 * REST - metricconsumeable/greaterThanEq
 * bin - metricconsumeable greaterThanEq
 * js - metricconsumeable.greaterThanEq
@@ -134,7 +147,8 @@ Test greater than or equal to the value passed in
 
 
 
-### metricconsumeable.lessThanEq
+### Action metricconsumeable lessThanEq
+
 * REST - metricconsumeable/lessThanEq
 * bin - metricconsumeable lessThanEq
 * js - metricconsumeable.lessThanEq
@@ -148,7 +162,8 @@ Test less than or equal to the value passed in
 
 
 
-### metricconsumeable.minus
+### Action metricconsumeable minus
+
 * REST - metricconsumeable/minus
 * bin - metricconsumeable minus
 * js - metricconsumeable.minus
@@ -162,7 +177,8 @@ Add value to a metric
 
 
 
-### metricconsumeable.plus
+### Action metricconsumeable plus
+
 * REST - metricconsumeable/plus
 * bin - metricconsumeable plus
 * js - metricconsumeable.plus
@@ -176,7 +192,8 @@ Add value to a metric
 
 
 
-### metricconsumeable.set
+### Action metricconsumeable set
+
 * REST - metricconsumeable/set
 * bin - metricconsumeable set
 * js - metricconsumeable.set

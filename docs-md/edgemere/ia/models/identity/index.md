@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class Identity
+permalink: class-Identity
+parent: classes
+---
+
 # Identity
 
 Identity of the entity in the system

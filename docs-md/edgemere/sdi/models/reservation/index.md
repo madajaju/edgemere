@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class Reservation
+permalink: class-Reservation
+parent: classes
+---
+
 # Reservation
 
 A reservation fullfils the request to the system for resources. When a request for a resource is made from a cloud. A reservation for the resource request is created for each device or devices that can satistfy the request. When the request is fulfilled the reservations are then no longer needed.
@@ -41,16 +48,17 @@ A reservation fullfils the request to the system for resources. When a request f
 
 ## Methods
 
-* [confirm() - Confirm the Reservation](#Action-confirm)
+* [confirm() - Confirm the Reservation](#action-confirm)
 
-* [create() - Create the Reservation](#Action-create)
+* [create() - Create the Reservation](#action-create)
 
-* [free() - Confirm the Reservation](#Action-free)
+* [free() - Confirm the Reservation](#action-free)
 
 
 <h2>Method Details</h2>
     
-### reservation.confirm
+### Action reservation confirm
+
 * REST - reservation/confirm
 * bin - reservation confirm
 * js - reservation.confirm
@@ -63,7 +71,8 @@ Confirm the Reservation
 
 
 
-### reservation.create
+### Action reservation create
+
 * REST - reservation/create
 * bin - reservation create
 * js - reservation.create
@@ -76,7 +85,8 @@ Create the Reservation
 
 
 
-### reservation.free
+### Action reservation free
+
 * REST - reservation/free
 * bin - reservation free
 * js - reservation.free

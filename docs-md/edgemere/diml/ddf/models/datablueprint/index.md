@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class DataBluePrint
+permalink: class-DataBluePrint
+parent: classes
+---
+
 # DataBluePrint
 
 Data Blue Print allows a Data Scientist to describe how to manage data
@@ -35,14 +42,15 @@ Data Blue Print allows a Data Scientist to describe how to manage data
 
 ## Methods
 
-* [create() - Create a Data Blue Print](#Action-create)
+* [create() - Create a Data Blue Print](#action-create)
 
-* [deploy() - Deploy a Data Blue Print with sources](#Action-deploy)
+* [deploy() - Deploy a Data Blue Print with sources](#action-deploy)
 
 
 <h2>Method Details</h2>
     
-### datablueprint.create
+### Action datablueprint create
+
 * REST - datablueprint/create
 * bin - datablueprint create
 * js - datablueprint.create
@@ -57,7 +65,8 @@ Create a Data Blue Print
 
 
 
-### datablueprint.deploy
+### Action datablueprint deploy
+
 * REST - datablueprint/deploy
 * bin - datablueprint deploy
 * js - datablueprint.deploy

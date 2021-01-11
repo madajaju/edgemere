@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class RunScript
+permalink: class-RunScript
+parent: classes
+---
+
 # RunScript
 
 Description long description

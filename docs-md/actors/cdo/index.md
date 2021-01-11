@@ -1,3 +1,9 @@
+---
+layout: default
+title: Actor Chief Data Officer
+permalink: actor-cdo
+---
+
 # Chief Data Officer
 
 Long description Continued on next line
@@ -6,10 +12,10 @@ Long description Continued on next line
 
 ## Use Cases
 
-* [Manage Data Procedures](../../edgemere/diml/ddf/usecases/ManageDataProcedures)
-* [Manage Data Governance](../../edgemere/diml/dml/usecases/ManageDataGovernance)
-* [Manage Data Policies](../../edgemere/diml/dml/usecases/ManageDataPolicies)
-* [Manage Data Strategy](../../edgemere/diml/dml/usecases/ManageDataStrategy)
+* [Manage Data Procedures](usecase-ManageDataProcedures)
+* [Manage Data Governance](usecase-ManageDataGovernance)
+* [Manage Data Policies](usecase-ManageDataPolicies)
+* [Manage Data Strategy](usecase-ManageDataStrategy)
 
   
 ![Use Case Diagram](./UseCase.svg)
@@ -18,8 +24,8 @@ Long description Continued on next line
 TBD
 
 ## Command Line Interface
-* [ edgemere diml ddf dataprocedure list](./action/dataprocedure/list) - Manage Data Procedures is the description
-* [ edgemere diml dml data govern](./action/data/govern) - Manage Data Governance is the description
-* [ edgemere diml dml datapolicy list](./action/datapolicy/list) - Manage Data Policies is the description
-* [ edgemere diml dml datastrategy list](./action/datastrategy/list) - Manage Data Strategy is the description
+* [ edgemere diml ddf dataprocedure/list](action--edgemere-diml-ddf-dataprocedure-list) - Manage Data Procedures is the description
+* [ edgemere diml dml data/govern](action--edgemere-diml-dml-data-govern) - Manage Data Governance is the description
+* [ edgemere diml dml datapolicy/list](action--edgemere-diml-dml-datapolicy-list) - Manage Data Policies is the description
+* [ edgemere diml dml datastrategy/list](action--edgemere-diml-dml-datastrategy-list) - Manage Data Strategy is the description
 

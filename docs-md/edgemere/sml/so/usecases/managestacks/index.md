@@ -1,3 +1,10 @@
+---
+layout: default
+title: Usecase Manage Stacks
+permalink: usecase-ManageStacks
+parent: Usecases
+---
+
 # Manage Stacks
 
 Manage Stacks allows the stack developer to create, update, and delete stacks.
@@ -6,14 +13,15 @@ Manage Stacks allows the stack developer to create, update, and delete stacks.
 
 ## Actors
 
-* [Stack Developer](/actors/StackDeveloper/index.md)
-* [Application Developer](/actors/ApplicationDeveloper/index.md)
+* [Stack Developer](actor-stackdev)
+* [Application Developer](actor-applicationdeveloper)
 
 
 ## Detail Scenarios
-* [Manage Stacks](#Scenario-DeployStack)
-* [Manage Stacks](#Scenario-UninstallStack)
-* [Manage Stacks](#Scenario-UpdateStack)
+
+* [Manage Stacks](#scenario-DeployStack)
+* [Manage Stacks](#scenario-UninstallStack)
+* [Manage Stacks](#scenario-UpdateStack)
 
   
 ### Scenario Deploy Stack
@@ -29,7 +37,7 @@ Deploy Stack allows a devops engineer to deploy a stack to an environment. Param
 
 #### Actors
 
-* [DevOps Engineer](actors/devops/index.md)
+* [DevOps Engineer](actor-devops)
 
 
 ### Scenario Uninstall Stack
@@ -45,7 +53,7 @@ Uninstall Stack shuts down the stack and all of its services.
 
 #### Actors
 
-* [DevOps Engineer](actors/devops/index.md)
+* [DevOps Engineer](actor-devops)
 
 
 ### Scenario Update Stack
@@ -61,8 +69,7 @@ Update Stack allows the DevOps Engineer to update the stack after it has been de
 
 #### Actors
 
-* [DevOps Engineer](actors/devops/index.md)
-
+* [DevOps Engineer](actor-devops)
 
 
 

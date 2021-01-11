@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class DataReservation
+permalink: class-DataReservation
+parent: classes
+---
+
 # DataReservation
 
 Resrevation for utilixzing data and creating a data instance.

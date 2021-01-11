@@ -1,3 +1,10 @@
+---
+layout: default
+title: Usecase Manage Meta Data
+permalink: usecase-ManageMetaData
+parent: Usecases
+---
+
 # Manage Meta Data
 
 Manage Meta Data is the description
@@ -6,11 +13,12 @@ Manage Meta Data is the description
 
 ## Actors
 
-* [Data Scientist](/actors/DataScientist/index.md)
+* [Data Scientist](actor-datascientist)
 
 
 ## Detail Scenarios
-* [Manage Meta Data](#Scenario-ManageDataCatalog)
+
+* [Manage Meta Data](#scenario-ManageDataCatalog)
 
   
 ### Scenario Manage Data Catalog
@@ -26,8 +34,7 @@ Manage Data Catalog is the description
 
 #### Actors
 
-* [Data Scientist](actors/datascientist/index.md)
-
+* [Data Scientist](actor-datascientist)
 
 
 

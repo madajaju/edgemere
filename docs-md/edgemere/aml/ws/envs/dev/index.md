@@ -1,3 +1,10 @@
+---
+layout: default
+title: Environment dev
+permalink: environment--edgemere-aml-ws-dev
+nav_exclude: true
+---
+
 ### dev
 
 

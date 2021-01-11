@@ -1,19 +1,25 @@
+---
+layout: default
+title: Edgemere Top Level Architecture
+permalink: edgemere
+---
+
 # edgemere
-Description needs to be written
+Edgemere is a conceptual architecture targeted to multi-hybrid cloud and edge computing strategies including data,application, service, and infrastructure management. With the growth of IoT devices management of these elements from edge to data center is important to the success of the solution.
 
 
 
 # Actors
-* [Actor](./actors/actor)
-* [ApplicationDeveloper](./actors/applicationdeveloper)
-* [ChiefDataOfficer](./actors/cdo)
-* [DataAnalyst](./actors/analyst)
-* [DataEngineer](./actors/dataengineer)
-* [DataScientist](./actors/datascientist)
-* [DataSteward](./actors/datasteward)
-* [DevOpsEngineer](./actors/devops)
-* [ITOperations](./actors/itops)
-* [StackDeveloper](./actors/stackdev)
+* [Actor](actor-actor)
+* [ApplicationDeveloper](actor-applicationdeveloper)
+* [ChiefDataOfficer](actor-cdo)
+* [DataAnalyst](actor-analyst)
+* [DataEngineer](actor-dataengineer)
+* [DataScientist](actor-datascientist)
+* [DataSteward](actor-datasteward)
+* [DevOpsEngineer](actor-devops)
+* [ITOperations](actor-itops)
+* [StackDeveloper](actor-stackdev)
 
 
 # UseCases
@@ -27,13 +33,13 @@ Description needs to be written
 # Solution Architecture
 The Data Model for the  edgemere shows how the different objects and classes of object interact
 and their structure.
-* [Application Management Layer]("./package/edgemere/aml")
-* [Common Physical Layer]("./package/edgemere/cpl")
-* [Distributed Information Management Layer]("./package/edgemere/diml")
-* [Identity Aspect]("./package/edgemere/ia")
-* [Security Aspect]("./package/edgemere/sa")
-* [Service Management Layer]("./package/edgemere/sml")
-* [Software Defined Infrastructure]("./package/edgemere/sdi")
+* [Application Management Layer](package--edgemere-aml)
+* [Common Physical Layer](package--edgemere-cpl)
+* [Distributed Information Management Layer](package--edgemere-diml)
+* [Identity Aspect](package--edgemere-ia)
+* [Security Aspect](package--edgemere-sa)
+* [Service Management Layer](package--edgemere-sml)
+* [Software Defined Infrastructure](package--edgemere-sdi)
 
 
 ![Logical Diagram](./Logical.svg)
@@ -64,58 +70,62 @@ forwarded to micro-services through the REST interface of each micro-service.
 These are the micro-services for the subsystem. The combination of the micro-services help implement
 the subsystem's logic.
 
+
 ###local
+
 * admin : edgemere:latest
-    * pubsub : redis
-    * frontend : traefik:latest
-    * web : edgemere_web
-    * doc : edgemere_doc
-    
+* pubsub : redis
+* frontend : traefik:latest
+* web : edgemere_web
+* doc : edgemere_doc
+
 
 ###dev
+
 * admin : edgemere:latest
-    * aml : aml:latest
-    * cpl : cpl:latest
-    * diml : diml:latest
-    * ia : ia:latest
-    * sa : sa:latest
-    * sml : sml:latest
-    * sdi : sdi:latest
-    * pubsub : redis
-    * frontend : traefik:latest
-    * web : edgemere_web
-    * doc : edgemere_doc
-    
+* aml : aml:latest
+* cpl : cpl:latest
+* diml : diml:latest
+* ia : ia:latest
+* sa : sa:latest
+* sml : sml:latest
+* sdi : sdi:latest
+* pubsub : redis
+* frontend : traefik:latest
+* web : edgemere_web
+* doc : edgemere_doc
+
 
 ###test
+
 * admin : edgemere:latest
-    * aml : aml:latest
-    * cpl : cpl:latest
-    * diml : diml:latest
-    * ia : ia:latest
-    * sa : sa:latest
-    * sml : sml:latest
-    * sdi : sdi:latest
-    * pubsub : redis
-    * frontend : traefik:latest
-    * web : edgemere_web
-    * doc : edgemere_doc
-    
+* aml : aml:latest
+* cpl : cpl:latest
+* diml : diml:latest
+* ia : ia:latest
+* sa : sa:latest
+* sml : sml:latest
+* sdi : sdi:latest
+* pubsub : redis
+* frontend : traefik:latest
+* web : edgemere_web
+* doc : edgemere_doc
+
 
 ###prod
+
 * admin : edgemere:latest
-    * aml : aml:latest
-    * cpl : cpl:latest
-    * diml : diml:latest
-    * ia : ia:latest
-    * sa : sa:latest
-    * sml : sml:latest
-    * sdi : sdi:latest
-    * pubsub : redis
-    * frontend : traefik:latest
-    * web : edgemere_web
-    * doc : edgemere_doc
-    
+* aml : aml:latest
+* cpl : cpl:latest
+* diml : diml:latest
+* ia : ia:latest
+* sa : sa:latest
+* sml : sml:latest
+* sdi : sdi:latest
+* pubsub : redis
+* frontend : traefik:latest
+* web : edgemere_web
+* doc : edgemere_doc
 
 
 ## Interface Details

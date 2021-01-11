@@ -1,3 +1,10 @@
+---
+layout: default
+title: Usecase Manage Workloads
+permalink: usecase-ManageWorkloads
+parent: Usecases
+---
+
 # Manage Workloads
 
 Application Developers need the ability to connect applications together through Workflows. This gives the organization the automate complex data interactions between legacy and modern applications across a hybrid infrastructure (Multi-Hybrid Cloud).
@@ -6,16 +13,17 @@ Application Developers need the ability to connect applications together through
 
 ## Actors
 
-* [Application Developer](/actors/ApplicationDeveloper/index.md)
-* [DevOps Engineer](/actors/DevOpsEngineer/index.md)
+* [Application Developer](actor-applicationdeveloper)
+* [DevOps Engineer](actor-devops)
 
 
 ## Detail Scenarios
-* [Manage Workloads](#Scenario-CreateWorkload)
-* [Manage Workloads](#Scenario-DeployWorkload)
-* [Manage Workloads](#Scenario-DestroyWorkload)
-* [Manage Workloads](#Scenario-MonitorWorkload)
-* [Manage Workloads](#Scenario-UpdateWorkload)
+
+* [Manage Workloads](#scenario-CreateWorkload)
+* [Manage Workloads](#scenario-DeployWorkload)
+* [Manage Workloads](#scenario-DestroyWorkload)
+* [Manage Workloads](#scenario-MonitorWorkload)
+* [Manage Workloads](#scenario-UpdateWorkload)
 
   
 ### Scenario Create Workload
@@ -31,7 +39,7 @@ Create Workload is the description
 
 #### Actors
 
-* [Application Developer](actors/applicationdeveloper/index.md)
+* [Application Developer](actor-applicationdeveloper)
 
 
 ### Scenario Deploy Workload
@@ -47,8 +55,8 @@ Deploy Workload is the description
 
 #### Actors
 
-* [Application Developer](actors/applicationdeveloper/index.md)
-* [DevOps Engineer](actors/devops/index.md)
+* [Application Developer](actor-applicationdeveloper)
+* [DevOps Engineer](actor-devops)
 
 
 ### Scenario Destroy Workload
@@ -64,7 +72,7 @@ Destroy Workload is the description
 
 #### Actors
 
-* [DevOps Engineer](actors/devops/index.md)
+* [DevOps Engineer](actor-devops)
 
 
 ### Scenario Monitor Workload
@@ -80,8 +88,8 @@ Monitor Workload is the description
 
 #### Actors
 
-* [Application Developer](actors/applicationdeveloper/index.md)
-* [DevOps Engineer](actors/devops/index.md)
+* [Application Developer](actor-applicationdeveloper)
+* [DevOps Engineer](actor-devops)
 
 
 ### Scenario Update Workload
@@ -97,9 +105,8 @@ Update Workload is the description
 
 #### Actors
 
-* [Application Developer](actors/applicationdeveloper/index.md)
-* [DevOps Engineer](actors/devops/index.md)
-
+* [Application Developer](actor-applicationdeveloper)
+* [DevOps Engineer](actor-devops)
 
 
 

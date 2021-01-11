@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class DataFlow
+permalink: class-DataFlow
+parent: classes
+---
+
 # DataFlow
 
 Description long description
@@ -30,12 +37,13 @@ Description long description
 
 ## Methods
 
-* [create() - Create a Data Flow](#Action-create)
+* [create() - Create a Data Flow](#action-create)
 
 
 <h2>Method Details</h2>
     
-### dataflow.create
+### Action dataflow create
+
 * REST - dataflow/create
 * bin - dataflow create
 * js - dataflow.create

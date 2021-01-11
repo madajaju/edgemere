@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class Environment
+permalink: class-Environment
+parent: classes
+---
+
 # Environment
 
 An environment represents a group of clouds, and policies that service are deployed. Examples of environments are development, test, production

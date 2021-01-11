@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class Stack
+permalink: class-Stack
+parent: classes
+---
+
 # Stack
 
 A Stack is an aggregation of services in one context. The Stack can have any number of Services and has a stacklet for each environment in the system. Application typically have 1 or more stacks to define their applications.
@@ -46,24 +53,25 @@ A Stack is an aggregation of services in one context. The Stack can have any num
 
 ## Methods
 
-* [create() - Create a Stack](#Action-create)
+* [create() - Create a Stack](#action-create)
 
-* [createlet() - Create a Stack](#Action-createlet)
+* [createlet() - Create a Stack](#action-createlet)
 
-* [debug() - Debug a Stack](#Action-debug)
+* [debug() - Debug a Stack](#action-debug)
 
-* [deploy() - Deploy a Stack](#Action-deploy)
+* [deploy() - Deploy a Stack](#action-deploy)
 
-* [get() - Get a Stack](#Action-get)
+* [get() - Get a Stack](#action-get)
 
-* [show() - Show a Stack](#Action-show)
+* [show() - Show a Stack](#action-show)
 
-* [update() - Update a Stack](#Action-update)
+* [update() - Update a Stack](#action-update)
 
 
 <h2>Method Details</h2>
     
-### stack.create
+### Action stack create
+
 * REST - stack/create
 * bin - stack create
 * js - stack.create
@@ -76,7 +84,8 @@ Create a Stack
 
 
 
-### stack.createlet
+### Action stack createlet
+
 * REST - stack/createlet
 * bin - stack createlet
 * js - stack.createlet
@@ -89,7 +98,8 @@ Create a Stack
 
 
 
-### stack.debug
+### Action stack debug
+
 * REST - stack/debug
 * bin - stack debug
 * js - stack.debug
@@ -102,7 +112,8 @@ Debug a Stack
 
 
 
-### stack.deploy
+### Action stack deploy
+
 * REST - stack/deploy
 * bin - stack deploy
 * js - stack.deploy
@@ -118,7 +129,8 @@ Deploy a Stack
 
 
 
-### stack.get
+### Action stack get
+
 * REST - stack/get
 * bin - stack get
 * js - stack.get
@@ -131,7 +143,8 @@ Get a Stack
 
 
 
-### stack.show
+### Action stack show
+
 * REST - stack/show
 * bin - stack show
 * js - stack.show
@@ -144,7 +157,8 @@ Show a Stack
 
 
 
-### stack.update
+### Action stack update
+
 * REST - stack/update
 * bin - stack update
 * js - stack.update

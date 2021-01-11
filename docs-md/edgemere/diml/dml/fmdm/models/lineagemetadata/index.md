@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class LineageMetaData
+permalink: class-LineageMetaData
+parent: classes
+---
+
 # LineageMetaData
 
 This class is a meta-data class that stores the lineage of the Data Instance. The creation action is stored in the class along with the lineage of the the data instance.

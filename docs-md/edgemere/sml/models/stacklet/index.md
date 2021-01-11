@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class Stacklet
+permalink: class-Stacklet
+parent: classes
+---
+
 # Stacklet
 
 This is a combination of the stack with a specific environment. This allows for a stack to behave differently depending on the envionrment it is in.
@@ -44,14 +51,15 @@ This is a combination of the stack with a specific environment. This allows for 
 
 ## Methods
 
-* [create() - Create a Stack](#Action-create)
+* [create() - Create a Stack](#action-create)
 
-* [deploy() - Deploy a Stack](#Action-deploy)
+* [deploy() - Deploy a Stack](#action-deploy)
 
 
 <h2>Method Details</h2>
     
-### stacklet.create
+### Action stacklet create
+
 * REST - stacklet/create
 * bin - stacklet create
 * js - stacklet.create
@@ -64,7 +72,8 @@ Create a Stack
 
 
 
-### stacklet.deploy
+### Action stacklet deploy
+
 * REST - stacklet/deploy
 * bin - stacklet deploy
 * js - stacklet.deploy

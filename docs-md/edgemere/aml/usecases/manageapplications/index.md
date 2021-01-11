@@ -1,3 +1,10 @@
+---
+layout: default
+title: Usecase Manage Applications
+permalink: usecase-ManageApplications
+parent: Usecases
+---
+
 # Manage Applications
 
 DevOps Engineers and Application Developers need the ability to manage applications across multiple environments, clouds, and types of infrastructure.
@@ -6,16 +13,17 @@ DevOps Engineers and Application Developers need the ability to manage applicati
 
 ## Actors
 
-* [DevOps Engineer](/actors/DevOpsEngineer/index.md)
-* [Application Developer](/actors/ApplicationDeveloper/index.md)
+* [DevOps Engineer](actor-devops)
+* [Application Developer](actor-applicationdeveloper)
 
 
 ## Detail Scenarios
-* [Manage Applications](#Scenario-CreateApplication)
-* [Manage Applications](#Scenario-DeployApplication)
-* [Manage Applications](#Scenario-DestroyApplication)
-* [Manage Applications](#Scenario-MonitorApplication)
-* [Manage Applications](#Scenario-UpdateApplication)
+
+* [Manage Applications](#scenario-CreateApplication)
+* [Manage Applications](#scenario-DeployApplication)
+* [Manage Applications](#scenario-DestroyApplication)
+* [Manage Applications](#scenario-MonitorApplication)
+* [Manage Applications](#scenario-UpdateApplication)
 
   
 ### Scenario Create Application
@@ -31,7 +39,7 @@ Create Application is the description
 
 #### Actors
 
-* [Application Developer](actors/applicationdeveloper/index.md)
+* [Application Developer](actor-applicationdeveloper)
 
 
 ### Scenario Deploy Application
@@ -47,7 +55,7 @@ Deploy Application is the description
 
 #### Actors
 
-* [DevOps Engineer](actors/devops/index.md)
+* [DevOps Engineer](actor-devops)
 
 
 ### Scenario Destroy Application
@@ -63,7 +71,7 @@ Destroy Application is the description
 
 #### Actors
 
-* [DevOps Engineer](actors/devops/index.md)
+* [DevOps Engineer](actor-devops)
 
 
 ### Scenario Monitor Application
@@ -79,8 +87,8 @@ Monitor Application is the description
 
 #### Actors
 
-* [DevOps Engineer](actors/devops/index.md)
-* [Application Developer](actors/applicationdeveloper/index.md)
+* [DevOps Engineer](actor-devops)
+* [Application Developer](actor-applicationdeveloper)
 
 
 ### Scenario Update Application
@@ -96,9 +104,8 @@ Update Application is the description
 
 #### Actors
 
-* [Application Developer](actors/applicationdeveloper/index.md)
-* [DevOps Engineer](actors/devops/index.md)
-
+* [Application Developer](actor-applicationdeveloper)
+* [DevOps Engineer](actor-devops)
 
 
 

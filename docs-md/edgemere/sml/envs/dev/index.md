@@ -1,3 +1,10 @@
+---
+layout: default
+title: Environment dev
+permalink: environment--edgemere-sml-dev
+nav_exclude: true
+---
+
 ### dev
 
 

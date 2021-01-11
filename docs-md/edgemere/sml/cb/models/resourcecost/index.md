@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class ResourceCost
+permalink: class-ResourceCost
+parent: classes
+---
+
 # ResourceCost
 
 Cost of the Resource

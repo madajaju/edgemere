@@ -1,3 +1,10 @@
+---
+layout: default
+title: Usecase Manage Assets
+permalink: usecase-ManageAssets
+parent: Usecases
+---
+
 # Manage Assets
 
 Manage Assets is the description
@@ -6,11 +13,11 @@ Manage Assets is the description
 
 ## Actors
 
-* [Actor](/actors/Actor/index.md)
+* [Actor](actor-actor)
 
 
 ## Detail Scenarios
 
-  
 
+  
 

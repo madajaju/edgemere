@@ -1,3 +1,10 @@
+---
+layout: default
+title: Usecase Manage Clouds
+permalink: usecase-ManageClouds
+parent: Usecases
+---
+
 # Manage Clouds
 
 Manage Clouds is the description
@@ -6,11 +13,11 @@ Manage Clouds is the description
 
 ## Actors
 
-* [IT Operations](/actors/ITOperations/index.md)
+* [IT Operations](actor-itops)
 
 
 ## Detail Scenarios
 
-  
 
+  
 

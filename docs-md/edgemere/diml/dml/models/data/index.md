@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class Data
+permalink: class-Data
+parent: classes
+---
+
 # Data
 
 This class represents data that is stored in the system. It has a relationship with a StorageResource as all data must have someplace to reside. The access attribute is a catch all for how to access the data. It could be a connection string to a data like a database, a filesystem etc.. Specializations of the Data reference class know what to do with the access attribute.

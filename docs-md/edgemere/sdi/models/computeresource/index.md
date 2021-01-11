@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class ComputeResource
+permalink: class-ComputeResource
+parent: classes
+---
+
 # ComputeResource
 
 Logical Resource of Compute CPUs that are provisioned
@@ -34,14 +41,15 @@ Logical Resource of Compute CPUs that are provisioned
 
 ## Methods
 
-* [factory() - Create a Resource based on the hardware to resource table](#Action-factory)
+* [factory() - Create a Resource based on the hardware to resource table](#action-factory)
 
-* [provision() - Provision the Resource](#Action-provision)
+* [provision() - Provision the Resource](#action-provision)
 
 
 <h2>Method Details</h2>
     
-### computeresource.factory
+### Action computeresource factory
+
 * REST - computeresource/factory
 * bin - computeresource factory
 * js - computeresource.factory
@@ -56,7 +64,8 @@ Create a Resource based on the hardware to resource table
 
 
 
-### computeresource.provision
+### Action computeresource provision
+
 * REST - computeresource/provision
 * bin - computeresource provision
 * js - computeresource.provision

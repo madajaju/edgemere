@@ -1,3 +1,10 @@
+---
+layout: default
+title: Usecase Manage Data Procedures
+permalink: usecase-ManageDataProcedures
+parent: Usecases
+---
+
 # Manage Data Procedures
 
 Manage Data Procedures is the description
@@ -6,12 +13,12 @@ Manage Data Procedures is the description
 
 ## Actors
 
-* [DataEngineer](/actors/DataEngineer/index.md)
-* [Chief Data Officer](/actors/ChiefDataOfficer/index.md)
+* [DataEngineer](actor-dataengineer)
+* [Chief Data Officer](actor-cdo)
 
 
 ## Detail Scenarios
 
-  
 
+  
 

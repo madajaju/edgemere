@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class Hardware
+permalink: class-Hardware
+parent: classes
+---
+
 # Hardware
 
 This represents physical hardware in a device
@@ -46,20 +53,21 @@ This represents physical hardware in a device
 
 ## Methods
 
-* [addStats() - Add Stats to the Hardware](#Action-addStats)
+* [addStats() - Add Stats to the Hardware](#action-addStats)
 
-* [create() - Create Hardware](#Action-create)
+* [create() - Create Hardware](#action-create)
 
-* [disable() - Disable Device and its hardware](#Action-disable)
+* [disable() - Disable Device and its hardware](#action-disable)
 
-* [enable() - Enable Device to be used.](#Action-enable)
+* [enable() - Enable Device to be used.](#action-enable)
 
-* [factory() - Create Hardware based on properties](#Action-factory)
+* [factory() - Create Hardware based on properties](#action-factory)
 
 
 <h2>Method Details</h2>
     
-### hardware.addStats
+### Action hardware addStats
+
 * REST - hardware/addStats
 * bin - hardware addStats
 * js - hardware.addStats
@@ -73,7 +81,8 @@ Add Stats to the Hardware
 
 
 
-### hardware.create
+### Action hardware create
+
 * REST - hardware/create
 * bin - hardware create
 * js - hardware.create
@@ -88,7 +97,8 @@ Create Hardware
 
 
 
-### hardware.disable
+### Action hardware disable
+
 * REST - hardware/disable
 * bin - hardware disable
 * js - hardware.disable
@@ -101,7 +111,8 @@ Disable Device and its hardware
 
 
 
-### hardware.enable
+### Action hardware enable
+
 * REST - hardware/enable
 * bin - hardware enable
 * js - hardware.enable
@@ -114,7 +125,8 @@ Enable Device to be used.
 
 
 
-### hardware.factory
+### Action hardware factory
+
 * REST - hardware/factory
 * bin - hardware factory
 * js - hardware.factory

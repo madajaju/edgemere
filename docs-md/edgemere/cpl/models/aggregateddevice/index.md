@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class AggregatedDevice
+permalink: class-AggregatedDevice
+parent: classes
+---
+
 # AggregatedDevice
 
 This is a construct that has other devices under it
@@ -48,26 +55,27 @@ This is a construct that has other devices under it
 
 ## Methods
 
-* [addDevices() - Add Devices to the Aggregated Device](#Action-addDevices)
+* [addDevices() - Add Devices to the Aggregated Device](#action-addDevices)
 
-* [disable() - Disable Device and its hardware](#Action-disable)
+* [disable() - Disable Device and its hardware](#action-disable)
 
-* [enable() - Enable Device to be used.](#Action-enable)
+* [enable() - Enable Device to be used.](#action-enable)
 
-* [reserve() - Reserve a resource](#Action-reserve)
+* [reserve() - Reserve a resource](#action-reserve)
 
-* [addToHardware() - Create a Device](#Action-addToHardware)
+* [addToHardware() - Create a Device](#action-addToHardware)
 
-* [create() - Create a Device](#Action-create)
+* [create() - Create a Device](#action-create)
 
-* [getReservations() - Get reservation from the requirements](#Action-getReservations)
+* [getReservations() - Get reservation from the requirements](#action-getReservations)
 
-* [provision() - Provision Hardware to meet the requirements](#Action-provision)
+* [provision() - Provision Hardware to meet the requirements](#action-provision)
 
 
 <h2>Method Details</h2>
     
-### aggregateddevice.addDevices
+### Action aggregateddevice addDevices
+
 * REST - aggregateddevice/addDevices
 * bin - aggregateddevice addDevices
 * js - aggregateddevice.addDevices
@@ -81,7 +89,8 @@ Add Devices to the Aggregated Device
 
 
 
-### aggregateddevice.disable
+### Action aggregateddevice disable
+
 * REST - aggregateddevice/disable
 * bin - aggregateddevice disable
 * js - aggregateddevice.disable
@@ -94,7 +103,8 @@ Disable Device and its hardware
 
 
 
-### aggregateddevice.enable
+### Action aggregateddevice enable
+
 * REST - aggregateddevice/enable
 * bin - aggregateddevice enable
 * js - aggregateddevice.enable
@@ -107,7 +117,8 @@ Enable Device to be used.
 
 
 
-### aggregateddevice.reserve
+### Action aggregateddevice reserve
+
 * REST - aggregateddevice/reserve
 * bin - aggregateddevice reserve
 * js - aggregateddevice.reserve
@@ -121,7 +132,8 @@ Reserve a resource
 
 
 
-### aggregateddevice.addToHardware
+### Action aggregateddevice addToHardware
+
 * REST - aggregateddevice/addToHardware
 * bin - aggregateddevice addToHardware
 * js - aggregateddevice.addToHardware
@@ -134,7 +146,8 @@ Create a Device
 
 
 
-### aggregateddevice.create
+### Action aggregateddevice create
+
 * REST - aggregateddevice/create
 * bin - aggregateddevice create
 * js - aggregateddevice.create
@@ -149,7 +162,8 @@ Create a Device
 
 
 
-### aggregateddevice.getReservations
+### Action aggregateddevice getReservations
+
 * REST - aggregateddevice/getReservations
 * bin - aggregateddevice getReservations
 * js - aggregateddevice.getReservations
@@ -163,7 +177,8 @@ Get reservation from the requirements
 
 
 
-### aggregateddevice.provision
+### Action aggregateddevice provision
+
 * REST - aggregateddevice/provision
 * bin - aggregateddevice provision
 * js - aggregateddevice.provision

@@ -1,3 +1,9 @@
+---
+layout: default
+title: Actor Data Analyst
+permalink: actor-analyst
+---
+
 # Data Analyst
 
 Long description Continued on next line
@@ -6,7 +12,7 @@ Long description Continued on next line
 
 ## Use Cases
 
-* [Manage Data](../../edgemere/diml/cds/usecases/ManageData)
+* [Manage Data](usecase-ManageData)
 
   
 ![Use Case Diagram](./UseCase.svg)
@@ -15,5 +21,5 @@ Long description Continued on next line
 TBD
 
 ## Command Line Interface
-* [ edgemere diml cds data list](./action/data/list) - Manage Data is the description
+* [ edgemere diml cds data/list](action--edgemere-diml-cds-data-list) - Manage Data is the description
 

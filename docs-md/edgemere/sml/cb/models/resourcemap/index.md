@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class ResourceMap
+permalink: class-ResourceMap
+parent: classes
+---
+
 # ResourceMap
 
 This maps generalized resource name/requirement to one or more requirements for the specific cloud resource.

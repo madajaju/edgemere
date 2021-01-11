@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class CloudType
+permalink: class-CloudType
+parent: classes
+---
+
 # CloudType
 
 Each Cloud has a specific type of cloud it is tied to. The type of cloud helps with the deployment and mapping of assets across the different types of clouds. Examples of Cloud types are aws,azure,vmware openstack, google, nutanix, ...
@@ -31,12 +38,13 @@ Each Cloud has a specific type of cloud it is tied to. The type of cloud helps w
 
 ## Methods
 
-* [create() - Create a Cloud Type](#Action-create)
+* [create() - Create a Cloud Type](#action-create)
 
 
 <h2>Method Details</h2>
     
-### cloudtype.create
+### Action cloudtype create
+
 * REST - cloudtype/create
 * bin - cloudtype create
 * js - cloudtype.create

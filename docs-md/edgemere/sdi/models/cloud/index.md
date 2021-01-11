@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class Cloud
+permalink: class-Cloud
+parent: classes
+---
+
 # Cloud
 
 This represents a cloud in the ecosystem. This can be public or private onprem or offprem
@@ -44,14 +51,15 @@ This represents a cloud in the ecosystem. This can be public or private onprem o
 
 ## Methods
 
-* [create() - Create the Cloud](#Action-create)
+* [create() - Create the Cloud](#action-create)
 
-* [reserve() - Reserve a resource](#Action-reserve)
+* [reserve() - Reserve a resource](#action-reserve)
 
 
 <h2>Method Details</h2>
     
-### cloud.create
+### Action cloud create
+
 * REST - cloud/create
 * bin - cloud create
 * js - cloud.create
@@ -66,7 +74,8 @@ Create the Cloud
 
 
 
-### cloud.reserve
+### Action cloud reserve
+
 * REST - cloud/reserve
 * bin - cloud reserve
 * js - cloud.reserve

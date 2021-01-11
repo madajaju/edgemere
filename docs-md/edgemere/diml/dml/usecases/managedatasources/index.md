@@ -1,3 +1,10 @@
+---
+layout: default
+title: Usecase Manage Data Sources
+permalink: usecase-ManageDataSources
+parent: Usecases
+---
+
 # Manage Data Sources
 
 Manage Data Sources is the description
@@ -6,12 +13,13 @@ Manage Data Sources is the description
 
 ## Actors
 
-* [DataEngineer](/actors/DataEngineer/index.md)
+* [DataEngineer](actor-dataengineer)
 
 
 ## Detail Scenarios
-* [Manage Data Sources](#Scenario-DeregisterDataSource)
-* [Manage Data Sources](#Scenario-RegisterDataSource)
+
+* [Manage Data Sources](#scenario-DeregisterDataSource)
+* [Manage Data Sources](#scenario-RegisterDataSource)
 
   
 ### Scenario Deregister Data Source
@@ -27,7 +35,7 @@ Deregister Data Source is the description
 
 #### Actors
 
-* [Actor](actors/actor/index.md)
+* [Actor](actor-actor)
 
 
 ### Scenario Register Data Source
@@ -43,8 +51,7 @@ Register Data Source is the description
 
 #### Actors
 
-* [Actor](actors/actor/index.md)
-
+* [Actor](actor-actor)
 
 
 

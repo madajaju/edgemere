@@ -1,3 +1,10 @@
+---
+layout: default
+title: Usecase Manage Data Policies
+permalink: usecase-ManageDataPolicies
+parent: Usecases
+---
+
 # Manage Data Policies
 
 Manage Data Policies is the description
@@ -6,11 +13,11 @@ Manage Data Policies is the description
 
 ## Actors
 
-* [Chief Data Officer](/actors/ChiefDataOfficer/index.md)
+* [Chief Data Officer](actor-cdo)
 
 
 ## Detail Scenarios
 
-  
 
+  
 

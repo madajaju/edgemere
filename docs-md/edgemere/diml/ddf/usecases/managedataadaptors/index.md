@@ -1,3 +1,10 @@
+---
+layout: default
+title: Usecase Manage Data Adaptors
+permalink: usecase-ManageDataAdaptors
+parent: Usecases
+---
+
 # Manage Data Adaptors
 
 Manage Data Adaptors is the description
@@ -6,14 +13,15 @@ Manage Data Adaptors is the description
 
 ## Actors
 
-* [DataEngineer](/actors/DataEngineer/index.md)
-* [Data Scientist](/actors/DataScientist/index.md)
+* [DataEngineer](actor-dataengineer)
+* [Data Scientist](actor-datascientist)
 
 
 ## Detail Scenarios
-* [Manage Data Adaptors](#Scenario-AttachDataBluePrint)
-* [Manage Data Adaptors](#Scenario-CreateDataAdaptor)
-* [Manage Data Adaptors](#Scenario-UpdateDataAdaptor)
+
+* [Manage Data Adaptors](#scenario-AttachDataBluePrint)
+* [Manage Data Adaptors](#scenario-CreateDataAdaptor)
+* [Manage Data Adaptors](#scenario-UpdateDataAdaptor)
 
   
 ### Scenario Attach Data Blue Print
@@ -29,7 +37,7 @@ Attach Data Blue Print is the description
 
 #### Actors
 
-* [Actor](actors/actor/index.md)
+* [Actor](actor-actor)
 
 
 ### Scenario Create Data Adaptor
@@ -45,7 +53,7 @@ Create Data Adaptor is the description
 
 #### Actors
 
-* [Actor](actors/actor/index.md)
+* [Actor](actor-actor)
 
 
 ### Scenario Update Data Adaptor
@@ -61,8 +69,7 @@ Update Data Adaptor is the description
 
 #### Actors
 
-* [Actor](actors/actor/index.md)
-
+* [Actor](actor-actor)
 
 
 

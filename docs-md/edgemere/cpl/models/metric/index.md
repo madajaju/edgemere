@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class Metric
+permalink: class-Metric
+parent: classes
+---
+
 # Metric
 
 Metric stores information about the physical profile. 
@@ -28,26 +35,27 @@ Metric stores information about the physical profile.
 
 ## Methods
 
-* [consume() - Consume value from a metric](#Action-consume)
+* [consume() - Consume value from a metric](#action-consume)
 
-* [copy() - Copy Metric](#Action-copy)
+* [copy() - Copy Metric](#action-copy)
 
-* [factory() - Create a metric based on the metrictype table](#Action-factory)
+* [factory() - Create a metric based on the metrictype table](#action-factory)
 
-* [greaterThanEq() - Test greater than or equal to the value passed in](#Action-greaterThanEq)
+* [greaterThanEq() - Test greater than or equal to the value passed in](#action-greaterThanEq)
 
-* [lessThanEq() - Test less than or equal to the value passed in](#Action-lessThanEq)
+* [lessThanEq() - Test less than or equal to the value passed in](#action-lessThanEq)
 
-* [minus() - Add value to a metric](#Action-minus)
+* [minus() - Add value to a metric](#action-minus)
 
-* [plus() - Add value to a metric](#Action-plus)
+* [plus() - Add value to a metric](#action-plus)
 
-* [set() - Add value to a metric](#Action-set)
+* [set() - Add value to a metric](#action-set)
 
 
 <h2>Method Details</h2>
     
-### metric.consume
+### Action metric consume
+
 * REST - metric/consume
 * bin - metric consume
 * js - metric.consume
@@ -61,7 +69,8 @@ Consume value from a metric
 
 
 
-### metric.copy
+### Action metric copy
+
 * REST - metric/copy
 * bin - metric copy
 * js - metric.copy
@@ -74,7 +83,8 @@ Copy Metric
 
 
 
-### metric.factory
+### Action metric factory
+
 * REST - metric/factory
 * bin - metric factory
 * js - metric.factory
@@ -89,7 +99,8 @@ Create a metric based on the metrictype table
 
 
 
-### metric.greaterThanEq
+### Action metric greaterThanEq
+
 * REST - metric/greaterThanEq
 * bin - metric greaterThanEq
 * js - metric.greaterThanEq
@@ -103,7 +114,8 @@ Test greater than or equal to the value passed in
 
 
 
-### metric.lessThanEq
+### Action metric lessThanEq
+
 * REST - metric/lessThanEq
 * bin - metric lessThanEq
 * js - metric.lessThanEq
@@ -117,7 +129,8 @@ Test less than or equal to the value passed in
 
 
 
-### metric.minus
+### Action metric minus
+
 * REST - metric/minus
 * bin - metric minus
 * js - metric.minus
@@ -131,7 +144,8 @@ Add value to a metric
 
 
 
-### metric.plus
+### Action metric plus
+
 * REST - metric/plus
 * bin - metric plus
 * js - metric.plus
@@ -145,7 +159,8 @@ Add value to a metric
 
 
 
-### metric.set
+### Action metric set
+
 * REST - metric/set
 * bin - metric set
 * js - metric.set

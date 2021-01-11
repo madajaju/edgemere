@@ -1,3 +1,10 @@
+---
+layout: default
+title: Usecase Manage Data Blue Prints
+permalink: usecase-ManageDataBluePrints
+parent: Usecases
+---
+
 # Manage Data Blue Prints
 
 Manage Data Blue Prints is the description
@@ -6,12 +13,12 @@ Manage Data Blue Prints is the description
 
 ## Actors
 
-* [DataEngineer](/actors/DataEngineer/index.md)
-* [Data Scientist](/actors/DataScientist/index.md)
+* [DataEngineer](actor-dataengineer)
+* [Data Scientist](actor-datascientist)
 
 
 ## Detail Scenarios
 
-  
 
+  
 

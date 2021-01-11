@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class MetaData
+permalink: class-MetaData
+parent: classes
+---
+
 # MetaData
 
 Meta-Data for the Data in the system. Name and Value pair.

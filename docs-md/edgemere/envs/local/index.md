@@ -1,3 +1,10 @@
+---
+layout: default
+title: Environment local
+permalink: environment--edgemere-local
+nav_exclude: true
+---
+
 ### local
 
 

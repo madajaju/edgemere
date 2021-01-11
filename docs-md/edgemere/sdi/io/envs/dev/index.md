@@ -1,3 +1,10 @@
+---
+layout: default
+title: Environment dev
+permalink: environment--edgemere-sdi-io-dev
+nav_exclude: true
+---
+
 ### dev
 
 

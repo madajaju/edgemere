@@ -1,3 +1,10 @@
+---
+layout: default
+title: Usecase Manage AI Models
+permalink: usecase-ManageAIModels
+parent: Usecases
+---
+
 # Manage AI Models
 
 Data Scientist manages AI models and ties them to and application and data set. DevOps will make sure when applications and AI models are updated that they are updatedtogether.
@@ -6,17 +13,18 @@ Data Scientist manages AI models and ties them to and application and data set. 
 
 ## Actors
 
-* [Data Scientist](/actors/DataScientist/index.md)
-* [DevOps Engineer](/actors/DevOpsEngineer/index.md)
-* [Application Developer](/actors/ApplicationDeveloper/index.md)
-* [DataEngineer](/actors/DataEngineer/index.md)
+* [Data Scientist](actor-datascientist)
+* [DevOps Engineer](actor-devops)
+* [Application Developer](actor-applicationdeveloper)
+* [DataEngineer](actor-dataengineer)
 
 
 ## Detail Scenarios
-* [Manage AI Models](#Scenario-CreateAIModel)
-* [Manage AI Models](#Scenario-DeployAIModel)
-* [Manage AI Models](#Scenario-DestroyAIModel)
-* [Manage AI Models](#Scenario-UpdateAIModel)
+
+* [Manage AI Models](#scenario-CreateAIModel)
+* [Manage AI Models](#scenario-DeployAIModel)
+* [Manage AI Models](#scenario-DestroyAIModel)
+* [Manage AI Models](#scenario-UpdateAIModel)
 
   
 ### Scenario Create AI Model
@@ -27,13 +35,13 @@ Create AI Model is the description
 
 #### Steps
 
-1. [aimodel create --name name1](doc/action/aimodel/create)
+1. [aimodel create --name name1](#action-aimodel-create)
 
 
 #### Actors
 
-* [Application Developer](actors/applicationdeveloper/index.md)
-* [Data Scientist](actors/datascientist/index.md)
+* [Application Developer](actor-applicationdeveloper)
+* [Data Scientist](actor-datascientist)
 
 
 ### Scenario Deploy AI Model
@@ -49,9 +57,9 @@ Deploy AI Model is the description
 
 #### Actors
 
-* [DevOps Engineer](actors/devops/index.md)
-* [Application Developer](actors/applicationdeveloper/index.md)
-* [DataEngineer](actors/dataengineer/index.md)
+* [DevOps Engineer](actor-devops)
+* [Application Developer](actor-applicationdeveloper)
+* [DataEngineer](actor-dataengineer)
 
 
 ### Scenario Destroy AI Model
@@ -67,8 +75,8 @@ Destroy AI Model is the description
 
 #### Actors
 
-* [DataEngineer](actors/dataengineer/index.md)
-* [Application Developer](actors/applicationdeveloper/index.md)
+* [DataEngineer](actor-dataengineer)
+* [Application Developer](actor-applicationdeveloper)
 
 
 ### Scenario Update AI Model
@@ -84,10 +92,9 @@ Update AI Model is the description
 
 #### Actors
 
-* [DataEngineer](actors/dataengineer/index.md)
-* [DevOps Engineer](actors/devops/index.md)
-* [Application Developer](actors/applicationdeveloper/index.md)
-
+* [DataEngineer](actor-dataengineer)
+* [DevOps Engineer](actor-devops)
+* [Application Developer](actor-applicationdeveloper)
 
 
 

@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class StorageResource
+permalink: class-StorageResource
+parent: classes
+---
+
 # StorageResource
 
 Logical Resource of Network that are provisioned
@@ -34,14 +41,15 @@ Logical Resource of Network that are provisioned
 
 ## Methods
 
-* [factory() - Create a Resource based on the hardware to resource table](#Action-factory)
+* [factory() - Create a Resource based on the hardware to resource table](#action-factory)
 
-* [provision() - Provision the Resource](#Action-provision)
+* [provision() - Provision the Resource](#action-provision)
 
 
 <h2>Method Details</h2>
     
-### storageresource.factory
+### Action storageresource factory
+
 * REST - storageresource/factory
 * bin - storageresource factory
 * js - storageresource.factory
@@ -56,7 +64,8 @@ Create a Resource based on the hardware to resource table
 
 
 
-### storageresource.provision
+### Action storageresource provision
+
 * REST - storageresource/provision
 * bin - storageresource provision
 * js - storageresource.provision

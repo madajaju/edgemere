@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class DataInstance
+permalink: class-DataInstance
+parent: classes
+---
+
 # DataInstance
 
 The DataInstance class contains an instance of the data based on the data reference. The Instance is tied to specific service, application, or workload instance running in the system. This mapping of reference to instance is important in realizing the abstraction of the reference to something that can be used by the executable on the resources in the Softare Defined Infrastructure layer.

@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class Application
+permalink: class-Application
+parent: classes
+---
+
 # Application
 
 Description long description

@@ -1,3 +1,10 @@
+---
+layout: default
+title: Usecase Manage Services
+permalink: usecase-ManageServices
+parent: Usecases
+---
+
 # Manage Services
 
 Manage Services is the description
@@ -6,12 +13,12 @@ Manage Services is the description
 
 ## Actors
 
-* [Stack Developer](/actors/StackDeveloper/index.md)
-* [Application Developer](/actors/ApplicationDeveloper/index.md)
+* [Stack Developer](actor-stackdev)
+* [Application Developer](actor-applicationdeveloper)
 
 
 ## Detail Scenarios
 
-  
 
+  
 

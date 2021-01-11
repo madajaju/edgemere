@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class WorkloadTemplate
+permalink: class-WorkloadTemplate
+parent: classes
+---
+
 # WorkloadTemplate
 
 Description long description

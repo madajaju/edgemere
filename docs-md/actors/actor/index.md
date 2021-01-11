@@ -1,3 +1,9 @@
+---
+layout: default
+title: Actor Actor
+permalink: actor-actor
+---
+
 # Actor
 
 Long description Continued on next line
@@ -6,7 +12,7 @@ Long description Continued on next line
 
 ## Use Cases
 
-* [Manage Assets](../../edgemere/sml/sr/usecases/ManageAssets)
+* [Manage Assets](usecase-ManageAssets)
 
   
 ![Use Case Diagram](./UseCase.svg)
@@ -15,5 +21,5 @@ Long description Continued on next line
 TBD
 
 ## Command Line Interface
-* [ edgemere sml sr data govern](./action/data/govern) - Manage Assets is the description
+* [ edgemere sml sr data/govern](action--edgemere-sml-sr-data-govern) - Manage Assets is the description
 

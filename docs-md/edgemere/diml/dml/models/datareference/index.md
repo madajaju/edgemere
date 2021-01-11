@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class DataReference
+permalink: class-DataReference
+parent: classes
+---
+
 # DataReference
 
 DataReference is used to abstract data requirements for Applications, Stacks and Services. These references are realized in the Data Orchestrator when it creates Data Instances based on the policies, and environment the ServiceInstance is running.

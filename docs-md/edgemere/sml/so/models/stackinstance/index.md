@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class StackInstance
+permalink: class-StackInstance
+parent: classes
+---
+
 # StackInstance
 
 The StackInstance is the execution of the Stack. This allows for control of the stack during execution.

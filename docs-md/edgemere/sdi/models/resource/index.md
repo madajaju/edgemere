@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class Resource
+permalink: class-Resource
+parent: classes
+---
+
 # Resource
 
 Resource in the cloud. Can be network, storage or compute.
@@ -56,14 +63,15 @@ Resource in the cloud. Can be network, storage or compute.
 
 ## Methods
 
-* [factory() - Create a Resource based on the hardware to resource table](#Action-factory)
+* [factory() - Create a Resource based on the hardware to resource table](#action-factory)
 
-* [provision() - Provision the Resource](#Action-provision)
+* [provision() - Provision the Resource](#action-provision)
 
 
 <h2>Method Details</h2>
     
-### resource.factory
+### Action resource factory
+
 * REST - resource/factory
 * bin - resource factory
 * js - resource.factory
@@ -78,7 +86,8 @@ Create a Resource based on the hardware to resource table
 
 
 
-### resource.provision
+### Action resource provision
+
 * REST - resource/provision
 * bin - resource provision
 * js - resource.provision

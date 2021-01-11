@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class Image
+permalink: class-Image
+parent: classes
+---
+
 # Image
 
 Image of the Service is a container that has all of the context to run a service

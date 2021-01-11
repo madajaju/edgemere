@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class Servicelet
+permalink: class-Servicelet
+parent: classes
+---
+
 # Servicelet
 
 Servicelet is the combination of a Service with the environment. This gives the ability to have  a service that behaves differently depending on the environment it resides.
@@ -42,14 +49,15 @@ Servicelet is the combination of a Service with the environment. This gives the 
 
 ## Methods
 
-* [create() - Create a Stack](#Action-create)
+* [create() - Create a Stack](#action-create)
 
-* [deploy() - Deploy a Servicelet](#Action-deploy)
+* [deploy() - Deploy a Servicelet](#action-deploy)
 
 
 <h2>Method Details</h2>
     
-### servicelet.create
+### Action servicelet create
+
 * REST - servicelet/create
 * bin - servicelet create
 * js - servicelet.create
@@ -62,7 +70,8 @@ Create a Stack
 
 
 
-### servicelet.deploy
+### Action servicelet deploy
+
 * REST - servicelet/deploy
 * bin - servicelet deploy
 * js - servicelet.deploy

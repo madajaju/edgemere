@@ -1,3 +1,10 @@
+---
+layout: default
+title: Usecase ManageCostModel
+permalink: usecase-ManageCostModel
+parent: Usecases
+---
+
 # ManageCostModel
 
 ManageCostModel allows IT Operators to manage the cost of using resources. Each cloud has different cost models depending on the use and the time of day they are used. Private cloud resources should have cost models estalbished for them as well.
@@ -6,11 +13,11 @@ ManageCostModel allows IT Operators to manage the cost of using resources. Each 
 
 ## Actors
 
-* [IT Operations](/actors/ITOperations/index.md)
+* [IT Operations](actor-itops)
 
 
 ## Detail Scenarios
 
-  
 
+  
 

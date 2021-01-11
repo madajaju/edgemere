@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class User
+permalink: class-User
+parent: classes
+---
+
 # User
 
 Description long description

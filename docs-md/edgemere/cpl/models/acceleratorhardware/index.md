@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class AcceleratorHardware
+permalink: class-AcceleratorHardware
+parent: classes
+---
+
 # AcceleratorHardware
 
 Represents Hardware that is an accelerator
@@ -30,20 +37,21 @@ Represents Hardware that is an accelerator
 
 ## Methods
 
-* [addStats() - Add Stats to the Hardware](#Action-addStats)
+* [addStats() - Add Stats to the Hardware](#action-addStats)
 
-* [create() - Create Hardware](#Action-create)
+* [create() - Create Hardware](#action-create)
 
-* [disable() - Disable Device and its hardware](#Action-disable)
+* [disable() - Disable Device and its hardware](#action-disable)
 
-* [enable() - Enable Device to be used.](#Action-enable)
+* [enable() - Enable Device to be used.](#action-enable)
 
-* [factory() - Create Hardware based on properties](#Action-factory)
+* [factory() - Create Hardware based on properties](#action-factory)
 
 
 <h2>Method Details</h2>
     
-### acceleratorhardware.addStats
+### Action acceleratorhardware addStats
+
 * REST - acceleratorhardware/addStats
 * bin - acceleratorhardware addStats
 * js - acceleratorhardware.addStats
@@ -57,7 +65,8 @@ Add Stats to the Hardware
 
 
 
-### acceleratorhardware.create
+### Action acceleratorhardware create
+
 * REST - acceleratorhardware/create
 * bin - acceleratorhardware create
 * js - acceleratorhardware.create
@@ -72,7 +81,8 @@ Create Hardware
 
 
 
-### acceleratorhardware.disable
+### Action acceleratorhardware disable
+
 * REST - acceleratorhardware/disable
 * bin - acceleratorhardware disable
 * js - acceleratorhardware.disable
@@ -85,7 +95,8 @@ Disable Device and its hardware
 
 
 
-### acceleratorhardware.enable
+### Action acceleratorhardware enable
+
 * REST - acceleratorhardware/enable
 * bin - acceleratorhardware enable
 * js - acceleratorhardware.enable
@@ -98,7 +109,8 @@ Enable Device to be used.
 
 
 
-### acceleratorhardware.factory
+### Action acceleratorhardware factory
+
 * REST - acceleratorhardware/factory
 * bin - acceleratorhardware factory
 * js - acceleratorhardware.factory

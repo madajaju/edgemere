@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class AcceleratorResource
+permalink: class-AcceleratorResource
+parent: classes
+---
+
 # AcceleratorResource
 
 Logical Resource of Accelerators that are provisioned
@@ -34,14 +41,15 @@ Logical Resource of Accelerators that are provisioned
 
 ## Methods
 
-* [factory() - Create a Resource based on the hardware to resource table](#Action-factory)
+* [factory() - Create a Resource based on the hardware to resource table](#action-factory)
 
-* [provision() - Provision the Resource](#Action-provision)
+* [provision() - Provision the Resource](#action-provision)
 
 
 <h2>Method Details</h2>
     
-### acceleratorresource.factory
+### Action acceleratorresource factory
+
 * REST - acceleratorresource/factory
 * bin - acceleratorresource factory
 * js - acceleratorresource.factory
@@ -56,7 +64,8 @@ Create a Resource based on the hardware to resource table
 
 
 
-### acceleratorresource.provision
+### Action acceleratorresource provision
+
 * REST - acceleratorresource/provision
 * bin - acceleratorresource provision
 * js - acceleratorresource.provision

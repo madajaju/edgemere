@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class DataBluePrintInstance
+permalink: class-DataBluePrintInstance
+parent: classes
+---
+
 # DataBluePrintInstance
 
 Instance of a Data Blue Print running in the system

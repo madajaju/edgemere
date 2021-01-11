@@ -1,3 +1,10 @@
+---
+layout: default
+title: Class ApplicationInstance
+permalink: class-ApplicationInstance
+parent: classes
+---
+
 # ApplicationInstance
 
 Application Instance that is running in the ecosystem
