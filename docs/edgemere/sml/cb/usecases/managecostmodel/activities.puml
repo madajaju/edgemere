@@ -1,0 +1,12 @@
+@startuml
+
+
+usecase "ManageCostModel" as ManageCostModel
+
+Actor "IT Operations" as ITOperations
+
+ITOperations --> ManageCostModel
+
+
+
+@enduml

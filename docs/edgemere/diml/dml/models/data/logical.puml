@@ -1,0 +1,79 @@
+@startuml
+
+class "Data" as Model {
+ string name
+ string access
+
+ 
+}
+
+rectangle "DataSource" as DataSource #lightblue {
+}
+
+Model o--> "1" DataSource : source
+
+
+rectangle "DataAdaptor" as DataAdaptor #lightblue {
+}
+
+Model o--> "1" DataAdaptor : adaptor
+
+
+rectangle "DataInstance" as DataInstance #lightblue {
+}
+
+Model o--> "n" DataInstance : instances
+
+
+rectangle "LineageMetaData" as LineageMetaData #lightblue {
+}
+
+Model *--> "n" LineageMetaData : lineage
+
+
+rectangle "MetaData" as MetaData #lightblue {
+}
+
+Model *--> "n" MetaData : metadata
+
+
+rectangle "SourceMetaData" as SourceMetaData #lightblue {
+}
+
+Model *--> "n" SourceMetaData : connection
+
+
+
+
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "LineageMetaData" as LineageMetaData #lightgreen {
+    }
+    
+        LineageMetaData   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "SourceMetaData" as SourceMetaData #lightgreen {
+    }
+    
+        SourceMetaData   o--> "1" Model : "data"
+    
+
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+
+
+usecase "Manage Multi Cloud" as ManageMultiCloud
+
+Actor "IT Operations" as ITOperations
+
+ITOperations --> ManageMultiCloud
+
+
+
+usecase "AddCloudtoMultiCloud" as AddCloudtoMultiCloud #lightgrey
+
+ManageMultiCloud --> AddCloudtoMultiCloud
+
+usecase "ManagePoliciesforMultiCloud" as ManagePoliciesforMultiCloud #lightgrey
+
+ManageMultiCloud --> ManagePoliciesforMultiCloud
+
+usecase "RemoveCloudfromMultiCloud" as RemoveCloudfromMultiCloud #lightgrey
+
+ManageMultiCloud --> RemoveCloudfromMultiCloud
+
+@enduml

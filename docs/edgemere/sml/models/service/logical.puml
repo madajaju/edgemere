@@ -1,0 +1,83 @@
+@startuml
+
+class "Service" as Model {
+ string name
+ string version
+ json ports
+ json expose
+ json parameters
+
+ create()
+ createlet()
+ 
+}
+
+rectangle "Stack" as Stack #lightblue {
+}
+
+Model o--> "1" Stack : stack
+
+
+rectangle "Servicelet" as Servicelet #lightblue {
+}
+
+Model *--> "n" Servicelet : servicelets
+
+
+rectangle "Service" as Service #lightblue {
+}
+
+Model o--> "n" Service : children
+
+
+rectangle "Service" as Service #lightblue {
+}
+
+Model o--> "1" Service : parent
+
+
+rectangle "PolicyCollection" as PolicyCollection #lightblue {
+}
+
+Model o--> "1" PolicyCollection : policies
+
+
+
+
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "n" Model : "children"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "parent"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "service"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "services"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   o--> "n" Model : "children"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   o--> "1" Model : "parent"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "service"
+    
+
+@enduml

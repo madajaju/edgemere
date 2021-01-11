@@ -1,0 +1,31 @@
+@startuml
+
+left to right direction
+Actor "Data Engineer" as DataEngineer
+Actor "Data Scientist" as DataScientist
+Actor "Data Engineer" as DataEngineer
+Actor "Data Scientist" as DataScientist
+Actor "Data Engineer" as DataEngineer
+Actor "Data Engineer" as DataEngineer
+Actor "Chief Data Officer" as ChiefDataOfficer
+Actor "Data Scientist" as DataScientist
+
+
+rectangle "Data Definition Framework" #ffcc88 {
+usecase "ManageDataAdaptors" as ManageDataAdaptors
+    DataEngineer --> ManageDataAdaptors
+    DataScientist --> ManageDataAdaptors
+    usecase "ManageDataBluePrints" as ManageDataBluePrints
+    DataEngineer --> ManageDataBluePrints
+    DataScientist --> ManageDataBluePrints
+    usecase "ManageDataPipeline" as ManageDataPipeline
+    DataEngineer --> ManageDataPipeline
+    usecase "ManageDataProcedures" as ManageDataProcedures
+    DataEngineer --> ManageDataProcedures
+    ChiefDataOfficer --> ManageDataProcedures
+    usecase "ManageMetaData" as ManageMetaData
+    DataScientist --> ManageMetaData
+    }
+
+
+@enduml

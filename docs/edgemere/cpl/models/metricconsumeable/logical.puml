@@ -1,0 +1,23 @@
+@startuml
+
+class "MetricConsumeable" as Model {
+ string name
+ string value
+
+ create()
+ valueToString()
+ consume()
+ copy()
+ factory()
+ greaterThanEq()
+ lessThanEq()
+ minus()
+ plus()
+ set()
+ 
+}
+
+
+
+
+@enduml

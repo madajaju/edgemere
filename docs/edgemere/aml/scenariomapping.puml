@@ -1,0 +1,456 @@
+@startuml
+left to right direction
+
+
+
+state "Data Scientist" as DataScientist {
+    state "Manage AI Models" as DataScientistManageAIModels {
+    }
+}
+state "aml" as aml #lightblue {
+state "aimodel" as amlaimodel #lightblue {
+state "list" as amlaimodellist #lightblue {
+}
+}
+}
+
+DataScientistManageAIModels --> amlaimodellist
+
+state "DevOps Engineer" as DevOpsEngineer {
+    state "Manage AI Models" as DevOpsEngineerManageAIModels {
+    }
+}
+state "aml" as aml #lightblue {
+state "aimodel" as amlaimodel #lightblue {
+state "list" as amlaimodellist #lightblue {
+}
+}
+}
+
+DevOpsEngineerManageAIModels --> amlaimodellist
+
+state "ApplicationDeveloper" as ApplicationDeveloper {
+    state "Manage AI Models" as ApplicationDeveloperManageAIModels {
+    }
+}
+state "aml" as aml #lightblue {
+state "aimodel" as amlaimodel #lightblue {
+state "list" as amlaimodellist #lightblue {
+}
+}
+}
+
+ApplicationDeveloperManageAIModels --> amlaimodellist
+
+state "DataEngineer" as DataEngineer {
+    state "Manage AI Models" as DataEngineerManageAIModels {
+    }
+}
+state "aml" as aml #lightblue {
+state "aimodel" as amlaimodel #lightblue {
+state "list" as amlaimodellist #lightblue {
+}
+}
+}
+
+DataEngineerManageAIModels --> amlaimodellist
+
+
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage AI Models" as ApplicationDeveloperManageAIModels {
+            state "Create AI Model" as ApplicationDeveloperManageAIModelsCreateAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "create" as amlaimodelcreate #lavender {
+}
+}
+
+    ApplicationDeveloperManageAIModelsCreateAIModel --> amlaimodelcreate
+    
+    state "Data Scientist" as DataScientist {
+        state "Manage AI Models" as DataScientistManageAIModels {
+            state "Create AI Model" as DataScientistManageAIModelsCreateAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "create" as amlaimodelcreate #lavender {
+}
+}
+
+    DataScientistManageAIModelsCreateAIModel --> amlaimodelcreate
+    
+ 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Manage AI Models" as DevOpsEngineerManageAIModels {
+            state "Deploy AI Model" as DevOpsEngineerManageAIModelsDeployAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "deploy" as amlaimodeldeploy #lavender {
+}
+}
+
+    DevOpsEngineerManageAIModelsDeployAIModel --> amlaimodeldeploy
+    
+    state "ApplicationDeveloper" as ApplicationDeveloper {
+        state "Manage AI Models" as ApplicationDeveloperManageAIModels {
+            state "Deploy AI Model" as ApplicationDeveloperManageAIModelsDeployAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "deploy" as amlaimodeldeploy #lavender {
+}
+}
+
+    ApplicationDeveloperManageAIModelsDeployAIModel --> amlaimodeldeploy
+    
+    state "DataEngineer" as DataEngineer {
+        state "Manage AI Models" as DataEngineerManageAIModels {
+            state "Deploy AI Model" as DataEngineerManageAIModelsDeployAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "deploy" as amlaimodeldeploy #lavender {
+}
+}
+
+    DataEngineerManageAIModelsDeployAIModel --> amlaimodeldeploy
+    
+ 
+    state "DataEngineer" as DataEngineer {
+        state "Manage AI Models" as DataEngineerManageAIModels {
+            state "Destroy AI Model" as DataEngineerManageAIModelsDestroyAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "destroy" as amlaimodeldestroy #lavender {
+}
+}
+
+    DataEngineerManageAIModelsDestroyAIModel --> amlaimodeldestroy
+    
+    state "ApplicationDeveloper" as ApplicationDeveloper {
+        state "Manage AI Models" as ApplicationDeveloperManageAIModels {
+            state "Destroy AI Model" as ApplicationDeveloperManageAIModelsDestroyAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "destroy" as amlaimodeldestroy #lavender {
+}
+}
+
+    ApplicationDeveloperManageAIModelsDestroyAIModel --> amlaimodeldestroy
+    
+ 
+    state "DataEngineer" as DataEngineer {
+        state "Manage AI Models" as DataEngineerManageAIModels {
+            state "Update AI Model" as DataEngineerManageAIModelsUpdateAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "update" as amlaimodelupdate #lavender {
+}
+}
+
+    DataEngineerManageAIModelsUpdateAIModel --> amlaimodelupdate
+    
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Manage AI Models" as DevOpsEngineerManageAIModels {
+            state "Update AI Model" as DevOpsEngineerManageAIModelsUpdateAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "update" as amlaimodelupdate #lavender {
+}
+}
+
+    DevOpsEngineerManageAIModelsUpdateAIModel --> amlaimodelupdate
+    
+    state "ApplicationDeveloper" as ApplicationDeveloper {
+        state "Manage AI Models" as ApplicationDeveloperManageAIModels {
+            state "Update AI Model" as ApplicationDeveloperManageAIModelsUpdateAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "update" as amlaimodelupdate #lavender {
+}
+}
+
+    ApplicationDeveloperManageAIModelsUpdateAIModel --> amlaimodelupdate
+    
+ 
+ 
+state "DevOps Engineer" as DevOpsEngineer {
+    state "Manage Applications" as DevOpsEngineerManageApplications {
+    }
+}
+state "aml" as aml #lightblue {
+state "application" as amlapplication #lightblue {
+state "list" as amlapplicationlist #lightblue {
+}
+}
+}
+
+DevOpsEngineerManageApplications --> amlapplicationlist
+
+state "Application Developer" as ApplicationDeveloper {
+    state "Manage Applications" as ApplicationDeveloperManageApplications {
+    }
+}
+state "aml" as aml #lightblue {
+state "application" as amlapplication #lightblue {
+state "list" as amlapplicationlist #lightblue {
+}
+}
+}
+
+ApplicationDeveloperManageApplications --> amlapplicationlist
+
+
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Applications" as ApplicationDeveloperManageApplications {
+            state "Create Application" as ApplicationDeveloperManageApplicationsCreateApplication {
+            }
+        }
+    }
+    state "amlapplication" as amlapplication #lavender {
+state "create" as amlapplicationcreate #lavender {
+}
+}
+
+    ApplicationDeveloperManageApplicationsCreateApplication --> amlapplicationcreate
+    
+ 
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Applications" as DevOpsEngineerManageApplications {
+            state "Deploy Application" as DevOpsEngineerManageApplicationsDeployApplication {
+            }
+        }
+    }
+    state "amlapplication" as amlapplication #lavender {
+state "deploy" as amlapplicationdeploy #lavender {
+}
+}
+
+    DevOpsEngineerManageApplicationsDeployApplication --> amlapplicationdeploy
+    
+ 
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Applications" as DevOpsEngineerManageApplications {
+            state "Destroy Application" as DevOpsEngineerManageApplicationsDestroyApplication {
+            }
+        }
+    }
+    state "amlapplication" as amlapplication #lavender {
+state "destroy" as amlapplicationdestroy #lavender {
+}
+}
+
+    DevOpsEngineerManageApplicationsDestroyApplication --> amlapplicationdestroy
+    
+ 
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Applications" as DevOpsEngineerManageApplications {
+            state "Monitor Application" as DevOpsEngineerManageApplicationsMonitorApplication {
+            }
+        }
+    }
+    state "amlapplication" as amlapplication #lavender {
+state "monitor" as amlapplicationmonitor #lavender {
+}
+}
+
+    DevOpsEngineerManageApplicationsMonitorApplication --> amlapplicationmonitor
+    
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Applications" as ApplicationDeveloperManageApplications {
+            state "Monitor Application" as ApplicationDeveloperManageApplicationsMonitorApplication {
+            }
+        }
+    }
+    state "amlapplication" as amlapplication #lavender {
+state "monitor" as amlapplicationmonitor #lavender {
+}
+}
+
+    ApplicationDeveloperManageApplicationsMonitorApplication --> amlapplicationmonitor
+    
+ 
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Applications" as ApplicationDeveloperManageApplications {
+            state "Update Application" as ApplicationDeveloperManageApplicationsUpdateApplication {
+            }
+        }
+    }
+    state "amlapplication" as amlapplication #lavender {
+state "update" as amlapplicationupdate #lavender {
+}
+}
+
+    ApplicationDeveloperManageApplicationsUpdateApplication --> amlapplicationupdate
+    
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Applications" as DevOpsEngineerManageApplications {
+            state "Update Application" as DevOpsEngineerManageApplicationsUpdateApplication {
+            }
+        }
+    }
+    state "amlapplication" as amlapplication #lavender {
+state "update" as amlapplicationupdate #lavender {
+}
+}
+
+    DevOpsEngineerManageApplicationsUpdateApplication --> amlapplicationupdate
+    
+ 
+ 
+state "Application Developer" as ApplicationDeveloper {
+    state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
+    }
+}
+state "aml" as aml #lightblue {
+state "workload" as amlworkload #lightblue {
+state "list" as amlworkloadlist #lightblue {
+}
+}
+}
+
+ApplicationDeveloperManageWorkloads --> amlworkloadlist
+
+state "DevOps Engineer" as DevOpsEngineer {
+    state "Manage Workloads" as DevOpsEngineerManageWorkloads {
+    }
+}
+state "aml" as aml #lightblue {
+state "workload" as amlworkload #lightblue {
+state "list" as amlworkloadlist #lightblue {
+}
+}
+}
+
+DevOpsEngineerManageWorkloads --> amlworkloadlist
+
+
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
+            state "Create Workload" as ApplicationDeveloperManageWorkloadsCreateWorkload {
+            }
+        }
+    }
+    state "amlworkload" as amlworkload #lavender {
+state "create" as amlworkloadcreate #lavender {
+}
+}
+
+    ApplicationDeveloperManageWorkloadsCreateWorkload --> amlworkloadcreate
+    
+ 
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
+            state "Deploy Workload" as ApplicationDeveloperManageWorkloadsDeployWorkload {
+            }
+        }
+    }
+    state "amlworkload" as amlworkload #lavender {
+state "deploy" as amlworkloaddeploy #lavender {
+}
+}
+
+    ApplicationDeveloperManageWorkloadsDeployWorkload --> amlworkloaddeploy
+    
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Workloads" as DevOpsEngineerManageWorkloads {
+            state "Deploy Workload" as DevOpsEngineerManageWorkloadsDeployWorkload {
+            }
+        }
+    }
+    state "amlworkload" as amlworkload #lavender {
+state "deploy" as amlworkloaddeploy #lavender {
+}
+}
+
+    DevOpsEngineerManageWorkloadsDeployWorkload --> amlworkloaddeploy
+    
+ 
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Workloads" as DevOpsEngineerManageWorkloads {
+            state "Destroy Workload" as DevOpsEngineerManageWorkloadsDestroyWorkload {
+            }
+        }
+    }
+    state "amlworkload" as amlworkload #lavender {
+state "destroy" as amlworkloaddestroy #lavender {
+}
+}
+
+    DevOpsEngineerManageWorkloadsDestroyWorkload --> amlworkloaddestroy
+    
+ 
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
+            state "Monitor Workload" as ApplicationDeveloperManageWorkloadsMonitorWorkload {
+            }
+        }
+    }
+    state "amlworkload" as amlworkload #lavender {
+state "monitor" as amlworkloadmonitor #lavender {
+}
+}
+
+    ApplicationDeveloperManageWorkloadsMonitorWorkload --> amlworkloadmonitor
+    
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Workloads" as DevOpsEngineerManageWorkloads {
+            state "Monitor Workload" as DevOpsEngineerManageWorkloadsMonitorWorkload {
+            }
+        }
+    }
+    state "amlworkload" as amlworkload #lavender {
+state "monitor" as amlworkloadmonitor #lavender {
+}
+}
+
+    DevOpsEngineerManageWorkloadsMonitorWorkload --> amlworkloadmonitor
+    
+ 
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
+            state "Update Workload" as ApplicationDeveloperManageWorkloadsUpdateWorkload {
+            }
+        }
+    }
+    state "amlworkload" as amlworkload #lavender {
+state "update" as amlworkloadupdate #lavender {
+}
+}
+
+    ApplicationDeveloperManageWorkloadsUpdateWorkload --> amlworkloadupdate
+    
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Workloads" as DevOpsEngineerManageWorkloads {
+            state "Update Workload" as DevOpsEngineerManageWorkloadsUpdateWorkload {
+            }
+        }
+    }
+    state "amlworkload" as amlworkload #lavender {
+state "update" as amlworkloadupdate #lavender {
+}
+}
+
+    DevOpsEngineerManageWorkloadsUpdateWorkload --> amlworkloadupdate
+    
+ 
+ 
+
+@enduml

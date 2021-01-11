@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="340px" preserveAspectRatio="none" style="width:280px;height:340px;" version="1.1" viewBox="0 0 280 340" width="280px" zoomAndPan="magnify"><defs><filter height="300%" id="f1s69wwwjb03gk" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--entity Cloud--><rect fill="#ADD8E6" filter="url(#f1s69wwwjb03gk)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="57" x="111.5" y="292"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="37" x="121.5" y="316.5332">Cloud</text><!--entity ServiceInstance--><rect fill="#90EE90" filter="url(#f1s69wwwjb03gk)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="120" x="6" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="100" x="16" y="32.5332">ServiceInstance</text><!--entity StackInstance--><rect fill="#90EE90" filter="url(#f1s69wwwjb03gk)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="108" x="161" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="171" y="32.5332">StackInstance</text><!--class Model--><rect fill="#FEFECE" filter="url(#f1s69wwwjb03gk)" height="89.5078" id="Model" style="stroke: #A80036; stroke-width: 1.5;" width="78" x="101" y="124"/><ellipse cx="120.95" cy="140" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M123.7156,135.875 Q123.8719,135.6563 124.0594,135.5469 Q124.2469,135.4375 124.4656,135.4375 Q124.8406,135.4375 125.075,135.7031 Q125.3094,135.9531 125.3094,136.5625 L125.3094,138.0156 Q125.3094,138.625 125.075,138.8906 Q124.8406,139.1563 124.4656,139.1563 Q124.1219,139.1563 123.9188,138.9531 Q123.7156,138.7656 123.6063,138.25 Q123.5594,137.8906 123.3719,137.7031 Q123.0438,137.3281 122.4344,137.1094 Q121.825,136.8906 121.2,136.8906 Q120.4344,136.8906 119.7938,137.2188 Q119.1688,137.5469 118.6688,138.2969 Q118.1844,139.0469 118.1844,140.0781 L118.1844,141.1719 Q118.1844,142.4063 119.075,143.2344 Q119.9656,144.0469 121.5594,144.0469 Q122.4969,144.0469 123.1531,143.7969 Q123.5438,143.6406 123.9656,143.2031 Q124.2313,142.9375 124.3719,142.8594 Q124.5281,142.7813 124.7313,142.7813 Q125.0594,142.7813 125.3094,143.0469 Q125.575,143.2969 125.575,143.6406 Q125.575,143.9844 125.2313,144.3906 Q124.7313,144.9688 123.9344,145.2969 Q122.8563,145.75 121.5594,145.75 Q120.0438,145.75 118.8406,145.125 Q117.8563,144.625 117.1688,143.5625 Q116.4813,142.4844 116.4813,141.2031 L116.4813,140.0469 Q116.4813,138.7188 117.0906,137.5781 Q117.7156,136.4219 118.8094,135.8125 Q119.9031,135.1875 121.1375,135.1875 Q121.8719,135.1875 122.5125,135.3594 Q123.1688,135.5156 123.7156,135.875 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="35" x="136.05" y="144.9102">Image</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="102" x2="178" y1="156" y2="156"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="56" x="107" y="171.4189">string name</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="44" x="107" y="185.2549">string file</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="66" x="107" y="199.0908">string version</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="102" x2="178" y1="205.5078" y2="205.5078"/><!--link Model to Cloud--><path d="M140,227.603 C140,245.1082 140,263.6816 140,278.7545 " fill="none" id="Model-Cloud" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="140,291.9841,144,282.9841,140,286.9841,136,282.9841,140,291.9841" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="140" x2="140" y1="286.9841" y2="278.9841"/><polygon fill="#FFFFFF" points="140,214.297,136,220.297,140,226.297,144,220.297,140,214.297" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="31" x="141" y="258.4951">cloud</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="131.8844" y="280.9862">1</text><!--link ServiceInstance to Model--><path d="M81.6794,57.664 C90.0596,73.518 100.6549,93.563 110.509,112.205 " fill="none" id="ServiceInstance-Model" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="116.683,123.887,116.0145,114.0609,114.3468,119.4663,108.9414,117.7987,116.683,123.887" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="114.3468" x2="110.608" y1="119.4663" y2="112.394"/><polygon fill="#FFFFFF" points="75.5227,46.016,74.7898,53.1898,81.1299,56.6254,81.8628,49.4517,75.5227,46.016" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="35" x="102" y="90.4951">image</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="105.409" y="112.9845">1</text><!--link StackInstance to Model--><path d="M199.109,57.664 C190.615,73.518 179.877,93.563 169.89,112.205 " fill="none" id="StackInstance-Model" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="163.632,123.887,171.4076,117.8422,165.9929,119.4795,164.3556,114.0648,163.632,123.887" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="165.9929" x2="169.771" y1="119.4795" y2="112.4275"/><polygon fill="#FFFFFF" points="205.349,46.016,198.9897,49.416,199.6823,56.5937,206.0416,53.1938,205.349,46.016" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="35" x="189" y="90.4951">image</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="159.8405" y="112.9845">1</text><!--
+@startuml
+
+class "Image" as Model {
+ string name
+ string file
+ string version
+
+ 
+}
+
+rectangle "Cloud" as Cloud #lightblue {
+}
+
+Model o- -> "1" Cloud : cloud
+
+
+
+
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o- -> "1" Model : "image"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o- -> "1" Model : "image"
+    
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

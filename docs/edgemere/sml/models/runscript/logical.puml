@@ -1,0 +1,28 @@
+@startuml
+
+class "RunScript" as Model {
+ string attr1
+
+ 
+}
+
+rectangle "ModelName" as ModelName #lightblue {
+}
+
+Model o--> "1" ModelName : assoc1
+
+
+
+
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   *--> "n" Model : "runScripts"
+    
+
+@enduml

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1117px" preserveAspectRatio="none" style="width:646px;height:1117px;" version="1.1" viewBox="0 0 646 1117" width="646px" zoomAndPan="magnify"><defs><filter height="300%" id="fd0j7itsrxees" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster ITOperations--><rect fill="#FEFECE" filter="url(#fd0j7itsrxees)" height="792" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="330" x="22" y="102"/><rect fill="#FFFFFF" height="758.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="324" x="25" y="132.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="22" x2="352" y1="129.6094" y2="129.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="86" x="144" y="120.5332">IT Operations</text><!--cluster ITOperationsManageMultiCloud--><rect fill="#FEFECE" filter="url(#fd0j7itsrxees)" height="307" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="266" x="54" y="154"/><rect fill="#FFFFFF" height="273.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="260" x="57" y="184.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="54" x2="320" y1="181.6094" y2="181.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="125" x="124.5" y="172.5332">Manage Multi Cloud</text><!--cluster sml--><rect fill="#90EE90" filter="url(#fd0j7itsrxees)" height="1082" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="258" x="376" y="24"/><rect fill="#FFFFFF" height="1048.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="252" x="379" y="54.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="376" x2="634" y1="51.6094" y2="51.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="21" x="494.5" y="42.5332">sml</text><!--cluster smlcb--><rect fill="#90EE90" filter="url(#fd0j7itsrxees)" height="1014" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="210" x="400" y="68"/><rect fill="#FFFFFF" height="980.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="204" x="403" y="98.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="400" x2="610" y1="95.6094" y2="95.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="15" x="497.5" y="86.5332">cb</text><!--cluster smlcbresources--><rect fill="#90EE90" filter="url(#fd0j7itsrxees)" height="102" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="82" x="464" y="578"/><rect fill="#FFFFFF" height="68.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="76" x="467" y="608.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="464" x2="546" y1="605.6094" y2="605.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="63" x="473.5" y="596.5332">resources</text><!--cluster smlcbbilling--><rect fill="#90EE90" filter="url(#fd0j7itsrxees)" height="102" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="82" x="464" y="704"/><rect fill="#FFFFFF" height="68.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="76" x="467" y="734.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="464" x2="546" y1="731.6094" y2="731.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="36" x="487" y="722.5332">billing</text><!--cluster smlcbResourceInstanceType--><rect fill="#90EE90" filter="url(#fd0j7itsrxees)" height="102" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="162" x="424" y="830"/><rect fill="#FFFFFF" height="68.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="156" x="427" y="860.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="424" x2="586" y1="857.6094" y2="857.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="146" x="432" y="848.5332">ResourceInstanceType</text><!--cluster smlcbmulticloud--><rect fill="#90EE90" filter="url(#fd0j7itsrxees)" height="442" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="146" x="432" y="112"/><rect fill="#FFFFFF" height="408.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="140" x="435" y="142.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="432" x2="578" y1="139.6094" y2="139.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="63" x="473.5" y="130.5332">multicloud</text><!--cluster smlcbservice--><rect fill="#90EE90" filter="url(#fd0j7itsrxees)" height="102" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="142" x="434" y="956"/><rect fill="#FFFFFF" height="68.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="136" x="437" y="986.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="434" x2="576" y1="983.6094" y2="983.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="45" x="482.5" y="974.5332">service</text><rect fill="#FEFECE" filter="url(#fd0j7itsrxees)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="120" x="127" y="573"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="127" x2="247" y1="600.6094" y2="600.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="100" x="137" y="592.5332">Find Resources</text><rect fill="#FEFECE" filter="url(#fd0j7itsrxees)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="108" x="133" y="658"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="133" x2="241" y1="685.6094" y2="685.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="143" y="677.5332">ManageBilling</text><rect fill="#FEFECE" filter="url(#fd0j7itsrxees)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="138" x="118" y="743"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="118" x2="256" y1="770.6094" y2="770.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="118" x="128" y="762.5332">ManageCostModel</text><rect fill="#FEFECE" filter="url(#fd0j7itsrxees)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="150" x="112" y="488"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="112" x2="262" y1="515.6094" y2="515.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="130" x="122" y="507.5332">Map Assets to Cloud</text><rect fill="#FEFECE" filter="url(#fd0j7itsrxees)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="193" x="90.5" y="828"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="90.5" x2="283.5" y1="855.6094" y2="855.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="173" x="100.5" y="847.5332">Map Services to Resources</text><rect fill="#FEFECE" filter="url(#fd0j7itsrxees)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="176" x="99" y="198"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="99" x2="275" y1="225.6094" y2="225.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="156" x="109" y="217.5332">Add Cloud to Multi Cloud</text><rect fill="#FEFECE" filter="url(#fd0j7itsrxees)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="218" x="78" y="283"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="78" x2="296" y1="310.6094" y2="310.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="198" x="88" y="302.5332">Manage Policies for Multi Cloud</text><rect fill="#FEFECE" filter="url(#fd0j7itsrxees)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="218" x="78" y="368"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="78" x2="296" y1="395.6094" y2="395.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="198" x="88" y="387.5332">Manage Policies for Multi Cloud</text><rect fill="#90EE90" filter="url(#fd0j7itsrxees)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="50" x="480" y="614"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="480" x2="530" y1="641.6094" y2="641.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="23" x="493.5" y="633.5332">find</text><rect fill="#90EE90" filter="url(#fd0j7itsrxees)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="50" x="480" y="740"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="480" x2="530" y1="767.6094" y2="767.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="17" x="496.5" y="759.5332">list</text><rect fill="#90EE90" filter="url(#fd0j7itsrxees)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="50" x="480" y="866"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="480" x2="530" y1="893.6094" y2="893.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="17" x="496.5" y="885.5332">list</text><rect fill="#90EE90" filter="url(#fd0j7itsrxees)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="50" x="480" y="403"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="480" x2="530" y1="430.6094" y2="430.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="17" x="496.5" y="422.5332">list</text><rect fill="#90EE90" filter="url(#fd0j7itsrxees)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="85" x="462.5" y="148"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="462.5" x2="547.5" y1="175.6094" y2="175.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="65" x="472.5" y="167.5332">addclouds</text><rect fill="#90EE90" filter="url(#fd0j7itsrxees)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="91" x="459.5" y="233"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="459.5" x2="550.5" y1="260.6094" y2="260.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="71" x="469.5" y="252.5332">addpolicies</text><rect fill="#90EE90" filter="url(#fd0j7itsrxees)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="114" x="448" y="318"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="448" x2="562" y1="345.6094" y2="345.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="94" x="458" y="337.5332">removepolicies</text><rect fill="#90EE90" filter="url(#fd0j7itsrxees)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="110" x="450" y="488"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="450" x2="560" y1="515.6094" y2="515.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="90" x="460" y="507.5332">mapresources</text><rect fill="#90EE90" filter="url(#fd0j7itsrxees)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="110" x="450" y="992"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="450" x2="560" y1="1019.6094" y2="1019.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="90" x="460" y="1011.5332">mapresources</text><!--link ITOperationsFindResources to smlcbresourcesfind--><path d="M247.066,605.664 C314.767,614.448 423.017,628.493 474.694,635.198 " fill="none" id="ITOperationsFindResources-smlcbresourcesfind" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="479.814,635.862,471.403,630.7381,474.8555,635.2192,470.3744,638.6717,479.814,635.862" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageBilling to smlcbbillinglist--><path d="M241.144,696.002 C275.168,704.397 320.235,715.645 360,726 C399.925,736.396 445.915,748.954 474.966,756.958 " fill="none" id="ITOperationsManageBilling-smlcbbillinglist" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="479.834,758.3,472.2222,752.0502,475.0141,756.97,470.0943,759.762,479.834,758.3" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageCostModel to smlcbResourceInstanceTypelist--><path d="M256.262,780.75 C288.361,787.83 326.79,797.888 360,811 C402.167,827.649 447.327,854.353 475.605,872.277 " fill="none" id="ITOperationsManageCostModel-smlcbResourceInstanceTypelist" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="479.996,875.075,474.5554,866.8653,475.7793,872.3881,470.2564,873.612,479.996,875.075" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageMultiCloud to smlcbmulticloudlist--><path d="M321.0382,442.4748 C322.9993,442.3197 324.9656,442.1641 326.936,442.0083 C334.8175,441.3847 342.7631,440.7561 350.6931,440.1288 C366.5529,438.8741 382.3496,437.6243 397.4433,436.4302 C427.6306,434.042 455.0058,431.8762 474.449,430.338 " fill="none" id="ITOperationsManageMultiCloud-smlcbmulticloudlist" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="479.825,429.913,470.5377,426.635,474.8406,430.3072,471.1684,434.6101,479.825,429.913" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageMultiCloudAddCloudtoMultiCloud to smlcbmulticloudaddclouds--><path d="M275.185,209.205 C334.056,199.89 409.466,187.958 457.273,180.394 " fill="none" id="ITOperationsManageMultiCloudAddCloudtoMultiCloud-smlcbmulticloudaddclouds" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="462.386,179.584,452.8715,177.0397,457.4474,180.3654,454.1217,184.9414,462.386,179.584" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageMultiCloudManagePoliciesforMultiCloud to smlcbmulticloudaddpolicies--><path d="M296.307,290.863 C349.873,282.387 411.922,272.569 454.152,265.887 " fill="none" id="ITOperationsManageMultiCloudManagePoliciesforMultiCloud-smlcbmulticloudaddpolicies" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="459.202,265.088,449.6875,262.5437,454.2634,265.8694,450.9377,270.4454,459.202,265.088" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageMultiCloudRemoveCloudfromMultiCloud to smlcbmulticloudremovepolicies--><path d="M296.307,375.863 C345.237,368.121 401.246,359.259 442.761,352.69 " fill="none" id="ITOperationsManageMultiCloudRemoveCloudfromMultiCloud-smlcbmulticloudremovepolicies" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="447.751,351.9,438.2365,349.3557,442.8124,352.6814,439.4867,357.2574,447.751,351.9" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsMapAssetstoCloud to smlcbmulticloudmapresources--><path d="M262.088,513 C317.643,513 392.696,513 444.397,513 " fill="none" id="ITOperationsMapAssetstoCloud-smlcbmulticloudmapresources" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="449.64,513,440.64,509,444.64,513,440.64,517,449.64,513" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsMapServicestoResources to smlcbservicemapresources--><path d="M236.338,878.087 C294.303,908.17 391.124,958.419 451.06,989.525 " fill="none" id="ITOperationsMapServicestoResources-smlcbservicemapresources" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="455.668,991.916,449.5224,984.2198,451.2301,989.6127,445.8372,991.3205,455.668,991.916" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+left to right direction
+
+
+
+state "IT Operations" as ITOperations {
+    state "Find Resources" as ITOperationsFindResources {
+    }
+}
+state "sml" as sml #lightgreen {
+state "cb" as smlcb #lightgreen {
+state "resources" as smlcbresources #lightgreen {
+state "find" as smlcbresourcesfind #lightgreen {
+}
+}
+}
+}
+
+ITOperationsFindResources - -> smlcbresourcesfind
+
+
+ 
+state "ITOperations" as ITOperations {
+    state "ManageBilling" as ITOperationsManageBilling {
+    }
+}
+state "sml" as sml #lightgreen {
+state "cb" as smlcb #lightgreen {
+state "billing" as smlcbbilling #lightgreen {
+state "list" as smlcbbillinglist #lightgreen {
+}
+}
+}
+}
+
+ITOperationsManageBilling - -> smlcbbillinglist
+
+
+ 
+state "ITOperations" as ITOperations {
+    state "ManageCostModel" as ITOperationsManageCostModel {
+    }
+}
+state "sml" as sml #lightgreen {
+state "cb" as smlcb #lightgreen {
+state "ResourceInstanceType" as smlcbResourceInstanceType #lightgreen {
+state "list" as smlcbResourceInstanceTypelist #lightgreen {
+}
+}
+}
+}
+
+ITOperationsManageCostModel - -> smlcbResourceInstanceTypelist
+
+
+ 
+state "IT Operations" as ITOperations {
+    state "Manage Multi Cloud" as ITOperationsManageMultiCloud {
+    }
+}
+state "sml" as sml #lightgreen {
+state "cb" as smlcb #lightgreen {
+state "multicloud" as smlcbmulticloud #lightgreen {
+state "list" as smlcbmulticloudlist #lightgreen {
+}
+}
+}
+}
+
+ITOperationsManageMultiCloud - -> smlcbmulticloudlist
+
+
+    state "IT Operations" as ITOperations {
+        state "Manage Multi Cloud" as ITOperationsManageMultiCloud {
+            state "Add Cloud to Multi Cloud" as ITOperationsManageMultiCloudAddCloudtoMultiCloud {
+            }
+        }
+    }
+    state "sml" as sml #lightgreen {
+state "cbmulticloud" as smlcbmulticloud #lightgreen {
+state "addclouds" as smlcbmulticloudaddclouds #lightgreen {
+}
+}
+}
+
+    ITOperationsManageMultiCloudAddCloudtoMultiCloud - -> smlcbmulticloudaddclouds
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Multi Cloud" as ITOperationsManageMultiCloud {
+            state "Manage Policies for Multi Cloud" as ITOperationsManageMultiCloudManagePoliciesforMultiCloud {
+            }
+        }
+    }
+    state "sml" as sml #lightgreen {
+state "cbmulticloud" as smlcbmulticloud #lightgreen {
+state "addpolicies" as smlcbmulticloudaddpolicies #lightgreen {
+}
+}
+}
+
+    ITOperationsManageMultiCloudManagePoliciesforMultiCloud - -> smlcbmulticloudaddpolicies
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Multi Cloud" as ITOperationsManageMultiCloud {
+            state "Manage Policies for Multi Cloud" as ITOperationsManageMultiCloudRemoveCloudfromMultiCloud {
+            }
+        }
+    }
+    state "sml" as sml #lightgreen {
+state "cbmulticloud" as smlcbmulticloud #lightgreen {
+state "removepolicies" as smlcbmulticloudremovepolicies #lightgreen {
+}
+}
+}
+
+    ITOperationsManageMultiCloudRemoveCloudfromMultiCloud - -> smlcbmulticloudremovepolicies
+    
+ 
+ 
+state "IT Operations" as ITOperations {
+    state "Map Assets to Cloud" as ITOperationsMapAssetstoCloud {
+    }
+}
+state "sml" as sml #lightgreen {
+state "cb" as smlcb #lightgreen {
+state "multicloud" as smlcbmulticloud #lightgreen {
+state "mapresources" as smlcbmulticloudmapresources #lightgreen {
+}
+}
+}
+}
+
+ITOperationsMapAssetstoCloud - -> smlcbmulticloudmapresources
+
+
+ 
+state "IT Operations" as ITOperations {
+    state "Map Services to Resources" as ITOperationsMapServicestoResources {
+    }
+}
+state "sml" as sml #lightgreen {
+state "cb" as smlcb #lightgreen {
+state "service" as smlcbservice #lightgreen {
+state "mapresources" as smlcbservicemapresources #lightgreen {
+}
+}
+}
+}
+
+ITOperationsMapServicestoResources - -> smlcbservicemapresources
+
+
+ 
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

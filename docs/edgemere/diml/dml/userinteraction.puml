@@ -1,0 +1,27 @@
+@startuml
+
+actor "ChiefDataOfficer" as cdo
+
+actor "DataEngineer" as dataengineer
+
+
+
+
+cdo -> "Data Management Layer": Manage Data Governance
+"Data Management Layer" -> bin: data/govern
+bin -> REST: data/govern
+
+cdo -> "Data Management Layer": Manage Data Policies
+"Data Management Layer" -> bin: datapolicy/list
+bin -> REST: datapolicy/list
+
+cdo -> "Data Management Layer": Manage Data Strategy
+"Data Management Layer" -> bin: datastrategy/list
+bin -> REST: datastrategy/list
+
+dataengineer -> "Data Management Layer": Manage Data Sources
+"Data Management Layer" -> bin: datasource/list
+bin -> REST: datasource/list
+
+
+@enduml

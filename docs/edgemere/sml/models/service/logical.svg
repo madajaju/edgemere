@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="395px" preserveAspectRatio="none" style="width:598px;height:395px;" version="1.1" viewBox="0 0 598 395" width="598px" zoomAndPan="magnify"><defs><filter height="300%" id="fgx1e7mnm89ps" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--entity Stack--><rect fill="#90EE90" filter="url(#fgx1e7mnm89ps)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="55" x="204.554" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="35" x="214.554" y="32.5332">Stack</text><!--entity Servicelet--><rect fill="#90EE90" filter="url(#fgx1e7mnm89ps)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="82" x="24.054" y="347"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="62" x="34.054" y="371.5332">Servicelet</text><!--entity Service--><rect fill="#90EE90" filter="url(#fgx1e7mnm89ps)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="67" x="285.554" y="347"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="47" x="295.554" y="371.5332">Service</text><!--entity PolicyCollection--><rect fill="#ADD8E6" filter="url(#fgx1e7mnm89ps)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="119" x="468.554" y="347"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="99" x="478.554" y="371.5332">PolicyCollection</text><!--entity Stacklet--><rect fill="#90EE90" filter="url(#fgx1e7mnm89ps)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="70" x="393.054" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="50" x="403.054" y="32.5332">Stacklet</text><!--class Model--><rect fill="#FEFECE" filter="url(#fgx1e7mnm89ps)" height="144.8516" id="Model" style="stroke: #A80036; stroke-width: 1.5;" width="90" x="231.054" y="124"/><ellipse cx="254.154" cy="140" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M256.9196,135.875 Q257.0759,135.6563 257.2634,135.5469 Q257.4509,135.4375 257.6696,135.4375 Q258.0446,135.4375 258.279,135.7031 Q258.5134,135.9531 258.5134,136.5625 L258.5134,138.0156 Q258.5134,138.625 258.279,138.8906 Q258.0446,139.1563 257.6696,139.1563 Q257.3259,139.1563 257.1228,138.9531 Q256.9196,138.7656 256.8103,138.25 Q256.7634,137.8906 256.5759,137.7031 Q256.2478,137.3281 255.6384,137.1094 Q255.029,136.8906 254.404,136.8906 Q253.6384,136.8906 252.9978,137.2188 Q252.3728,137.5469 251.8728,138.2969 Q251.3884,139.0469 251.3884,140.0781 L251.3884,141.1719 Q251.3884,142.4063 252.279,143.2344 Q253.1696,144.0469 254.7634,144.0469 Q255.7009,144.0469 256.3571,143.7969 Q256.7478,143.6406 257.1696,143.2031 Q257.4353,142.9375 257.5759,142.8594 Q257.7321,142.7813 257.9353,142.7813 Q258.2634,142.7813 258.5134,143.0469 Q258.779,143.2969 258.779,143.6406 Q258.779,143.9844 258.4353,144.3906 Q257.9353,144.9688 257.1384,145.2969 Q256.0603,145.75 254.7634,145.75 Q253.2478,145.75 252.0446,145.125 Q251.0603,144.625 250.3728,143.5625 Q249.6853,142.4844 249.6853,141.2031 L249.6853,140.0469 Q249.6853,138.7188 250.2946,137.5781 Q250.9196,136.4219 252.0134,135.8125 Q253.1071,135.1875 254.3415,135.1875 Q255.0759,135.1875 255.7165,135.3594 Q256.3728,135.5156 256.9196,135.875 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="40" x="269.954" y="144.9102">Service</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="232.054" x2="320.054" y1="156" y2="156"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="56" x="237.054" y="171.4189">string name</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="66" x="237.054" y="185.2549">string version</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="48" x="237.054" y="199.0908">json ports</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="59" x="237.054" y="212.9268">json expose</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="78" x="237.054" y="226.7627">json parameters</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="232.054" x2="320.054" y1="233.1797" y2="233.1797"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="39" x="237.054" y="248.5986">create()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="50" x="237.054" y="262.4346">createlet()</text><!--link Model to Stack--><path d="M321.362,110.845 C322.799,98.794 321.3,86.828 315.054,76 C305.642,59.684 288.334,48.414 271.949,40.917 " fill="none" id="Model-Stack" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="259.746,35.898,266.5476,43.0211,264.3701,37.8001,269.591,35.6226,259.746,35.898" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="264.3701" x2="271.769" y1="37.8001" y2="40.842"/><polygon fill="#FFFFFF" points="318.735,123.906,323.8393,118.8123,321.1006,112.1415,315.9963,117.2352,318.735,123.906" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="32" x="322.054" y="90.4951">stack</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="267.739" y="33.7183">1</text><!--link Stack to Model--><path d="M191.391,32.034 C143.85,38.601 74.3562,55.037 97.054,94 C122.966,138.48 176.418,165.045 218.199,179.77 " fill="none" id="Stack-Model" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="230.747,183.966,223.4802,177.3181,226.0051,182.3802,220.943,184.9051,230.747,183.966" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="226.0051" x2="218.418" y1="182.3802" y2="179.843"/><polygon fill="#A80036" points="204.42,30.399,197.9687,27.1772,192.5134,31.8931,198.9647,35.1149,204.42,30.399" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="47" x="98.054" y="90.4951">services</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="215.9684" y="178.2284">n</text><!--link Stack to Model--><path d="M197.543,55.428 C187.679,66.674 180.841,80.265 186.054,94 C193.594,113.869 207,132.341 221.201,147.933 " fill="none" id="Stack-Model-1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="230.593,157.749,227.2612,148.4808,227.1364,154.1363,221.4809,154.0115,230.593,157.749" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="227.1364" x2="221.6055" y1="154.1363" y2="148.3565"/><polygon fill="#FFFFFF" points="206.765,46.204,199.6942,47.6193,198.281,54.6906,205.3519,53.2753,206.765,46.204" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="45" x="187.054" y="90.4951">children</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="216.0958" y="148.1237">n</text><!--link Stack to Model--><path d="M240.194,58.989 C244.109,73.891 249.011,92.553 253.922,111.247 " fill="none" id="Stack-Model-2" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="257.225,123.822,258.807,114.101,255.9546,118.9861,251.0696,116.1337,257.225,123.822" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="255.9546" x2="253.9225" y1="118.9861" y2="111.249"/><polygon fill="#FFFFFF" points="236.847,46.244,234.5027,53.0634,239.8959,57.8502,242.2402,51.0308,236.847,46.244" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="36" x="250.054" y="90.4951">parent</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="247.9223" y="113.023">1</text><!--link Model to Servicelet--><path d="M217.606,201.282 C154.426,208.855 56.5485,231.494 10.054,299 C0.5908,312.7396 9.8964,327.0723 23.3764,338.857 " fill="none" id="Model-Servicelet" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="33.721,346.9428,29.0935,338.2488,29.7816,343.8636,24.1668,344.5517,33.721,346.9428" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="29.7816" x2="23.4786" y1="343.8636" y2="338.9369"/><polygon fill="#A80036" points="230.919,199.846,224.5246,196.5126,218.9882,201.133,225.3826,204.4664,230.919,199.846" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="61" x="11.054" y="313.4951">servicelets</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="16.0534" y="336.2653">n</text><!--link Servicelet to Model--><path d="M94.0654,338.0245 C107.505,325.816 123.837,311.3802 139.054,299 C165.056,277.845 194.862,255.545 220.018,237.252 " fill="none" id="Servicelet-Model" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="230.853,229.411,221.2169,231.447,226.8024,232.3423,225.907,237.9279,230.853,229.411" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="226.8024" x2="220.3215" y1="232.3423" y2="237.032"/><polygon fill="#FFFFFF" points="84.4183,346.8552,91.5449,345.7545,93.2699,338.7528,86.1433,339.8535,84.4183,346.8552" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="40" x="140.054" y="313.4951">service</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="216.0913" y="230.9162">1</text><!--link Model to Service--><path d="M332.428,227.124 C358.76,244.266 387.466,268.515 402.054,299 C412.742,321.3345 389.292,338.4179 364.623,349.6033 " fill="none" id="Model-Service" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="352.559,354.6176,362.405,354.8566,357.176,352.6984,359.3342,347.4694,352.559,354.6176" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="357.176" x2="364.5635" y1="352.6984" y2="349.6279"/><polygon fill="#FFFFFF" points="321.336,220.215,324.3141,226.7824,331.5217,226.5593,328.5437,219.9919,321.336,220.215" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="45" x="406.054" y="313.4951">children</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="360.6538" y="347.954">n</text><!--link Model to Service--><path d="M220.935,238.364 C196.621,261.48 177.169,290.899 195.054,317 C212.379,342.2838 245.088,354.2526 272.563,359.9168 " fill="none" id="Model-Service-1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="285.54,362.2217,277.378,356.7098,280.617,361.3475,275.9793,364.5866,285.54,362.2217" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="280.617" x2="272.7405" y1="361.3475" y2="359.9482"/><polygon fill="#FFFFFF" points="230.799,229.513,223.6619,230.5433,221.8679,237.5277,229.005,236.4974,230.799,229.513" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="36" x="196.054" y="313.4951">parent</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="270.4432" y="357.2215">1</text><!--link Service to Model--><path d="M285.78,337.1189 C280.585,331.0646 275.976,324.2727 273.054,317 C268.65,306.0402 266.353,294.0471 265.443,282.022 " fill="none" id="Service-Model" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="264.966,269.008,261.298,278.1483,265.149,274.0047,269.2927,277.8556,264.966,269.008" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="265.149" x2="265.442" y1="274.0047" y2="281.9995"/><polygon fill="#FFFFFF" points="294.881,346.5662,293.5986,339.47,286.555,337.9245,287.8375,345.0207,294.881,346.5662" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="45" x="274.054" y="313.4951">children</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="256.53" y="290.4527">n</text><!--link Service to Model--><path d="M325.171,333.7829 C326.36,322.6963 326.567,310.1945 324.054,299 C322.758,293.2274 321.094,287.3969 319.169,281.603 " fill="none" id="Service-Model-1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="314.576,269.016,313.9033,278.8419,316.2899,273.7131,321.4186,276.0997,314.576,269.016" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="316.2899" x2="319.032" y1="273.7131" y2="281.2285"/><polygon fill="#FFFFFF" points="323.272,346.8641,328.0925,341.501,324.9961,334.9886,320.1755,340.3517,323.272,346.8641" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="36" x="327.054" y="313.4951">parent</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="311.0235" y="290.4615">1</text><!--link Model to PolicyCollection--><path d="M332.944,223.934 C370.555,242.577 420.102,269.423 460.054,299 C475.287,310.2774 490.581,324.7706 502.795,337.3015 " fill="none" id="Model-PolicyCollection" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="511.872,346.8314,508.5619,337.5555,508.4238,343.2106,502.7686,343.0726,511.872,346.8314" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="508.4238" x2="502.906" y1="343.2106" y2="337.4176"/><polygon fill="#FFFFFF" points="321.179,218.176,324.8092,224.4067,331.9568,223.4522,328.3266,217.2215,321.179,218.176" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="44" x="482.054" y="313.4951">policies</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="498.8444" y="336.1198">1</text><!--link Stacklet to Model--><path d="M402.707,55.931 C383.001,77.647 354.955,108.554 330.261,135.765 " fill="none" id="Stacklet-Model" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="321.337,145.6,330.3471,141.6229,324.6969,141.8972,324.4227,136.247,321.337,145.6" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="324.6969" x2="330.0725" y1="141.8972" y2="135.9725"/><polygon fill="#FFFFFF" points="411.498,46.244,404.5038,47.9994,403.4341,55.1307,410.4283,53.3753,411.498,46.244" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="40" x="385.054" y="90.4951">service</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="329.1118" y="133.7478">1</text><!--
+@startuml
+
+class "Service" as Model {
+ string name
+ string version
+ json ports
+ json expose
+ json parameters
+
+ create()
+ createlet()
+ 
+}
+
+rectangle "Stack" as Stack #lightblue {
+}
+
+Model o- -> "1" Stack : stack
+
+
+rectangle "Servicelet" as Servicelet #lightblue {
+}
+
+Model *- -> "n" Servicelet : servicelets
+
+
+rectangle "Service" as Service #lightblue {
+}
+
+Model o- -> "n" Service : children
+
+
+rectangle "Service" as Service #lightblue {
+}
+
+Model o- -> "1" Service : parent
+
+
+rectangle "PolicyCollection" as PolicyCollection #lightblue {
+}
+
+Model o- -> "1" PolicyCollection : policies
+
+
+
+
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o- -> "n" Model : "children"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o- -> "1" Model : "parent"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o- -> "1" Model : "service"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *- -> "n" Model : "services"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   o- -> "n" Model : "children"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   o- -> "1" Model : "parent"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o- -> "1" Model : "service"
+    
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

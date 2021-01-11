@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="238px" preserveAspectRatio="none" style="width:319px;height:238px;" version="1.1" viewBox="0 0 319 238" width="319px" zoomAndPan="magnify"><defs><filter height="300%" id="fv06fbwoqz2gj" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--entity DataBluePrint--><rect fill="#90EE90" filter="url(#fv06fbwoqz2gj)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="107" x="6" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="16" y="32.5332">DataBluePrint</text><!--entity DataBluePrintInstance--><rect fill="#90EE90" filter="url(#fv06fbwoqz2gj)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="160" x="148.5" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="140" x="158.5" y="32.5332">DataBluePrintInstance</text><!--class Model--><rect fill="#FEFECE" filter="url(#fv06fbwoqz2gj)" height="103.3438" id="Model" style="stroke: #A80036; stroke-width: 1.5;" width="92" x="97.5" y="124"/><ellipse cx="122.4" cy="140" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M125.1656,135.875 Q125.3219,135.6563 125.5094,135.5469 Q125.6969,135.4375 125.9156,135.4375 Q126.2906,135.4375 126.525,135.7031 Q126.7594,135.9531 126.7594,136.5625 L126.7594,138.0156 Q126.7594,138.625 126.525,138.8906 Q126.2906,139.1563 125.9156,139.1563 Q125.5719,139.1563 125.3688,138.9531 Q125.1656,138.7656 125.0563,138.25 Q125.0094,137.8906 124.8219,137.7031 Q124.4938,137.3281 123.8844,137.1094 Q123.275,136.8906 122.65,136.8906 Q121.8844,136.8906 121.2438,137.2188 Q120.6188,137.5469 120.1188,138.2969 Q119.6344,139.0469 119.6344,140.0781 L119.6344,141.1719 Q119.6344,142.4063 120.525,143.2344 Q121.4156,144.0469 123.0094,144.0469 Q123.9469,144.0469 124.6031,143.7969 Q124.9938,143.6406 125.4156,143.2031 Q125.6813,142.9375 125.8219,142.8594 Q125.9781,142.7813 126.1813,142.7813 Q126.5094,142.7813 126.7594,143.0469 Q127.025,143.2969 127.025,143.6406 Q127.025,143.9844 126.6813,144.3906 Q126.1813,144.9688 125.3844,145.2969 Q124.3063,145.75 123.0094,145.75 Q121.4938,145.75 120.2906,145.125 Q119.3063,144.625 118.6188,143.5625 Q117.9313,142.4844 117.9313,141.2031 L117.9313,140.0469 Q117.9313,138.7188 118.5406,137.5781 Q119.1656,136.4219 120.2594,135.8125 Q121.3531,135.1875 122.5875,135.1875 Q123.3219,135.1875 123.9625,135.3594 Q124.6188,135.5156 125.1656,135.875 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="38" x="138.6" y="144.9102">Identity</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="98.5" x2="188.5" y1="156" y2="156"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="56" x="103.5" y="171.4189">string name</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="78" x="103.5" y="185.2549">string username</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="80" x="103.5" y="199.0908">string password</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="49" x="103.5" y="212.9268">string cert</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="98.5" x2="188.5" y1="219.3438" y2="219.3438"/><!--link DataBluePrint to Model--><path d="M76.5569,57.748 C85.6055,73.529 97.0764,93.535 107.955,112.508 " fill="none" id="DataBluePrint-Model" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="114.447,123.83,113.441,114.0327,111.9602,119.4923,106.5006,118.0115,114.447,123.83" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="111.9602" x2="107.9806" y1="119.4923" y2="112.552"/><polygon fill="#FFFFFF" points="69.9688,46.258,69.4829,53.4527,75.9373,56.6684,76.4232,49.4737,69.9688,46.258" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="42" x="97.5" y="90.4951">identity</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="103.0727" y="113.3075">1</text><!--link DataBluePrintInstance to Model--><path d="M211.24,57.748 C202.084,73.529 190.476,93.535 179.468,112.508 " fill="none" id="DataBluePrintInstance-Model" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="172.899,123.83,180.8756,118.053,175.4083,119.5053,173.956,114.038,172.899,123.83" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="175.4083" x2="179.4235" y1="119.5053" y2="112.5855"/><polygon fill="#FFFFFF" points="217.907,46.258,211.436,49.4402,211.8846,56.6373,218.3556,53.4551,217.907,46.258" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="42" x="200.5" y="90.4951">identity</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="169.3792" y="113.3075">1</text><!--
+@startuml
+
+class "Identity" as Model {
+ string name
+ string username
+ string password
+ string cert
+
+ 
+}
+
+
+
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   o- -> "1" Model : "identity"
+    
+    rectangle "DataBluePrintInstance" as DataBluePrintInstance #lightgreen {
+    }
+    
+        DataBluePrintInstance   o- -> "1" Model : "identity"
+    
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

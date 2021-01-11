@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="285px" preserveAspectRatio="none" style="width:551px;height:285px;" version="1.1" viewBox="0 0 551 285" width="551px" zoomAndPan="magnify"><defs><filter height="300%" id="f9rpjxiexfc4s" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><ellipse cx="286.1041" cy="168.4517" fill="#FEFECE" filter="url(#f9rpjxiexfc4s)" rx="63.1041" ry="15.4517" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="85" x="243.6041" y="173.7564">Manage Data</text><!--entity DataScientist--><ellipse cx="167" cy="18" fill="#FEFECE" filter="url(#f9rpjxiexfc4s)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M167,26 L167,53 M154,34 L180,34 M167,53 L154,68 M167,53 L180,68 " fill="none" filter="url(#f9rpjxiexfc4s)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="123.5" y="89.5332">Data Scientist</text><!--entity DataAnalyst--><ellipse cx="286" cy="18" fill="#FEFECE" filter="url(#f9rpjxiexfc4s)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M286,26 L286,53 M273,34 L299,34 M286,53 L273,68 M286,53 L299,68 " fill="none" filter="url(#f9rpjxiexfc4s)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="80" x="246" y="89.5332">Data Analyst</text><!--entity DataEngineer--><ellipse cx="405" cy="18" fill="#FEFECE" filter="url(#f9rpjxiexfc4s)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M405,26 L405,53 M392,34 L418,34 M405,53 L392,68 M405,53 L418,68 " fill="none" filter="url(#f9rpjxiexfc4s)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="361.5" y="89.5332">DataEngineer</text><ellipse cx="64.8614" cy="259.4517" fill="#D3D3D3" filter="url(#f9rpjxiexfc4s)" rx="58.8614" ry="15.4517" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="79" x="25.3614" y="264.7564">DestroyData</text><ellipse cx="214.8259" cy="259.4517" fill="#D3D3D3" filter="url(#f9rpjxiexfc4s)" rx="55.3259" ry="15.4517" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="74" x="177.8259" y="264.7564">EgressData</text><ellipse cx="357.0833" cy="259.4517" fill="#D3D3D3" filter="url(#f9rpjxiexfc4s)" rx="51.0833" ry="15.4517" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="68" x="323.0833" y="264.7564">IngestData</text><ellipse cx="491.7548" cy="259.4517" fill="#D3D3D3" filter="url(#f9rpjxiexfc4s)" rx="48.2548" ry="15.4517" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="64" x="459.7548" y="264.7564">MoveData</text><!--link DataScientist to ManageData--><path d="M209.626,93.051 C229.545,112.469 252.216,134.568 267.649,149.611 " fill="none" id="DataScientist-ManageData" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="271.41,153.278,267.7577,144.1314,267.8297,149.7878,262.1734,149.8598,271.41,153.278" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataAnalyst to ManageData--><path d="M286,93.051 C286,111.579 286,132.548 286,147.5 " fill="none" id="DataAnalyst-ManageData" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="286,152.72,290,143.72,286,147.72,282,143.72,286,152.72" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataEngineer to ManageData--><path d="M362.374,93.051 C342.455,112.469 319.784,134.568 304.351,149.611 " fill="none" id="DataEngineer-ManageData" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="300.59,153.278,309.8266,149.8598,304.1703,149.7878,304.2423,144.1314,300.59,153.278" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageData to DestroyData--><path d="M254.805,182.0628 C214.134,198.4416 143.168,227.0208 100.4864,244.2091 " fill="none" id="ManageData-DestroyData" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="95.681,246.1443,105.5237,246.4926,100.319,244.2764,102.5351,239.0717,95.681,246.1443" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageData to EgressData--><path d="M274.593,183.7994 C262.378,199.1102 242.959,223.4523 229.629,240.1623 " fill="none" id="ManageData-EgressData" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="226.379,244.2361,235.1186,239.6952,229.4972,240.3275,228.8648,234.7061,226.379,244.2361" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageData to IngestData--><path d="M297.407,183.7994 C309.622,199.1102 329.041,223.4523 342.371,240.1623 " fill="none" id="ManageData-IngestData" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="345.621,244.2361,343.1352,234.7061,342.5028,240.3275,336.8814,239.6952,345.621,244.2361" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageData to MoveData--><path d="M315.515,182.2515 C353.787,198.7867 420.304,227.5246 459.832,244.6022 " fill="none" id="ManageData-MoveData" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="464.515,246.6254,457.8393,239.3842,459.925,244.6425,454.6667,246.7283,464.515,246.6254" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+
+
+usecase "Manage Data" as ManageData
+
+Actor "Data Scientist" as DataScientist
+
+DataScientist - -> ManageData
+
+Actor "Data Analyst" as DataAnalyst
+
+DataAnalyst - -> ManageData
+
+Actor "DataEngineer" as DataEngineer
+
+DataEngineer - -> ManageData
+
+
+
+usecase "DestroyData" as DestroyData #lightgrey
+
+ManageData - -> DestroyData
+
+usecase "EgressData" as EgressData #lightgrey
+
+ManageData - -> EgressData
+
+usecase "IngestData" as IngestData #lightgrey
+
+ManageData - -> IngestData
+
+usecase "MoveData" as MoveData #lightgrey
+
+ManageData - -> MoveData
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

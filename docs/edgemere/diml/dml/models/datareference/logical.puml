@@ -1,0 +1,67 @@
+@startuml
+
+class "DataReference" as Model {
+ string name
+ string shortName
+ json query
+ string connection
+
+ 
+}
+
+rectangle "DataInstance" as DataInstance #lightblue {
+}
+
+Model *--> "n" DataInstance : instances
+
+
+rectangle "Servicelet" as Servicelet #lightblue {
+}
+
+Model o--> "1" Servicelet : parent
+
+
+
+
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "1" Model : "reference"
+    
+    rectangle "DataRequest" as DataRequest #lightgreen {
+    }
+    
+        DataRequest   o--> "1" Model : "dataReference"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   *--> "n" Model : "data"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "data"
+    
+    rectangle "StackTemplate" as StackTemplate #lightgreen {
+    }
+    
+        StackTemplate   *--> "n" Model : "data"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   *--> "n" Model : "data"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "n" Model : "data"
+    
+
+@enduml

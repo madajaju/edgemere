@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="282px" preserveAspectRatio="none" style="width:674px;height:282px;" version="1.1" viewBox="0 0 674 282" width="674px" zoomAndPan="magnify"><defs><filter height="300%" id="fycuea2c2iva3" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster Data Orchestrator--><polygon fill="#ADD8E6" filter="url(#fycuea2c2iva3)" points="388,87,519,87,526,110.6094,652,110.6094,652,270,388,270,388,87" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="388" x2="526" y1="110.6094" y2="110.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="125" x="392" y="103.5332">Data Orchestrator</text><polygon fill="#FFCC88" filter="url(#fycuea2c2iva3)" points="6,8,180,8,187,31.6094,194,31.6094,194,63.2188,6,63.2188,6,8" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="6" x2="187" y1="31.6094" y2="31.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="168" x="10" y="24.5332">Data Management Layer</text><!--class i--><rect fill="#FEFECE" filter="url(#fycuea2c2iva3)" height="131.0156" id="i" style="stroke: #A80036; stroke-width: 1.5;" width="231" x="404.5" y="123"/><ellipse cx="467.75" cy="139" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M468.7031,135.6406 L468.7031,142.2969 L470.4219,142.2969 Q471.0313,142.2969 471.2969,142.5313 Q471.5625,142.7656 471.5625,143.1563 Q471.5625,143.5313 471.2969,143.7656 Q471.0313,144 470.4219,144 L465.2813,144 Q464.6719,144 464.4063,143.7656 Q464.1406,143.5313 464.1406,143.1406 Q464.1406,142.7656 464.4063,142.5313 Q464.6719,142.2969 465.2813,142.2969 L467,142.2969 L467,135.6406 L465.2813,135.6406 Q464.6719,135.6406 464.4063,135.4063 Q464.1406,135.1719 464.1406,134.7813 Q464.1406,134.4063 464.4063,134.1719 Q464.6719,133.9375 465.2813,133.9375 L470.4219,133.9375 Q471.0313,133.9375 471.2969,134.1719 Q471.5625,134.4063 471.5625,134.7813 Q471.5625,135.1719 471.2969,135.4063 Q471.0313,135.6406 470.4219,135.6406 L468.7031,135.6406 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="96" x="488.25" y="143.9102">Data Orchestrator</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="405.5" x2="634.5" y1="155" y2="155"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="405.5" x2="634.5" y1="163" y2="163"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="158" x="410.5" y="178.4189">/edgemere/diml/dml/do/evaluate()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="155" x="410.5" y="192.2549">/edgemere/diml/dml/do/reserve()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="213" x="410.5" y="206.0908">/edgemere/diml/dml/do/datainstance/create()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="219" x="410.5" y="219.9268">/edgemere/diml/dml/do/datainstance/destroy()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="200" x="410.5" y="233.7627">/edgemere/diml/dml/do/datainstance/find()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="195" x="410.5" y="247.5986">/edgemere/diml/dml/do/datainstance/list()</text><polygon fill="#FFCC88" filter="url(#fycuea2c2iva3)" points="229.5,8,420.5,8,427.5,31.6094,434.5,31.6094,434.5,63.2188,229.5,63.2188,229.5,8" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="229.5" x2="427.5" y1="31.6094" y2="31.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="185" x="233.5" y="24.5332">Data Definition Framework</text><ellipse cx="475" cy="35.5" fill="#FEFECE" filter="url(#fycuea2c2iva3)" rx="5" ry="5" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="19" x="465.5" y="52.957">CLI</text><ellipse cx="520" cy="35.5" fill="#FEFECE" filter="url(#fycuea2c2iva3)" rx="5" ry="5" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="32" x="504" y="52.957">REST</text><ellipse cx="565" cy="35.5" fill="#FEFECE" filter="url(#fycuea2c2iva3)" rx="5" ry="5" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="25" x="552.5" y="52.957">Web</text><!--link ilol5520 to i--><path d="M476.204,40.539 C479.768,52.499 490.645,88.999 500.668,122.629 " fill="none" id="ilol5520-i" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ilol5523 to i--><path d="M520,40.539 C520,52.499 520,88.999 520,122.629 " fill="none" id="ilol5523-i" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ilol5526 to i--><path d="M563.796,40.539 C560.232,52.499 549.355,88.999 539.332,122.629 " fill="none" id="ilol5526-i" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+
+
+package "Data Management Layer" #ffcc88 {
+
+}
+
+package "Data Orchestrator" #lightblue {
+
+}
+
+package "Data Definition Framework" #ffcc88 {
+
+}
+
+
+package "Data Orchestrator" #lightblue {
+
+    interface "Data Orchestrator" as i {
+            /edgemere/diml/dml/do/evaluate()
+            /edgemere/diml/dml/do/reserve()
+            /edgemere/diml/dml/do/datainstance/create()
+            /edgemere/diml/dml/do/datainstance/destroy()
+            /edgemere/diml/dml/do/datainstance/find()
+            /edgemere/diml/dml/do/datainstance/list()
+    
+    }
+}
+
+CLI ()- - i
+REST ()- - i
+Web ()- - i
+
+package "Data Orchestrator" #lightblue {
+
+
+}
+
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

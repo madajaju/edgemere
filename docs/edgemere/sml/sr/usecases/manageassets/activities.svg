@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="196px" preserveAspectRatio="none" style="width:154px;height:196px;" version="1.1" viewBox="0 0 154 196" width="154px" zoomAndPan="magnify"><defs><filter height="300%" id="f1dis4jkaww21l" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><ellipse cx="74.5005" cy="169.1001" fill="#FEFECE" filter="url(#f1dis4jkaww21l)" rx="68.5005" ry="16.1001" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="97" x="26.0005" y="174.4048">Manage Assets</text><!--entity Actor--><ellipse cx="74.5" cy="18" fill="#FEFECE" filter="url(#f1dis4jkaww21l)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M74.5,26 L74.5,53 M61.5,34 L87.5,34 M74.5,53 L61.5,68 M74.5,53 L87.5,68 " fill="none" filter="url(#f1dis4jkaww21l)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="33" x="58" y="89.5332">Actor</text><!--link Actor to ManageAssets--><path d="M74.5,93.2301 C74.5,111.7214 74.5,132.6341 74.5,147.6311 " fill="none" id="Actor-ManageAssets" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="74.5,152.8733,78.5,143.8733,74.5,147.8733,70.5,143.8733,74.5,152.8733" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+
+
+usecase "Manage Assets" as ManageAssets
+
+Actor "Actor" as Actor
+
+Actor - -> ManageAssets
+
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

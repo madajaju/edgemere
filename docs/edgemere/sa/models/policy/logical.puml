@@ -1,0 +1,23 @@
+@startuml
+
+class "Policy" as Model {
+ string name
+
+ 
+}
+
+rectangle "PolicyCollection" as PolicyCollection #lightblue {
+}
+
+Model o--> "1" PolicyCollection : owner
+
+
+
+
+    rectangle "PolicyCollection" as PolicyCollection #lightgreen {
+    }
+    
+        PolicyCollection   *--> "n" Model : "policies"
+    
+
+@enduml

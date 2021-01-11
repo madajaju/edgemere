@@ -1,0 +1,26 @@
+@startuml
+
+left to right direction
+
+
+
+
+
+
+
+package "cpl_tp" #lightgray {
+
+node "producer" as producerService
+node "tester" as testerService
+
+
+        artifact "cpl_tp_producer:latest" as cpl_tp_producerlatestimage
+    
+        artifact "cpl_tp_tester:latest" as cpl_tp_testerlatestimage
+    
+}
+producerService .... cpl_tp_producerlatestimage
+testerService .... cpl_tp_testerlatestimage
+
+
+@enduml

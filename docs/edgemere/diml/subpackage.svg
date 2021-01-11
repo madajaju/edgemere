@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="390px" preserveAspectRatio="none" style="width:1125px;height:390px;" version="1.1" viewBox="0 0 1125 390" width="1125px" zoomAndPan="magnify"><defs><filter height="300%" id="f1l81k6chnngy0" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster Distributed Information Management Layer--><polygon fill="#FFCC88" filter="url(#f1l81k6chnngy0)" points="103,42,408,42,415,65.6094,856,65.6094,856,278.5,103,278.5,103,42" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="103" x2="415" y1="65.6094" y2="65.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="299" x="107" y="58.5332">Distributed Information Management Layer</text><polygon fill="#FFFFE0" filter="url(#f1l81k6chnngy0)" points="6,323,234,323,241,346.6094,248,346.6094,248,378.2188,6,378.2188,6,323" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="6" x2="241" y1="346.6094" y2="346.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="222" x="10" y="339.5332">Software Defined Infrastructure</text><polygon fill="#90EE90" filter="url(#f1l81k6chnngy0)" points="324.5,323,521.5,323,528.5,346.6094,535.5,346.6094,535.5,378.2188,324.5,378.2188,324.5,323" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="324.5" x2="528.5" y1="346.6094" y2="346.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="191" x="328.5" y="339.5332">Service Management Layer</text><polygon fill="#FFC0CB" filter="url(#f1l81k6chnngy0)" points="715.5,323,830.5,323,837.5,346.6094,844.5,346.6094,844.5,378.2188,715.5,378.2188,715.5,323" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="715.5" x2="837.5" y1="346.6094" y2="346.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="109" x="719.5" y="339.5332">Security Aspect</text><polygon fill="#FFC0CB" filter="url(#f1l81k6chnngy0)" points="979,208,1089,208,1096,231.6094,1103,231.6094,1103,263.2188,979,263.2188,979,208" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="979" x2="1096" y1="231.6094" y2="231.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="104" x="983" y="224.5332">Identity Aspect</text><!--class i--><rect fill="#FEFECE" filter="url(#f1l81k6chnngy0)" height="61.8359" id="i" style="stroke: #A80036; stroke-width: 1.5;" width="267" x="545.5" y="86"/><ellipse cx="560.5" cy="102" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M561.4531,98.6406 L561.4531,105.2969 L563.1719,105.2969 Q563.7813,105.2969 564.0469,105.5313 Q564.3125,105.7656 564.3125,106.1563 Q564.3125,106.5313 564.0469,106.7656 Q563.7813,107 563.1719,107 L558.0313,107 Q557.4219,107 557.1563,106.7656 Q556.8906,106.5313 556.8906,106.1406 Q556.8906,105.7656 557.1563,105.5313 Q557.4219,105.2969 558.0313,105.2969 L559.75,105.2969 L559.75,98.6406 L558.0313,98.6406 Q557.4219,98.6406 557.1563,98.4063 Q556.8906,98.1719 556.8906,97.7813 Q556.8906,97.4063 557.1563,97.1719 Q557.4219,96.9375 558.0313,96.9375 L563.1719,96.9375 Q563.7813,96.9375 564.0469,97.1719 Q564.3125,97.4063 564.3125,97.7813 Q564.3125,98.1719 564.0469,98.4063 Q563.7813,98.6406 563.1719,98.6406 L561.4531,98.6406 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="235" x="574.5" y="106.9102">Distributed Information Management Layer</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="546.5" x2="811.5" y1="118" y2="118"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="546.5" x2="811.5" y1="126" y2="126"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="551.5" y="141.4189">/edgemere/diml/find()</text><!--entity Common Data Service--><rect fill="#FFFFFF" filter="url(#f1l81k6chnngy0)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="161" x="349.5" y="98"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="141" x="359.5" y="122.5332">Common Data Service</text><!--entity Data Definition Framework--><rect fill="#FFFFFF" filter="url(#f1l81k6chnngy0)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="187" x="127.5" y="98"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="167" x="137.5" y="122.5332">Data Definition Framework</text><!--entity Data Management Layer--><rect fill="#FFFFFF" filter="url(#f1l81k6chnngy0)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="176" x="170" y="216.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="156" x="180" y="241.0332">Data Management Layer</text><ellipse cx="634" cy="13" fill="#FEFECE" filter="url(#f1l81k6chnngy0)" rx="5" ry="5" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="19" x="624.5" y="30.457">CLI</text><ellipse cx="679" cy="13" fill="#FEFECE" filter="url(#f1l81k6chnngy0)" rx="5" ry="5" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="32" x="663" y="30.457">REST</text><ellipse cx="724" cy="13" fill="#FEFECE" filter="url(#f1l81k6chnngy0)" rx="5" ry="5" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="25" x="711.5" y="30.457">Web</text><!--link ilol6516 to i--><path d="M635.709,17.874 C640.557,28.864 654.748,61.029 665.573,85.565 " fill="none" id="ilol6516-i" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ilol6519 to i--><path d="M679,18.383 C679,29.822 679,61.37 679,85.535 " fill="none" id="ilol6519-i" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ilol6522 to i--><path d="M722.291,17.874 C717.443,28.864 703.252,61.029 692.427,85.565 " fill="none" id="ilol6522-i" style="stroke: #A80036; stroke-width: 1.0;"/><!--link Common Data Service to Service Management Layer--><path d="M430,136.165 C430,175.348 430,268.239 430,317.5167 " fill="none" id="Common Data Service-Service Management Layer" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="430,322.7249,434,313.7249,430,317.7249,426,313.7249,430,322.7249" style="stroke: #A80036; stroke-width: 1.0;"/><!--link Data Definition Framework to Data Management Layer--><path d="M226.781,136.203 C233.244,156.551 243.719,189.534 250.731,211.613 " fill="none" id="Data Definition Framework-Data Management Layer" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="252.259,216.425,253.3484,206.6366,250.7462,211.6594,245.7234,209.0571,252.259,216.425" style="stroke: #A80036; stroke-width: 1.0;"/><!--link Data Management Layer to Software Defined Infrastructure--><path d="M236.953,254.655 C216.715,272.112 185.758,298.8159 161.842,319.4455 " fill="none" id="Data Management Layer-Software Defined Infrastructure" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="157.765,322.9619,167.1921,320.1105,161.5505,319.6954,161.9656,314.0537,157.765,322.9619" style="stroke: #A80036; stroke-width: 1.0;"/><!--link Data Management Layer to Security Aspect--><path d="M341.29,254.53 C443.374,276.629 614.532,313.6803 710.09,334.3663 " fill="none" id="Data Management Layer-Security Aspect" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="715.146,335.4607,707.1968,329.646,710.2593,334.4022,705.5032,337.4647,715.146,335.4607" style="stroke: #A80036; stroke-width: 1.0;"/><!--link Data Management Layer to Service Management Layer--><path d="M285.635,254.655 C312.536,272.329 353.862,299.4794 385.417,320.2099 " fill="none" id="Data Management Layer-Service Management Layer" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="389.606,322.9619,384.2808,314.6768,385.4273,320.2163,379.8878,321.3628,389.606,322.9619" style="stroke: #A80036; stroke-width: 1.0;"/><!--link Distributed Information Management Layer to Software Defined Infrastructure--><path d="M102.8942,219.4472 C102.8246,219.578 102.7556,219.7091 102.6871,219.8403 C100.4951,224.0405 98.856,228.4708 97.6912,233.061 C95.3615,242.2414 94.929,252.0618 95.7655,261.9613 C97.4384,281.7605 104.1869,301.8766 110.985,317.8243 " fill="none" id="Distributed Information Management Layer-Software Defined Infrastructure" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="113.163,322.7947,113.2152,312.946,111.1565,318.2149,105.8876,316.1563,113.163,322.7947" style="stroke: #A80036; stroke-width: 1.0;"/><!--link Distributed Information Management Layer to Service Management Layer--><path d="M856.1078,156.3851 C856.1801,156.8678 856.2519,157.3537 856.3231,157.8426 C856.4654,158.8205 856.6051,159.8107 856.7418,160.8126 C857.8352,168.828 858.734,177.5916 859.2018,186.762 C861.0728,223.4437 856.0475,266.636 829,294.5 C818.929,304.8747 655.284,324.8055 540.735,337.6113 " fill="none" id="Distributed Information Management Layer-Service Management Layer" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="535.659,338.1777,545.047,341.1553,540.6282,337.6234,544.1601,333.2046,535.659,338.1777" style="stroke: #A80036; stroke-width: 1.0;"/><!--link Distributed Information Management Layer to Security Aspect--><path d="M856.1328,131.1131 C856.2204,131.2634 856.3086,131.4148 856.3972,131.5674 C856.7518,132.1777 857.1142,132.806 857.4837,133.4518 C858.2229,134.7433 858.9907,136.1048 859.7817,137.532 C866.1094,148.9492 873.9199,164.5677 880.407,182.1941 C893.3813,217.447 901.062,260.7315 881,294.5 C873.441,307.2231 861.793,317.1893 849.056,324.9284 " fill="none" id="Distributed Information Management Layer-Security Aspect" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="844.699,327.4684,854.4887,326.3907,849.0184,324.9499,850.4592,319.4796,844.699,327.4684" style="stroke: #A80036; stroke-width: 1.0;"/><!--link Distributed Information Management Layer to Identity Aspect--><path d="M856.1078,122.8935 C856.3226,123.0232 856.5411,123.1551 856.7635,123.2893 C857.2082,123.5578 857.6681,123.8354 858.1427,124.1218 C860.041,125.2677 862.1748,126.5557 864.5173,127.9697 C873.8873,133.6257 886.5961,141.2971 900.928,149.9482 C929.5917,167.2505 964.7475,188.4715 992.668,205.325 " fill="none" id="Distributed Information Management Layer-Identity Aspect" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="996.971,207.923,991.3341,199.8468,992.6907,205.3386,987.199,206.6952,996.971,207.923" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+
+
+package "Software Defined Infrastructure" #lightyellow {
+
+}
+
+package "Service Management Layer" #lightgreen {
+
+}
+
+package "Security Aspect" #pink {
+
+}
+
+package "Identity Aspect" #pink {
+
+}
+
+
+package "Distributed Information Management Layer" #ffcc88 {
+
+    interface "Distributed Information Management Layer" as i {
+            /edgemere/diml/find()
+    
+    }
+}
+
+CLI ()- - i
+REST ()- - i
+Web ()- - i
+
+package "Distributed Information Management Layer" #ffcc88 {
+
+
+rectangle "Common Data Service" #white {
+}
+
+rectangle "Data Definition Framework" #white {
+}
+
+rectangle "Data Management Layer" #white {
+}
+
+    "Common Data Service" - -> "Service Management Layer"
+    
+    "Data Definition Framework" - -> "Data Management Layer"
+    
+    "Data Management Layer" - -> "Software Defined Infrastructure"
+    
+    "Data Management Layer" - -> "Security Aspect"
+    
+    "Data Management Layer" - -> "Service Management Layer"
+    
+}
+
+
+    "Distributed Information Management Layer" - -> "Software Defined Infrastructure"
+
+    "Distributed Information Management Layer" - -> "Service Management Layer"
+
+    "Distributed Information Management Layer" - -> "Security Aspect"
+
+    "Distributed Information Management Layer" - -> "Identity Aspect"
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="298px" preserveAspectRatio="none" style="width:929px;height:298px;" version="1.1" viewBox="0 0 929 298" width="929px" zoomAndPan="magnify"><defs><filter height="300%" id="fwl2nhwewxpnt" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><ellipse cx="459.8351" cy="171.867" fill="#FEFECE" filter="url(#fwl2nhwewxpnt)" rx="82.3351" ry="18.867" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="132" x="393.8351" y="177.1717">Manage Data Center</text><!--entity ITOperations--><ellipse cx="460" cy="18" fill="#FEFECE" filter="url(#fwl2nhwewxpnt)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M460,26 L460,53 M447,34 L473,34 M460,53 L447,68 M460,53 L473,68 " fill="none" filter="url(#fwl2nhwewxpnt)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="86" x="417" y="89.5332">IT Operations</text><ellipse cx="81.8153" cy="269.5631" fill="#D3D3D3" filter="url(#fwl2nhwewxpnt)" rx="75.8153" ry="17.5631" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="116" x="23.8153" y="274.8677">CreateDataCenter</text><ellipse cx="270.9182" cy="269.3836" fill="#D3D3D3" filter="url(#fwl2nhwewxpnt)" rx="77.4182" ry="17.8836" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="120" x="210.9182" y="274.6883">DisableDataCenter</text><ellipse cx="460.2142" cy="269.6428" fill="#D3D3D3" filter="url(#fwl2nhwewxpnt)" rx="76.2142" ry="17.6428" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="117" x="401.7142" y="274.9475">EnableDataCenter</text><ellipse cx="650.9481" cy="269.2896" fill="#D3D3D3" filter="url(#fwl2nhwewxpnt)" rx="79.4481" ry="18.2896" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="125" x="588.4481" y="274.5943">RemoveDataCenter</text><ellipse cx="842.1143" cy="269.7229" fill="#D3D3D3" filter="url(#fwl2nhwewxpnt)" rx="76.6143" ry="17.7229" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="118" x="783.1143" y="275.0275">UpdateDataCenter</text><!--link ITOperations to ManageDataCenter--><path d="M460,93.295 C460,111.557 460,132.286 460,147.738 " fill="none" id="ITOperations-ManageDataCenter" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="460,152.765,464,143.765,460,147.765,456,143.765,460,152.765" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageDataCenter to CreateDataCenter--><path d="M406.243,186.581 C334.486,204.7105 208.109,236.639 136.152,254.8187 " fill="none" id="ManageDataCenter-CreateDataCenter" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="131.067,256.1035,140.7725,257.778,135.9148,254.8792,138.8136,250.0215,131.067,256.1035" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageDataCenter to DisableDataCenter--><path d="M427.079,189.6348 C393.374,206.6658 341.157,233.0504 306.532,250.5459 " fill="none" id="ManageDataCenter-DisableDataCenter" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="301.978,252.8471,311.8147,252.357,306.4404,250.5916,308.2058,245.2173,301.978,252.8471" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageDataCenter to EnableDataCenter--><path d="M460,191.4134 C460,207.0937 460,229.6651 460,246.334 " fill="none" id="ManageDataCenter-EnableDataCenter" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="460,251.7422,464,242.7422,460,246.7422,456,242.7422,460,251.7422" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageDataCenter to RemoveDataCenter--><path d="M493.27,189.6348 C527.127,206.5635 579.468,232.7338 614.459,250.2297 " fill="none" id="ManageDataCenter-RemoveDataCenter" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="619.065,252.5323,612.8035,244.9301,614.5927,250.2965,609.2263,252.0857,619.065,252.5323" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageDataCenter to UpdateDataCenter--><path d="M513.921,186.48 C586.324,204.5811 714.272,236.568 787.148,254.787 " fill="none" id="ManageDataCenter-UpdateDataCenter" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="792.298,256.0745,784.5371,250.0108,787.4473,254.8617,782.5965,257.7719,792.298,256.0745" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+
+
+usecase "Manage Data Center" as ManageDataCenter
+
+Actor "IT Operations" as ITOperations
+
+ITOperations - -> ManageDataCenter
+
+
+
+usecase "CreateDataCenter" as CreateDataCenter #lightgrey
+
+ManageDataCenter - -> CreateDataCenter
+
+usecase "DisableDataCenter" as DisableDataCenter #lightgrey
+
+ManageDataCenter - -> DisableDataCenter
+
+usecase "EnableDataCenter" as EnableDataCenter #lightgrey
+
+ManageDataCenter - -> EnableDataCenter
+
+usecase "RemoveDataCenter" as RemoveDataCenter #lightgrey
+
+ManageDataCenter - -> RemoveDataCenter
+
+usecase "UpdateDataCenter" as UpdateDataCenter #lightgrey
+
+ManageDataCenter - -> UpdateDataCenter
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

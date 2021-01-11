@@ -1,0 +1,55 @@
+@startuml
+
+
+
+state DataReference #ffcc88 {
+
+    state Init #ffcc88 {
+    }
+
+    state Provisioning #ffcc88 {
+    }
+
+    state Provisioned #ffcc88 {
+    }
+
+    state FailedProvision #ffcc88 {
+    }
+
+}
+
+
+Init --> Provisioning : provision
+
+Provisioning --> Provisioned : provisioned
+
+Provisioning --> FailedProvision : failed
+
+
+
+ state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "do" as dimldmldo #lightblue {
+state "datainstance" as dimldmldodatainstance #lightblue {
+state "create" as dimldmldodatainstancecreate #lightblue {
+}
+}
+}
+}
+}
+
+ Provisioning -[#black]--> dimldmldodatainstancecreate
+ 
+ state "sml" as sml #lightgreen {
+state "so" as smlso #lightgreen {
+state "servicelet" as smlsoservicelet #lightgreen {
+state "assignData" as smlsoserviceletassignData #lightgreen {
+}
+}
+}
+}
+
+ Provisioned -[#black]--> smlsoserviceletassignData
+ 
+
+@enduml

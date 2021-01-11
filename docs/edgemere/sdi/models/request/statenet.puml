@@ -1,0 +1,78 @@
+@startuml
+
+
+
+state Request #lightyellow {
+
+    state Init #lightyellow {
+    }
+
+    state Needed #lightyellow {
+    }
+
+    state Failed #lightyellow {
+    }
+
+    state Selected #lightyellow {
+    }
+
+    state Satisfied #lightyellow {
+    }
+
+    state Evaluated #lightyellow {
+    }
+
+    state Completed #lightyellow {
+    }
+
+}
+
+
+Init --> Needed : fulfill
+
+Needed --> Selected : selected
+
+Needed --> Failed : failed
+
+Selected --> Evaluated : evaluated
+
+Satisfied --> Completed : complete
+
+Evaluated --> Satisfied : satisfied
+
+Evaluated --> Failed : failed
+
+
+
+ state "cpl" as cpl #lightgray {
+state "Function" as cplFunction #lightgray {
+}
+}
+
+ Needed -[#black]--> cplFunction
+ 
+ state "cpl" as cpl #lightgray {
+state "reserve" as cplreserve #lightgray {
+}
+}
+
+ Needed -[#black]--> cplreserve
+ 
+ state "sdi" as sdi #lightyellow {
+state "io" as sdiio #lightyellow {
+state "evaluateRequest" as sdiioevaluateRequest #lightyellow {
+}
+}
+}
+
+ Selected -[#black]--> sdiioevaluateRequest
+ 
+ state "sdi" as sdi #lightyellow {
+state "Function" as sdiFunction #lightyellow {
+}
+}
+
+ Satisfied -[#black]--> sdiFunction
+ 
+
+@enduml

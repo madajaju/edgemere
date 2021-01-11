@@ -1,0 +1,13 @@
+@startuml
+
+
+
+state WorkloadInstance #lightblue {
+
+}
+
+
+
+
+
+@enduml

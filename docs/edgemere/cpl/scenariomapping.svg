@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1113px" preserveAspectRatio="none" style="width:520px;height:1113px;" version="1.1" viewBox="0 0 520 1113" width="520px" zoomAndPan="magnify"><defs><filter height="300%" id="fdheqxdyhuagc" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster ITOperations--><rect fill="#FEFECE" filter="url(#fdheqxdyhuagc)" height="1078" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="315" x="22" y="24"/><rect fill="#FFFFFF" height="1044.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="309" x="25" y="54.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="22" x2="337" y1="51.6094" y2="51.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="86" x="136.5" y="42.5332">IT Operations</text><!--cluster ITOperationsManageDataCenter--><rect fill="#FEFECE" filter="url(#fdheqxdyhuagc)" height="477" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="201" x="79" y="76"/><rect fill="#FFFFFF" height="443.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="195" x="82" y="106.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="79" x2="280" y1="103.6094" y2="103.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="132" x="113.5" y="94.5332">Manage Data Center</text><!--cluster ITOperationsManageInfrastructure--><rect fill="#FEFECE" filter="url(#fdheqxdyhuagc)" height="477" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="251" x="54" y="593"/><rect fill="#FFFFFF" height="443.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="245" x="57" y="623.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="54" x2="305" y1="620.6094" y2="620.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="139" x="110" y="611.5332">Manage Infrastructure</text><!--cluster cpl--><rect fill="#D3D3D3" filter="url(#fdheqxdyhuagc)" height="806" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="147" x="361" y="40"/><rect fill="#FFFFFF" height="772.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="141" x="364" y="70.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="361" x2="508" y1="67.6094" y2="67.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="18" x="425.5" y="58.5332">cpl</text><!--cluster cpldatacenter--><rect fill="#E6E6FA" filter="url(#fdheqxdyhuagc)" height="527" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="99" x="385" y="84"/><rect fill="#FFFFFF" height="493.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="93" x="388" y="114.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="385" x2="484" y1="111.6094" y2="111.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="68" x="400.5" y="102.5332">datacenter</text><!--cluster cpldata--><rect fill="#E6E6FA" filter="url(#fdheqxdyhuagc)" height="187" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="96" x="386.5" y="635"/><rect fill="#FFFFFF" height="153.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="90" x="389.5" y="665.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="386.5" x2="482.5" y1="662.6094" y2="662.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="420.5" y="653.5332">data</text><rect fill="#FEFECE" filter="url(#fdheqxdyhuagc)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="144" x="107.5" y="120"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="107.5" x2="251.5" y1="147.6094" y2="147.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="124" x="117.5" y="139.5332">Create Data Center</text><rect fill="#FEFECE" filter="url(#fdheqxdyhuagc)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="148" x="105.5" y="205"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="105.5" x2="253.5" y1="232.6094" y2="232.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="128" x="115.5" y="224.5332">Disable Data Center</text><rect fill="#FEFECE" filter="url(#fdheqxdyhuagc)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="145" x="107" y="290"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="107" x2="252" y1="317.6094" y2="317.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="125" x="117" y="309.5332">Enable Data Center</text><rect fill="#FEFECE" filter="url(#fdheqxdyhuagc)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="153" x="103" y="375"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="103" x2="256" y1="402.6094" y2="402.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="133" x="113" y="394.5332">Remove Data Center</text><rect fill="#FEFECE" filter="url(#fdheqxdyhuagc)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="146" x="106.5" y="460"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="106.5" x2="252.5" y1="487.6094" y2="487.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="126" x="116.5" y="479.5332">Update Data Center</text><rect fill="#FEFECE" filter="url(#fdheqxdyhuagc)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="92" x="133.5" y="637"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="133.5" x2="225.5" y1="664.6094" y2="664.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="72" x="143.5" y="656.5332">Add Device</text><rect fill="#FEFECE" filter="url(#fdheqxdyhuagc)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="203" x="78" y="722"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="78" x2="281" y1="749.6094" y2="749.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="183" x="88" y="741.5332">Manage Aggregated Devices</text><rect fill="#FEFECE" filter="url(#fdheqxdyhuagc)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="152" x="103.5" y="807"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="103.5" x2="255.5" y1="834.6094" y2="834.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="132" x="113.5" y="826.5332">Manage Data Center</text><rect fill="#FEFECE" filter="url(#fdheqxdyhuagc)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="119" x="120" y="892"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="120" x2="239" y1="919.6094" y2="919.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="99" x="130" y="911.5332">Remove Device</text><rect fill="#FEFECE" filter="url(#fdheqxdyhuagc)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="112" x="123.5" y="977"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="123.5" x2="235.5" y1="1004.6094" y2="1004.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="92" x="133.5" y="996.5332">Update Device</text><rect fill="#D3D3D3" filter="url(#fdheqxdyhuagc)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="50" x="409.5" y="545"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="409.5" x2="459.5" y1="572.6094" y2="572.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="17" x="426" y="564.5332">list</text><rect fill="#E6E6FA" filter="url(#fdheqxdyhuagc)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="60" x="404.5" y="120"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="404.5" x2="464.5" y1="147.6094" y2="147.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="40" x="414.5" y="139.5332">create</text><rect fill="#E6E6FA" filter="url(#fdheqxdyhuagc)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="65" x="402" y="205"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="402" x2="467" y1="232.6094" y2="232.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="45" x="412" y="224.5332">disable</text><rect fill="#E6E6FA" filter="url(#fdheqxdyhuagc)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="63" x="403" y="290"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="403" x2="466" y1="317.6094" y2="317.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="43" x="413" y="309.5332">enable</text><rect fill="#E6E6FA" filter="url(#fdheqxdyhuagc)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="67" x="401" y="375"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="401" x2="468" y1="402.6094" y2="402.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="47" x="411" y="394.5332">remove</text><rect fill="#E6E6FA" filter="url(#fdheqxdyhuagc)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="64" x="402.5" y="460"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="402.5" x2="466.5" y1="487.6094" y2="487.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="44" x="412.5" y="479.5332">update</text><rect fill="#D3D3D3" filter="url(#fdheqxdyhuagc)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="64" x="402.5" y="756"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="402.5" x2="466.5" y1="783.6094" y2="783.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="44" x="412.5" y="775.5332">govern</text><rect fill="#E6E6FA" filter="url(#fdheqxdyhuagc)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="63" x="403" y="671"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="403" x2="466" y1="698.6094" y2="698.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="43" x="413" y="690.5332">source</text><!--link ITOperationsManageDataCenter to cpldatacenterlist--><path d="M261.9035,553.0438 C262.6276,553.1153 263.354,553.1871 264.0825,553.2591 C265.5396,553.4031 267.0053,553.5479 268.4788,553.6935 C315.6283,558.3525 370.6705,563.7915 403.768,567.062 " fill="none" id="ITOperationsManageDataCenter-cpldatacenterlist" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="409.137,567.593,400.5751,562.7253,404.1613,567.1001,399.7865,570.6864,409.137,567.593" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageDataCenterCreateDataCenter to cpldatacentercreate--><path d="M251.648,145 C299.847,145 361.401,145 399.109,145 " fill="none" id="ITOperationsManageDataCenterCreateDataCenter-cpldatacentercreate" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="404.495,145,395.495,141,399.495,145,395.495,149,404.495,145" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageDataCenterDisableDataCenter to cpldatacenterdisable--><path d="M253.678,230 C300.415,230 359.038,230 396.392,230 " fill="none" id="ITOperationsManageDataCenterDisableDataCenter-cpldatacenterdisable" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="401.746,230,392.746,226,396.746,230,392.746,234,401.746,230" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageDataCenterEnableDataCenter to cpldatacenterenable--><path d="M252.323,315 C299.665,315 359.659,315 397.323,315 " fill="none" id="ITOperationsManageDataCenterEnableDataCenter-cpldatacenterenable" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="402.714,315,393.714,311,397.714,315,393.714,319,402.714,315" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageDataCenterRemoveDataCenter to cpldatacenterremove--><path d="M256.066,400 C302.002,400 358.696,400 395.45,400 " fill="none" id="ITOperationsManageDataCenterRemoveDataCenter-cpldatacenterremove" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="400.724,400,391.724,396,395.724,400,391.724,404,400.724,400" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageDataCenterUpdateDataCenter to cpldatacenterupdate--><path d="M252.661,485 C299.853,485 359.501,485 397.09,485 " fill="none" id="ITOperationsManageDataCenterUpdateDataCenter-cpldatacenterupdate" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="402.472,485,393.472,481,397.472,485,393.472,489,402.472,485" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageInfrastructure to cpldatagovern--><path d="M305.1083,1062.9825 C305.3816,1062.9037 305.6547,1062.8242 305.9275,1062.7438 C307.0188,1062.4225 308.1057,1062.0885 309.1876,1061.7415 C313.5153,1060.3535 317.7634,1058.7575 321.8953,1056.93 C330.1593,1053.2751 337.9585,1048.6944 345,1043 C416.607,985.092 430.592,866.874 433.104,811.232 " fill="none" id="ITOperationsManageInfrastructure-cpldatagovern" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="433.313,806.047,428.9562,814.8798,433.113,811.043,436.9498,815.1998,433.313,806.047" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageInfrastructureAddDevice to cpldatasource--><path d="M225.731,668.079 C275,674.7 352.791,685.154 397.9,691.216 " fill="none" id="ITOperationsManageInfrastructureAddDevice-cpldatasource" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="402.967,691.897,394.5797,686.7344,398.0115,691.2313,393.5146,694.6632,402.967,691.897" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageInfrastructureManageAggregatedDevices to cpldatasource--><path d="M281.219,726.697 C322.383,718.399 367.35,709.335 397.67,703.223 " fill="none" id="ITOperationsManageInfrastructureManageAggregatedDevices-cpldatasource" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="402.781,702.192,393.1678,700.0503,397.8797,703.1805,394.7495,707.8924,402.781,702.192" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageInfrastructureManageDataCenter to cpldatasource--><path d="M255.739,830.449 C287.601,825.804 322.486,814.745 345,790 C360.44,773.029 339.708,757.702 353,739 C363.814,723.785 381.724,713.467 397.908,706.761 " fill="none" id="ITOperationsManageInfrastructureManageDataCenter-cpldatasource" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="402.865,704.795,393.0242,704.397,398.2176,706.6394,395.9752,711.8328,402.865,704.795" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageInfrastructureRemoveDevice to cpldatasource--><path d="M239.038,918.293 C275.317,915.696 319.678,905.694 345,875 C364.266,851.647 336.676,764.497 353,739 C363.142,723.158 381.19,712.762 397.63,706.167 " fill="none" id="ITOperationsManageInfrastructureRemoveDevice-cpldatasource" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="402.67,704.241,392.835,703.7193,397.9998,706.0268,395.6922,711.1916,402.67,704.241" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperationsManageInfrastructureUpdateDevice to cpldatasource--><path d="M235.662,1003.71 C272.665,1001.606 319.193,992.011 345,960 C360.422,940.871 339.986,759.842 353,739 C363.039,722.923 381.273,712.482 397.852,705.92 " fill="none" id="ITOperationsManageInfrastructureUpdateDevice-cpldatasource" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="402.933,704.006,393.1006,703.4362,398.2541,705.769,395.9214,710.9225,402.933,704.006" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+left to right direction
+
+
+
+state "IT Operations" as ITOperations {
+    state "Manage Data Center" as ITOperationsManageDataCenter {
+    }
+}
+state "cpl" as cpl #lightgray {
+state "datacenter" as cpldatacenter #lightgray {
+state "list" as cpldatacenterlist #lightgray {
+}
+}
+}
+
+ITOperationsManageDataCenter - -> cpldatacenterlist
+
+
+    state "IT Operations" as ITOperations {
+        state "Manage Data Center" as ITOperationsManageDataCenter {
+            state "Create Data Center" as ITOperationsManageDataCenterCreateDataCenter {
+            }
+        }
+    }
+    state "cpldatacenter" as cpldatacenter #lavender {
+state "create" as cpldatacentercreate #lavender {
+}
+}
+
+    ITOperationsManageDataCenterCreateDataCenter - -> cpldatacentercreate
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Data Center" as ITOperationsManageDataCenter {
+            state "Disable Data Center" as ITOperationsManageDataCenterDisableDataCenter {
+            }
+        }
+    }
+    state "cpldatacenter" as cpldatacenter #lavender {
+state "disable" as cpldatacenterdisable #lavender {
+}
+}
+
+    ITOperationsManageDataCenterDisableDataCenter - -> cpldatacenterdisable
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Data Center" as ITOperationsManageDataCenter {
+            state "Enable Data Center" as ITOperationsManageDataCenterEnableDataCenter {
+            }
+        }
+    }
+    state "cpldatacenter" as cpldatacenter #lavender {
+state "enable" as cpldatacenterenable #lavender {
+}
+}
+
+    ITOperationsManageDataCenterEnableDataCenter - -> cpldatacenterenable
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Data Center" as ITOperationsManageDataCenter {
+            state "Remove Data Center" as ITOperationsManageDataCenterRemoveDataCenter {
+            }
+        }
+    }
+    state "cpldatacenter" as cpldatacenter #lavender {
+state "remove" as cpldatacenterremove #lavender {
+}
+}
+
+    ITOperationsManageDataCenterRemoveDataCenter - -> cpldatacenterremove
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Data Center" as ITOperationsManageDataCenter {
+            state "Update Data Center" as ITOperationsManageDataCenterUpdateDataCenter {
+            }
+        }
+    }
+    state "cpldatacenter" as cpldatacenter #lavender {
+state "update" as cpldatacenterupdate #lavender {
+}
+}
+
+    ITOperationsManageDataCenterUpdateDataCenter - -> cpldatacenterupdate
+    
+ 
+ 
+state "IT Operations" as ITOperations {
+    state "Manage Infrastructure" as ITOperationsManageInfrastructure {
+    }
+}
+state "cpl" as cpl #lightgray {
+state "data" as cpldata #lightgray {
+state "govern" as cpldatagovern #lightgray {
+}
+}
+}
+
+ITOperationsManageInfrastructure - -> cpldatagovern
+
+
+    state "IT Operations" as ITOperations {
+        state "Manage Infrastructure" as ITOperationsManageInfrastructure {
+            state "Add Device" as ITOperationsManageInfrastructureAddDevice {
+            }
+        }
+    }
+    state "cpldata" as cpldata #lavender {
+state "source" as cpldatasource #lavender {
+}
+}
+
+    ITOperationsManageInfrastructureAddDevice - -> cpldatasource
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Infrastructure" as ITOperationsManageInfrastructure {
+            state "Manage Aggregated Devices" as ITOperationsManageInfrastructureManageAggregatedDevices {
+            }
+        }
+    }
+    state "cpldata" as cpldata #lavender {
+state "source" as cpldatasource #lavender {
+}
+}
+
+    ITOperationsManageInfrastructureManageAggregatedDevices - -> cpldatasource
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Infrastructure" as ITOperationsManageInfrastructure {
+            state "Manage Data Center" as ITOperationsManageInfrastructureManageDataCenter {
+            }
+        }
+    }
+    state "cpldata" as cpldata #lavender {
+state "source" as cpldatasource #lavender {
+}
+}
+
+    ITOperationsManageInfrastructureManageDataCenter - -> cpldatasource
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Infrastructure" as ITOperationsManageInfrastructure {
+            state "Remove Device" as ITOperationsManageInfrastructureRemoveDevice {
+            }
+        }
+    }
+    state "cpldata" as cpldata #lavender {
+state "source" as cpldatasource #lavender {
+}
+}
+
+    ITOperationsManageInfrastructureRemoveDevice - -> cpldatasource
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Infrastructure" as ITOperationsManageInfrastructure {
+            state "Update Device" as ITOperationsManageInfrastructureUpdateDevice {
+            }
+        }
+    }
+    state "cpldata" as cpldata #lavender {
+state "source" as cpldatasource #lavender {
+}
+}
+
+    ITOperationsManageInfrastructureUpdateDevice - -> cpldatasource
+    
+ 
+ 
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

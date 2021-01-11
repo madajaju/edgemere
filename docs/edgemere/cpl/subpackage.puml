@@ -1,0 +1,59 @@
+@startuml
+
+
+package "Common Physical Layer" #lightgray {
+
+}
+
+package "Software Defined Infrastructure" #lightyellow {
+
+}
+
+
+package "Common Physical Layer" #lightgray {
+
+    interface "Common Physical Layer" as i {
+            /edgemere/cpl/adddevices()
+            /edgemere/cpl/provision()
+            /edgemere/cpl/reserve()
+            /edgemere/cpl/data/govern()
+            /edgemere/cpl/data/source()
+            /edgemere/cpl/datacenter/create()
+            /edgemere/cpl/datacenter/disable()
+            /edgemere/cpl/datacenter/enable()
+            /edgemere/cpl/datacenter/list()
+            /edgemere/cpl/datacenter/remove()
+            /edgemere/cpl/datacenter/update()
+            /edgemere/cpl/device/disable()
+            /edgemere/cpl/device/enable()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Common Physical Layer" #lightgray {
+
+
+rectangle "Device Agent" #white {
+}
+
+rectangle "Device Manager" #white {
+}
+
+rectangle "Telemetry Aggregator" #white {
+}
+
+rectangle "Telemetry Consumer" #white {
+}
+
+rectangle "Telemetry Producer" #white {
+}
+
+}
+
+
+
+@enduml

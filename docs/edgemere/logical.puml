@@ -1,0 +1,22 @@
+@startuml
+
+
+
+package "edgemere" #lavender {
+
+    interface "edgemere" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "edgemere" #lavender {
+    
+}
+
+
+
+@enduml

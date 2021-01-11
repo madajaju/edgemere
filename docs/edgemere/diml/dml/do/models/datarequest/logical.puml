@@ -1,0 +1,38 @@
+@startuml
+
+class "DataRequest" as Model {
+ string name
+ string ename
+ json query
+ string message
+
+ 
+}
+
+rectangle "DataReference" as DataReference #lightblue {
+}
+
+Model o--> "1" DataReference : dataReference
+
+
+rectangle "DataReservation" as DataReservation #lightblue {
+}
+
+Model *--> "n" DataReservation : reservations
+
+
+rectangle "DataInstance" as DataInstance #lightblue {
+}
+
+Model o--> "n" DataInstance : instances
+
+
+
+
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "request"
+    
+
+@enduml

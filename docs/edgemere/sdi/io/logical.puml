@@ -1,0 +1,24 @@
+@startuml
+
+
+
+package "Infrastructure Orchestrator" #lightyellow {
+
+    interface "Infrastructure Orchestrator" as i {
+            /edgemere/sdi/io/evaluaterequest()
+            /edgemere/sdi/io/provision()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Infrastructure Orchestrator" #lightyellow {
+    
+}
+
+
+
+@enduml

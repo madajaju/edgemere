@@ -1,0 +1,53 @@
+@startuml
+
+
+package "Service Orchestrator" #lightgreen {
+    }
+
+package "Service Management Layer" #lightgreen {
+    
+        class MultiCloud {
+        }
+    }
+
+package "Security Aspect" #pink {
+    
+        class PolicyCollection {
+        }
+    }
+
+
+package "Environment Management" #lightgreen {
+
+    interface "Environment Management" as i {
+            /edgemere/sml/em/environment/addpolicies()
+            /edgemere/sml/em/environment/create()
+            /edgemere/sml/em/environment/destroy()
+            /edgemere/sml/em/environment/disable()
+            /edgemere/sml/em/environment/enable()
+            /edgemere/sml/em/environment/list()
+            /edgemere/sml/em/environment/update()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Environment Management" #lightgreen {
+        class "Environment" {
+                 string name
+                    }
+                Environment o--> "n" MultiCloud : clouds
+                        Environment o--> "1" PolicyCollection : policies
+            
+    
+
+}
+
+
+    "Environment Management" --> "Service Orchestrator"
+
+
+@enduml

@@ -1,0 +1,50 @@
+@startuml
+
+actor "DataEngineer"
+
+actor "DevOpsEngineer"
+
+actor "ApplicationDeveloper"
+
+
+entity EventBus
+
+box Application Management Layer #lightblue
+    boundary aml #white
+end box
+
+
+
+"DataEngineer" -> aml: Update AI Model
+
+
+"DevOpsEngineer" -> aml: Update AI Model
+
+
+"ApplicationDeveloper" -> aml: Update AI Model
+
+
+
+box "Distributed Information Management Layer" #ffcc88
+    boundary diml #white
+end box
+EventBus -\ diml: method()
+diml --/ EventBus: Model.Event2
+box "Service Management Layer" #lightgreen
+    boundary sml #white
+end box
+EventBus -\ sml: method()
+sml --/ EventBus: Model.Event2
+box "Security Aspect" #pink
+    boundary sa #white
+end box
+EventBus -\ sa: method()
+sa --/ EventBus: Model.Event2
+box "Identity Aspect" #pink
+    boundary ia #white
+end box
+EventBus -\ ia: method()
+ia --/ EventBus: Model.Event2
+
+EventBus --/ aml : method2()
+@enduml

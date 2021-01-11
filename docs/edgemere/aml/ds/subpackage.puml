@@ -1,0 +1,29 @@
+@startuml
+
+
+package "Security Aspect" #pink {
+
+}
+
+
+package "Developer Services" #lightblue {
+
+    interface "Developer Services" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Developer Services" #lightblue {
+
+
+}
+
+
+    "Developer Services" --> "Security Aspect"
+
+
+@enduml

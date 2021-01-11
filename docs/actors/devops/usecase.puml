@@ -1,0 +1,20 @@
+@startuml
+
+left to right direction
+
+
+Actor "DevOps Engineer" as DevOpsEngineer
+
+
+rectangle "Application Management Layer" as aml #lightblue {
+        usecase "Manage AI Models" as ManageAIModels
+    DevOpsEngineer --> ManageAIModels
+    usecase "Manage Applications" as ManageApplications
+    DevOpsEngineer --> ManageApplications
+    usecase "Manage Workloads" as ManageWorkloads
+    DevOpsEngineer --> ManageWorkloads
+
+}
+
+
+@enduml

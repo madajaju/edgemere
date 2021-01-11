@@ -1,0 +1,59 @@
+@startuml
+
+class "DataBluePrint" as Model {
+ string name
+ string version
+
+ create()
+ deploy()
+ 
+}
+
+rectangle "DataAdaptorTemplate" as DataAdaptorTemplate #lightblue {
+}
+
+Model *--> "n" DataAdaptorTemplate : adaptors
+
+
+rectangle "Identity" as Identity #lightblue {
+}
+
+Model o--> "1" Identity : identity
+
+
+rectangle "DataFlowTemplate" as DataFlowTemplate #lightblue {
+}
+
+Model *--> "n" DataFlowTemplate : flows
+
+
+rectangle "DataBluePrintInstance" as DataBluePrintInstance #lightblue {
+}
+
+Model *--> "n" DataBluePrintInstance : instances
+
+
+
+
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   o--> "1" Model : "blueprint"
+    
+    rectangle "DataAdaptorTemplate" as DataAdaptorTemplate #lightgreen {
+    }
+    
+        DataAdaptorTemplate   o--> "1" Model : "blueprint"
+    
+    rectangle "DataBluePrintInstance" as DataBluePrintInstance #lightgreen {
+    }
+    
+        DataBluePrintInstance   o--> "1" Model : "blueprint"
+    
+    rectangle "DataFlow" as DataFlow #lightgreen {
+    }
+    
+        DataFlow   o--> "1" Model : "blueprint"
+    
+
+@enduml

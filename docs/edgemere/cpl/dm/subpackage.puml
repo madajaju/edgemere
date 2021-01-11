@@ -1,0 +1,25 @@
+@startuml
+
+
+
+package "Device Manager" #lightgray {
+
+    interface "Device Manager" as i {
+            /edgemere/cpl/dm/agent/register()
+            /edgemere/cpl/dm/service/register()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Device Manager" #lightgray {
+
+
+}
+
+
+
+@enduml

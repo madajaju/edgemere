@@ -1,0 +1,42 @@
+@startuml
+
+
+
+package "Identity Aspect" #pink {
+
+    interface "Identity Aspect" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Identity Aspect" #pink {
+        class "Group" {
+                 string attr1
+                    }
+                Group o--> "1" ModelName : assoc1
+            
+    
+    class "Identity" {
+                 string name
+                 string username
+                 string password
+                 string cert
+                    }
+    
+    
+    class "User" {
+                 string attr1
+                    }
+                User o--> "1" ModelName : assoc1
+            
+    
+
+}
+
+
+
+@enduml
