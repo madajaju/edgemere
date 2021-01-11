@@ -10,17 +10,17 @@ entity ailtire_appname_telemetry_family #black
 
 entity ailtire_appname_cpl_family #blue
 
-stack "cpl_da" as cpl_daStack #lightgray {
+rectangle "cpl_da" as cpl_daStack #lightgray {
     queue cpl_daStacksnet #blue [
         <b><color:white>parent</color></b>
     ]
 }
-stack "cpl_dm" as cpl_dmStack #lightgray {
+rectangle "cpl_dm" as cpl_dmStack #lightgray {
     queue cpl_dmStacksnet #blue [
         <b><color:white>parent</color></b>
     ]
 }
-stack "cpl_tc" as cpl_tcStack #lightgray {
+rectangle "cpl_tc" as cpl_tcStack #lightgray {
     queue cpl_tcStacksnet #blue [
         <b><color:white>parent</color></b>
     ]

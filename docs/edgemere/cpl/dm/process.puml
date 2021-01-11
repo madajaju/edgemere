@@ -35,7 +35,7 @@ state "register" as cpldmserviceregister #lightgray {
 
 
 
-    state "cpl" as cpl #lightgray {
+        state "cpl" as cpl #lightgray {
 state "dm" as cpldm #lightgray {
 state "Agent" as cpldmagent #lightgray {
 state "started" as cpldmagentstarted #lightgray {
@@ -44,7 +44,7 @@ state "started" as cpldmagentstarted #lightgray {
 }
 }
 
-    
+        
     state "dm" as dm #lavender {
 state "agent" as dmagent #lavender {
 state "register" as dmagentregister #lavender {

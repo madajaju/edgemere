@@ -8,22 +8,22 @@ boundary ailtire_appname_cpl_family #red
 
 entity ailtire_appname_cpl_dm_family #black
 
-stack "diml_dml_do" as diml_dml_doStack #lightblue {
+rectangle "diml_dml_do" as diml_dml_doStack #lightblue {
     queue diml_dml_doStacksnet #black [
         <b><color:white>parent</color></b>
     ]
 }
-stack "sa_pe" as sa_peStack #pink {
+rectangle "sa_pe" as sa_peStack #pink {
     queue sa_peStacksnet #black [
         <b><color:white>parent</color></b>
     ]
 }
-stack "sml_so" as sml_soStack #lightgreen {
+rectangle "sml_so" as sml_soStack #lightgreen {
     queue sml_soStacksnet #black [
         <b><color:white>parent</color></b>
     ]
 }
-stack "cpl_ta" as cpl_taStack #lightgray {
+rectangle "cpl_ta" as cpl_taStack #lightgray {
     queue cpl_taStacksnet #black [
         <b><color:white>parent</color></b>
     ]

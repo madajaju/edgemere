@@ -1,33 +1,6 @@
 @startuml
 
-actor "ITOperations" as itops
-
-
-
-
-itops -> "Cloud Broker": Find Resources
-"Cloud Broker" -> bin: resources/find
-bin -> REST: resources/find
-
-itops -> "Cloud Broker": ManageBilling
-"Cloud Broker" -> bin: billing/list
-bin -> REST: billing/list
-
-itops -> "Cloud Broker": ManageCostModel
-"Cloud Broker" -> bin: ResourceInstanceType/list
-bin -> REST: ResourceInstanceType/list
-
-itops -> "Cloud Broker": Manage Multi Cloud
-"Cloud Broker" -> bin: multicloud/list
-bin -> REST: multicloud/list
-
-itops -> "Cloud Broker": Map Assets to Cloud
-"Cloud Broker" -> bin: multicloud/mapresources
-bin -> REST: multicloud/mapresources
-
-itops -> "Cloud Broker": Map Services to Resources
-"Cloud Broker" -> bin: service/mapresources
-bin -> REST: service/mapresources
+rectangle "TBD"
 
 
 @enduml

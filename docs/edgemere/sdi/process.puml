@@ -49,14 +49,14 @@ state "release" as sdiresourcerelease #lightyellow {
 
 
 
-    state "sdi" as sdi #lightyellow {
+        state "sdi" as sdi #lightyellow {
 state "Request" as sdirequest #lightyellow {
 state "satisfied" as sdirequestsatisfied #lightyellow {
 }
 }
 }
 
-    
+        
     state "sdi" as sdi #lightyellow {
 state "Function" as sdifunction #lightyellow {
 }
@@ -65,14 +65,14 @@ state "Function" as sdifunction #lightyellow {
     sdirequestsatisfied ---> sdifunction
   
 
-    state "sdi" as sdi #lightyellow {
+        state "sdi" as sdi #lightyellow {
 state "Resource" as sdiresource #lightyellow {
 state "ready" as sdiresourceready #lightyellow {
 }
 }
 }
 
-    
+        
     state "sdi" as sdi #lightyellow {
 state "request" as sdirequest #lightyellow {
 state "reserve" as sdirequestreserve #lightyellow {

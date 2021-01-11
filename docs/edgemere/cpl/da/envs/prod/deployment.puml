@@ -7,7 +7,7 @@ left to right direction
 
 entity ailtire_appname_cpl_da_family #black
 
-stack "sml_sc" as sml_scStack #lightgreen {
+rectangle "sml_sc" as sml_scStack #lightgreen {
     queue sml_scStacksnet #black [
         <b><color:white>parent</color></b>
     ]

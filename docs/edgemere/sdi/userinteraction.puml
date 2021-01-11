@@ -1,13 +1,6 @@
 @startuml
 
-actor "ITOperations" as itops
-
-
-
-
-itops -> "Software Defined Infrastructure": Manage Resources
-"Software Defined Infrastructure" -> bin: resource/list
-bin -> REST: resource/list
+rectangle "TBD"
 
 
 @enduml
