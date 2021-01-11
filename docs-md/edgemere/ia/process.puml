@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+
+
+state "ia" as ia #pink {
+}
+
+
+state ia #pink {
+    state "Custom Function" as iafunction {
+    }
+}
+
+
+
+
+
+@enduml

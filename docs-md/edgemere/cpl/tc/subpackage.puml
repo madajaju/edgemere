@@ -1,0 +1,26 @@
+@startuml
+
+
+
+package "Telemetry Consumer" #lightgray {
+
+    interface "Telemetry Consumer" as i {
+            /edgemere/cpl/tc/list()
+            /edgemere/cpl/tc/report()
+            /edgemere/cpl/tc/show()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Telemetry Consumer" #lightgray {
+
+
+}
+
+
+
+@enduml

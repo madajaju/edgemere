@@ -71,12 +71,13 @@ class Request {
                 owner: false,
                 unique: true
             },
-            parent: {
+           /* parent: {
                 type: 'LandscapeRequest',
                 cardinality: '1',
                 composition: false,
                 owner: false,
             },
+            */
         },
         statenet: {
             Init: {

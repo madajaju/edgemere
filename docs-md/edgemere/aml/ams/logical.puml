@@ -1,0 +1,33 @@
+@startuml
+
+
+package "Workflow Services" #lightblue {
+    }
+
+
+package "AI ML Services" #lightblue {
+
+    interface "AI ML Services" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "AI ML Services" #lightblue {
+        class "AIModel" {
+                 string attr1
+                    }
+                AIModel o--> "1" ModelName : assoc1
+            
+    
+
+}
+
+
+    "AI ML Services" --> "Workflow Services"
+
+
+@enduml

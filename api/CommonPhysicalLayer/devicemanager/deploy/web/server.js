@@ -1,15 +1,22 @@
 const fs = require('fs');
-// Check for node_modules directory. If it exists then continue. If not ask to run npm install.
-if(!fs.existsSync('./node_modules')) {
-   console.error('Error: you must run "npm install" first');
-   return;
-}
 const server = require('ailtire');
 
-server.micro( {
+let hostname = process.env.HOSTNAME;
+let port = process.env.EDGEMERE_PORT || 3000
+let urlPrefix = process.env.AILTIRE_BASEURL || '/cpl/dm'
+let deviceName = process.env.EDGEMERE_DEVICE_NAME || 'default';
+let deviceURL = hostname + ':' + port;
+
+server.micro({
     baseDir: '.',
     prefix: 'cpl/dm',
-    routes: {
-    },
-    listenPort: 3000
+    routes: {},
+    host: hostname,
+    urlPrefix: urlPrefix,
+    listenPort: port,
+    post: () => {
+        // Create the Aggregated Device
+        let adevice = new AggregatedDevice({name: deviceName});
+        console.log("Created Aggregated Device");
+    }
 });

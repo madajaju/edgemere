@@ -1,0 +1,112 @@
+@startuml
+
+left to right direction
+
+
+boundary ailtire_appname_cpl_family #red
+
+
+entity ailtire_appname_cpl_dm_family #black
+
+stack "diml_dml_do" as diml_dml_doStack #lightblue {
+    queue diml_dml_doStacksnet #black [
+        <b><color:white>parent</color></b>
+    ]
+}
+stack "sa_pe" as sa_peStack #pink {
+    queue sa_peStacksnet #black [
+        <b><color:white>parent</color></b>
+    ]
+}
+stack "sml_so" as sml_soStack #lightgreen {
+    queue sml_soStacksnet #black [
+        <b><color:white>parent</color></b>
+    ]
+}
+stack "cpl_ta" as cpl_taStack #lightgray {
+    queue cpl_taStacksnet #black [
+        <b><color:white>parent</color></b>
+    ]
+}
+
+
+
+package "cpl_dm" #lightgray {
+    queue childrennet #black [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#black]- ailtire_appname_cpl_dm_family
+    
+    queue siblingnet #blue [
+            <b><color:white>sibling</color></b>
+    ]
+    
+    queue parentnet #red [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#red]- ailtire_appname_cpl_family
+    
+
+
+node "frontend" as frontendService {
+    card "/admin" as adminmap
+    
+}
+node "data_orchestrator" as data_orchestratorService
+node "policy_engine" as policy_engineService
+node "service_orchestrator" as service_orchestratorService
+node "telemetry_aggregator" as telemetry_aggregatorService
+node "portal" as portalService
+
+        collections "diml_dml_do:latest" as diml_dml_dolatestimage
+            collections "sa_pe:latest" as sa_pelatestimage
+            collections "sml_so:latest" as sml_solatestimage
+            collections "cpl_ta:latest" as cpl_talatestimage
+    
+        artifact "traefik:latest" as traefiklatestimage
+    
+        artifact "cpl_dm_web" as cpl_dm_webimage
+    
+}
+
+external -[#black]- frontendService
+
+adminmap -[#blue]-> portalService
+
+data_orchestratorService -[#black]- childrennet
+
+data_orchestratorService -[#red]- parentnet
+
+policy_engineService -[#black]- childrennet
+
+policy_engineService -[#red]- parentnet
+
+service_orchestratorService -[#black]- childrennet
+
+service_orchestratorService -[#red]- parentnet
+
+telemetry_aggregatorService -[#black]- childrennet
+
+telemetry_aggregatorService -[#red]- parentnet
+
+portalService -[#blue]- siblingnet
+data_orchestratorService .... diml_dml_dolatestimage
+policy_engineService .... sa_pelatestimage
+service_orchestratorService .... sml_solatestimage
+telemetry_aggregatorService .... cpl_talatestimage
+portalService .... cpl_dm_webimage
+
+frontendService .... traefiklatestimage
+
+diml_dml_dolatestimage --> diml_dml_doStack
+    
+sa_pelatestimage --> sa_peStack
+    
+sml_solatestimage --> sml_soStack
+    
+cpl_talatestimage --> cpl_taStack
+    
+
+@enduml

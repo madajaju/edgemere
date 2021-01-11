@@ -1,0 +1,25 @@
+@startuml
+
+actor "IT Operations"
+
+
+entity EventBus
+
+box Software Defined Infrastructure #lightyellow
+    boundary sdi #white
+end box
+
+
+
+"IT Operations" -> sdi: Release Resources
+
+
+
+box "Common Physical Layer" #lightgray
+    boundary cpl #white
+end box
+EventBus -\ cpl: method()
+cpl --/ EventBus: Model.Event2
+
+EventBus --/ sdi : method2()
+@enduml

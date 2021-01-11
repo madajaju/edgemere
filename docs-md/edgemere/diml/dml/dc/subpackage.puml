@@ -1,0 +1,23 @@
+@startuml
+
+
+
+package "Data Controller" #lightblue {
+
+    interface "Data Controller" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Data Controller" #lightblue {
+
+
+}
+
+
+
+@enduml

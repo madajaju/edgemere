@@ -1,0 +1,111 @@
+@startuml
+left to right direction
+
+
+
+state "Chief Data Officer" as ChiefDataOfficer {
+    state "Manage Data Governance" as ChiefDataOfficerManageDataGovernance {
+    }
+}
+state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "data" as dimldmldata #ffcc88 {
+state "govern" as dimldmldatagovern #ffcc88 {
+}
+}
+}
+}
+
+ChiefDataOfficerManageDataGovernance --> dimldmldatagovern
+
+
+ 
+state "Chief Data Officer" as ChiefDataOfficer {
+    state "Manage Data Policies" as ChiefDataOfficerManageDataPolicies {
+    }
+}
+state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "datapolicy" as dimldmldatapolicy #ffcc88 {
+state "list" as dimldmldatapolicylist #ffcc88 {
+}
+}
+}
+}
+
+ChiefDataOfficerManageDataPolicies --> dimldmldatapolicylist
+
+
+ 
+state "Data Engineer" as DataEngineer {
+    state "Manage Data Sources" as DataEngineerManageDataSources {
+    }
+}
+state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "datasource" as dimldmldatasource #ffcc88 {
+state "list" as dimldmldatasourcelist #ffcc88 {
+}
+}
+}
+}
+
+DataEngineerManageDataSources --> dimldmldatasourcelist
+
+
+    state "Actor" as Actor {
+        state "Manage Data Sources" as ActorManageDataSources {
+            state "Deregister Data Source" as ActorManageDataSourcesDeregisterDataSource {
+            }
+        }
+    }
+    state "diml" as diml #ffcc88 {
+state "dmldata" as dimldmldata #ffcc88 {
+state "source" as dimldmldatasource #ffcc88 {
+state "name" as dimldmldatasourcename #ffcc88 {
+}
+}
+}
+}
+
+    ActorManageDataSourcesDeregisterDataSource --> dimldmldatasourcename
+    
+ 
+    state "Actor" as Actor {
+        state "Manage Data Sources" as ActorManageDataSources {
+            state "Register Data Source" as ActorManageDataSourcesRegisterDataSource {
+            }
+        }
+    }
+    state "diml" as diml #ffcc88 {
+state "dmldata" as dimldmldata #ffcc88 {
+state "source" as dimldmldatasource #ffcc88 {
+state "name" as dimldmldatasourcename #ffcc88 {
+}
+}
+}
+}
+
+    ActorManageDataSourcesRegisterDataSource --> dimldmldatasourcename
+    
+ 
+ 
+state "Chief Data Officer" as ChiefDataOfficer {
+    state "Manage Data Strategy" as ChiefDataOfficerManageDataStrategy {
+    }
+}
+state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "datastrategy" as dimldmldatastrategy #ffcc88 {
+state "list" as dimldmldatastrategylist #ffcc88 {
+}
+}
+}
+}
+
+ChiefDataOfficerManageDataStrategy --> dimldmldatastrategylist
+
+
+ 
+
+@enduml

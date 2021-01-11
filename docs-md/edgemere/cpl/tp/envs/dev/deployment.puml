@@ -1,0 +1,40 @@
+@startuml
+
+left to right direction
+
+
+boundary ailtire_parent_network_family #black
+boundary edgemere_ailtire_parent_network_family #blue
+
+
+
+
+
+package "cpl_tp" #lightgray {
+    queue parentnet #black [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#black]- ailtire_parent_network_family
+    
+    queue telemetrynet #blue [
+            <b><color:white>telemetry</color></b>
+    ]
+    
+    telemetrynet -[#blue]- edgemere_ailtire_parent_network_family
+    
+
+node "producer" as producerService
+
+
+        artifact "cpl_tp_producer:latest" as cpl_tp_producerlatestimage
+    
+}
+
+producerService -[#black]- parentnet
+
+producerService -[#blue]- telemetrynet
+producerService .... cpl_tp_producerlatestimage
+
+
+@enduml

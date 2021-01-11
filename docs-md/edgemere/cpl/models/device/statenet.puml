@@ -1,0 +1,30 @@
+@startuml
+
+
+
+state Device #lightgray {
+
+    state Init #lightgray {
+    }
+
+    state Enabled #lightgray {
+    }
+
+    state Disabled #lightgray {
+    }
+
+}
+
+
+Init --> Enabled : create
+
+Init --> Enabled : reserve
+
+Enabled --> Disabled : disable
+
+Disabled --> Enabled : enable
+
+
+
+
+@enduml

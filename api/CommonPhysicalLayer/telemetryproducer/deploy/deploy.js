@@ -11,7 +11,7 @@ module.exports = {
         test: {
             type: 'swarm',
             tag: 'cpl_tp_test',
-            file: 'docker-compose.yml',
+            file: 'docker-compose-test.yml',
             env: {}
         },
         prod: {

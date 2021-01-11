@@ -1,0 +1,36 @@
+@startuml
+
+class "DataFlowTemplate" as Model {
+ string name
+
+ create()
+ 
+}
+
+rectangle "DataFlow" as DataFlow #lightblue {
+}
+
+Model o--> "1" DataFlow : flow
+
+
+rectangle "DataAdaptorTemplate" as DataAdaptorTemplate #lightblue {
+}
+
+Model o--> "n" DataAdaptorTemplate : sources
+
+
+rectangle "DataAdaptorTemplate" as DataAdaptorTemplate #lightblue {
+}
+
+Model o--> "n" DataAdaptorTemplate : sinks
+
+
+
+
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+
+@enduml

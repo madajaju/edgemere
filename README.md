@@ -29,5 +29,3 @@ Complete documentation of the architecture can be found on [github pages](https:
 # Contributing
 
 If you are interested in working on the Edgemere architecture please contact darren.w.pulsipher@intel.com
-
-

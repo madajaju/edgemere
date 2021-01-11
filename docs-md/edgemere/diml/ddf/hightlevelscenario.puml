@@ -1,0 +1,22 @@
+@startuml
+
+Actor "Actor" as Actor
+Participant "Distributed Infromation Management Layer" as DIML #ffcc88
+Participant "Data Definition Framework" as DDF #ffcc88
+Participant "Data Management Layer" as DML #ffcc88
+Actor --> DIML : Add Data Adaptors
+DIML --> DDF : dataadaptor create(name, parameters)
+Actor --> DIML : Add Data Flow
+DIML --> DDF : dataflow create(name, parameters, in, out, steps)
+Actor --> DIML : Add Blue Print
+DIML --> DDF : datablueprint create(name)
+Actor --> DDF : datablueprint addflow(name, dataflow)
+Actor --> DDF : datablueprint addsource(name, datasource)
+
+Actor --> DIML : Add Data Source
+DIML --> DML : datasource create(name)
+Actor --> DML : datasource addblueprint(name, blueprint)
+DML --> DML : datasource activateBlueprint(name)
+DML --> DML : data create(name, adaptor, metadata)
+
+@enduml

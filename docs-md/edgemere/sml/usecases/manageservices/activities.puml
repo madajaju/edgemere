@@ -1,0 +1,16 @@
+@startuml
+
+
+usecase "Manage Services" as ManageServices
+
+Actor "Stack Developer" as StackDeveloper
+
+StackDeveloper --> ManageServices
+
+Actor "Application Developer" as ApplicationDeveloper
+
+ApplicationDeveloper --> ManageServices
+
+
+
+@enduml

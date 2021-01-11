@@ -1,0 +1,13 @@
+@startuml
+
+
+
+state ApplicationTemplate #lightblue {
+
+}
+
+
+
+
+
+@enduml

@@ -1,0 +1,72 @@
+@startuml
+
+node "Edge Device (Machine)" #lightgray {
+    component "Salt Minon" as sminon #lightyellow
+    component "Docker Swarm" as dockersed #lightgreen
+    collections "Device Agent" as dagent #white
+    component "Docker Node" as dockernodeed #lightgreen
+    agent "Data Controller" as datac #ffcc88
+    agent "Service Controller" as servicec #lightgreen
+    agent "Policy Engine" as pe #lightpink
+    agent "Telemetry Producer" as tp #lightgray
+}
+dockernodeed --> datac
+dockernodeed --> servicec
+dockernodeed --> pe
+dockernodeed --> tp
+sminon -> dockersed
+sminon -> dockernodeed
+dockersed .. dockernodeed
+dockersed -> dagent
+datac <-- dagent
+servicec <-- dagent
+pe <-- dagent
+tp <-- dagent
+
+node "Aggregated Edge Device" #lightgray {
+    node "Machine0" #white {
+        component "Salt Master" as smaster2 #lightyellow
+        component "Salt Minon" as sminon2 #lightyellow
+        component "Docker Swarm" as dockersaed #lightgreen
+        agent "Service Orchestrator" as soad #lightgreen
+    }
+    node "Machine1" #white {
+        component "Salt Minon" as sminon21 #lightyellow
+        component "Docker Node" as dockernode21 #lightgreen
+        agent "Policy Engine" as pead #lightpink
+        agent "Data Orchestrator" as doad #ffcc88
+    }
+    dockernode21 ..> pead
+    dockernode21 ..> doad
+    node "Machinen" #white {
+        component "Salt Minon" as sminon22 #lightyellow
+        component "Docker Node" as dockernode22 #lightgreen
+        agent "Telemetry Aggregator" as tpad #lightgray
+    }
+    dockernode22 ..> tpad
+    collections "Device Manager" as dm #white
+    dockersaed --> dm
+    pead --> dm
+    doad <- dm
+    soad <- dm
+    tpad <- dm
+    smaster2 ..> sminon21
+    smaster2 ..> sminon22
+    dockersaed ..> dockernode21
+    dockersaed ..> dockernode22
+    sminon21 -> dockernode21
+    sminon22 -> dockernode22
+    sminon2 --> dockersaed
+}
+
+node "Data Center" {
+    component "Salt Master" as smaster
+    component "Docker Swarm" as dockersdc #lightgreen
+    agent "Telemetry Consumer" as tc #lightgray
+}
+dockersdc .> tc
+smaster ..> sminon2
+smaster2 <= sminon2
+smaster2 ..> sminon
+
+@enduml

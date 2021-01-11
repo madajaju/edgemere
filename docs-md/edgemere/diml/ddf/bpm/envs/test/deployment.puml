@@ -1,0 +1,51 @@
+@startuml
+
+left to right direction
+
+
+boundary ailtire_appname_diml_ddf_family #red
+
+
+entity ailtire_appname_diml_ddf_bpm_family #black
+
+
+
+
+package "diml_ddf_bpm" #lightblue {
+    queue childrennet #black [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#black]- ailtire_appname_diml_ddf_bpm_family
+    
+    queue siblingnet #blue [
+            <b><color:white>sibling</color></b>
+    ]
+    
+    queue parentnet #red [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#red]- ailtire_appname_diml_ddf_family
+    
+
+node "frontend" as frontendService
+node "gw" as gwService
+
+
+        artifact "diml_ddf_bpm_web" as diml_ddf_bpm_webimage
+    
+        artifact "diml_ddf_bpm_gw" as diml_ddf_bpm_gwimage
+    
+}
+
+frontendService -[#blue]- siblingnet
+
+gwService -[#black]- childrennet
+
+gwService -[#blue]- siblingnet
+frontendService .... diml_ddf_bpm_webimage
+gwService .... diml_ddf_bpm_gwimage
+
+
+@enduml

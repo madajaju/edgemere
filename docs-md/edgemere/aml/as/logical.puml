@@ -1,0 +1,27 @@
+@startuml
+
+
+package "Workflow Services" #lightblue {
+    }
+
+
+package "Analytics Services" #lightblue {
+
+    interface "Analytics Services" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Analytics Services" #lightblue {
+    
+}
+
+
+    "Analytics Services" --> "Workflow Services"
+
+
+@enduml

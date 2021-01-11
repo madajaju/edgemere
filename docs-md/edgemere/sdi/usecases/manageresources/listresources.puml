@@ -1,0 +1,79 @@
+@startuml
+
+actor "IT Operations"
+
+
+entity EventBus
+
+box Software Defined Infrastructure #lightyellow
+    boundary sdi #white
+end box
+
+
+box Common Physical Layer #lightgray
+            participant device
+            participant datacenter
+    end box
+
+box Software Defined Infrastructure #lightyellow
+            participant cloud
+    end box
+
+
+"IT Operations" -> sdi: List Resources
+
+    sdi -> "device": create (name: hostlr1,file: ./templates/device.yaml)
+
+
+    sdi -> "device": create (name: hostlr2,file: ./templates/device.yaml)
+
+
+    sdi -> "device": create (name: hostlr3,file: ./templates/device.yaml)
+
+
+    sdi -> "device": create (name: hostlr4,file: ./templates/device.yaml)
+
+
+    sdi -> "device": create (name: hostlr5,file: ./templates/device.yaml)
+
+
+    sdi -> "device": create (name: hostlr6,file: ./templates/device.yaml)
+
+
+    sdi -> "datacenter": create (name: dclr1)
+
+
+    sdi -> "datacenter": adddevices (name: dclr1,items: hostlr1,hostlr2,hostlr3,hostlr4,hostlr5,hostlr6)
+
+
+    sdi -> "cloud": create (name: cloudlr1)
+
+
+    sdi -> "cloud": adddatacenters (name: cloudlr1,items: dclr1)
+
+
+    sdi -> "datacenter": disable (name: dclr1)
+
+
+    sdi -> "sdi/resource": get (name: myRes,cloud: cloudlr1,requirements: ./templates/requirements.yaml)
+
+
+    sdi -> "sdi/resource": get (name: myRes2,cloud: cloudlr1,requirements: ./templates/requirements2.yaml)
+
+
+    sdi -> "sdi/resource": get (name: myRes3,cloud: cloudlr1,requirements: ./templates/requirements3.yaml)
+
+
+    sdi -> "sdi/resource": get (name: myRes4,cloud: cloudlr1,requirements: ./templates/requirements.yaml)
+
+
+
+
+box "Common Physical Layer" #lightgray
+    boundary cpl #white
+end box
+EventBus -\ cpl: method()
+cpl --/ EventBus: Model.Event2
+
+EventBus --/ sdi : method2()
+@enduml

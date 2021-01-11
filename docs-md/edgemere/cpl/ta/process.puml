@@ -1,0 +1,95 @@
+@startuml
+left to right direction
+
+
+state "cpl" as cpl #lightgray {
+state "ta" as cplta #lightgray {
+}
+}
+
+
+state cplta #lightgray {
+    state "Custom Function" as tafunction {
+    }
+}
+
+        state "cpl" as cpl #lightgray {
+state "ta" as cplta #lightgray {
+state "list" as cpltalist #lightgray {
+}
+}
+}
+
+
+        state "cpl" as cpl #lightgray {
+state "ta" as cplta #lightgray {
+state "report" as cpltareport #lightgray {
+}
+}
+}
+
+
+        state "cpl" as cpl #lightgray {
+state "ta" as cplta #lightgray {
+state "setparent" as cpltasetparent #lightgray {
+}
+}
+}
+
+
+        state "cpl" as cpl #lightgray {
+state "ta" as cplta #lightgray {
+state "show" as cpltashow #lightgray {
+}
+}
+}
+
+
+        state "cpl" as cpl #lightgray {
+state "ta" as cplta #lightgray {
+state "stats" as cpltastats #lightgray {
+state "get" as cpltastatsget #lightgray {
+}
+}
+}
+}
+
+
+        state "cpl" as cpl #lightgray {
+state "ta" as cplta #lightgray {
+state "stats" as cpltastats #lightgray {
+state "send" as cpltastatssend #lightgray {
+}
+}
+}
+}
+
+
+
+
+    state "cpl" as cpl #lightgray {
+state "Device" as cpldevice #lightgray {
+state "stats" as cpldevicestats #lightgray {
+}
+}
+}
+
+    
+    state "ta" as ta #lavender {
+state "report" as tareport #lavender {
+}
+}
+
+    cpldevicestats ---> tareport
+  
+    state "tc" as tc #lavender {
+state "report" as tcreport #lavender {
+}
+}
+
+    cpldevicestats ---> tcreport
+  
+
+
+
+@enduml

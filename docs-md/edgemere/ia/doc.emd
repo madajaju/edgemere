@@ -1,0 +1,16 @@
+
+The Identity Aspect is used through all layers in the Architecture. This aspect is responsible for the trusted
+identity of users; device in the data center, in the cloud, and on the edge; services and applications; and data.
+Having a common indentity management system is key to having consistency in the system. Having that identity
+trusted means that I can establish a trusted ecosystem in which data, applications and hardware can deliver
+solutions that can be trusted.
+
+![IA Diagram](./ia.png)
+
+
+The Identity Aspect has key sub-systems that help in managing identity: Access, Authorization, Authentication and
+Key Management. Being able to Authenticate an entity in the system is the first step in identity management. Keys
+are used to certify and attest the authentication of an entity, human or machine. Once an entity is authenicated,
+it is given authority to access other resources in the system. By giving identity ot every element in the system,
+mishaps in security can be mitigated and better controlled.
+

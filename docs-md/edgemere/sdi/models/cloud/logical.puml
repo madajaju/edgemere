@@ -1,0 +1,107 @@
+@startuml
+
+class "Cloud" as Model {
+ string name
+ string ename
+
+ create()
+ reserve()
+ 
+}
+
+rectangle "CloudType" as CloudType #lightblue {
+}
+
+Model o--> "1" CloudType : type
+
+
+rectangle "Resource" as Resource #lightblue {
+}
+
+Model *--> "n" Resource : resources
+
+
+rectangle "Device" as Device #lightblue {
+}
+
+Model o--> "n" Device : devices
+
+
+rectangle "AggregatedDevice" as AggregatedDevice #lightblue {
+}
+
+Model o--> "n" AggregatedDevice : adevices
+
+
+rectangle "DataCenter" as DataCenter #lightblue {
+}
+
+Model o--> "n" DataCenter : datacenters
+
+
+rectangle "Reservation" as Reservation #lightblue {
+}
+
+Model *--> "n" Reservation : reservations
+
+
+rectangle "Request" as Request #lightblue {
+}
+
+Model *--> "n" Request : requests
+
+
+
+
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   o--> "n" Model : "clouds"
+    
+    rectangle "Image" as Image #lightgreen {
+    }
+    
+        Image   o--> "1" Model : "cloud"
+    
+    rectangle "MultiCloud" as MultiCloud #lightgreen {
+    }
+    
+        MultiCloud   o--> "n" Model : "clouds"
+    
+    rectangle "AcceleratorResource" as AcceleratorResource #lightgreen {
+    }
+    
+        AcceleratorResource   o--> "1" Model : "cloud"
+    
+    rectangle "ComputeResource" as ComputeResource #lightgreen {
+    }
+    
+        ComputeResource   o--> "1" Model : "cloud"
+    
+    rectangle "NetworkResource" as NetworkResource #lightgreen {
+    }
+    
+        NetworkResource   o--> "1" Model : "cloud"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "1" Model : "cloud"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "cloud"
+    
+    rectangle "Resource" as Resource #lightgreen {
+    }
+    
+        Resource   o--> "1" Model : "cloud"
+    
+    rectangle "StorageResource" as StorageResource #lightgreen {
+    }
+    
+        StorageResource   o--> "1" Model : "cloud"
+    
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+
+
+usecase "Map Assets to Cloud" as MapAssetstoCloud
+
+Actor "IT Operations" as ITOperations
+
+ITOperations --> MapAssetstoCloud
+
+
+
+@enduml

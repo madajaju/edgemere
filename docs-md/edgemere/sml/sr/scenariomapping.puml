@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+
+
+
+state "Actor" as Actor {
+    state "Manage Assets" as ActorManageAssets {
+    }
+}
+state "sml" as sml #lightgreen {
+state "sr" as smlsr #lightgreen {
+state "data" as smlsrdata #lightgreen {
+state "govern" as smlsrdatagovern #lightgreen {
+}
+}
+}
+}
+
+ActorManageAssets --> smlsrdatagovern
+
+
+ 
+
+@enduml

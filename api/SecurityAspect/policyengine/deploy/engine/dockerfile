@@ -13,4 +13,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 3000
-CMD [ "node", "deploy/web/server.js" ]
+CMD [ "node", "deploy/engine/server.js" ]

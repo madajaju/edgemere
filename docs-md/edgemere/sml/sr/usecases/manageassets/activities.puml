@@ -1,0 +1,12 @@
+@startuml
+
+
+usecase "Manage Assets" as ManageAssets
+
+Actor "Actor" as Actor
+
+Actor --> ManageAssets
+
+
+
+@enduml

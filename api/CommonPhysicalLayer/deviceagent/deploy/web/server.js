@@ -1,15 +1,32 @@
 const fs = require('fs');
-// Check for node_modules directory. If it exists then continue. If not ask to run npm install.
-if(!fs.existsSync('./node_modules')) {
-   console.error('Error: you must run "npm install" first');
-   return;
-}
 const server = require('ailtire');
+const AEvent = require('ailtire/src/Server/AEvent');
 
-server.micro( {
+let hostname = process.env.HOSTNAME;
+let port = process.env.EDGEMERE_PORT || 3000;
+let urlPrefix = process.env.AILTIRE_BASEURL || '/cpl/da';
+let deviceManagerHost = process.env.EDGEMERE_DEVICE_MANAGER || 'localhost:3000';
+let deviceName = process.env.EDGEMERE_DEVICE_NAME || 'default';
+let deviceURL = hostname + ':' + port;
+
+setInterval(async () => {
+    console.log("Registering Agent");
+    console.log("Device Manager:", deviceManagerHost);
+    AEvent.emit('agent.started', {name: deviceName, url:deviceURL});
+}, 60000);
+
+server.micro({
     baseDir: '.',
     prefix: 'cpl/da',
-    routes: {
-    },
-    listenPort: 3000
+    routes: {},
+    host: hostname,
+    urlPrefix: urlPrefix,
+    listenPort: port,
+    servers: [
+        { pattern: "*", url: deviceManagerHost }
+    ],
+    post: () => {
+        console.log("Registering Agent");
+        AEvent.emit('agent.started', {name: deviceName, url:deviceURL});
+    }
 });

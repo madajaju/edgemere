@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+
+
+
+
+state edgemere #lavender {
+    state "Custom Function" as edgemerefunction {
+    }
+}
+
+
+
+
+
+@enduml

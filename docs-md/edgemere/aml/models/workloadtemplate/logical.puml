@@ -1,0 +1,18 @@
+@startuml
+
+class "WorkloadTemplate" as Model {
+ string attr1
+
+ 
+}
+
+rectangle "ModelName" as ModelName #lightblue {
+}
+
+Model o--> "1" ModelName : assoc1
+
+
+
+
+
+@enduml

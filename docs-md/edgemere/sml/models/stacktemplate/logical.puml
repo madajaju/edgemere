@@ -1,0 +1,45 @@
+@startuml
+
+class "StackTemplate" as Model {
+ string name
+ string version
+ json parameters
+
+ create()
+ 
+}
+
+rectangle "Stacklet" as Stacklet #lightblue {
+}
+
+Model *--> "n" Stacklet : stacklets
+
+
+rectangle "StackDefinition" as StackDefinition #lightblue {
+}
+
+Model *--> "n" StackDefinition : stacks
+
+
+rectangle "StackDefinition" as StackDefinition #lightblue {
+}
+
+Model o--> "1" StackDefinition : parent
+
+
+rectangle "ServiceDefinition" as ServiceDefinition #lightblue {
+}
+
+Model *--> "n" ServiceDefinition : services
+
+
+rectangle "DataReference" as DataReference #lightblue {
+}
+
+Model *--> "n" DataReference : data
+
+
+
+
+
+@enduml

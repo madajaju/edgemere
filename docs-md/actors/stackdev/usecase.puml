@@ -1,0 +1,28 @@
+@startuml
+
+left to right direction
+
+
+Actor "Stack Developer" as StackDeveloper
+
+
+rectangle "Environment Management" as em #lightgreen {
+        usecase "Manage Environment" as ManageEnvironment
+    StackDeveloper --> ManageEnvironment
+
+}
+
+rectangle "Service Orchestrator" as so #lightgreen {
+        usecase "Manage Stacks" as ManageStacks
+    StackDeveloper --> ManageStacks
+
+}
+
+rectangle "Service Management Layer" as sml #lightgreen {
+        usecase "Manage Services" as ManageServices
+    StackDeveloper --> ManageServices
+
+}
+
+
+@enduml

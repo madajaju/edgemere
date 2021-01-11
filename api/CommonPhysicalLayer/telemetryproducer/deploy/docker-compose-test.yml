@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  producer:
+    image: cpl_tp_producer:latest
+    environment:
+    - EDGEMERE_TELEMETRY_PARENT=tester:3001
+    - EDGEMERE_DEVICE_NAME={{.Service.Name}}-{{.Task.Slot}}
+    - EDGEMERE_PORT=3000
+  tester:
+    image: cpl_tp_tester:latest
+    environment:
+    - EDGEMERE_DEVICE_NAME={{.Service.Name}}-{{.Task.Slot}}
+    - EDGEMERE_PORT=3001

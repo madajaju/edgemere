@@ -1,0 +1,1344 @@
+.site-header {
+    margin-top: 50px;
+    margin-bottom: 50px
+}
+
+.site-header h1 {
+    font-size: 26px;
+    margin: 0;
+    text-align: center;
+    flex: 1 1
+}
+
+.site-header h1 a {
+    display: block;
+    text-decoration: none
+}
+
+.site-header h1 a img {
+    display: block;
+    width: auto;
+    max-height: 144px;
+    max-width: 155px;
+    margin: 0 auto;
+    border: 0
+}
+
+.site-header nav {
+    display: flex;
+    align-items: center;
+    margin: 0 -22px
+}
+
+.site-header nav > .group {
+    flex: none;
+    width: 280px
+}
+
+.site-header nav > .group a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+    padding: 0 0 3px 0;
+    margin: 0 22px;
+    font-weight: bold
+}
+
+.site-header nav > .group a:hover {
+    border-bottom: 2px solid #222;
+    padding-bottom: 1px
+}
+
+@font-face {
+    font-family: 'transistor';
+    src: url(https://assets.transistor.fm/assets/transistor-ae696005075d68c8b3de137fee644683828f4fd472d63ed87566e31030572777.woff?79acfj) format("woff");
+    font-weight: normal;
+    font-style: normal
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'transistor' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icon-playerfm:before {
+    content: "\e92d";
+    color: #fff
+}
+
+.icon-amazon:before {
+    content: "\e92c";
+    color: #fff
+}
+
+.icon-deezer:before {
+    content: "\e901";
+    color: #fff
+}
+
+.icon-podcast-addict:before {
+    content: "\e900";
+    color: #fff
+}
+
+.icon-instagram:before {
+    content: "\e917";
+    color: #fff
+}
+
+.icon-radiopublic:before {
+    content: "\e925";
+    color: #fff
+}
+
+.icon-pocketcasts:before {
+    content: "\e91e";
+    color: #fff
+}
+
+.icon-castro:before {
+    content: "\e91f";
+    color: #fff
+}
+
+.icon-google-podcasts:before {
+    content: "\e920";
+    color: #fff
+}
+
+.icon-stitcher:before {
+    content: "\e921";
+    color: #fff
+}
+
+.icon-tunein:before {
+    content: "\e922";
+    color: #fff
+}
+
+.icon-pandora:before {
+    content: "\e923";
+    color: #fff
+}
+
+.icon-soundcloud:before {
+    content: "\e924";
+    color: #fff
+}
+
+.icon-castbox:before {
+    content: "\e926";
+    color: #fff
+}
+
+.icon-Iheartradio:before {
+    content: "\e927";
+    color: #fff
+}
+
+.icon-overcast:before {
+    content: "\e928";
+    color: #fff
+}
+
+.icon-breaker:before {
+    content: "\e929";
+    color: #fff
+}
+
+.icon-cancel-circle:before {
+    content: "\e91b";
+    color: #fff
+}
+
+.icon-play-circle:before {
+    content: "\e91c";
+    color: #fff
+}
+
+.icon-pause-circle:before {
+    content: "\e91d";
+    color: #fff
+}
+
+.icon-medium:before {
+    content: "\e91a";
+    color: #fff
+}
+
+.icon-donate:before {
+    content: "\e902";
+    color: #fff
+}
+
+.icon-facebook:before {
+    content: "\e903";
+    color: #fff
+}
+
+.icon-email:before {
+    content: "\e904";
+    color: #fff
+}
+
+.icon-download-circle:before {
+    content: "\e905";
+    color: #fff
+}
+
+.icon-download:before {
+    content: "\e906";
+    color: #fff
+}
+
+.icon-youtube:before {
+    content: "\e907";
+    color: #fff
+}
+
+.icon-copy:before {
+    content: "\e908";
+    color: #fff
+}
+
+.icon-twitter-circle:before {
+    content: "\e909";
+    color: #fff
+}
+
+.icon-check-circle:before {
+    content: "\e90a";
+    color: #fff
+}
+
+.icon-twitter:before {
+    content: "\e90b";
+    color: #fff
+}
+
+.icon-check:before {
+    content: "\e90c";
+    color: #fff
+}
+
+.icon-spotify:before {
+    content: "\e90d";
+    color: #fff
+}
+
+.icon-cancel:before {
+    content: "\e90e";
+    color: #fff
+}
+
+.icon-rss:before {
+    content: "\e90f";
+    color: #fff
+}
+
+.icon-apple-podcasts:before {
+    content: "\e910";
+    color: #fff
+}
+
+.icon-player-unmuted:before {
+    content: "\e911";
+    color: #fff
+}
+
+.icon-player-rewind:before {
+    content: "\e912";
+    color: #fff
+}
+
+.icon-player-play:before {
+    content: "\e913";
+    color: #fff
+}
+
+.icon-player-pause:before {
+    content: "\e914";
+    color: #fff
+}
+
+.icon-facebook-plain:before {
+    content: "\e915";
+    color: #fff
+}
+
+.icon-player-muted:before {
+    content: "\e916";
+    color: #fff
+}
+
+.icon-player-forward:before {
+    content: "\e918";
+    color: #fff
+}
+
+.icon-facebook-circle:before {
+    content: "\e919";
+    color: #fff
+}
+
+.icon-linkedIn:before {
+    content: "\e92a";
+    color: #fff
+}
+
+.icon-menu:before {
+    content: "\e92b";
+    color: #fff
+}
+
+.site-social {
+    text-align: center;
+    padding-top: 25px;
+    margin: 50px 0
+}
+
+.site-social a {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    font-size: 24px;
+    margin: 0px 14px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+    text-decoration: none
+}
+
+.site-social a:before {
+    color: #222
+}
+
+.site-subscribe {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 800px
+}
+
+.site-subscribe a {
+    flex: none;
+    line-height: 14px;
+    border: 1px solid #222;
+    border-radius: 4px;
+    padding: 8px 12px 10px 12px;
+    padding-left: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #888;
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin: 0 6px 15px 6px;
+    background-repeat: no-repeat;
+    background-size: auto 28px;
+    background-position: 12px 9px;
+    transition: transform 0.1s ease-in-out
+}
+
+.site-subscribe a:hover {
+    transform: translateY(-3px)
+}
+
+.site-subscribe a span {
+    display: block;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #111;
+    font-weight: 600;
+    letter-spacing: 0
+}
+
+.site-subscribe a.rss {
+    background-image: url(https://assets.transistor.fm/assets/subscribe/rss-d4e9a74791b140e356679e096bd75a1aef2fc76be543478be63b09439f41b5d6.svg);
+    background-size: auto 24px;
+    background-position: 14px 11px
+}
+
+.site-subscribe a.google_podcasts {
+    background-image: url(https://assets.transistor.fm/assets/subscribe/google_podcasts-0bd51e232d5707023c96075df8d36740bbd34a896e486851b27571872c284dd3.svg)
+}
+
+.site-subscribe a.spotify {
+    background-image: url(https://assets.transistor.fm/assets/subscribe/spotify-f9fae1caf3605a0f9bf08be81e2b98dddb31df51a3ee53ea7cee5fe79dd474e1.svg)
+}
+
+.site-subscribe a.apple_podcasts {
+    background-image: url(https://assets.transistor.fm/assets/subscribe/apple_podcasts-f3da19de65556326597e589dafcb146dda750d290f6e06239dd84e77d6b1b7b2.svg);
+    background-size: auto 32px;
+    background-position: 10px 7px
+}
+
+.site-subscribe a.overcast {
+    background-image: url(https://assets.transistor.fm/assets/subscribe/overcast-492182c44dc4f098d313e3a1324331e9511bd9c5b470f955786f99f641a9c1b6.svg)
+}
+
+.site-subscribe a.stitcher {
+    background-image: url(https://assets.transistor.fm/assets/subscribe/stitcher-63e0af65f84b9076ba422f29786538f411243cb11c4dac6d430afcfd07513d43.svg)
+}
+
+.site-subscribe a.castro {
+    background-image: url(https://assets.transistor.fm/assets/subscribe/castro-16a4bc6cb48965a2be7c4896d6e5836c34af5c319467b57e0bc4df7ebe643056.svg)
+}
+
+.site-subscribe a.pocket_casts {
+    background-image: url(https://assets.transistor.fm/assets/subscribe/pocket_casts-a6bb7f79736f724602539825e787867987ac3bb60d1cc6c4c2ed23f7b40085ec.svg)
+}
+
+.site-subscribe a.amazon_music {
+    background-image: url(https://assets.transistor.fm/assets/subscribe/amazon-47cbef9e0927eb4f9754cef44e724f6a290e3a996dfafc684146eb1deb1e0170.svg)
+}
+
+.site-subscribe a.radioPublic {
+    background-image: url(https://assets.transistor.fm/assets/subscribe/radiopublic-85399f5b45f0dea8e4b4218433d17cec57d941e2b3dcbd8d3d850f52cc6c8a64.svg)
+}
+
+.site-subscribe a.breaker {
+    background-image: url(https://assets.transistor.fm/assets/subscribe/breaker-04d6fbc6052cbb59a23486270fae42f884b888fa0b384314b834113728072635.svg)
+}
+
+.site-subscribe a.tuneIn {
+    background-image: url(https://assets.transistor.fm/assets/subscribe/tunein-4831e04a9fedbc4bd78a4c8313f348c5a7c9e745c08f08ca96333b694e7c8ec5.svg);
+    background-size: 36px auto;
+    background-position: 8px 15px
+}
+
+.site-subscribe a.castbox {
+    background-image: url(https://assets.transistor.fm/assets/subscribe/castbox-652712738df223f568e900f447840c388645f72a0bb194788ed03636726bdcd7.svg)
+}
+
+.site-subscribe a.soundcloud {
+    background-image: url(https://assets.transistor.fm/assets/subscribe/soundcloud-9e11d89d1d92f8a2b048941d1230ccc25905d2a95a3c3019c1b5beb25e2561f4.svg);
+    background-size: 34px auto;
+    background-position: 8px 14px
+}
+
+.site-subscribe a.pandora {
+    background-image: url(https://assets.transistor.fm/assets/subscribe/pandora-2e22eb29206cbd82621c9b87577c83bd0758585e7d235daa6c5da2ca0ba21541.svg)
+}
+
+.site-subscribe a.iHeartRadio {
+    background-image: url(https://assets.transistor.fm/assets/subscribe/iheartradio-093ab8babc1e54aa26d82bf4e8378949d28d3e009259e09ad9251ad537880075.svg);
+    background-size: 32px auto;
+    background-position: 10px 11px
+}
+
+.site-subscribe a.deezer {
+    background-image: url(https://assets.transistor.fm/assets/subscribe/deezer-610fce280b4e8845190927098f2201d0ba6ef18c4f51ea88260db346aa196271.svg);
+    background-size: 32px auto;
+    background-position: 9px 13px
+}
+
+.site-subscribe a.podcast_addict {
+    background-image: url(https://assets.transistor.fm/assets/subscribe/podcast_addict-940c719a28999d5263176c579cabf8b46b3fde0555e54368654db3a3096f1557.svg)
+}
+
+.site-subscribe a.player_FM {
+    background-image: url(https://assets.transistor.fm/assets/subscribe/playerfm-142b4e95b25bb8cfab4fb7f00b5681dca419a7d997abddb3209cd50900af979b.svg)
+}
+
+.site-episode {
+    margin-bottom: 50px
+}
+
+.site-episode time {
+    font-size: 14px;
+    border-top: 2px solid #222;
+    display: block;
+    margin-bottom: 16px
+}
+
+.site-episode time span {
+    background: #222;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 4px 8px;
+    display: inline-block
+}
+
+.site-episode h2 {
+    margin: 0.20em 0;
+    line-height: 1.25em;
+    font-size: 32px
+}
+
+.site-episode h2 a {
+    text-decoration: none
+}
+
+.site-episode h2 a:hover {
+    text-decoration: underline
+}
+
+.site-episode .site-episode-summary {
+    margin: .75em 0 1em 0
+}
+
+.site-episode .site-button {
+    margin-right: 8px
+}
+
+.site-featured-episodes {
+    background: #222;
+    color: #fff;
+    padding: 50px 0
+}
+
+.site-featured-episodes .site-container {
+    padding: 0;
+    display: flex
+}
+
+.site-featured-episodes .site-episode {
+    margin-bottom: 0;
+    padding: 0 15px;
+    flex: 1
+}
+
+.site-featured-episodes .site-episode .site-episode-summary {
+    font-size: 18px
+}
+
+.site-featured-episodes .site-episode header {
+    border-top: 2px solid #fff;
+    margin-bottom: 20px
+}
+
+.site-featured-episodes .site-episode header span {
+    background: #fff;
+    color: #222;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 3px 6px;
+    display: inline-block
+}
+
+.site-featured-episodes .site-episode time {
+    display: block;
+    border: 0;
+    margin: 0
+}
+
+.site-featured-episodes .site-episode time span {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    background: transparent;
+    padding: 0;
+    display: inline
+}
+
+.site-featured-episodes .site-episode h2 {
+    font-size: 26px
+}
+
+.site-featured-episodes .site-episode h2 a {
+    color: #fff
+}
+
+.site-featured-episodes .site-episode .site-button {
+    border-color: #fff;
+    color: #fff;
+    font-size: 14px;
+    padding: 4px 8px
+}
+
+.site-featured-episodes .site-episode .site-button:hover {
+    background: #fff;
+    color: #222
+}
+
+.site-episode-show-notes {
+    margin-top: 40px
+}
+
+.site-episode-show-notes h1 {
+    font-size: inherit;
+    line-height: inherit
+}
+
+.site-episode-show-notes div > br:only-child {
+    display: none
+}
+
+.site-episode-show-notes blockquote {
+    font-style: italic
+}
+
+.pagination-info {
+    margin-bottom: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.02em
+}
+
+.pagination {
+    border-top: 2px solid #222222;
+    padding-top: 50px;
+    margin: 50px 0 30px 0;
+    display: flex;
+    justify-content: center
+}
+
+.pagination .page-item.site-button {
+    font-weight: 500;
+    font-size: 13px;
+    padding: 2px 8px
+}
+
+.pagination .page-item.site-button.prev-page {
+    margin-right: 6px
+}
+
+.pagination .page-item.site-button.next-page {
+    margin-left: 6px
+}
+
+*, *:before, *:after {
+    box-sizing: border-box
+}
+
+.preview-notice {
+    background: #FCC853;
+    color: #0C1824;
+    padding: 4px 10px;
+    text-align: center;
+    width: 100%;
+    font-size: 80%
+}
+
+.preview-notice a {
+    color: inherit;
+    font-weight: bold
+}
+
+.text-centered {
+    text-align: center
+}
+
+.site-container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 15px
+}
+
+.mobile-nav-menu, .mobile-nav {
+    display: none
+}
+
+.site-main {
+    padding: 0;
+    line-height: 1.45em;
+    font-size: 20px
+}
+
+.site-content {
+    min-height: 400px
+}
+
+.site-intro {
+    font-size: 32px;
+    line-height: 1.33333em;
+    margin-bottom: 50px
+}
+
+.site-first-episode {
+    text-align: center;
+    margin-bottom: 50px
+}
+
+.site-credits {
+    font-size: 16px;
+    margin: 50px 0;
+    text-align: center
+}
+
+.site-button {
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid #222;
+    font-size: 18px;
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    cursor: pointer;
+    outline: 0
+}
+
+.site-button:hover {
+    background-color: #222;
+    color: #fff
+}
+
+.site-mailinglist {
+    padding: 50px 0px 0px 0px;
+    text-align: center
+}
+
+.site-mailinglist h3 {
+    margin: 0 0 10px 0
+}
+
+.site-mailinglist p {
+    margin-top: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.site-mailinglist .email-input {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    background-color: transparent;
+    -webkit-appearance: none;
+    border: 2px solid #222;
+    color: #222;
+    font-size: 18px;
+    display: block;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    width: 360px;
+    padding: 8px 12px;
+    outline: 0
+}
+
+.site-newsletter-success {
+    display: none
+}
+
+.site-newsletter-success .icon-check:before {
+    color: #222
+}
+
+#site-newsletter-form {
+    height: 100px
+}
+
+#site-newsletter-form.subscribed {
+    display: none
+}
+
+#site-newsletter-form.subscribed + .site-newsletter-success {
+    height: 100px;
+    line-height: 100px;
+    display: block
+}
+
+#site-footer {
+    background: #222;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 105px
+}
+
+.powered-by {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px 15px;
+    font-size: 7px;
+    line-height: 20px;
+    text-transform: uppercase;
+    opacity: 0.55;
+    transition: opacity 0.2s
+}
+
+.powered-by strong {
+    font-weight: normal;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    top: 1px
+}
+
+.powered-by a {
+    color: white;
+    display: inline-block;
+    text-decoration: none
+}
+
+.powered-by img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 18px;
+    margin-left: 5px
+}
+
+.powered-by:hover {
+    opacity: 1.0
+}
+
+.player {
+    padding: 15px;
+    display: flex
+}
+
+.player button {
+    padding: 0;
+    appearance: none;
+    border: none;
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none
+}
+
+.playback-controls {
+    flex: 0 0 80px;
+    display: flex;
+    align-items: center;
+    margin-top: 5px
+}
+
+.playback-progress {
+    padding: 0 14px;
+    flex: 1 1 auto;
+    font-size: 14px;
+    min-width: 0
+}
+
+.currently-playing {
+    height: 18px
+}
+
+#title {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.playback-duration {
+    font-size: 80%;
+    opacity: 0.7
+}
+
+#timer {
+    float: left
+}
+
+#duration {
+    float: right
+}
+
+.volume-speed-controls {
+    flex: 0 0 60px;
+    margin-top: 15px
+}
+
+#volumeBtn {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    height: 16px;
+    width: 16px;
+    font-size: 16px;
+    margin: 0 0 0 5px
+}
+
+#playbackSpeed {
+    border: 1px solid #fff;
+    border-radius: 3px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 60%;
+    line-height: 1.5em;
+    width: 32px;
+    text-align: center;
+    vertical-align: middle;
+    opacity: 0.6;
+    transition: opacity 0.15s
+}
+
+#playbackSpeed:hover {
+    opacity: 1.0
+}
+
+#progressBar {
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 4px 0;
+    overflow: hidden
+}
+
+#progress {
+    background: #fff;
+    height: 8px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    border-radius: 4px
+}
+
+.playPause {
+    flex: 1
+}
+
+.playPause.hidden {
+    display: none
+}
+
+#playBtn, #pauseBtn {
+    cursor: pointer;
+    display: block;
+    width: 36px;
+    height: 36px
+}
+
+#playBtn.icon-player-play:before {
+    font-size: 36px
+}
+
+#pauseBtn {
+    display: none
+}
+
+#pauseBtn.icon-player-pause:before {
+    font-size: 36px
+}
+
+#rewindBtn, #fastForwardBtn {
+    flex: 0 0 18px;
+    opacity: 0.6;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    font-size: 18px;
+    transition: opacity 0.15s
+}
+
+#rewindBtn:hover, #fastForwardBtn:hover {
+    opacity: 1.0
+}
+
+#rewindBtn {
+    margin-right: 5px
+}
+
+#fastForwardBtn {
+    margin-left: 5px
+}
+
+.loader-ring {
+    flex: 1;
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 36px
+}
+
+.loader-ring.hidden {
+    display: none
+}
+
+.loader-ring:after {
+    content: " ";
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    border-color: #ffffff transparent #ffffff transparent;
+    animation: loader-ring 1.2s linear infinite
+}
+
+@keyframes loader-ring {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@media all and (max-width: 480px) {
+    #rewindBtn, #fastForwardBtn, #playbackSpeed {
+        display: none
+    }
+
+    .site-container.player {
+        padding: 5px 25px 0 22px
+    }
+
+    #playBtn, #pauseBtn {
+        cursor: pointer;
+        display: block;
+        width: 24px;
+        height: 24px
+    }
+
+    #playBtn.icon-player-play:before {
+        font-size: 24px
+    }
+
+    #pauseBtn {
+        display: none
+    }
+
+    #pauseBtn.icon-player-pause:before {
+        font-size: 24px
+    }
+
+    .playback-controls {
+        flex: 0 0 24px;
+        display: flex;
+        align-items: center;
+        margin-top: 0px
+    }
+
+    .loader-ring {
+        width: 24px;
+        height: 24px
+    }
+
+    .loader-ring:after {
+        width: 23px;
+        height: 23px
+    }
+
+    .playback-progress {
+        padding: 0 4px;
+        flex: 1 1 auto;
+        font-size: 14px;
+        min-width: 0
+    }
+
+    .currently-playing {
+        height: 14px;
+        font-size: 12px
+    }
+
+    #title {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap
+    }
+
+    .volume-speed-controls {
+        flex: 0 0 20px;
+        margin-top: 12px
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    20% {
+        opacity: 0
+    }
+    40% {
+        opacity: 0.3
+    }
+    60% {
+        opacity: 0.5
+    }
+    80% {
+        opacity: 0.9
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    20% {
+        opacity: 0
+    }
+    40% {
+        opacity: 0.3
+    }
+    60% {
+        opacity: 0.5
+    }
+    80% {
+        opacity: 0.9
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@media all and (max-width: 480px) {
+    body {
+        padding-bottom: 100px;
+        position: relative
+    }
+
+    body.noscroll {
+        overflow: hidden
+    }
+
+    .mobile-nav-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 15px;
+        cursor: pointer;
+        font-size: 25px;
+        height: 25px;
+        width: 30px;
+        text-align: center
+    }
+
+    .mobile-nav {
+        z-index: 2;
+        position: fixed;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        background: #222;
+        color: #fff
+    }
+
+    .mobile-nav.open {
+        display: block
+    }
+
+    .mobile-nav .mobile-nav-close {
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 25px;
+        font-size: 25px;
+        height: 25px;
+        width: 30px;
+        text-align: center;
+        line-height: 35px
+    }
+
+    .mobile-nav .mobile-nav-content {
+        padding: 50px 0;
+        text-align: center
+    }
+
+    .mobile-nav .mobile-nav-content a {
+        padding: 20px 0;
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 30px 0;
+        font-size: 32px
+    }
+
+    .site-container {
+        padding: 0 25px
+    }
+
+    .site-header {
+        margin-top: 30px;
+        margin-bottom: 10px
+    }
+
+    .site-header h1 {
+        font-size: 22px;
+        margin: 0 0 10px 0;
+        order: 0;
+        flex: none;
+        width: 90%;
+        text-align: left
+    }
+
+    .site-header h1 a {
+        display: block;
+        text-decoration: none
+    }
+
+    .site-header h1 a img {
+        display: block;
+        width: auto;
+        max-height: 100px;
+        max-width: 110px;
+        margin: 0;
+        border: 0
+    }
+
+    .site-header nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0px
+    }
+
+    .site-header nav > .group {
+        display: none
+    }
+
+    .site-intro {
+        font-size: 20px;
+        line-height: 1.33333em;
+        margin-bottom: 20px
+    }
+
+    .site-first-episode {
+        margin-bottom: 28px
+    }
+
+    .site-button {
+        font-size: 11px;
+        padding: 3px 6px
+    }
+
+    .site-content {
+        min-height: auto
+    }
+
+    .site-episode time {
+        font-size: 12px;
+        margin-bottom: 12px
+    }
+
+    .site-episode time span {
+        font-size: 13px
+    }
+
+    .site-episode h2 {
+        margin: 0.15em 0;
+        line-height: 1.1em;
+        font-size: 20px
+    }
+
+    .site-episode .site-episode-summary {
+        margin: .5em 0 .6666em 0;
+        font-size: 18px
+    }
+
+    .site-episode-show-notes {
+        margin-top: 20px
+    }
+
+    .site-episode-show-notes ul, .site-episode-show-notes ol {
+        padding-left: 20px
+    }
+
+    .site-episode .site-button {
+        margin-right: 5px
+    }
+
+    .site-episode {
+        margin-bottom: 30px
+    }
+
+    .site-featured-episodes {
+        padding: 0 0 20px 0
+    }
+
+    .site-featured-episodes .site-container {
+        display: block
+    }
+
+    .site-featured-episodes .site-episode {
+        margin-top: 0;
+        margin-bottom: 0;
+        flex: none;
+        padding: 30px 25px 15px 25px
+    }
+
+    .site-featured-episodes .site-episode h2 {
+        font-size: 20px
+    }
+
+    .site-credits {
+        margin: 20px 0
+    }
+
+    .site-social {
+        padding-top: 25px;
+        margin: 20px 0
+    }
+
+    .site-social a {
+        margin: 0px 8px
+    }
+
+    .site-mailinglist .email-input {
+        width: 85%
+    }
+
+    .site-subscribe a {
+        transform: scale(0.8);
+        margin: 0 4px 4px 4px
+    }
+
+    .site-subscribe a:hover {
+        transform: scale(0.8)
+    }
+
+    #site-footer {
+        padding-top: 5px;
+        height: 75px
+    }
+
+    .powered-by {
+        text-align: center;
+        display: block;
+        position: relative;
+        padding: 0;
+        margin: 0 auto;
+        opacity: 0.3;
+        top: -5px;
+        transform: scale(0.9)
+    }
+
+    .pagination-info {
+        margin-bottom: 1em;
+        text-align: left;
+        font-size: 12px;
+        letter-spacing: 0
+    }
+
+    .pagination {
+        padding-top: 30px;
+        margin: 30px 0 30px 0
+    }
+
+    .pagination .page-item.site-button {
+        font-size: 11px;
+        padding: 1px 8px
+    }
+}

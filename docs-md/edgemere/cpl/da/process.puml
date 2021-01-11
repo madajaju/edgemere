@@ -1,0 +1,64 @@
+@startuml
+left to right direction
+
+
+state "cpl" as cpl #lightgray {
+state "da" as cplda #lightgray {
+}
+}
+
+
+state cplda #lightgray {
+    state "Custom Function" as dafunction {
+    }
+}
+
+        state "cpl" as cpl #lightgray {
+state "da" as cplda #lightgray {
+state "connect" as cpldaconnect #lightgray {
+}
+}
+}
+
+
+        state "cpl" as cpl #lightgray {
+state "da" as cplda #lightgray {
+state "register" as cpldaregister #lightgray {
+}
+}
+}
+
+
+        state "cpl" as cpl #lightgray {
+state "da" as cplda #lightgray {
+state "service" as cpldaservice #lightgray {
+state "register" as cpldaserviceregister #lightgray {
+}
+}
+}
+}
+
+
+
+
+    state "sml" as sml #lightgreen {
+state "Service" as smlservice #lightgreen {
+state "started" as smlservicestarted #lightgreen {
+}
+}
+}
+
+    
+    state "da" as da #lavender {
+state "service" as daservice #lavender {
+state "register" as daserviceregister #lavender {
+}
+}
+}
+
+    smlservicestarted ---> daserviceregister
+  
+
+
+
+@enduml

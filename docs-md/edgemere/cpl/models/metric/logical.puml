@@ -1,0 +1,26 @@
+@startuml
+
+class "Metric" as Model {
+ string name
+ string value
+
+ consume()
+ copy()
+ factory()
+ greaterThanEq()
+ lessThanEq()
+ minus()
+ plus()
+ set()
+ 
+}
+
+
+
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+
+
+
+package "Data Adaptor Framework" #lightblue {
+
+    interface "Data Adaptor Framework" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Data Adaptor Framework" #lightblue {
+
+
+}
+
+
+
+@enduml

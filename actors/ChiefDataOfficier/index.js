@@ -1,6 +1,5 @@
 module.exports = {
     name: 'Chief Data Officer',
     shortname: 'cdo',
-    description: 'Long description' +
-        ' Continued on next line',
+    description: 'Responsible for setting strategy and governance of data in the organization.'
 };

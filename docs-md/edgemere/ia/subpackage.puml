@@ -1,0 +1,23 @@
+@startuml
+
+
+
+package "Identity Aspect" #pink {
+
+    interface "Identity Aspect" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Identity Aspect" #pink {
+
+
+}
+
+
+
+@enduml

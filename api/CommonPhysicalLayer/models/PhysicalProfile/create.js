@@ -22,12 +22,14 @@ module.exports = {
             obj.capabilities = new MetricComposite({name:inputs.name, value: inputs.capabilities});
             obj.available = new MetricComposite({name:inputs.name, value: inputs.available});
             obj.reserved = new MetricComposite({name:inputs.name, value: inputs.reserved});
+            obj.metrics = new MetricComposite({name:inputs.name, value: {}});
         }
         else {
             obj.name = "";
-            obj.capabilities = new MetricComposite({name:"", value: {}});
-            obj.available = new MetricComposite({name:"", value: {}});
-            obj.reserved = new MetricComposite({name:"", value: {}});
+            obj.capabilities = new MetricComposite({name:"capabilities", value: {}});
+            obj.available = new MetricComposite({name:"available", value: {}});
+            obj.reserved = new MetricComposite({name:"reserved", value: {}});
+            obj.metrics = new MetricComposite({name:"metrics", value: {}});
         }
         return obj;
     }

@@ -1,0 +1,49 @@
+@startuml
+
+
+package "Common Physical Layer" #lightgray {
+
+}
+
+package "Software Defined Infrastructure" #lightyellow {
+
+}
+
+package "Service Orchestrator" #lightgreen {
+
+}
+
+package "Cloud Broker" #lightgreen {
+
+}
+
+
+package "Software Defined Infrastructure" #lightyellow {
+
+    interface "Software Defined Infrastructure" as i {
+            /edgemere/sdi/checkrequest()
+            /edgemere/sdi/reserve()
+            /edgemere/sdi/resource/get()
+            /edgemere/sdi/resource/list()
+            /edgemere/sdi/resource/release()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Software Defined Infrastructure" #lightyellow {
+
+
+rectangle "Infrastructure Orchestrator" #white {
+}
+
+}
+
+
+    "Software Defined Infrastructure" --> "Common Physical Layer"
+
+
+@enduml
