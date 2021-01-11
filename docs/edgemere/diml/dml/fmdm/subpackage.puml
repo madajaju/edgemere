@@ -1,0 +1,32 @@
+@startuml
+
+
+package "Data Orchestrator" #lightblue {
+
+}
+
+package "Data Management Layer" #ffcc88 {
+
+}
+
+
+package "Federated Meta Data Management" #lightblue {
+
+    interface "Federated Meta Data Management" as i {
+            /edgemere/diml/dml/fmdm/query()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Federated Meta Data Management" #lightblue {
+
+
+}
+
+
+
+@enduml

@@ -1,0 +1,32 @@
+@startuml
+
+
+usecase "Manage Data Center" as ManageDataCenter
+
+Actor "IT Operations" as ITOperations
+
+ITOperations --> ManageDataCenter
+
+
+
+usecase "CreateDataCenter" as CreateDataCenter #lightgrey
+
+ManageDataCenter --> CreateDataCenter
+
+usecase "DisableDataCenter" as DisableDataCenter #lightgrey
+
+ManageDataCenter --> DisableDataCenter
+
+usecase "EnableDataCenter" as EnableDataCenter #lightgrey
+
+ManageDataCenter --> EnableDataCenter
+
+usecase "RemoveDataCenter" as RemoveDataCenter #lightgrey
+
+ManageDataCenter --> RemoveDataCenter
+
+usecase "UpdateDataCenter" as UpdateDataCenter #lightgrey
+
+ManageDataCenter --> UpdateDataCenter
+
+@enduml

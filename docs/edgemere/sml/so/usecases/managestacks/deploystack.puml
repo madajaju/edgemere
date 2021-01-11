@@ -1,0 +1,40 @@
+@startuml
+
+actor "DevOps Engineer"
+
+
+entity EventBus
+
+box Service Orchestrator #lightgreen
+    boundary so #white
+end box
+
+
+
+"DevOps Engineer" -> so: Deploy Stack
+
+
+
+box "Service Controller" #lightgreen
+    boundary sc #white
+end box
+EventBus -\ sc: method()
+sc --/ EventBus: Model.Event2
+box "Service Repository" #lightgreen
+    boundary sr #white
+end box
+EventBus -\ sr: method()
+sr --/ EventBus: Model.Event2
+box "Data Orchestrator" #lightblue
+    boundary do #white
+end box
+EventBus -\ do: method()
+do --/ EventBus: Model.Event2
+box "Infrastructure Orchestrator" #lightyellow
+    boundary io #white
+end box
+EventBus -\ io: method()
+io --/ EventBus: Model.Event2
+
+EventBus --/ so : method2()
+@enduml

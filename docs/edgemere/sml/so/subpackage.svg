@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="375px" preserveAspectRatio="none" style="width:1367px;height:375px;" version="1.1" viewBox="0 0 1367 375" width="1367px" zoomAndPan="magnify"><defs><filter height="300%" id="fpb5hgw8zyrmz" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster Service Orchestrator--><polygon fill="#90EE90" filter="url(#fpb5hgw8zyrmz)" points="351.5,87,505.5,87,512.5,110.6094,630.5,110.6094,630.5,272,351.5,272,351.5,87" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="351.5" x2="512.5" y1="110.6094" y2="110.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="148" x="355.5" y="103.5332">Service Orchestrator</text><polygon fill="#90EE90" filter="url(#fpb5hgw8zyrmz)" points="6,308,141,308,148,331.6094,155,331.6094,155,363.2188,6,363.2188,6,308" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="6" x2="148" y1="331.6094" y2="331.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="129" x="10" y="324.5332">Service Controller</text><polygon fill="#90EE90" filter="url(#fpb5hgw8zyrmz)" points="190.5,308,330.5,308,337.5,331.6094,344.5,331.6094,344.5,363.2188,190.5,363.2188,190.5,308" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="190.5" x2="337.5" y1="331.6094" y2="331.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="134" x="194.5" y="324.5332">Service Repository</text><polygon fill="#ADD8E6" filter="url(#fpb5hgw8zyrmz)" points="380,308,511,308,518,331.6094,525,331.6094,525,363.2188,380,363.2188,380,308" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="380" x2="518" y1="331.6094" y2="331.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="125" x="384" y="324.5332">Data Orchestrator</text><polygon fill="#FFFFE0" filter="url(#fpb5hgw8zyrmz)" points="560,308,757,308,764,331.6094,771,331.6094,771,363.2188,560,363.2188,560,308" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="560" x2="764" y1="331.6094" y2="331.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="191" x="564" y="324.5332">Infrastructure Orchestrator</text><polygon fill="#90EE90" filter="url(#fpb5hgw8zyrmz)" points="586,8,783,8,790,31.6094,797,31.6094,797,63.2188,586,63.2188,586,8" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="586" x2="790" y1="31.6094" y2="31.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="191" x="590" y="24.5332">Service Management Layer</text><polygon fill="#FFFFE0" filter="url(#fpb5hgw8zyrmz)" points="832.5,8,1060.5,8,1067.5,31.6094,1074.5,31.6094,1074.5,63.2188,832.5,63.2188,832.5,8" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="832.5" x2="1067.5" y1="31.6094" y2="31.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="222" x="836.5" y="24.5332">Software Defined Infrastructure</text><!--class i--><rect fill="#FEFECE" filter="url(#fpb5hgw8zyrmz)" height="117.1797" id="i" style="stroke: #A80036; stroke-width: 1.5;" width="211" x="395" y="131"/><ellipse cx="440.75" cy="147" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M441.7031,143.6406 L441.7031,150.2969 L443.4219,150.2969 Q444.0313,150.2969 444.2969,150.5313 Q444.5625,150.7656 444.5625,151.1563 Q444.5625,151.5313 444.2969,151.7656 Q444.0313,152 443.4219,152 L438.2813,152 Q437.6719,152 437.4063,151.7656 Q437.1406,151.5313 437.1406,151.1406 Q437.1406,150.7656 437.4063,150.5313 Q437.6719,150.2969 438.2813,150.2969 L440,150.2969 L440,143.6406 L438.2813,143.6406 Q437.6719,143.6406 437.4063,143.4063 Q437.1406,143.1719 437.1406,142.7813 Q437.1406,142.4063 437.4063,142.1719 Q437.6719,141.9375 438.2813,141.9375 L443.4219,141.9375 Q444.0313,141.9375 444.2969,142.1719 Q444.5625,142.4063 444.5625,142.7813 Q444.5625,143.1719 444.2969,143.4063 Q444.0313,143.6406 443.4219,143.6406 L441.7031,143.6406 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="111" x="461.25" y="151.9102">Service Orchestrator</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="396" x2="605" y1="163" y2="163"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="396" x2="605" y1="171" y2="171"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="199" x="401" y="186.4189">/edgemere/sml/so/servicelet/assigndata()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="157" x="401" y="200.2549">/edgemere/sml/so/stack/deploy()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="138" x="401" y="214.0908">/edgemere/sml/so/stack/list()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="164" x="401" y="227.9268">/edgemere/sml/so/stack/uninstall()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="158" x="401" y="241.7627">/edgemere/sml/so/stack/update()</text><polygon fill="#ADD8E6" filter="url(#fpb5hgw8zyrmz)" points="1110,8,1331,8,1338,31.6094,1345,31.6094,1345,63.2188,1110,63.2188,1110,8" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="1110" x2="1338" y1="31.6094" y2="31.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="215" x="1114" y="24.5332">Application Management Layer</text><ellipse cx="455.5" cy="35.5" fill="#FEFECE" filter="url(#fpb5hgw8zyrmz)" rx="5" ry="5" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="19" x="446" y="52.957">CLI</text><ellipse cx="500.5" cy="35.5" fill="#FEFECE" filter="url(#fpb5hgw8zyrmz)" rx="5" ry="5" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="32" x="484.5" y="52.957">REST</text><ellipse cx="545.5" cy="35.5" fill="#FEFECE" filter="url(#fpb5hgw8zyrmz)" rx="5" ry="5" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="25" x="533" y="52.957">Web</text><!--link ilol9826 to i--><path d="M456.704,40.566 C460.533,53.502 472.807,94.959 483.39,130.707 " fill="none" id="ilol9826-i" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ilol9829 to i--><path d="M500.5,40.566 C500.5,53.502 500.5,94.959 500.5,130.707 " fill="none" id="ilol9829-i" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ilol9832 to i--><path d="M544.296,40.566 C540.467,53.502 528.193,94.959 517.61,130.707 " fill="none" id="ilol9832-i" style="stroke: #A80036; stroke-width: 1.0;"/><!--link Service Orchestrator to Service Controller--><path d="M351.4898,194.6341 C351.2104,194.7783 350.9242,194.926 350.6315,195.0771 C350.046,195.3793 349.4339,195.6952 348.796,196.0245 C347.5203,196.6829 346.1413,197.3946 344.6651,198.1566 C341.7127,199.6804 338.3712,201.4051 334.6882,203.306 C319.9561,210.9097 299.7593,221.3339 277.1394,233.0087 C231.8995,256.3583 176.967,284.7106 136.674,305.5069 " fill="none" id="Service Orchestrator-Service Controller" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="131.929,307.9558,141.7612,307.3832,136.3723,305.6629,138.0925,300.2739,131.929,307.9558" style="stroke: #A80036; stroke-width: 1.0;"/><!--link Service Orchestrator to Service Repository--><path d="M351.2954,203.3412 C351.2215,203.4569 351.1472,203.5732 351.0725,203.6901 C346.2904,211.1751 339.8205,221.302 332.5848,232.6276 C318.1133,255.2787 300.5785,282.7244 287.357,303.4188 " fill="none" id="Service Orchestrator-Service Repository" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="284.538,307.8311,292.7547,302.401,287.2303,303.6178,286.0135,298.0934,284.538,307.8311" style="stroke: #A80036; stroke-width: 1.0;"/><!--link Service Orchestrator to Data Orchestrator--><path d="M370.0099,272.1676 C370.0765,272.3272 370.1434,272.4866 370.2107,272.6457 C370.3454,272.9641 370.4816,273.2817 370.6194,273.5984 C372.8237,278.6661 375.4276,283.5199 378.5,288 C382.753,294.2019 388.133,299.7453 394.044,304.6528 " fill="none" id="Service Orchestrator-Data Orchestrator" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="398.214,307.9489,393.6352,299.2291,394.2919,304.8477,388.6733,305.5045,398.214,307.9489" style="stroke: #A80036; stroke-width: 1.0;"/><!--link Service Orchestrator to Infrastructure Orchestrator--><path d="M366.8438,272.2988 C366.9206,272.4485 366.9978,272.5978 367.0756,272.7469 C367.2313,273.0449 367.3891,273.3417 367.5491,273.6371 C367.8691,274.228 368.198,274.8134 368.536,275.3931 C371.2399,280.0304 374.5246,284.2978 378.5,288 C405.367,313.0218 506.295,301.9052 542.5,308 C546.603,308.6907 550.776,309.4253 554.987,310.1935 " fill="none" id="Service Orchestrator-Infrastructure Orchestrator" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="559.944,311.11,551.8223,305.5389,555.0275,310.2,550.3663,313.4053,559.944,311.11" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+
+
+package "Service Controller" #lightgreen {
+
+}
+
+package "Service Repository" #lightgreen {
+
+}
+
+package "Data Orchestrator" #lightblue {
+
+}
+
+package "Infrastructure Orchestrator" #lightyellow {
+
+}
+
+package "Service Management Layer" #lightgreen {
+
+}
+
+package "Software Defined Infrastructure" #lightyellow {
+
+}
+
+package "Service Orchestrator" #lightgreen {
+
+}
+
+package "Application Management Layer" #lightblue {
+
+}
+
+
+package "Service Orchestrator" #lightgreen {
+
+    interface "Service Orchestrator" as i {
+            /edgemere/sml/so/servicelet/assigndata()
+            /edgemere/sml/so/stack/deploy()
+            /edgemere/sml/so/stack/list()
+            /edgemere/sml/so/stack/uninstall()
+            /edgemere/sml/so/stack/update()
+    
+    }
+}
+
+CLI ()- - i
+REST ()- - i
+Web ()- - i
+
+package "Service Orchestrator" #lightgreen {
+
+
+}
+
+
+    "Service Orchestrator" - -> "Service Controller"
+
+    "Service Orchestrator" - -> "Service Repository"
+
+    "Service Orchestrator" - -> "Data Orchestrator"
+
+    "Service Orchestrator" - -> "Infrastructure Orchestrator"
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

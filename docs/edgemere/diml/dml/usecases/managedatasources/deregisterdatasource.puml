@@ -1,0 +1,35 @@
+@startuml
+
+actor "Actor"
+
+
+entity EventBus
+
+box Data Management Layer #ffcc88
+    boundary dml #white
+end box
+
+
+
+"Actor" -> dml: Deregister Data Source
+
+
+
+box "Software Defined Infrastructure" #lightyellow
+    boundary sdi #white
+end box
+EventBus -\ sdi: method()
+sdi --/ EventBus: Model.Event2
+box "Security Aspect" #pink
+    boundary sa #white
+end box
+EventBus -\ sa: method()
+sa --/ EventBus: Model.Event2
+box "Service Management Layer" #lightgreen
+    boundary sml #white
+end box
+EventBus -\ sml: method()
+sml --/ EventBus: Model.Event2
+
+EventBus --/ dml : method2()
+@enduml

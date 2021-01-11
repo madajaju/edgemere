@@ -1,0 +1,19 @@
+@startuml
+
+actor "StackDeveloper" as stackdev
+
+actor "ApplicationDeveloper" as applicationdeveloper
+
+
+
+
+stackdev -> "Service Orchestrator": Manage Stacks
+"Service Orchestrator" -> bin: stack/list
+bin -> REST: stack/list
+
+applicationdeveloper -> "Service Orchestrator": Manage Stacks
+"Service Orchestrator" -> bin: stack/list
+bin -> REST: stack/list
+
+
+@enduml

@@ -1,0 +1,43 @@
+@startuml
+
+
+package "Software Defined Infrastructure" #lightyellow {
+    }
+
+package "Service Management Layer" #lightgreen {
+    }
+
+package "Security Aspect" #pink {
+    }
+
+package "Identity Aspect" #pink {
+    }
+
+
+package "Distributed Information Management Layer" #ffcc88 {
+
+    interface "Distributed Information Management Layer" as i {
+            /edgemere/diml/find()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Distributed Information Management Layer" #ffcc88 {
+    
+}
+
+
+    "Distributed Information Management Layer" --> "Software Defined Infrastructure"
+
+    "Distributed Information Management Layer" --> "Service Management Layer"
+
+    "Distributed Information Management Layer" --> "Security Aspect"
+
+    "Distributed Information Management Layer" --> "Identity Aspect"
+
+
+@enduml

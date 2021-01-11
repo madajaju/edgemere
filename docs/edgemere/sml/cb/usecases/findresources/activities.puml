@@ -1,0 +1,12 @@
+@startuml
+
+
+usecase "Find Resources" as FindResources
+
+Actor "IT Operations" as ITOperations
+
+ITOperations --> FindResources
+
+
+
+@enduml

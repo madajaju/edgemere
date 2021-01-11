@@ -1,0 +1,25 @@
+@startuml
+
+class "Identity" as Model {
+ string name
+ string username
+ string password
+ string cert
+
+ 
+}
+
+
+
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   o--> "1" Model : "identity"
+    
+    rectangle "DataBluePrintInstance" as DataBluePrintInstance #lightgreen {
+    }
+    
+        DataBluePrintInstance   o--> "1" Model : "identity"
+    
+
+@enduml

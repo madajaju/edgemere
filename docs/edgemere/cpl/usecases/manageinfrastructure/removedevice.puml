@@ -1,0 +1,20 @@
+@startuml
+
+actor "IT Operations"
+
+
+entity EventBus
+
+box Common Physical Layer #lightgray
+    boundary cpl #white
+end box
+
+
+
+"IT Operations" -> cpl: Remove Device
+
+
+
+
+EventBus --/ cpl : method2()
+@enduml

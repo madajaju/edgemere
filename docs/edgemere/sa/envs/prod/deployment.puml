@@ -1,0 +1,51 @@
+@startuml
+
+left to right direction
+
+
+boundary ailtire_parent_network #red
+
+
+entity ailtire_appname_sa_family #black
+
+
+
+
+package "sa" #pink {
+    queue childrennet #black [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#black]- ailtire_appname_sa_family
+    
+    queue siblingnet #blue [
+            <b><color:white>sibling</color></b>
+    ]
+    
+    queue parentnet #red [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#red]- ailtire_parent_network
+    
+
+node "frontend" as frontendService
+node "gw" as gwService
+
+
+        artifact "sa_web" as sa_webimage
+    
+        artifact "sa_gw" as sa_gwimage
+    
+}
+
+frontendService -[#blue]- siblingnet
+
+gwService -[#black]- childrennet
+
+gwService -[#blue]- siblingnet
+frontendService .... sa_webimage
+gwService .... sa_gwimage
+
+
+@enduml

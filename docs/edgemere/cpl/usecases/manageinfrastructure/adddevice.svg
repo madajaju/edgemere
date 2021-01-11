@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="388px" preserveAspectRatio="none" style="width:879px;height:388px;" version="1.1" viewBox="0 0 879 388" width="879px" zoomAndPan="magnify"><defs><filter height="300%" id="f1xkf130sj22ps" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#D3D3D3" height="373.3281" style="stroke: #A80036; stroke-width: 1.0;" width="164" x="196.5" y="4"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="154" x="199.5" y="17.4951">Common Physical Layer</text><rect fill="#D3D3D3" height="373.3281" style="stroke: #A80036; stroke-width: 1.0;" width="164" x="621.5" y="4"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="154" x="624.5" y="17.4951">Common Physical Layer</text><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="54" x2="54" y1="87.6094" y2="289.7188"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="143" x2="143" y1="87.6094" y2="289.7188"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="278" x2="278" y1="87.6094" y2="289.7188"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="703" x2="703" y1="87.6094" y2="289.7188"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="831.5" x2="831.5" y1="87.6094" y2="289.7188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="86" x="8" y="84.5332">IT Operations</text><ellipse cx="54" cy="13" fill="#FEFECE" filter="url(#f1xkf130sj22ps)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M54,21 L54,48 M41,29 L67,29 M54,48 L41,63 M54,48 L67,63 " fill="none" filter="url(#f1xkf130sj22ps)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="86" x="8" y="303.252">IT Operations</text><ellipse cx="54" cy="316.3281" fill="#FEFECE" filter="url(#f1xkf130sj22ps)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M54,324.3281 L54,351.3281 M41,332.3281 L67,332.3281 M54,351.3281 L41,366.3281 M54,351.3281 L67,366.3281 " fill="none" filter="url(#f1xkf130sj22ps)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="60" x="110" y="84.5332">EventBus</text><ellipse cx="143" cy="54" fill="#FEFECE" filter="url(#f1xkf130sj22ps)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><line style="stroke: #A80036; stroke-width: 2.0;" x1="131" x2="155" y1="68" y2="68"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="60" x="110" y="303.252">EventBus</text><ellipse cx="143" cy="322.3281" fill="#FEFECE" filter="url(#f1xkf130sj22ps)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><line style="stroke: #A80036; stroke-width: 2.0;" x1="131" x2="155" y1="336.3281" y2="336.3281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="18" x="266.5" y="84.5332">cpl</text><path d="M258,42 L258,66 M258,54 L275,54 " fill="none" filter="url(#f1xkf130sj22ps)" style="stroke: #A80036; stroke-width: 2.0;"/><ellipse cx="287" cy="54" fill="#FFFFFF" filter="url(#f1xkf130sj22ps)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="18" x="266.5" y="303.252">cpl</text><path d="M258,310.3281 L258,334.3281 M258,322.3281 L275,322.3281 " fill="none" filter="url(#f1xkf130sj22ps)" style="stroke: #A80036; stroke-width: 2.0;"/><ellipse cx="287" cy="322.3281" fill="#FFFFFF" filter="url(#f1xkf130sj22ps)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><rect fill="#FEFECE" filter="url(#f1xkf130sj22ps)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="55" x="674" y="51"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="41" x="681" y="72.5332">device</text><rect fill="#FEFECE" filter="url(#f1xkf130sj22ps)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="55" x="674" y="288.7188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="41" x="681" y="310.252">device</text><rect fill="#FEFECE" filter="url(#f1xkf130sj22ps)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="77" x="791.5" y="51"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="63" x="798.5" y="72.5332">cpl/device</text><rect fill="#FEFECE" filter="url(#f1xkf130sj22ps)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="77" x="791.5" y="288.7188"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="63" x="798.5" y="310.252">cpl/device</text><polygon fill="#A80036" points="266.5,115.9609,276.5,119.9609,266.5,123.9609,270.5,119.9609" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="54" x2="272.5" y1="119.9609" y2="119.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="65" x="61" y="115.1045">Add Device</text><polygon fill="#A80036" points="691.5,146.3125,701.5,150.3125,691.5,154.3125,695.5,150.3125" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="278.5" x2="697.5" y1="150.3125" y2="150.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="299" x="285.5" y="145.4561">create (name: hostad1,file: ./templates/device.yaml)</text><polygon fill="#A80036" points="820,176.6641,830,180.6641,820,184.6641,824,180.6641" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="278.5" x2="826" y1="180.6641" y2="180.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="139" x="285.5" y="175.8076">disable (name: hostad1)</text><polygon fill="#A80036" points="820,207.0156,830,211.0156,820,215.0156,824,211.0156" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="278.5" x2="826" y1="211.0156" y2="211.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="136" x="285.5" y="206.1592">enable (name: hostad1)</text><polygon fill="#A80036" points="820,237.3672,830,241.3672,820,245.3672,824,241.3672" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="278.5" x2="826" y1="241.3672" y2="241.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="139" x="285.5" y="236.5107">disable (name: hostad1)</text><polygon fill="#A80036" points="266.5,272.7188,276.5,272.7188,266.5,276.7188" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="143" x2="277.5" y1="271.7188" y2="271.7188"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="58" x="150" y="266.8623">method2()</text><!--
+@startuml
+
+actor "IT Operations"
+
+
+entity EventBus
+
+box Common Physical Layer #lightgray
+    boundary cpl #white
+end box
+
+
+box Common Physical Layer #lightgray
+            participant device
+    end box
+
+
+"IT Operations" -> cpl: Add Device
+
+    cpl -> "device": create (name: hostad1,file: ./templates/device.yaml)
+
+
+    cpl -> "cpl/device": disable (name: hostad1)
+
+
+    cpl -> "cpl/device": enable (name: hostad1)
+
+
+    cpl -> "cpl/device": disable (name: hostad1)
+
+
+
+
+
+EventBus - -/ cpl : method2()
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

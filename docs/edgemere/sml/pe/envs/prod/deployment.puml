@@ -1,0 +1,51 @@
+@startuml
+
+left to right direction
+
+
+boundary ailtire_appname_sml_family #red
+
+
+entity ailtire_appname_sml_pe_family #black
+
+
+
+
+package "sml_pe" #lightgreen {
+    queue childrennet #black [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#black]- ailtire_appname_sml_pe_family
+    
+    queue siblingnet #blue [
+            <b><color:white>sibling</color></b>
+    ]
+    
+    queue parentnet #red [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#red]- ailtire_appname_sml_family
+    
+
+node "frontend" as frontendService
+node "gw" as gwService
+
+
+        artifact "sml_pe_web" as sml_pe_webimage
+    
+        artifact "sml_pe_gw" as sml_pe_gwimage
+    
+}
+
+frontendService -[#blue]- siblingnet
+
+gwService -[#black]- childrennet
+
+gwService -[#blue]- siblingnet
+frontendService .... sml_pe_webimage
+gwService .... sml_pe_gwimage
+
+
+@enduml

@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="3144px" preserveAspectRatio="none" style="width:459px;height:3144px;" version="1.1" viewBox="0 0 459 3144" width="459px" zoomAndPan="magnify"><defs><filter height="300%" id="fj0lm41boyjrr" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster DataScientist--><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="221" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="233" x="32.5" y="24"/><rect fill="#FFFFFF" height="187.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="227" x="35.5" y="54.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="32.5" x2="265.5" y1="51.6094" y2="51.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="105.5" y="42.5332">Data Scientist</text><!--cluster DataScientistManageAIModels--><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="137" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="169" x="64.5" y="76"/><rect fill="#FFFFFF" height="103.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="163" x="67.5" y="106.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="64.5" x2="233.5" y1="103.6094" y2="103.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="116" x="91" y="94.5332">Manage AI Models</text><!--cluster aml--><rect fill="#ADD8E6" filter="url(#fj0lm41boyjrr)" height="1612" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="147" x="300" y="1030"/><rect fill="#FFFFFF" height="1578.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="141" x="303" y="1060.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="300" x2="447" y1="1057.6094" y2="1057.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="362.5" y="1048.5332">aml</text><!--cluster amlaimodel--><rect fill="#E6E6FA" filter="url(#fj0lm41boyjrr)" height="442" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="99" x="324" y="2176"/><rect fill="#FFFFFF" height="408.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="93" x="327" y="2206.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="324" x2="423" y1="2203.6094" y2="2203.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="49" x="349" y="2194.5332">aimodel</text><!--cluster amlapplication--><rect fill="#E6E6FA" filter="url(#fj0lm41boyjrr)" height="527" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="99" x="324" y="1074"/><rect fill="#FFFFFF" height="493.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="93" x="327" y="1104.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="324" x2="423" y1="1101.6094" y2="1101.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="68" x="339.5" y="1092.5332">application</text><!--cluster amlworkload--><rect fill="#E6E6FA" filter="url(#fj0lm41boyjrr)" height="527" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="99" x="324" y="1625"/><rect fill="#FFFFFF" height="493.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="93" x="327" y="1655.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="324" x2="423" y1="1652.6094" y2="1652.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="56" x="345.5" y="1643.5332">workload</text><!--cluster DevOpsEngineer--><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="1170" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="254" x="22" y="269"/><rect fill="#FFFFFF" height="1136.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="248" x="25" y="299.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="22" x2="276" y1="296.6094" y2="296.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="112" x="93" y="287.5332">DevOps Engineer</text><!--cluster DevOpsEngineerManageAIModels--><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="222" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="171" x="63.5" y="1185"/><rect fill="#FFFFFF" height="188.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="165" x="66.5" y="1215.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="63.5" x2="234.5" y1="1212.6094" y2="1212.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="116" x="91" y="1203.5332">Manage AI Models</text><!--cluster DevOpsEngineerManageApplications--><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="392" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="190" x="54" y="321"/><rect fill="#FFFFFF" height="358.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="184" x="57" y="351.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="54" x2="244" y1="348.6094" y2="348.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="131" x="83.5" y="339.5332">Manage Applications</text><!--cluster DevOpsEngineerManageWorkloads--><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="392" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="181" x="58.5" y="753"/><rect fill="#FFFFFF" height="358.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="175" x="61.5" y="783.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="58.5" x2="239.5" y1="780.6094" y2="780.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="122" x="88" y="771.5332">Manage Workloads</text><!--cluster ApplicationDeveloper--><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="1255" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="252" x="23" y="1463"/><rect fill="#FFFFFF" height="1221.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="246" x="26" y="1493.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="23" x2="275" y1="1490.6094" y2="1490.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="134" x="82" y="1481.5332">ApplicationDeveloper</text><!--cluster ApplicationDeveloperManageAIModels--><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="392" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="175" x="61.5" y="2294"/><rect fill="#FFFFFF" height="358.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="169" x="64.5" y="2324.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="61.5" x2="236.5" y1="2321.6094" y2="2321.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="116" x="91" y="2312.5332">Manage AI Models</text><!--cluster ApplicationDeveloperManageApplications--><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="307" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="188" x="55" y="1515"/><rect fill="#FFFFFF" height="273.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="182" x="58" y="1545.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="55" x2="243" y1="1542.6094" y2="1542.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="131" x="83.5" y="1533.5332">Manage Applications</text><!--cluster ApplicationDeveloperManageWorkloads--><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="392" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="179" x="59.5" y="1862"/><rect fill="#FFFFFF" height="358.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="173" x="62.5" y="1892.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="59.5" x2="238.5" y1="1889.6094" y2="1889.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="122" x="88" y="1880.5332">Manage Workloads</text><!--cluster DataEngineer--><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="391" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="239" x="29.5" y="2742"/><rect fill="#FFFFFF" height="357.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="233" x="32.5" y="2772.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="29.5" x2="268.5" y1="2769.6094" y2="2769.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="105.5" y="2760.5332">DataEngineer</text><!--cluster DataEngineerManageAIModels--><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="307" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="175" x="61.5" y="2794"/><rect fill="#FFFFFF" height="273.3906" rx="12.5" ry="12.5" style="stroke: #FFFFFF; stroke-width: 1.0;" width="169" x="64.5" y="2824.6094"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="61.5" x2="236.5" y1="2821.6094" y2="2821.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="116" x="91" y="2812.5332">Manage AI Models</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="121" x="88.5" y="120"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="88.5" x2="209.5" y1="147.6094" y2="147.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="101" x="98.5" y="139.5332">Create AI Model</text><rect fill="#ADD8E6" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="50" x="348.5" y="2297"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="348.5" x2="398.5" y1="2324.6094" y2="2324.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="17" x="365" y="2316.5332">list</text><rect fill="#E6E6FA" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="60" x="343.5" y="2212"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="343.5" x2="403.5" y1="2239.6094" y2="2239.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="40" x="353.5" y="2231.5332">create</text><rect fill="#E6E6FA" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="342.5" y="2467"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="342.5" x2="404.5" y1="2494.6094" y2="2494.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="42" x="352.5" y="2486.5332">deploy</text><rect fill="#E6E6FA" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="67" x="340" y="2552"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="340" x2="407" y1="2579.6094" y2="2579.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="47" x="350" y="2571.5332">destroy</text><rect fill="#E6E6FA" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="64" x="341.5" y="2382"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="341.5" x2="405.5" y1="2409.6094" y2="2409.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="44" x="351.5" y="2401.5332">update</text><rect fill="#ADD8E6" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="50" x="348.5" y="1450"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="348.5" x2="398.5" y1="1477.6094" y2="1477.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="17" x="365" y="1469.5332">list</text><rect fill="#E6E6FA" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="60" x="343.5" y="1535"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="343.5" x2="403.5" y1="1562.6094" y2="1562.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="40" x="353.5" y="1554.5332">create</text><rect fill="#E6E6FA" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="342.5" y="1110"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="342.5" x2="404.5" y1="1137.6094" y2="1137.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="42" x="352.5" y="1129.5332">deploy</text><rect fill="#E6E6FA" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="67" x="340" y="1195"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="340" x2="407" y1="1222.6094" y2="1222.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="47" x="350" y="1214.5332">destroy</text><rect fill="#E6E6FA" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="67" x="340" y="1280"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="340" x2="407" y1="1307.6094" y2="1307.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="47" x="350" y="1299.5332">monitor</text><rect fill="#E6E6FA" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="64" x="341.5" y="1365"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="341.5" x2="405.5" y1="1392.6094" y2="1392.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="44" x="351.5" y="1384.5332">update</text><rect fill="#ADD8E6" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="50" x="348.5" y="2001"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="348.5" x2="398.5" y1="2028.6094" y2="2028.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="17" x="365" y="2020.5332">list</text><rect fill="#E6E6FA" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="60" x="343.5" y="2086"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="343.5" x2="403.5" y1="2113.6094" y2="2113.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="40" x="353.5" y="2105.5332">create</text><rect fill="#E6E6FA" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="342.5" y="1831"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="342.5" x2="404.5" y1="1858.6094" y2="1858.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="42" x="352.5" y="1850.5332">deploy</text><rect fill="#E6E6FA" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="67" x="340" y="1661"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="340" x2="407" y1="1688.6094" y2="1688.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="47" x="350" y="1680.5332">destroy</text><rect fill="#E6E6FA" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="67" x="340" y="1746"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="340" x2="407" y1="1773.6094" y2="1773.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="47" x="350" y="1765.5332">monitor</text><rect fill="#E6E6FA" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="64" x="341.5" y="1916"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="341.5" x2="405.5" y1="1943.6094" y2="1943.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="44" x="351.5" y="1935.5332">update</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="122" x="88" y="1333"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="88" x2="210" y1="1360.6094" y2="1360.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="102" x="98" y="1352.5332">Deploy AI Model</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="123" x="87.5" y="1248"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="87.5" x2="210.5" y1="1275.6094" y2="1275.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="103" x="97.5" y="1267.5332">Update AI Model</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="137" x="80.5" y="365"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="80.5" x2="217.5" y1="392.6094" y2="392.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="117" x="90.5" y="384.5332">Deploy Application</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="142" x="78" y="450"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="78" x2="220" y1="477.6094" y2="477.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="122" x="88" y="469.5332">Destroy Application</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="140" x="79" y="535"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="79" x2="219" y1="562.6094" y2="562.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="120" x="89" y="554.5332">Monitor Application</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="138" x="80" y="620"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="80" x2="218" y1="647.6094" y2="647.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="118" x="90" y="639.5332">Update Application</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="128" x="85" y="967"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="85" x2="213" y1="994.6094" y2="994.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="108" x="95" y="986.5332">Deploy Workload</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="133" x="82.5" y="797"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="82.5" x2="215.5" y1="824.6094" y2="824.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="113" x="92.5" y="816.5332">Destroy Workload</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="131" x="83.5" y="882"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="83.5" x2="214.5" y1="909.6094" y2="909.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="111" x="93.5" y="901.5332">Monitor Workload</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="129" x="84.5" y="1052"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="84.5" x2="213.5" y1="1079.6094" y2="1079.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="109" x="94.5" y="1071.5332">Update Workload</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="121" x="88.5" y="2357"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="88.5" x2="209.5" y1="2384.6094" y2="2384.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="101" x="98.5" y="2376.5332">Create AI Model</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="122" x="88" y="2527"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="88" x2="210" y1="2554.6094" y2="2554.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="102" x="98" y="2546.5332">Deploy AI Model</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="127" x="85.5" y="2612"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="85.5" x2="212.5" y1="2639.6094" y2="2639.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="107" x="95.5" y="2631.5332">Destroy AI Model</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="123" x="87.5" y="2442"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="87.5" x2="210.5" y1="2469.6094" y2="2469.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="103" x="97.5" y="2461.5332">Update AI Model</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="136" x="81" y="1729"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="81" x2="217" y1="1756.6094" y2="1756.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="116" x="91" y="1748.5332">Create Application</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="140" x="79" y="1559"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="79" x2="219" y1="1586.6094" y2="1586.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="120" x="89" y="1578.5332">Monitor Application</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="138" x="80" y="1644"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="80" x2="218" y1="1671.6094" y2="1671.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="118" x="90" y="1663.5332">Update Application</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="127" x="85.5" y="2180"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="85.5" x2="212.5" y1="2207.6094" y2="2207.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="107" x="95.5" y="2199.5332">Create Workload</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="128" x="85" y="2010"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="85" x2="213" y1="2037.6094" y2="2037.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="108" x="95" y="2029.5332">Deploy Workload</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="131" x="83.5" y="1925"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="83.5" x2="214.5" y1="1952.6094" y2="1952.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="111" x="93.5" y="1944.5332">Monitor Workload</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="129" x="84.5" y="2095"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="84.5" x2="213.5" y1="2122.6094" y2="2122.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="109" x="94.5" y="2114.5332">Update Workload</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="122" x="88" y="2942"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="88" x2="210" y1="2969.6094" y2="2969.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="102" x="98" y="2961.5332">Deploy AI Model</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="127" x="85.5" y="3027"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="85.5" x2="212.5" y1="3054.6094" y2="3054.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="107" x="95.5" y="3046.5332">Destroy AI Model</text><rect fill="#FEFECE" filter="url(#fj0lm41boyjrr)" height="50" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="123" x="87.5" y="2857"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="87.5" x2="210.5" y1="2884.6094" y2="2884.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="103" x="97.5" y="2876.5332">Update AI Model</text><!--link DataScientistManageAIModels to amlaimodellist--><path d="M162.0676,213.0155 C162.2039,213.11 162.3411,213.2053 162.4793,213.3014 C163.032,213.6856 163.6001,214.0825 164.1829,214.4917 C165.3484,215.3103 166.5729,216.1785 167.8512,217.0952 C178.0779,224.4284 191.7536,234.8606 206.3221,247.7338 C235.4593,273.48 268.168,308.99 284,349 C293.868,373.94 278.05,2257.094 292,2280 C303.167,2298.336 325.237,2309.05 343.448,2315.062 " fill="none" id="DataScientistManageAIModels-amlaimodellist" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="348.469,2316.635,341.0758,2310.1281,343.6975,2315.1407,338.6849,2317.7624,348.469,2316.635" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineerManageAIModels to amlaimodellist--><path d="M234.8705,1207.4511 C235.3267,1207.5271 235.7825,1207.6055 236.2377,1207.6863 C239.8797,1208.3329 243.4881,1209.1365 247.028,1210.1197 C261.1876,1214.0525 274.2528,1220.86 284,1232 C303.169,1253.91 276.814,2255.163 292,2280 C303.199,2298.317 325.267,2309.032 343.469,2315.049 " fill="none" id="DevOpsEngineerManageAIModels-amlaimodellist" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="348.488,2316.624,341.0989,2310.1124,343.7175,2315.1267,338.7032,2317.7453,348.488,2316.624" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloperManageAIModels to amlaimodellist--><path d="M236.741,2322 C237.0623,2322 237.3838,2322 237.7057,2322 C238.993,2322 240.2848,2322 241.5802,2322 C246.762,2322 252.0026,2322 257.255,2322 C267.7599,2322 278.3124,2322 288.5371,2322 C308.9866,2322 328.125,2322 342.95,2322 " fill="none" id="ApplicationDeveloperManageAIModels-amlaimodellist" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="348.125,2322,339.125,2318,343.125,2322,339.125,2326,348.125,2322" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataEngineerManageAIModels to amlaimodellist--><path d="M188.9237,2793.5988 C189.341,2793.261 189.7602,2792.9206 190.1812,2792.5776 C191.8653,2791.2055 193.5785,2789.7915 195.3159,2788.3368 C198.7907,2785.4276 202.3624,2782.356 205.9916,2779.1325 C235.0253,2753.3448 267.7405,2717.8385 284,2678 C297.146,2645.79 273.731,2394.606 292,2365 C303.256,2346.759 325.096,2335.788 343.19,2329.499 " fill="none" id="DataEngineerManageAIModels-amlaimodellist" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="348.182,2327.847,338.3809,2326.8779,343.4353,2329.4183,340.895,2334.4727,348.182,2327.847" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloperManageAIModelsCreateAIModel to amlaimodelcreate--><path d="M209.811,2383.871 C236.271,2381.389 265.517,2373.512 284,2353 C305.849,2328.753 273.715,2307.036 292,2280 C302.78,2264.062 321.447,2253.569 338.092,2246.941 " fill="none" id="ApplicationDeveloperManageAIModelsCreateAIModel-amlaimodelcreate" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="343.182,2245.007,333.3481,2244.4639,338.5079,2246.7826,336.1892,2251.9424,343.182,2245.007" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataScientistManageAIModelsCreateAIModel to amlaimodelcreate--><path d="M209.767,142.2 C236.722,144.38 266.395,152.27 284,174 C301.293,195.35 281.781,2126.5 292,2152 C301.629,2176.029 321.603,2197.189 339.245,2212.385 " fill="none" id="DataScientistManageAIModelsCreateAIModel-amlaimodelcreate" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="343.202,2215.73,338.9099,2206.8656,339.3831,2212.5026,333.7461,2212.9758,343.202,2215.73" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineerManageAIModelsDeployAIModel to amlaimodeldeploy--><path d="M176.362,1383.18 C208.901,1416.25 262.559,1477.83 284,1543 C291.874,1566.93 278.844,2428.512 292,2450 C301.921,2466.204 320.345,2476.46 337.065,2482.777 " fill="none" id="DevOpsEngineerManageAIModelsDeployAIModel-amlaimodeldeploy" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="342.189,2484.613,335.067,2477.8102,337.4824,2482.9255,332.3671,2485.3409,342.189,2484.613" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloperManageAIModelsDeployAIModel to amlaimodeldeploy--><path d="M210.212,2535.763 C250.937,2524.781 303.313,2510.657 337.382,2501.47 " fill="none" id="ApplicationDeveloperManageAIModelsDeployAIModel-amlaimodeldeploy" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="342.272,2500.151,332.541,2498.6317,337.4444,2501.4526,334.6235,2506.3559,342.272,2500.151" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataEngineerManageAIModelsDeployAIModel to amlaimodeldeploy--><path d="M210.127,2963.541 C237.166,2958.64 266.806,2947.912 284,2925 C297.008,2907.667 280.666,2553.471 292,2535 C301.988,2518.722 320.416,2508.24 337.122,2501.705 " fill="none" id="DataEngineerManageAIModelsDeployAIModel-amlaimodeldeploy" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="342.24,2499.802,332.41,2499.1921,337.554,2501.5459,335.2002,2506.6898,342.24,2499.802" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataEngineerManageAIModelsDestroyAIModel to amlaimodeldestroy--><path d="M212.816,3046.174 C238.265,3040.651 265.866,3030.087 284,3010 C338.191,2949.971 363.144,2695.205 370.266,2607.114 " fill="none" id="DataEngineerManageAIModelsDestroyAIModel-amlaimodeldestroy" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="370.67,2602.051,365.9653,2610.7035,370.2714,2607.0351,373.9399,2611.3412,370.67,2602.051" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloperManageAIModelsDestroyAIModel to amlaimodeldestroy--><path d="M212.571,2620.127 C251.857,2609.533 301.233,2596.218 334.65,2587.207 " fill="none" id="ApplicationDeveloperManageAIModelsDestroyAIModel-amlaimodeldestroy" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="339.873,2585.798,330.142,2584.2787,335.0454,2587.0996,332.2245,2592.0029,339.873,2585.798" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataEngineerManageAIModelsUpdateAIModel to amlaimodelupdate--><path d="M210.649,2884.593 C237.293,2882.269 266.451,2874.317 284,2853 C298.233,2835.712 280.295,2469.091 292,2450 C301.832,2433.964 319.858,2423.553 336.362,2417 " fill="none" id="DataEngineerManageAIModelsUpdateAIModel-amlaimodelupdate" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="341.425,2415.088,331.5922,2414.5261,336.7475,2416.8547,334.4189,2422.0101,341.425,2415.088" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineerManageAIModelsUpdateAIModel to amlaimodelupdate--><path d="M210.603,1276.42 C237.578,1281.33 267.026,1292.08 284,1315 C301.356,1338.44 276.785,2340.115 292,2365 C301.762,2380.966 319.782,2391.157 336.302,2397.494 " fill="none" id="DevOpsEngineerManageAIModelsUpdateAIModel-amlaimodelupdate" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="341.369,2399.34,334.2815,2392.5013,336.671,2397.6288,331.5435,2400.0182,341.369,2399.34" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloperManageAIModelsUpdateAIModel to amlaimodelupdate--><path d="M210.505,2450.684 C250.858,2439.802 302.547,2425.864 336.55,2416.694 " fill="none" id="ApplicationDeveloperManageAIModelsUpdateAIModel-amlaimodelupdate" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="341.435,2415.377,331.7041,2413.857,336.6073,2416.6782,333.7861,2421.5813,341.435,2415.377" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineerManageApplications to amlapplicationlist--><path d="M181.7684,713.0461 C181.9632,713.1068 182.1585,713.1679 182.3545,713.2293 C183.1382,713.4752 183.9311,713.7273 184.7326,713.9857 C191.1445,716.053 198.1054,718.5231 205.3105,721.4425 C234.131,733.12 266.86,751.985 284,781 C302.396,812.14 273.211,1401.09 292,1432 C303.21,1450.44 325.277,1461.43 343.476,1467.68 " fill="none" id="DevOpsEngineerManageApplications-amlapplicationlist" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="348.494,1469.32,341.1777,1462.7266,343.7404,1467.7697,338.6973,1470.3324,348.494,1469.32" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloperManageApplications to amlapplicationlist--><path d="M243.4857,1817.5716 C243.7097,1817.5173 243.9335,1817.4623 244.157,1817.4066 C245.0511,1817.1839 245.9417,1816.9505 246.8281,1816.7059 C261.0109,1812.7931 274.1355,1806.0375 284,1795 C304.593,1771.96 275.603,1543.19 292,1517 C303.316,1498.92 325.152,1488.22 343.229,1482.15 " fill="none" id="ApplicationDeveloperManageApplications-amlapplicationlist" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="348.217,1480.56,338.4272,1479.4832,343.4533,1482.079,340.8575,1487.1051,348.217,1480.56" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloperManageApplicationsCreateApplication to amlapplicationcreate--><path d="M217.1,1748.12 C241.68,1742.5 267.491,1731.88 284,1712 C303.157,1688.93 279.266,1672.15 292,1645 C302.831,1621.9 322.391,1601.02 339.517,1585.74 " fill="none" id="ApplicationDeveloperManageApplicationsCreateApplication-amlapplicationcreate" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="343.357,1582.37,333.9547,1585.3019,339.5996,1585.6688,339.2327,1591.3137,343.357,1582.37" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineerManageApplicationsDeployApplication to amlapplicationdeploy--><path d="M217.73,396.1 C242.092,401.76 267.584,412.36 284,432 C371.055,536.17 373.783,983.29 372.881,1104.56 " fill="none" id="DevOpsEngineerManageApplicationsDeployApplication-amlapplicationdeploy" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="372.839,1109.75,376.916,1100.7846,372.8819,1104.7502,368.9163,1100.716,372.839,1109.75" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineerManageApplicationsDestroyApplication to amlapplicationdestroy--><path d="M220.318,480.48 C244.393,486.12 269.012,496.85 284,517 C305.887,546.42 272.954,1145.67 292,1177 C301.472,1192.58 318.698,1202.85 334.792,1209.42 " fill="none" id="DevOpsEngineerManageApplicationsDestroyApplication-amlapplicationdestroy" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="339.74,1211.35,332.7949,1204.3667,335.0782,1209.5423,329.9026,1211.8256,339.74,1211.35" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineerManageApplicationsMonitorApplication to amlapplicationmonitor--><path d="M219.267,565.24 C243.673,570.81 268.794,581.56 284,602 C305.887,631.42 272.954,1230.67 292,1262 C301.472,1277.58 318.698,1287.85 334.792,1294.42 " fill="none" id="DevOpsEngineerManageApplicationsMonitorApplication-amlapplicationmonitor" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="339.74,1296.35,332.7949,1289.3667,335.0782,1294.5423,329.9026,1296.8256,339.74,1296.35" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloperManageApplicationsMonitorApplication to amlapplicationmonitor--><path d="M174.367,1558.86 C205.298,1525.36 257.78,1462.83 284,1399 C292.885,1377.37 278.389,1366.01 292,1347 C302.394,1332.48 319.352,1322.59 335.03,1316.07 " fill="none" id="ApplicationDeveloperManageApplicationsMonitorApplication-amlapplicationmonitor" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="339.845,1314.15,330.0042,1313.7526,335.1977,1315.9947,332.9556,1321.1882,339.845,1314.15" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloperManageApplicationsUpdateApplication to amlapplicationupdate--><path d="M218.294,1663.15 C242.883,1657.42 268.385,1646.51 284,1626 C297.069,1608.84 280.439,1450.21 292,1432 C301.952,1416.32 319.793,1406.18 336.155,1399.8 " fill="none" id="ApplicationDeveloperManageApplicationsUpdateApplication-amlapplicationupdate" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="341.174,1397.93,331.3446,1397.3106,336.4863,1399.6693,334.1275,1404.811,341.174,1397.93" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineerManageApplicationsUpdateApplication to amlapplicationupdate--><path d="M218.016,643.12 C242.567,646.21 268.117,654.55 284,674 C295.825,688.48 282.291,1331.02 292,1347 C301.768,1363.08 319.789,1373.49 336.307,1380.03 " fill="none" id="DevOpsEngineerManageApplicationsUpdateApplication-amlapplicationupdate" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="341.374,1381.94,334.3589,1375.0271,336.6942,1380.1794,331.5419,1382.5147,341.374,1381.94" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloperManageWorkloads to amlworkloadlist--><path d="M238.6848,1886.2157 C238.9117,1886.2616 239.1384,1886.3082 239.365,1886.3553 C239.8183,1886.4497 240.2709,1886.5464 240.723,1886.6457 C242.531,1887.0428 244.3287,1887.4797 246.1119,1887.9592 C260.3776,1891.795 273.7155,1898.3525 284,1909 C295.645,1921.06 282.562,1970.15 292,1984 C303.926,2001.5 325.51,2012.2 343.328,2018.42 " fill="none" id="ApplicationDeveloperManageWorkloads-amlworkloadlist" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="348.242,2020.06,340.9676,2013.4205,343.4983,2018.4797,338.4391,2021.0105,348.242,2020.06" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineerManageWorkloads to amlworkloadlist--><path d="M234.4895,1145.1226 C235.403,1145.4077 236.3143,1145.7016 237.223,1146.0045 C240.8576,1147.216 244.4496,1148.5718 247.9624,1150.0878 C262.0139,1156.1519 274.8008,1164.78 284,1177 C297.483,1194.91 280.284,1964.89 292,1984 C303.22,2002.3 325.286,2013.02 343.482,2019.04 " fill="none" id="DevOpsEngineerManageWorkloads-amlworkloadlist" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="348.5,2020.62,341.1121,2014.107,343.7297,2019.1218,338.715,2021.7394,348.5,2020.62" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloperManageWorkloadsCreateWorkload to amlworkloadcreate--><path d="M212.792,2188.535 C235.632,2181.713 261.38,2173.033 284,2163 C302.91,2154.612 322.868,2143.14 339.036,2133.1 " fill="none" id="ApplicationDeveloperManageWorkloadsCreateWorkload-amlworkloadcreate" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="343.491,2130.31,333.7393,2131.6898,339.2515,2132.9608,337.9805,2138.473,343.491,2130.31" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloperManageWorkloadsDeployWorkload to amlworkloaddeploy--><path d="M213.281,2030.3 C239.132,2025 266.916,2014.3 284,1993 C297.117,1976.65 280.466,1916.51 292,1899 C302.428,1883.17 320.688,1872.75 337.183,1866.13 " fill="none" id="ApplicationDeveloperManageWorkloadsDeployWorkload-amlworkloaddeploy" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="342.235,1864.2,332.4,1863.6773,337.5646,1865.9853,335.2565,1871.1499,342.235,1864.2" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineerManageWorkloadsDeployWorkload to amlworkloaddeploy--><path d="M213.003,995.9 C239.296,1001.01 267.505,1011.78 284,1034 C296.917,1051.4 280.673,1795.53 292,1814 C301.932,1830.2 320.357,1840.45 337.075,1846.77 " fill="none" id="DevOpsEngineerManageWorkloadsDeployWorkload-amlworkloaddeploy" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="342.197,1848.61,335.0729,1841.8094,337.4898,1846.924,332.3753,1849.3409,342.197,1848.61" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineerManageWorkloadsDestroyWorkload to amlworkloaddestroy--><path d="M215.783,826.47 C241.262,831.79 268.08,842.57 284,864 C296.21,880.43 284.32,1582.02 292,1601 C301.144,1623.6 319.388,1643.67 336.198,1658.64 " fill="none" id="DevOpsEngineerManageWorkloadsDestroyWorkload-amlworkloaddestroy" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="339.983,1661.94,335.8472,1653.0016,336.2214,1658.6461,330.5769,1659.0202,339.983,1661.94" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloperManageWorkloadsMonitorWorkload to amlworkloadmonitor--><path d="M214.614,1951.69 C239.9,1948.81 266.89,1940.66 284,1921 C299.653,1903.01 278.985,1833.98 292,1814 C301.876,1798.84 318.958,1788.65 334.852,1782.01 " fill="none" id="ApplicationDeveloperManageWorkloadsMonitorWorkload-amlworkloadmonitor" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="339.737,1780.06,329.8955,1779.6782,335.0926,1781.912,332.8588,1787.1091,339.737,1780.06" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineerManageWorkloadsMonitorWorkload to amlworkloadmonitor--><path d="M214.743,911.25 C240.533,916.49 267.868,927.27 284,949 C296.917,966.4 280.673,1710.53 292,1729 C301.484,1744.47 318.712,1754.52 334.803,1760.89 " fill="none" id="DevOpsEngineerManageWorkloadsMonitorWorkload-amlworkloadmonitor" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="339.751,1762.75,332.7341,1755.8389,335.0708,1760.9906,329.9191,1763.3273,339.751,1762.75" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloperManageWorkloadsUpdateWorkload to amlworkloadupdate--><path d="M213.627,2115.23 C239.38,2109.91 266.992,2099.21 284,2078 C297.117,2061.65 280.466,2001.51 292,1984 C302.27,1968.41 320.136,1958.06 336.432,1951.44 " fill="none" id="ApplicationDeveloperManageWorkloadsUpdateWorkload-amlworkloadupdate" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="341.429,1949.5,331.5918,1949.0218,336.7667,1951.3065,334.4821,1956.4814,341.429,1949.5" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineerManageWorkloadsUpdateWorkload to amlworkloadupdate--><path d="M213.509,1074.59 C239.403,1077.2 267.157,1085.34 284,1106 C297.918,1123.08 280.486,1880.22 292,1899 C301.782,1914.95 319.803,1925.14 336.319,1931.48 " fill="none" id="DevOpsEngineerManageWorkloadsUpdateWorkload-amlworkloadupdate" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="341.385,1933.33,334.2968,1926.492,336.6868,1931.6192,331.5596,1934.0092,341.385,1933.33" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+left to right direction
+
+
+
+state "Data Scientist" as DataScientist {
+    state "Manage AI Models" as DataScientistManageAIModels {
+    }
+}
+state "aml" as aml #lightblue {
+state "aimodel" as amlaimodel #lightblue {
+state "list" as amlaimodellist #lightblue {
+}
+}
+}
+
+DataScientistManageAIModels - -> amlaimodellist
+
+state "DevOps Engineer" as DevOpsEngineer {
+    state "Manage AI Models" as DevOpsEngineerManageAIModels {
+    }
+}
+state "aml" as aml #lightblue {
+state "aimodel" as amlaimodel #lightblue {
+state "list" as amlaimodellist #lightblue {
+}
+}
+}
+
+DevOpsEngineerManageAIModels - -> amlaimodellist
+
+state "ApplicationDeveloper" as ApplicationDeveloper {
+    state "Manage AI Models" as ApplicationDeveloperManageAIModels {
+    }
+}
+state "aml" as aml #lightblue {
+state "aimodel" as amlaimodel #lightblue {
+state "list" as amlaimodellist #lightblue {
+}
+}
+}
+
+ApplicationDeveloperManageAIModels - -> amlaimodellist
+
+state "DataEngineer" as DataEngineer {
+    state "Manage AI Models" as DataEngineerManageAIModels {
+    }
+}
+state "aml" as aml #lightblue {
+state "aimodel" as amlaimodel #lightblue {
+state "list" as amlaimodellist #lightblue {
+}
+}
+}
+
+DataEngineerManageAIModels - -> amlaimodellist
+
+
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage AI Models" as ApplicationDeveloperManageAIModels {
+            state "Create AI Model" as ApplicationDeveloperManageAIModelsCreateAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "create" as amlaimodelcreate #lavender {
+}
+}
+
+    ApplicationDeveloperManageAIModelsCreateAIModel - -> amlaimodelcreate
+    
+    state "Data Scientist" as DataScientist {
+        state "Manage AI Models" as DataScientistManageAIModels {
+            state "Create AI Model" as DataScientistManageAIModelsCreateAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "create" as amlaimodelcreate #lavender {
+}
+}
+
+    DataScientistManageAIModelsCreateAIModel - -> amlaimodelcreate
+    
+ 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Manage AI Models" as DevOpsEngineerManageAIModels {
+            state "Deploy AI Model" as DevOpsEngineerManageAIModelsDeployAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "deploy" as amlaimodeldeploy #lavender {
+}
+}
+
+    DevOpsEngineerManageAIModelsDeployAIModel - -> amlaimodeldeploy
+    
+    state "ApplicationDeveloper" as ApplicationDeveloper {
+        state "Manage AI Models" as ApplicationDeveloperManageAIModels {
+            state "Deploy AI Model" as ApplicationDeveloperManageAIModelsDeployAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "deploy" as amlaimodeldeploy #lavender {
+}
+}
+
+    ApplicationDeveloperManageAIModelsDeployAIModel - -> amlaimodeldeploy
+    
+    state "DataEngineer" as DataEngineer {
+        state "Manage AI Models" as DataEngineerManageAIModels {
+            state "Deploy AI Model" as DataEngineerManageAIModelsDeployAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "deploy" as amlaimodeldeploy #lavender {
+}
+}
+
+    DataEngineerManageAIModelsDeployAIModel - -> amlaimodeldeploy
+    
+ 
+    state "DataEngineer" as DataEngineer {
+        state "Manage AI Models" as DataEngineerManageAIModels {
+            state "Destroy AI Model" as DataEngineerManageAIModelsDestroyAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "destroy" as amlaimodeldestroy #lavender {
+}
+}
+
+    DataEngineerManageAIModelsDestroyAIModel - -> amlaimodeldestroy
+    
+    state "ApplicationDeveloper" as ApplicationDeveloper {
+        state "Manage AI Models" as ApplicationDeveloperManageAIModels {
+            state "Destroy AI Model" as ApplicationDeveloperManageAIModelsDestroyAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "destroy" as amlaimodeldestroy #lavender {
+}
+}
+
+    ApplicationDeveloperManageAIModelsDestroyAIModel - -> amlaimodeldestroy
+    
+ 
+    state "DataEngineer" as DataEngineer {
+        state "Manage AI Models" as DataEngineerManageAIModels {
+            state "Update AI Model" as DataEngineerManageAIModelsUpdateAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "update" as amlaimodelupdate #lavender {
+}
+}
+
+    DataEngineerManageAIModelsUpdateAIModel - -> amlaimodelupdate
+    
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Manage AI Models" as DevOpsEngineerManageAIModels {
+            state "Update AI Model" as DevOpsEngineerManageAIModelsUpdateAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "update" as amlaimodelupdate #lavender {
+}
+}
+
+    DevOpsEngineerManageAIModelsUpdateAIModel - -> amlaimodelupdate
+    
+    state "ApplicationDeveloper" as ApplicationDeveloper {
+        state "Manage AI Models" as ApplicationDeveloperManageAIModels {
+            state "Update AI Model" as ApplicationDeveloperManageAIModelsUpdateAIModel {
+            }
+        }
+    }
+    state "amlaimodel" as amlaimodel #lavender {
+state "update" as amlaimodelupdate #lavender {
+}
+}
+
+    ApplicationDeveloperManageAIModelsUpdateAIModel - -> amlaimodelupdate
+    
+ 
+ 
+state "DevOps Engineer" as DevOpsEngineer {
+    state "Manage Applications" as DevOpsEngineerManageApplications {
+    }
+}
+state "aml" as aml #lightblue {
+state "application" as amlapplication #lightblue {
+state "list" as amlapplicationlist #lightblue {
+}
+}
+}
+
+DevOpsEngineerManageApplications - -> amlapplicationlist
+
+state "Application Developer" as ApplicationDeveloper {
+    state "Manage Applications" as ApplicationDeveloperManageApplications {
+    }
+}
+state "aml" as aml #lightblue {
+state "application" as amlapplication #lightblue {
+state "list" as amlapplicationlist #lightblue {
+}
+}
+}
+
+ApplicationDeveloperManageApplications - -> amlapplicationlist
+
+
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Applications" as ApplicationDeveloperManageApplications {
+            state "Create Application" as ApplicationDeveloperManageApplicationsCreateApplication {
+            }
+        }
+    }
+    state "amlapplication" as amlapplication #lavender {
+state "create" as amlapplicationcreate #lavender {
+}
+}
+
+    ApplicationDeveloperManageApplicationsCreateApplication - -> amlapplicationcreate
+    
+ 
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Applications" as DevOpsEngineerManageApplications {
+            state "Deploy Application" as DevOpsEngineerManageApplicationsDeployApplication {
+            }
+        }
+    }
+    state "amlapplication" as amlapplication #lavender {
+state "deploy" as amlapplicationdeploy #lavender {
+}
+}
+
+    DevOpsEngineerManageApplicationsDeployApplication - -> amlapplicationdeploy
+    
+ 
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Applications" as DevOpsEngineerManageApplications {
+            state "Destroy Application" as DevOpsEngineerManageApplicationsDestroyApplication {
+            }
+        }
+    }
+    state "amlapplication" as amlapplication #lavender {
+state "destroy" as amlapplicationdestroy #lavender {
+}
+}
+
+    DevOpsEngineerManageApplicationsDestroyApplication - -> amlapplicationdestroy
+    
+ 
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Applications" as DevOpsEngineerManageApplications {
+            state "Monitor Application" as DevOpsEngineerManageApplicationsMonitorApplication {
+            }
+        }
+    }
+    state "amlapplication" as amlapplication #lavender {
+state "monitor" as amlapplicationmonitor #lavender {
+}
+}
+
+    DevOpsEngineerManageApplicationsMonitorApplication - -> amlapplicationmonitor
+    
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Applications" as ApplicationDeveloperManageApplications {
+            state "Monitor Application" as ApplicationDeveloperManageApplicationsMonitorApplication {
+            }
+        }
+    }
+    state "amlapplication" as amlapplication #lavender {
+state "monitor" as amlapplicationmonitor #lavender {
+}
+}
+
+    ApplicationDeveloperManageApplicationsMonitorApplication - -> amlapplicationmonitor
+    
+ 
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Applications" as ApplicationDeveloperManageApplications {
+            state "Update Application" as ApplicationDeveloperManageApplicationsUpdateApplication {
+            }
+        }
+    }
+    state "amlapplication" as amlapplication #lavender {
+state "update" as amlapplicationupdate #lavender {
+}
+}
+
+    ApplicationDeveloperManageApplicationsUpdateApplication - -> amlapplicationupdate
+    
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Applications" as DevOpsEngineerManageApplications {
+            state "Update Application" as DevOpsEngineerManageApplicationsUpdateApplication {
+            }
+        }
+    }
+    state "amlapplication" as amlapplication #lavender {
+state "update" as amlapplicationupdate #lavender {
+}
+}
+
+    DevOpsEngineerManageApplicationsUpdateApplication - -> amlapplicationupdate
+    
+ 
+ 
+state "Application Developer" as ApplicationDeveloper {
+    state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
+    }
+}
+state "aml" as aml #lightblue {
+state "workload" as amlworkload #lightblue {
+state "list" as amlworkloadlist #lightblue {
+}
+}
+}
+
+ApplicationDeveloperManageWorkloads - -> amlworkloadlist
+
+state "DevOps Engineer" as DevOpsEngineer {
+    state "Manage Workloads" as DevOpsEngineerManageWorkloads {
+    }
+}
+state "aml" as aml #lightblue {
+state "workload" as amlworkload #lightblue {
+state "list" as amlworkloadlist #lightblue {
+}
+}
+}
+
+DevOpsEngineerManageWorkloads - -> amlworkloadlist
+
+
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
+            state "Create Workload" as ApplicationDeveloperManageWorkloadsCreateWorkload {
+            }
+        }
+    }
+    state "amlworkload" as amlworkload #lavender {
+state "create" as amlworkloadcreate #lavender {
+}
+}
+
+    ApplicationDeveloperManageWorkloadsCreateWorkload - -> amlworkloadcreate
+    
+ 
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
+            state "Deploy Workload" as ApplicationDeveloperManageWorkloadsDeployWorkload {
+            }
+        }
+    }
+    state "amlworkload" as amlworkload #lavender {
+state "deploy" as amlworkloaddeploy #lavender {
+}
+}
+
+    ApplicationDeveloperManageWorkloadsDeployWorkload - -> amlworkloaddeploy
+    
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Workloads" as DevOpsEngineerManageWorkloads {
+            state "Deploy Workload" as DevOpsEngineerManageWorkloadsDeployWorkload {
+            }
+        }
+    }
+    state "amlworkload" as amlworkload #lavender {
+state "deploy" as amlworkloaddeploy #lavender {
+}
+}
+
+    DevOpsEngineerManageWorkloadsDeployWorkload - -> amlworkloaddeploy
+    
+ 
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Workloads" as DevOpsEngineerManageWorkloads {
+            state "Destroy Workload" as DevOpsEngineerManageWorkloadsDestroyWorkload {
+            }
+        }
+    }
+    state "amlworkload" as amlworkload #lavender {
+state "destroy" as amlworkloaddestroy #lavender {
+}
+}
+
+    DevOpsEngineerManageWorkloadsDestroyWorkload - -> amlworkloaddestroy
+    
+ 
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
+            state "Monitor Workload" as ApplicationDeveloperManageWorkloadsMonitorWorkload {
+            }
+        }
+    }
+    state "amlworkload" as amlworkload #lavender {
+state "monitor" as amlworkloadmonitor #lavender {
+}
+}
+
+    ApplicationDeveloperManageWorkloadsMonitorWorkload - -> amlworkloadmonitor
+    
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Workloads" as DevOpsEngineerManageWorkloads {
+            state "Monitor Workload" as DevOpsEngineerManageWorkloadsMonitorWorkload {
+            }
+        }
+    }
+    state "amlworkload" as amlworkload #lavender {
+state "monitor" as amlworkloadmonitor #lavender {
+}
+}
+
+    DevOpsEngineerManageWorkloadsMonitorWorkload - -> amlworkloadmonitor
+    
+ 
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
+            state "Update Workload" as ApplicationDeveloperManageWorkloadsUpdateWorkload {
+            }
+        }
+    }
+    state "amlworkload" as amlworkload #lavender {
+state "update" as amlworkloadupdate #lavender {
+}
+}
+
+    ApplicationDeveloperManageWorkloadsUpdateWorkload - -> amlworkloadupdate
+    
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Workloads" as DevOpsEngineerManageWorkloads {
+            state "Update Workload" as DevOpsEngineerManageWorkloadsUpdateWorkload {
+            }
+        }
+    }
+    state "amlworkload" as amlworkload #lavender {
+state "update" as amlworkloadupdate #lavender {
+}
+}
+
+    DevOpsEngineerManageWorkloadsUpdateWorkload - -> amlworkloadupdate
+    
+ 
+ 
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

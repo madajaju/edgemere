@@ -1,0 +1,25 @@
+@startuml
+
+class "SourceMetaData" as Model {
+ string connection
+ string name
+ string value
+
+ 
+}
+
+rectangle "Data" as Data #lightblue {
+}
+
+Model o--> "1" Data : data
+
+
+
+
+    rectangle "Data" as Data #lightgreen {
+    }
+    
+        Data   *--> "n" Model : "connection"
+    
+
+@enduml

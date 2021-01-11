@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+
+
+state "diml" as diml #ffcc88 {
+state "cds" as dimlcds #ffcc88 {
+state "storage" as dimlcdsstorage #lightblue {
+}
+}
+}
+
+
+state dimlcdsstorage #lightblue {
+    state "Custom Function" as storagefunction {
+    }
+}
+
+
+
+
+
+@enduml

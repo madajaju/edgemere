@@ -1,0 +1,72 @@
+@startuml
+left to right direction
+
+
+state "sdi" as sdi #lightyellow {
+state "io" as sdiio #lightyellow {
+}
+}
+
+
+state sdiio #lightyellow {
+    state "Custom Function" as iofunction {
+    }
+}
+
+        state "sdi" as sdi #lightyellow {
+state "io" as sdiio #lightyellow {
+state "evaluaterequest" as sdiioevaluaterequest #lightyellow {
+}
+}
+}
+
+
+        state "sdi" as sdi #lightyellow {
+state "io" as sdiio #lightyellow {
+state "provision" as sdiioprovision #lightyellow {
+}
+}
+}
+
+
+
+
+    state "sdi" as sdi #lightyellow {
+state "Request" as sdirequest #lightyellow {
+state "selected" as sdirequestselected #lightyellow {
+}
+}
+}
+
+    
+    state "sdi" as sdi #lightyellow {
+state "io" as sdiio #lightyellow {
+state "evaluateRequest" as sdiioevaluaterequest #lightyellow {
+}
+}
+}
+
+    sdirequestselected ---> sdiioevaluaterequest
+  
+
+    state "sdi" as sdi #lightyellow {
+state "Reservation" as sdireservation #lightyellow {
+state "confirmed" as sdireservationconfirmed #lightyellow {
+}
+}
+}
+
+    
+    state "sdi" as sdi #lightyellow {
+state "io" as sdiio #lightyellow {
+state "provision" as sdiioprovision #lightyellow {
+}
+}
+}
+
+    sdireservationconfirmed ---> sdiioprovision
+  
+
+
+
+@enduml

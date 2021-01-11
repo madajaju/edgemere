@@ -1,0 +1,55 @@
+@startuml
+
+class "MetricComposite" as Model {
+ string name
+ string value
+
+ consume()
+ copy()
+ create()
+ findDeep()
+ findMatchDeep()
+ lessThanEq()
+ minus()
+ plus()
+ set()
+ factory()
+ greaterThanEq()
+ 
+}
+
+rectangle "Metric" as Metric #lightblue {
+}
+
+Model *--> "n" Metric : values
+
+
+
+
+    rectangle "PhysicalProfile" as PhysicalProfile #lightgreen {
+    }
+    
+        PhysicalProfile   *--> "1" Model : "capabilities"
+    
+    rectangle "PhysicalProfile" as PhysicalProfile #lightgreen {
+    }
+    
+        PhysicalProfile   *--> "1" Model : "available"
+    
+    rectangle "PhysicalProfile" as PhysicalProfile #lightgreen {
+    }
+    
+        PhysicalProfile   *--> "1" Model : "reserved"
+    
+    rectangle "PhysicalProfile" as PhysicalProfile #lightgreen {
+    }
+    
+        PhysicalProfile   *--> "1" Model : "metrics"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   *--> "1" Model : "requirements"
+    
+
+@enduml

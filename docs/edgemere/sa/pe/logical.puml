@@ -1,0 +1,22 @@
+@startuml
+
+
+
+package "Policy Engine" #pink {
+
+    interface "Policy Engine" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Policy Engine" #pink {
+    
+}
+
+
+
+@enduml

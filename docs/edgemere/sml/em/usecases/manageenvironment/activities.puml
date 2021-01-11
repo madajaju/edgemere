@@ -1,0 +1,40 @@
+@startuml
+
+
+usecase "Manage Environment" as ManageEnvironment
+
+Actor "IT Operations" as ITOperations
+
+ITOperations --> ManageEnvironment
+
+Actor "Stack Developer" as StackDeveloper
+
+StackDeveloper --> ManageEnvironment
+
+
+
+usecase "CreateEnvironment" as CreateEnvironment #lightgrey
+
+ManageEnvironment --> CreateEnvironment
+
+usecase "DeleteEnvironment" as DeleteEnvironment #lightgrey
+
+ManageEnvironment --> DeleteEnvironment
+
+usecase "DisableEnvironment" as DisableEnvironment #lightgrey
+
+ManageEnvironment --> DisableEnvironment
+
+usecase "EnableEnvironment" as EnableEnvironment #lightgrey
+
+ManageEnvironment --> EnableEnvironment
+
+usecase "ManagePoliciesinEnvironment" as ManagePoliciesinEnvironment #lightgrey
+
+ManageEnvironment --> ManagePoliciesinEnvironment
+
+usecase "UpdateEnvironment" as UpdateEnvironment #lightgrey
+
+ManageEnvironment --> UpdateEnvironment
+
+@enduml

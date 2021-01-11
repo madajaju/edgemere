@@ -1,0 +1,207 @@
+@startuml
+left to right direction
+
+
+
+state "Data Engineer" as DataEngineer {
+    state "Manage Data Adaptors" as DataEngineerManageDataAdaptors {
+    }
+}
+state "diml" as diml #ffcc88 {
+state "ddf" as dimlddf #ffcc88 {
+state "datadaptor" as dimlddfdatadaptor #ffcc88 {
+state "list" as dimlddfdatadaptorlist #ffcc88 {
+}
+}
+}
+}
+
+DataEngineerManageDataAdaptors --> dimlddfdatadaptorlist
+
+state "Data Scientist" as DataScientist {
+    state "Manage Data Adaptors" as DataScientistManageDataAdaptors {
+    }
+}
+state "diml" as diml #ffcc88 {
+state "ddf" as dimlddf #ffcc88 {
+state "datadaptor" as dimlddfdatadaptor #ffcc88 {
+state "list" as dimlddfdatadaptorlist #ffcc88 {
+}
+}
+}
+}
+
+DataScientistManageDataAdaptors --> dimlddfdatadaptorlist
+
+
+    state "Actor" as Actor {
+        state "Manage Data Adaptors" as ActorManageDataAdaptors {
+            state "Attach Data Blue Print" as ActorManageDataAdaptorsAttachDataBluePrint {
+            }
+        }
+    }
+    state "diml" as diml #ffcc88 {
+state "ddfdata" as dimlddfdata #ffcc88 {
+state "source" as dimlddfdatasource #ffcc88 {
+state "name" as dimlddfdatasourcename #ffcc88 {
+}
+}
+}
+}
+
+    ActorManageDataAdaptorsAttachDataBluePrint --> dimlddfdatasourcename
+    
+ 
+    state "Actor" as Actor {
+        state "Manage Data Adaptors" as ActorManageDataAdaptors {
+            state "Create Data Adaptor" as ActorManageDataAdaptorsCreateDataAdaptor {
+            }
+        }
+    }
+    state "diml" as diml #ffcc88 {
+state "ddfdata" as dimlddfdata #ffcc88 {
+state "source" as dimlddfdatasource #ffcc88 {
+state "name" as dimlddfdatasourcename #ffcc88 {
+}
+}
+}
+}
+
+    ActorManageDataAdaptorsCreateDataAdaptor --> dimlddfdatasourcename
+    
+ 
+    state "Actor" as Actor {
+        state "Manage Data Adaptors" as ActorManageDataAdaptors {
+            state "Update Data Adaptor" as ActorManageDataAdaptorsUpdateDataAdaptor {
+            }
+        }
+    }
+    state "diml" as diml #ffcc88 {
+state "ddfdata" as dimlddfdata #ffcc88 {
+state "source" as dimlddfdatasource #ffcc88 {
+state "name" as dimlddfdatasourcename #ffcc88 {
+}
+}
+}
+}
+
+    ActorManageDataAdaptorsUpdateDataAdaptor --> dimlddfdatasourcename
+    
+ 
+ 
+state "Data Engineer" as DataEngineer {
+    state "Manage Data Blue Prints" as DataEngineerManageDataBluePrints {
+    }
+}
+state "diml" as diml #ffcc88 {
+state "ddf" as dimlddf #ffcc88 {
+state "datablueprint" as dimlddfdatablueprint #ffcc88 {
+state "list" as dimlddfdatablueprintlist #ffcc88 {
+}
+}
+}
+}
+
+DataEngineerManageDataBluePrints --> dimlddfdatablueprintlist
+
+state "Data Scientist" as DataScientist {
+    state "Manage Data Blue Prints" as DataScientistManageDataBluePrints {
+    }
+}
+state "diml" as diml #ffcc88 {
+state "ddf" as dimlddf #ffcc88 {
+state "datablueprint" as dimlddfdatablueprint #ffcc88 {
+state "list" as dimlddfdatablueprintlist #ffcc88 {
+}
+}
+}
+}
+
+DataScientistManageDataBluePrints --> dimlddfdatablueprintlist
+
+
+ 
+state "Data Engineer" as DataEngineer {
+    state "Manage Data Pipeline" as DataEngineerManageDataPipeline {
+    }
+}
+state "diml" as diml #ffcc88 {
+state "ddf" as dimlddf #ffcc88 {
+state "datapipeline" as dimlddfdatapipeline #ffcc88 {
+state "list" as dimlddfdatapipelinelist #ffcc88 {
+}
+}
+}
+}
+
+DataEngineerManageDataPipeline --> dimlddfdatapipelinelist
+
+
+ 
+state "Data Engineer" as DataEngineer {
+    state "Manage Data Procedures" as DataEngineerManageDataProcedures {
+    }
+}
+state "diml" as diml #ffcc88 {
+state "ddf" as dimlddf #ffcc88 {
+state "dataprocedure" as dimlddfdataprocedure #ffcc88 {
+state "list" as dimlddfdataprocedurelist #ffcc88 {
+}
+}
+}
+}
+
+DataEngineerManageDataProcedures --> dimlddfdataprocedurelist
+
+state "Chief Data Officer" as ChiefDataOfficer {
+    state "Manage Data Procedures" as ChiefDataOfficerManageDataProcedures {
+    }
+}
+state "diml" as diml #ffcc88 {
+state "ddf" as dimlddf #ffcc88 {
+state "dataprocedure" as dimlddfdataprocedure #ffcc88 {
+state "list" as dimlddfdataprocedurelist #ffcc88 {
+}
+}
+}
+}
+
+ChiefDataOfficerManageDataProcedures --> dimlddfdataprocedurelist
+
+
+ 
+state "Data Scientist" as DataScientist {
+    state "Manage Meta Data" as DataScientistManageMetaData {
+    }
+}
+state "diml" as diml #ffcc88 {
+state "ddf" as dimlddf #ffcc88 {
+state "metadata" as dimlddfmetadata #ffcc88 {
+state "list" as dimlddfmetadatalist #ffcc88 {
+}
+}
+}
+}
+
+DataScientistManageMetaData --> dimlddfmetadatalist
+
+
+    state "DataScientist" as DataScientist {
+        state "Manage Meta Data" as DataScientistManageMetaData {
+            state "Manage Data Catalog" as DataScientistManageMetaDataManageDataCatalog {
+            }
+        }
+    }
+    state "diml" as diml #ffcc88 {
+state "ddfdatacatalog" as dimlddfdatacatalog #ffcc88 {
+state "list" as dimlddfdatacataloglist #ffcc88 {
+}
+}
+}
+
+    DataScientistManageMetaDataManageDataCatalog --> dimlddfdatacataloglist
+    
+ 
+ 
+
+@enduml

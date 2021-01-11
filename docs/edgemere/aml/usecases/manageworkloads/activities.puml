@@ -1,0 +1,36 @@
+@startuml
+
+
+usecase "Manage Workloads" as ManageWorkloads
+
+Actor "Application Developer" as ApplicationDeveloper
+
+ApplicationDeveloper --> ManageWorkloads
+
+Actor "DevOps Engineer" as DevOpsEngineer
+
+DevOpsEngineer --> ManageWorkloads
+
+
+
+usecase "CreateWorkload" as CreateWorkload #lightgrey
+
+ManageWorkloads --> CreateWorkload
+
+usecase "DeployWorkload" as DeployWorkload #lightgrey
+
+ManageWorkloads --> DeployWorkload
+
+usecase "DestroyWorkload" as DestroyWorkload #lightgrey
+
+ManageWorkloads --> DestroyWorkload
+
+usecase "MonitorWorkload" as MonitorWorkload #lightgrey
+
+ManageWorkloads --> MonitorWorkload
+
+usecase "UpdateWorkload" as UpdateWorkload #lightgrey
+
+ManageWorkloads --> UpdateWorkload
+
+@enduml

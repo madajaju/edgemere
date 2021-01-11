@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="312px" preserveAspectRatio="none" style="width:145px;height:312px;" version="1.1" viewBox="0 0 145 312" width="145px" zoomAndPan="magnify"><defs><filter height="300%" id="fcwo32f2qxcvm" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--entity DataProcedure--><rect fill="#90EE90" filter="url(#fcwo32f2qxcvm)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="116" x="6" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="96" x="16" y="32.5332">DataProcedure</text><!--entity DataFlow--><rect fill="#ADD8E6" filter="url(#fcwo32f2qxcvm)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="79" x="24.5" y="264"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="59" x="34.5" y="288.5332">DataFlow</text><!--class Model--><rect fill="#FEFECE" filter="url(#fcwo32f2qxcvm)" height="61.8359" id="Model" style="stroke: #A80036; stroke-width: 1.5;" width="103" x="12.5" y="124"/><ellipse cx="27.5" cy="140" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M30.2656,135.875 Q30.4219,135.6563 30.6094,135.5469 Q30.7969,135.4375 31.0156,135.4375 Q31.3906,135.4375 31.625,135.7031 Q31.8594,135.9531 31.8594,136.5625 L31.8594,138.0156 Q31.8594,138.625 31.625,138.8906 Q31.3906,139.1563 31.0156,139.1563 Q30.6719,139.1563 30.4688,138.9531 Q30.2656,138.7656 30.1563,138.25 Q30.1094,137.8906 29.9219,137.7031 Q29.5938,137.3281 28.9844,137.1094 Q28.375,136.8906 27.75,136.8906 Q26.9844,136.8906 26.3438,137.2188 Q25.7188,137.5469 25.2188,138.2969 Q24.7344,139.0469 24.7344,140.0781 L24.7344,141.1719 Q24.7344,142.4063 25.625,143.2344 Q26.5156,144.0469 28.1094,144.0469 Q29.0469,144.0469 29.7031,143.7969 Q30.0938,143.6406 30.5156,143.2031 Q30.7813,142.9375 30.9219,142.8594 Q31.0781,142.7813 31.2813,142.7813 Q31.6094,142.7813 31.8594,143.0469 Q32.125,143.2969 32.125,143.6406 Q32.125,143.9844 31.7813,144.3906 Q31.2813,144.9688 30.4844,145.2969 Q29.4063,145.75 28.1094,145.75 Q26.5938,145.75 25.3906,145.125 Q24.4063,144.625 23.7188,143.5625 Q23.0313,142.4844 23.0313,141.2031 L23.0313,140.0469 Q23.0313,138.7188 23.6406,137.5781 Q24.2656,136.4219 25.3594,135.8125 Q26.4531,135.1875 27.6875,135.1875 Q28.4219,135.1875 29.0625,135.3594 Q29.7188,135.5156 30.2656,135.875 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="71" x="41.5" y="144.9102">DataPipeline</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="13.5" x2="114.5" y1="156" y2="156"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="56" x="18.5" y="171.4189">string name</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="13.5" x2="114.5" y1="177.8359" y2="177.8359"/><!--link Model to DataProcedure--><path d="M67.6627,110.47 C68.2149,99.241 68.4647,87.173 68,76 C67.7757,70.608 67.4104,64.885 66.9893,59.34 " fill="none" id="Model-DataProcedure" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="65.8764,46.212,62.6513,55.5178,66.2989,51.1941,70.6226,54.8418,65.8764,46.212" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="66.2989" x2="66.9747" y1="51.1941" y2="59.1655"/><polygon fill="#A80036" points="66.8669,123.632,71.2216,117.8842,67.5909,111.6539,63.2362,117.4016,66.8669,123.632" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="64" x="69" y="90.4951">procedures</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="58.4401" y="67.1201">n</text><!--link DataProcedure to Model--><path d="M26.7936,55.173 C16.2666,66.307 8.8903,79.887 14,94 C16.4522,100.773 20.0399,107.319 24.1862,113.44 " fill="none" id="DataProcedure-Model" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="32.1281,123.958,29.8965,114.3653,29.1149,119.9679,23.5123,119.1864,32.1281,123.958" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="29.1149" x2="24.294" y1="119.9679" y2="113.583"/><polygon fill="#FFFFFF" points="36.621,46.066,29.5012,47.2101,27.819,54.2223,34.9388,53.0781,36.621,46.066" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="44" x="15" y="90.4951">pipeline</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="17.3905" y="112.9691">1</text><!--link Model to DataFlow--><path d="M64,199.325 C64,216.1922 64,235.1503 64,250.6534 " fill="none" id="Model-DataFlow" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="64,263.7606,68,254.7606,64,258.7606,60,254.7606,64,263.7606" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="64" x2="64.0001" y1="258.7606" y2="250.7606"/><polygon fill="#FFFFFF" points="64,186.18,60,192.18,64,198.18,68,192.18,64,186.18" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="29" x="65" y="230.4951">flows</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="55.9281" y="253.0273">n</text><!--
+@startuml
+
+class "DataPipeline" as Model {
+ string name
+
+ 
+}
+
+rectangle "DataProcedure" as DataProcedure #lightblue {
+}
+
+Model *- -> "n" DataProcedure : procedures
+
+
+rectangle "DataFlow" as DataFlow #lightblue {
+}
+
+Model o- -> "n" DataFlow : flows
+
+
+
+
+    rectangle "DataProcedure" as DataProcedure #lightgreen {
+    }
+    
+        DataProcedure   o- -> "1" Model : "pipeline"
+    
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

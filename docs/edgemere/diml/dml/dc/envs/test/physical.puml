@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Data Controller" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " edgemere diml dml dc" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as diml_dml_dc_container
+      REST --> diml_dml_dc_container
+
+  
+    file "node web/server.js" as controller_container
+    REST --> controller_container
+    socket ---> controller_container
+  
+  }
+  folder images #ffffff {
+    collections "diml_dml_dc" as diml_dml_dcimage
+    artifact "ailtire:swarm" as ailtireswarm
+    diml_dml_dcimage <|-- ailtireswarm
+    diml_dml_dc_container --> diml_dml_dcimage
+
+  
+      artifact diml_dml_dc_controller
+      controller_container --> diml_dml_dc_controller
+    
+  }
+}
+CLI " edgemere diml dml dc" -- binName
+Web "/edgemere/diml/dml/dc" - REST
+WebSocket ".edgemere.diml.dml.dc" -- socket
+
+@enduml

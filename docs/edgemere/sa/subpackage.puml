@@ -1,0 +1,30 @@
+@startuml
+
+
+package "Security Aspect" #pink {
+
+}
+
+
+package "Security Aspect" #pink {
+
+    interface "Security Aspect" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Security Aspect" #pink {
+
+
+rectangle "Policy Engine" #white {
+}
+
+}
+
+
+
+@enduml

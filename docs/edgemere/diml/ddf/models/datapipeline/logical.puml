@@ -1,0 +1,29 @@
+@startuml
+
+class "DataPipeline" as Model {
+ string name
+
+ 
+}
+
+rectangle "DataProcedure" as DataProcedure #lightblue {
+}
+
+Model *--> "n" DataProcedure : procedures
+
+
+rectangle "DataFlow" as DataFlow #lightblue {
+}
+
+Model o--> "n" DataFlow : flows
+
+
+
+
+    rectangle "DataProcedure" as DataProcedure #lightgreen {
+    }
+    
+        DataProcedure   o--> "1" Model : "pipeline"
+    
+
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+
+
+state "aml" as aml #lightblue {
+state "ds" as amlds #lightblue {
+}
+}
+
+
+state amlds #lightblue {
+    state "Custom Function" as dsfunction {
+    }
+}
+
+
+
+
+
+@enduml

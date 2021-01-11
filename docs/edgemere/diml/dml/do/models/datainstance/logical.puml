@@ -1,0 +1,54 @@
+@startuml
+
+class "DataInstance" as Model {
+ string name
+
+ 
+}
+
+rectangle "DataReference" as DataReference #lightblue {
+}
+
+Model o--> "1" DataReference : reference
+
+
+rectangle "Data" as Data #lightblue {
+}
+
+Model o--> "n" Data : data
+
+
+
+
+    rectangle "DataRequest" as DataRequest #lightgreen {
+    }
+    
+        DataRequest   o--> "n" Model : "instances"
+    
+    rectangle "LineageMetaData" as LineageMetaData #lightgreen {
+    }
+    
+        LineageMetaData   o--> "n" Model : "parents"
+    
+    rectangle "Data" as Data #lightgreen {
+    }
+    
+        Data   o--> "n" Model : "instances"
+    
+    rectangle "DataReference" as DataReference #lightgreen {
+    }
+    
+        DataReference   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "n" Model : "data"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "n" Model : "data"
+    
+
+@enduml

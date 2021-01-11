@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="2739px" preserveAspectRatio="none" style="width:778px;height:2739px;" version="1.1" viewBox="0 0 778 2739" width="778px" zoomAndPan="magnify"><defs><filter height="300%" id="fub0jgr7hrdxb" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster sml--><rect fill="#90EE90" filter="url(#fub0jgr7hrdxb)" height="791" style="stroke: #000000; stroke-width: 1.5;" width="232" x="494" y="233.75"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="191" x="514.5" y="250.2832">Service Management Layer</text><!--cluster aml--><rect fill="#ADD8E6" filter="url(#fub0jgr7hrdxb)" height="231.998" style="stroke: #000000; stroke-width: 1.5;" width="231" x="191" y="1622.75"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="215" x="199" y="1639.2832">Application Management Layer</text><!--cluster diml--><rect fill="#FFCC88" filter="url(#fub0jgr7hrdxb)" height="836.998" style="stroke: #000000; stroke-width: 1.5;" width="315" x="452.5" y="1670.75"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="299" x="460.5" y="1687.2832">Distributed Information Management Layer</text><!--cluster cpl--><rect fill="#D3D3D3" filter="url(#fub0jgr7hrdxb)" height="165" style="stroke: #000000; stroke-width: 1.5;" width="203" x="508.5" y="23.75"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="164" x="528" y="40.2832">Common Physical Layer</text><!--cluster sdi--><rect fill="#FFFFE0" filter="url(#fub0jgr7hrdxb)" height="88" style="stroke: #000000; stroke-width: 1.5;" width="238" x="187.5" y="682.75"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="222" x="195.5" y="699.2832">Software Defined Infrastructure</text><ellipse cx="610.0005" cy="856.8501" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="68.5005" ry="16.1001" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="97" x="561.5005" y="862.1548">Manage Assets</text><ellipse cx="610.0005" cy="992.8501" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="68.5005" ry="16.1001" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="97" x="561.5005" y="998.1548">Manage Stacks</text><ellipse cx="610.0594" cy="924.7619" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="73.0594" ry="17.0119" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="109" x="555.5594" y="930.0666">Manage Services</text><ellipse cx="610.2443" cy="438.9989" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="69.2443" ry="16.2489" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="99" x="560.7443" y="444.3036">Manage Clouds</text><ellipse cx="610.1188" cy="506.5738" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="69.6188" ry="16.3238" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="100" x="560.1188" y="511.8784">Find Resources</text><ellipse cx="610.2254" cy="573.7017" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="65.2254" ry="15.4517" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="566.2254" y="579.0064">ManageBilling</text><ellipse cx="610.1143" cy="641.9729" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="76.6143" ry="17.7229" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="118" x="551.1143" y="647.2775">ManageCostModel</text><ellipse cx="609.9481" cy="786.5396" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="79.4481" ry="18.2896" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="125" x="547.4481" y="791.8443">Manage Multi Cloud</text><ellipse cx="610.0052" cy="288.951" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="81.5052" ry="18.701" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="130" x="545.0052" y="294.2557">Map Assets to Cloud</text><ellipse cx="610.0583" cy="364.6617" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="100.0583" ry="22.4117" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="173" x="523.5583" y="369.9663">Map Services to Resources</text><ellipse cx="610.169" cy="713.7838" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="83.169" ry="19.0338" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="134" x="543.169" y="719.0885">Manage Environment</text><ellipse cx="305.8153" cy="1820.8111" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="75.8153" ry="17.5631" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="116" x="247.8153" y="1826.1157">Manage AI Models</text><ellipse cx="305.9197" cy="1677.5339" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="81.9197" ry="18.7839" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="131" x="240.4197" y="1682.8386">Manage Applications</text><ellipse cx="306.2267" cy="1749.7933" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="78.2267" ry="18.0453" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="122" x="245.2267" y="1755.098">Manage Workloads</text><ellipse cx="610.035" cy="2033.555" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="89.535" ry="20.307" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="149" x="535.535" y="2038.8597">Manage Data Instances</text><ellipse cx="610.1904" cy="1956.6861" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="95.1904" ry="21.4381" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="162" x="529.1904" y="1961.9908">Manage Data Procedures</text><ellipse cx="610.2471" cy="2323.7974" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="88.2471" ry="20.0494" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="146" x="537.2471" y="2329.1021">Manage Data Adaptors</text><ellipse cx="610.0017" cy="2399.7483" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="93.0017" ry="21.0003" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="157" x="531.5017" y="2405.053">Manage Data Blue Prints</text><ellipse cx="609.7698" cy="2248.702" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="85.2698" ry="19.454" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="139" x="540.2698" y="2254.0066">Manage Data Pipeline</text><ellipse cx="609.9182" cy="2473.6316" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="77.4182" ry="17.8836" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="120" x="549.9182" y="2478.9363">Manage Meta Data</text><ellipse cx="609.8945" cy="1803.6269" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="97.3945" ry="21.8789" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="167" x="526.3945" y="1808.9316">Manage Data Governance</text><ellipse cx="609.9267" cy="1880.5333" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="84.4267" ry="19.2853" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="137" x="541.4267" y="1885.838">Manage Data Policies</text><ellipse cx="610.0408" cy="1726.9562" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="86.5408" ry="19.7082" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="142" x="539.0408" y="1732.2608">Manage Data Strategy</text><ellipse cx="610.1163" cy="2108.8713" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="86.1163" ry="19.6233" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="141" x="539.6163" y="2114.1759">Manage Data Sources</text><ellipse cx="610.1041" cy="2178.6997" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="63.1041" ry="15.4517" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="85" x="567.6041" y="2184.0044">Manage Data</text><ellipse cx="609.8351" cy="78.617" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="82.3351" ry="18.867" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="132" x="543.8351" y="83.9217">Manage Data Center</text><ellipse cx="609.7698" cy="152.704" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="85.2698" ry="19.454" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="139" x="540.2698" y="158.0086">Manage Infrastructure</text><ellipse cx="306.1328" cy="736.8766" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="78.6328" ry="18.1266" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="123" x="244.6328" y="742.1812">Manage Resources</text><!--entity Actor--><ellipse cx="75" cy="846.25" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,854.25 L75,881.25 M62,862.25 L88,862.25 M75,881.25 L62,896.25 M75,881.25 L88,896.25 " fill="none" filter="url(#fub0jgr7hrdxb)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="33" x="58.5" y="917.7832">Actor</text><!--entity ApplicationDeveloper--><ellipse cx="75" cy="1576.25" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,1584.25 L75,1611.25 M62,1592.25 L88,1592.25 M75,1611.25 L62,1626.25 M75,1611.25 L88,1626.25 " fill="none" filter="url(#fub0jgr7hrdxb)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="138" x="6" y="1647.7832">Application Developer</text><!--entity ChiefDataOfficer--><ellipse cx="75" cy="1379.25" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,1387.25 L75,1414.25 M62,1395.25 L88,1395.25 M75,1414.25 L62,1429.25 M75,1414.25 L88,1429.25 " fill="none" filter="url(#fub0jgr7hrdxb)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="113" x="18.5" y="1450.7832">Chief Data Officer</text><!--entity DataAnalyst--><ellipse cx="306" cy="2097.248" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M306,2105.248 L306,2132.248 M293,2113.248 L319,2113.248 M306,2132.248 L293,2147.248 M306,2132.248 L319,2147.248 " fill="none" filter="url(#fub0jgr7hrdxb)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="80" x="266" y="2168.7812">Data Analyst</text><!--entity DataEngineer--><ellipse cx="75" cy="2193.248" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,2201.248 L75,2228.248 M62,2209.248 L88,2209.248 M75,2228.248 L62,2243.248 M75,2228.248 L88,2243.248 " fill="none" filter="url(#fub0jgr7hrdxb)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="31.5" y="2264.7812">DataEngineer</text><!--entity DataScientist--><ellipse cx="75" cy="2513.248" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,2521.248 L75,2548.248 M62,2529.248 L88,2529.248 M75,2548.248 L62,2563.248 M75,2548.248 L88,2563.248 " fill="none" filter="url(#fub0jgr7hrdxb)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="31.5" y="2584.7812">Data Scientist</text><!--entity DataSteward--><ellipse cx="75" cy="283.25" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,291.25 L75,318.25 M62,299.25 L88,299.25 M75,318.25 L62,333.25 M75,318.25 L88,333.25 " fill="none" filter="url(#fub0jgr7hrdxb)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="85" x="32.5" y="354.7832">Data Steward</text><!--entity DevOpsEngineer--><ellipse cx="75" cy="1717.25" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,1725.25 L75,1752.25 M62,1733.25 L88,1733.25 M75,1752.25 L62,1767.25 M75,1752.25 L88,1767.25 " fill="none" filter="url(#fub0jgr7hrdxb)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="112" x="19" y="1788.7832">DevOps Engineer</text><!--entity ITOperations--><ellipse cx="75" cy="403.25" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,411.25 L75,438.25 M62,419.25 L88,419.25 M75,438.25 L62,453.25 M75,438.25 L88,453.25 " fill="none" filter="url(#fub0jgr7hrdxb)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="86" x="32" y="474.7832">IT Operations</text><!--entity StackDeveloper--><ellipse cx="75" cy="988.25" fill="#FEFECE" filter="url(#fub0jgr7hrdxb)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M75,996.25 L75,1023.25 M62,1004.25 L88,1004.25 M75,1023.25 L62,1038.25 M75,1023.25 L88,1038.25 " fill="none" filter="url(#fub0jgr7hrdxb)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="104" x="23" y="1059.7832">Stack Developer</text><!--link Actor to ManageAssets--><path d="M91.663,878.1 C157.129,875.4 411.29,864.91 537.321,859.71 " fill="none" id="Actor-ManageAssets" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="542.487,859.49,533.3302,855.8634,537.4912,859.6955,533.659,863.8566,542.487,859.49" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataScientist to ManageAIModels--><path d="M89.0253,2502.895 C104.1693,2451.673 128.999,2363.159 144,2285.748 C167.696,2163.464 135.732,2124.365 179.5,2007.748 C204.452,1941.266 257.165,1874.996 285.691,1842.098 " fill="none" id="DataScientist-ManageAIModels" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="289.046,1838.254,280.1148,1842.4054,285.7586,1842.0214,286.1427,1847.6652,289.046,1838.254" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineer to ManageAIModels--><path d="M131.112,1769.637 C146.691,1775.063 163.704,1780.804 179.5,1785.748 C202.579,1792.973 228.271,1800.267 250.367,1806.314 " fill="none" id="DevOpsEngineer-ManageAIModels" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="255.316,1807.663,247.6856,1801.4359,250.4922,1806.3474,245.5807,1809.154,255.316,1807.663" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloper to ManageAIModels--><path d="M116.703,1651.67 C126.506,1663.42 136.345,1676.57 144,1689.75 C166.851,1729.083 146.039,1754.931 179.5,1785.748 C193.72,1798.845 212.433,1807.098 231.054,1812.281 " fill="none" id="ApplicationDeveloper-ManageAIModels" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="236.3,1813.664,228.6147,1807.5048,231.4647,1812.3913,226.5783,1815.2413,236.3,1813.664" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataEngineer to ManageAIModels--><path d="M76.2818,2183.104 C79.0808,2108.902 95.4297,1955.409 179.5,1865.748 C195.029,1849.187 217.08,1838.711 238.377,1832.088 " fill="none" id="DataEngineer-ManageAIModels" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="243.193,1830.65,233.425,1829.3909,238.4018,1832.0799,235.7128,1837.0568,243.193,1830.65" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineer to ManageApplications--><path d="M131.193,1730.636 C146.773,1725.363 163.766,1719.726 179.5,1714.748 C202.051,1707.61 227.019,1700.16 248.708,1693.83 " fill="none" id="DevOpsEngineer-ManageApplications" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="253.57,1692.42,243.8104,1691.0973,248.7696,1693.8187,246.0483,1698.7779,253.57,1692.42" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloper to ManageApplications--><path d="M144.088,1629.26 C178.002,1639.48 218.456,1651.67 250.318,1661.27 " fill="none" id="ApplicationDeveloper-ManageApplications" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="255.356,1662.79,247.8937,1656.3623,250.5688,1661.3467,245.5845,1664.0218,255.356,1662.79" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloper to ManageWorkloads--><path d="M108.287,1651.27 C126.917,1673.12 152.058,1698.5 179.5,1714.748 C197.173,1725.214 218.099,1732.659 237.746,1737.909 " fill="none" id="ApplicationDeveloper-ManageWorkloads" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="242.711,1739.197,235.0039,1733.065,237.8712,1737.9413,232.9949,1740.8086,242.711,1739.197" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DevOpsEngineer to ManageWorkloads--><path d="M131.143,1749.748 C158.541,1749.748 192.207,1749.748 222.593,1749.748 " fill="none" id="DevOpsEngineer-ManageWorkloads" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="227.832,1749.748,218.832,1745.748,222.832,1749.748,218.832,1753.748,227.832,1749.748" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataScientist to ManageDataInstances--><path d="M88.5449,2502.797 C103.227,2451.482 127.613,2362.877 144,2285.748 C154.109,2238.167 143.768,2102.755 179.5,2069.748 C226.979,2025.892 405.972,2024.833 517.357,2028.781 " fill="none" id="DataScientist-ManageDataInstances" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="522.609,2028.973,513.7601,2024.6491,517.6123,2028.7916,513.4698,2032.6438,522.609,2028.973" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloper to ManageDataInstances--><path d="M144.297,1591.72 C225.942,1575.92 360.658,1565.12 433.5,1642.75 C460.351,1671.37 419.598,1965.421 444.5,1995.748 C461.923,2016.968 488.619,2027.746 515.47,2032.884 " fill="none" id="ApplicationDeveloper-ManageDataInstances" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="520.483,2033.779,512.3258,2028.26,515.5608,2032.9005,510.9202,2036.1356,520.483,2033.779" style="stroke: #A80036; stroke-width: 1.0;"/><!--link StackDeveloper to ManageStacks--><path d="M127.12,1036.24 C143.671,1040.54 162.216,1044.61 179.5,1046.75 C291.535,1060.61 321.866,1063.53 433.5,1046.75 C481.574,1039.52 534.651,1021.74 569.71,1008.55 " fill="none" id="StackDeveloper-ManageStacks" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="574.749,1006.63,564.9153,1006.0836,570.0743,1008.4041,567.7539,1013.5631,574.749,1006.63" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloper to ManageStacks--><path d="M113.056,1565.92 C218.445,1444.12 517.08,1098.98 591.859,1012.56 " fill="none" id="ApplicationDeveloper-ManageStacks" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="595.249,1008.64,586.3355,1012.8293,591.9777,1012.4213,592.3857,1018.0634,595.249,1008.64" style="stroke: #A80036; stroke-width: 1.0;"/><!--link StackDeveloper to ManageServices--><path d="M127.306,1026.76 C200.798,1032.77 337.722,1034.06 433.5,975.75 C440.871,971.26 437.325,964.54 444.5,959.75 C470.433,942.42 503.365,933.46 532.941,928.9 " fill="none" id="StackDeveloper-ManageServices" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="538.038,928.15,528.5524,925.4998,533.091,928.8763,529.7145,933.4149,538.038,928.15" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ApplicationDeveloper to ManageServices--><path d="M100.4552,1566.09 C114.794,1539.62 132.326,1504.52 144,1471.75 C167.863,1404.77 146.593,1378.78 179.5,1315.75 C257.105,1167.1 362.042,1188.45 433.5,1036.75 C448.231,1005.47 420.897,985.01 444.5,959.75 C466.829,935.85 501.11,926.17 532.609,922.83 " fill="none" id="ApplicationDeveloper-ManageServices" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="537.638,922.35,528.2979,919.2256,532.6607,922.8263,529.06,927.1892,537.638,922.35" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperations to ManageClouds--><path d="M118.105,422.67 C136.722,417.54 158.999,412.28 179.5,409.75 C291.535,395.89 320.989,400.52 433.5,409.75 C473.837,413.06 518.868,420.58 553.216,427.13 " fill="none" id="ITOperations-ManageClouds" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="558.205,428.09,550.1215,422.4636,553.2948,427.1465,548.6119,430.3198,558.205,428.09" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataEngineer to ManageDataProcedures--><path d="M86.441,2183.172 C99.9411,2137.643 128.071,2066.983 179.5,2029.748 C277.508,1958.791 420.747,1948.01 514.414,1949.905 " fill="none" id="DataEngineer-ManageDataProcedures" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="519.673,1950.026,510.7668,1945.8213,514.6743,1949.9117,510.5839,1953.8192,519.673,1950.026" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ChiefDataOfficer to ManageDataProcedures--><path d="M121.439,1454.31 C138.68,1468.87 159.094,1484.35 179.5,1495.75 C283.931,1554.08 362.7,1488.33 433.5,1584.75 C455.412,1614.59 421.064,1889.091 444.5,1917.748 C460.7,1937.558 484.947,1948.397 509.879,1954.08 " fill="none" id="ChiefDataOfficer-ManageDataProcedures" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="514.872,1955.148,506.9094,1949.3517,509.9829,1954.1007,505.2338,1957.1742,514.872,1955.148" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataEngineer to ManageDataAdaptors--><path d="M118.665,2246.484 C137.001,2254.599 158.913,2263.259 179.5,2268.748 C294.162,2299.32 430.724,2313.102 518.58,2319.175 " fill="none" id="DataEngineer-ManageDataAdaptors" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="523.772,2319.529,515.0648,2314.9263,518.7836,2319.189,514.5208,2322.9078,523.772,2319.529" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataScientist to ManageDataAdaptors--><path d="M118.702,2560.618 C193.631,2583.686 348.851,2617.4716 433.5,2535.748 C461.374,2508.838 419.438,2391.295 444.5,2361.748 C462.438,2340.6 489.586,2329.893 516.686,2324.799 " fill="none" id="DataScientist-ManageDataAdaptors" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="521.743,2323.911,512.187,2321.5271,516.8183,2324.7754,513.57,2329.4066,521.743,2323.911" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataEngineer to ManageDataBluePrints--><path d="M112.851,2268.589 C131.071,2287.108 154.496,2307.337 179.5,2319.748 C285.686,2372.456 422.306,2390.625 512.619,2396.781 " fill="none" id="DataEngineer-ManageDataBluePrints" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="517.691,2397.118,508.976,2392.5302,512.702,2396.7865,508.4456,2400.5126,517.691,2397.118" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataScientist to ManageDataBluePrints--><path d="M118.74,2577.88 C136.558,2589.364 158.07,2600.903 179.5,2606.748 C288.41,2636.455 351.109,2683.9212 433.5,2606.748 C460.806,2581.172 420.349,2467.323 444.5,2438.748 C461.374,2418.784 486.417,2407.99 511.903,2402.403 " fill="none" id="DataScientist-ManageDataBluePrints" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="517.004,2401.354,507.3827,2399.249,512.1065,2402.3612,508.9943,2407.085,517.004,2401.354" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataEngineer to ManageDataPipeline--><path d="M118.607,2238.963 C137.121,2244.048 159.182,2249.236 179.5,2251.748 C298.496,2266.466 437.455,2261.512 524.352,2255.791 " fill="none" id="DataEngineer-ManageDataPipeline" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="529.482,2255.448,520.2357,2252.0561,524.4931,2255.7809,520.7683,2260.0383,529.482,2255.448" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataScientist to ManageMetaData--><path d="M96.0864,2588.256 C113.37,2619.3772 141.532,2659.2709 179.5,2677.7485 C281.007,2727.1474 330.896,2724.8268 433.5,2677.7485 C516.259,2639.7756 574.727,2541.381 597.923,2496.575 " fill="none" id="DataScientist-ManageMetaData" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="600.317,2491.896,592.6547,2498.0838,598.0382,2496.3465,599.7755,2501.73,600.317,2491.896" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ChiefDataOfficer to ManageDataGovernance--><path d="M131.509,1392.64 C210.479,1369.39 354.426,1342.22 433.5,1420.75 C460.555,1447.62 420.46,1734.151 444.5,1763.748 C460.309,1783.212 483.85,1794.145 508.214,1800.072 " fill="none" id="ChiefDataOfficer-ManageDataGovernance" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="513.095,1801.191,505.2164,1795.281,508.2214,1800.0737,503.4287,1803.0787,513.095,1801.191" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ChiefDataOfficer to ManageDataPolicies--><path d="M131.572,1420.38 C227.14,1435.76 414.273,1468.5 433.5,1491.75 C458.436,1521.9 419.58,1813.579 444.5,1843.748 C463.092,1866.257 492.163,1876.843 520.728,1881.38 " fill="none" id="ChiefDataOfficer-ManageDataPolicies" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="525.678,1882.108,517.3553,1876.8417,520.7311,1881.3809,516.192,1884.7567,525.678,1882.108" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ChiefDataOfficer to ManageDataStrategy--><path d="M131.503,1371.1 C146.378,1362.33 162.946,1354.33 179.5,1349.75 C288.303,1319.65 338.31,1289.06 433.5,1349.75 C561.062,1431.07 597.38,1631.85 606.361,1702.04 " fill="none" id="ChiefDataOfficer-ManageDataStrategy" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="607.009,1707.26,609.8728,1697.8367,606.3946,1702.2979,601.9334,1698.8197,607.009,1707.26" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataEngineer to ManageDataSources--><path d="M90.8899,2183.186 C106.531,2145.733 135.109,2093.569 179.5,2069.748 C278.972,2016.37 321.285,2057.43 433.5,2069.748 C439.188,2070.373 495.955,2083.081 543.412,2093.823 " fill="none" id="DataEngineer-ManageDataSources" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="548.559,2094.989,540.6649,2089.0998,543.6825,2093.8845,538.8977,2096.9022,548.559,2094.989" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataScientist to ManageData--><path d="M118.734,2508.392 C186.436,2448.931 322.1,2328.644 433.5,2222.748 C438.511,2217.985 438.405,2215.013 444.5,2211.748 C474.845,2195.497 512.229,2187.217 543.687,2183.013 " fill="none" id="DataScientist-ManageData" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="548.683,2182.373,539.2474,2179.55,543.7236,2183.0088,540.2647,2187.485,548.683,2182.373" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataAnalyst to ManageData--><path d="M346.172,2136.104 C398.563,2144.605 491.816,2159.735 551.996,2169.499 " fill="none" id="DataAnalyst-ManageData" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="556.991,2170.31,548.7469,2164.9216,552.0554,2169.51,547.467,2172.8185,556.991,2170.31" style="stroke: #A80036; stroke-width: 1.0;"/><!--link DataEngineer to ManageData--><path d="M118.717,2221.982 C212.094,2213.748 434.827,2194.107 545.018,2184.39 " fill="none" id="DataEngineer-ManageData" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="550.179,2183.935,540.8629,2180.7397,545.1983,2184.3735,541.5645,2188.7089,550.179,2183.935" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperations to ManageDataCenter--><path d="M118.207,406.07 C127.989,397.33 137.443,387.05 144,375.75 C183.168,308.23 127.63,262.08 179.5,203.75 C266.07,106.4 423.604,82.96 521.93,78.36 " fill="none" id="ITOperations-ManageDataCenter" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="527.15,78.14,517.9824,74.5406,522.1549,78.3604,518.3351,82.5329,527.15,78.14" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperations to ManageInfrastructure--><path d="M118.325,403.97 C127.647,395.54 136.857,385.93 144,375.75 C168.695,340.55 147.97,314.99 179.5,285.75 C274.25,197.89 426.052,168.04 521.504,157.92 " fill="none" id="ITOperations-ManageInfrastructure" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="526.573,157.4,517.2083,154.35,521.5997,157.9159,518.0338,162.3073,526.573,157.4" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperations to FindResources--><path d="M118.141,440.75 C185.035,448.76 319.618,465.15 433.5,480.75 C470.867,485.87 512.64,492.04 546.054,497.08 " fill="none" id="ITOperations-FindResources" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="551.343,497.88,543.0397,492.5833,546.3988,497.1348,541.8474,500.494,551.343,497.88" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperations to ManageBilling--><path d="M118.123,458.44 C136.554,467.64 158.683,477.73 179.5,484.75 C306.848,527.69 462.736,553.72 547.289,565.75 " fill="none" id="ITOperations-ManageBilling" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="552.256,566.45,543.9037,561.2309,547.3051,565.7509,542.7851,569.1523,552.256,566.45" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperations to ManageCostModel--><path d="M102.5126,478.49 C120.924,504.54 147.795,536.28 179.5,554.75 C239.361,589.61 431.4,618.9 537.272,632.9 " fill="none" id="ITOperations-ManageCostModel" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="542.247,633.56,533.8463,628.4191,537.2898,632.9071,532.8018,636.3506,542.247,633.56" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperations to ManageMultiCloud--><path d="M82.9716,478.54 C97.2755,560.51 132.584,734.77 179.5,770.75 C289.916,855.42 467.363,825.23 555.602,802.58 " fill="none" id="ITOperations-ManageMultiCloud" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="560.51,801.31,550.7937,799.6997,555.6704,802.5663,552.8038,807.443,560.51,801.31" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperations to MapAssetstoCloud--><path d="M118.21,399.48 C126.861,391.77 135.819,383.6 144,375.75 C160.447,359.97 159.089,348.89 179.5,338.75 C290.851,283.44 437.889,278.77 527.834,282.36 " fill="none" id="ITOperations-MapAssetstoCloud" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="532.874,282.58,524.0516,278.2023,527.8785,282.3682,523.7126,286.1951,532.874,282.58" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperations to MapServicestoResources--><path d="M118.359,406.51 C136.377,395.68 158.136,384.61 179.5,378.75 C290.949,348.14 424.792,349.45 513.115,355.26 " fill="none" id="ITOperations-MapServicestoResources" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="518.339,355.61,509.6294,351.0119,513.3504,355.2727,509.0896,358.9937,518.339,355.61" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperations to ManageEnvironment--><path d="M87.8575,478.25 C102.2459,521.69 130.831,587.73 179.5,623.75 C234.133,664.18 421.236,691.97 529.623,705.1 " fill="none" id="ITOperations-ManageEnvironment" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="534.724,705.71,526.267,700.6623,529.7599,705.112,525.3102,708.6049,534.724,705.71" style="stroke: #A80036; stroke-width: 1.0;"/><!--link StackDeveloper to ManageEnvironment--><path d="M127.111,994.88 C201.9,955.03 342.164,872.46 433.5,770.75 C440.278,763.2 436.391,756.84 444.5,750.75 C467.299,733.61 496.573,724.16 524.09,719.02 " fill="none" id="StackDeveloper-ManageEnvironment" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="529.205,718.11,519.6428,715.7509,524.2825,718.9872,521.0463,723.6269,529.205,718.11" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ITOperations to ManageResources--><path d="M84.9178,478.31 C97.7704,530.39 126.059,618.56 179.5,674.75 C199.44,695.72 227.979,710.59 252.805,720.5 " fill="none" id="ITOperations-ManageResources" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="257.717,722.42,250.7866,715.4222,253.059,720.6025,247.8787,722.8749,257.717,722.42" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+
+left to right direction
+
+Actor "Actor" as Actor
+
+Actor "Application Developer" as ApplicationDeveloper
+
+Actor "Chief Data Officer" as ChiefDataOfficer
+
+Actor "Data Analyst" as DataAnalyst
+
+Actor "DataEngineer" as DataEngineer
+
+Actor "Data Scientist" as DataScientist
+
+Actor "Data Steward" as DataSteward
+
+Actor "DevOps Engineer" as DevOpsEngineer
+
+Actor "IT Operations" as ITOperations
+
+Actor "Stack Developer" as StackDeveloper
+
+
+
+rectangle "Service Management Layer" as sml  #lightgreen {
+        usecase "Manage Assets" as ManageAssets
+    
+        Actor - - -> ManageAssets
+        
+
+}
+
+rectangle "Application Management Layer" as aml  #lightblue {
+        usecase "Manage AI Models" as ManageAIModels
+    
+        DataScientist - -> ManageAIModels
+        
+        DevOpsEngineer - -> ManageAIModels
+        
+        ApplicationDeveloper - -> ManageAIModels
+        
+        DataEngineer - -> ManageAIModels
+        
+    usecase "Manage Applications" as ManageApplications
+    
+        DevOpsEngineer - -> ManageApplications
+        
+        ApplicationDeveloper - -> ManageApplications
+        
+    usecase "Manage Workloads" as ManageWorkloads
+    
+        ApplicationDeveloper - -> ManageWorkloads
+        
+        DevOpsEngineer - -> ManageWorkloads
+        
+
+}
+
+rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
+        usecase "Manage Data Instances" as ManageDataInstances
+    
+        DataScientist - - -> ManageDataInstances
+        
+        ApplicationDeveloper - - -> ManageDataInstances
+        
+
+}
+
+rectangle "Service Management Layer" as sml  #lightgreen {
+        usecase "Manage Stacks" as ManageStacks
+    
+        StackDeveloper - -> ManageStacks
+        
+        ApplicationDeveloper - -> ManageStacks
+        
+
+}
+
+rectangle "Service Management Layer" as sml  #lightgreen {
+        usecase "Manage Services" as ManageServices
+    
+        StackDeveloper - - -> ManageServices
+        
+        ApplicationDeveloper - - -> ManageServices
+        
+    usecase "Manage Clouds" as ManageClouds
+    
+        ITOperations - - -> ManageClouds
+        
+
+}
+
+rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
+        usecase "Manage Data Procedures" as ManageDataProcedures
+    
+        DataEngineer - -> ManageDataProcedures
+        
+        ChiefDataOfficer - -> ManageDataProcedures
+        
+    usecase "Manage Data Adaptors" as ManageDataAdaptors
+    
+        DataEngineer - -> ManageDataAdaptors
+        
+        DataScientist - -> ManageDataAdaptors
+        
+    usecase "Manage Data Blue Prints" as ManageDataBluePrints
+    
+        DataEngineer - -> ManageDataBluePrints
+        
+        DataScientist - -> ManageDataBluePrints
+        
+    usecase "Manage Data Pipeline" as ManageDataPipeline
+    
+        DataEngineer - -> ManageDataPipeline
+        
+    usecase "Manage Meta Data" as ManageMetaData
+    
+        DataScientist - -> ManageMetaData
+        
+
+}
+
+rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
+        usecase "Manage Data Governance" as ManageDataGovernance
+    
+        ChiefDataOfficer - - -> ManageDataGovernance
+        
+    usecase "Manage Data Policies" as ManageDataPolicies
+    
+        ChiefDataOfficer - - -> ManageDataPolicies
+        
+    usecase "Manage Data Strategy" as ManageDataStrategy
+    
+        ChiefDataOfficer - - -> ManageDataStrategy
+        
+    usecase "Manage Data Sources" as ManageDataSources
+    
+        DataEngineer - - -> ManageDataSources
+        
+
+}
+
+rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
+        usecase "Manage Data" as ManageData
+    
+        DataScientist - -> ManageData
+        
+        DataAnalyst - -> ManageData
+        
+        DataEngineer - -> ManageData
+        
+
+}
+
+rectangle "Common Physical Layer" as cpl  #lightgray {
+        usecase "Manage Data Center" as ManageDataCenter
+    
+        ITOperations - - -> ManageDataCenter
+        
+    usecase "Manage Infrastructure" as ManageInfrastructure
+    
+        ITOperations - - -> ManageInfrastructure
+        
+
+}
+
+rectangle "Service Management Layer" as sml  #lightgreen {
+        usecase "Find Resources" as FindResources
+    
+        ITOperations - -> FindResources
+        
+    usecase "ManageBilling" as ManageBilling
+    
+        ITOperations - -> ManageBilling
+        
+    usecase "ManageCostModel" as ManageCostModel
+    
+        ITOperations - -> ManageCostModel
+        
+    usecase "Manage Multi Cloud" as ManageMultiCloud
+    
+        ITOperations - -> ManageMultiCloud
+        
+    usecase "Map Assets to Cloud" as MapAssetstoCloud
+    
+        ITOperations - -> MapAssetstoCloud
+        
+    usecase "Map Services to Resources" as MapServicestoResources
+    
+        ITOperations - -> MapServicestoResources
+        
+
+}
+
+rectangle "Service Management Layer" as sml  #lightgreen {
+        usecase "Manage Environment" as ManageEnvironment
+    
+        ITOperations - - -> ManageEnvironment
+        
+        StackDeveloper - - -> ManageEnvironment
+        
+
+}
+
+rectangle "Software Defined Infrastructure" as sdi  #lightyellow {
+        usecase "Manage Resources" as ManageResources
+    
+        ITOperations - -> ManageResources
+        
+
+}
+
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

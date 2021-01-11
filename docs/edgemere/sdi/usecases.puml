@@ -1,0 +1,13 @@
+@startuml
+
+left to right direction
+Actor "IT Operations" as ITOperations
+
+
+rectangle "Software Defined Infrastructure" #lightyellow {
+usecase "ManageResources" as ManageResources
+    ITOperations --> ManageResources
+    }
+
+
+@enduml

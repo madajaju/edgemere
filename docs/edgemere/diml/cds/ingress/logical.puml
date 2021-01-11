@@ -1,0 +1,22 @@
+@startuml
+
+
+
+package "Ingress Services" #lightblue {
+
+    interface "Ingress Services" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Ingress Services" #lightblue {
+    
+}
+
+
+
+@enduml

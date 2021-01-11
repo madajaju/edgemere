@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="353px" preserveAspectRatio="none" style="width:476px;height:353px;" version="1.1" viewBox="0 0 476 353" width="476px" zoomAndPan="magnify"><defs><filter height="300%" id="f1xxltqvqfn8mn" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--entity DataAdaptorTemplate--><rect fill="#90EE90" filter="url(#f1xxltqvqfn8mn)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="159" x="6" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="139" x="16" y="32.5332">DataAdaptorTemplate</text><!--entity Identity--><rect fill="#ADD8E6" filter="url(#f1xxltqvqfn8mn)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="65" x="227" y="305"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="45" x="237" y="329.5332">Identity</text><!--entity DataFlowTemplate--><rect fill="#ADD8E6" filter="url(#f1xxltqvqfn8mn)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="138" x="327.5" y="305"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="118" x="337.5" y="329.5332">DataFlowTemplate</text><!--entity DataBluePrintInstance--><rect fill="#90EE90" filter="url(#f1xxltqvqfn8mn)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="160" x="11.5" y="305"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="140" x="21.5" y="329.5332">DataBluePrintInstance</text><!--entity DataAdaptor--><rect fill="#90EE90" filter="url(#f1xxltqvqfn8mn)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="100" x="209.5" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="80" x="219.5" y="32.5332">DataAdaptor</text><!--entity DataFlow--><rect fill="#90EE90" filter="url(#f1xxltqvqfn8mn)" height="37.6094" style="stroke: #000000; stroke-width: 1.5;" width="79" x="345" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="59" x="355" y="32.5332">DataFlow</text><!--class Model--><rect fill="#FEFECE" filter="url(#f1xxltqvqfn8mn)" height="103.3438" id="Model" style="stroke: #A80036; stroke-width: 1.5;" width="108" x="159.5" y="124"/><ellipse cx="174.5" cy="140" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M177.2656,135.875 Q177.4219,135.6563 177.6094,135.5469 Q177.7969,135.4375 178.0156,135.4375 Q178.3906,135.4375 178.625,135.7031 Q178.8594,135.9531 178.8594,136.5625 L178.8594,138.0156 Q178.8594,138.625 178.625,138.8906 Q178.3906,139.1563 178.0156,139.1563 Q177.6719,139.1563 177.4688,138.9531 Q177.2656,138.7656 177.1563,138.25 Q177.1094,137.8906 176.9219,137.7031 Q176.5938,137.3281 175.9844,137.1094 Q175.375,136.8906 174.75,136.8906 Q173.9844,136.8906 173.3438,137.2188 Q172.7188,137.5469 172.2188,138.2969 Q171.7344,139.0469 171.7344,140.0781 L171.7344,141.1719 Q171.7344,142.4063 172.625,143.2344 Q173.5156,144.0469 175.1094,144.0469 Q176.0469,144.0469 176.7031,143.7969 Q177.0938,143.6406 177.5156,143.2031 Q177.7813,142.9375 177.9219,142.8594 Q178.0781,142.7813 178.2813,142.7813 Q178.6094,142.7813 178.8594,143.0469 Q179.125,143.2969 179.125,143.6406 Q179.125,143.9844 178.7813,144.3906 Q178.2813,144.9688 177.4844,145.2969 Q176.4063,145.75 175.1094,145.75 Q173.5938,145.75 172.3906,145.125 Q171.4063,144.625 170.7188,143.5625 Q170.0313,142.4844 170.0313,141.2031 L170.0313,140.0469 Q170.0313,138.7188 170.6406,137.5781 Q171.2656,136.4219 172.3594,135.8125 Q173.4531,135.1875 174.6875,135.1875 Q175.4219,135.1875 176.0625,135.3594 Q176.7188,135.5156 177.2656,135.875 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="76" x="188.5" y="144.9102">DataBluePrint</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="160.5" x2="266.5" y1="156" y2="156"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="56" x="165.5" y="171.4189">string name</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="66" x="165.5" y="185.2549">string version</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="160.5" x2="266.5" y1="191.6719" y2="191.6719"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="39" x="165.5" y="207.0908">create()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="40" x="165.5" y="220.9268">deploy()</text><!--link Model to DataAdaptorTemplate--><path d="M161.622,114.025 C150.724,101.421 139.268,88.247 128.5,76 C122.779,69.494 116.585,62.531 110.727,55.984 " fill="none" id="Model-DataAdaptorTemplate" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="101.9148,46.164,104.948,55.5342,105.2539,49.8856,110.9025,50.1915,101.9148,46.164" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="105.2539" x2="110.5965" y1="49.8856" y2="55.8395"/><polygon fill="#A80036" points="170.219,123.982,169.3256,116.8265,162.3769,114.899,163.2703,122.0545,170.219,123.982" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="50" x="144.5" y="90.4951">adaptors</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="98.3857" y="67.0592">n</text><!--link DataAdaptorTemplate to Model--><path d="M69.0012,58.161 C64.848,69.932 63.1475,83.171 69.5,94 C86.4285,122.858 117.89,142.141 147.097,154.578 " fill="none" id="DataAdaptorTemplate-Model" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="159.428,159.498,152.5507,152.448,154.7839,157.6454,149.5865,159.8786,159.428,159.498" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="154.7839" x2="147.353" y1="157.6454" y2="154.6805"/><polygon fill="#FFFFFF" points="74.2056,46.148,68.1503,50.0637,69.4358,57.1593,75.4912,53.2436,74.2056,46.148" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="49" x="70.5" y="90.4951">blueprint</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="144.3319" y="153.6184">1</text><!--link Model to Identity--><path d="M233.405,239.894 C239.095,258.0132 245.041,276.9525 249.819,292.1669 " fill="none" id="Model-Identity" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="253.836,304.9617,254.956,295.1767,252.3381,300.1913,247.3235,297.5734,253.836,304.9617" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="252.3381" x2="249.942" y1="300.1913" y2="292.5587"/><polygon fill="#FFFFFF" points="229.459,227.327,227.4401,234.2497,233.0538,238.7759,235.0727,231.8532,229.459,227.327" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="42" x="244.5" y="271.4951">identity</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="244.0295" y="294.29">1</text><!--link Model to DataFlowTemplate--><path d="M278.08,228.199 C307.028,251.3737 339.923,277.7074 363.684,296.7292 " fill="none" id="Model-DataFlowTemplate" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="373.912,304.9169,369.3858,296.1697,370.0087,301.7922,364.3862,302.415,373.912,304.9169" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="370.0087" x2="363.7625" y1="301.7922" y2="296.7924"/><polygon fill="#A80036" points="267.911,220.058,270.0952,226.9304,277.279,227.5574,275.0948,220.685,267.911,220.058" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="29" x="333.5" y="271.4951">flows</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="358.9225" y="294.2315">n</text><!--link Model to DataBluePrintInstance--><path d="M147.265,195.752 C117.361,208.12 84.8994,227.538 67.5,257 C60.8738,268.2201 63.9632,281.575 69.8109,293.3267 " fill="none" id="Model-DataBluePrintInstance" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="76.6117,304.8361,75.477,295.0528,74.0681,300.5314,68.5895,299.1225,76.6117,304.8361" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="74.0681" x2="69.9984" y1="300.5314" y2="293.644"/><polygon fill="#A80036" points="159.434,191.034,152.3937,189.4739,148.2458,195.3727,155.2861,196.9327,159.434,191.034" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="56" x="68.5" y="271.4951">instances</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="63.9803" y="294.1259">n</text><!--link DataBluePrintInstance to Model--><path d="M115.177,294.5683 C128.682,278.3509 146.152,257.3728 162.612,237.608 " fill="none" id="DataBluePrintInstance-Model" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="171.173,227.327,162.3397,231.6829,167.9732,231.1691,168.487,236.8025,171.173,227.327" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="167.9732" x2="162.8535" y1="231.1691" y2="237.317"/><polygon fill="#FFFFFF" points="106.522,304.9617,113.4353,302.9107,114.201,295.7404,107.2877,297.7914,106.522,304.9617" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="49" x="146.5" y="271.4951">blueprint</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="158.015" y="248.8619">1</text><!--link DataAdaptor to Model--><path d="M249.817,58.838 C245.013,74.138 239.026,93.204 233.308,111.415 " fill="none" id="DataAdaptor-Model" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="229.41,123.83,235.9224,116.4416,230.9078,119.0596,228.2898,114.0451,229.41,123.83" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="230.9078" x2="233.305" y1="119.0596" y2="111.427"/><polygon fill="#FFFFFF" points="253.767,46.258,248.1533,50.7842,250.1722,57.7069,255.7859,53.1807,253.767,46.258" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="49" x="244.5" y="90.4951">blueprint</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="224.0776" y="113.3075">1</text><!--link DataFlow to Model--><path d="M353.287,54.741 C332.247,72.766 303.729,97.199 277.937,119.295 " fill="none" id="DataFlow-Model" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="267.834,127.951,277.2711,125.133,271.631,124.6979,272.0662,119.0578,267.834,127.951" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="271.631" x2="277.7065" y1="124.6979" y2="119.4925"/><polygon fill="#FFFFFF" points="363.188,46.258,356.0291,47.124,354.0751,54.0653,361.234,53.1993,363.188,46.258" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="49" x="325.5" y="90.4951">blueprint</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="275.6054" y="117.9822">1</text><!--
+@startuml
+
+class "DataBluePrint" as Model {
+ string name
+ string version
+
+ create()
+ deploy()
+ 
+}
+
+rectangle "DataAdaptorTemplate" as DataAdaptorTemplate #lightblue {
+}
+
+Model *- -> "n" DataAdaptorTemplate : adaptors
+
+
+rectangle "Identity" as Identity #lightblue {
+}
+
+Model o- -> "1" Identity : identity
+
+
+rectangle "DataFlowTemplate" as DataFlowTemplate #lightblue {
+}
+
+Model *- -> "n" DataFlowTemplate : flows
+
+
+rectangle "DataBluePrintInstance" as DataBluePrintInstance #lightblue {
+}
+
+Model *- -> "n" DataBluePrintInstance : instances
+
+
+
+
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   o- -> "1" Model : "blueprint"
+    
+    rectangle "DataAdaptorTemplate" as DataAdaptorTemplate #lightgreen {
+    }
+    
+        DataAdaptorTemplate   o- -> "1" Model : "blueprint"
+    
+    rectangle "DataBluePrintInstance" as DataBluePrintInstance #lightgreen {
+    }
+    
+        DataBluePrintInstance   o- -> "1" Model : "blueprint"
+    
+    rectangle "DataFlow" as DataFlow #lightgreen {
+    }
+    
+        DataFlow   o- -> "1" Model : "blueprint"
+    
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

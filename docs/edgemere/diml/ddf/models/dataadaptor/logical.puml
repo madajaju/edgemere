@@ -1,0 +1,40 @@
+@startuml
+
+class "DataAdaptor" as Model {
+ string name
+
+ create()
+ 
+}
+
+rectangle "DataBluePrint" as DataBluePrint #lightblue {
+}
+
+Model o--> "1" DataBluePrint : blueprint
+
+
+rectangle "DataSource" as DataSource #lightblue {
+}
+
+Model *--> "n" DataSource : sources
+
+
+
+
+    rectangle "DataAdaptorTemplate" as DataAdaptorTemplate #lightgreen {
+    }
+    
+        DataAdaptorTemplate   o--> "1" Model : "adaptor"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   o--> "1" Model : "adaptor"
+    
+    rectangle "Data" as Data #lightgreen {
+    }
+    
+        Data   o--> "1" Model : "adaptor"
+    
+
+@enduml

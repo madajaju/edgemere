@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="418px" preserveAspectRatio="none" style="width:870px;height:418px;" version="1.1" viewBox="0 0 870 418" width="870px" zoomAndPan="magnify"><defs><filter height="300%" id="fzn4oapng2rt" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#D3D3D3" height="403.6797" style="stroke: #A80036; stroke-width: 1.0;" width="164" x="214.5" y="4"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="154" x="217.5" y="17.4951">Common Physical Layer</text><rect fill="#D3D3D3" height="403.6797" style="stroke: #A80036; stroke-width: 1.0;" width="209" x="650.5" y="4"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="154" x="676" y="17.4951">Common Physical Layer</text><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="54" x2="54" y1="87.6094" y2="320.0703"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="143" x2="143" y1="87.6094" y2="320.0703"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="296" x2="296" y1="87.6094" y2="320.0703"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="683.5" x2="683.5" y1="87.6094" y2="320.0703"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="789.5" x2="789.5" y1="87.6094" y2="320.0703"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="86" x="8" y="84.5332">IT Operations</text><ellipse cx="54" cy="13" fill="#FEFECE" filter="url(#fzn4oapng2rt)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M54,21 L54,48 M41,29 L67,29 M54,48 L41,63 M54,48 L67,63 " fill="none" filter="url(#fzn4oapng2rt)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="86" x="8" y="333.6035">IT Operations</text><ellipse cx="54" cy="346.6797" fill="#FEFECE" filter="url(#fzn4oapng2rt)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M54,354.6797 L54,381.6797 M41,362.6797 L67,362.6797 M54,381.6797 L41,396.6797 M54,381.6797 L67,396.6797 " fill="none" filter="url(#fzn4oapng2rt)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="60" x="110" y="84.5332">EventBus</text><ellipse cx="143" cy="54" fill="#FEFECE" filter="url(#fzn4oapng2rt)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><line style="stroke: #A80036; stroke-width: 2.0;" x1="131" x2="155" y1="68" y2="68"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="60" x="110" y="333.6035">EventBus</text><ellipse cx="143" cy="352.6797" fill="#FEFECE" filter="url(#fzn4oapng2rt)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><line style="stroke: #A80036; stroke-width: 2.0;" x1="131" x2="155" y1="366.6797" y2="366.6797"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="18" x="284.5" y="84.5332">cpl</text><path d="M276,42 L276,66 M276,54 L293,54 " fill="none" filter="url(#fzn4oapng2rt)" style="stroke: #A80036; stroke-width: 2.0;"/><ellipse cx="305" cy="54" fill="#FFFFFF" filter="url(#fzn4oapng2rt)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="18" x="284.5" y="333.6035">cpl</text><path d="M276,340.6797 L276,364.6797 M276,352.6797 L293,352.6797 " fill="none" filter="url(#fzn4oapng2rt)" style="stroke: #A80036; stroke-width: 2.0;"/><ellipse cx="305" cy="352.6797" fill="#FFFFFF" filter="url(#fzn4oapng2rt)" rx="12" ry="12" style="stroke: #A80036; stroke-width: 2.0;"/><rect fill="#FEFECE" filter="url(#fzn4oapng2rt)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="55" x="654.5" y="51"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="41" x="661.5" y="72.5332">device</text><rect fill="#FEFECE" filter="url(#fzn4oapng2rt)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="55" x="654.5" y="319.0703"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="41" x="661.5" y="340.6035">device</text><rect fill="#FEFECE" filter="url(#fzn4oapng2rt)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="128" x="723.5" y="51"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="114" x="730.5" y="72.5332">aggregateddevice</text><rect fill="#FEFECE" filter="url(#fzn4oapng2rt)" height="31.6094" style="stroke: #A80036; stroke-width: 1.5;" width="128" x="723.5" y="319.0703"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="114" x="730.5" y="340.6035">aggregateddevice</text><polygon fill="#A80036" points="284.5,115.9609,294.5,119.9609,284.5,123.9609,288.5,119.9609" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="54" x2="290.5" y1="119.9609" y2="119.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="165" x="61" y="115.1045">Manage Aggregated Devices</text><polygon fill="#A80036" points="672,146.3125,682,150.3125,672,154.3125,676,150.3125" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="296.5" x2="678" y1="150.3125" y2="150.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="310" x="303.5" y="145.4561">create (name: hostmad1,file: ./templates/device.yaml)</text><polygon fill="#A80036" points="672,176.6641,682,180.6641,672,184.6641,676,180.6641" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="296.5" x2="678" y1="180.6641" y2="180.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="310" x="303.5" y="175.8076">create (name: hostmad2,file: ./templates/device.yaml)</text><polygon fill="#A80036" points="672,207.0156,682,211.0156,672,215.0156,676,211.0156" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="296.5" x2="678" y1="211.0156" y2="211.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="310" x="303.5" y="206.1592">create (name: hostmad3,file: ./templates/device.yaml)</text><polygon fill="#A80036" points="777.5,237.3672,787.5,241.3672,777.5,245.3672,781.5,241.3672" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="296.5" x2="783.5" y1="241.3672" y2="241.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="134" x="303.5" y="236.5107">create (name: admad1)</text><polygon fill="#A80036" points="777.5,267.7188,787.5,271.7188,777.5,275.7188,781.5,271.7188" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="296.5" x2="783.5" y1="271.7188" y2="271.7188"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="360" x="303.5" y="266.8623">adddevices (name: ad1,items: hostmad1,hostmad2,hostmad3)</text><polygon fill="#A80036" points="284.5,303.0703,294.5,303.0703,284.5,307.0703" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="143" x2="295.5" y1="302.0703" y2="302.0703"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="58" x="150" y="297.2139">method2()</text><!--
+@startuml
+
+actor "IT Operations"
+
+
+entity EventBus
+
+box Common Physical Layer #lightgray
+    boundary cpl #white
+end box
+
+
+box Common Physical Layer #lightgray
+            participant device
+            participant aggregateddevice
+    end box
+
+
+"IT Operations" -> cpl: Manage Aggregated Devices
+
+    cpl -> "device": create (name: hostmad1,file: ./templates/device.yaml)
+
+
+    cpl -> "device": create (name: hostmad2,file: ./templates/device.yaml)
+
+
+    cpl -> "device": create (name: hostmad3,file: ./templates/device.yaml)
+
+
+    cpl -> "aggregateddevice": create (name: admad1)
+
+
+    cpl -> "aggregateddevice": adddevices (name: ad1,items: hostmad1,hostmad2,hostmad3)
+
+
+
+
+
+EventBus - -/ cpl : method2()
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="308px" preserveAspectRatio="none" style="width:885px;height:308px;" version="1.1" viewBox="0 0 885 308" width="885px" zoomAndPan="magnify"><defs><filter height="300%" id="fiz8z46v707z3" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><ellipse cx="458.7698" cy="172.454" fill="#FEFECE" filter="url(#fiz8z46v707z3)" rx="85.2698" ry="19.454" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="139" x="389.2698" y="177.7586">Manage Infrastructure</text><!--entity ITOperations--><ellipse cx="459" cy="18" fill="#FEFECE" filter="url(#fiz8z46v707z3)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M459,26 L459,53 M446,34 L472,34 M459,53 L446,68 M459,53 L472,68 " fill="none" filter="url(#fiz8z46v707z3)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="86" x="416" y="89.5332">IT Operations</text><ellipse cx="57.0833" cy="274.4517" fill="#D3D3D3" filter="url(#fiz8z46v707z3)" rx="51.0833" ry="15.4517" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="68" x="23.0833" y="279.7564">AddDevice</text><ellipse cx="243.9506" cy="274.5901" fill="#D3D3D3" filter="url(#fiz8z46v707z3)" rx="100.9506" ry="22.5901" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="175" x="156.4506" y="279.8948">ManageAggregatedDevices</text><ellipse cx="459.0399" cy="274.708" fill="#D3D3D3" filter="url(#fiz8z46v707z3)" rx="79.0399" ry="18.208" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="124" x="397.0399" y="280.0127">ManageDataCenter</text><ellipse cx="640.7635" cy="274.4527" fill="#D3D3D3" filter="url(#fiz8z46v707z3)" rx="67.7635" ry="15.9527" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="95" x="593.2635" y="279.7574">RemoveDevice</text><ellipse cx="809.2254" cy="274.4517" fill="#D3D3D3" filter="url(#fiz8z46v707z3)" rx="65.2254" ry="15.4517" style="stroke: #A80036; stroke-width: 1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="88" x="765.2254" y="279.7564">UpdateDevice</text><!--link ITOperations to ManageInfrastructure--><path d="M459,93.133 C459,111.379 459,132.132 459,147.696 " fill="none" id="ITOperations-ManageInfrastructure" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="459,152.764,463,143.764,459,147.764,455,143.764,459,152.764" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageInfrastructure to AddDevice--><path d="M398.315,186.32 C331.12,200.8506 219.762,225.9233 125,252 C115.241,254.6856 104.7802,257.8484 95.0614,260.9098 " fill="none" id="ManageInfrastructure-AddDevice" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="90.0543,262.4984,99.8426,263.5892,94.8202,260.9863,97.4231,255.9639,90.0543,262.4984" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageInfrastructure to ManageAggregatedDevices--><path d="M423.014,190.238 C386.714,207.1212 330.505,233.2651 290.77,251.7465 " fill="none" id="ManageInfrastructure-ManageAggregatedDevices" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="286.009,253.9612,295.8564,253.7926,290.5426,251.8526,292.4827,246.5388,286.009,253.9612" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageInfrastructure to ManageDataCenter--><path d="M459,192.309 C459,209.0243 459,233.4825 459,251.1825 " fill="none" id="ManageInfrastructure-ManageDataCenter" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="459,256.4425,463,247.4425,459,251.4425,455,247.4425,459,256.4425" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageInfrastructure to RemoveDevice--><path d="M490.287,190.691 C524.094,209.2662 577.589,238.6585 610.919,256.9719 " fill="none" id="ManageInfrastructure-RemoveDevice" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="615.685,259.5909,609.7226,251.7519,611.3026,257.1836,605.8709,258.7637,615.685,259.5909" style="stroke: #A80036; stroke-width: 1.0;"/><!--link ManageInfrastructure to UpdateDevice--><path d="M510.268,188.148 C578.83,207.7372 699.271,242.1488 764.312,260.732 " fill="none" id="ManageInfrastructure-UpdateDevice" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="769.281,262.1516,761.727,255.832,764.4736,260.7774,759.5282,263.5239,769.281,262.1516" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+
+
+usecase "Manage Infrastructure" as ManageInfrastructure
+
+Actor "IT Operations" as ITOperations
+
+ITOperations - -> ManageInfrastructure
+
+
+
+usecase "AddDevice" as AddDevice #lightgrey
+
+ManageInfrastructure - -> AddDevice
+
+usecase "ManageAggregatedDevices" as ManageAggregatedDevices #lightgrey
+
+ManageInfrastructure - -> ManageAggregatedDevices
+
+usecase "ManageDataCenter" as ManageDataCenter #lightgrey
+
+ManageInfrastructure - -> ManageDataCenter
+
+usecase "RemoveDevice" as RemoveDevice #lightgrey
+
+ManageInfrastructure - -> RemoveDevice
+
+usecase "UpdateDevice" as UpdateDevice #lightgrey
+
+ManageInfrastructure - -> UpdateDevice
+
+@enduml
+
+PlantUML version 1.2019.05(Sat Apr 20 09:45:36 PDT 2019)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 12.0.1+12
+Operating System: Windows 10
+OS Version: 10.0
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

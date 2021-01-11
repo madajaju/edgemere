@@ -1,0 +1,70 @@
+@startuml
+
+
+
+state DataRequest #lightblue {
+
+    state Init #lightblue {
+    }
+
+    state Needed #lightblue {
+    }
+
+    state Failed #lightblue {
+    }
+
+    state Selected #lightblue {
+    }
+
+    state Satisfied #lightblue {
+    }
+
+    state Evaluated #lightblue {
+    }
+
+    state Completed #lightblue {
+    }
+
+}
+
+
+Init --> Needed : fulfill
+
+Needed --> Selected : selected
+
+Needed --> Failed : failed
+
+Selected --> Evaluated : evaluated
+
+Satisfied --> Completed : complete
+
+Evaluated --> Satisfied : satisfied
+
+Evaluated --> Failed : failed
+
+
+
+ state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "do" as dimldmldo #lightblue {
+state "reserve" as dimldmldoreserve #lightblue {
+}
+}
+}
+}
+
+ Needed -[#black]--> dimldmldoreserve
+ 
+ state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "do" as dimldmldo #lightblue {
+state "evaluate" as dimldmldoevaluate #lightblue {
+}
+}
+}
+}
+
+ Selected -[#black]--> dimldmldoevaluate
+ 
+
+@enduml

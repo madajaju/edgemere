@@ -1,0 +1,45 @@
+@startuml
+
+left to right direction
+
+
+boundary ailtire_parent_network_family #red
+
+
+entity ailtire_appname_sa_pe_family #black
+
+
+
+
+package "sa_pe" #pink {
+    queue childrennet #black [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#black]- ailtire_appname_sa_pe_family
+    
+    queue siblingnet #blue [
+            <b><color:white>sibling</color></b>
+    ]
+    
+    queue parentnet #red [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#red]- ailtire_parent_network_family
+    
+
+node "web" as webService
+
+
+        artifact "sa_pe_web:latest" as sa_pe_weblatestimage
+    
+}
+
+webService -[#black]- childrennet
+
+webService -[#red]- parentnet
+webService .... sa_pe_weblatestimage
+
+
+@enduml
