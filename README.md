@@ -22,7 +22,7 @@ Many organizations have many of these subsystems already in their toolbox of sol
 
 # Detailed Documentation
 
-Complete documentation of the architecture can be found on [github pages](https://madajaju.github.io/).
+Complete documentation of the architecture can be found on [github pages](https://madajaju.github.io/edgemere).
 
 
 
