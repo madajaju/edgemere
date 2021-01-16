@@ -28,7 +28,7 @@ Manage Stacks allows the stack developer to create, update, and delete stacks.
 
 Deploy Stack allows a devops engineer to deploy a stack to an environment. Parameters can be passed during the deployment of the stack to the environment. Policies are attached to the stack during deployment and the stack is Service Orchestrator creates a landscape request to match the request of deploying the stack requirements.
 
-![Scenario nameNoSpaces](./DeployStack.svg)
+![Scenario DeployStack](./deploystack.svg)
 
 #### Steps
 
@@ -44,7 +44,7 @@ Deploy Stack allows a devops engineer to deploy a stack to an environment. Param
 
 Uninstall Stack shuts down the stack and all of its services.
 
-![Scenario nameNoSpaces](./UninstallStack.svg)
+![Scenario UninstallStack](./uninstallstack.svg)
 
 #### Steps
 
@@ -60,7 +60,7 @@ Uninstall Stack shuts down the stack and all of its services.
 
 Update Stack allows the DevOps Engineer to update the stack after it has been deployed. This can include policies changes in the environment, updates to the stack definition, service definitions, or environmental changes.
 
-![Scenario nameNoSpaces](./UpdateStack.svg)
+![Scenario UpdateStack](./updatestack.svg)
 
 #### Steps
 

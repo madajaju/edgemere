@@ -30,7 +30,7 @@ DevOps Engineers and Application Developers need the ability to manage applicati
 
 Create Application is the description
 
-![Scenario nameNoSpaces](./CreateApplication.svg)
+![Scenario CreateApplication](./createapplication.svg)
 
 #### Steps
 
@@ -46,7 +46,7 @@ Create Application is the description
 
 Deploy Application is the description
 
-![Scenario nameNoSpaces](./DeployApplication.svg)
+![Scenario DeployApplication](./deployapplication.svg)
 
 #### Steps
 
@@ -62,7 +62,7 @@ Deploy Application is the description
 
 Destroy Application is the description
 
-![Scenario nameNoSpaces](./DestroyApplication.svg)
+![Scenario DestroyApplication](./destroyapplication.svg)
 
 #### Steps
 
@@ -78,7 +78,7 @@ Destroy Application is the description
 
 Monitor Application is the description
 
-![Scenario nameNoSpaces](./MonitorApplication.svg)
+![Scenario MonitorApplication](./monitorapplication.svg)
 
 #### Steps
 
@@ -95,7 +95,7 @@ Monitor Application is the description
 
 Update Application is the description
 
-![Scenario nameNoSpaces](./UpdateApplication.svg)
+![Scenario UpdateApplication](./updateapplication.svg)
 
 #### Steps
 

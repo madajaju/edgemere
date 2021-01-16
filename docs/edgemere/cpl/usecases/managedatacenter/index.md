@@ -29,7 +29,7 @@ IT Operations manages data centers by creating, deleting, enabling and disabling
 
 IT Operator creates data centers and allows them to add devices and aggregated devices
 
-![Scenario nameNoSpaces](./CreateDataCenter.svg)
+![Scenario CreateDataCenter](./createdatacenter.svg)
 
 #### Steps
 
@@ -71,7 +71,7 @@ IT Operator creates data centers and allows them to add devices and aggregated d
 
 IT Operations can disable a data center that will disable all of the devices in the data center. This can be used to test business continuity, move data center devices or decomission a data center.
 
-![Scenario nameNoSpaces](./DisableDataCenter.svg)
+![Scenario DisableDataCenter](./disabledatacenter.svg)
 
 #### Steps
 
@@ -95,7 +95,7 @@ IT Operations can disable a data center that will disable all of the devices in 
 
 IT Operations can enable a data center that has been disabled
 
-![Scenario nameNoSpaces](./EnableDataCenter.svg)
+![Scenario EnableDataCenter](./enabledatacenter.svg)
 
 #### Steps
 
@@ -121,7 +121,7 @@ IT Operations can enable a data center that has been disabled
 
 IT Operations can remove a Data Center and all of its devices and aggregated devices
 
-![Scenario nameNoSpaces](./RemoveDataCenter.svg)
+![Scenario RemoveDataCenter](./removedatacenter.svg)
 
 #### Steps
 
@@ -157,7 +157,7 @@ IT Operations can remove a Data Center and all of its devices and aggregated dev
 
 IT Operations updates data center characteristics
 
-![Scenario nameNoSpaces](./UpdateDataCenter.svg)
+![Scenario UpdateDataCenter](./updatedatacenter.svg)
 
 #### Steps
 

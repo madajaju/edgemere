@@ -38,7 +38,7 @@ module.exports = {
         }
         // Find all of the data that could match the request.S
         // Query the Meta-Data Manager.
-        let data = await AService.call('fmdm.query', {expression:dreq.query});
+        let data = await AService.call('diml.dml.fmdm.query', {expression:dreq.query});
         // Create a Data Reservation for each data item returned
         for(let i in data) {
             let datum = data[i];

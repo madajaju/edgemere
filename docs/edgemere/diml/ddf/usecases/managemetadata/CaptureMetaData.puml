@@ -1,0 +1,59 @@
+@startuml
+
+actor "Actor"
+
+
+entity EventBus
+
+box Data Definition Framework #ffcc88
+    boundary ddf #white
+end box
+
+
+box Data Definition Framework #ffcc88
+            participant dataadaptor
+            participant dataflow
+            participant datablueprint
+            participant datasource
+    end box
+
+box Distributed Information Management Layer #ffcc88
+    end box
+
+
+"Actor" -> ddf: Capture Meta Data
+
+    ddf -> "dataadaptor": create (name: filesystem,file: ./templates/dataadaptor-filesystem.yaml)
+
+
+    ddf -> "dataflow": create (name: filesystembasic,file: ./templates/dataflow-filesystembasic.yaml)
+
+
+    ddf -> "datablueprint": create (name: filesystemBluePrint1,file: ./templates/datablueprint-filesystem.yaml)
+
+
+    ddf -> "datasource": create (name: myFileSystem1,file: ./templates/datasource.yaml)
+
+
+    ddf -> "datasource": create (name: myFileSystem2,file: ./templates/datasource.yaml)
+
+
+    ddf -> "diml/ddf/datablueprint": deploy (name: myBP1,blueprint: filesystemBluePrint1,sources: mySource=myFileSystem1)
+
+
+    ddf -> "diml/ddf/datasource": simulate (name: myFileSystem1,file: ./templates/datasource-simulation.yaml)
+
+
+    ddf -> "diml": find (query: owner:darren)
+
+
+
+
+box "Data Management Layer" #ffcc88
+    boundary dml #white
+end box
+EventBus -\ dml: method()
+dml --/ EventBus: Model.Event2
+
+EventBus --/ ddf : method2()
+@enduml

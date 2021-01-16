@@ -29,7 +29,7 @@ Manage Infrastructure is the description
 
 Add Device is the description
 
-![Scenario nameNoSpaces](./AddDevice.svg)
+![Scenario AddDevice](./adddevice.svg)
 
 #### Steps
 
@@ -51,7 +51,7 @@ Add Device is the description
 
 Manage Aggregated Devices is the description
 
-![Scenario nameNoSpaces](./ManageAggregatedDevices.svg)
+![Scenario ManageAggregatedDevices](./manageaggregateddevices.svg)
 
 #### Steps
 
@@ -75,7 +75,7 @@ Manage Aggregated Devices is the description
 
 Manage Data Center is the description
 
-![Scenario nameNoSpaces](./ManageDataCenter.svg)
+![Scenario ManageDataCenter](./managedatacenter.svg)
 
 #### Steps
 
@@ -117,7 +117,7 @@ Manage Data Center is the description
 
 Remove Device is the description
 
-![Scenario nameNoSpaces](./RemoveDevice.svg)
+![Scenario RemoveDevice](./removedevice.svg)
 
 #### Steps
 
@@ -133,7 +133,7 @@ Remove Device is the description
 
 Update Device is the description
 
-![Scenario nameNoSpaces](./UpdateDevice.svg)
+![Scenario UpdateDevice](./updatedevice.svg)
 
 #### Steps
 

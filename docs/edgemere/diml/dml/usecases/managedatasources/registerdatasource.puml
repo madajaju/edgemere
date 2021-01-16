@@ -1,6 +1,6 @@
 @startuml
 
-actor "Actor"
+actor "DataEngineer"
 
 
 entity EventBus
@@ -10,8 +10,28 @@ box Data Management Layer #ffcc88
 end box
 
 
+box Data Definition Framework #ffcc88
+            participant dataadaptor
+            participant datasource
+    end box
 
-"Actor" -> dml: Register Data Source
+
+"DataEngineer" -> dml: Register Data Source
+
+    dml -> "dataadaptor": create (name: filesystem1,file: ./templates/dataadaptor-filesystem.yaml)
+
+
+    dml -> "datasource": create (name: myDataVolume1,adaptor: filesystem1,file: ./templates/datasource.yaml)
+
+
+    dml -> "datasource": create (name: myDataVolume2,adaptor: filesystem1,parameters: host=localhost, filesystem=/tmp/user2)
+
+
+    dml -> "datasource": create (name: myDataVolume3,adaptor: filesystem1,parameters: host=localhost, filesystem=/tmp/user3)
+
+
+    dml -> "datasource": create (name: myDataVolume4,adaptor: filesystem1,parameters: host=localhost, filesystem=/tmp/user4)
+
 
 
 

@@ -1,4 +1,5 @@
 const path = require('path');
+const AClass = require('ailtire/src/Server/AClass');
 
 module.exports = {
     friendlyName: 'list',
@@ -22,7 +23,8 @@ module.exports = {
 
     fn: function (inputs, env) {
         // inputs contains the obj for the this method.
-        env.res.json(global.classes);
-        env.res.end("Done");
+        let retval = AClass.getInstances('DataSource');
+        env.res.json(retval);
+        return retval;
     }
 };

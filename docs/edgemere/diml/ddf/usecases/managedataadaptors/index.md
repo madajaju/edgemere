@@ -28,7 +28,7 @@ Manage Data Adaptors is the description
 
 Attach Data Blue Print is the description
 
-![Scenario nameNoSpaces](./AttachDataBluePrint.svg)
+![Scenario AttachDataBluePrint](./attachdatablueprint.svg)
 
 #### Steps
 
@@ -44,7 +44,7 @@ Attach Data Blue Print is the description
 
 Create Data Adaptor is the description
 
-![Scenario nameNoSpaces](./CreateDataAdaptor.svg)
+![Scenario CreateDataAdaptor](./createdataadaptor.svg)
 
 #### Steps
 
@@ -60,7 +60,7 @@ Create Data Adaptor is the description
 
 Update Data Adaptor is the description
 
-![Scenario nameNoSpaces](./UpdateDataAdaptor.svg)
+![Scenario UpdateDataAdaptor](./updatedataadaptor.svg)
 
 #### Steps
 

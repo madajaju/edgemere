@@ -46,6 +46,7 @@ users interact with the system.
 
 ![Scenario Mappings Diagram](./scenariomapping.svg)
 
+* [ edgemere diml ddf data create](#action--edgemere-diml-ddf-data-create)
 * [ edgemere diml ddf data govern](#action--edgemere-diml-ddf-data-govern)
 * [ edgemere diml ddf data source name](#action--edgemere-diml-ddf-data-source-name)
 * [ edgemere diml ddf datablueprint deploy](#action--edgemere-diml-ddf-datablueprint-deploy)
@@ -176,6 +177,20 @@ TBD
 The Data Definition Framework subsystem has a well defined interface. This interface can be accessed using a
 command line interface (CLI), REST interface, and Web user interface. This interface is how all other
 subsystems and actors can access the system.
+
+### Action  edgemere diml ddf data create
+
+* REST - /edgemere/diml/ddf/data/create
+* bin -  edgemere diml ddf data create
+* js - .edgemere.diml.ddf.data.create
+
+Description of the action
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
 
 ### Action  edgemere diml ddf data govern
 

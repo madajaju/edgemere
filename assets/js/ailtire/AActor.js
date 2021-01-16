@@ -59,7 +59,7 @@ export default class AActor {
         }
         group.aid = node.id;
         node.box = 100;
-        node.expandLink =  `actor/get?id=${node.id}`;
+        node.expandLink = `actor/get?id=${node.id}`;
 
         return group;
     }
@@ -101,13 +101,27 @@ export default class AActor {
         ];
         w2ui['objlist'].columns = cols;
         let i = 0;
-        records.push({recid: i++, name:'name', value:result.name, detail:result.name});
-        records.push({recid: i++, name:'shortname', value:result.shortname, detail:result.shortname});
-        records.push({recid: i++, name:'description', value:result.description, detail:result.description});
+        records.push({recid: i++, name: 'name', value: result.name, detail: result.name});
+        records.push({recid: i++, name: 'shortname', value: result.shortname, detail: result.shortname});
+        records.push({recid: i++, name: 'description', value: result.description, detail: result.description});
         let ucdetails = getDetails(result.usecases);
-        records.push({recid: i++, name:'usecases', value:Object.keys(result.usecases).length, detail: ucdetails.join('|')});
+        if(result.usecases) {
+            records.push({
+                recid: i++,
+                name: 'usecases',
+                value: Object.keys(result.usecases).length,
+                detail: ucdetails.join('|')
+            });
+        }
         let sdetails = getDetails(result.scenarios);
-        records.push({recid: i++, name:'scenarios', value:Object.keys(result.scenarios).length, detail:sdetails.join('|')});
+        if(result.scenarios) {
+            records.push({
+                recid: i++,
+                name: 'scenarios',
+                value: Object.keys(result.scenarios).length,
+                detail: sdetails.join('|')
+            });
+        }
         w2ui['objlist'].records = records;
         w2ui['objlist'].refresh();
     }
@@ -117,9 +131,9 @@ function showGraph(actor, mode) {
     let data = {nodes: {}, links: []};
 
     window.graph.clearObjects();
-    let node = {id: actor.id, name: actor.name, view: AActor.view3D, fx:0, fy:0, fz:0, box: 100};
+    let node = {id: actor.shortname, name: actor.name.replace(/\s/g,'\n'), view: AActor.view3D, fx: 0, fy: 0, fz: 0};
 
-    data.nodes[actor.id] = node;
+    data.nodes[actor.shortname] = node;
     let i = 0;
     for (let j in actor.scenarios) {
         let scenario = actor.scenarios[j];
@@ -134,17 +148,13 @@ function showGraph(actor, mode) {
     i = 0;
     for (let j in actor.usecases) {
         let uc = actor.usecases[j];
-        let node = {id: j, name: uc.name, view: AUsecase.view3D, box: 100 };
+        let node = {id: j, name: uc.name.replace(/\s/g, '\n'), view: AUsecase.view3D}
         data.nodes[j] = node;
-        /* let sobj = AUsecase.view3D(node, '');
-        sobj.aid = j;
-        window.graph.addObject(sobj);
-         */
         i++;
-        data.links.push({source: actor.id, target: j});
-        for(let k in uc.scenarios) {
-            if(data.nodes.hasOwnProperty(k)) {
-                data.links.push({source: j, target: k});
+        data.links.push({source: actor.shortname, target: j, value: 0.1});
+        for (let k in uc.scenarios) {
+            if (data.nodes.hasOwnProperty(k)) {
+                data.links.push({source: j, target: k, value: 0.1});
             }
         }
     }
@@ -160,7 +170,7 @@ function showGraph(actor, mode) {
 function getDetails(objs) {
     let items = [];
     let inum = 0;
-    for(let j in objs) {
+    for (let j in objs) {
         let item = objs[j];
         inum++;
         let name = item.name || j;

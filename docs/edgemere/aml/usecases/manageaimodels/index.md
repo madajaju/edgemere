@@ -31,7 +31,7 @@ Data Scientist manages AI models and ties them to and application and data set. 
 
 Create AI Model is the description
 
-![Scenario nameNoSpaces](./CreateAIModel.svg)
+![Scenario CreateAIModel](./createaimodel.svg)
 
 #### Steps
 
@@ -48,7 +48,7 @@ Create AI Model is the description
 
 Deploy AI Model is the description
 
-![Scenario nameNoSpaces](./DeployAIModel.svg)
+![Scenario DeployAIModel](./deployaimodel.svg)
 
 #### Steps
 
@@ -66,7 +66,7 @@ Deploy AI Model is the description
 
 Destroy AI Model is the description
 
-![Scenario nameNoSpaces](./DestroyAIModel.svg)
+![Scenario DestroyAIModel](./destroyaimodel.svg)
 
 #### Steps
 
@@ -83,7 +83,7 @@ Destroy AI Model is the description
 
 Update AI Model is the description
 
-![Scenario nameNoSpaces](./UpdateAIModel.svg)
+![Scenario UpdateAIModel](./updateaimodel.svg)
 
 #### Steps
 
