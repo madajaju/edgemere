@@ -50,12 +50,14 @@ hostURL += ':' + global.ailtire.config.listenPort;
 
 <div id="main" style="position: absolute; width: 100%; height: 100%; overflow: hidden;"></div>
 <script type="module">
-    import {APackage, AScenario, AUsecase, AActor} from './js/ailtire/index.js';
+    import {APackage, AScenario, AUsecase, AActor, AModel, AStack} from './js/ailtire/index.js';
 
     let pkgview = new APackage({});
     let scenarioview = new AScenario({});
     let usecaseview = new AUsecase({});
     let actorview = new AActor({});
+    let modelview = new AModel({});
+    let stackview = new AStack({});
 
 // common colors to use based on status
     const scolor = {
@@ -78,6 +80,8 @@ hostURL += ':' + global.ailtire.config.listenPort;
         package: pkgview.handle,
         usecase: usecaseview.handle,
         actor: actorview.handle,
+        model: modelview.handle,
+        stack: stackview.handle,
     }
     // currentView is set to null first.
     let currentView = null;
@@ -141,6 +145,36 @@ hostURL += ':' + global.ailtire.config.listenPort;
         });
     }
 
+    function getDeploymentNodes(deployments) {
+        let sitems = [];
+        for (let ename in deployments.environments) {
+            let env = deployments.environments[ename];
+            let spkgi = {
+                id: ename,
+                text: ename,
+                img: 'icon-folder',
+                view: 'Environment',
+                nodes: []
+            };
+            if(env.stacks) {
+                for(let sname in env.stacks) {
+                    let stack = env.stacks[sname];
+                    let citem = {
+                        parent: ename,
+                        id: stack.id,
+                        text: sname,
+                        img: 'icon-page',
+                        link: `deployment/get?id=${stack.id}`,
+                        view: 'stack'
+                    };
+                    spkgi.nodes.push(citem);
+                }
+                spkgi.count = spkgi.nodes.length;
+            }
+            sitems.push(spkgi);
+        }
+        return sitems;
+    }
     function getPackageNodes(pkg) {
         let sitems = [];
         for (let pname in pkg.subpackages) {
@@ -148,7 +182,7 @@ hostURL += ':' + global.ailtire.config.listenPort;
             let spkgi = {
                 id: spkg.shortname,
                 text: spkg.name,
-                img: 'icon-page',
+                img: 'icon-folder',
                 link: `package/get?id=${pname}`,
                 view: 'package'
             };
@@ -159,6 +193,17 @@ hostURL += ':' + global.ailtire.config.listenPort;
             }
             sitems.push(spkgi);
         }
+        for(let cname in pkg.classes) {
+            let cls = pkg.classes[cname];
+            let citem = {
+                id: cls.name,
+                text: cls.name,
+                img: 'icon-page',
+                link: `model/get?id=${cname}`,
+                view: 'model'
+            };
+            sitems.push(citem);
+        }
         return sitems;
     }
 
@@ -166,8 +211,18 @@ hostURL += ':' + global.ailtire.config.listenPort;
         $.ajax({
             url: 'package/list',
             success: function (results) {
+                console.log(results);
                 let packageList = getPackageNodes(results);
                 w2ui[panel].add(parent, packageList);
+            }
+        });
+    }
+    function showDeploymentList(panel, parent) {
+        $.ajax({
+            url: 'deployment/list',
+            success: function (results) {
+                let deploymentList = getDeploymentNodes(results);
+                w2ui[panel].add(parent, deploymentList);
             }
         });
     }
@@ -824,12 +879,11 @@ hostURL += ':' + global.ailtire.config.listenPort;
                 {id: 'actors', text: 'Actors', group: true, expanded: true, nodes: []},
                 {id: 'packages', text: 'Packages', group: true, expanded: true, nodes: []},
                 {id: 'usecases', text: 'Use Cases', group: true, expanded: true, nodes: []},
+                {id: 'deployments', text: 'Deployment', group: true, expanded: true, nodes: []},
             ],
             onClick: function (event) {
                 if (event.object.link) {
                     // Get the information from the link and load it in the mainpage and the preview
-                    console.log("Link:" + event.object.link);
-                    console.log("View:" + event.object.view);
                     $.ajax({
                         url: event.object.link,
                         success: handlers[event.object.view],
@@ -875,6 +929,7 @@ hostURL += ':' + global.ailtire.config.listenPort;
         showActorList('sidebar', 'actors');
         showUseCaseList('sidebar', 'usecases');
         showPackageList('sidebar', 'packages');
+        showDeploymentList('sidebar', 'deployments');
         let width = $('#modelGraph').width();
         let height = $('#modelGraph').height();
         let graph = new Graph3D("DrawingArea", {nodes: {}, links: []}, {

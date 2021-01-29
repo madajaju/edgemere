@@ -1,12 +1,12 @@
 const path = require('path');
 
 module.exports = {
-    friendlyName: 'addDevices',
-    description: 'Add Devices to the Data Center',
-    static: false, // True is for Class methods. False is for object based.
+    friendlyname: 'adddevices',
+    description: 'add devices to the data center',
+    static: false, // true is for class methods. false is for object based.
     inputs: {
         item: {
-            description: 'Devices to add to the Data Center',
+            description: 'devices to add to the data center',
             type: 'object', // string|boolean|number|json
             required: true
         },
@@ -17,7 +17,7 @@ module.exports = {
 
     fn: function (obj, inputs, env) {
         if(!obj.profile) {
-            obj.profile = new PhysicalProfile();
+            obj.profile = new physicalprofile();
         }
         obj.profile.combine(inputs.item);
         return obj;

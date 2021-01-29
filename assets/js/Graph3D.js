@@ -61,7 +61,7 @@ class Graph3D {
             .height(this.options.height)
             .backgroundColor(this.options.background)
             .nodeVal((node) => {
-                return node.size || 50;
+                return node.box || 50;
             })
             .nodeThreeObject(node => {
                 let retval = null;
@@ -91,6 +91,15 @@ class Graph3D {
                     return obj3D;
                 }
             })
+            .linkCurvature(link => {
+                if (link.source === link.target) {
+                    return 1;
+                }
+                if (link.curve) {
+                    return link.curve;
+                }
+                return 0;
+            })
             .linkWidth(link => {
                 let width = link.width || 2;
                 if (this.selected.links.target.has(link)) {
@@ -101,6 +110,47 @@ class Graph3D {
                 return width;
             })
             .linkOpacity(1.0)
+            .linkDirectionalArrowRelPos(link => {
+                return link.relpos;
+            })
+            .linkDirectionalArrowLength(link => {
+                if (link.arrow) {
+                    return link.arrow;
+                }
+                return 0;
+            })
+            .linkThreeObjectExtend(true)
+            .linkThreeObject(link => {
+                // extend link with text sprite
+                if (link.name) {
+                    const sprite = new SpriteText(`${link.name}`);
+                    sprite.color = 'lightgrey';
+                    sprite.textHeight = 10;
+                    sprite.lcurve = link.curve;
+                    return sprite;
+                }
+                return null;
+
+            })
+            .linkPositionUpdate((sprite, {start, end}) => {
+                if (sprite) {
+                    if (sprite.lcurve) {
+                        const dx = end.x - start.x;
+                        const dy = end.y - start.u || 0;
+                        let vLine = new THREE.Vector3().subVectors(end, start);
+                        let cp = vLine.clone().multiplyScalar(sprite.lcurve / 2).cross(dx !== 0 || dy !== 0 ? new THREE.Vector3(0, 0, 1) : new THREE.Vector3(0, 1, 0))
+                            .add(new THREE.Vector3().addVectors(start, end).divideScalar(2));
+                        Object.assign(sprite.position, cp);
+                    } else {
+                        const middlePos = Object.assign(...['x', 'y', 'z'].map(c => ({
+                            [c]: start[c] + (end[c] - start[c]) / 2 // calc middle point
+                        })));
+
+                        // Position sprite
+                        Object.assign(sprite.position, middlePos);
+                    }
+                }
+            })
             .linkDirectionalParticles(link => {
                 if (this.selected.links.target.has(link)) {
                     return 5;
@@ -152,26 +202,14 @@ class Graph3D {
                 }
             });
         this.linkForce = this.graph
-            .d3Force('collide', d3.forceCollide(this.graph.nodeRelSize() + 30))
-            .d3Force('plane', forceOnPlane())
             .d3Force('link')
-            .distance(link => link.value * 10 + 1);
-        /* for(let i in this.levels) {
-            const geo = new THREE.SphereGeometry(10);
-            const mat = new THREE.MeshLambertMaterial({color: 0x000000, opacity:1.0, transparent:true});
-            const mesh = new THREE.Mesh(geo, mat);
-            mesh.position.set(this.levels[i].x, this.levels[i].y,this.levels[i].z);
+            .distance(link => link.value * 10);
+        this.graph
+            .d3Force('collide', d3.forceCollide().radius((d) => {
+                return d.box || 20;
+            }))
+            .d3Force('plane', forceOnPlane());
 
-            this.graph.scene().add(mesh);
-        }
-         */
-        this.graph.d3Force('collide', d3.forceCollide().radius((d) => {
-            return d.box || 50;
-        }));
-        /* this.graph.d3Force('link')
-             .distance(200);
-
-         */
         this.graph.numDimensions(3);
         window.graph = this;
     };
@@ -261,7 +299,10 @@ class Graph3D {
             }
             j++;
         }
+        let linkmap = {};
         // Cleanup links to non-objects
+        // If multiple links between objects change the curve.
+        let k = 0;
         for (let i in this.data.links) {
             let source = this.data.links[i].source;
             let target = this.data.links[i].target;
@@ -276,6 +317,22 @@ class Graph3D {
             }
             if (found) {
                 this.ndata.links.push(this.data.links[i]);
+                if (!linkmap.hasOwnProperty(source + target)) {
+                    linkmap[source + target] = [];
+                }
+                linkmap[source + target].push(k);
+                k++;
+            }
+        }
+        for (let ni in linkmap) {
+            let litem = linkmap[ni];
+            if (litem.length > 1) {
+                let curve = -litem.length / 2 * 0.2;
+                for (let i in litem) {
+                    let lid = litem[i];
+                    this.ndata.links[lid].curve = curve;
+                    curve += 0.2;
+                }
             }
         }
     };
@@ -422,23 +479,29 @@ function forceOnPlane() {
     function force(alpha) {
         for (let i = 0, n = nodes.length, node, k = alpha * 0.1; i < n; ++i) {
             node = nodes[i];
-            if (parent) {
-                if (node.rbox) {
-                    let parent = nodes[nmap[node.rbox.parent]];
+            if (node.rbox) {
+                let parent = nodes[nmap[node.rbox.parent]];
+                if(parent) { // the Parent is found then go forward. If not then don't.
                     if (node.rbox.x) {
-                        let newx = node.x + node.vx;
-                        let min = parent.x + node.rbox.x.min;
-                        let max = parent.x + node.rbox.x.max;
-                        let v = node.vx;
-                        if (Math.abs(node.vx) > Math.abs(max - min)) {
-                            v = (max - min) / 4;
-                        }
-                        if (newx < min) {
-                            node.x = min;
-                            node.vx = -v * k;
-                        } else if (newx > max) {
-                            node.x = max;
-                            node.vx = -v * k;
+                        if (node.rbox.x.min === node.rbox.x.max) {
+                            let newx = parent.x + node.rbox.x.min;
+                            node.vx = (node.x - newx) / 2 * k;
+                            node.x = newx;
+                        } else {
+                            let newx = node.x + node.vx;
+                            let min = parent.x + node.rbox.x.min;
+                            let max = parent.x + node.rbox.x.max;
+                            let v = node.vx;
+                            if (Math.abs(node.vx) > Math.abs(max - min)) {
+                                v = (max - min) / 4;
+                            }
+                            if (newx < min) {
+                                node.x = min;
+                                node.vx = -v * k;
+                            } else if (newx > max) {
+                                node.x = max;
+                                node.vx = -v * k;
+                            }
                         }
                     }
                     if (node.rbox.y) {
@@ -446,35 +509,48 @@ function forceOnPlane() {
                         let min = parent.y + node.rbox.y.min;
                         let max = parent.y + node.rbox.y.max;
                         let v = node.vy;
-                        if (Math.abs(node.vy) > Math.abs(max - min)) {
-                            v = (max - min) / 4;
-                        }
-                        if (newy < min) {
-                            node.y = min;
-                            node.vy = -v * k;
-                        } else if (newy > max) {
-                            node.y = max;
-                            node.vy = -v * k;
+                        if (node.rbox.y.min === node.rbox.y.max) {
+                            let newy = parent.y + node.rbox.y.min;
+                            node.vy = (node.y - newy) / 2;
+                            node.y = newy;
+                        } else {
+                            if (Math.abs(node.vy) > Math.abs(max - min)) {
+                                v = (max - min) / 4;
+                            }
+                            if (newy < min) {
+                                node.y = min;
+                                node.vy = -v * k;
+                            } else if (newy > max) {
+                                node.y = max;
+                                node.vy = -v * k;
+                            }
                         }
                     }
                     if (node.rbox.z) {
-                        let newz = node.z + node.vz;
-                        let min = parent.z + node.rbox.z.min;
-                        let max = parent.z + node.rbox.z.max;
-                        let v = node.vz;
-                        if (Math.abs(node.vz) > Math.abs(max - min)) {
-                            v = (max - min) / 2;
-                        }
-                        if (newz < min) {
-                            node.z = min;
-                            node.vz = -v * k;
-                        } else if (newz > max) {
-                            node.z = max;
-                            node.vz = -v * k;
+                        if (node.rbox.z.min === node.rbox.z.max) {
+                            let newz = parent.z + node.rbox.z.min;
+                            node.vz = (node.z - newz) / 2 * k;
+                            node.z = newz;
+                        } else {
+                            let newz = node.z + node.vz;
+                            let min = parent.z + node.rbox.z.min;
+                            let max = parent.z + node.rbox.z.max;
+                            let v = node.vz;
+                            if (Math.abs(node.vz) > Math.abs(max - min)) {
+                                v = (max - min) / 2;
+                            }
+                            if (newz < min) {
+                                node.z = min;
+                                node.vz = -v * k;
+                            } else if (newz > max) {
+                                node.z = max
+                                node.vz = -v * k;
+                            }
                         }
                     }
                 }
             }
+
             if (node.bbox) {
                 if (node.bbox.x) {
                     let newx = node.x + node.vx;

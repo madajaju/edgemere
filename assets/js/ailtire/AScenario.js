@@ -1,3 +1,5 @@
+import {AText} from "./index.js";
+
 const scolor = {
     started: "#00ffff",
     create: "#00ffff",
@@ -31,9 +33,11 @@ export default class AScenario {
         let geometry = new THREE.BoxGeometry(75, 30, 10);
         const material = new THREE.MeshLambertMaterial({color: color, opacity: 1});
         const box = new THREE.Mesh(geometry, material);
-        const myText = new SpriteText(node.name.replace(/\s/g, '\n'));
-        myText.position.set(0, 0, 15);
-        box.add(myText);
+
+        let label = AText.view3D({text:node.name.replace(/\s/g, '\n'), color:"#ffffff", width: 50, size: 12});
+        label.position.set(0,15,7);
+        box.add(label)
+
         box.position.set(node.x, node.y, node.z);
         box.aid = node.id;
         node.box = 100;
@@ -52,9 +56,10 @@ export default class AScenario {
         let geometry = new THREE.BoxGeometry(150, 20, 5);
         const material = new THREE.MeshLambertMaterial({color: color, opacity: 1});
         const box = new THREE.Mesh(geometry, material);
-        const myText = new SpriteText(node.name.replace(/\s/g, '\n'));
-        myText.position.set(0, 0, 10);
-        box.add(myText);
+        let label = AText.view3D({text:node.name, color:"#ffffff", width: 200, size: 14});
+        label.position.set(0,8,5);
+        box.add(label);
+
         box.position.set(node.x, node.y, node.z);
         box.aid = node.id;
         node.box = 75;

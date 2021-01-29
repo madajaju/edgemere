@@ -1,4 +1,4 @@
-import {AScenario, AActor} from './index.js';
+import {AScenario, AActor, AText} from './index.js';
 
 export default class AUsecase {
     constructor(config) {
@@ -81,9 +81,9 @@ export default class AUsecase {
         const material = new THREE.MeshLambertMaterial( {color: color, opacity:1} );
         const retval = new THREE.Mesh( geometry, material );
         retval.position.set(node.x, node.y, node.z);
-        const myText = new SpriteText(node.name.replace(/\s/g, '\n'));
-        myText.position.set(0,0,15);
-        retval.add(myText);
+        let label = AText.view3D({text:node.name.replace(/\s/g, '\n'), color:"#ffffff", width: 50, size: 12});
+        label.position.set(0,20,11);
+        retval.add(label)
         retval.aid = node.id;
         node.box = 100;
         node.expandLink =  `usecase/get?id=${node.id}`;

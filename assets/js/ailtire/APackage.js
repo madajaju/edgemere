@@ -1,4 +1,4 @@
-import {AUsecase} from './index.js';
+import {AUsecase, AModel, AText} from './index.js';
 
 export default class APackage {
     constructor(config) {
@@ -14,14 +14,14 @@ export default class APackage {
         } else if (type === 'Sourced') {
             color = "green";
         }
-        let shape = node.cube || {x: 75, y: 20, z: 50};
+        let shape = node.cube || {x: 75, y: 50, z: 20};
         let opacity = node.opacity || 1;
         let geometry = new THREE.BoxGeometry(shape.x, shape.y, shape.z);
         const material = new THREE.MeshPhongMaterial({color: color, opacity: opacity, transparent:true});
         const box = new THREE.Mesh(geometry, material);
-        const myText = new SpriteText(node.name.replace(/\s/g, '\n'));
-        myText.position.set(0, -15, 0);
-        box.add(myText);
+        let label = AText.view3D({text:node.name.replace(/\s/g, '\n'), color:"#ffffff", width: 200, size: 12});
+        label.position.set(0,shape.y/3,shape.z/2 + 4);
+        box.add(label);
         box.position.set(node.x, node.y, node.z);
         if (node.rotate) {
             if (node.rotate.x) {
@@ -41,6 +41,7 @@ export default class APackage {
     }
 
     static viewDeep3D(pkg, mode) {
+        const theta = 3.14 / 2; // 90 degrees
         let data = {nodes: {}, links: []};
         let inum = Object.keys(pkg.interface).length;
         let hnum = Object.keys(pkg.handlers).length;
@@ -146,7 +147,9 @@ export default class APackage {
                 rbox: { parent: pkg.shortname, x: bbox.x, y: bbox.y,
                     z: {min: bbox.z.min - 70, max: bbox.z.min - 70}
                 },
-                view: class3DView}
+                rotate: {y: 2*theta},
+                view: AModel.view3D
+            }
             data.nodes[cname] = node;
         }
 
@@ -155,15 +158,16 @@ export default class APackage {
             let node = {
                 id: pname,
                 name: spkg.name,
+                rotate: {x: theta},
                 rbox: { parent: pkg.shortname, x: bbox.x, z: bbox.z,
                     y: {min: bbox.y.min - 70, max: bbox.y.min - 70}},
-                color: pkg.color, view: APackage.view3D
+                color: pkg.color,
+                view: APackage.view3D,
             }
             data.nodes[pname] = node;
         }
         i = 0;
 
-        const theta = 3.14 / 2;
         for (let pname in pkg.depends) {
             let spkg = pkg.depends[pname];
             let node = {
@@ -173,7 +177,7 @@ export default class APackage {
                     x: {min: bbox.x.min - 100, max: bbox.x.min - 100}
                 },
                 color: spkg.color,
-                rotate: {z: -theta},
+                rotate: {y: -theta},
                 view: APackage.view3D
             }
             data.nodes[pname] = node;
@@ -263,39 +267,14 @@ function handler3DView(node, type) {
     group.add(item2);
     group.applyMatrix4(new THREE.Matrix4().makeRotationY(-theta));
     group.position.set(node.x, node.y, node.z);
-    const myText = new SpriteText(node.name);
-    myText.position.set(0, 0, -40);
-    group.add(myText);
+
+    let label = AText.view3D({text:node.name.replace(/\./g, '\n'), color:"#ffffff", width: 200, size: 12});
+    label.position.set(0,10, 23);
+    label.applyMatrix4(new THREE.Matrix4().makeRotationY(-2*theta));
+    group.add(label);
+
     group.aid = node.id;
     return group;
-}
-
-function class3DView(node, type) {
-    let color = "orange";
-    if (type === 'Selected') {
-        color = "yellow";
-    } else if (type === 'Targeted') {
-        color = "red";
-    } else if (type === 'Sourced') {
-        color = "green";
-    }
-    let geometry = new THREE.BoxGeometry(50, 50, 20);
-    const material = new THREE.MeshPhongMaterial({color: color, opacity: 1});
-    const box = new THREE.Mesh(geometry, material);
-    /* let geo2 = new THREE.TextGeometry( node.name );
-    const material2 = new THREE.MeshLambertMaterial( {color: "black", opacity:1} );
-    const text = new THREE.Mesh( geometry, material2 );
-    text.position.set(0,0,10);
-    const group = new THREE.Group();
-    group.add( box );
-    group.add( text );
-     */
-    const myText = new SpriteText(node.name);
-    myText.position.set(0, 0, -15);
-    box.add(myText);
-    box.position.set(node.x, node.y, node.z);
-    box.aid = node.id;
-    return box;
 }
 
 function package3DView(node, type) {
@@ -368,7 +347,7 @@ function usecase3DView(node, type) {
 }
 
 function interface3DView(node, type) {
-    let color = "green";
+    let color = "blue";
     if (type === 'Selected') {
         color = "yellow";
     } else if (type === 'Targeted') {
@@ -387,9 +366,12 @@ function interface3DView(node, type) {
     group.add(item1);
     group.add(item2);
     group.position.set(node.x, node.y, node.z);
-    const myText = new SpriteText(node.name.replace(/\//g, '\n'));
-    myText.position.set(0, 25, 0);
-    group.add(myText);
+    let name = node.name;
+    name.replace('/','');
+    let label = AText.view3D({text:name.replace(/\//g, '\n'), color:"#ffffff", width: 50, size: 12});
+    label.applyMatrix4(new THREE.Matrix4().makeRotationX(-3.14/2));
+    label.position.set(0,20+1,-20);
+    group.add(label)
     group.aid = node.id;
     return group;
 }
