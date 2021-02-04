@@ -13,6 +13,8 @@ import AService from './AService.js';
 import ANetwork from './ANetwork.js';
 import AImage from './AImage.js';
 import AVolume from './AVolume.js';
+import AInterface from './AInterface.js';
+import AEnvironment from './AEnvironment.js';
 
 // without default
 export {
@@ -30,5 +32,7 @@ export {
     AService,
     ANetwork,
     AImage,
-    AVolume
+    AVolume,
+    AInterface,
+    AEnvironment
 }

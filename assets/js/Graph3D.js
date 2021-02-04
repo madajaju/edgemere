@@ -71,7 +71,6 @@ class Graph3D {
                     type += "Selected";
                 } else if (this.selected.nodes.target.hasOwnProperty(node.id)) {
                     type += "Targeted";
-
                 } else if (this.selected.nodes.source.hasOwnProperty(node.id)) {
                     type += "Sourced";
                 }
@@ -200,7 +199,8 @@ class Graph3D {
                         this.expandObject(`${node.group}?id=${node.id}`);
                     }
                 }
-            });
+            })
+            .dagLevelDistance(300);
         this.linkForce = this.graph
             .d3Force('link')
             .distance(link => link.value * 10);
@@ -444,8 +444,8 @@ class Graph3D {
                 this.selected.links[bdir].add(link);
                 if (this.data.nodes.hasOwnProperty(link[direction].id)) {
                     let nnode = this.data.nodes[link[direction].id];
-                    this.selected.nodes[bdir][nnode.id] = nnode;
                     this.selectRelNodes(nnode, direction);
+                    this.selected.nodes[bdir][nnode.id] = nnode;
                 }
             }
         }
@@ -459,7 +459,6 @@ class Graph3D {
             }
         }
         this.selectNode(this.data.nodes[nodeid]);
-        this.unSelectNodes();
     }
 }
 

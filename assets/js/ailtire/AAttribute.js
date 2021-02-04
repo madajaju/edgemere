@@ -22,7 +22,7 @@ export default class AAttribute {
         group.add(centerObj);
 
         let label = AText.view3D({text:node.name.replace(':','\n'), color:"#ffffff", width: 100, size: 20});
-        label.position.set(0,25,16);
+        label.position.set(0,0,16);
         group.add(label);
 
         group.position.set(node.x, node.y, node.z);

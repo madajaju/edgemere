@@ -1,4 +1,4 @@
-import {AText} from "./index.js";
+import {AText, APackage, AModel, AAction} from "./index.js";
 
 const scolor = {
     started: "#00ffff",
@@ -35,7 +35,7 @@ export default class AScenario {
         const box = new THREE.Mesh(geometry, material);
 
         let label = AText.view3D({text:node.name.replace(/\s/g, '\n'), color:"#ffffff", width: 50, size: 12});
-        label.position.set(0,15,7);
+        label.position.set(0,0,7);
         box.add(label)
 
         box.position.set(node.x, node.y, node.z);
@@ -57,7 +57,7 @@ export default class AScenario {
         const material = new THREE.MeshLambertMaterial({color: color, opacity: 1});
         const box = new THREE.Mesh(geometry, material);
         let label = AText.view3D({text:node.name, color:"#ffffff", width: 200, size: 14});
-        label.position.set(0,8,5);
+        label.position.set(0,0,5);
         box.add(label);
 
         box.position.set(node.x, node.y, node.z);
@@ -75,7 +75,61 @@ export default class AScenario {
             let step = scenario.steps[i];
             let uid = `${scenario.id}-${i}`;
             rbox = {parent:luid, x:{min:0,max: 0}, z:{min:0,max:0}, y: {min:-30, max: -30}};
-            data.nodes[uid] = {id: uid, name: step.action, view:AScenario.viewStep3D, rbox: rbox, box:10};
+            data.nodes[uid] = {id: uid, name: step.action.name, view:AScenario.viewStep3D, rbox: rbox, box:10};
+            // Add the action for the step.
+            let action = step.action;
+            if(!data.nodes.hasOwnProperty(action.name)) {
+
+                data.nodes[action.name] = {
+                    id: action.name, name: action.name.replace(/\//,'\n'), view: AAction.view3D,
+                    w: 80, h: 30,
+                    rbox: {
+                        parent: uid,
+                        x: {min: 150, max: 150},
+                        y: {min: 0, max: 0},
+                        z: {min: -150, max: -150}
+                    }
+                };
+            }
+            data.links.push({source: uid, target: action.name, value: 0.1});
+            // Add the package for the action.
+            let pkg = action.pkg;
+            if(pkg) {
+                if(!data.nodes.hasOwnProperty(pkg.shortname)) {
+                    data.nodes[pkg.shortname] = {
+                        id: pkg.shortname,
+                        name: pkg.name,
+                        color: pkg.color,
+                        view: APackage.view3D,
+                        rbox: {
+                            parent: scenario.id,
+                            x: {min: -300, max: 300},
+                            y: {min: -300, max: 300},
+                            z: {min: -450, max: -450}
+                        }
+                    };
+                }
+                if(!action.cls) {
+                    data.links.push({source: action.name, target: pkg.shortname, value: 0.1});
+                }
+            }
+            // Add the class if it is a class action.
+            if(action.cls) {
+                let cls = action.cls;
+                if(!data.nodes.hasOwnProperty(cls)) {
+                    data.nodes[cls] = {
+                        id: cls, name: cls, view: AModel.view3D,
+                        rbox: {
+                            parent: scenario.id,
+                            x: {min: -300, max: 300},
+                            y: {min: -300, max: 300},
+                            z: {min: -300, max: -300}
+                        }
+                    };
+                    data.links.push({source: cls, target: pkg.shortname, value: 0.1});
+                }
+                data.links.push({target: cls, source: action.name, value: 0.1});
+            }
             luid = uid;
         }
 
@@ -85,6 +139,11 @@ export default class AScenario {
             window.graph.setData(data.nodes, data.links);
         }
         window.graph.showLinks();
+        window.graph.graph.cameraPosition(
+            {x: 200, y: 50, z: 1000}, // new position
+            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+            3000  // ms transition duration.
+        );
     }
 
     handle(result) {
@@ -147,7 +206,7 @@ export default class AScenario {
             for (let j in parameters) {
                 params.push(`${j}: ${parameters[j]}`);
             }
-            records.push({recid: i, action: result.steps[i].action, parameters: params.join(',')});
+            records.push({recid: i, action: result.steps[i].action.name, parameters: params.join(',')});
         }
         w2ui['scenariolist'].scenario = result;
         w2ui['scenariolist'].records = records;

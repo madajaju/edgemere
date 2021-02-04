@@ -14,13 +14,14 @@ export default class AText {
         let textWidth =0;
         for(let i in texts) {
             let text = texts[i];
-            let twidth = ctx.measureText(text).width;
+            let textsize = ctx.measureText(text);
+            let twidth = textsize.width;
             if(twidth > textWidth) {
                 textWidth = twidth;
             }
         }
         width -= 5;
-        const height = ((size + 2) * (texts.length+1)) + 4;
+        const height = (size* texts.length) + 4;
 
         ctx.canvas.width = width;
         ctx.canvas.height = height;
@@ -29,7 +30,7 @@ export default class AText {
         ctx.textAlign = "center";
         ctx.textBaseline = "top";
         const scaleFactor = Math.min(1, width / (textWidth + 10));
-        ctx.translate(width / 2, height / 2);
+        ctx.translate(width / 2, 0);
         ctx.scale(scaleFactor, 1);
         ctx.fillStyle = color;
         let y = - height - 2;
@@ -44,7 +45,6 @@ export default class AText {
 
         const material = new THREE.MeshBasicMaterial({map: texture, side: THREE.DoubleSide, transparent: true, opacity:1});
         const plane = new THREE.PlaneGeometry(width,height);
-
         let retval = new THREE.Mesh(plane, material);
         return retval;
     }

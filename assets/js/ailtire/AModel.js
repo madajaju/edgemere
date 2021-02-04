@@ -55,7 +55,7 @@ export default class AModel {
         }
         let label = AText.view3D({text: node.name, color: "#ffffff", width: w, size: 15 * (w / 100)});
         // label.applyMatrix4(new THREE.Matrix4().makeScale(w/100, w/100, w/100));
-        label.position.set(0, (h / 2) - 15, (d / 2) + 1);
+        label.position.set(0, (h/2)-20, (d / 2) + 1);
         retval.add(label)
         if (typeof node.box !== 'string') {
             node.box = node.box || Math.sqrt(d * d + h * h + w * w);
@@ -246,6 +246,11 @@ export default class AModel {
             };
             AStateNet.viewDeep3D(cls.statenet, mode);
         }
+        window.graph.graph.cameraPosition(
+            {x: 0, y: 0, z: 1000}, // new position
+            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+            3000  // ms transition duration.
+        );
         window.graph.showLinks();
     }
 

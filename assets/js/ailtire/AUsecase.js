@@ -12,6 +12,21 @@ export default class AUsecase {
         if (!w2ui['objlist']) {
             $('#objlist').w2grid({name: 'objlist'});
         }
+        w2ui['objlist'].onClick = function (event) {
+            w2ui['objdetail'].clear();
+            let record = this.get(event.recid);
+            let drecords = [];
+            let k = 0;
+            let details = record.detail.split('|');
+
+            for (let i in details) {
+                k++;
+                let [dname, info] = details[i].split(',');
+                drecords.push({recid: k, name: dname, value: info});
+            }
+            w2ui['objdetail'].add(drecords);
+            window.graph.selectNodeByID(event.recid);
+        };
         if (!w2ui['objdetail']) {
             $('#objdetail').w2grid({
                 name: 'objdetail',
@@ -43,8 +58,10 @@ export default class AUsecase {
         records.push({recid: i++, name:'description', value:result.description, detail:result.description});
         records.push({recid: i++, name:'package', value:result.package, detail:result.package});
         records.push({recid: i++, name:'method', value:result.method, detail:result.method});
-        records.push({recid: i++, name:'actors', value:Object.keys(result.actors).length, detail:result.actors});
-        records.push({recid: i++, name:'scenarios', value:Object.keys(result.scenarios).length, detail:result.scenarios});
+        let actorDetails = Object.keys(result.actors).map( actor => { return `<span onclick="expandObject('actor/get?id=${actor}');">${actor}</span>` });
+        records.push({recid: i++, name:'actors', value:Object.keys(result.actors).length, detail:actorDetails.join("|")});
+        let scenarioDetails = Object.keys(result.scenarios).map( item => { return `<span onclick="expandObject('scenario/get?id=${result.name}.${item}');">${result.scenarios[item].name}</span>, ${result.scenarios[item].description}` });
+        records.push({recid: i++, name:'scenarios', value:Object.keys(result.scenarios).length, detail:scenarioDetails.join('|')});
         w2ui['objlist'].records = records;
         w2ui['objlist'].refresh();
     }
@@ -82,7 +99,7 @@ export default class AUsecase {
         const retval = new THREE.Mesh( geometry, material );
         retval.position.set(node.x, node.y, node.z);
         let label = AText.view3D({text:node.name.replace(/\s/g, '\n'), color:"#ffffff", width: 50, size: 12});
-        label.position.set(0,20,11);
+        label.position.set(0,0,11);
         retval.add(label)
         retval.aid = node.id;
         node.box = 100;

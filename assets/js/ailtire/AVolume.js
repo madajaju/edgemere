@@ -24,7 +24,7 @@ export default class AVolume {
         obj.position.set(0, 0, 0);
 
         let label = AText.view3D({text: node.name, color: "#ffffff", width: 80, size: 20});
-        label.position.set(0, 10, 26);
+        label.position.set(0, 0, 26);
         obj.add(label);
 
         obj.position.set(node.x, node.y, node.z);

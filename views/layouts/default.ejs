@@ -50,7 +50,7 @@ hostURL += ':' + global.ailtire.config.listenPort;
 
 <div id="main" style="position: absolute; width: 100%; height: 100%; overflow: hidden;"></div>
 <script type="module">
-    import {APackage, AScenario, AUsecase, AActor, AModel, AStack} from './js/ailtire/index.js';
+    import {APackage, AScenario, AUsecase, AActor, AModel, AStack, AEnvironment} from './js/ailtire/index.js';
 
     let pkgview = new APackage({});
     let scenarioview = new AScenario({});
@@ -58,6 +58,7 @@ hostURL += ':' + global.ailtire.config.listenPort;
     let actorview = new AActor({});
     let modelview = new AModel({});
     let stackview = new AStack({});
+    let envview = new AEnvironment({});
 
 // common colors to use based on status
     const scolor = {
@@ -82,6 +83,7 @@ hostURL += ':' + global.ailtire.config.listenPort;
         actor: actorview.handle,
         model: modelview.handle,
         stack: stackview.handle,
+        environment: envview.handle,
     }
     // currentView is set to null first.
     let currentView = null;
@@ -153,7 +155,8 @@ hostURL += ':' + global.ailtire.config.listenPort;
                 id: ename,
                 text: ename,
                 img: 'icon-folder',
-                view: 'Environment',
+                view: 'environment',
+                link: `environment/get?id=${ename}`,
                 nodes: []
             };
             if(env.stacks) {

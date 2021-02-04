@@ -6,7 +6,7 @@ export default class AAction {
     }
 
     static view3D(node, type) {
-        let color = node.color || "#00aaaa";
+        let color = node.color || "#aa4488";
         if (type === 'Selected') {
             color = "yellow";
         } else if (type === 'Targeted') {
@@ -24,7 +24,7 @@ export default class AAction {
         obj.position.set(0, 0, 0);
 
         let label = AText.view3D({text: node.name, color: "#ffffff", width: 80, size: 20});
-        label.position.set(0, 10, 14);
+        label.position.set(0, 0, 14);
         obj.add(label);
 
         obj.position.set(node.x, node.y, node.z);

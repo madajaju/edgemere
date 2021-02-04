@@ -1,0 +1,35 @@
+services:
+  # Each service belongs to the sibling network.
+  # If a services is a stack it belongs to the children network.
+  # Only the frontend which is generated belongs to the parent network.
+  admin:
+    type: stack # add children network
+    image: edgemere:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+   interface: # add traefik information.
+     - target: /admin
+       source: 3000
+       protocol: http # Default is http
+  aml:
+    type: stack
+    image: aml:latest
+    networks:
+      - children
+    interface:
+      - "/aml:3000"
+      - "/aml-web:8080"
+  cpl:
+    type: stack
+    image: cpl:latest
+    environment:
+      - MY_ENV=TestMe
+    networks:
+      - children
+    interface:
+      - "/cpl:3000"
+volumes:
+networks:
+  children:
+    driver: overlay
+    attachable: true

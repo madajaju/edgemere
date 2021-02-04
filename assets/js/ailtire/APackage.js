@@ -19,8 +19,8 @@ export default class APackage {
         let geometry = new THREE.BoxGeometry(shape.x, shape.y, shape.z);
         const material = new THREE.MeshPhongMaterial({color: color, opacity: opacity, transparent:true});
         const box = new THREE.Mesh(geometry, material);
-        let label = AText.view3D({text:node.name.replace(/\s/g, '\n'), color:"#ffffff", width: 200, size: 12});
-        label.position.set(0,shape.y/3,shape.z/2 + 4);
+        let label = AText.view3D({text:node.name.replace(/\s/g, '\n'), color:"#ffffff", width: shape.x , size: 15 * (shape.x/150) });
+        label.position.set(0,0,shape.z/2 + 4);
         box.add(label);
         box.position.set(node.x, node.y, node.z);
         if (node.rotate) {
@@ -188,6 +188,11 @@ export default class APackage {
         } else {
             window.graph.setData(data.nodes, data.links);
         }
+        window.graph.graph.cameraPosition(
+            {x: 0, y: 0, z: 1000}, // new position
+            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+            3000  // ms transition duration.
+        );
         window.graph.showLinks();
     }
 
@@ -269,7 +274,7 @@ function handler3DView(node, type) {
     group.position.set(node.x, node.y, node.z);
 
     let label = AText.view3D({text:node.name.replace(/\./g, '\n'), color:"#ffffff", width: 200, size: 12});
-    label.position.set(0,10, 23);
+    label.position.set(0,0, 23);
     label.applyMatrix4(new THREE.Matrix4().makeRotationY(-2*theta));
     group.add(label);
 
@@ -297,9 +302,11 @@ function package3DView(node, type) {
     group.add( box );
     group.add( text );
      */
-    const myText = new SpriteText(node.name.replace(/\s/g, '\n'));
-    myText.position.set(0, -15, 0);
-    box.add(myText);
+
+    let label = AText.view3D({text: node.name, color: "#ffffff", width: 75, size: 15 * (75 / 100)});
+    // label.applyMatrix4(new THREE.Matrix4().makeScale(w/100, w/100, w/100));
+    label.position.set(0, (h / 2) - 15, (d / 2) + 1);
+    box.add(label)
     box.position.set(node.x, node.y, node.z);
     box.aid = node.id;
     return box;
@@ -370,7 +377,7 @@ function interface3DView(node, type) {
     name.replace('/','');
     let label = AText.view3D({text:name.replace(/\//g, '\n'), color:"#ffffff", width: 50, size: 12});
     label.applyMatrix4(new THREE.Matrix4().makeRotationX(-3.14/2));
-    label.position.set(0,20+1,-20);
+    label.position.set(0,20+1,0);
     group.add(label)
     group.aid = node.id;
     return group;

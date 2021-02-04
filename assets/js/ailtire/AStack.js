@@ -1,4 +1,4 @@
-import {AText, AService, ANetwork, AImage,AVolume} from './index.js';
+import {AText, AService, ANetwork, AModel, AImage, AVolume, AInterface} from './index.js';
 
 export default class AStack {
     constructor(config) {
@@ -56,109 +56,181 @@ export default class AStack {
         return group;
     }
 
+    static viewBig3D(node, type) {
+        let color = node.color || "#00aaaa";
+        if (type === 'Selected') {
+            color = "yellow";
+        } else if (type === 'Targeted') {
+            color = "red";
+        } else if (type === 'Sourced') {
+            color = "green";
+        }
+        let w = 100;
+        let h = 100;
+        let d = 100;
+        if (node.cube) {
+            w = node.cube.w;
+            h = node.cube.h;
+            d = node.cube.d;
+        }
+        let opacity = node.opacity || 1;
+
+        let geometry = new THREE.BoxGeometry(w, h, d);
+        const material = new THREE.MeshPhongMaterial({color: color, transparent: true, opacity: opacity});
+        const retval = new THREE.Mesh(geometry, material);
+        // Find the Model Element and show it here.
+        if (node.rotate) {
+            if (node.rotate.x) {
+                retval.applyMatrix4(new THREE.Matrix4().makeRotationX(node.rotate.x));
+            }
+            if (node.rotate.y) {
+                retval.applyMatrix4(new THREE.Matrix4().makeRotationY(node.rotate.y));
+            }
+            if (node.rotate.z) {
+                retval.applyMatrix4(new THREE.Matrix4().makeRotationZ(node.rotate.z));
+            }
+        }
+        let label = AText.view3D({text: node.name, color: "#ffffff", width: w, size: 15 * (w / 100)});
+        // label.applyMatrix4(new THREE.Matrix4().makeScale(w/100, w/100, w/100));
+        label.position.set(0, (h / 2) - 15 * (w/100), (d / 2) + 1);
+        retval.add(label)
+        if (typeof node.box !== 'string') {
+            node.box = node.box || Math.sqrt(d * d + h * h + w * w);
+        } else {
+            node.box = null;
+        }
+        node.expandLink = `model/get?id=${node.id}`;
+        return retval;
+    }
+
     static viewDeep3D(obj, mode) {
         let data = {nodes: {}, links: []};
         const theta = 3.14 / 2;
 
+        let yfactor = Math.round(Math.sqrt(Object.keys(obj.services).length) + 0.5);
+        let zfactor = Math.round((Object.keys(obj.services).length/ yfactor) + 0.5);
+        let xfactor = Math.round((Object.keys(obj.interface).length/zfactor) + 0.5);
+
+        const cube = {
+            w: xfactor *120 +50,
+            h: yfactor * 120 + 50,
+            d: zfactor * 120 + 50
+        }
         data.nodes[obj.id] = {
             id: obj.id,
             name: obj.id,
-            view: AStack.view3D,
+            view: AStack.viewBig3D,
             fx: 0, fy: 0, fz: 0,
-            box: 0.1
+            box: "None",
+            cube: cube,
+            color: "#00aaaa",
+            opacity: 0.5
         };
-        let srbox = {
+        let srbox = { // yz plane
             parent: obj.id,
-            x: {min: -300, max: 300},
-            y: {min: -300, max: 300},
-            z: {min: -300, max: 300},
+            x: {min: (cube.w / 2) + 20, max: (cube.w / 2) + 20},
+            y: {min: (-cube.h / 2) + 40, max: (cube.h / 2) - 40},
+            z: {min: (-cube.d / 2) + 40, max: (cube.d / 2) - 40},
         }
-        let irbox = {
+        let irbox = { // xz plane
             parent: obj.id,
-            x: {min: 400, max: 400},
-            y: {min: -400, max: 400},
-            z: {min: -400, max: 400}
+            x: {min: (-cube.w / 2) + 40 , max: (cube.w / 2) - 40},
+            y: {min: (cube.h / 2) + 50, max: (cube.h / 2) + 50},
+            z: {min: (-cube.d / 2) + 40, max: (cube.d / 2) - 40}
         }
         let nrbox = {
             parent: obj.id,
-            x: {min: 0, max: 0},
-            y: {min: 400, max: 400},
-            z: {min: -40, max: -40}
+            x: {min: (-cube.w / 2) - 10, max: (-cube.w / 2) - 10},
+            y: {min: (-cube.h / 2) + 50, max: (cube.h / 2) - 50},
+            z: {min: 0, max: 0 },
         }
-        let stbox = {
+        let vbox = {
             parent: obj.id,
-            x: {min: -400, max: -400},
-            y: {min: -400, max: 400},
-            z: {min: -400, max: 400}
+            x: {min: (-cube.w / 2) + 40, max: (cube.w / 2) - 40},
+            y: {min: -cube.h / 2, max: -cube.h / 2},
+            z: {min: (-cube.d / 2) + 40, max: (cube.d / 2) - 40}
         }
-        let prevIDI = obj.id;
-        let prevIDS = obj.id;
+        let imbox = {
+            parent: obj.id,
+            x: {min: (-cube.w / 2) + 40, max: (cube.w / 2) - 40},
+            y: {min: (-cube.h / 2) + 40, max: (cube.h / 2) - 40},
+            z: {min: (-cube.d / 2) - 20, max: (cube.d / 2) - 20}
+        }
+        let inodes = {};
+        for (let iname in obj.interface) {
+            let inter = obj.interface[iname];
+            data.nodes["I-" + iname] = {
+                id: "I-" + iname,
+                name: inter.path,
+                view: AInterface.view3D,
+                rbox: irbox,
+            }
+            inodes["I-" + iname] = data.nodes["I-" + iname];
+        }
+        matrixLayout(inodes,irbox,{x: xfactor, y: 1, z: zfactor});
+        let srnodes = {};
+        let imnodes = {};
+        let vnodes = {};
+
         for (let sname in obj.services) {
             let service = obj.services[sname];
+            let view = AService.view3D;
+            if(service.type === 'stack' || service.type === 'Stack') {
+               view = AStack.view3D;
+            }
             data.nodes[sname] = {
                 id: sname,
                 name: sname,
-                view: AService.view3D,
-                rbox: srbox
+                view: view,
+                rbox: srbox,
+                rotate: {y: theta}
             };
+            srnodes[sname] = data.nodes[sname];
+            for (let iname in service.interface) {
+                data.links.push({target: sname, source: "I-" + iname, value: 0.1});
+            }
             let image = service.image;
             data.nodes[`Img-${image}`] = {
                 id: `Img-${image}`,
                 name: image.replace(/:/, '\n'),
                 view: AImage.view3D,
-                rbox: irbox,
-                rotate: { y: theta },
+                rbox: imbox,
+                rotate: { y: 2*theta },
             };
-            data.links.push({target: sname, source: `Img-${image}`, value: 1});
-            /* prevIDI = `Img-${image}`;
-            irbox = {
-                parent: prevIDI,
-                x: {min: 0, max: 0},
-                y: {min: -80, max: -80},
-                z: {min: 0, max: 0}
-            };
-             */
+            imnodes[`Img-${image}`] = data.nodes[`Img-${image}`];
+            data.links.push({target: sname, source: `Img-${image}`, value: 0.1});
 
-            for (let stname in service.volumes) {
-                let volume = service.volumes[stname].source;
-                data.nodes[volume] = {
-                    id: volume,
-                    name: volume,
+            for (let vname in service.volumes) {
+                let volume = service.volumes[vname];
+                data.nodes[volume.source] = {
+                    id: volume.source,
+                    name: volume.target,
                     view: AVolume.view3D,
-                    rbox: stbox,
-                    rotate: { y: -theta },
+                    rbox: vbox,
+                    rotate: {x: theta},
                 };
-               /* prevIDS = stname;
-                stbox = {
-                    parent: prevIDS,
-                    x: {min: 0, max: 0},
-                    y: {min: -80, max: -80},
-                    z: {min: 0, max: 0}
-                };
-                */
-                data.links.push({target:sname, source:stname, value: 2});
+                vnodes[volume.source] = data.nodes[volume.source];
+                data.links.push({target: sname, source: volume.source, value: 2});
             }
             for (let nname in service.networks) {
                 data.links.push({target: `Net-${nname}`, source: sname, value: 0.1});
             }
         }
+        matrixLayout(srnodes,srbox, {x:1, y: yfactor, z: zfactor})
+        matrixLayout(imnodes, imbox, {x:xfactor, y: yfactor, z: 1 })
 
         let prevID = obj.id;
+        let nnodes ={};
         for (let nname in obj.networks) {
             let network = obj.networks[nname];
             data.nodes[`Net-${nname}`] = {
                 id: `Net-${nname}`, name: nname, view: ANetwork.view3D,
                 rbox: nrbox,
-                rotate: { x: -theta }
+                rotate: {y: -theta}
             };
-            prevID = `Net-${nname}`;
-            nrbox = {
-                parent: prevID,
-                x: {min: 0, max: 0},
-                y: {min: 0, max: 0},
-                z: {min: -50, max: -50}
-            }
+            nnodes[`Net-${nname}`] = data.nodes[`Net-${name}`];
         }
+
         if (mode === 'add') {
             window.graph.addData(data.nodes, data.links);
         } else {
@@ -219,4 +291,48 @@ function getDetails(objs) {
         items.push(`<span onclick="expandObject('${item.link}');">${name}</span>`);
     }
     return items;
+}
+
+function matrixLayout(nodes, bbox, layout) {
+
+    let prevID = bbox.parent;
+    let factors = {
+        x: (bbox.x.max - bbox.x.min) / (layout.x +1),
+        y: (bbox.y.max - bbox.y.min) / (layout.y+1),
+        z: (bbox.z.max - bbox.z.min) / (layout.z+1)
+    }
+    console.log("LAYOUT:", layout);
+    console.log("FACTORS:", factors);
+    let sortedK = Object.keys(layout).sort(function(a,b){return layout[b]-layout[a]});
+    // let count = 0;
+    let coords = { x: 0, y: 0, z: 0 };
+    for(let i in nodes) {
+        /*coords[sortedK[0]] = Math.floor(count / (layout[sortedK[1]]*layout[sortedK[2]]));
+        coords[sortedK[1]] = Math.floor((count % (layout[sortedK[1]]*layout[sortedK[2]])) / layout[sortedK[2]]);
+        coords[sortedK[2]] = (count % (layout[sortedK[0]]*layout[sortedK[2]])) % layout[sortedK[2]];
+         */
+        // count++;
+        let node = nodes[i];
+        node.rbox = {
+            parent: bbox.parent,
+            x: {min: bbox.x.min + (coords.x*factors.x), max: bbox.x.min + (coords.x*factors.x) },
+            y: {min: bbox.y.min + (coords.y*factors.y), max: bbox.y.min + (coords.y*factors.y) },
+            z: {min: bbox.z.min + (coords.z*factors.z), max: bbox.z.min + (coords.z*factors.z) },
+        }
+        console.log("ROWCOL:", coords);
+        node.fx = node.rbox.x.min;
+        node.fy = node.rbox.y.min;
+        node.fz = node.rbox.z.min;
+
+        coords[sortedK[0]]++;
+        if(coords[sortedK[0]] >= layout[sortedK[0]]) {
+            coords[sortedK[1]]++;
+            coords[sortedK[0]] = 0;
+            if(coords[sortedK[1]] >= layout[sortedK[1]]) {
+                coords[sortedK[1]] = 0;
+                coords[sortedK[2]]++;
+            }
+        }
+        console.log("Location:", node.fx, node.fy, node.fz);
+    }
 }
