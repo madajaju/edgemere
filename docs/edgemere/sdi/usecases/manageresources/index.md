@@ -27,7 +27,7 @@ Manage Resources includes creating resources, listing and planning for resources
 
 Get Resources based on a set of requirements, this could be one resource or a set of resources. Requires a cloud and requirements to be specified. A name for the resources can be requested.
 
-![Scenario nameNoSpaces](./GetResources.svg)
+![Scenario GetResources](./getresources.svg)
 
 #### Steps
 
@@ -71,7 +71,7 @@ Get Resources based on a set of requirements, this could be one resource or a se
 
 List Resources and their utilization numbers. This is used for capacity planning.
 
-![Scenario nameNoSpaces](./ListResources.svg)
+![Scenario ListResources](./listresources.svg)
 
 #### Steps
 
@@ -115,7 +115,7 @@ List Resources and their utilization numbers. This is used for capacity planning
 
 Release Resources based on the name given when the Resources are requested
 
-![Scenario nameNoSpaces](./ReleaseResources.svg)
+![Scenario ReleaseResources](./releaseresources.svg)
 
 #### Steps
 

@@ -8,7 +8,7 @@ boundary ailtire_appname_family #red
 
 entity ailtire_appname_sdi_family #black
 
-stack "sdi_io" as sdi_ioStack #lightyellow {
+rectangle "sdi_io" as sdi_ioStack #lightyellow {
     queue sdi_ioStacksnet #black [
         <b><color:white>parent</color></b>
     ]

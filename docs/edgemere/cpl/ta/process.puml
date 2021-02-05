@@ -67,14 +67,14 @@ state "send" as cpltastatssend #lightgray {
 
 
 
-    state "cpl" as cpl #lightgray {
+        state "cpl" as cpl #lightgray {
 state "Device" as cpldevice #lightgray {
 state "stats" as cpldevicestats #lightgray {
 }
 }
 }
 
-    
+        
     state "ta" as ta #lavender {
 state "report" as tareport #lavender {
 }

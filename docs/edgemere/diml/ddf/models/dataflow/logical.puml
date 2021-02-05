@@ -1,7 +1,9 @@
 @startuml
 
 class "DataFlow" as Model {
- string attr1
+ string name
+ string version
+ string parameters
 
  create()
  

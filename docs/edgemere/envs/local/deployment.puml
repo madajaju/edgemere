@@ -20,7 +20,7 @@ interface 8080
 
 entity ailtire_appname_family #black
 
-stack "edgemere" as edgemereStack #lavender {
+rectangle "edgemere" as edgemereStack #lavender {
     queue edgemereStacksnet #black [
         <b><color:white>parent</color></b>
     ]

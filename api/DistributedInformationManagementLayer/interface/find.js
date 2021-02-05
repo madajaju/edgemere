@@ -34,7 +34,8 @@ module.exports = {
             // Create a Data Request
             let datareq = new DataRequest({name:"external",query:inputs.query});
             datareq.fulfill();
-            env.res.json({results: datareq.toJSON()});
+            let jdr = datareq.toJSON;
+            env.res.json({results: jdr});
             env.res.end(datareq.id);
             // Return the data request.
         } else if (inputs.file) {

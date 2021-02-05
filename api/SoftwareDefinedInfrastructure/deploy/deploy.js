@@ -4,20 +4,23 @@ module.exports = {
     contexts: {
         dev: {
             type: 'swarm',
-            tag: '_sdi_dev',
+            tag: 'sdi:dev',
             file: 'docker-compose.yml',
+            design: 'services.js',
             env: {}
         },
         test: {
             type: 'swarm',
-            tag: '_sdi_dev',
+            tag: 'sdi:test',
             file: 'docker-compose.yml',
+            design: 'services.js',
             env: {}
         },
         prod: {
             type: 'swarm',
-            tag: '_sdi_dev',
+            tag: 'sdi:prod',
             file: 'docker-compose.yml',
+            design: 'services.js',
             env: {}
         }
     }

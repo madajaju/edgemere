@@ -50,6 +50,7 @@ package "Identity Aspect" #pink {
 package "Data Definition Framework" #ffcc88 {
 
     interface "Data Definition Framework" as i {
+            /edgemere/diml/ddf/data/create()
             /edgemere/diml/ddf/data/govern()
             /edgemere/diml/ddf/data/source/name()
             /edgemere/diml/ddf/datablueprint/deploy()
@@ -115,7 +116,9 @@ package "Data Definition Framework" #ffcc88 {
             
     
     class "DataFlow" {
-                 string attr1
+                 string name
+                 string version
+                 string parameters
                              create()
             }
                 DataFlow o--> "1" DataBluePrint : blueprint

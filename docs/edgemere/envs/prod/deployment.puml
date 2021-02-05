@@ -20,42 +20,42 @@ interface 8080
 
 entity ailtire_appname_family #black
 
-stack "edgemere" as edgemereStack #lavender {
+rectangle "edgemere" as edgemereStack #lavender {
     queue edgemereStacksnet #black [
         <b><color:white>parent</color></b>
     ]
 }
-stack "aml" as amlStack #lightblue {
+rectangle "aml" as amlStack #lightblue {
     queue amlStacksnet #black [
         <b><color:white>parent</color></b>
     ]
 }
-stack "cpl" as cplStack #lightgray {
+rectangle "cpl" as cplStack #lightgray {
     queue cplStacksnet #black [
         <b><color:white>parent</color></b>
     ]
 }
-stack "diml" as dimlStack #ffcc88 {
+rectangle "diml" as dimlStack #ffcc88 {
     queue dimlStacksnet #black [
         <b><color:white>parent</color></b>
     ]
 }
-stack "ia" as iaStack #pink {
+rectangle "ia" as iaStack #pink {
     queue iaStacksnet #black [
         <b><color:white>parent</color></b>
     ]
 }
-stack "sa" as saStack #pink {
+rectangle "sa" as saStack #pink {
     queue saStacksnet #black [
         <b><color:white>parent</color></b>
     ]
 }
-stack "sml" as smlStack #lightgreen {
+rectangle "sml" as smlStack #lightgreen {
     queue smlStacksnet #black [
         <b><color:white>parent</color></b>
     ]
 }
-stack "sdi" as sdiStack #lightyellow {
+rectangle "sdi" as sdiStack #lightyellow {
     queue sdiStacksnet #black [
         <b><color:white>parent</color></b>
     ]

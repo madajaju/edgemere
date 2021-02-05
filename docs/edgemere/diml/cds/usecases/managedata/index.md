@@ -30,7 +30,7 @@ Manage Data is the description
 
 Destroy Data is the description
 
-![Scenario nameNoSpaces](./DestroyData.svg)
+![Scenario DestroyData](./destroydata.svg)
 
 #### Steps
 
@@ -46,7 +46,7 @@ Destroy Data is the description
 
 Egress Data is the description
 
-![Scenario nameNoSpaces](./EgressData.svg)
+![Scenario EgressData](./egressdata.svg)
 
 #### Steps
 
@@ -62,7 +62,7 @@ Egress Data is the description
 
 Ingest Data is the description
 
-![Scenario nameNoSpaces](./IngestData.svg)
+![Scenario IngestData](./ingestdata.svg)
 
 #### Steps
 
@@ -78,7 +78,7 @@ Ingest Data is the description
 
 Move Data is the description
 
-![Scenario nameNoSpaces](./MoveData.svg)
+![Scenario MoveData](./movedata.svg)
 
 #### Steps
 

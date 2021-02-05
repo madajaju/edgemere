@@ -31,7 +31,7 @@ Manage Environment allows the actors (IT Operations and Stack Developer) to crea
 
 IT Opererations create environments and assigns a Multi Cloud to the Environment
 
-![Scenario nameNoSpaces](./CreateEnvironment.svg)
+![Scenario CreateEnvironment](./createenvironment.svg)
 
 #### Steps
 
@@ -47,7 +47,7 @@ IT Opererations create environments and assigns a Multi Cloud to the Environment
 
 Delete Environment allows IT Operations to delete an environment and suspend all services running in the environment.
 
-![Scenario nameNoSpaces](./DeleteEnvironment.svg)
+![Scenario DeleteEnvironment](./deleteenvironment.svg)
 
 #### Steps
 
@@ -63,7 +63,7 @@ Delete Environment allows IT Operations to delete an environment and suspend all
 
 IT Operations disables an environment so services are suspended and cannot launch
 
-![Scenario nameNoSpaces](./DisableEnvironment.svg)
+![Scenario DisableEnvironment](./disableenvironment.svg)
 
 #### Steps
 
@@ -79,7 +79,7 @@ IT Operations disables an environment so services are suspended and cannot launc
 
 IT Operations has the ability to enable an environment to manage services
 
-![Scenario nameNoSpaces](./EnableEnvironment.svg)
+![Scenario EnableEnvironment](./enableenvironment.svg)
 
 #### Steps
 
@@ -95,7 +95,7 @@ IT Operations has the ability to enable an environment to manage services
 
 IT Operations adds and removes policies from the environment
 
-![Scenario nameNoSpaces](./ManagePoliciesinEnvironment.svg)
+![Scenario ManagePoliciesinEnvironment](./managepoliciesinenvironment.svg)
 
 #### Steps
 
@@ -111,7 +111,7 @@ IT Operations adds and removes policies from the environment
 
 IT Operations updates attributes of the environment
 
-![Scenario nameNoSpaces](./UpdateEnvironment.svg)
+![Scenario UpdateEnvironment](./updateenvironment.svg)
 
 #### Steps
 

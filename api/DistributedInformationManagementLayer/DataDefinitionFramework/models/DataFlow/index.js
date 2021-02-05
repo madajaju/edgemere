@@ -2,13 +2,19 @@
 class DataFlow {
     static definition = {
         name: 'DataFlow',
-        description: 'Description ' +
-            'long description',
+        description: 'Flow of Data through its transformation',
         attributes: {
-            attr1: {
+            name: {
                 type: 'string',
-                description: 'description' +
-                    ' long description'
+                description: 'name of the data flow',
+            },
+            version: {
+                type: 'string',
+                description: 'version of the data flow'
+            },
+            parameters: {
+                type: 'string',
+                description: 'parameters of the data flow'
             }
         },
         associations: {

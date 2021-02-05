@@ -120,6 +120,22 @@ state "list" as dimlddfdatablueprintlist #ffcc88 {
 DataScientistManageDataBluePrints --> dimlddfdatablueprintlist
 
 
+    state "Actor" as Actor {
+        state "Manage Data Blue Prints" as ActorManageDataBluePrints {
+            state "Create Blue Print" as ActorManageDataBluePrintsCreateBluePrint {
+            }
+        }
+    }
+    state "diml" as diml #ffcc88 {
+state "ddfdata" as dimlddfdata #ffcc88 {
+state "create" as dimlddfdatacreate #ffcc88 {
+}
+}
+}
+
+    ActorManageDataBluePrintsCreateBluePrint --> dimlddfdatacreate
+    
+ 
  
 state "Data Engineer" as DataEngineer {
     state "Manage Data Pipeline" as DataEngineerManageDataPipeline {
@@ -186,6 +202,22 @@ state "list" as dimlddfmetadatalist #ffcc88 {
 DataScientistManageMetaData --> dimlddfmetadatalist
 
 
+    state "Actor" as Actor {
+        state "Manage Meta Data" as ActorManageMetaData {
+            state "Capture Meta Data" as ActorManageMetaDataCaptureMetaData {
+            }
+        }
+    }
+    state "diml" as diml #ffcc88 {
+state "ddfdata" as dimlddfdata #ffcc88 {
+state "create" as dimlddfdatacreate #ffcc88 {
+}
+}
+}
+
+    ActorManageMetaDataCaptureMetaData --> dimlddfdatacreate
+    
+ 
     state "DataScientist" as DataScientist {
         state "Manage Meta Data" as DataScientistManageMetaData {
             state "Manage Data Catalog" as DataScientistManageMetaDataManageDataCatalog {

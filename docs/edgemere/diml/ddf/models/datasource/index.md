@@ -7,7 +7,7 @@ parent: classes
 
 # DataSource
 
-DataSource represents a source of data. This could be a database, filesystem, stream of data etc..  It is an instanciation of a a DataAdaptor. Where the DataAdapator allows for a class of data source. The DataSource takes the values of the DataAdaptor and makes them real for example, a filesystem adaptor needs a host and a root directory in order to know how to connect to it.
+DataSource represents a source of data. This could be a database, filesystem, stream of data etc..  It is an instance of a DataAdaptor. Where the DataAdapator allows for a class of data source. The DataSource takes the values of the DataAdaptor and makes them real for example, a filesystem adaptor needs a host and a root directory in order to know how to connect to it.
 
 ![Logical Diagram](./logical.svg)
 

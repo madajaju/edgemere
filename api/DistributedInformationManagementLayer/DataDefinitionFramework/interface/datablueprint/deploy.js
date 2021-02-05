@@ -115,6 +115,8 @@ module.exports = {
             }
             retval.addToFlows(iflow);
         }
-        env.res.end("Done");
+        let jretval = retval.toJSON;
+        env.res.json(jretval);
+        return jretval;
     }
 };

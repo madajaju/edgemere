@@ -34,5 +34,5 @@ TBD
 * [ edgemere diml ddf datablueprint/list](action--edgemere-diml-ddf-datablueprint-list) - Manage Data Blue Prints is the description
 * [ edgemere diml ddf datapipeline/list](action--edgemere-diml-ddf-datapipeline-list) - Manage Data Pipeline is the description
 * [ edgemere diml ddf dataprocedure/list](action--edgemere-diml-ddf-dataprocedure-list) - Manage Data Procedures is the description
-* [ edgemere diml dml datasource/list](action--edgemere-diml-dml-datasource-list) - Manage Data Sources is the description
+* [ edgemere diml dml datasource/list](action--edgemere-diml-dml-datasource-list) - Manage Data Sources allows the Data Engineer to register data sources to the system.
 

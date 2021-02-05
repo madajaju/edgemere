@@ -65,7 +65,7 @@ state "update" as smlsostackupdate #lightgreen {
 
 
 
-    state "diml" as diml #ffcc88 {
+        state "diml" as diml #ffcc88 {
 state "dml" as dimldml #ffcc88 {
 state "DataReference" as dimldmldatareference #ffcc88 {
 state "provisioned" as dimldmldatareferenceprovisioned #ffcc88 {
@@ -74,7 +74,7 @@ state "provisioned" as dimldmldatareferenceprovisioned #ffcc88 {
 }
 }
 
-    
+        
     state "sml" as sml #lightgreen {
 state "so" as smlso #lightgreen {
 state "servicelet" as smlsoservicelet #lightgreen {

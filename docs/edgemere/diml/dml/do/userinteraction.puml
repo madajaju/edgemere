@@ -1,19 +1,6 @@
 @startuml
 
-actor "DataScientist" as datascientist
-
-actor "ApplicationDeveloper" as applicationdeveloper
-
-
-
-
-datascientist -> "Data Orchestrator": Manage Data Instances
-"Data Orchestrator" -> bin: datainstance/list
-bin -> REST: datainstance/list
-
-applicationdeveloper -> "Data Orchestrator": Manage Data Instances
-"Data Orchestrator" -> bin: datainstance/list
-bin -> REST: datainstance/list
+rectangle "TBD"
 
 
 @enduml

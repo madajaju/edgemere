@@ -9,6 +9,10 @@ DataScientist --> ManageMetaData
 
 
 
+usecase "CaptureMetaData" as CaptureMetaData #lightgrey
+
+ManageMetaData --> CaptureMetaData
+
 usecase "ManageDataCatalog" as ManageDataCatalog #lightgrey
 
 ManageMetaData --> ManageDataCatalog

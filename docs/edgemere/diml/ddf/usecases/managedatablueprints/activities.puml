@@ -13,4 +13,8 @@ DataScientist --> ManageDataBluePrints
 
 
 
+usecase "CreateBluePrint" as CreateBluePrint #lightgrey
+
+ManageDataBluePrints --> CreateBluePrint
+
 @enduml

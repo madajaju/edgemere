@@ -7,13 +7,15 @@ parent: classes
 
 # DataFlow
 
-Description long description
+Flow of Data through its transformation
 
 ![Logical Diagram](./logical.svg)
 
 ## Attributes
 
-* attr1:string - description long description
+* name:string - name of the data flow
+* version:string - version of the data flow
+* parameters:string - parameters of the data flow
 
 
 ## Associations

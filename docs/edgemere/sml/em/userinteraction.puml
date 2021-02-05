@@ -1,19 +1,6 @@
 @startuml
 
-actor "ITOperations" as itops
-
-actor "StackDeveloper" as stackdev
-
-
-
-
-itops -> "Environment Management": Manage Environment
-"Environment Management" -> bin: environment/list
-bin -> REST: environment/list
-
-stackdev -> "Environment Management": Manage Environment
-"Environment Management" -> bin: environment/list
-bin -> REST: environment/list
+rectangle "TBD"
 
 
 @enduml

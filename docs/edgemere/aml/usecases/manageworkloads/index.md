@@ -30,7 +30,7 @@ Application Developers need the ability to connect applications together through
 
 Create Workload is the description
 
-![Scenario nameNoSpaces](./CreateWorkload.svg)
+![Scenario CreateWorkload](./createworkload.svg)
 
 #### Steps
 
@@ -46,7 +46,7 @@ Create Workload is the description
 
 Deploy Workload is the description
 
-![Scenario nameNoSpaces](./DeployWorkload.svg)
+![Scenario DeployWorkload](./deployworkload.svg)
 
 #### Steps
 
@@ -63,7 +63,7 @@ Deploy Workload is the description
 
 Destroy Workload is the description
 
-![Scenario nameNoSpaces](./DestroyWorkload.svg)
+![Scenario DestroyWorkload](./destroyworkload.svg)
 
 #### Steps
 
@@ -79,7 +79,7 @@ Destroy Workload is the description
 
 Monitor Workload is the description
 
-![Scenario nameNoSpaces](./MonitorWorkload.svg)
+![Scenario MonitorWorkload](./monitorworkload.svg)
 
 #### Steps
 
@@ -96,7 +96,7 @@ Monitor Workload is the description
 
 Update Workload is the description
 
-![Scenario nameNoSpaces](./UpdateWorkload.svg)
+![Scenario UpdateWorkload](./updateworkload.svg)
 
 #### Steps
 

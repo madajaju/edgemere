@@ -53,40 +53,36 @@ state "list" as dimldmldatasourcelist #ffcc88 {
 DataEngineerManageDataSources --> dimldmldatasourcelist
 
 
-    state "Actor" as Actor {
-        state "Manage Data Sources" as ActorManageDataSources {
-            state "Deregister Data Source" as ActorManageDataSourcesDeregisterDataSource {
+    state "Data Engineer" as DataEngineer {
+        state "Manage Data Sources" as DataEngineerManageDataSources {
+            state "Deregister Data Source" as DataEngineerManageDataSourcesDeregisterDataSource {
             }
         }
     }
     state "diml" as diml #ffcc88 {
-state "dmldata" as dimldmldata #ffcc88 {
-state "source" as dimldmldatasource #ffcc88 {
-state "name" as dimldmldatasourcename #ffcc88 {
-}
+state "dmldatasource" as dimldmldatasource #ffcc88 {
+state "list" as dimldmldatasourcelist #ffcc88 {
 }
 }
 }
 
-    ActorManageDataSourcesDeregisterDataSource --> dimldmldatasourcename
+    DataEngineerManageDataSourcesDeregisterDataSource --> dimldmldatasourcelist
     
  
-    state "Actor" as Actor {
-        state "Manage Data Sources" as ActorManageDataSources {
-            state "Register Data Source" as ActorManageDataSourcesRegisterDataSource {
+    state "DataEngineer" as DataEngineer {
+        state "Manage Data Sources" as DataEngineerManageDataSources {
+            state "Register Data Source" as DataEngineerManageDataSourcesRegisterDataSource {
             }
         }
     }
     state "diml" as diml #ffcc88 {
-state "dmldata" as dimldmldata #ffcc88 {
-state "source" as dimldmldatasource #ffcc88 {
-state "name" as dimldmldatasourcename #ffcc88 {
-}
+state "dmldatasource" as dimldmldatasource #ffcc88 {
+state "list" as dimldmldatasourcelist #ffcc88 {
 }
 }
 }
 
-    ActorManageDataSourcesRegisterDataSource --> dimldmldatasourcename
+    DataEngineerManageDataSourcesRegisterDataSource --> dimldmldatasourcelist
     
  
  

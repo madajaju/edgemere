@@ -1,45 +1,6 @@
 @startuml
 
-actor "DataEngineer" as dataengineer
-
-actor "DataScientist" as datascientist
-
-actor "ChiefDataOfficer" as cdo
-
-
-
-
-dataengineer -> "Data Definition Framework": Manage Data Adaptors
-"Data Definition Framework" -> bin: datadaptor/list
-bin -> REST: datadaptor/list
-
-dataengineer -> "Data Definition Framework": Manage Data Blue Prints
-"Data Definition Framework" -> bin: datablueprint/list
-bin -> REST: datablueprint/list
-
-dataengineer -> "Data Definition Framework": Manage Data Pipeline
-"Data Definition Framework" -> bin: datapipeline/list
-bin -> REST: datapipeline/list
-
-dataengineer -> "Data Definition Framework": Manage Data Procedures
-"Data Definition Framework" -> bin: dataprocedure/list
-bin -> REST: dataprocedure/list
-
-datascientist -> "Data Definition Framework": Manage Data Adaptors
-"Data Definition Framework" -> bin: datadaptor/list
-bin -> REST: datadaptor/list
-
-datascientist -> "Data Definition Framework": Manage Data Blue Prints
-"Data Definition Framework" -> bin: datablueprint/list
-bin -> REST: datablueprint/list
-
-datascientist -> "Data Definition Framework": Manage Meta Data
-"Data Definition Framework" -> bin: metadata/list
-bin -> REST: metadata/list
-
-cdo -> "Data Definition Framework": Manage Data Procedures
-"Data Definition Framework" -> bin: dataprocedure/list
-bin -> REST: dataprocedure/list
+rectangle "TBD"
 
 
 @enduml

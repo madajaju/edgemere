@@ -1,4 +1,4 @@
-import {AScenario, AActor} from './index.js';
+import {AScenario, AActor, AText} from './index.js';
 
 export default class AUsecase {
     constructor(config) {
@@ -7,11 +7,26 @@ export default class AUsecase {
     }
     handle(result) {
         console.log("Handle UseCase:", result);
-        showGraph(result, 'new');
+        AUsecase.viewDeep3D(result, 'new');
         let records = [];
         if (!w2ui['objlist']) {
             $('#objlist').w2grid({name: 'objlist'});
         }
+        w2ui['objlist'].onClick = function (event) {
+            w2ui['objdetail'].clear();
+            let record = this.get(event.recid);
+            let drecords = [];
+            let k = 0;
+            let details = record.detail.split('|');
+
+            for (let i in details) {
+                k++;
+                let [dname, info] = details[i].split(',');
+                drecords.push({recid: k, name: dname, value: info});
+            }
+            w2ui['objdetail'].add(drecords);
+            window.graph.selectNodeByID(event.recid);
+        };
         if (!w2ui['objdetail']) {
             $('#objdetail').w2grid({
                 name: 'objdetail',
@@ -43,8 +58,10 @@ export default class AUsecase {
         records.push({recid: i++, name:'description', value:result.description, detail:result.description});
         records.push({recid: i++, name:'package', value:result.package, detail:result.package});
         records.push({recid: i++, name:'method', value:result.method, detail:result.method});
-        records.push({recid: i++, name:'actors', value:Object.keys(result.actors).length, detail:result.actors});
-        records.push({recid: i++, name:'scenarios', value:Object.keys(result.scenarios).length, detail:result.scenarios});
+        let actorDetails = Object.keys(result.actors).map( actor => { return `<span onclick="expandObject('actor/get?id=${actor}');">${actor}</span>` });
+        records.push({recid: i++, name:'actors', value:Object.keys(result.actors).length, detail:actorDetails.join("|")});
+        let scenarioDetails = Object.keys(result.scenarios).map( item => { return `<span onclick="expandObject('scenario/get?id=${result.name}.${item}');">${result.scenarios[item].name}</span>, ${result.scenarios[item].description}` });
+        records.push({recid: i++, name:'scenarios', value:Object.keys(result.scenarios).length, detail:scenarioDetails.join('|')});
         w2ui['objlist'].records = records;
         w2ui['objlist'].refresh();
     }
@@ -68,7 +85,7 @@ export default class AUsecase {
         w2ui['scenariolist'].refresh();
     }
     static view3D(node, type) {
-        let color = node.color || "#888800";
+        let color = node.color || "#bbbb00";
         if(type === 'Selected') {
             color = "yellow";
         } else if( type === 'Targeted') {
@@ -81,56 +98,41 @@ export default class AUsecase {
         const material = new THREE.MeshLambertMaterial( {color: color, opacity:1} );
         const retval = new THREE.Mesh( geometry, material );
         retval.position.set(node.x, node.y, node.z);
-        const myText = new SpriteText(node.name.replace(/\s/g, '\n'));
-        myText.position.set(0,0,15);
-        retval.add(myText);
+        let label = AText.view3D({text:node.name.replace(/\s/g, '\n'), color:"#ffffff", width: 50, size: 12});
+        label.position.set(0,0,11);
+        retval.add(label)
         retval.aid = node.id;
         node.box = 100;
         node.expandLink =  `usecase/get?id=${node.id}`;
         return retval;
     }
-    static viewDeep3D(obj) {
+    static viewDeep3D(usecase, mode) {
+        let data = {nodes:{}, links:[]};
+        const theta = 3.14/2;
 
-    }
-}
-
-function showGraph(usecase, mode) {
-    let data = {nodes:{}, links:{}};
-    const theta = 3.14/2;
-
-    window.graph.clearObjects();
-
-    let node = { id: usecase.id, name: usecase.name, x: 0, y: 0, z: 0 };
-    let ucObj3D = AUsecase.view3D(node, '');
-    ucObj3D.aid = usecase.id;
-    window.graph.addObject(ucObj3D);
-    let i = 0;
-    for(let j in usecase.scenarios) {
-        let scenario = usecase.scenarios[j];
-        let node = { id: j, name: scenario.name, x: i*100, y: 0, z: -200 };
-        let sobj = AScenario.view3D(node, '');
-        sobj.aid = j;
-        window.graph.addObject(sobj);
-        for(let actor in scenario.actors) {
-            let aname = actor.replace(/\s/g, '').toLowerCase();
-            window.graph.addLink({source: aname, target: j, color:'gray'});
+        data.nodes[usecase.id] = { id: usecase.id, name: usecase.name, fx: 0, fy: 0, fz: 0, view:AUsecase.view3D };
+        let bbox = { z: { max: -100, min: -1000}};
+        for(let j in usecase.scenarios) {
+            let scenario = usecase.scenarios[j];
+            data.nodes[j] = { id: j, name: scenario.name, view:AScenario.view3D };
+            for(let actor in scenario.actors) {
+                let aname = actor.replace(/\s/g, '').toLowerCase();
+                data.links.push({source: aname, target: j, value: 0.3, width: 2});
+            }
+            data.links.push({target: usecase.id, source: j, value: 0.1, width: 3, color: 'gray'});
         }
-        i++;
-    }
-    i = 0;
-    for(let actor in usecase.actors) {
-        let aname = actor.replace(/\s/g, '').toLowerCase();
-        let node = {id: aname, name: actor, x: i*100, y: 0, z: -200, rotation: {x:0,y:theta,z:0} };
-        let aobj = AActor.view3D(node, '');
-        aobj.aid = aname;
-        window.graph.addObject(aobj);
-        i++;
-    }
 
-    if (mode === 'add') {
-        window.graph.addData(data.nodes, data.links);
-    } else {
-        window.graph.setData(data.nodes, data.links);
+        for(let actor in usecase.actors) {
+            let aname = actor.replace(/\s/g, '').toLowerCase();
+            data.nodes[aname] = {id: aname, name: actor, view: AActor.view3D };
+        }
+
+        if (mode === 'add') {
+            window.graph.addData(data.nodes, data.links);
+        } else {
+            window.graph.setData(data.nodes, data.links);
+        }
+        window.graph.showLinks();
     }
-    window.graph.showLinks();
 }
+

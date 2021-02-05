@@ -51971,7 +51971,6 @@
 
       for (var k = 0; k < iterations; ++k) {
         alpha += (alphaTarget - alpha) * alphaDecay;
-
         forces.forEach(function (force) {
           force(alpha);
         });

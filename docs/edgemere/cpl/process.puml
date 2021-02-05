@@ -111,14 +111,14 @@ state "enable" as cpldeviceenable #lightgray {
 
 
 
-    state "sdi" as sdi #lightyellow {
+        state "sdi" as sdi #lightyellow {
 state "Request" as sdirequest #lightyellow {
 state "needed" as sdirequestneeded #lightyellow {
 }
 }
 }
 
-    
+        
     state "cpl" as cpl #lightgray {
 state "Function" as cplfunction #lightgray {
 }
@@ -134,26 +134,26 @@ state "reserve" as cplreserve #lightgray {
     sdirequestneeded ---> cplreserve
   
 
-    state "sdi" as sdi #lightyellow {
+        state "sdi" as sdi #lightyellow {
 state "Reservation" as sdireservation #lightyellow {
 state "rejected" as sdireservationrejected #lightyellow {
 }
 }
 }
 
-    
+        
     
     sdireservationrejected ---> cplfunction
   
 
-    state "sdi" as sdi #lightyellow {
+        state "sdi" as sdi #lightyellow {
 state "Resource" as sdiresource #lightyellow {
 state "provisioning" as sdiresourceprovisioning #lightyellow {
 }
 }
 }
 
-    
+        
     state "cpl" as cpl #lightgray {
 state "provision" as cplprovision #lightgray {
 }

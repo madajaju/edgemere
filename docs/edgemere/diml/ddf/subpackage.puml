@@ -17,6 +17,7 @@ package "Identity Aspect" #pink {
 package "Data Definition Framework" #ffcc88 {
 
     interface "Data Definition Framework" as i {
+            /edgemere/diml/ddf/data/create()
             /edgemere/diml/ddf/data/govern()
             /edgemere/diml/ddf/data/source/name()
             /edgemere/diml/ddf/datablueprint/deploy()

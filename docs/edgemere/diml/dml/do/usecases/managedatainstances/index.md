@@ -28,7 +28,7 @@ Manage Data Instances is the description
 
 Create Data Instance is the description
 
-![Scenario nameNoSpaces](./CreateDataInstance.svg)
+![Scenario CreateDataInstance](./createdatainstance.svg)
 
 #### Steps
 
@@ -44,7 +44,7 @@ Create Data Instance is the description
 
 Find Data Instance is the description
 
-![Scenario nameNoSpaces](./FindDataInstance.svg)
+![Scenario FindDataInstance](./finddatainstance.svg)
 
 #### Steps
 
@@ -60,7 +60,7 @@ Find Data Instance is the description
 
 Remove Data Instance is the description
 
-![Scenario nameNoSpaces](./RemoveDataInstance.svg)
+![Scenario RemoveDataInstance](./removedatainstance.svg)
 
 #### Steps
 

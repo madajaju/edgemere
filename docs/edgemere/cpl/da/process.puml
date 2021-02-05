@@ -41,14 +41,14 @@ state "register" as cpldaserviceregister #lightgray {
 
 
 
-    state "sml" as sml #lightgreen {
+        state "sml" as sml #lightgreen {
 state "Service" as smlservice #lightgreen {
 state "started" as smlservicestarted #lightgreen {
 }
 }
 }
 
-    
+        
     state "da" as da #lavender {
 state "service" as daservice #lavender {
 state "register" as daserviceregister #lavender {
