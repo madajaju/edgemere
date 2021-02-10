@@ -2,9 +2,9 @@
 
 const program = require('commander');
 
-const action = require('C:\\Users\\dwpulsip\\work\\edgemere\\node_modules\\ailtire\\src\\interface\\app\\build.js');
-const ActionHandler = require('C:\\Users\\dwpulsip\\work\\edgemere\\node_modules\\ailtire\\src\\Server/Action.js');
-global.ailtire = { config: require('C:\\Users\\dwpulsip\\work\\edgemere\\node_modules\\ailtire\\bin\\lib/../../.ailtire.js') };
+const action = require('C:\\Users\\darre\\work\\edgemere\\node_modules\\ailtire\\src\\interface\\app\\build.js');
+const ActionHandler = require('C:\\Users\\darre\\work\\edgemere\\node_modules\\ailtire\\src\\Server/Action.js');
+global.ailtire = { config: require('C:\\Users\\darre\\work\\edgemere\\node_modules\\ailtire\\bin\\lib/../../.ailtire.js') };
 program
 	.storeOptionsAsProperties(false)
 	.passCommandToAction(false);
