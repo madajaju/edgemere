@@ -17,17 +17,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@ckeditor/ckeditor5-markdown-gfm": "^33.0.0",
-    "3d-force-graph": "^1.67.3",
     "ailtire": "latest",
-    "bent": "^7.3.12",
-    "d3-force-3d": "^2.2.0",
-    "ejs": "^3.1.5",
-    "express": "^4.17.1",
-    "jquery": "^3.5.1",
     "mocha": "^9.2.2",
-    "socket.io": "^3.0.4",
-    "socket.io-client": "^3.0.5",
     "systeminformation": "^5.11.8"
   }
 }
