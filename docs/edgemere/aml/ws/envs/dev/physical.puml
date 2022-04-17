@@ -11,24 +11,24 @@ package "Workflow Services" #lightblue {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as amlws_container
-      REST --> amlws_container
+      file "node server.js\ndocker-compose.yml" as aml_ws_container
+      REST --> aml_ws_container
 
   
-    file "node web/server.js" as web_container
+    file "web" as web_container
     REST --> web_container
     socket ---> web_container
   
-    file "node gateway/server.js" as gateway_container
+    file "gateway" as gateway_container
     REST --> gateway_container
     socket ---> gateway_container
   
   }
   folder images #ffffff {
-    collections "amlws" as amlwsimage
+    collections "aml_ws" as aml_wsimage
     artifact "ailtire:swarm" as ailtireswarm
-    amlwsimage <|-- ailtireswarm
-    amlws_container --> amlwsimage
+    aml_wsimage <|-- ailtireswarm
+    aml_ws_container --> aml_wsimage
 
   
       artifact aml_ws_web

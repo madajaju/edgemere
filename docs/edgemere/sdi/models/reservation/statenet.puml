@@ -31,21 +31,19 @@ Created --> Rejected : free
 
 
 
- state "sdi" as sdi #lightyellow {
-state "io" as sdiio #lightyellow {
-state "provision" as sdiioprovision #lightyellow {
+ state "edgemere" as edgemere #lightyellow {
+state "sdi" as edgemeresdi #lightyellow {
+state "io" as edgemeresdiio #lightyellow {
+state "provision" as edgemeresdiioprovision #lightyellow {
+}
 }
 }
 }
 
- Confirmed -[#black]--> sdiioprovision
+ Confirmed -[#black]--> edgemeresdiioprovision
  
- state "cpl" as cpl #lightgray {
-state "Function" as cplFunction #lightgray {
-}
-}
-
- Rejected -[#black]--> cplFunction
+ 
+ Rejected -[#black]--> Null
  
 
 @enduml

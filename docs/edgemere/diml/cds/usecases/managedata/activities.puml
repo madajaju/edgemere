@@ -1,7 +1,7 @@
 @startuml
 
 
-usecase "Manage Data" as ManageData
+usecase "Manage Data" as ManageData #yellow
 
 Actor "Data Scientist" as DataScientist
 
@@ -32,5 +32,13 @@ ManageData --> IngestData
 usecase "MoveData" as MoveData #lightgrey
 
 ManageData --> MoveData
+
+
+
+
+
+
+
+
 
 @enduml

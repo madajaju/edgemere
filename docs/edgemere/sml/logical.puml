@@ -19,6 +19,15 @@ package "Security Aspect" #pink {
         }
     }
 
+package "Service Orchestrator" #lightgreen {
+    
+        class ServiceInstance {
+        }
+    
+        class StackInstance {
+        }
+    }
+
 package "Service Management Layer" #lightgreen {
     
         class Stack {
@@ -32,14 +41,11 @@ package "Service Management Layer" #lightgreen {
     
         class Stacklet {
         }
-    }
-
-package "Service Orchestrator" #lightgreen {
     
-        class ServiceInstance {
+        class StackDefinition {
         }
     
-        class StackInstance {
+        class ServiceDefinition {
         }
     }
 
@@ -106,9 +112,9 @@ package "Service Management Layer" #lightgreen {
             
     
     class "RunScript" {
-                 string attr1
+                 string name
                     }
-                RunScript o--> "1" ModelName : assoc1
+                RunScript o--> "1" ServiceInstance : owner
             
     
     class "Service" {
@@ -127,11 +133,10 @@ package "Service Management Layer" #lightgreen {
                         Service o--> "1" PolicyCollection : policies
             
     
-    class "ServiceTemplate" {
-                 string attr1
+    class "ServiceDefinition" {
+                 string name
                     }
-                ServiceTemplate o--> "1" ModelName : assoc1
-            
+    
     
     class "Servicelet" {
                  string name
@@ -177,17 +182,17 @@ package "Service Management Layer" #lightgreen {
     
         Service <|-- Stack
     
-    class "StackTemplate" {
+    class "StackDefinition" {
                  string name
                  string version
                  json parameters
                              create()
             }
-                StackTemplate *--> "n" Stacklet : stacklets
-                        StackTemplate *--> "n" StackDefinition : stacks
-                        StackTemplate o--> "1" StackDefinition : parent
-                        StackTemplate *--> "n" ServiceDefinition : services
-                        StackTemplate *--> "n" DataReference : data
+                StackDefinition *--> "n" Stacklet : stacklets
+                        StackDefinition *--> "n" StackDefinition : stacks
+                        StackDefinition o--> "1" StackDefinition : parent
+                        StackDefinition *--> "n" ServiceDefinition : services
+                        StackDefinition *--> "n" DataReference : data
             
     
     class "Stacklet" {

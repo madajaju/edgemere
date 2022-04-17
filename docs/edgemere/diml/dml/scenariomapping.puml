@@ -7,16 +7,18 @@ state "Chief Data Officer" as ChiefDataOfficer {
     state "Manage Data Governance" as ChiefDataOfficerManageDataGovernance {
     }
 }
-state "diml" as diml #ffcc88 {
-state "dml" as dimldml #ffcc88 {
-state "data" as dimldmldata #ffcc88 {
-state "govern" as dimldmldatagovern #ffcc88 {
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "dml" as edgemeredimldml #ffcc88 {
+state "data" as edgemeredimldmldata #ffcc88 {
+state "govern" as edgemeredimldmldatagovern #ffcc88 {
+}
 }
 }
 }
 }
 
-ChiefDataOfficerManageDataGovernance --> dimldmldatagovern
+ChiefDataOfficerManageDataGovernance --> edgemeredimldmldatagovern
 
 
  
@@ -24,16 +26,18 @@ state "Chief Data Officer" as ChiefDataOfficer {
     state "Manage Data Policies" as ChiefDataOfficerManageDataPolicies {
     }
 }
-state "diml" as diml #ffcc88 {
-state "dml" as dimldml #ffcc88 {
-state "datapolicy" as dimldmldatapolicy #ffcc88 {
-state "list" as dimldmldatapolicylist #ffcc88 {
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "dml" as edgemeredimldml #ffcc88 {
+state "datapolicy" as edgemeredimldmldatapolicy #ffcc88 {
+state "list" as edgemeredimldmldatapolicylist #ffcc88 {
+}
 }
 }
 }
 }
 
-ChiefDataOfficerManageDataPolicies --> dimldmldatapolicylist
+ChiefDataOfficerManageDataPolicies --> edgemeredimldmldatapolicylist
 
 
  
@@ -41,16 +45,18 @@ state "Data Engineer" as DataEngineer {
     state "Manage Data Sources" as DataEngineerManageDataSources {
     }
 }
-state "diml" as diml #ffcc88 {
-state "dml" as dimldml #ffcc88 {
-state "datasource" as dimldmldatasource #ffcc88 {
-state "list" as dimldmldatasourcelist #ffcc88 {
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "dml" as edgemeredimldml #ffcc88 {
+state "datasource" as edgemeredimldmldatasource #ffcc88 {
+state "list" as edgemeredimldmldatasourcelist #ffcc88 {
+}
 }
 }
 }
 }
 
-DataEngineerManageDataSources --> dimldmldatasourcelist
+DataEngineerManageDataSources --> edgemeredimldmldatasourcelist
 
 
     state "Data Engineer" as DataEngineer {
@@ -59,14 +65,8 @@ DataEngineerManageDataSources --> dimldmldatasourcelist
             }
         }
     }
-    state "diml" as diml #ffcc88 {
-state "dmldatasource" as dimldmldatasource #ffcc88 {
-state "list" as dimldmldatasourcelist #ffcc88 {
-}
-}
-}
-
-    DataEngineerManageDataSourcesDeregisterDataSource --> dimldmldatasourcelist
+    
+    DataEngineerManageDataSourcesDeregisterDataSource --> Null
     
  
     state "DataEngineer" as DataEngineer {
@@ -75,14 +75,8 @@ state "list" as dimldmldatasourcelist #ffcc88 {
             }
         }
     }
-    state "diml" as diml #ffcc88 {
-state "dmldatasource" as dimldmldatasource #ffcc88 {
-state "list" as dimldmldatasourcelist #ffcc88 {
-}
-}
-}
-
-    DataEngineerManageDataSourcesRegisterDataSource --> dimldmldatasourcelist
+    
+    DataEngineerManageDataSourcesRegisterDataSource --> Null
     
  
  
@@ -90,16 +84,18 @@ state "Chief Data Officer" as ChiefDataOfficer {
     state "Manage Data Strategy" as ChiefDataOfficerManageDataStrategy {
     }
 }
-state "diml" as diml #ffcc88 {
-state "dml" as dimldml #ffcc88 {
-state "datastrategy" as dimldmldatastrategy #ffcc88 {
-state "list" as dimldmldatastrategylist #ffcc88 {
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "dml" as edgemeredimldml #ffcc88 {
+state "datastrategy" as edgemeredimldmldatastrategy #ffcc88 {
+state "list" as edgemeredimldmldatastrategylist #ffcc88 {
+}
 }
 }
 }
 }
 
-ChiefDataOfficerManageDataStrategy --> dimldmldatastrategylist
+ChiefDataOfficerManageDataStrategy --> edgemeredimldmldatastrategylist
 
 
  

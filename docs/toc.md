@@ -3,6 +3,7 @@ layout: default
 title: TOC
 permalink: toc
 ---
+Version 0.3.0 
 
 ### Edgemere Overview
 * [edgemere](./edgemere/index.md)
@@ -26,6 +27,9 @@ permalink: toc
   * [AI ML Services](package--edgemere-aml-ams)
   * [Analytics Services](package--edgemere-aml-as)
   * [Developer Services](package--edgemere-aml-ds)
+    * [Automation Framework](package--edgemere-aml-ds-af)
+    * [Environment Management](package--edgemere-aml-ds-em)
+    * [Pipeline Manager](package--edgemere-aml-ds-pm)
   * [Workflow Services](package--edgemere-aml-ws)
 * [Common Physical Layer](package--edgemere-cpl)
   * [Device Agent](package--edgemere-cpl-da)
@@ -52,9 +56,9 @@ permalink: toc
 * [Identity Aspect](package--edgemere-ia)
 * [Security Aspect](package--edgemere-sa)
   * [Policy Engine](package--edgemere-sa-pe)
+  * [Security Profile Manager](package--edgemere-sa-spm)
 * [Service Management Layer](package--edgemere-sml)
   * [Cloud Broker](package--edgemere-sml-cb)
-  * [Environment Management](package--edgemere-sml-em)
   * [Provision Engine](package--edgemere-sml-pe)
   * [Service Controller](package--edgemere-sml-sc)
   * [Service Orchestrator](package--edgemere-sml-so)
@@ -64,6 +68,7 @@ permalink: toc
 
    
 ### Use Cases  
+* [Manage Environment](usecase-ManageEnvironment)
 * [Manage AI Models](usecase-ManageAIModels)
 * [Manage Applications](usecase-ManageApplications)
 * [Manage Workloads](usecase-ManageWorkloads)
@@ -80,13 +85,14 @@ permalink: toc
 * [Manage Data Policies](usecase-ManageDataPolicies)
 * [Manage Data Sources](usecase-ManageDataSources)
 * [Manage Data Strategy](usecase-ManageDataStrategy)
+* [Apply Security Profiles](usecase-ApplySecurityProfiles)
+* [Manage Security Profiles](usecase-ManageSecurityProfiles)
 * [Find Resources](usecase-FindResources)
 * [ManageBilling](usecase-ManageBilling)
 * [ManageCostModel](usecase-ManageCostModel)
 * [Manage Multi Cloud](usecase-ManageMultiCloud)
 * [Map Assets to Cloud](usecase-MapAssetstoCloud)
 * [Map Services to Resources](usecase-MapServicestoResources)
-* [Manage Environment](usecase-ManageEnvironment)
 * [Manage Stacks](usecase-ManageStacks)
 * [Manage Assets](usecase-ManageAssets)
 * [Manage Clouds](usecase-ManageClouds)

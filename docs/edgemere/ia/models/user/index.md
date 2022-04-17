@@ -7,26 +7,71 @@ parent: classes
 
 # User
 
-Description long description
+User of the system
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
-* attr1:string - description long description
+* name:string - Name of the user
 
 
 ## Associations
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| assoc1 | 1 | ModelName | false | false |  |
+| groups | n | Group | false | false |  |
+| attributes | n | IdentityAttribute | false | false |  |
 
 
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
+| users | n | Group | false | false |  |
 
 
 

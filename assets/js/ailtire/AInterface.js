@@ -44,8 +44,9 @@ export default class AInterface {
             }
         }
         group.aid = node.id;
-        node.box = 40;
-        // node.expandLink = `actor/get?id=${node.id}`;
+        node.box = 50;
+        node.expandLink = `interface/get?id=${node.id}`;
+        node.expandView = AInterface.viewDeep3D;
 
         return group;
     }

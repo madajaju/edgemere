@@ -2,22 +2,26 @@
 class User {
     static definition = {
         name: 'User',
-        description: 'Description ' +
-            'long description',
+        description: 'User of the system',
         attributes: {
-            attr1: {
+            name: {
                 type: 'string',
-                description: 'description' +
-                    ' long description'
+                description: 'Name of the user',
             }
         },
         associations: {
-            assoc1: {
-                type: 'ModelName',
-                cardinality: 1,
+            groups: {
+                type: 'Group',
+                cardinality: 'n',
                 composition: false,
                 owner: false,
             },
+            attributes: {
+                type: 'IdentityAttribute',
+                cardinality: 'n',
+                composition: false,
+                owner: false,
+            }
         },
         /*
         statenet: {

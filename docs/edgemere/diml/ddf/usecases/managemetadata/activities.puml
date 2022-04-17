@@ -1,7 +1,7 @@
 @startuml
 
 
-usecase "Manage Meta Data" as ManageMetaData
+usecase "Manage Meta Data" as ManageMetaData #yellow
 
 Actor "Data Scientist" as DataScientist
 
@@ -16,5 +16,13 @@ ManageMetaData --> CaptureMetaData
 usecase "ManageDataCatalog" as ManageDataCatalog #lightgrey
 
 ManageMetaData --> ManageDataCatalog
+
+
+
+
+
+
+
+
 
 @enduml

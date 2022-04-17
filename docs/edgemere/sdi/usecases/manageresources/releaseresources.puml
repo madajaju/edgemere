@@ -15,11 +15,4 @@ end box
 
 
 
-box "Common Physical Layer" #lightgray
-    boundary cpl #white
-end box
-EventBus -\ cpl: method()
-cpl --/ EventBus: Model.Event2
-
-EventBus --/ sdi : method2()
 @enduml

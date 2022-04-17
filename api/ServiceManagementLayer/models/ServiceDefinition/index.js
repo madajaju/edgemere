@@ -1,23 +1,23 @@
 
-class ServiceTemplate {
+class ServiceDefinition {
     static definition = {
-        name: 'ServiceTemplate',
-        description: 'Description ' +
-            'long description',
+        name: 'ServiceDefinition',
+        description: 'This represents the definition of a service to be used to create a service',
         attributes: {
-            attr1: {
+            name: {
                 type: 'string',
-                description: 'description' +
-                    ' long description'
+                description: 'Name of the service definition',
             }
         },
         associations: {
+            /*
             assoc1: {
                 type: 'ModelName',
                 cardinality: 1,
                 composition: false,
                 owner: false,
             },
+             */
         },
         /*
         statenet: {
@@ -50,5 +50,5 @@ class ServiceTemplate {
     }
 }
 
-module.exports = ServiceTemplate;
+module.exports = ServiceDefinition;
 

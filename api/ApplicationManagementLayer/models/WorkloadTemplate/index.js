@@ -2,19 +2,23 @@
 class WorkloadTemplate {
     static definition = {
         name: 'WorkloadTemplate',
-        description: 'Description ' +
-            'long description',
+        description: 'A WorkloadTemplate allows developers to paramaterize workloads so they can be reused in' +
+            ' several different areas. Workloads are created based on arguments passed into the template for' +
+            ' creation of a Workload.',
         attributes: {
-            attr1: {
+            name: {
                 type: 'string',
-                description: 'description' +
-                    ' long description'
+                description: 'name of the workload template'
+            },
+            args: {
+                type: 'json',
+                description: 'Name value pairs used for the creation of applications from the template.'
             }
         },
         associations: {
-            assoc1: {
-                type: 'ModelName',
-                cardinality: 1,
+            workloads: {
+                type: 'Workload',
+                cardinality: 'n',
                 composition: false,
                 owner: false,
             },

@@ -15,7 +15,7 @@ package "Device Manager" #lightgray {
       REST --> cpl_dm_container
 
   
-    file "node web/server.js" as web_container
+    file "web" as web_container
     REST --> web_container
     socket ---> web_container
   

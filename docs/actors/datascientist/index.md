@@ -5,6 +5,8 @@ permalink: actor-datascientist
 parent: All Actors
 ---
 
+{#actor-function toLowerCase() { [native code] }}
+
 # Data Scientist
 
 Responsible for the architecture and development of data analytic models and solutions. They work closely with the Data engineer to deliver solutions to the Data Analyst.
@@ -20,8 +22,8 @@ Responsible for the architecture and development of data analytic models and sol
 * [Manage Meta Data](usecase-ManageMetaData)
 * [Manage Data Instances](usecase-ManageDataInstances)
 
-  
-![Use Case Diagram](./usecase.svg)
+
+![Use Case Diagram](./usecase.png)
 
 ## User Interface
 TBD

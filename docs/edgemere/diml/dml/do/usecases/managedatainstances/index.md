@@ -4,17 +4,25 @@ title: Manage Data Instances
 permalink: usecase-ManageDataInstances
 parent: usecases
 ---
-
 # Manage Data Instances
 
 Manage Data Instances is the description
 
-![Activities Diagram](./activities.svg)
+![Activities Diagram](./activities.png)
 
 ## Actors
 
 * [Data Scientist](actor-datascientist)
 * [Application Developer](actor-applicationdeveloper)
+
+
+
+
+
+
+
+
+
 
 
 ## Detail Scenarios
@@ -23,12 +31,13 @@ Manage Data Instances is the description
 * [Manage Data Instances](#scenario-FindDataInstance)
 * [Manage Data Instances](#scenario-RemoveDataInstance)
 
-  
+
+
 ### Scenario Create Data Instance
 
 Create Data Instance is the description
 
-![Scenario CreateDataInstance](./createdatainstance.svg)
+![Scenario CreateDataInstance](./createdatainstance.png)
 
 #### Steps
 
@@ -40,11 +49,12 @@ Create Data Instance is the description
 * [Application Developer](actor-applicationdeveloper)
 
 
+
 ### Scenario Find Data Instance
 
 Find Data Instance is the description
 
-![Scenario FindDataInstance](./finddatainstance.svg)
+![Scenario FindDataInstance](./finddatainstance.png)
 
 #### Steps
 
@@ -54,13 +64,14 @@ Find Data Instance is the description
 #### Actors
 
 * [Actor](actor-actor)
+
 
 
 ### Scenario Remove Data Instance
 
 Remove Data Instance is the description
 
-![Scenario RemoveDataInstance](./removedatainstance.svg)
+![Scenario RemoveDataInstance](./removedatainstance.png)
 
 #### Steps
 
@@ -70,6 +81,7 @@ Remove Data Instance is the description
 #### Actors
 
 * [Actor](actor-actor)
+
 
 
 

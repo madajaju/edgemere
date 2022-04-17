@@ -2,19 +2,17 @@
 class Group {
     static definition = {
         name: 'Group',
-        description: 'Description ' +
-            'long description',
+        description: 'Group representing a set of identities',
         attributes: {
-            attr1: {
+            name: {
                 type: 'string',
-                description: 'description' +
-                    ' long description'
+                description: 'Name of the group'
             }
         },
         associations: {
-            assoc1: {
-                type: 'ModelName',
-                cardinality: 1,
+            users: {
+                type: 'User',
+                cardinality: 'n',
                 composition: false,
                 owner: false,
             },

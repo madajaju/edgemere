@@ -1,4 +1,4 @@
-import {AScenario, AText, AUsecase} from './index.js';
+import {AText} from './index.js';
 
 export default class AAttribute {
     constructor(config) {
@@ -14,7 +14,6 @@ export default class AAttribute {
         } else if (type === 'Sourced') {
             color = "green";
         }
-        const theta = 3.14 / 2;
         const group = new THREE.Group();
         const material = new THREE.MeshLambertMaterial({color: color, opacity: 1});
         const center = new THREE.BoxGeometry(100, 50, 30);
@@ -39,7 +38,8 @@ export default class AAttribute {
         }
         group.aid = node.id;
         node.box = 50;
-        // node.expandLink = `actor/get?id=${node.id}`;
+        node.expandLink = `attribute/get?id=${node.id}`;
+        node.expandView = AAttribute.viewDeep3D;
 
         return group;
     }

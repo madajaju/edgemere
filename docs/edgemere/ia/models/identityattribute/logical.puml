@@ -1,0 +1,233 @@
+@startuml
+
+class "IdentityAttribute" as Model {
+ string name
+ string value
+
+ 
+}
+
+
+
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "attributes"
+    
+
+@enduml

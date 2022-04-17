@@ -19,18 +19,20 @@ box Common Physical Layer #lightgray
 
     cpl -> "device": create (name: hostad1,file: ./templates/device.yaml)
 
+    "device" --/ EventBus: device.create
 
-    cpl -> "cpl/device": disable (name: hostad1)
+    cpl -> "common physical layer": disable (name: hostad1)
+
+    "common physical layer" --/ EventBus: device.disable
+
+    cpl -> "common physical layer": enable (name: hostad1)
+
+    "common physical layer" --/ EventBus: device.enable
+
+    cpl -> "common physical layer": disable (name: hostad1)
+
+    "common physical layer" --/ EventBus: device.disable
 
 
-    cpl -> "cpl/device": enable (name: hostad1)
 
-
-    cpl -> "cpl/device": disable (name: hostad1)
-
-
-
-
-
-EventBus --/ cpl : method2()
 @enduml

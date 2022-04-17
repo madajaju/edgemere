@@ -1,7 +1,7 @@
 @startuml
 
 
-usecase "Manage Multi Cloud" as ManageMultiCloud
+usecase "Manage Multi Cloud" as ManageMultiCloud #yellow
 
 Actor "IT Operations" as ITOperations
 
@@ -20,5 +20,13 @@ ManageMultiCloud --> ManagePoliciesforMultiCloud
 usecase "RemoveCloudfromMultiCloud" as RemoveCloudfromMultiCloud #lightgrey
 
 ManageMultiCloud --> RemoveCloudfromMultiCloud
+
+
+
+
+
+
+
+
 
 @enduml

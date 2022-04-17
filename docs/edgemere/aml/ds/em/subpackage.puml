@@ -1,0 +1,48 @@
+@startuml
+
+
+package "Service Orchestrator" #lightgreen {
+
+}
+
+package "Service Management Layer" #lightgreen {
+
+}
+
+package "Security Aspect" #pink {
+
+}
+
+package "Security Profile Manager" #pink {
+
+}
+
+
+package "Environment Management" #lightgreen {
+
+    interface "Environment Management" as i {
+            /edgemere/aml/ds/em/environment/addpolicies()
+            /edgemere/aml/ds/em/environment/create()
+            /edgemere/aml/ds/em/environment/destroy()
+            /edgemere/aml/ds/em/environment/disable()
+            /edgemere/aml/ds/em/environment/enable()
+            /edgemere/aml/ds/em/environment/list()
+            /edgemere/aml/ds/em/environment/update()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Environment Management" #lightgreen {
+
+
+}
+
+
+    "Environment Management" --> "Service Orchestrator"
+
+
+@enduml

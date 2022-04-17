@@ -25,5 +25,220 @@ Model o--> "1" PolicyCollection : polices
     
         Environment   o--> "n" Model : "clouds"
     
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "n" Model : "clouds"
+    
 
 @enduml

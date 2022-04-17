@@ -9,7 +9,7 @@ parent: classes
 
 Attribute type of Metric. This is for metrics that are descriptiive not consumable
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 

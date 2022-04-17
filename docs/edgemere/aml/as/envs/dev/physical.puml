@@ -11,24 +11,24 @@ package "Analytics Services" #lightblue {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as amlas_container
-      REST --> amlas_container
+      file "node server.js\ndocker-compose.yml" as aml_as_container
+      REST --> aml_as_container
 
   
-    file "node web/server.js" as web_container
+    file "web" as web_container
     REST --> web_container
     socket ---> web_container
   
-    file "node gateway/server.js" as gateway_container
+    file "gateway" as gateway_container
     REST --> gateway_container
     socket ---> gateway_container
   
   }
   folder images #ffffff {
-    collections "amlas" as amlasimage
+    collections "aml_as" as aml_asimage
     artifact "ailtire:swarm" as ailtireswarm
-    amlasimage <|-- ailtireswarm
-    amlas_container --> amlasimage
+    aml_asimage <|-- ailtireswarm
+    aml_as_container --> aml_asimage
 
   
       artifact aml_as_web

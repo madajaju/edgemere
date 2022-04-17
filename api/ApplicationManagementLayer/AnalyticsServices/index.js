@@ -1,7 +1,7 @@
 module.exports = {
     shortname: 'as',
     name: 'Analytics Services',
-    description: 'Analytics Services is a package that contains...',
+    description: 'Analytics Services contains all of the services for analyzing data in the system',
     color: '#lightblue',
     depends: [ "Workflow Services" ]
 };

@@ -1,7 +1,7 @@
 
-class StackTemplate {
+class StackDefinition {
     static definition = {
-        name: 'StackTemplate',
+        name: 'StackDefinition',
         description: 'A Stack is an aggregation of services in one context. The Stack can have any number ' +
             'of Services and has a stacklet for each environment in the system. Application typically ' +
             'have 1 or more stacks to define their applications.',
@@ -91,5 +91,5 @@ class StackTemplate {
     }
 }
 
-module.exports = StackTemplate;
+module.exports = StackDefinition;
 

@@ -9,7 +9,7 @@ parent: classes
 
 Data Pipeline describes a pipeline to process a data source.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -28,6 +28,49 @@ Data Pipeline describes a pipeline to process a data source.
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
+| pipeline | 1 | DataProcedure | false | false |  |
 | pipeline | 1 | DataProcedure | false | false |  |
 
 

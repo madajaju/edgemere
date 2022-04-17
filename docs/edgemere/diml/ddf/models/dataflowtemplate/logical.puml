@@ -32,5 +32,220 @@ Model o--> "n" DataAdaptorTemplate : sinks
     
         DataBluePrint   *--> "n" Model : "flows"
     
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "flows"
+    
 
 @enduml

@@ -1,15 +1,15 @@
 @startuml
 
 class "Workload" as Model {
- string attr1
+ string name
 
  
 }
 
-rectangle "ModelName" as ModelName #lightblue {
+rectangle "Application" as Application #lightblue {
 }
 
-Model o--> "1" ModelName : assoc1
+Model o--> "n" Application : applications
 
 
 
@@ -18,6 +18,661 @@ Model o--> "1" ModelName : assoc1
     }
     
         Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   o--> "n" Model : "workloads"
+    
+    rectangle "WorkloadInstance" as WorkloadInstance #lightgreen {
+    }
+    
+        WorkloadInstance   o--> "1" Model : "app"
+    
+    rectangle "WorkloadTemplate" as WorkloadTemplate #lightgreen {
+    }
+    
+        WorkloadTemplate   o--> "n" Model : "workloads"
     
 
 @enduml

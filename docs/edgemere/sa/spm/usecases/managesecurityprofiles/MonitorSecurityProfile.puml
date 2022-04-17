@@ -1,0 +1,30 @@
+@startuml
+
+actor "Actor"
+
+
+entity EventBus
+
+box Security Profile Manager #pink
+    boundary spm #white
+end box
+
+
+box Software Defined Infrastructure #lightyellow
+            participant storageresource
+    end box
+
+
+"Actor" -> spm: Monitor Security Profile
+
+    spm -> "storageresource": list (name: hello,file: ./templates/world.yml)
+
+    "storageresource" --/ EventBus: data.list
+
+    spm -> "storageresource": list (name: hello,file: ./templates/world.yml)
+
+    "storageresource" --/ EventBus: data.list
+
+
+
+@enduml

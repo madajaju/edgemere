@@ -9,7 +9,7 @@ parent: classes
 
 This represents a request being made for a resource in the cloud. This is only the request a set of reservations will be created for each request. When the request is satisfied the requestwill change state to Satisfied, and be returned to the requesterlong description
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -36,6 +36,143 @@ This represents a request being made for a resource in the cloud. This is only t
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| request | 1 | AcceleratorResource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | ComputeResource | false | false |  |
+| request | 1 | NetworkResource | false | false |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| request | 1 | StorageResource | false | false |  |
+| request | 1 | AcceleratorResource | false | false |  |
+| requests | n | Cloud | false | true |  |
+| request | 1 | ComputeResource | false | false |  |
+| request | 1 | NetworkResource | false | false |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
+| request | 1 | StorageResource | false | false |  |
 | request | 1 | AcceleratorResource | false | false |  |
 | requests | n | Cloud | false | true |  |
 | request | 1 | ComputeResource | false | false |  |
@@ -47,7 +184,7 @@ This represents a request being made for a resource in the cloud. This is only t
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

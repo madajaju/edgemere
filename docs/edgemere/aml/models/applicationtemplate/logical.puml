@@ -1,15 +1,16 @@
 @startuml
 
 class "ApplicationTemplate" as Model {
- string attr1
+ string name
+ json args
 
  
 }
 
-rectangle "ModelName" as ModelName #lightblue {
+rectangle "Application" as Application #lightblue {
 }
 
-Model o--> "1" ModelName : assoc1
+Model o--> "n" Application : app
 
 
 

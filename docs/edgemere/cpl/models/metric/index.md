@@ -9,7 +9,7 @@ parent: classes
 
 Metric stores information about the physical profile. 
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -27,6 +27,49 @@ Metric stores information about the physical profile.
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
+| values | n | MetricComposite | true | true |  |
 | values | n | MetricComposite | true | true |  |
 
 

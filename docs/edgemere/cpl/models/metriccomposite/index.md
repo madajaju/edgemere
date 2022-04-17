@@ -9,7 +9,7 @@ parent: classes
 
 Composite type of Metric. This is for metrics that are a group of metrics
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -28,6 +28,221 @@ Composite type of Metric. This is for metrics that are a group of metrics
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
+| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
+| available | 1 | PhysicalProfile |  | true | Availability of the element |
+| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
+| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
+| requirements | 1 | Request | true | true |  |
 | capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
 | available | 1 | PhysicalProfile |  | true | Availability of the element |
 | reserved | 1 | PhysicalProfile |  | true | Reservations of the element |

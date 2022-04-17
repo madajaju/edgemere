@@ -2,19 +2,22 @@
 class ApplicationTemplate {
     static definition = {
         name: 'ApplicationTemplate',
-        description: 'Description ' +
-            'long description',
+        description: 'An ApplicationTemplate provides a template to create applications based on parameters passed' +
+            ' into the template when it is being used to create an application.',
         attributes: {
-            attr1: {
+            name: {
                 type: 'string',
-                description: 'description' +
-                    ' long description'
+                description: 'Name of the Application Template',
+            },
+            args: {
+                type: 'json',
+                description: 'Name value pairs used for the creation of applications from the template.'
             }
         },
         associations: {
-            assoc1: {
-                type: 'ModelName',
-                cardinality: 1,
+            app: {
+                type: 'Application',
+                cardinality: 'n',
                 composition: false,
                 owner: false,
             },

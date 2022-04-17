@@ -7,14 +7,15 @@ parent: classes
 
 # Application
 
-Description long description
+Application contains several SABRs stitched together to create capabilities
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
 * name:string - Name of the Application
 * version:string - Version of the Application
+* fn:ref - Function to call with the bundle instance when the bundle instance is run.
 
 
 ## Associations
@@ -31,6 +32,181 @@ Description long description
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
+| app | 1 | Stack | false | false | Applications of the stacks |
+| app | 1 | ApplicationInstance | false | false |  |
+| app | n | ApplicationTemplate | false | false |  |
+| applications | n | Workload | false | false |  |
 | app | 1 | Stack | false | false | Applications of the stacks |
 
 

@@ -7,12 +7,18 @@ package "Data Management Layer" #ffcc88 {
         }
     }
 
+package "Common Data Service" #ffcc88 {
+    }
+
 package "Data Definition Framework" #ffcc88 {
     
         class DataBluePrint {
         }
     
         class DataSource {
+        }
+    
+        class DataAdaptorInstance {
         }
     
         class DataAdaptor {
@@ -76,12 +82,13 @@ package "Data Definition Framework" #ffcc88 {
             }
                 DataAdaptor o--> "1" DataBluePrint : blueprint
                         DataAdaptor *--> "n" DataSource : sources
+                        DataAdaptor *--> "n" DataAdaptorInstance : instances
             
     
     class "DataAdaptorInstance" {
-                 string attr1
+                 string name
                     }
-                DataAdaptorInstance o--> "1" ModelName : assoc1
+                DataAdaptorInstance o--> "1" DataAdaptor : parent
             
     
     class "DataAdaptorTemplate" {
@@ -171,6 +178,8 @@ package "Data Definition Framework" #ffcc88 {
 
 
     "Data Definition Framework" --> "Data Management Layer"
+
+    "Data Definition Framework" --> "Common Data Service"
 
 
 @enduml

@@ -1,0 +1,43 @@
+version: "3.7"
+services:
+  child:
+    image: child_image:latest
+    stop_grace_period: 1m
+    stop_signal: SIGINT
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      replicas: 1
+    environment:
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_PARENT=${AILTIRE_STACKNAME}
+      - AILTIRE_PARENTHOST=${AILTIRE_PARENTHOST}
+      - AILTIRE_APPNAME=${AILTIRE_APPNAME}
+    networks:
+      - children
+      - parent
+  frontend:
+    image: a_d_pm_web
+    networks:
+      - sibling
+  gw:
+    image: a_d_pm_gw
+    networks:
+      children:
+        aliases:
+          - parent
+          - top
+      sibling:
+        aliases:
+          - gateway
+
+networks:
+  children:
+    driver: overlay
+    attachable: true
+    name: ${APPNAME}_a_d_pm_family
+  sibling:
+    driver: overlay
+  parent:
+    external: true
+    name: ${APPNAME}_a_d_family

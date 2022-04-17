@@ -1,16 +1,10 @@
 @startuml
 
 class "DataStrategy" as Model {
- string attr1
+ string name
 
  
 }
-
-rectangle "ModelName" as ModelName #lightblue {
-}
-
-Model o--> "1" ModelName : assoc1
-
 
 
 

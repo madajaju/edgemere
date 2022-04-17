@@ -4,20 +4,29 @@ title: Manage Assets
 permalink: usecase-ManageAssets
 parent: usecases
 ---
-
 # Manage Assets
 
 Manage Assets is the description
 
-![Activities Diagram](./activities.svg)
+![Activities Diagram](./activities.png)
 
 ## Actors
 
 * [Actor](actor-actor)
 
 
+
+
+
+
+
+
+
+
+
 ## Detail Scenarios
 
 
-  
+
+
 

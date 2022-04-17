@@ -5,6 +5,8 @@ permalink: actor-dataengineer
 parent: All Actors
 ---
 
+{#actor-function toLowerCase() { [native code] }}
+
 # DataEngineer
 
 Responsible for operationalization of data pipeline and the automation and deployment of data solutions. They work closely with the Data Scientist to deliver solutions to data analyst.
@@ -21,8 +23,8 @@ Responsible for operationalization of data pipeline and the automation and deplo
 * [Manage Data Procedures](usecase-ManageDataProcedures)
 * [Manage Data Sources](usecase-ManageDataSources)
 
-  
-![Use Case Diagram](./usecase.svg)
+
+![Use Case Diagram](./usecase.png)
 
 ## User Interface
 TBD

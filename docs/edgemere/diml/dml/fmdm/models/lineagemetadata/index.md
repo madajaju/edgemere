@@ -9,7 +9,7 @@ parent: classes
 
 This class is a meta-data class that stores the lineage of the Data Instance. The creation action is stored in the class along with the lineage of the the data instance.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -30,6 +30,49 @@ This class is a meta-data class that stores the lineage of the Data Instance. Th
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
+| lineage | n | Data | false | true |  |
 | lineage | n | Data | false | true |  |
 
 

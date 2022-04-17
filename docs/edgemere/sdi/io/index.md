@@ -5,6 +5,7 @@ permalink: package--edgemere-sdi-io
 parent: Software Defined Infrastructure
 grand_parent: edgemere
 ---
+
 # Infrastructure Orchestrator
 
 Infrastructure Orchestrator is responsible for the orchestration of the infrastructure. It evaluates policies against the infrastructure requests and reservations to determine which Hardware in the Common Physical Layer is used to meet the request requirements.
@@ -18,16 +19,16 @@ that are elaborated in the use case descriptions.
 
 
 
-![UseCase Diagram](./usecases.svg)
+![UseCase Diagram](./usecases.png)
 
 ## Users
 
-The following are the actors of the Infrastructure Orchestrator subsystem. This can include people, other subsystems 
-inside the solution and even external subsystems. 
+The following are the actors of the Infrastructure Orchestrator subsystem. This can include people, other subsystems
+inside the solution and even external subsystems.
 
 
 
-![User Interaction](./userinteraction.svg)
+![User Interaction](./userinteraction.png)
 
 ## Interface
 
@@ -35,7 +36,7 @@ The subsystem has a REST, CLI, WebSocket, and Web interface. Use Cases and Scena
 of the interfaces to perform the work that needs to be completed. The following  diagram shows how
 users interact with the system.
 
-![Scenario Mappings Diagram](./scenariomapping.svg)
+![Scenario Mappings Diagram](./scenariomapping.png)
 
 * [ edgemere sdi io evaluaterequest](#action--edgemere-sdi-io-evaluaterequest)
 * [ edgemere sdi io provision](#action--edgemere-sdi-io-provision)
@@ -46,7 +47,7 @@ users interact with the system.
 The Data Model for the  Infrastructure Orchestrator subsystem shows how the different objects and classes of object interact
 and their structure.
 
-![Sub Package Diagram](./subpackage.svg)
+![Sub Package Diagram](./subpackage.png)
 
 ### Sub Packages
 
@@ -55,7 +56,7 @@ organize the architecture and make it easier to analyze, understand, design, and
 
 
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ### Classes
 
@@ -69,7 +70,7 @@ The following are the classes in the data model of the Infrastructure Orchestrat
 This subsystem is deployed using micro-services as shown in the diagram below. The 'micro' module is
 used to implement the micro-services in the system. The subsystem also has an CLI, REST and Web Interface
 exposed through a nodejs application. The nodejs application will interface with the micro-services and
-can monitor and drive work-flows through the mesh of micro-services. The deployment of the subsystem is 
+can monitor and drive work-flows through the mesh of micro-services. The deployment of the subsystem is
 dependent on the environment it is deployed. This subsystem has the following environments:
 * [dev](environment--edgemere-sdi-io-dev)
 * [test](environment--edgemere-sdi-io-test)
@@ -81,7 +82,7 @@ dependent on the environment it is deployed. This subsystem has the following en
 
 The Infrastructure Orchestrator subsystem is physically laid out on a hybrid cloud infrastructure. Each microservice belongs
 to a secure micro-segmented network. All of the micro-services communicate to each other and the main app through a
-REST interface. A Command Line Interface (CLI), REST or Web User interface for the app is how other subsystems or actors 
+REST interface. A Command Line Interface (CLI), REST or Web User interface for the app is how other subsystems or actors
 interact. Requests are forwarded to micro-services through the REST interface of each micro-service. The subsystem has
 the a unique layout based on the environment the physical space. The following are the environments for this
 subsystems.

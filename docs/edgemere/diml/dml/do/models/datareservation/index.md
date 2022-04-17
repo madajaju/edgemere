@@ -9,7 +9,7 @@ parent: classes
 
 Resrevation for utilixzing data and creating a data instance.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -30,11 +30,54 @@ Resrevation for utilixzing data and creating a data instance.
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
 | reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
+| reservations | n | DataRequest | false | true |  |
 
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

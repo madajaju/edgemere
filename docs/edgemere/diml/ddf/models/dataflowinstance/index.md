@@ -9,7 +9,7 @@ parent: classes
 
 This is an instance of the data flow when a blue print is instantiated.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -30,6 +30,49 @@ This is an instance of the data flow when a blue print is instantiated.
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
+| flows | n | DataBluePrintInstance | false | false |  |
 | flows | n | DataBluePrintInstance | false | false |  |
 
 

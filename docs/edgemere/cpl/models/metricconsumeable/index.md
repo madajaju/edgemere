@@ -9,7 +9,7 @@ parent: classes
 
 Consumeable Metric that is consumed when a resource is utilized
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 

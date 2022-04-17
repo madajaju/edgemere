@@ -4,17 +4,25 @@ title: Manage Workloads
 permalink: usecase-ManageWorkloads
 parent: usecases
 ---
-
 # Manage Workloads
 
 Application Developers need the ability to connect applications together through Workflows. This gives the organization the automate complex data interactions between legacy and modern applications across a hybrid infrastructure (Multi-Hybrid Cloud).
 
-![Activities Diagram](./activities.svg)
+![Activities Diagram](./activities.png)
 
 ## Actors
 
 * [Application Developer](actor-applicationdeveloper)
 * [DevOps Engineer](actor-devops)
+
+
+
+
+
+
+
+
+
 
 
 ## Detail Scenarios
@@ -25,12 +33,13 @@ Application Developers need the ability to connect applications together through
 * [Manage Workloads](#scenario-MonitorWorkload)
 * [Manage Workloads](#scenario-UpdateWorkload)
 
-  
+
+
 ### Scenario Create Workload
 
 Create Workload is the description
 
-![Scenario CreateWorkload](./createworkload.svg)
+![Scenario CreateWorkload](./createworkload.png)
 
 #### Steps
 
@@ -40,13 +49,14 @@ Create Workload is the description
 #### Actors
 
 * [Application Developer](actor-applicationdeveloper)
+
 
 
 ### Scenario Deploy Workload
 
 Deploy Workload is the description
 
-![Scenario DeployWorkload](./deployworkload.svg)
+![Scenario DeployWorkload](./deployworkload.png)
 
 #### Steps
 
@@ -57,13 +67,14 @@ Deploy Workload is the description
 
 * [Application Developer](actor-applicationdeveloper)
 * [DevOps Engineer](actor-devops)
+
 
 
 ### Scenario Destroy Workload
 
 Destroy Workload is the description
 
-![Scenario DestroyWorkload](./destroyworkload.svg)
+![Scenario DestroyWorkload](./destroyworkload.png)
 
 #### Steps
 
@@ -73,13 +84,14 @@ Destroy Workload is the description
 #### Actors
 
 * [DevOps Engineer](actor-devops)
+
 
 
 ### Scenario Monitor Workload
 
 Monitor Workload is the description
 
-![Scenario MonitorWorkload](./monitorworkload.svg)
+![Scenario MonitorWorkload](./monitorworkload.png)
 
 #### Steps
 
@@ -90,13 +102,14 @@ Monitor Workload is the description
 
 * [Application Developer](actor-applicationdeveloper)
 * [DevOps Engineer](actor-devops)
+
 
 
 ### Scenario Update Workload
 
 Update Workload is the description
 
-![Scenario UpdateWorkload](./updateworkload.svg)
+![Scenario UpdateWorkload](./updateworkload.png)
 
 #### Steps
 
@@ -107,6 +120,7 @@ Update Workload is the description
 
 * [Application Developer](actor-applicationdeveloper)
 * [DevOps Engineer](actor-devops)
+
 
 
 

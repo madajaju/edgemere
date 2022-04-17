@@ -1,7 +1,7 @@
 @startuml
 
 
-usecase "Manage Data Blue Prints" as ManageDataBluePrints
+usecase "Manage Data Blue Prints" as ManageDataBluePrints #yellow
 
 Actor "DataEngineer" as DataEngineer
 
@@ -16,5 +16,13 @@ DataScientist --> ManageDataBluePrints
 usecase "CreateBluePrint" as CreateBluePrint #lightgrey
 
 ManageDataBluePrints --> CreateBluePrint
+
+
+
+
+
+
+
+
 
 @enduml

@@ -1,4 +1,4 @@
-import {AScenario, AText, AUsecase} from './index.js';
+import {AText} from './index.js';
 
 export default class AAction {
     constructor(config) {
@@ -52,7 +52,8 @@ export default class AAction {
         }
         group.aid = node.id;
         node.box = h;
-        // node.expandLink = `actor/get?id=${node.id}`;
+        node.expandLink = `action/get?id=${node.id}`;
+        node.expandView = AAction.viewDeep3D;
 
         return group;
     }

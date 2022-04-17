@@ -3,6 +3,8 @@ layout: default
 title: edgemere Overview
 ---
 
+{# topPackage.name.toLowerCase()-project}
+
 # edgemere
 
 Edgemere is a conceptual architecture targeted to multi-hybrid cloud and edge computing strategies including data,
@@ -80,6 +82,8 @@ is an example of a centralized organizational structure of the actors of the sys
 # UseCases
 
 
+* [Manage Environment](usecase-ManageEnvironment)
+  
 * [Manage AI Models](usecase-ManageAIModels)
   
 * [Manage Applications](usecase-ManageApplications)
@@ -112,6 +116,10 @@ is an example of a centralized organizational structure of the actors of the sys
   
 * [Manage Data Strategy](usecase-ManageDataStrategy)
   
+* [Apply Security Profiles](usecase-ApplySecurityProfiles)
+  
+* [Manage Security Profiles](usecase-ManageSecurityProfiles)
+  
 * [Find Resources](usecase-FindResources)
   
 * [ManageBilling](usecase-ManageBilling)
@@ -124,8 +132,6 @@ is an example of a centralized organizational structure of the actors of the sys
   
 * [Map Services to Resources](usecase-MapServicestoResources)
   
-* [Manage Environment](usecase-ManageEnvironment)
-  
 * [Manage Stacks](usecase-ManageStacks)
   
 * [Manage Assets](usecase-ManageAssets)
@@ -137,7 +143,7 @@ is an example of a centralized organizational structure of the actors of the sys
 * [Manage Resources](usecase-ManageResources)
   
 
-![UseCase]('./usecases.svg')
+![UseCase](./usecases.png)
 
 # Solution Architecture
 
@@ -159,7 +165,7 @@ structure.
 * [Software Defined Infrastructure](package--edgemere-sdi)
   
 
-![Logical Diagram](./subpackage.svg)
+![Logical Diagram](./subpackage.png)
 
 ## Deployment Architecture
 

@@ -44,27 +44,31 @@ Evaluated --> Failed : failed
 
 
 
- state "diml" as diml #ffcc88 {
-state "dml" as dimldml #ffcc88 {
-state "do" as dimldmldo #lightblue {
-state "reserve" as dimldmldoreserve #lightblue {
+ state "edgemere" as edgemere #lightblue {
+state "diml" as edgemerediml #lightblue {
+state "dml" as edgemeredimldml #lightblue {
+state "do" as edgemeredimldmldo #lightblue {
+state "reserve" as edgemeredimldmldoreserve #lightblue {
+}
 }
 }
 }
 }
 
- Needed -[#black]--> dimldmldoreserve
+ Needed -[#black]--> edgemeredimldmldoreserve
  
- state "diml" as diml #ffcc88 {
-state "dml" as dimldml #ffcc88 {
-state "do" as dimldmldo #lightblue {
-state "evaluate" as dimldmldoevaluate #lightblue {
+ state "edgemere" as edgemere #lightblue {
+state "diml" as edgemerediml #lightblue {
+state "dml" as edgemeredimldml #lightblue {
+state "do" as edgemeredimldmldo #lightblue {
+state "evaluate" as edgemeredimldmldoevaluate #lightblue {
+}
 }
 }
 }
 }
 
- Selected -[#black]--> dimldmldoevaluate
+ Selected -[#black]--> edgemeredimldmldoevaluate
  
 
 @enduml

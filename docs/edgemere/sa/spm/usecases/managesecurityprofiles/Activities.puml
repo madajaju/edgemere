@@ -1,0 +1,44 @@
+@startuml
+
+
+usecase "Manage Security Profiles" as ManageSecurityProfiles #yellow
+
+Actor "Actor" as Actor
+
+Actor --> ManageSecurityProfiles
+
+
+
+usecase "CreateSecurityProfile" as CreateSecurityProfile #lightgrey
+
+ManageSecurityProfiles --> CreateSecurityProfile
+
+usecase "DisableSecurityProfile" as DisableSecurityProfile #lightgrey
+
+ManageSecurityProfiles --> DisableSecurityProfile
+
+usecase "EnableSecurityProfile" as EnableSecurityProfile #lightgrey
+
+ManageSecurityProfiles --> EnableSecurityProfile
+
+usecase "MonitorSecurityProfile" as MonitorSecurityProfile #lightgrey
+
+ManageSecurityProfiles --> MonitorSecurityProfile
+
+usecase "RemoveSecurityProfile" as RemoveSecurityProfile #lightgrey
+
+ManageSecurityProfiles --> RemoveSecurityProfile
+
+usecase "TestSecurityProfile" as TestSecurityProfile #lightgrey
+
+ManageSecurityProfiles --> TestSecurityProfile
+
+
+
+
+
+
+
+
+
+@enduml

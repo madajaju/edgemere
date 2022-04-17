@@ -1,11 +1,19 @@
 @startuml
 
 
-usecase "Manage Assets" as ManageAssets
+usecase "Manage Assets" as ManageAssets #yellow
 
 Actor "Actor" as Actor
 
 Actor --> ManageAssets
+
+
+
+
+
+
+
+
 
 
 

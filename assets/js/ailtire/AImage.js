@@ -6,7 +6,7 @@ export default class AImage {
     }
 
     static view3D(node, type) {
-        let color = node.color || "#00aaaa";
+        let color = node.color || "#888888";
         if (type === 'Selected') {
             color = "yellow";
         } else if (type === 'Targeted') {
@@ -41,7 +41,8 @@ export default class AImage {
         }
         obj.aid = node.id;
         node.box = 50;
-        // node.expandLink = `actor/get?id=${node.id}`;
+        node.expandLink = `image/get?id=${node.id}`;
+        node.expandView = AImage.viewDeep3D;
 
         return obj;
     }

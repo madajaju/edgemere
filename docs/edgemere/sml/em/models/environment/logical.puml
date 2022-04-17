@@ -25,6 +25,426 @@ Model o--> "1" PolicyCollection : policies
     
         Servicelet   o--> "1" Model : "env"
     
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "env"
+    
     rectangle "Stacklet" as Stacklet #lightgreen {
     }
     

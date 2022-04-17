@@ -9,7 +9,7 @@ parent: classes
 
 Logical Resource of Network that are provisioned
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 

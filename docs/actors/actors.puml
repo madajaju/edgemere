@@ -24,10 +24,22 @@ Actor "Stack Developer" as StackDeveloper
 
 
 
+rectangle "Security Aspect" as sa  #pink {
+        usecase "Apply Security Profiles" as ApplySecurityProfiles
+    
+        Actor ---> ApplySecurityProfiles
+        
+    usecase "Manage Security Profiles" as ManageSecurityProfiles
+    
+        Actor ---> ManageSecurityProfiles
+        
+
+}
+
 rectangle "Service Management Layer" as sml  #lightgreen {
         usecase "Manage Assets" as ManageAssets
     
-        Actor ---> ManageAssets
+        Actor --> ManageAssets
         
 
 }
@@ -35,25 +47,25 @@ rectangle "Service Management Layer" as sml  #lightgreen {
 rectangle "Application Management Layer" as aml  #lightblue {
         usecase "Manage AI Models" as ManageAIModels
     
-        DataScientist --> ManageAIModels
+        DataScientist ---> ManageAIModels
         
-        DevOpsEngineer --> ManageAIModels
+        DevOpsEngineer ---> ManageAIModels
         
-        ApplicationDeveloper --> ManageAIModels
+        ApplicationDeveloper ---> ManageAIModels
         
-        DataEngineer --> ManageAIModels
+        DataEngineer ---> ManageAIModels
         
     usecase "Manage Applications" as ManageApplications
     
-        DevOpsEngineer --> ManageApplications
+        DevOpsEngineer ---> ManageApplications
         
-        ApplicationDeveloper --> ManageApplications
+        ApplicationDeveloper ---> ManageApplications
         
     usecase "Manage Workloads" as ManageWorkloads
     
-        ApplicationDeveloper --> ManageWorkloads
+        ApplicationDeveloper ---> ManageWorkloads
         
-        DevOpsEngineer --> ManageWorkloads
+        DevOpsEngineer ---> ManageWorkloads
         
 
 }
@@ -61,9 +73,9 @@ rectangle "Application Management Layer" as aml  #lightblue {
 rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
         usecase "Manage Data Instances" as ManageDataInstances
     
-        DataScientist ---> ManageDataInstances
+        DataScientist --> ManageDataInstances
         
-        ApplicationDeveloper ---> ManageDataInstances
+        ApplicationDeveloper --> ManageDataInstances
         
 
 }
@@ -71,9 +83,9 @@ rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
 rectangle "Service Management Layer" as sml  #lightgreen {
         usecase "Manage Stacks" as ManageStacks
     
-        StackDeveloper --> ManageStacks
+        StackDeveloper ---> ManageStacks
         
-        ApplicationDeveloper --> ManageStacks
+        ApplicationDeveloper ---> ManageStacks
         
 
 }
@@ -81,13 +93,13 @@ rectangle "Service Management Layer" as sml  #lightgreen {
 rectangle "Service Management Layer" as sml  #lightgreen {
         usecase "Manage Services" as ManageServices
     
-        StackDeveloper ---> ManageServices
+        StackDeveloper --> ManageServices
         
-        ApplicationDeveloper ---> ManageServices
+        ApplicationDeveloper --> ManageServices
         
     usecase "Manage Clouds" as ManageClouds
     
-        ITOperations ---> ManageClouds
+        ITOperations --> ManageClouds
         
 
 }
@@ -95,29 +107,29 @@ rectangle "Service Management Layer" as sml  #lightgreen {
 rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
         usecase "Manage Data Procedures" as ManageDataProcedures
     
-        DataEngineer --> ManageDataProcedures
+        DataEngineer ---> ManageDataProcedures
         
-        ChiefDataOfficer --> ManageDataProcedures
+        ChiefDataOfficer ---> ManageDataProcedures
         
     usecase "Manage Data Adaptors" as ManageDataAdaptors
     
-        DataEngineer --> ManageDataAdaptors
+        DataEngineer ---> ManageDataAdaptors
         
-        DataScientist --> ManageDataAdaptors
+        DataScientist ---> ManageDataAdaptors
         
     usecase "Manage Data Blue Prints" as ManageDataBluePrints
     
-        DataEngineer --> ManageDataBluePrints
+        DataEngineer ---> ManageDataBluePrints
         
-        DataScientist --> ManageDataBluePrints
+        DataScientist ---> ManageDataBluePrints
         
     usecase "Manage Data Pipeline" as ManageDataPipeline
     
-        DataEngineer --> ManageDataPipeline
+        DataEngineer ---> ManageDataPipeline
         
     usecase "Manage Meta Data" as ManageMetaData
     
-        DataScientist --> ManageMetaData
+        DataScientist ---> ManageMetaData
         
 
 }
@@ -125,19 +137,19 @@ rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
 rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
         usecase "Manage Data Governance" as ManageDataGovernance
     
-        ChiefDataOfficer ---> ManageDataGovernance
+        ChiefDataOfficer --> ManageDataGovernance
         
     usecase "Manage Data Policies" as ManageDataPolicies
     
-        ChiefDataOfficer ---> ManageDataPolicies
+        ChiefDataOfficer --> ManageDataPolicies
         
     usecase "Manage Data Strategy" as ManageDataStrategy
     
-        ChiefDataOfficer ---> ManageDataStrategy
+        ChiefDataOfficer --> ManageDataStrategy
         
     usecase "Manage Data Sources" as ManageDataSources
     
-        DataEngineer ---> ManageDataSources
+        DataEngineer --> ManageDataSources
         
 
 }
@@ -145,11 +157,21 @@ rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
 rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
         usecase "Manage Data" as ManageData
     
-        DataScientist --> ManageData
+        DataScientist ---> ManageData
         
-        DataAnalyst --> ManageData
+        DataAnalyst ---> ManageData
         
-        DataEngineer --> ManageData
+        DataEngineer ---> ManageData
+        
+
+}
+
+rectangle "Application Management Layer" as aml  #lightblue {
+        usecase "Manage Environment" as ManageEnvironment
+    
+        ITOperations --> ManageEnvironment
+        
+        StackDeveloper --> ManageEnvironment
         
 
 }
@@ -194,20 +216,10 @@ rectangle "Service Management Layer" as sml  #lightgreen {
 
 }
 
-rectangle "Service Management Layer" as sml  #lightgreen {
-        usecase "Manage Environment" as ManageEnvironment
-    
-        ITOperations ---> ManageEnvironment
-        
-        StackDeveloper ---> ManageEnvironment
-        
-
-}
-
 rectangle "Software Defined Infrastructure" as sdi  #lightyellow {
         usecase "Manage Resources" as ManageResources
     
-        ITOperations --> ManageResources
+        ITOperations ---> ManageResources
         
 
 }

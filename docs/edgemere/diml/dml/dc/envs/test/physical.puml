@@ -15,7 +15,7 @@ package "Data Controller" #lightblue {
       REST --> diml_dml_dc_container
 
   
-    file "node web/server.js" as controller_container
+    file "controller" as controller_container
     REST --> controller_container
     socket ---> controller_container
   

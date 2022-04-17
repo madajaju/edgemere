@@ -9,7 +9,7 @@ parent: classes
 
 Each Cloud has a specific type of cloud it is tied to. The type of cloud helps with the deployment and mapping of assets across the different types of clouds. Examples of Cloud types are aws,azure,vmware openstack, google, nutanix, ...
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -30,6 +30,49 @@ Each Cloud has a specific type of cloud it is tied to. The type of cloud helps w
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
+| type | 1 | Cloud | false | false |  |
 | type | 1 | Cloud | false | false |  |
 
 

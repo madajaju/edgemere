@@ -72,5 +72,435 @@ Model *--> "n" RunScript : runScripts
     
         ServiceInstance   o--> "1" Model : "stack"
     
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "instances"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "stack"
+    
 
 @enduml

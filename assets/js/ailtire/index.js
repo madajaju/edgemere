@@ -1,4 +1,5 @@
 import APackage from './APackage.js';
+import AObject from './AObject.js';
 import AModel from './AModel.js';
 import AScenario from './AScenario.js';
 import AUsecase from './AUsecase.js';
@@ -15,6 +16,7 @@ import AImage from './AImage.js';
 import AVolume from './AVolume.js';
 import AInterface from './AInterface.js';
 import AEnvironment from './AEnvironment.js';
+import A3DGraph from './A3DGraph.js';
 
 // without default
 export {
@@ -34,5 +36,7 @@ export {
     AImage,
     AVolume,
     AInterface,
-    AEnvironment
+    AEnvironment,
+    AObject,
+    A3DGraph,
 }

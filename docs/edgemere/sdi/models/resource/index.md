@@ -9,7 +9,7 @@ parent: classes
 
 Resource in the cloud. Can be network, storage or compute.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -34,6 +34,367 @@ Resource in the cloud. Can be network, storage or compute.
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| resources | n | Hardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | StackInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | StackInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | Stacklet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | StackInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | Stacklet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | StackInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | Stacklet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | StackInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
+| resources | n | AcceleratorHardware | false | false |  |
+| resources | n | ComputeHardware | false | false |  |
+| resources | n | Hardware | false | false |  |
+| resources | n | NetworkHardware | false | false |  |
+| resources | n | StorageHardware | false | false |  |
+| resources | n | Servicelet | false | false | resource requests for the servicelet |
+| resources | n | Stacklet | false | false | resource requests for the servicelet |
+| resources | n | ServiceInstance | false | false | Resources used to host this service instance |
+| resources | n | StackInstance | false | false | Resources used to host this service instance |
+| resources | n | Cloud | false | true |  |
+| resources | n | Request | false | true |  |
 | resources | n | AcceleratorHardware | false | false |  |
 | resources | n | ComputeHardware | false | false |  |
 | resources | n | Hardware | false | false |  |
@@ -49,7 +410,7 @@ Resource in the cloud. Can be network, storage or compute.
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

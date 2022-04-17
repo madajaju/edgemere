@@ -7,16 +7,18 @@ state "Actor" as Actor {
     state "Manage Assets" as ActorManageAssets {
     }
 }
-state "sml" as sml #lightgreen {
-state "sr" as smlsr #lightgreen {
-state "data" as smlsrdata #lightgreen {
-state "govern" as smlsrdatagovern #lightgreen {
+state "edgemere" as edgemere #lightgreen {
+state "sml" as edgemeresml #lightgreen {
+state "sr" as edgemeresmlsr #lightgreen {
+state "data" as edgemeresmlsrdata #lightgreen {
+state "govern" as edgemeresmlsrdatagovern #lightgreen {
+}
 }
 }
 }
 }
 
-ActorManageAssets --> smlsrdatagovern
+ActorManageAssets --> edgemeresmlsrdatagovern
 
 
  

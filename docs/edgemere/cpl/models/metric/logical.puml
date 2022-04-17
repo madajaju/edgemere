@@ -22,5 +22,220 @@ class "Metric" as Model {
     
         MetricComposite   *--> "n" Model : "values"
     
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
+    rectangle "MetricComposite" as MetricComposite #lightgreen {
+    }
+    
+        MetricComposite   *--> "n" Model : "values"
+    
 
 @enduml

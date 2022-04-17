@@ -15,7 +15,7 @@ package "Device Agent" #lightgray {
       REST --> cpl_da_container
 
   
-    file "node web/server.js" as web_container
+    file "web" as web_container
     REST --> web_container
     socket ---> web_container
   

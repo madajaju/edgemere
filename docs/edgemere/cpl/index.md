@@ -5,83 +5,74 @@ permalink: package--edgemere-cpl
 parent: edgemere
 has_children: true
 ---
+
 # Common Physical Layer
 
 Common Physical Layer is a package that contains...
 
-The Common Physical Layer (CPL) contains abstractions that allow for beeter management across an ecosystem inside the
-data center, in the cloud, and on the edge devices. These abstractions give the ability to manage a highly variable
-hardware configurations by describing the common operating and taxonomy of the devices. This architectural layer has the
-goal of addressing the following characteristics:
+The Common Physical Layer (CPL) contains abstractions that allow for better management across an ecosystem inside the  
+data center, in the cloud, and on the edge devices. These abstractions give the ability to manage a highly variable  
+hardware configurations by describing the common operating and taxonomy of the devices. This architectural layer has the  
+the goal of addressing the following characteristics:
 
-* Common Taxonomy
-* Portability and Interopoerability
-* Security and Root of Trust
-* Common Management Control Plane
-* Performance Optimization
-* Stability and Reliability
-* Flexibility and Agility
+*   Common Taxonomy
+*   Portability and Interoperability
+*   Security and Root of Trust
+*   Common Management Control Plane
+*   Performance Optimization
+*   Stability and Reliability
+*   Flexibility and Agility
 
-The CPL sits at the bottom of the Architectural stack and is the foundation for all of the other layers of the
-architecture. It does rely on the [Security](package--edgemere-sa) and [Identify](package--edgemere-ia) sspects to
-establish hardware root of trust, identity and encryption of data at the lowest levels.
+The CPL sits at the bottom of the Architectural stack and is the foundation for all of the other layers of the  
+architecture. It relies on [Security](package--edgemere-sa) and [Identifying](package--edgemere-ia) aspects to  
+establish the hardware root of trust, identity, and data encryption at the lowest levels.
 
 ![CPL High](./cplhigh.png)
 
-The CPL establishes a taxonomy of hardware devices that are generalized. This makes it easier to create common services
-and operating models for the devices. This includes devices in Public Clouds, Private Clouds, Legacy Infrastructure, and
-Edge Devices. All of these devices have common [hardware](class-hardware):
-[compute](class-computehardware), [storage](class-storagehardware),
-[network](class-networkhardware), and [accellerators](class-acceleratorshardware). Understanding that
-each [device](class-device) can have a unique set of capabilities that are delivered from the unique hardware of the
-device is key to establishing a common management control plane.
+The CPL establishes a taxonomy of generalized hardware devices. This makes it easier to create standard services  
+and operating models for the devices. This includes devices in Public Clouds, Private Clouds, Legacy Infrastructure, and  
+Edge Devices. These devices have standard [hardware](class-hardware): [compute](class-computehardware), [storage](class-storagehardware), [network](class-networkhardware), and [accelerators](class-acceleratorshardware). Understanding that each [device](class-device) can have a unique set of capabilities delivered from the device's special hardware is key to establishing a common management control plane.
 
 ![CPL Hardware](./cplhw.png)
 
-The key element in this layer is the [Device](class-device). It is represented by a model that contains
-several [hardware](class-hardware) elements. The [device](class-device) has a profile that shows the capabilities of
-the [device](class-device) and its [hardware](class-hardware) as well as a current capacity of
-the [device](class-device). The [device](class-device) is has a simple interface for control and telemetry up to
-the [software defined infrastructure layer - SDI](package--edgemere-sdi) so [applications](class-application)
-and [services](class-service) can be deployed to the [device](class-device) and its (hardware)[class-hardware].
+The critical element in this layer is the [Device](class-device). It is represented by a model that contains  
+several [hardware](class-hardware) elements. The [device](class-device) has a profile that shows the device's capabilities [device](class-device) and [hardware,](class-hardware) as well as the current capacity of  
+the [device](class-device). The [device](class-device) is has a simple interface for control and telemetry up to  
+the [software-defined infrastructure layer - SDI](package--edgemere-sdi) so [applications](class-application)  
+and [services](class-service) can be deployed to the [device](class-device) and its (hardware)\[class-hardware\].
 
 ![CPL Edge Device](./cpledgedevice.png)
 
-With the explosion of the number IoT devices, the complexity of managing the devices inconjunction with devices in the
-cloud and the datacenter. Managing the large number of devices can become overwhelming for
-[IT operations engineer](actor-itops) as well as any automated IT management system. For this reason the architect has
-created an element called the [Aggregated Device](class-aggregateddevice). That allows for the grouping of devices into
-collections so they can be managed and controlled as a group instead of as of individual
-devices. [Aggregated devices](class-aggregateddevice) can contain [devices](class-device) or
-other [aggregated devices](class-aggregatedevice)
-which gives the ability to have an infinite number of layers in the hierarchy of devices.
+With the explosion of IoT devices, the complexity of managing the devices in conjunction with devices in the  
+cloud and the data center. Addressing a large number of devices can become overwhelming for  
+[IT operations engineer](actor-itops) as well as any automated IT management system. For this reason, the architect has  
+created an element called the [Aggregated Device](class-aggregateddevice). That allows for grouping devices into  
+collections to be managed and controlled as a group instead of as individual  
+devices. [Aggregated devices](class-aggregateddevice) can contain [devices](class-device) or  
+other [aggregated devices](class-aggregatedevice), giving the ability to have an infinite number of layers in the hierarchy of devices.
 
 ![CPL device](./cpldevice.png)
 
-In this example a topology of devices have been established to give the [IT operations engineer](actor-itops)
-the ability to manage all of the devices connected to a data center. In "Data Center 1"
-there are 4 Edge Devices, Data Center 2 has 4 Edge Devices and Data Center 3 has an Aggregated Edge Device and a normal
-Device. Aggregation of devices can happen along geographic, device capabilities, security profiles, etc... The key is
+In this example, a topology of devices has been established to give the [IT operations engineer](actor-itops)  
+the ability to manage all of the devices connected to a data center. In "Data Center 1"  
+there are 4 Edge Devices; Data Center 2 has 4 Edge Devices, and Data Center 3 has an Aggregated Edge Device and a normal  
+Device. Aggregation of devices can happen along with geographic, device capabilities, security profiles, etc... The key is  
 that the topology is established to help with the physical management of the devices.
 
 ![CPL Topology](./cpltopology.png)
 
-Many times organizations combine the physical management and the logical management of devices. Basically combining the
-Cloud topology and the Control Topology together. This architecture separates the two topologies giving the flexibility
-to establish clouds that span multip physical domains. Including establishing a cloud that spans resources in data
-centers, public clouds and edge devices. Giving the ability to schedule and manage applications and services across
+Many times organizations combine the physical management and the logical management of devices. Combining the  
+Cloud topology and the Control Topology together. This architecture separates the two topologies giving the flexibility  
+to establish clouds that span multiple physical domains. Including setting a cloud that spans resources in data  
+centers, public clouds, and edge devices. Providing the ability to schedule and manage applications and services across  
 traditional boundaries.
 
 ![CPL Cloud topology](./cplcloudtopology.png)
 
-In this example you can see three clouds that share devices and span the control topology that was established for
-optmized IT operations. This flexibility allows for clouds (logical devices) to adapt to changing environments. Theses
-changes can include everything from cyber threats, physical disasters, partial connectivity of edge devices, or even
+This example shows three clouds that share devices and span the control topology established for  
+optimized IT operations. This flexibility allows clouds (logical devices) to adapt to changing environments. Theses  
+changes can include everything from cyber threats, physical disasters, partial connectivity of edge devices, or even  
 someone tripping over a network connection in the data center.
-
-
-
-
 
 ## Use Cases
 
@@ -92,17 +83,17 @@ that are elaborated in the use case descriptions.
 * [Manage Infrastructure](usecase-ManageInfrastructure)
 
 
-![UseCase Diagram](./usecases.svg)
+![UseCase Diagram](./usecases.png)
 
 ## Users
 
-The following are the actors of the Common Physical Layer subsystem. This can include people, other subsystems 
-inside the solution and even external subsystems. 
+The following are the actors of the Common Physical Layer subsystem. This can include people, other subsystems
+inside the solution and even external subsystems.
 
 * [ITOperations](actor-itops)
 
 
-![User Interaction](./userinteraction.svg)
+![User Interaction](./userinteraction.png)
 
 ## Interface
 
@@ -110,7 +101,7 @@ The subsystem has a REST, CLI, WebSocket, and Web interface. Use Cases and Scena
 of the interfaces to perform the work that needs to be completed. The following  diagram shows how
 users interact with the system.
 
-![Scenario Mappings Diagram](./scenariomapping.svg)
+![Scenario Mappings Diagram](./scenariomapping.png)
 
 * [ edgemere cpl adddevices](#action--edgemere-cpl-adddevices)
 * [ edgemere cpl provision](#action--edgemere-cpl-provision)
@@ -132,7 +123,7 @@ users interact with the system.
 The Data Model for the  Common Physical Layer subsystem shows how the different objects and classes of object interact
 and their structure.
 
-![Sub Package Diagram](./subpackage.svg)
+![Sub Package Diagram](./subpackage.png)
 
 ### Sub Packages
 
@@ -146,7 +137,7 @@ organize the architecture and make it easier to analyze, understand, design, and
 * [Telemetry Producer](package--edgemere-cpl-tp)
 
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ### Classes
 
@@ -172,7 +163,7 @@ The following are the classes in the data model of the Common Physical Layer sub
 This subsystem is deployed using micro-services as shown in the diagram below. The 'micro' module is
 used to implement the micro-services in the system. The subsystem also has an CLI, REST and Web Interface
 exposed through a nodejs application. The nodejs application will interface with the micro-services and
-can monitor and drive work-flows through the mesh of micro-services. The deployment of the subsystem is 
+can monitor and drive work-flows through the mesh of micro-services. The deployment of the subsystem is
 dependent on the environment it is deployed. This subsystem has the following environments:
 * [dev](environment--edgemere-cpl-dev)
 * [test](environment--edgemere-cpl-test)
@@ -184,7 +175,7 @@ dependent on the environment it is deployed. This subsystem has the following en
 
 The Common Physical Layer subsystem is physically laid out on a hybrid cloud infrastructure. Each microservice belongs
 to a secure micro-segmented network. All of the micro-services communicate to each other and the main app through a
-REST interface. A Command Line Interface (CLI), REST or Web User interface for the app is how other subsystems or actors 
+REST interface. A Command Line Interface (CLI), REST or Web User interface for the app is how other subsystems or actors
 interact. Requests are forwarded to micro-services through the REST interface of each micro-service. The subsystem has
 the a unique layout based on the environment the physical space. The following are the environments for this
 subsystems.
@@ -260,11 +251,11 @@ subsystems and actors can access the system.
 * bin -  edgemere cpl adddevices
 * js - .edgemere.cpl.adddevices
 
-Add Devices to the Data Center
+add devices to the data center
 
 | Name | Type | Required | Description |
 |---|---|---|---|
-| item | object |true | Devices to add to the Data Center |
+| item | object |true | devices to add to the data center |
 
 
 

@@ -7,20 +7,21 @@ parent: classes
 
 # ApplicationTemplate
 
-Description long description
+An ApplicationTemplate provides a template to create applications based on parameters passed into the template when it is being used to create an application.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
-* attr1:string - description long description
+* name:string - Name of the Application Template
+* args:json - Name value pairs used for the creation of applications from the template.
 
 
 ## Associations
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| assoc1 | 1 | ModelName | false | false |  |
+| app | n | Application | false | false |  |
 
 
 ## Users of the Model

@@ -7,26 +7,75 @@ parent: classes
 
 # RunScript
 
-Description long description
+A RunScript is run when a service changes states. There are pre and post runscripts that can be run.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
-* attr1:string - description long description
+* name:string - Name of the runscript
 
 
 ## Associations
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| assoc1 | 1 | ModelName | false | false |  |
+| owner | 1 | ServiceInstance |  |  |  |
 
 
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | StackInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | StackInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | StackInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | StackInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | StackInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
+| runScripts | n | StackInstance | true | true | Scripts to run for the different actions performed in the service |
 | runScripts | n | ServiceInstance | true | true | Scripts to run for the different actions performed in the service |
 | runScripts | n | StackInstance | true | true | Scripts to run for the different actions performed in the service |
 

@@ -15,6 +15,4 @@ end box
 
 
 
-
-EventBus --/ cpl : method2()
 @enduml

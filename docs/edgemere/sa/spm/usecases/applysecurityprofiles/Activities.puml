@@ -1,0 +1,24 @@
+@startuml
+
+
+usecase "Apply Security Profiles" as ApplySecurityProfiles #yellow
+
+Actor "Actor" as Actor
+
+Actor --> ApplySecurityProfiles
+
+
+
+usecase "DeploySecurityProfile" as DeploySecurityProfile #lightgrey
+
+ApplySecurityProfiles --> DeploySecurityProfile
+
+
+
+
+
+
+
+
+
+@enduml

@@ -20,36 +20,24 @@ box Data Definition Framework #ffcc88
 
     dml -> "dataadaptor": create (name: filesystem1,file: ./templates/dataadaptor-filesystem.yaml)
 
+    "dataadaptor" --/ EventBus: dataadaptor.create
 
     dml -> "datasource": create (name: myDataVolume1,adaptor: filesystem1,file: ./templates/datasource.yaml)
 
+    "datasource" --/ EventBus: datasource.create
 
     dml -> "datasource": create (name: myDataVolume2,adaptor: filesystem1,parameters: host=localhost, filesystem=/tmp/user2)
 
+    "datasource" --/ EventBus: datasource.create
 
     dml -> "datasource": create (name: myDataVolume3,adaptor: filesystem1,parameters: host=localhost, filesystem=/tmp/user3)
 
+    "datasource" --/ EventBus: datasource.create
 
     dml -> "datasource": create (name: myDataVolume4,adaptor: filesystem1,parameters: host=localhost, filesystem=/tmp/user4)
 
+    "datasource" --/ EventBus: datasource.create
 
 
 
-box "Software Defined Infrastructure" #lightyellow
-    boundary sdi #white
-end box
-EventBus -\ sdi: method()
-sdi --/ EventBus: Model.Event2
-box "Security Aspect" #pink
-    boundary sa #white
-end box
-EventBus -\ sa: method()
-sa --/ EventBus: Model.Event2
-box "Service Management Layer" #lightgreen
-    boundary sml #white
-end box
-EventBus -\ sml: method()
-sml --/ EventBus: Model.Event2
-
-EventBus --/ dml : method2()
 @enduml

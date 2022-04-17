@@ -4,16 +4,24 @@ title: Manage Meta Data
 permalink: usecase-ManageMetaData
 parent: usecases
 ---
-
 # Manage Meta Data
 
 Manage Meta Data is the description
 
-![Activities Diagram](./activities.svg)
+![Activities Diagram](./activities.png)
 
 ## Actors
 
 * [Data Scientist](actor-datascientist)
+
+
+
+
+
+
+
+
+
 
 
 ## Detail Scenarios
@@ -21,12 +29,13 @@ Manage Meta Data is the description
 * [Manage Meta Data](#scenario-CaptureMetaData)
 * [Manage Meta Data](#scenario-ManageDataCatalog)
 
-  
+
+
 ### Scenario Capture Meta Data
 
 Capture Meta Data is the description
 
-![Scenario CaptureMetaData](./capturemetadata.svg)
+![Scenario CaptureMetaData](./capturemetadata.png)
 
 #### Steps
 
@@ -52,11 +61,12 @@ Capture Meta Data is the description
 * [Actor](actor-actor)
 
 
+
 ### Scenario Manage Data Catalog
 
 Manage Data Catalog is the description
 
-![Scenario ManageDataCatalog](./managedatacatalog.svg)
+![Scenario ManageDataCatalog](./managedatacatalog.png)
 
 #### Steps
 
@@ -66,6 +76,7 @@ Manage Data Catalog is the description
 #### Actors
 
 * [Data Scientist](actor-datascientist)
+
 
 
 

@@ -12,12 +12,14 @@ class AIModel {
             }
         },
         associations: {
-            assoc1: {
+           /* assoc1: {
                 type: 'ModelName',
                 cardinality: 1,
                 composition: false,
                 owner: false,
             },
+
+            */
         },
         /*
         statenet: {

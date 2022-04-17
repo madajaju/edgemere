@@ -9,7 +9,7 @@ parent: classes
 
 This is a combination of the stack with a specific environment. This allows for a stack to behave differently depending on the envionrment it is in.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 

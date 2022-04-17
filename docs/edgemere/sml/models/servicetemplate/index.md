@@ -9,7 +9,7 @@ parent: classes
 
 Description long description
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 

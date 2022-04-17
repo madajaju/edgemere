@@ -7,20 +7,19 @@ parent: classes
 
 # DataStrategy
 
-Description long description
+A DataStrategy contains rules for working with data strategy
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
-* attr1:string - description long description
+* name:string - Name of the data strategy
 
 
 ## Associations
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| assoc1 | 1 | ModelName | false | false |  |
 
 
 ## Users of the Model

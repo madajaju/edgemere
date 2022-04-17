@@ -1,18 +1,238 @@
 @startuml
 
 class "Group" as Model {
- string attr1
+ string name
 
  
 }
 
-rectangle "ModelName" as ModelName #lightblue {
+rectangle "User" as User #lightblue {
 }
 
-Model o--> "1" ModelName : assoc1
+Model o--> "n" User : users
 
 
 
 
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
 
 @enduml

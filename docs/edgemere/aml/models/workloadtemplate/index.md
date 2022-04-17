@@ -7,20 +7,21 @@ parent: classes
 
 # WorkloadTemplate
 
-Description long description
+A WorkloadTemplate allows developers to paramaterize workloads so they can be reused in several different areas. Workloads are created based on arguments passed into the template for creation of a Workload.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
-* attr1:string - description long description
+* name:string - name of the workload template
+* args:json - Name value pairs used for the creation of applications from the template.
 
 
 ## Associations
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| assoc1 | 1 | ModelName | false | false |  |
+| workloads | n | Workload | false | false |  |
 
 
 ## Users of the Model

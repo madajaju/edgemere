@@ -8,14 +8,444 @@ class "ApplicationInstance" as Model {
  
 }
 
-rectangle "ModelName" as ModelName #lightblue {
+rectangle "Application" as Application #lightblue {
 }
 
-Model o--> "1" ModelName : assoc1
+Model o--> "1" Application : app
 
 
 
 
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
     rectangle "Application" as Application #lightgreen {
     }
     

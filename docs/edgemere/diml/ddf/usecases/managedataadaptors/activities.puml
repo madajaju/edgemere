@@ -1,7 +1,7 @@
 @startuml
 
 
-usecase "Manage Data Adaptors" as ManageDataAdaptors
+usecase "Manage Data Adaptors" as ManageDataAdaptors #yellow
 
 Actor "DataEngineer" as DataEngineer
 
@@ -24,5 +24,13 @@ ManageDataAdaptors --> CreateDataAdaptor
 usecase "UpdateDataAdaptor" as UpdateDataAdaptor #lightgrey
 
 ManageDataAdaptors --> UpdateDataAdaptor
+
+
+
+
+
+
+
+
 
 @enduml

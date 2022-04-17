@@ -1,7 +1,7 @@
 @startuml
 
 
-usecase "Manage Data Instances" as ManageDataInstances
+usecase "Manage Data Instances" as ManageDataInstances #yellow
 
 Actor "Data Scientist" as DataScientist
 
@@ -24,5 +24,13 @@ ManageDataInstances --> FindDataInstance
 usecase "RemoveDataInstance" as RemoveDataInstance #lightgrey
 
 ManageDataInstances --> RemoveDataInstance
+
+
+
+
+
+
+
+
 
 @enduml

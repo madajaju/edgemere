@@ -9,7 +9,7 @@ parent: classes
 
 Represents Hardware that is an accelerator
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 

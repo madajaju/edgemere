@@ -5,32 +5,32 @@ permalink: package--edgemere-aml
 parent: edgemere
 has_children: true
 ---
+
 # Application Management Layer
 
-Application Management Layer is responsible for the management of applications and workflows andthe development, test, deployment and updates of those applications and workloads
+Application Management Layer is responsible for managing applications and workflows and the development, test, deployment, and updates of those applications and workloads.
 
-
-The Application Management Layer (AML) contains abstractions that help App Development,
-DevOps, and IT Operations manage complex workflows and applications through the application
-development lifecycle. The AML sits at the top of the system stack and communicates directly with
-the [Distributed Information Management Layer](package--edgemere-dml) and the
-[Service Management Layer](package--edgemere-sml). It also leverages the
+The Application Management Layer (AML) contains abstractions that help App Development,  
+DevOps and IT Operations manage complex workflows and applications through the application  
+development lifecycle. The AML sits at the top of the system stack and communicates directly with  
+the [Distributed Information Management Layer](package--edgemere-dml) and the  
+[Service Management Layer](package--edgemere-sml). It also leverages the  
 [Identity Aspect](package--edgemere-ia) and [Security Aspect](package--edgemere-sa) layers.
 
 ![AML Overall](./aml.png)
 
-The AML contains for sub packages that group common off the shelf tools integrated together.
-In the Analytics Services package common tools for analytics can be found including collection,
-analytics and insight. AI/ML Services represent the myrid of tools and services that focus
-on Artificial Intelligence and Machine Learning algorithms, and solutions.
+The AML contains sub-packages that group common-off-the-shelf tools integrated.  
+In the Analytics Services package, standard tools for analytics can be found, including collection,  
+analytics, and insight. AI/ML Services represent the myriad of tools and services that focus  
+on Artificial Intelligence and Machine Learning algorithms and solutions.
 
-These two packages take advantage of the application and workflow services which allow
-these solutions to be orchestrated at the highest level of integration by providing a
-framework and common definition framework to show how these applications and workflow
+These two packages take advantage of the application and workflow services that allow  
+these solutions are to be orchestrated at the highest level of integration by providing a  
+framework and common definition framework to show how these applications and workflow  
 interact.
 
-There are several tool suites that have been built to aid SecDevOps. These tools are
-grouped together in the SecDevOps Services and include Automation Frameworks (Salt,Chef,
+Several tool suites have been built to aid SecDevOps. These tools are  
+grouped in the SecDevOps Services and include Automation Frameworks (Salt, Chef,  
 puppet, ansible), CICD tools (Gitlab, GitHub, Jenkins, etc...) and Environment Management.
 
 ![AML details](amldetail.png)
@@ -46,12 +46,12 @@ that are elaborated in the use case descriptions.
 * [Manage Workloads](usecase-ManageWorkloads)
 
 
-![UseCase Diagram](./usecases.svg)
+![UseCase Diagram](./usecases.png)
 
 ## Users
 
-The following are the actors of the Application Management Layer subsystem. This can include people, other subsystems 
-inside the solution and even external subsystems. 
+The following are the actors of the Application Management Layer subsystem. This can include people, other subsystems
+inside the solution and even external subsystems.
 
 * [DataScientist](actor-datascientist)
 * [DevOpsEngineer](actor-devops)
@@ -59,7 +59,7 @@ inside the solution and even external subsystems.
 * [DataEngineer](actor-dataengineer)
 
 
-![User Interaction](./userinteraction.svg)
+![User Interaction](./userinteraction.png)
 
 ## Interface
 
@@ -67,7 +67,7 @@ The subsystem has a REST, CLI, WebSocket, and Web interface. Use Cases and Scena
 of the interfaces to perform the work that needs to be completed. The following  diagram shows how
 users interact with the system.
 
-![Scenario Mappings Diagram](./scenariomapping.svg)
+![Scenario Mappings Diagram](./scenariomapping.png)
 
 * [ edgemere aml aimodel create](#action--edgemere-aml-aimodel-create)
 * [ edgemere aml aimodel deploy](#action--edgemere-aml-aimodel-deploy)
@@ -93,7 +93,7 @@ users interact with the system.
 The Data Model for the  Application Management Layer subsystem shows how the different objects and classes of object interact
 and their structure.
 
-![Sub Package Diagram](./subpackage.svg)
+![Sub Package Diagram](./subpackage.png)
 
 ### Sub Packages
 
@@ -106,7 +106,7 @@ organize the architecture and make it easier to analyze, understand, design, and
 * [Workflow Services](package--edgemere-aml-ws)
 
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ### Classes
 
@@ -126,7 +126,7 @@ The following are the classes in the data model of the Application Management La
 This subsystem is deployed using micro-services as shown in the diagram below. The 'micro' module is
 used to implement the micro-services in the system. The subsystem also has an CLI, REST and Web Interface
 exposed through a nodejs application. The nodejs application will interface with the micro-services and
-can monitor and drive work-flows through the mesh of micro-services. The deployment of the subsystem is 
+can monitor and drive work-flows through the mesh of micro-services. The deployment of the subsystem is
 dependent on the environment it is deployed. This subsystem has the following environments:
 * [dev](environment--edgemere-aml-dev)
 * [test](environment--edgemere-aml-test)
@@ -138,7 +138,7 @@ dependent on the environment it is deployed. This subsystem has the following en
 
 The Application Management Layer subsystem is physically laid out on a hybrid cloud infrastructure. Each microservice belongs
 to a secure micro-segmented network. All of the micro-services communicate to each other and the main app through a
-REST interface. A Command Line Interface (CLI), REST or Web User interface for the app is how other subsystems or actors 
+REST interface. A Command Line Interface (CLI), REST or Web User interface for the app is how other subsystems or actors
 interact. Requests are forwarded to micro-services through the REST interface of each micro-service. The subsystem has
 the a unique layout based on the environment the physical space. The following are the environments for this
 subsystems.

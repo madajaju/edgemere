@@ -1,0 +1,40 @@
+@startuml
+left to right direction
+
+
+state "sa" as sa #pink {
+state "spm" as saspm #pink {
+}
+}
+
+
+state saspm #pink {
+    state "Custom Function" as spmfunction {
+    }
+}
+
+        state "sa" as sa #pink {
+state "spm" as saspm #pink {
+state "data" as saspmdata #pink {
+state "create" as saspmdatacreate #pink {
+}
+}
+}
+}
+
+
+        state "sa" as sa #pink {
+state "spm" as saspm #pink {
+state "data" as saspmdata #pink {
+state "govern" as saspmdatagovern #pink {
+}
+}
+}
+}
+
+
+
+
+
+
+@enduml

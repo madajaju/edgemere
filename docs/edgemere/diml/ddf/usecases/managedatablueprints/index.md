@@ -4,12 +4,11 @@ title: Manage Data Blue Prints
 permalink: usecase-ManageDataBluePrints
 parent: usecases
 ---
-
 # Manage Data Blue Prints
 
 Manage Data Blue Prints is the description
 
-![Activities Diagram](./activities.svg)
+![Activities Diagram](./activities.png)
 
 ## Actors
 
@@ -17,16 +16,26 @@ Manage Data Blue Prints is the description
 * [Data Scientist](actor-datascientist)
 
 
+
+
+
+
+
+
+
+
+
 ## Detail Scenarios
 
 * [Manage Data Blue Prints](#scenario-CreateBluePrint)
 
-  
+
+
 ### Scenario Create Blue Print
 
 Create Blue Print is the description
 
-![Scenario CreateBluePrint](./createblueprint.svg)
+![Scenario CreateBluePrint](./createblueprint.png)
 
 #### Steps
 
@@ -48,6 +57,7 @@ Create Blue Print is the description
 #### Actors
 
 * [Actor](actor-actor)
+
 
 
 

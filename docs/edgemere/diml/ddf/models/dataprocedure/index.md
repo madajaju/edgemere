@@ -9,7 +9,7 @@ parent: classes
 
 Procedure run on the Data Source
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -27,6 +27,49 @@ Procedure run on the Data Source
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
+| procedures | n | DataPipeline | false | true |  |
 | procedures | n | DataPipeline | false | true |  |
 
 

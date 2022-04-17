@@ -5,11 +5,13 @@ permalink: actor-cdo
 parent: All Actors
 ---
 
+{#actor-function toLowerCase() { [native code] }}
+
 # Chief Data Officer
 
 Responsible for setting strategy and governance of data in the organization.
 
-
+The Chief Data Officer is responsible for setting the data strategy for the organization.
 
 ## Use Cases
 
@@ -18,8 +20,8 @@ Responsible for setting strategy and governance of data in the organization.
 * [Manage Data Policies](usecase-ManageDataPolicies)
 * [Manage Data Strategy](usecase-ManageDataStrategy)
 
-  
-![Use Case Diagram](./usecase.svg)
+
+![Use Case Diagram](./usecase.png)
 
 ## User Interface
 TBD

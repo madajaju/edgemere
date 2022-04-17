@@ -1,18 +1,238 @@
 @startuml
 
 class "DataAdaptorInstance" as Model {
- string attr1
+ string name
 
  
 }
 
-rectangle "ModelName" as ModelName #lightblue {
+rectangle "DataAdaptor" as DataAdaptor #lightblue {
 }
 
-Model o--> "1" ModelName : assoc1
+Model o--> "1" DataAdaptor : parent
 
 
 
 
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
 
 @enduml

@@ -15,11 +15,11 @@ package "Common Data Service" #ffcc88 {
       REST --> dimlcds_container
 
   
-    file "node web/server.js" as web_container
+    file "web" as web_container
     REST --> web_container
     socket ---> web_container
   
-    file "node gateway/server.js" as gateway_container
+    file "gateway" as gateway_container
     REST --> gateway_container
     socket ---> gateway_container
   

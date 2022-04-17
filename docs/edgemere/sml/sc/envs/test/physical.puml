@@ -15,7 +15,7 @@ package "Service Controller" #lightgreen {
       REST --> sml_sc_container
 
   
-    file "node controller/server.js" as controller_container
+    file "controller" as controller_container
     REST --> controller_container
     socket ---> controller_container
   

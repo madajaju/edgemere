@@ -9,7 +9,7 @@ parent: classes
 
 Source Meta-Data is information about the source of the Data Instance. How to connect to the actual data.This is used inconjunction with the Data Adaptor. For example having the ability to connect to a row,column, page or document in a database or filesystem.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -29,6 +29,49 @@ Source Meta-Data is information about the source of the Data Instance. How to co
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
+| connection | n | Data | false | true |  |
 | connection | n | Data | false | true |  |
 
 

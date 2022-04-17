@@ -4,16 +4,24 @@ title: Manage Resources
 permalink: usecase-ManageResources
 parent: usecases
 ---
-
 # Manage Resources
 
 Manage Resources includes creating resources, listing and planning for resources.
 
-![Activities Diagram](./activities.svg)
+![Activities Diagram](./activities.png)
 
 ## Actors
 
 * [IT Operations](actor-itops)
+
+
+
+
+
+
+
+
+
 
 
 ## Detail Scenarios
@@ -22,12 +30,13 @@ Manage Resources includes creating resources, listing and planning for resources
 * [Manage Resources](#scenario-ListResources)
 * [Manage Resources](#scenario-ReleaseResources)
 
-  
+
+
 ### Scenario Get Resources
 
 Get Resources based on a set of requirements, this could be one resource or a set of resources. Requires a cloud and requirements to be specified. A name for the resources can be requested.
 
-![Scenario GetResources](./getresources.svg)
+![Scenario GetResources](./getresources.png)
 
 #### Steps
 
@@ -67,11 +76,12 @@ Get Resources based on a set of requirements, this could be one resource or a se
 * [IT Operations](actor-itops)
 
 
+
 ### Scenario List Resources
 
 List Resources and their utilization numbers. This is used for capacity planning.
 
-![Scenario ListResources](./listresources.svg)
+![Scenario ListResources](./listresources.png)
 
 #### Steps
 
@@ -111,11 +121,12 @@ List Resources and their utilization numbers. This is used for capacity planning
 * [IT Operations](actor-itops)
 
 
+
 ### Scenario Release Resources
 
 Release Resources based on the name given when the Resources are requested
 
-![Scenario ReleaseResources](./releaseresources.svg)
+![Scenario ReleaseResources](./releaseresources.png)
 
 #### Steps
 
@@ -125,6 +136,7 @@ Release Resources based on the name given when the Resources are requested
 #### Actors
 
 * [IT Operations](actor-itops)
+
 
 
 

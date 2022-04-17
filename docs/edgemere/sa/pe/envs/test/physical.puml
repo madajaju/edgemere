@@ -15,11 +15,11 @@ package "Policy Engine" #pink {
       REST --> sa_pe_container
 
   
-    file "node web/server.js" as engine_container
+    file "engine" as engine_container
     REST --> engine_container
     socket ---> engine_container
   
-    file "node web/server.js" as web_container
+    file "web" as web_container
     REST --> web_container
     socket ---> web_container
   

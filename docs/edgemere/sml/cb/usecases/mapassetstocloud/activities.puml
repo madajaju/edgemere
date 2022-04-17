@@ -1,11 +1,19 @@
 @startuml
 
 
-usecase "Map Assets to Cloud" as MapAssetstoCloud
+usecase "Map Assets to Cloud" as MapAssetstoCloud #yellow
 
 Actor "IT Operations" as ITOperations
 
 ITOperations --> MapAssetstoCloud
+
+
+
+
+
+
+
+
 
 
 

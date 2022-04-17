@@ -7,20 +7,22 @@ parent: classes
 
 # WorkloadInstance
 
-Description long description
+Workload Instance that is running in the ecosystem
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
-* attr1:string - description long description
+* name:string - Name of the application instance
+* status:string - Name of the application instance
+* message:string - Last message in the application instance
 
 
 ## Associations
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| assoc1 | 1 | ModelName | false | false |  |
+| app | 1 | Workload | false | false |  |
 
 
 ## Users of the Model
@@ -29,6 +31,19 @@ Description long description
 | --- | --- | --- | --- | --- | --- |
 
 
+
+## State Net
+![State Net Diagram](./statenet.png)
+
+| Name | Description | Events |
+| --- | --- | --- |
+| Init |  | create-&gt;Initializing,  |
+| Initializing |  | provisoned-&gt;Running,  |
+| Running |  | kill-&gt;Stopping,  |
+| Stopping |  | stopped-&gt;Stopped,  |
+| Stopped |  | exit-&gt;Exit, failed-&gt;Failed,  |
+| Exit |  |  |
+| Failed |  |  |
 
 
 

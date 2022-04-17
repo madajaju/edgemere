@@ -7,53 +7,61 @@ state "Data Scientist" as DataScientist {
     state "Manage AI Models" as DataScientistManageAIModels {
     }
 }
-state "aml" as aml #lightblue {
-state "aimodel" as amlaimodel #lightblue {
-state "list" as amlaimodellist #lightblue {
+state "edgemere" as edgemere #lightblue {
+state "aml" as edgemereaml #lightblue {
+state "aimodel" as edgemereamlaimodel #lightblue {
+state "list" as edgemereamlaimodellist #lightblue {
+}
 }
 }
 }
 
-DataScientistManageAIModels --> amlaimodellist
+DataScientistManageAIModels --> edgemereamlaimodellist
 
 state "DevOps Engineer" as DevOpsEngineer {
     state "Manage AI Models" as DevOpsEngineerManageAIModels {
     }
 }
-state "aml" as aml #lightblue {
-state "aimodel" as amlaimodel #lightblue {
-state "list" as amlaimodellist #lightblue {
+state "edgemere" as edgemere #lightblue {
+state "aml" as edgemereaml #lightblue {
+state "aimodel" as edgemereamlaimodel #lightblue {
+state "list" as edgemereamlaimodellist #lightblue {
+}
 }
 }
 }
 
-DevOpsEngineerManageAIModels --> amlaimodellist
+DevOpsEngineerManageAIModels --> edgemereamlaimodellist
 
 state "ApplicationDeveloper" as ApplicationDeveloper {
     state "Manage AI Models" as ApplicationDeveloperManageAIModels {
     }
 }
-state "aml" as aml #lightblue {
-state "aimodel" as amlaimodel #lightblue {
-state "list" as amlaimodellist #lightblue {
+state "edgemere" as edgemere #lightblue {
+state "aml" as edgemereaml #lightblue {
+state "aimodel" as edgemereamlaimodel #lightblue {
+state "list" as edgemereamlaimodellist #lightblue {
+}
 }
 }
 }
 
-ApplicationDeveloperManageAIModels --> amlaimodellist
+ApplicationDeveloperManageAIModels --> edgemereamlaimodellist
 
 state "DataEngineer" as DataEngineer {
     state "Manage AI Models" as DataEngineerManageAIModels {
     }
 }
-state "aml" as aml #lightblue {
-state "aimodel" as amlaimodel #lightblue {
-state "list" as amlaimodellist #lightblue {
+state "edgemere" as edgemere #lightblue {
+state "aml" as edgemereaml #lightblue {
+state "aimodel" as edgemereamlaimodel #lightblue {
+state "list" as edgemereamlaimodellist #lightblue {
+}
 }
 }
 }
 
-DataEngineerManageAIModels --> amlaimodellist
+DataEngineerManageAIModels --> edgemereamlaimodellist
 
 
     state "Application Developer" as ApplicationDeveloper {
@@ -62,12 +70,8 @@ DataEngineerManageAIModels --> amlaimodellist
             }
         }
     }
-    state "amlaimodel" as amlaimodel #lavender {
-state "create" as amlaimodelcreate #lavender {
-}
-}
-
-    ApplicationDeveloperManageAIModelsCreateAIModel --> amlaimodelcreate
+    
+    ApplicationDeveloperManageAIModelsCreateAIModel --> Null
     
     state "Data Scientist" as DataScientist {
         state "Manage AI Models" as DataScientistManageAIModels {
@@ -75,12 +79,8 @@ state "create" as amlaimodelcreate #lavender {
             }
         }
     }
-    state "amlaimodel" as amlaimodel #lavender {
-state "create" as amlaimodelcreate #lavender {
-}
-}
-
-    DataScientistManageAIModelsCreateAIModel --> amlaimodelcreate
+    
+    DataScientistManageAIModelsCreateAIModel --> Null
     
  
     state "DevOpsEngineer" as DevOpsEngineer {
@@ -89,12 +89,8 @@ state "create" as amlaimodelcreate #lavender {
             }
         }
     }
-    state "amlaimodel" as amlaimodel #lavender {
-state "deploy" as amlaimodeldeploy #lavender {
-}
-}
-
-    DevOpsEngineerManageAIModelsDeployAIModel --> amlaimodeldeploy
+    
+    DevOpsEngineerManageAIModelsDeployAIModel --> Null
     
     state "ApplicationDeveloper" as ApplicationDeveloper {
         state "Manage AI Models" as ApplicationDeveloperManageAIModels {
@@ -102,12 +98,8 @@ state "deploy" as amlaimodeldeploy #lavender {
             }
         }
     }
-    state "amlaimodel" as amlaimodel #lavender {
-state "deploy" as amlaimodeldeploy #lavender {
-}
-}
-
-    ApplicationDeveloperManageAIModelsDeployAIModel --> amlaimodeldeploy
+    
+    ApplicationDeveloperManageAIModelsDeployAIModel --> Null
     
     state "DataEngineer" as DataEngineer {
         state "Manage AI Models" as DataEngineerManageAIModels {
@@ -115,12 +107,8 @@ state "deploy" as amlaimodeldeploy #lavender {
             }
         }
     }
-    state "amlaimodel" as amlaimodel #lavender {
-state "deploy" as amlaimodeldeploy #lavender {
-}
-}
-
-    DataEngineerManageAIModelsDeployAIModel --> amlaimodeldeploy
+    
+    DataEngineerManageAIModelsDeployAIModel --> Null
     
  
     state "DataEngineer" as DataEngineer {
@@ -129,12 +117,8 @@ state "deploy" as amlaimodeldeploy #lavender {
             }
         }
     }
-    state "amlaimodel" as amlaimodel #lavender {
-state "destroy" as amlaimodeldestroy #lavender {
-}
-}
-
-    DataEngineerManageAIModelsDestroyAIModel --> amlaimodeldestroy
+    
+    DataEngineerManageAIModelsDestroyAIModel --> Null
     
     state "ApplicationDeveloper" as ApplicationDeveloper {
         state "Manage AI Models" as ApplicationDeveloperManageAIModels {
@@ -142,12 +126,8 @@ state "destroy" as amlaimodeldestroy #lavender {
             }
         }
     }
-    state "amlaimodel" as amlaimodel #lavender {
-state "destroy" as amlaimodeldestroy #lavender {
-}
-}
-
-    ApplicationDeveloperManageAIModelsDestroyAIModel --> amlaimodeldestroy
+    
+    ApplicationDeveloperManageAIModelsDestroyAIModel --> Null
     
  
     state "DataEngineer" as DataEngineer {
@@ -156,12 +136,8 @@ state "destroy" as amlaimodeldestroy #lavender {
             }
         }
     }
-    state "amlaimodel" as amlaimodel #lavender {
-state "update" as amlaimodelupdate #lavender {
-}
-}
-
-    DataEngineerManageAIModelsUpdateAIModel --> amlaimodelupdate
+    
+    DataEngineerManageAIModelsUpdateAIModel --> Null
     
     state "DevOpsEngineer" as DevOpsEngineer {
         state "Manage AI Models" as DevOpsEngineerManageAIModels {
@@ -169,12 +145,8 @@ state "update" as amlaimodelupdate #lavender {
             }
         }
     }
-    state "amlaimodel" as amlaimodel #lavender {
-state "update" as amlaimodelupdate #lavender {
-}
-}
-
-    DevOpsEngineerManageAIModelsUpdateAIModel --> amlaimodelupdate
+    
+    DevOpsEngineerManageAIModelsUpdateAIModel --> Null
     
     state "ApplicationDeveloper" as ApplicationDeveloper {
         state "Manage AI Models" as ApplicationDeveloperManageAIModels {
@@ -182,12 +154,8 @@ state "update" as amlaimodelupdate #lavender {
             }
         }
     }
-    state "amlaimodel" as amlaimodel #lavender {
-state "update" as amlaimodelupdate #lavender {
-}
-}
-
-    ApplicationDeveloperManageAIModelsUpdateAIModel --> amlaimodelupdate
+    
+    ApplicationDeveloperManageAIModelsUpdateAIModel --> Null
     
  
  
@@ -195,27 +163,31 @@ state "DevOps Engineer" as DevOpsEngineer {
     state "Manage Applications" as DevOpsEngineerManageApplications {
     }
 }
-state "aml" as aml #lightblue {
-state "application" as amlapplication #lightblue {
-state "list" as amlapplicationlist #lightblue {
+state "edgemere" as edgemere #lightblue {
+state "aml" as edgemereaml #lightblue {
+state "application" as edgemereamlapplication #lightblue {
+state "list" as edgemereamlapplicationlist #lightblue {
+}
 }
 }
 }
 
-DevOpsEngineerManageApplications --> amlapplicationlist
+DevOpsEngineerManageApplications --> edgemereamlapplicationlist
 
 state "Application Developer" as ApplicationDeveloper {
     state "Manage Applications" as ApplicationDeveloperManageApplications {
     }
 }
-state "aml" as aml #lightblue {
-state "application" as amlapplication #lightblue {
-state "list" as amlapplicationlist #lightblue {
+state "edgemere" as edgemere #lightblue {
+state "aml" as edgemereaml #lightblue {
+state "application" as edgemereamlapplication #lightblue {
+state "list" as edgemereamlapplicationlist #lightblue {
+}
 }
 }
 }
 
-ApplicationDeveloperManageApplications --> amlapplicationlist
+ApplicationDeveloperManageApplications --> edgemereamlapplicationlist
 
 
     state "Application Developer" as ApplicationDeveloper {
@@ -224,12 +196,8 @@ ApplicationDeveloperManageApplications --> amlapplicationlist
             }
         }
     }
-    state "amlapplication" as amlapplication #lavender {
-state "create" as amlapplicationcreate #lavender {
-}
-}
-
-    ApplicationDeveloperManageApplicationsCreateApplication --> amlapplicationcreate
+    
+    ApplicationDeveloperManageApplicationsCreateApplication --> Null
     
  
     state "DevOps Engineer" as DevOpsEngineer {
@@ -238,12 +206,8 @@ state "create" as amlapplicationcreate #lavender {
             }
         }
     }
-    state "amlapplication" as amlapplication #lavender {
-state "deploy" as amlapplicationdeploy #lavender {
-}
-}
-
-    DevOpsEngineerManageApplicationsDeployApplication --> amlapplicationdeploy
+    
+    DevOpsEngineerManageApplicationsDeployApplication --> Null
     
  
     state "DevOps Engineer" as DevOpsEngineer {
@@ -252,12 +216,8 @@ state "deploy" as amlapplicationdeploy #lavender {
             }
         }
     }
-    state "amlapplication" as amlapplication #lavender {
-state "destroy" as amlapplicationdestroy #lavender {
-}
-}
-
-    DevOpsEngineerManageApplicationsDestroyApplication --> amlapplicationdestroy
+    
+    DevOpsEngineerManageApplicationsDestroyApplication --> Null
     
  
     state "DevOps Engineer" as DevOpsEngineer {
@@ -266,12 +226,8 @@ state "destroy" as amlapplicationdestroy #lavender {
             }
         }
     }
-    state "amlapplication" as amlapplication #lavender {
-state "monitor" as amlapplicationmonitor #lavender {
-}
-}
-
-    DevOpsEngineerManageApplicationsMonitorApplication --> amlapplicationmonitor
+    
+    DevOpsEngineerManageApplicationsMonitorApplication --> Null
     
     state "Application Developer" as ApplicationDeveloper {
         state "Manage Applications" as ApplicationDeveloperManageApplications {
@@ -279,12 +235,8 @@ state "monitor" as amlapplicationmonitor #lavender {
             }
         }
     }
-    state "amlapplication" as amlapplication #lavender {
-state "monitor" as amlapplicationmonitor #lavender {
-}
-}
-
-    ApplicationDeveloperManageApplicationsMonitorApplication --> amlapplicationmonitor
+    
+    ApplicationDeveloperManageApplicationsMonitorApplication --> Null
     
  
     state "Application Developer" as ApplicationDeveloper {
@@ -293,12 +245,8 @@ state "monitor" as amlapplicationmonitor #lavender {
             }
         }
     }
-    state "amlapplication" as amlapplication #lavender {
-state "update" as amlapplicationupdate #lavender {
-}
-}
-
-    ApplicationDeveloperManageApplicationsUpdateApplication --> amlapplicationupdate
+    
+    ApplicationDeveloperManageApplicationsUpdateApplication --> Null
     
     state "DevOps Engineer" as DevOpsEngineer {
         state "Manage Applications" as DevOpsEngineerManageApplications {
@@ -306,12 +254,8 @@ state "update" as amlapplicationupdate #lavender {
             }
         }
     }
-    state "amlapplication" as amlapplication #lavender {
-state "update" as amlapplicationupdate #lavender {
-}
-}
-
-    DevOpsEngineerManageApplicationsUpdateApplication --> amlapplicationupdate
+    
+    DevOpsEngineerManageApplicationsUpdateApplication --> Null
     
  
  
@@ -319,27 +263,31 @@ state "Application Developer" as ApplicationDeveloper {
     state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
     }
 }
-state "aml" as aml #lightblue {
-state "workload" as amlworkload #lightblue {
-state "list" as amlworkloadlist #lightblue {
+state "edgemere" as edgemere #lightblue {
+state "aml" as edgemereaml #lightblue {
+state "workload" as edgemereamlworkload #lightblue {
+state "list" as edgemereamlworkloadlist #lightblue {
+}
 }
 }
 }
 
-ApplicationDeveloperManageWorkloads --> amlworkloadlist
+ApplicationDeveloperManageWorkloads --> edgemereamlworkloadlist
 
 state "DevOps Engineer" as DevOpsEngineer {
     state "Manage Workloads" as DevOpsEngineerManageWorkloads {
     }
 }
-state "aml" as aml #lightblue {
-state "workload" as amlworkload #lightblue {
-state "list" as amlworkloadlist #lightblue {
+state "edgemere" as edgemere #lightblue {
+state "aml" as edgemereaml #lightblue {
+state "workload" as edgemereamlworkload #lightblue {
+state "list" as edgemereamlworkloadlist #lightblue {
+}
 }
 }
 }
 
-DevOpsEngineerManageWorkloads --> amlworkloadlist
+DevOpsEngineerManageWorkloads --> edgemereamlworkloadlist
 
 
     state "Application Developer" as ApplicationDeveloper {
@@ -348,12 +296,8 @@ DevOpsEngineerManageWorkloads --> amlworkloadlist
             }
         }
     }
-    state "amlworkload" as amlworkload #lavender {
-state "create" as amlworkloadcreate #lavender {
-}
-}
-
-    ApplicationDeveloperManageWorkloadsCreateWorkload --> amlworkloadcreate
+    
+    ApplicationDeveloperManageWorkloadsCreateWorkload --> Null
     
  
     state "Application Developer" as ApplicationDeveloper {
@@ -362,12 +306,8 @@ state "create" as amlworkloadcreate #lavender {
             }
         }
     }
-    state "amlworkload" as amlworkload #lavender {
-state "deploy" as amlworkloaddeploy #lavender {
-}
-}
-
-    ApplicationDeveloperManageWorkloadsDeployWorkload --> amlworkloaddeploy
+    
+    ApplicationDeveloperManageWorkloadsDeployWorkload --> Null
     
     state "DevOps Engineer" as DevOpsEngineer {
         state "Manage Workloads" as DevOpsEngineerManageWorkloads {
@@ -375,12 +315,8 @@ state "deploy" as amlworkloaddeploy #lavender {
             }
         }
     }
-    state "amlworkload" as amlworkload #lavender {
-state "deploy" as amlworkloaddeploy #lavender {
-}
-}
-
-    DevOpsEngineerManageWorkloadsDeployWorkload --> amlworkloaddeploy
+    
+    DevOpsEngineerManageWorkloadsDeployWorkload --> Null
     
  
     state "DevOps Engineer" as DevOpsEngineer {
@@ -389,12 +325,8 @@ state "deploy" as amlworkloaddeploy #lavender {
             }
         }
     }
-    state "amlworkload" as amlworkload #lavender {
-state "destroy" as amlworkloaddestroy #lavender {
-}
-}
-
-    DevOpsEngineerManageWorkloadsDestroyWorkload --> amlworkloaddestroy
+    
+    DevOpsEngineerManageWorkloadsDestroyWorkload --> Null
     
  
     state "Application Developer" as ApplicationDeveloper {
@@ -403,12 +335,8 @@ state "destroy" as amlworkloaddestroy #lavender {
             }
         }
     }
-    state "amlworkload" as amlworkload #lavender {
-state "monitor" as amlworkloadmonitor #lavender {
-}
-}
-
-    ApplicationDeveloperManageWorkloadsMonitorWorkload --> amlworkloadmonitor
+    
+    ApplicationDeveloperManageWorkloadsMonitorWorkload --> Null
     
     state "DevOps Engineer" as DevOpsEngineer {
         state "Manage Workloads" as DevOpsEngineerManageWorkloads {
@@ -416,12 +344,8 @@ state "monitor" as amlworkloadmonitor #lavender {
             }
         }
     }
-    state "amlworkload" as amlworkload #lavender {
-state "monitor" as amlworkloadmonitor #lavender {
-}
-}
-
-    DevOpsEngineerManageWorkloadsMonitorWorkload --> amlworkloadmonitor
+    
+    DevOpsEngineerManageWorkloadsMonitorWorkload --> Null
     
  
     state "Application Developer" as ApplicationDeveloper {
@@ -430,12 +354,8 @@ state "monitor" as amlworkloadmonitor #lavender {
             }
         }
     }
-    state "amlworkload" as amlworkload #lavender {
-state "update" as amlworkloadupdate #lavender {
-}
-}
-
-    ApplicationDeveloperManageWorkloadsUpdateWorkload --> amlworkloadupdate
+    
+    ApplicationDeveloperManageWorkloadsUpdateWorkload --> Null
     
     state "DevOps Engineer" as DevOpsEngineer {
         state "Manage Workloads" as DevOpsEngineerManageWorkloads {
@@ -443,12 +363,8 @@ state "update" as amlworkloadupdate #lavender {
             }
         }
     }
-    state "amlworkload" as amlworkload #lavender {
-state "update" as amlworkloadupdate #lavender {
-}
-}
-
-    DevOpsEngineerManageWorkloadsUpdateWorkload --> amlworkloadupdate
+    
+    DevOpsEngineerManageWorkloadsUpdateWorkload --> Null
     
  
  

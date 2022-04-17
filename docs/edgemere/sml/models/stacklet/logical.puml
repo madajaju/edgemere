@@ -73,10 +73,890 @@ Model *--> "n" DataReference : data
     
         Stack   *--> "n" Model : "stacklets"
     
-    rectangle "StackTemplate" as StackTemplate #lightgreen {
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
     }
     
-        StackTemplate   *--> "n" Model : "stacklets"
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "parent"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "parent"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "parent"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "parent"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "1" Model : "parent"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "stacklets"
+    
+    rectangle "StackDefinition" as StackDefinition #lightgreen {
+    }
+    
+        StackDefinition   *--> "n" Model : "stacklets"
     
     rectangle "Stacklet" as Stacklet #lightgreen {
     }

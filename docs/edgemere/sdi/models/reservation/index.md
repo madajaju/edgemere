@@ -9,7 +9,7 @@ parent: classes
 
 A reservation fullfils the request to the system for resources. When a request for a resource is made from a cloud. A reservation for the resource request is created for each device or devices that can satistfy the request. When the request is fulfilled the reservations are then no longer needed.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -31,11 +31,97 @@ A reservation fullfils the request to the system for resources. When a request f
 | --- | --- | --- | --- | --- | --- |
 | reservations | n | Cloud | false | true |  |
 | reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
+| reservations | n | Cloud | false | true |  |
+| reservations | n | Request | false | true |  |
 
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

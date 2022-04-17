@@ -9,7 +9,7 @@ parent: classes
 
 This is a combination of the stack with a specific environment. This allows for a stack to behave differently depending on the envionrment it is in.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -41,7 +41,183 @@ This is a combination of the stack with a specific environment. This allows for 
 | --- | --- | --- | --- | --- | --- |
 | parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
 | stacklets | n | Stack | true | true | Stacklets of the stack and environment |
-| stacklets | n | StackTemplate | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| parent | 1 | Stacklet | false | false | Parent stacklet for the servicelet |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| parent | 1 | Stacklet | false | false | Parent stacklet for the servicelet |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| parent | 1 | Stacklet | false | false | Parent stacklet for the servicelet |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
+| parent | 1 | Stacklet | false | false | Parent stacklet for the servicelet |
+| stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
+| parent | 1 | Servicelet | false | false | Parent stacklet for the servicelet |
+| stacklets | n | Stack | true | true | Stacklets of the stack and environment |
+| stacklets | n | StackDefinition | true | true | Stacklets of the stack and environment |
 | parent | 1 | Stacklet | false | false | Parent stacklet for the servicelet |
 | stacklet | 1 | StackInstance | false | false | Stacklet of the instance running |
 

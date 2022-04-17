@@ -7,46 +7,52 @@ state "Data Scientist" as DataScientist {
     state "Manage Data" as DataScientistManageData {
     }
 }
-state "diml" as diml #ffcc88 {
-state "cds" as dimlcds #ffcc88 {
-state "data" as dimlcdsdata #ffcc88 {
-state "list" as dimlcdsdatalist #ffcc88 {
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "cds" as edgemeredimlcds #ffcc88 {
+state "data" as edgemeredimlcdsdata #ffcc88 {
+state "list" as edgemeredimlcdsdatalist #ffcc88 {
+}
 }
 }
 }
 }
 
-DataScientistManageData --> dimlcdsdatalist
+DataScientistManageData --> edgemeredimlcdsdatalist
 
 state "Data Analyst" as DataAnalyst {
     state "Manage Data" as DataAnalystManageData {
     }
 }
-state "diml" as diml #ffcc88 {
-state "cds" as dimlcds #ffcc88 {
-state "data" as dimlcdsdata #ffcc88 {
-state "list" as dimlcdsdatalist #ffcc88 {
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "cds" as edgemeredimlcds #ffcc88 {
+state "data" as edgemeredimlcdsdata #ffcc88 {
+state "list" as edgemeredimlcdsdatalist #ffcc88 {
+}
 }
 }
 }
 }
 
-DataAnalystManageData --> dimlcdsdatalist
+DataAnalystManageData --> edgemeredimlcdsdatalist
 
 state "Data Engineer" as DataEngineer {
     state "Manage Data" as DataEngineerManageData {
     }
 }
-state "diml" as diml #ffcc88 {
-state "cds" as dimlcds #ffcc88 {
-state "data" as dimlcdsdata #ffcc88 {
-state "list" as dimlcdsdatalist #ffcc88 {
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "cds" as edgemeredimlcds #ffcc88 {
+state "data" as edgemeredimlcdsdata #ffcc88 {
+state "list" as edgemeredimlcdsdatalist #ffcc88 {
+}
 }
 }
 }
 }
 
-DataEngineerManageData --> dimlcdsdatalist
+DataEngineerManageData --> edgemeredimlcdsdatalist
 
 
     state "Actor" as Actor {
@@ -55,16 +61,8 @@ DataEngineerManageData --> dimlcdsdatalist
             }
         }
     }
-    state "diml" as diml #ffcc88 {
-state "cdsdata" as dimlcdsdata #ffcc88 {
-state "source" as dimlcdsdatasource #ffcc88 {
-state "name" as dimlcdsdatasourcename #ffcc88 {
-}
-}
-}
-}
-
-    ActorManageDataDestroyData --> dimlcdsdatasourcename
+    
+    ActorManageDataDestroyData --> Null
     
  
     state "Actor" as Actor {
@@ -73,16 +71,8 @@ state "name" as dimlcdsdatasourcename #ffcc88 {
             }
         }
     }
-    state "diml" as diml #ffcc88 {
-state "cdsdata" as dimlcdsdata #ffcc88 {
-state "source" as dimlcdsdatasource #ffcc88 {
-state "name" as dimlcdsdatasourcename #ffcc88 {
-}
-}
-}
-}
-
-    ActorManageDataEgressData --> dimlcdsdatasourcename
+    
+    ActorManageDataEgressData --> Null
     
  
     state "Actor" as Actor {
@@ -91,16 +81,8 @@ state "name" as dimlcdsdatasourcename #ffcc88 {
             }
         }
     }
-    state "diml" as diml #ffcc88 {
-state "cdsdata" as dimlcdsdata #ffcc88 {
-state "source" as dimlcdsdatasource #ffcc88 {
-state "name" as dimlcdsdatasourcename #ffcc88 {
-}
-}
-}
-}
-
-    ActorManageDataIngestData --> dimlcdsdatasourcename
+    
+    ActorManageDataIngestData --> Null
     
  
     state "Actor" as Actor {
@@ -109,16 +91,8 @@ state "name" as dimlcdsdatasourcename #ffcc88 {
             }
         }
     }
-    state "diml" as diml #ffcc88 {
-state "cdsdata" as dimlcdsdata #ffcc88 {
-state "source" as dimlcdsdatasource #ffcc88 {
-state "name" as dimlcdsdatasourcename #ffcc88 {
-}
-}
-}
-}
-
-    ActorManageDataMoveData --> dimlcdsdatasourcename
+    
+    ActorManageDataMoveData --> Null
     
  
  

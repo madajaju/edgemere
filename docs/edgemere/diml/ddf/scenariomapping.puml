@@ -7,31 +7,35 @@ state "Data Engineer" as DataEngineer {
     state "Manage Data Adaptors" as DataEngineerManageDataAdaptors {
     }
 }
-state "diml" as diml #ffcc88 {
-state "ddf" as dimlddf #ffcc88 {
-state "datadaptor" as dimlddfdatadaptor #ffcc88 {
-state "list" as dimlddfdatadaptorlist #ffcc88 {
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "ddf" as edgemeredimlddf #ffcc88 {
+state "datadaptor" as edgemeredimlddfdatadaptor #ffcc88 {
+state "list" as edgemeredimlddfdatadaptorlist #ffcc88 {
+}
 }
 }
 }
 }
 
-DataEngineerManageDataAdaptors --> dimlddfdatadaptorlist
+DataEngineerManageDataAdaptors --> edgemeredimlddfdatadaptorlist
 
 state "Data Scientist" as DataScientist {
     state "Manage Data Adaptors" as DataScientistManageDataAdaptors {
     }
 }
-state "diml" as diml #ffcc88 {
-state "ddf" as dimlddf #ffcc88 {
-state "datadaptor" as dimlddfdatadaptor #ffcc88 {
-state "list" as dimlddfdatadaptorlist #ffcc88 {
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "ddf" as edgemeredimlddf #ffcc88 {
+state "datadaptor" as edgemeredimlddfdatadaptor #ffcc88 {
+state "list" as edgemeredimlddfdatadaptorlist #ffcc88 {
+}
 }
 }
 }
 }
 
-DataScientistManageDataAdaptors --> dimlddfdatadaptorlist
+DataScientistManageDataAdaptors --> edgemeredimlddfdatadaptorlist
 
 
     state "Actor" as Actor {
@@ -40,16 +44,8 @@ DataScientistManageDataAdaptors --> dimlddfdatadaptorlist
             }
         }
     }
-    state "diml" as diml #ffcc88 {
-state "ddfdata" as dimlddfdata #ffcc88 {
-state "source" as dimlddfdatasource #ffcc88 {
-state "name" as dimlddfdatasourcename #ffcc88 {
-}
-}
-}
-}
-
-    ActorManageDataAdaptorsAttachDataBluePrint --> dimlddfdatasourcename
+    
+    ActorManageDataAdaptorsAttachDataBluePrint --> Null
     
  
     state "Actor" as Actor {
@@ -58,16 +54,8 @@ state "name" as dimlddfdatasourcename #ffcc88 {
             }
         }
     }
-    state "diml" as diml #ffcc88 {
-state "ddfdata" as dimlddfdata #ffcc88 {
-state "source" as dimlddfdatasource #ffcc88 {
-state "name" as dimlddfdatasourcename #ffcc88 {
-}
-}
-}
-}
-
-    ActorManageDataAdaptorsCreateDataAdaptor --> dimlddfdatasourcename
+    
+    ActorManageDataAdaptorsCreateDataAdaptor --> Null
     
  
     state "Actor" as Actor {
@@ -76,16 +64,8 @@ state "name" as dimlddfdatasourcename #ffcc88 {
             }
         }
     }
-    state "diml" as diml #ffcc88 {
-state "ddfdata" as dimlddfdata #ffcc88 {
-state "source" as dimlddfdatasource #ffcc88 {
-state "name" as dimlddfdatasourcename #ffcc88 {
-}
-}
-}
-}
-
-    ActorManageDataAdaptorsUpdateDataAdaptor --> dimlddfdatasourcename
+    
+    ActorManageDataAdaptorsUpdateDataAdaptor --> Null
     
  
  
@@ -93,31 +73,35 @@ state "Data Engineer" as DataEngineer {
     state "Manage Data Blue Prints" as DataEngineerManageDataBluePrints {
     }
 }
-state "diml" as diml #ffcc88 {
-state "ddf" as dimlddf #ffcc88 {
-state "datablueprint" as dimlddfdatablueprint #ffcc88 {
-state "list" as dimlddfdatablueprintlist #ffcc88 {
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "ddf" as edgemeredimlddf #ffcc88 {
+state "datablueprint" as edgemeredimlddfdatablueprint #ffcc88 {
+state "list" as edgemeredimlddfdatablueprintlist #ffcc88 {
+}
 }
 }
 }
 }
 
-DataEngineerManageDataBluePrints --> dimlddfdatablueprintlist
+DataEngineerManageDataBluePrints --> edgemeredimlddfdatablueprintlist
 
 state "Data Scientist" as DataScientist {
     state "Manage Data Blue Prints" as DataScientistManageDataBluePrints {
     }
 }
-state "diml" as diml #ffcc88 {
-state "ddf" as dimlddf #ffcc88 {
-state "datablueprint" as dimlddfdatablueprint #ffcc88 {
-state "list" as dimlddfdatablueprintlist #ffcc88 {
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "ddf" as edgemeredimlddf #ffcc88 {
+state "datablueprint" as edgemeredimlddfdatablueprint #ffcc88 {
+state "list" as edgemeredimlddfdatablueprintlist #ffcc88 {
+}
 }
 }
 }
 }
 
-DataScientistManageDataBluePrints --> dimlddfdatablueprintlist
+DataScientistManageDataBluePrints --> edgemeredimlddfdatablueprintlist
 
 
     state "Actor" as Actor {
@@ -126,14 +110,8 @@ DataScientistManageDataBluePrints --> dimlddfdatablueprintlist
             }
         }
     }
-    state "diml" as diml #ffcc88 {
-state "ddfdata" as dimlddfdata #ffcc88 {
-state "create" as dimlddfdatacreate #ffcc88 {
-}
-}
-}
-
-    ActorManageDataBluePrintsCreateBluePrint --> dimlddfdatacreate
+    
+    ActorManageDataBluePrintsCreateBluePrint --> Null
     
  
  
@@ -141,16 +119,18 @@ state "Data Engineer" as DataEngineer {
     state "Manage Data Pipeline" as DataEngineerManageDataPipeline {
     }
 }
-state "diml" as diml #ffcc88 {
-state "ddf" as dimlddf #ffcc88 {
-state "datapipeline" as dimlddfdatapipeline #ffcc88 {
-state "list" as dimlddfdatapipelinelist #ffcc88 {
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "ddf" as edgemeredimlddf #ffcc88 {
+state "datapipeline" as edgemeredimlddfdatapipeline #ffcc88 {
+state "list" as edgemeredimlddfdatapipelinelist #ffcc88 {
+}
 }
 }
 }
 }
 
-DataEngineerManageDataPipeline --> dimlddfdatapipelinelist
+DataEngineerManageDataPipeline --> edgemeredimlddfdatapipelinelist
 
 
  
@@ -158,31 +138,35 @@ state "Data Engineer" as DataEngineer {
     state "Manage Data Procedures" as DataEngineerManageDataProcedures {
     }
 }
-state "diml" as diml #ffcc88 {
-state "ddf" as dimlddf #ffcc88 {
-state "dataprocedure" as dimlddfdataprocedure #ffcc88 {
-state "list" as dimlddfdataprocedurelist #ffcc88 {
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "ddf" as edgemeredimlddf #ffcc88 {
+state "dataprocedure" as edgemeredimlddfdataprocedure #ffcc88 {
+state "list" as edgemeredimlddfdataprocedurelist #ffcc88 {
+}
 }
 }
 }
 }
 
-DataEngineerManageDataProcedures --> dimlddfdataprocedurelist
+DataEngineerManageDataProcedures --> edgemeredimlddfdataprocedurelist
 
 state "Chief Data Officer" as ChiefDataOfficer {
     state "Manage Data Procedures" as ChiefDataOfficerManageDataProcedures {
     }
 }
-state "diml" as diml #ffcc88 {
-state "ddf" as dimlddf #ffcc88 {
-state "dataprocedure" as dimlddfdataprocedure #ffcc88 {
-state "list" as dimlddfdataprocedurelist #ffcc88 {
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "ddf" as edgemeredimlddf #ffcc88 {
+state "dataprocedure" as edgemeredimlddfdataprocedure #ffcc88 {
+state "list" as edgemeredimlddfdataprocedurelist #ffcc88 {
+}
 }
 }
 }
 }
 
-ChiefDataOfficerManageDataProcedures --> dimlddfdataprocedurelist
+ChiefDataOfficerManageDataProcedures --> edgemeredimlddfdataprocedurelist
 
 
  
@@ -190,16 +174,18 @@ state "Data Scientist" as DataScientist {
     state "Manage Meta Data" as DataScientistManageMetaData {
     }
 }
-state "diml" as diml #ffcc88 {
-state "ddf" as dimlddf #ffcc88 {
-state "metadata" as dimlddfmetadata #ffcc88 {
-state "list" as dimlddfmetadatalist #ffcc88 {
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "ddf" as edgemeredimlddf #ffcc88 {
+state "metadata" as edgemeredimlddfmetadata #ffcc88 {
+state "list" as edgemeredimlddfmetadatalist #ffcc88 {
+}
 }
 }
 }
 }
 
-DataScientistManageMetaData --> dimlddfmetadatalist
+DataScientistManageMetaData --> edgemeredimlddfmetadatalist
 
 
     state "Actor" as Actor {
@@ -208,14 +194,8 @@ DataScientistManageMetaData --> dimlddfmetadatalist
             }
         }
     }
-    state "diml" as diml #ffcc88 {
-state "ddfdata" as dimlddfdata #ffcc88 {
-state "create" as dimlddfdatacreate #ffcc88 {
-}
-}
-}
-
-    ActorManageMetaDataCaptureMetaData --> dimlddfdatacreate
+    
+    ActorManageMetaDataCaptureMetaData --> Null
     
  
     state "DataScientist" as DataScientist {
@@ -224,14 +204,8 @@ state "create" as dimlddfdatacreate #ffcc88 {
             }
         }
     }
-    state "diml" as diml #ffcc88 {
-state "ddfdatacatalog" as dimlddfdatacatalog #ffcc88 {
-state "list" as dimlddfdatacataloglist #ffcc88 {
-}
-}
-}
-
-    DataScientistManageMetaDataManageDataCatalog --> dimlddfdatacataloglist
+    
+    DataScientistManageMetaDataManageDataCatalog --> Null
     
  
  

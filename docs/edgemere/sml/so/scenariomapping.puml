@@ -7,31 +7,35 @@ state "Stack Developer" as StackDeveloper {
     state "Manage Stacks" as StackDeveloperManageStacks {
     }
 }
-state "sml" as sml #lightgreen {
-state "so" as smlso #lightgreen {
-state "stack" as smlsostack #lightgreen {
-state "list" as smlsostacklist #lightgreen {
+state "edgemere" as edgemere #lightgreen {
+state "sml" as edgemeresml #lightgreen {
+state "so" as edgemeresmlso #lightgreen {
+state "stack" as edgemeresmlsostack #lightgreen {
+state "list" as edgemeresmlsostacklist #lightgreen {
+}
 }
 }
 }
 }
 
-StackDeveloperManageStacks --> smlsostacklist
+StackDeveloperManageStacks --> edgemeresmlsostacklist
 
 state "Application Developer" as ApplicationDeveloper {
     state "Manage Stacks" as ApplicationDeveloperManageStacks {
     }
 }
-state "sml" as sml #lightgreen {
-state "so" as smlso #lightgreen {
-state "stack" as smlsostack #lightgreen {
-state "list" as smlsostacklist #lightgreen {
+state "edgemere" as edgemere #lightgreen {
+state "sml" as edgemeresml #lightgreen {
+state "so" as edgemeresmlso #lightgreen {
+state "stack" as edgemeresmlsostack #lightgreen {
+state "list" as edgemeresmlsostacklist #lightgreen {
+}
 }
 }
 }
 }
 
-ApplicationDeveloperManageStacks --> smlsostacklist
+ApplicationDeveloperManageStacks --> edgemeresmlsostacklist
 
 
     state "DevOps Engineer" as DevOpsEngineer {
@@ -40,14 +44,8 @@ ApplicationDeveloperManageStacks --> smlsostacklist
             }
         }
     }
-    state "sml" as sml #lightgreen {
-state "sostack" as smlsostack #lightgreen {
-state "deploy" as smlsostackdeploy #lightgreen {
-}
-}
-}
-
-    DevOpsEngineerManageStacksDeployStack --> smlsostackdeploy
+    
+    DevOpsEngineerManageStacksDeployStack --> Null
     
  
     state "DevOps Engineer" as DevOpsEngineer {
@@ -56,14 +54,8 @@ state "deploy" as smlsostackdeploy #lightgreen {
             }
         }
     }
-    state "sml" as sml #lightgreen {
-state "sostack" as smlsostack #lightgreen {
-state "uninstall" as smlsostackuninstall #lightgreen {
-}
-}
-}
-
-    DevOpsEngineerManageStacksUninstallStack --> smlsostackuninstall
+    
+    DevOpsEngineerManageStacksUninstallStack --> Null
     
  
     state "DevOps Engineer" as DevOpsEngineer {
@@ -72,14 +64,8 @@ state "uninstall" as smlsostackuninstall #lightgreen {
             }
         }
     }
-    state "sml" as sml #lightgreen {
-state "sostack" as smlsostack #lightgreen {
-state "update" as smlsostackupdate #lightgreen {
-}
-}
-}
-
-    DevOpsEngineerManageStacksUpdateStack --> smlsostackupdate
+    
+    DevOpsEngineerManageStacksUpdateStack --> Null
     
  
  

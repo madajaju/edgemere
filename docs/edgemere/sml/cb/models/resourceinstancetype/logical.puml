@@ -36,5 +36,650 @@ Model *--> "n" ResourceCost : costs
     
         ResourceMap   o--> "1" Model : "value"
     
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
+    rectangle "CloudType" as CloudType #lightgreen {
+    }
+    
+        CloudType   *--> "n" Model : "instancetypes"
+    
+    rectangle "ResourceCost" as ResourceCost #lightgreen {
+    }
+    
+        ResourceCost   o--> "1" Model : "parent"
+    
+    rectangle "ResourceMap" as ResourceMap #lightgreen {
+    }
+    
+        ResourceMap   o--> "1" Model : "value"
+    
 
 @enduml

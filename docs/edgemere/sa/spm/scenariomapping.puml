@@ -1,0 +1,115 @@
+@startuml
+left to right direction
+
+
+
+state "Actor" as Actor {
+    state "Apply Security Profiles" as ActorApplySecurityProfiles {
+    }
+}
+state "edgemere" as edgemere #pink {
+state "sa" as edgemeresa #pink {
+state "spm" as edgemeresaspm #pink {
+state "data" as edgemeresaspmdata #pink {
+state "govern" as edgemeresaspmdatagovern #pink {
+}
+}
+}
+}
+}
+
+ActorApplySecurityProfiles --> edgemeresaspmdatagovern
+
+
+    state "Actor" as Actor {
+        state "Apply Security Profiles" as ActorApplySecurityProfiles {
+            state "Deploy Security Profile" as ActorApplySecurityProfilesDeploySecurityProfile {
+            }
+        }
+    }
+    
+    ActorApplySecurityProfilesDeploySecurityProfile --> Null
+    
+ 
+ 
+state "Actor" as Actor {
+    state "Manage Security Profiles" as ActorManageSecurityProfiles {
+    }
+}
+state "edgemere" as edgemere #pink {
+state "sa" as edgemeresa #pink {
+state "spm" as edgemeresaspm #pink {
+state "data" as edgemeresaspmdata #pink {
+state "govern" as edgemeresaspmdatagovern #pink {
+}
+}
+}
+}
+}
+
+ActorManageSecurityProfiles --> edgemeresaspmdatagovern
+
+
+    state "Actor" as Actor {
+        state "Manage Security Profiles" as ActorManageSecurityProfiles {
+            state "Create Security Profile" as ActorManageSecurityProfilesCreateSecurityProfile {
+            }
+        }
+    }
+    
+    ActorManageSecurityProfilesCreateSecurityProfile --> Null
+    
+ 
+    state "Actor" as Actor {
+        state "Manage Security Profiles" as ActorManageSecurityProfiles {
+            state "Disable Security Profile" as ActorManageSecurityProfilesDisableSecurityProfile {
+            }
+        }
+    }
+    
+    ActorManageSecurityProfilesDisableSecurityProfile --> Null
+    
+ 
+    state "Actor" as Actor {
+        state "Manage Security Profiles" as ActorManageSecurityProfiles {
+            state "Enable Security Profile" as ActorManageSecurityProfilesEnableSecurityProfile {
+            }
+        }
+    }
+    
+    ActorManageSecurityProfilesEnableSecurityProfile --> Null
+    
+ 
+    state "Actor" as Actor {
+        state "Manage Security Profiles" as ActorManageSecurityProfiles {
+            state "Monitor Security Profile" as ActorManageSecurityProfilesMonitorSecurityProfile {
+            }
+        }
+    }
+    
+    ActorManageSecurityProfilesMonitorSecurityProfile --> Null
+    
+ 
+    state "Actor" as Actor {
+        state "Manage Security Profiles" as ActorManageSecurityProfiles {
+            state "Remove Security Profile" as ActorManageSecurityProfilesRemoveSecurityProfile {
+            }
+        }
+    }
+    
+    ActorManageSecurityProfilesRemoveSecurityProfile --> Null
+    
+ 
+    state "Actor" as Actor {
+        state "Manage Security Profiles" as ActorManageSecurityProfiles {
+            state "Test Security Profile" as ActorManageSecurityProfilesTestSecurityProfile {
+            }
+        }
+    }
+    
+    ActorManageSecurityProfilesTestSecurityProfile --> Null
+    
+ 
+ 
+
+@enduml

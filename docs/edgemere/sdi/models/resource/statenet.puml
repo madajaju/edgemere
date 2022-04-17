@@ -34,21 +34,17 @@ Ready --> Disabled : disable
 
 
 
- state "cpl" as cpl #lightgray {
-state "provision" as cplprovision #lightgray {
+ state "edgemere" as edgemere #lightgray {
+state "cpl" as edgemerecpl #lightgray {
+state "provision" as edgemerecplprovision #lightgray {
+}
 }
 }
 
- Provisioning -[#black]--> cplprovision
+ Provisioning -[#black]--> edgemerecplprovision
  
- state "sdi" as sdi #lightyellow {
-state "request" as sdirequest #lightyellow {
-state "reserve" as sdirequestreserve #lightyellow {
-}
-}
-}
-
- Ready -[#black]--> sdirequestreserve
+ 
+ Ready -[#black]--> Null
  
 
 @enduml

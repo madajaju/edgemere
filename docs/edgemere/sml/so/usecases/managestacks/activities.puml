@@ -1,7 +1,7 @@
 @startuml
 
 
-usecase "Manage Stacks" as ManageStacks
+usecase "Manage Stacks" as ManageStacks #yellow
 
 Actor "Stack Developer" as StackDeveloper
 
@@ -24,5 +24,13 @@ ManageStacks --> UninstallStack
 usecase "UpdateStack" as UpdateStack #lightgrey
 
 ManageStacks --> UpdateStack
+
+
+
+
+
+
+
+
 
 @enduml

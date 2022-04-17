@@ -4,12 +4,11 @@ title: Manage Services
 permalink: usecase-ManageServices
 parent: usecases
 ---
-
 # Manage Services
 
 Manage Services is the description
 
-![Activities Diagram](./activities.svg)
+![Activities Diagram](./activities.png)
 
 ## Actors
 
@@ -17,8 +16,18 @@ Manage Services is the description
 * [Application Developer](actor-applicationdeveloper)
 
 
+
+
+
+
+
+
+
+
+
 ## Detail Scenarios
 
 
-  
+
+
 

@@ -5,6 +5,8 @@ permalink: actor-stackdev
 parent: All Actors
 ---
 
+{#actor-function toLowerCase() { [native code] }}
+
 # Stack Developer
 
 Responsible for developing reusable micro-services and application stacks in the organization.
@@ -17,14 +19,14 @@ Responsible for developing reusable micro-services and application stacks in the
 * [Manage Stacks](usecase-ManageStacks)
 * [Manage Services](usecase-ManageServices)
 
-  
-![Use Case Diagram](./usecase.svg)
+
+![Use Case Diagram](./usecase.png)
 
 ## User Interface
 TBD
 
 ## Command Line Interface
-* [ edgemere sml em environment/list](action--edgemere-sml-em-environment-list) - Manage Environment allows the actors (IT Operations and Stack Developer) to create environments, and establish policies for services running in the environment.
+* [ edgemere aml ds em environment/list](action--edgemere-aml-ds-em-environment-list) - Manage Environment allows the actors (IT Operations and Stack Developer) to create environments, and establish policies for services running in the environment.
 * [ edgemere sml so stack/list](action--edgemere-sml-so-stack-list) - Manage Stacks allows the stack developer to create, update, and delete stacks.
 * [ edgemere sml service/list](action--edgemere-sml-service-list) - Manage Services is the description
 

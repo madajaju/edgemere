@@ -1,0 +1,24 @@
+@startuml
+
+class "Pipeline" as Model {
+ string name
+
+ 
+}
+
+rectangle "Stage" as Stage #lightblue {
+}
+
+Model *--> "n" Stage : stages
+
+
+rectangle "Build" as Build #lightblue {
+}
+
+Model *--> "n" Build : builds
+
+
+
+
+
+@enduml

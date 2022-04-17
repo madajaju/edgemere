@@ -9,7 +9,7 @@ parent: classes
 
 This represents a request made for data in the system the data request is made with several data reservations coming back depending on the data request. More than one data reservation can be utilized depending on the policies in the data orchestrator. For example is a data reference states to get all car data then several reservations should  be used based on their data sources.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -33,11 +33,54 @@ This represents a request made for data in the system the data request is made w
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
 | request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
+| request | 1 | DataReservation | false | false |  |
 
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

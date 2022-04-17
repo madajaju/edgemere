@@ -1,7 +1,7 @@
 @startuml
 
 
-usecase "Manage Infrastructure" as ManageInfrastructure
+usecase "Manage Infrastructure" as ManageInfrastructure #yellow
 
 Actor "IT Operations" as ITOperations
 
@@ -28,5 +28,13 @@ ManageInfrastructure --> RemoveDevice
 usecase "UpdateDevice" as UpdateDevice #lightgrey
 
 ManageInfrastructure --> UpdateDevice
+
+
+
+
+
+
+
+
 
 @enduml

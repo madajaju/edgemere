@@ -44,35 +44,31 @@ Evaluated --> Failed : failed
 
 
 
- state "cpl" as cpl #lightgray {
-state "Function" as cplFunction #lightgray {
-}
-}
-
- Needed -[#black]--> cplFunction
  
- state "cpl" as cpl #lightgray {
-state "reserve" as cplreserve #lightgray {
-}
-}
-
- Needed -[#black]--> cplreserve
+ Needed -[#black]--> Null
  
- state "sdi" as sdi #lightyellow {
-state "io" as sdiio #lightyellow {
-state "evaluateRequest" as sdiioevaluateRequest #lightyellow {
+ state "edgemere" as edgemere #lightgray {
+state "cpl" as edgemerecpl #lightgray {
+state "reserve" as edgemerecplreserve #lightgray {
 }
 }
 }
 
- Selected -[#black]--> sdiioevaluateRequest
+ Needed -[#black]--> edgemerecplreserve
  
- state "sdi" as sdi #lightyellow {
-state "Function" as sdiFunction #lightyellow {
+ state "edgemere" as edgemere #lightyellow {
+state "sdi" as edgemeresdi #lightyellow {
+state "io" as edgemeresdiio #lightyellow {
+state "evaluateRequest" as edgemeresdiioevaluateRequest #lightyellow {
+}
+}
 }
 }
 
- Satisfied -[#black]--> sdiFunction
+ Selected -[#black]--> edgemeresdiioevaluateRequest
+ 
+ 
+ Satisfied -[#black]--> Null
  
 
 @enduml

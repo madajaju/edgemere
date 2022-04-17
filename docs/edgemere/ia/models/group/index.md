@@ -7,26 +7,70 @@ parent: classes
 
 # Group
 
-Description long description
+Group representing a set of identities
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
-* attr1:string - description long description
+* name:string - Name of the group
 
 
 ## Associations
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| assoc1 | 1 | ModelName | false | false |  |
+| users | n | User | false | false |  |
 
 
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
+| groups | n | User | false | false |  |
 
 
 

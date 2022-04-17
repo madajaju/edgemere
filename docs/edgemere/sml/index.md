@@ -5,6 +5,7 @@ permalink: package--edgemere-sml
 parent: edgemere
 has_children: true
 ---
+
 # Service Management Layer
 
 Service Management Layer is a subsystem that manages services, stacks, environments, and multi-clouds.
@@ -85,19 +86,19 @@ that are elaborated in the use case descriptions.
 * [Manage Services](usecase-ManageServices)
 
 
-![UseCase Diagram](./usecases.svg)
+![UseCase Diagram](./usecases.png)
 
 ## Users
 
-The following are the actors of the Service Management Layer subsystem. This can include people, other subsystems 
-inside the solution and even external subsystems. 
+The following are the actors of the Service Management Layer subsystem. This can include people, other subsystems
+inside the solution and even external subsystems.
 
 * [ITOperations](actor-itops)
 * [StackDeveloper](actor-stackdev)
 * [ApplicationDeveloper](actor-applicationdeveloper)
 
 
-![User Interaction](./userinteraction.svg)
+![User Interaction](./userinteraction.png)
 
 ## Interface
 
@@ -105,7 +106,7 @@ The subsystem has a REST, CLI, WebSocket, and Web interface. Use Cases and Scena
 of the interfaces to perform the work that needs to be completed. The following  diagram shows how
 users interact with the system.
 
-![Scenario Mappings Diagram](./scenariomapping.svg)
+![Scenario Mappings Diagram](./scenariomapping.png)
 
 * [ edgemere sml cloud list](#action--edgemere-sml-cloud-list)
 * [ edgemere sml data govern](#action--edgemere-sml-data-govern)
@@ -130,7 +131,7 @@ users interact with the system.
 The Data Model for the  Service Management Layer subsystem shows how the different objects and classes of object interact
 and their structure.
 
-![Sub Package Diagram](./subpackage.svg)
+![Sub Package Diagram](./subpackage.png)
 
 ### Sub Packages
 
@@ -138,14 +139,13 @@ The Service Management Layer subsystem has sub packages as well. These subsystem
 organize the architecture and make it easier to analyze, understand, design, and implement.
 
 * [Cloud Broker](package--edgemere-sml-cb)
-* [Environment Management](package--edgemere-sml-em)
 * [Provision Engine](package--edgemere-sml-pe)
 * [Service Controller](package--edgemere-sml-sc)
 * [Service Orchestrator](package--edgemere-sml-so)
 * [Service Repository](package--edgemere-sml-sr)
 
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ### Classes
 
@@ -155,10 +155,10 @@ The following are the classes in the data model of the Service Management Layer 
 * [MultiCloud](class-MultiCloud)
 * [RunScript](class-RunScript)
 * [Service](class-Service)
-* [ServiceTemplate](class-ServiceTemplate)
+* [ServiceDefinition](class-ServiceDefinition)
 * [Servicelet](class-Servicelet)
 * [Stack](class-Stack)
-* [StackTemplate](class-StackTemplate)
+* [StackDefinition](class-StackDefinition)
 * [Stacklet](class-Stacklet)
 * [StackletDefinition](class-StackletDefinition)
 
@@ -169,7 +169,7 @@ The following are the classes in the data model of the Service Management Layer 
 This subsystem is deployed using micro-services as shown in the diagram below. The 'micro' module is
 used to implement the micro-services in the system. The subsystem also has an CLI, REST and Web Interface
 exposed through a nodejs application. The nodejs application will interface with the micro-services and
-can monitor and drive work-flows through the mesh of micro-services. The deployment of the subsystem is 
+can monitor and drive work-flows through the mesh of micro-services. The deployment of the subsystem is
 dependent on the environment it is deployed. This subsystem has the following environments:
 * [dev](environment--edgemere-sml-dev)
 * [test](environment--edgemere-sml-test)
@@ -181,7 +181,7 @@ dependent on the environment it is deployed. This subsystem has the following en
 
 The Service Management Layer subsystem is physically laid out on a hybrid cloud infrastructure. Each microservice belongs
 to a secure micro-segmented network. All of the micro-services communicate to each other and the main app through a
-REST interface. A Command Line Interface (CLI), REST or Web User interface for the app is how other subsystems or actors 
+REST interface. A Command Line Interface (CLI), REST or Web User interface for the app is how other subsystems or actors
 interact. Requests are forwarded to micro-services through the REST interface of each micro-service. The subsystem has
 the a unique layout based on the environment the physical space. The following are the environments for this
 subsystems.

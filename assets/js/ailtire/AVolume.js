@@ -19,12 +19,12 @@ export default class AVolume {
 
         const material = new THREE.MeshPhongMaterial({color: color, transparent: true, opacity: opacity});
 
-        const stack = new THREE.CylinderGeometry(25, 25, 30, 20);
+        const stack = new THREE.CylinderGeometry(40, 40, 30, 20);
         let obj = new THREE.Mesh(stack, material);
         obj.position.set(0, 0, 0);
 
-        let label = AText.view3D({text: node.name, color: "#ffffff", width: 80, size: 20});
-        label.position.set(0, 0, 26);
+        let label = AText.view3D({text: node.name, color: "#ffffff", width: 120, size: 20});
+        label.position.set(0, 0, 41);
         obj.add(label);
 
         obj.position.set(node.x, node.y, node.z);
@@ -40,8 +40,9 @@ export default class AVolume {
             }
         }
         obj.aid = node.id;
-        node.box = 50;
-        // node.expandLink = `actor/get?id=${node.id}`;
+        node.box = 120;
+        node.expandLink = `actor/get?id=${node.id}`;
+        node.expandView = AVolume.viewDeep3D;
 
         return obj;
     }

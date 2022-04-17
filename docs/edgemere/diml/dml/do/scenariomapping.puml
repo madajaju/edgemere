@@ -7,35 +7,39 @@ state "DataScientist" as DataScientist {
     state "Manage Data Instances" as DataScientistManageDataInstances {
     }
 }
-state "diml" as diml #ffcc88 {
-state "dml" as dimldml #ffcc88 {
-state "do" as dimldmldo #lightblue {
-state "datainstance" as dimldmldodatainstance #lightblue {
-state "list" as dimldmldodatainstancelist #lightblue {
+state "edgemere" as edgemere #lightblue {
+state "diml" as edgemerediml #lightblue {
+state "dml" as edgemeredimldml #lightblue {
+state "do" as edgemeredimldmldo #lightblue {
+state "datainstance" as edgemeredimldmldodatainstance #lightblue {
+state "list" as edgemeredimldmldodatainstancelist #lightblue {
+}
 }
 }
 }
 }
 }
 
-DataScientistManageDataInstances --> dimldmldodatainstancelist
+DataScientistManageDataInstances --> edgemeredimldmldodatainstancelist
 
 state "ApplicationDeveloper" as ApplicationDeveloper {
     state "Manage Data Instances" as ApplicationDeveloperManageDataInstances {
     }
 }
-state "diml" as diml #ffcc88 {
-state "dml" as dimldml #ffcc88 {
-state "do" as dimldmldo #lightblue {
-state "datainstance" as dimldmldodatainstance #lightblue {
-state "list" as dimldmldodatainstancelist #lightblue {
+state "edgemere" as edgemere #lightblue {
+state "diml" as edgemerediml #lightblue {
+state "dml" as edgemeredimldml #lightblue {
+state "do" as edgemeredimldmldo #lightblue {
+state "datainstance" as edgemeredimldmldodatainstance #lightblue {
+state "list" as edgemeredimldmldodatainstancelist #lightblue {
+}
 }
 }
 }
 }
 }
 
-ApplicationDeveloperManageDataInstances --> dimldmldodatainstancelist
+ApplicationDeveloperManageDataInstances --> edgemeredimldmldodatainstancelist
 
 
     state "Application Developer" as ApplicationDeveloper {
@@ -44,16 +48,8 @@ ApplicationDeveloperManageDataInstances --> dimldmldodatainstancelist
             }
         }
     }
-    state "diml" as diml #ffcc88 {
-state "dml" as dimldml #ffcc88 {
-state "dodatainstance" as dimldmldodatainstance #ffcc88 {
-state "create" as dimldmldodatainstancecreate #ffcc88 {
-}
-}
-}
-}
-
-    ApplicationDeveloperManageDataInstancesCreateDataInstance --> dimldmldodatainstancecreate
+    
+    ApplicationDeveloperManageDataInstancesCreateDataInstance --> Null
     
  
     state "Actor" as Actor {
@@ -62,16 +58,8 @@ state "create" as dimldmldodatainstancecreate #ffcc88 {
             }
         }
     }
-    state "diml" as diml #ffcc88 {
-state "dml" as dimldml #ffcc88 {
-state "dodatainstance" as dimldmldodatainstance #ffcc88 {
-state "find" as dimldmldodatainstancefind #ffcc88 {
-}
-}
-}
-}
-
-    ActorManageDataInstancesFindDataInstance --> dimldmldodatainstancefind
+    
+    ActorManageDataInstancesFindDataInstance --> Null
     
  
     state "Actor" as Actor {
@@ -80,16 +68,8 @@ state "find" as dimldmldodatainstancefind #ffcc88 {
             }
         }
     }
-    state "diml" as diml #ffcc88 {
-state "dml" as dimldml #ffcc88 {
-state "dodatainstance" as dimldmldodatainstance #ffcc88 {
-state "destroy" as dimldmldodatainstancedestroy #ffcc88 {
-}
-}
-}
-}
-
-    ActorManageDataInstancesRemoveDataInstance --> dimldmldodatainstancedestroy
+    
+    ActorManageDataInstancesRemoveDataInstance --> Null
     
  
  

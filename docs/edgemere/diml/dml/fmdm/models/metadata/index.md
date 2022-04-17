@@ -9,7 +9,7 @@ parent: classes
 
 Meta-Data for the Data in the system. Name and Value pair.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -28,6 +28,49 @@ Meta-Data for the Data in the system. Name and Value pair.
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
+| metadata | n | Data | false | true |  |
 | metadata | n | Data | false | true |  |
 
 

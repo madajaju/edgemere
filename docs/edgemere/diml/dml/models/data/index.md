@@ -9,7 +9,7 @@ parent: classes
 
 This class represents data that is stored in the system. It has a relationship with a StorageResource as all data must have someplace to reside. The access attribute is a catch all for how to access the data. It could be a connection string to a data like a database, a filesystem etc.. Specializations of the Data reference class know what to do with the access attribute.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -34,6 +34,212 @@ system path, etc
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | LineageMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | SourceMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | LineageMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | SourceMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | LineageMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | SourceMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | LineageMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | SourceMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | LineageMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | SourceMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | LineageMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | SourceMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | LineageMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | SourceMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | LineageMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | SourceMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | LineageMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | SourceMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | LineageMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | SourceMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | LineageMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | SourceMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | LineageMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | SourceMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | LineageMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | SourceMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | LineageMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | SourceMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | LineageMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | SourceMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | LineageMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | SourceMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | n | DataSource | true | true |  |
+| data | n | DataInstance | false | false |  |
+| data | 1 | DataReservation | false | false |  |
+| data | 1 | LineageMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | SourceMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
 | data | n | DataSource | true | true |  |
 | data | n | DataInstance | false | false |  |
 | data | 1 | DataReservation | false | false |  |

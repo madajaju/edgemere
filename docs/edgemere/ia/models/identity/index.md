@@ -9,7 +9,7 @@ parent: classes
 
 Identity of the entity in the system
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -29,6 +29,92 @@ Identity of the entity in the system
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
+| identity | 1 | DataBluePrint | false | false |  |
+| identity | 1 | DataBluePrintInstance | false | false |  |
 | identity | 1 | DataBluePrint | false | false |  |
 | identity | 1 | DataBluePrintInstance | false | false |  |
 

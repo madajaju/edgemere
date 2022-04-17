@@ -11,7 +11,7 @@ entity ailtire_appname_aml_ws_family #black
 
 
 
-package "amlws" #lightblue {
+package "aml_ws" #lightblue {
     queue childrennet #black [
             <b><color:white>children</color></b>
     ]

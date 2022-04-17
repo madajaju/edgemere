@@ -9,7 +9,7 @@ parent: classes
 
 Description long description
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -20,7 +20,6 @@ Description long description
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| assoc1 | 1 | ModelName | false | false |  |
 
 
 ## Users of the Model

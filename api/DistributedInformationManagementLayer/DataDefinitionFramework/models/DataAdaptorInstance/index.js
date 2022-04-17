@@ -5,15 +5,14 @@ class DataAdaptorInstance {
         description: 'Description ' +
             'long description',
         attributes: {
-            attr1: {
+            name: {
                 type: 'string',
-                description: 'description' +
-                    ' long description'
+                description: 'Name of the DataAdaptorInstance'
             }
         },
         associations: {
-            assoc1: {
-                type: 'ModelName',
+            parent: {
+                type: 'DataAdaptor',
                 cardinality: 1,
                 composition: false,
                 owner: false,

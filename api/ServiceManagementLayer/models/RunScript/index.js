@@ -1,21 +1,18 @@
 class RunScript {
     static definition = {
         name: 'RunScript',
-        description: 'Description ' +
-            'long description',
+        description: 'A RunScript is run when a service changes states. There are pre and post runscripts that can' +
+            ' be run.',
         attributes: {
-            attr1: {
+            name: {
                 type: 'string',
-                description: 'description' +
-                    ' long description'
+                description: 'Name of the runscript',
             }
         },
         associations: {
-            assoc1: {
-                type: 'ModelName',
+            owner: {
+                type: 'ServiceInstance',
                 cardinality: 1,
-                composition: false,
-                owner: false,
             },
         },
         /*

@@ -9,7 +9,7 @@ parent: classes
 
 This is the Device Agent that the Device Manager connects to
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 

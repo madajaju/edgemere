@@ -20,6 +20,17 @@ Web ()-- i
 package "Developer Services" #lightblue {
 
 
+rectangle "Automation Framework" #white {
+}
+
+rectangle "Environment Management" #white {
+}
+
+rectangle "Pipeline Manager" #white {
+}
+
+    "Environment Management" --> "Service Orchestrator"
+    
 }
 
 

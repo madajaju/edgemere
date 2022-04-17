@@ -89,6 +89,1101 @@ Model o--> "1" Service : parent
     
         Service   o--> "1" Model : "stack"
     
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   o--> "1" Model : "stack"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "1" Model : "stack"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "stack"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stack"
+    
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "stacks"
+    
+    rectangle "Service" as Service #lightgreen {
+    }
+    
+        Service   o--> "1" Model : "stack"
+    
     rectangle "Stack" as Stack #lightgreen {
     }
     

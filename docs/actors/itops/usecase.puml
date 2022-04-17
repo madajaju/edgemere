@@ -6,6 +6,12 @@ left to right direction
 Actor "IT Operations" as ITOperations
 
 
+rectangle "Environment Management" as em #lightgreen {
+        usecase "Manage Environment" as ManageEnvironment
+    ITOperations --> ManageEnvironment
+
+}
+
 rectangle "Common Physical Layer" as cpl #lightgray {
         usecase "Manage Data Center" as ManageDataCenter
     ITOperations --> ManageDataCenter
@@ -27,12 +33,6 @@ rectangle "Cloud Broker" as cb #lightgreen {
     ITOperations --> MapAssetstoCloud
     usecase "Map Services to Resources" as MapServicestoResources
     ITOperations --> MapServicestoResources
-
-}
-
-rectangle "Environment Management" as em #lightgreen {
-        usecase "Manage Environment" as ManageEnvironment
-    ITOperations --> ManageEnvironment
 
 }
 

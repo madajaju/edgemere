@@ -4,16 +4,24 @@ title: Manage Infrastructure
 permalink: usecase-ManageInfrastructure
 parent: usecases
 ---
-
 # Manage Infrastructure
 
 Manage Infrastructure is the description
 
-![Activities Diagram](./activities.svg)
+![Activities Diagram](./activities.png)
 
 ## Actors
 
 * [IT Operations](actor-itops)
+
+
+
+
+
+
+
+
+
 
 
 ## Detail Scenarios
@@ -24,12 +32,13 @@ Manage Infrastructure is the description
 * [Manage Infrastructure](#scenario-RemoveDevice)
 * [Manage Infrastructure](#scenario-UpdateDevice)
 
-  
+
+
 ### Scenario Add Device
 
 Add Device is the description
 
-![Scenario AddDevice](./adddevice.svg)
+![Scenario AddDevice](./adddevice.png)
 
 #### Steps
 
@@ -47,11 +56,12 @@ Add Device is the description
 * [IT Operations](actor-itops)
 
 
+
 ### Scenario Manage Aggregated Devices
 
 Manage Aggregated Devices is the description
 
-![Scenario ManageAggregatedDevices](./manageaggregateddevices.svg)
+![Scenario ManageAggregatedDevices](./manageaggregateddevices.png)
 
 #### Steps
 
@@ -71,11 +81,12 @@ Manage Aggregated Devices is the description
 * [IT Operations](actor-itops)
 
 
+
 ### Scenario Manage Data Center
 
 Manage Data Center is the description
 
-![Scenario ManageDataCenter](./managedatacenter.svg)
+![Scenario ManageDataCenter](./managedatacenter.png)
 
 #### Steps
 
@@ -113,11 +124,12 @@ Manage Data Center is the description
 * [IT Operations](actor-itops)
 
 
+
 ### Scenario Remove Device
 
 Remove Device is the description
 
-![Scenario RemoveDevice](./removedevice.svg)
+![Scenario RemoveDevice](./removedevice.png)
 
 #### Steps
 
@@ -127,13 +139,14 @@ Remove Device is the description
 #### Actors
 
 * [IT Operations](actor-itops)
+
 
 
 ### Scenario Update Device
 
 Update Device is the description
 
-![Scenario UpdateDevice](./updatedevice.svg)
+![Scenario UpdateDevice](./updatedevice.png)
 
 #### Steps
 
@@ -143,6 +156,7 @@ Update Device is the description
 #### Actors
 
 * [IT Operations](actor-itops)
+
 
 
 

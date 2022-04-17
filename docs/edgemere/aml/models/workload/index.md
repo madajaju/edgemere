@@ -7,20 +7,20 @@ parent: classes
 
 # Workload
 
-Description long description
+A Workload contains a group of applications that interact based on business rules under specific SLA and QoS
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
-* attr1:string - description long description
+* name:string - Name of the workload
 
 
 ## Associations
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| assoc1 | 1 | ModelName | false | false |  |
+| applications | n | Application | false | false |  |
 
 
 ## Users of the Model
@@ -28,6 +28,137 @@ Description long description
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
 | workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
+| workloads | n | Application | false | false |  |
+| app | 1 | WorkloadInstance | false | false |  |
+| workloads | n | WorkloadTemplate | false | false |  |
 
 
 

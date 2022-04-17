@@ -1,6 +1,6 @@
-import {AScenario, AText, AUsecase} from './index.js';
+import {AText} from './index.js';
 
-export default class AAction {
+export default class AService {
     constructor(config) {
         this.config = config;
     }
@@ -14,7 +14,6 @@ export default class AAction {
         } else if (type === 'Sourced') {
             color = "green";
         }
-        const theta = 3.14 / 2;
         const opacity = node.opacity || 1;
 
         const material = new THREE.MeshPhongMaterial({color: color, transparent: true, opacity: opacity});
@@ -41,7 +40,8 @@ export default class AAction {
         }
         obj.aid = node.id;
         node.box = 50;
-        // node.expandLink = `actor/get?id=${node.id}`;
+        node.expandLink = `service/get?id=${node.id}`;
+        node.expandView = AService.viewDeep3D;
 
         return obj;
     }

@@ -2,22 +2,21 @@
 class DataStrategy {
     static definition = {
         name: 'DataStrategy',
-        description: 'Description ' +
-            'long description',
+        description: 'A DataStrategy contains rules for working with data strategy',
         attributes: {
-            attr1: {
+            name: {
                 type: 'string',
-                description: 'description' +
-                    ' long description'
+                description: 'Name of the data strategy',
             }
         },
         associations: {
-            assoc1: {
+            /*assoc1: {
                 type: 'ModelName',
                 cardinality: 1,
                 composition: false,
                 owner: false,
             },
+             */
         },
         /*
         statenet: {

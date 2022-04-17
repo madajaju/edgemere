@@ -15,7 +15,6 @@ export default class AAction {
             color = "green";
         }
 
-
         const theta = 3.14 / 2;
         const group = new THREE.Group();
         const material = new THREE.MeshLambertMaterial({color: color, opacity: 1});
@@ -50,8 +49,8 @@ export default class AAction {
         }
         group.aid = node.id;
         node.box = 1;
-        // node.expandLink = `actor/get?id=${node.id}`;
-
+        node.expandLink = `statenet/get?id=${node.id}`;
+        node.expandView = AStateNet.viewDeep3D;
         return group;
     }
 
@@ -78,9 +77,9 @@ export default class AAction {
                 for(let ename in state.events) {
                     let tevent = state.events[ename];
                     for(let tstate in tevent) {
-                       data.links.push({target: opts.id+tstate, source: opts.id+sname, value: 0.1, name: ename, arrow: 5, relpos: 1, curve: 0.1 });
-                       data.links.push({source: opts.id+sname, target: `${opts.id}-${ename}`, value: 0.01, color:"green" });
-                       data.links.push({target: opts.id+tstate, source: `${opts.id}-${ename}`, value: 0.01, color:"green"});
+                       data.links.push({target: opts.id+tstate, source: opts.id+sname, width: 3.0, value: 0.01, name: ename, arrow: 5, relpos: 1, curve: 0.1, color: 'green' });
+                       data.links.push({source: opts.id+sname, target: `${opts.id}-${ename}`, width: 3.0, value: 0.0, color:"green" });
+                       data.links.push({target: opts.id+tstate, source: `${opts.id}-${ename}`, width: 3.0, value: 0.0, color:"green"});
                     }
                 }
             }

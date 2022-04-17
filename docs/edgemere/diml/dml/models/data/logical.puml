@@ -60,6 +60,1036 @@ Model *--> "n" SourceMetaData : connection
     
         DataReservation   o--> "1" Model : "data"
     
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "LineageMetaData" as LineageMetaData #lightgreen {
+    }
+    
+        LineageMetaData   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "SourceMetaData" as SourceMetaData #lightgreen {
+    }
+    
+        SourceMetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "LineageMetaData" as LineageMetaData #lightgreen {
+    }
+    
+        LineageMetaData   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "SourceMetaData" as SourceMetaData #lightgreen {
+    }
+    
+        SourceMetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "LineageMetaData" as LineageMetaData #lightgreen {
+    }
+    
+        LineageMetaData   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "SourceMetaData" as SourceMetaData #lightgreen {
+    }
+    
+        SourceMetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "LineageMetaData" as LineageMetaData #lightgreen {
+    }
+    
+        LineageMetaData   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "SourceMetaData" as SourceMetaData #lightgreen {
+    }
+    
+        SourceMetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "LineageMetaData" as LineageMetaData #lightgreen {
+    }
+    
+        LineageMetaData   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "SourceMetaData" as SourceMetaData #lightgreen {
+    }
+    
+        SourceMetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "LineageMetaData" as LineageMetaData #lightgreen {
+    }
+    
+        LineageMetaData   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "SourceMetaData" as SourceMetaData #lightgreen {
+    }
+    
+        SourceMetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "LineageMetaData" as LineageMetaData #lightgreen {
+    }
+    
+        LineageMetaData   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "SourceMetaData" as SourceMetaData #lightgreen {
+    }
+    
+        SourceMetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "LineageMetaData" as LineageMetaData #lightgreen {
+    }
+    
+        LineageMetaData   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "SourceMetaData" as SourceMetaData #lightgreen {
+    }
+    
+        SourceMetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "LineageMetaData" as LineageMetaData #lightgreen {
+    }
+    
+        LineageMetaData   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "SourceMetaData" as SourceMetaData #lightgreen {
+    }
+    
+        SourceMetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "LineageMetaData" as LineageMetaData #lightgreen {
+    }
+    
+        LineageMetaData   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "SourceMetaData" as SourceMetaData #lightgreen {
+    }
+    
+        SourceMetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "LineageMetaData" as LineageMetaData #lightgreen {
+    }
+    
+        LineageMetaData   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "SourceMetaData" as SourceMetaData #lightgreen {
+    }
+    
+        SourceMetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "LineageMetaData" as LineageMetaData #lightgreen {
+    }
+    
+        LineageMetaData   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "SourceMetaData" as SourceMetaData #lightgreen {
+    }
+    
+        SourceMetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "LineageMetaData" as LineageMetaData #lightgreen {
+    }
+    
+        LineageMetaData   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "SourceMetaData" as SourceMetaData #lightgreen {
+    }
+    
+        SourceMetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "LineageMetaData" as LineageMetaData #lightgreen {
+    }
+    
+        LineageMetaData   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "SourceMetaData" as SourceMetaData #lightgreen {
+    }
+    
+        SourceMetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "LineageMetaData" as LineageMetaData #lightgreen {
+    }
+    
+        LineageMetaData   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "SourceMetaData" as SourceMetaData #lightgreen {
+    }
+    
+        SourceMetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "LineageMetaData" as LineageMetaData #lightgreen {
+    }
+    
+        LineageMetaData   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "SourceMetaData" as SourceMetaData #lightgreen {
+    }
+    
+        SourceMetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
+    rectangle "LineageMetaData" as LineageMetaData #lightgreen {
+    }
+    
+        LineageMetaData   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
+    
+    rectangle "SourceMetaData" as SourceMetaData #lightgreen {
+    }
+    
+        SourceMetaData   o--> "1" Model : "data"
+    
+    rectangle "DataSource" as DataSource #lightgreen {
+    }
+    
+        DataSource   *--> "n" Model : "data"
+    
+    rectangle "DataInstance" as DataInstance #lightgreen {
+    }
+    
+        DataInstance   o--> "n" Model : "data"
+    
+    rectangle "DataReservation" as DataReservation #lightgreen {
+    }
+    
+        DataReservation   o--> "1" Model : "data"
+    
     rectangle "LineageMetaData" as LineageMetaData #lightgreen {
     }
     

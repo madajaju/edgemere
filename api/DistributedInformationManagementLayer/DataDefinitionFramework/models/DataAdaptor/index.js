@@ -25,6 +25,14 @@ class DataAdaptor {
                 composition: false,
                 owner: true,
             },
+            instances: {
+                description: 'Instance of a DataAdaptor',
+                type:'DataAdaptorInstance',
+                cardinality: 'n',
+                composition: false,
+                owner: true,
+                via: 'parent'
+            }
         },
         /*
         statenet: {

@@ -21,5 +21,220 @@ Model o--> "1" ResourceInstanceType : parent
     
         ResourceInstanceType   *--> "n" Model : "costs"
     
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "n" Model : "costs"
+    
 
 @enduml

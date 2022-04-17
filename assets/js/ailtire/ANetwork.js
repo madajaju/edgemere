@@ -27,7 +27,7 @@ export default class ANetwork {
         group.add(obj);
 
         let label = AText.view3D({text: node.name, color: "#ffffff", width: 200, size: 20});
-        label.position.set(0, 5, 11);
+        label.position.set(0, -4, 11);
         group.add(label);
 
         group.position.set(node.x, node.y, node.z);
@@ -44,8 +44,8 @@ export default class ANetwork {
         }
         group.aid = node.id;
         node.box = 50;
-        // node.expandLink = `actor/get?id=${node.id}`;
-
+        node.expandLink = `actor/get?id=${node.id}`;
+        node.expandView = ANetwork.viewDeep3D;
         return group;
     }
 

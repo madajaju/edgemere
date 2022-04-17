@@ -1,7 +1,7 @@
 @startuml
 
 
-usecase "Manage Resources" as ManageResources
+usecase "Manage Resources" as ManageResources #yellow
 
 Actor "IT Operations" as ITOperations
 
@@ -20,5 +20,13 @@ ManageResources --> ListResources
 usecase "ReleaseResources" as ReleaseResources #lightgrey
 
 ManageResources --> ReleaseResources
+
+
+
+
+
+
+
+
 
 @enduml

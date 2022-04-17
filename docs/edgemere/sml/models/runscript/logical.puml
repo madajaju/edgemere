@@ -1,19 +1,264 @@
 @startuml
 
 class "RunScript" as Model {
- string attr1
+ string name
 
  
 }
 
-rectangle "ModelName" as ModelName #lightblue {
+rectangle "ServiceInstance" as ServiceInstance #lightblue {
 }
 
-Model o--> "1" ModelName : assoc1
+Model o--> "1" ServiceInstance : owner
 
 
 
 
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   *--> "n" Model : "runScripts"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   *--> "n" Model : "runScripts"
+    
     rectangle "ServiceInstance" as ServiceInstance #lightgreen {
     }
     

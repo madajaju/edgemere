@@ -9,7 +9,7 @@ parent: classes
 
 Data Flow Template is how a Blue Print refrences a Data Flow with late binding of sources and sinks when data sources are added to a blueprint.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -29,6 +29,49 @@ Data Flow Template is how a Blue Print refrences a Data Flow with late binding o
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
+| flows | n | DataBluePrint | false | true |  |
 | flows | n | DataBluePrint | false | true |  |
 
 

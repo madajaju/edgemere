@@ -1,0 +1,10 @@
+@startuml
+
+left to right direction
+
+
+rectangle "Pipeline Manager" #lightblue {
+}
+
+
+@enduml

@@ -23,6 +23,9 @@ package "Security Aspect" #pink {
 rectangle "Policy Engine" #white {
 }
 
+rectangle "Security Profile Manager" #white {
+}
+
 }
 
 

@@ -7,14 +7,16 @@ state "IT Operations" as ITOperations {
     state "Manage Resources" as ITOperationsManageResources {
     }
 }
-state "sdi" as sdi #lightyellow {
-state "resource" as sdiresource #lightyellow {
-state "list" as sdiresourcelist #lightyellow {
+state "edgemere" as edgemere #lightyellow {
+state "sdi" as edgemeresdi #lightyellow {
+state "resource" as edgemeresdiresource #lightyellow {
+state "list" as edgemeresdiresourcelist #lightyellow {
+}
 }
 }
 }
 
-ITOperationsManageResources --> sdiresourcelist
+ITOperationsManageResources --> edgemeresdiresourcelist
 
 
     state "IT Operations" as ITOperations {
@@ -23,12 +25,8 @@ ITOperationsManageResources --> sdiresourcelist
             }
         }
     }
-    state "sdiresource" as sdiresource #lavender {
-state "get" as sdiresourceget #lavender {
-}
-}
-
-    ITOperationsManageResourcesGetResources --> sdiresourceget
+    
+    ITOperationsManageResourcesGetResources --> Null
     
  
     state "IT Operations" as ITOperations {
@@ -37,12 +35,8 @@ state "get" as sdiresourceget #lavender {
             }
         }
     }
-    state "sdiresource" as sdiresource #lavender {
-state "list" as sdiresourcelist #lavender {
-}
-}
-
-    ITOperationsManageResourcesListResources --> sdiresourcelist
+    
+    ITOperationsManageResourcesListResources --> Null
     
  
     state "IT Operations" as ITOperations {
@@ -51,12 +45,8 @@ state "list" as sdiresourcelist #lavender {
             }
         }
     }
-    state "sdiresource" as sdiresource #lavender {
-state "release" as sdiresourcerelease #lavender {
-}
-}
-
-    ITOperationsManageResourcesReleaseResources --> sdiresourcerelease
+    
+    ITOperationsManageResourcesReleaseResources --> Null
     
  
  

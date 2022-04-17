@@ -3,5 +3,5 @@ module.exports = {
     name: 'Data Definition Framework',
     description: 'Data Definition Framework is a package that contains...',
     color: '#ffcc88',
-    depends: [ "Data Management Layer", "Common Data Services"]
+    depends: [ "Data Management Layer", "Common Data Service"]
 };

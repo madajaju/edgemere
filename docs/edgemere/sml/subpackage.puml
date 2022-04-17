@@ -17,6 +17,10 @@ package "Service Management Layer" #lightgreen {
 
 }
 
+package "Environment Management" #lightgreen {
+
+}
+
 package "Data Management Layer" #ffcc88 {
 
 }
@@ -59,9 +63,6 @@ package "Service Management Layer" #lightgreen {
 rectangle "Cloud Broker" #white {
 }
 
-rectangle "Environment Management" #white {
-}
-
 rectangle "Provision Engine" #white {
 }
 
@@ -74,8 +75,6 @@ rectangle "Service Orchestrator" #white {
 rectangle "Service Repository" #white {
 }
 
-    "Environment Management" --> "Service Orchestrator"
-    
     "Provision Engine" --> "Software Defined Infrastructure"
     
     "Service Controller" --> "Provision Engine"

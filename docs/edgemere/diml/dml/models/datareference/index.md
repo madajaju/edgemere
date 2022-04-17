@@ -9,7 +9,7 @@ parent: classes
 
 DataReference is used to abstract data requirements for Applications, Stacks and Services. These references are realized in the Data Orchestrator when it creates Data Instances based on the policies, and environment the ServiceInstance is running.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -36,14 +36,319 @@ DataReference is used to abstract data requirements for Applications, Stacks and
 | dataReference | 1 | DataRequest | false | false |  |
 | data | n | Servicelet | false | true | Data References to the data in the Stacklet |
 | data | n | Stack | false | true | Data for the stack |
-| data | n | StackTemplate | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | Stacklet | false | true | Data References to the data in the Stacklet |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | Stacklet | false | true | Data References to the data in the Stacklet |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | Stacklet | false | true | Data References to the data in the Stacklet |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
+| data | n | Stacklet | false | true | Data References to the data in the Stacklet |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
+| data | n | Application | false | false |  |
+| reference | 1 | DataInstance | false | false |  |
+| dataReference | 1 | DataRequest | false | false |  |
+| data | n | Servicelet | false | true | Data References to the data in the Stacklet |
+| data | n | Stack | false | true | Data for the stack |
+| data | n | StackDefinition | false | true | Data for the stack |
 | data | n | Stacklet | false | true | Data References to the data in the Stacklet |
 | data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
 
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

@@ -9,7 +9,7 @@ parent: classes
 
 This represents network hardware
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 

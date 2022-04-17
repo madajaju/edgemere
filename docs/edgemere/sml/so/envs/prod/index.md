@@ -13,7 +13,7 @@ This subsystem is deployed using micro-services as shown in the diagram below.
 The subsystem also has an CLI, REST and Web Interface exposed through frontend service that routes
 all paths to the appropriate microservices.
 
-![Deployment Diagram](./deployment.svg)
+![Deployment Diagram](./deployment.png)
 
 #### Physical Architecture
 The Service Orchestrator subsystem is physically laid out on a hybrid cloud infrastructure.
@@ -22,7 +22,7 @@ above. Each micro-service has three interfaces exposed Command Line Interface (C
 and a REST interface. This allows for scripting, event programing and connectivity through a common
 REST interface.
 
-![Physical Diagram](./physical.svg)
+![Physical Diagram](./physical.png)
 
 #### Micro-Services
 These are the micro-services for the deployment of the subsystem. The combination of the micro-services help implement

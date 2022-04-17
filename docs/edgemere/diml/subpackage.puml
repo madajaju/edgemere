@@ -46,11 +46,15 @@ rectangle "Data Management Layer" #white {
     
     "Data Definition Framework" --> "Data Management Layer"
     
+    "Data Definition Framework" --> "Common Data Service"
+    
     "Data Management Layer" --> "Software Defined Infrastructure"
     
     "Data Management Layer" --> "Security Aspect"
     
     "Data Management Layer" --> "Service Management Layer"
+    
+    "Data Management Layer" --> "Common Data Service"
     
 }
 

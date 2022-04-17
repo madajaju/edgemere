@@ -9,7 +9,7 @@ parent: classes
 
 Application Instance that is running in the ecosystem
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -22,7 +22,7 @@ Application Instance that is running in the ecosystem
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| assoc1 | 1 | ModelName | false | false |  |
+| app | 1 | Application | false | false |  |
 
 
 ## Users of the Model
@@ -31,11 +31,97 @@ Application Instance that is running in the ecosystem
 | --- | --- | --- | --- | --- | --- |
 | instances | n | Application | true | true |  |
 | app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
+| instances | n | Application | true | true |  |
+| app | 1 | StackInstance | false | false | Application Instance of the stack instance |
 
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

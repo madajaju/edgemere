@@ -1,7 +1,7 @@
 @startuml
 
 
-usecase "Manage AI Models" as ManageAIModels
+usecase "Manage AI Models" as ManageAIModels #yellow
 
 Actor "Data Scientist" as DataScientist
 
@@ -36,5 +36,13 @@ ManageAIModels --> DestroyAIModel
 usecase "UpdateAIModel" as UpdateAIModel #lightgrey
 
 ManageAIModels --> UpdateAIModel
+
+
+
+
+
+
+
+
 
 @enduml

@@ -9,7 +9,7 @@ parent: classes
 
 This represents physical hardware in a device
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -31,6 +31,134 @@ This represents physical hardware in a device
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
 | hardware | n | Device | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | AcceleratorResource | false | false |  |
+| hardware | n | ComputeResource | false | false |  |
+| hardware | n | NetworkResource | false | false |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | StorageResource | false | false |  |
+| hardware | n | Device | false | true |  |
+| hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | AcceleratorResource | false | false |  |
+| hardware | n | ComputeResource | false | false |  |
+| hardware | n | NetworkResource | false | false |  |
+| hardware | n | Resource | false | false |  |
+| hardware | n | StorageResource | false | false |  |
+| hardware | n | Device | false | true |  |
 | hardware | n | AggregatedDevice | false | true |  |
 | hardware | n | AcceleratorResource | false | false |  |
 | hardware | n | ComputeResource | false | false |  |
@@ -41,7 +169,7 @@ This represents physical hardware in a device
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

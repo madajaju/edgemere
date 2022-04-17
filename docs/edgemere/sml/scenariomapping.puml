@@ -7,14 +7,16 @@ state "IT Operations" as ITOperations {
     state "Manage Clouds" as ITOperationsManageClouds {
     }
 }
-state "sml" as sml #lightgreen {
-state "Cloud" as smlCloud #lightgreen {
-state "list" as smlCloudlist #lightgreen {
+state "edgemere" as edgemere #lightgreen {
+state "sml" as edgemeresml #lightgreen {
+state "Cloud" as edgemeresmlCloud #lightgreen {
+state "list" as edgemeresmlCloudlist #lightgreen {
+}
 }
 }
 }
 
-ITOperationsManageClouds --> smlCloudlist
+ITOperationsManageClouds --> edgemeresmlCloudlist
 
 
  
@@ -22,27 +24,31 @@ state "Stack Developer" as StackDeveloper {
     state "Manage Services" as StackDeveloperManageServices {
     }
 }
-state "sml" as sml #lightgreen {
-state "service" as smlservice #lightgreen {
-state "list" as smlservicelist #lightgreen {
+state "edgemere" as edgemere #lightgreen {
+state "sml" as edgemeresml #lightgreen {
+state "service" as edgemeresmlservice #lightgreen {
+state "list" as edgemeresmlservicelist #lightgreen {
+}
 }
 }
 }
 
-StackDeveloperManageServices --> smlservicelist
+StackDeveloperManageServices --> edgemeresmlservicelist
 
 state "Application Developer" as ApplicationDeveloper {
     state "Manage Services" as ApplicationDeveloperManageServices {
     }
 }
-state "sml" as sml #lightgreen {
-state "service" as smlservice #lightgreen {
-state "list" as smlservicelist #lightgreen {
+state "edgemere" as edgemere #lightgreen {
+state "sml" as edgemeresml #lightgreen {
+state "service" as edgemeresmlservice #lightgreen {
+state "list" as edgemeresmlservicelist #lightgreen {
+}
 }
 }
 }
 
-ApplicationDeveloperManageServices --> smlservicelist
+ApplicationDeveloperManageServices --> edgemeresmlservicelist
 
 
  

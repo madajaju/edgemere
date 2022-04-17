@@ -4,6 +4,7 @@ title: Identity Aspect
 permalink: package--edgemere-ia
 parent: edgemere
 ---
+
 # Identity Aspect
 
 Identity Aspect is a package that contains...
@@ -33,16 +34,16 @@ that are elaborated in the use case descriptions.
 
 
 
-![UseCase Diagram](./usecases.svg)
+![UseCase Diagram](./usecases.png)
 
 ## Users
 
-The following are the actors of the Identity Aspect subsystem. This can include people, other subsystems 
-inside the solution and even external subsystems. 
+The following are the actors of the Identity Aspect subsystem. This can include people, other subsystems
+inside the solution and even external subsystems.
 
 
 
-![User Interaction](./userinteraction.svg)
+![User Interaction](./userinteraction.png)
 
 ## Interface
 
@@ -50,7 +51,7 @@ The subsystem has a REST, CLI, WebSocket, and Web interface. Use Cases and Scena
 of the interfaces to perform the work that needs to be completed. The following  diagram shows how
 users interact with the system.
 
-![Scenario Mappings Diagram](./scenariomapping.svg)
+![Scenario Mappings Diagram](./scenariomapping.png)
 
 
 
@@ -59,7 +60,7 @@ users interact with the system.
 The Data Model for the  Identity Aspect subsystem shows how the different objects and classes of object interact
 and their structure.
 
-![Sub Package Diagram](./subpackage.svg)
+![Sub Package Diagram](./subpackage.png)
 
 ### Sub Packages
 
@@ -68,7 +69,7 @@ organize the architecture and make it easier to analyze, understand, design, and
 
 
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ### Classes
 
@@ -76,6 +77,7 @@ The following are the classes in the data model of the Identity Aspect subsystem
 
 * [Group](class-Group)
 * [Identity](class-Identity)
+* [IdentityAttribute](class-IdentityAttribute)
 * [User](class-User)
 
 
@@ -85,7 +87,7 @@ The following are the classes in the data model of the Identity Aspect subsystem
 This subsystem is deployed using micro-services as shown in the diagram below. The 'micro' module is
 used to implement the micro-services in the system. The subsystem also has an CLI, REST and Web Interface
 exposed through a nodejs application. The nodejs application will interface with the micro-services and
-can monitor and drive work-flows through the mesh of micro-services. The deployment of the subsystem is 
+can monitor and drive work-flows through the mesh of micro-services. The deployment of the subsystem is
 dependent on the environment it is deployed. This subsystem has the following environments:
 * [dev](environment--edgemere-ia-dev)
 * [test](environment--edgemere-ia-test)
@@ -97,7 +99,7 @@ dependent on the environment it is deployed. This subsystem has the following en
 
 The Identity Aspect subsystem is physically laid out on a hybrid cloud infrastructure. Each microservice belongs
 to a secure micro-segmented network. All of the micro-services communicate to each other and the main app through a
-REST interface. A Command Line Interface (CLI), REST or Web User interface for the app is how other subsystems or actors 
+REST interface. A Command Line Interface (CLI), REST or Web User interface for the app is how other subsystems or actors
 interact. Requests are forwarded to micro-services through the REST interface of each micro-service. The subsystem has
 the a unique layout based on the environment the physical space. The following are the environments for this
 subsystems.

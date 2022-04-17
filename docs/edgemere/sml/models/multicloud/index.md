@@ -9,7 +9,7 @@ parent: classes
 
 Multi Cloud is an aggregation of cloud tied together with policies that services are deployed.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -28,6 +28,49 @@ Multi Cloud is an aggregation of cloud tied together with policies that services
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
+| clouds | n | Environment | false | false |  |
 | clouds | n | Environment | false | false |  |
 
 

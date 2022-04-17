@@ -5,11 +5,20 @@ permalink: actor-applicationdeveloper
 parent: All Actors
 ---
 
+{#actor-function toLowerCase() { [native code] }}
+
 # Application Developer
 
 The Application Developer work in coordination with DevOps to manage services, applications and workloads through the development pipeline.
 
+The Application Developer work in coordination with [DevOps](/doc/actor/devops) to  
+manage services, applications and workloads through the development pipeline
 
+![UseCase](./UseCases.puml)
+
+![Activity](./Activity.puml)
+
+![Workflow](./Workflow.puml)
 
 ## Use Cases
 
@@ -20,8 +29,8 @@ The Application Developer work in coordination with DevOps to manage services, a
 * [Manage Stacks](usecase-ManageStacks)
 * [Manage Services](usecase-ManageServices)
 
-  
-![Use Case Diagram](./usecase.svg)
+
+![Use Case Diagram](./usecase.png)
 
 ## User Interface
 TBD

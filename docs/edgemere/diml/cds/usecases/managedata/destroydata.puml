@@ -15,11 +15,4 @@ end box
 
 
 
-box "Service Management Layer" #lightgreen
-    boundary sml #white
-end box
-EventBus -\ sml: method()
-sml --/ EventBus: Model.Event2
-
-EventBus --/ cds : method2()
 @enduml

@@ -4,18 +4,26 @@ title: Manage Data
 permalink: usecase-ManageData
 parent: usecases
 ---
-
 # Manage Data
 
 Manage Data is the description
 
-![Activities Diagram](./activities.svg)
+![Activities Diagram](./activities.png)
 
 ## Actors
 
 * [Data Scientist](actor-datascientist)
 * [Data Analyst](actor-analyst)
 * [DataEngineer](actor-dataengineer)
+
+
+
+
+
+
+
+
+
 
 
 ## Detail Scenarios
@@ -25,12 +33,13 @@ Manage Data is the description
 * [Manage Data](#scenario-IngestData)
 * [Manage Data](#scenario-MoveData)
 
-  
+
+
 ### Scenario Destroy Data
 
 Destroy Data is the description
 
-![Scenario DestroyData](./destroydata.svg)
+![Scenario DestroyData](./destroydata.png)
 
 #### Steps
 
@@ -40,13 +49,14 @@ Destroy Data is the description
 #### Actors
 
 * [Actor](actor-actor)
+
 
 
 ### Scenario Egress Data
 
 Egress Data is the description
 
-![Scenario EgressData](./egressdata.svg)
+![Scenario EgressData](./egressdata.png)
 
 #### Steps
 
@@ -56,13 +66,14 @@ Egress Data is the description
 #### Actors
 
 * [Actor](actor-actor)
+
 
 
 ### Scenario Ingest Data
 
 Ingest Data is the description
 
-![Scenario IngestData](./ingestdata.svg)
+![Scenario IngestData](./ingestdata.png)
 
 #### Steps
 
@@ -72,13 +83,14 @@ Ingest Data is the description
 #### Actors
 
 * [Actor](actor-actor)
+
 
 
 ### Scenario Move Data
 
 Move Data is the description
 
-![Scenario MoveData](./movedata.svg)
+![Scenario MoveData](./movedata.png)
 
 #### Steps
 
@@ -88,6 +100,7 @@ Move Data is the description
 #### Actors
 
 * [Actor](actor-actor)
+
 
 
 

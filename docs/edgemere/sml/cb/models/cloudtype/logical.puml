@@ -38,5 +38,220 @@ Model *--> "n" ResourceMap : metricmap
     
         Cloud   o--> "1" Model : "type"
     
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
 
 @enduml

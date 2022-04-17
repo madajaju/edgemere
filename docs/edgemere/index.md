@@ -4,6 +4,7 @@ title: edgemere
 permalink: package--edgemere
 has_children: true
 ---
+
 # edgemere
 
 Edgemere is a conceptual architecture targeted to multi-hybrid cloud and edge computing strategies including data,application, service, and infrastructure management. With the growth of IoT devices management of these elements from edge to data center is important to the success of the solution.
@@ -54,16 +55,16 @@ that are elaborated in the use case descriptions.
 
 
 
-![UseCase Diagram](./usecases.svg)
+![UseCase Diagram](./usecases.png)
 
 ## Users
 
-The following are the actors of the edgemere subsystem. This can include people, other subsystems 
-inside the solution and even external subsystems. 
+The following are the actors of the edgemere subsystem. This can include people, other subsystems
+inside the solution and even external subsystems.
 
 
 
-![User Interaction](./userinteraction.svg)
+![User Interaction](./userinteraction.png)
 
 ## Interface
 
@@ -71,7 +72,7 @@ The subsystem has a REST, CLI, WebSocket, and Web interface. Use Cases and Scena
 of the interfaces to perform the work that needs to be completed. The following  diagram shows how
 users interact with the system.
 
-![Scenario Mappings Diagram](./scenariomapping.svg)
+![Scenario Mappings Diagram](./scenariomapping.png)
 
 
 
@@ -80,7 +81,7 @@ users interact with the system.
 The Data Model for the  edgemere subsystem shows how the different objects and classes of object interact
 and their structure.
 
-![Sub Package Diagram](./subpackage.svg)
+![Sub Package Diagram](./subpackage.png)
 
 ### Sub Packages
 
@@ -96,7 +97,7 @@ organize the architecture and make it easier to analyze, understand, design, and
 * [Software Defined Infrastructure](package--edgemere-sdi)
 
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ### Classes
 
@@ -110,7 +111,7 @@ The following are the classes in the data model of the edgemere subsystem.
 This subsystem is deployed using micro-services as shown in the diagram below. The 'micro' module is
 used to implement the micro-services in the system. The subsystem also has an CLI, REST and Web Interface
 exposed through a nodejs application. The nodejs application will interface with the micro-services and
-can monitor and drive work-flows through the mesh of micro-services. The deployment of the subsystem is 
+can monitor and drive work-flows through the mesh of micro-services. The deployment of the subsystem is
 dependent on the environment it is deployed. This subsystem has the following environments:
 * [local](environment--edgemere-local)
 * [dev](environment--edgemere-dev)
@@ -123,7 +124,7 @@ dependent on the environment it is deployed. This subsystem has the following en
 
 The edgemere subsystem is physically laid out on a hybrid cloud infrastructure. Each microservice belongs
 to a secure micro-segmented network. All of the micro-services communicate to each other and the main app through a
-REST interface. A Command Line Interface (CLI), REST or Web User interface for the app is how other subsystems or actors 
+REST interface. A Command Line Interface (CLI), REST or Web User interface for the app is how other subsystems or actors
 interact. Requests are forwarded to micro-services through the REST interface of each micro-service. The subsystem has
 the a unique layout based on the environment the physical space. The following are the environments for this
 subsystems.

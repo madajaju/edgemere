@@ -1,0 +1,464 @@
+@startuml
+
+class "Artifact" as Model {
+ string name
+
+ 
+}
+
+rectangle "LedgerEntry" as LedgerEntry #lightblue {
+}
+
+Model o--> "1" LedgerEntry : creator
+
+
+rectangle "LedgerEntry" as LedgerEntry #lightblue {
+}
+
+Model o--> "n" LedgerEntry : consumer
+
+
+
+
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "input"
+    
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "n" Model : "output"
+    
+
+@enduml

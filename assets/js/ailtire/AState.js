@@ -111,7 +111,7 @@ export default class AState {
         const material = new THREE.MeshLambertMaterial({color: color, opacity: 1});
         let group = new THREE.Mesh(geometry, material);
 
-        let label = AText.view3D({text:node.name, color:"#ffffff", width: node.width*4, size: node.height/2});
+        let label = AText.view3D({text:node.name, color:"#ffffff", width: node.width * 0.8, size: node.height/2});
         label.position.set(0,0,(depth/2)+1);
         label.applyMatrix4(new THREE.Matrix4().makeScale(1, 1, 1));
         group.add(label);
@@ -130,8 +130,8 @@ export default class AState {
         }
         group.aid = node.id;
         node.box = Math.sqrt(width*width + depth*depth + height*height); //
-        // node.expandLink = `actor/get?id=${node.id}`;
-
+        node.expandLink = `state/get?id=${node.id}`;
+        node.expandView = AState.viewDeep3D;
         return group;
     }
 

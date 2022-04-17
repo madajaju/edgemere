@@ -23,6 +23,9 @@ package "Application Management Layer" #lightblue {
     
         class ApplicationInstance {
         }
+    
+        class Application {
+        }
     }
 
 package "Data Management Layer" #ffcc88 {
@@ -64,6 +67,7 @@ package "Application Management Layer" #lightblue {
         class "Application" {
                  string name
                  string version
+                 ref fn
                     }
                 Application o--> "n" Workload : workloads
                         Application *--> "n" Stack : stacks
@@ -76,31 +80,35 @@ package "Application Management Layer" #lightblue {
                  string status
                  string message
                     }
-                ApplicationInstance o--> "1" ModelName : assoc1
+                ApplicationInstance o--> "1" Application : app
             
     
     class "ApplicationTemplate" {
-                 string attr1
+                 string name
+                 json args
                     }
-                ApplicationTemplate o--> "1" ModelName : assoc1
+                ApplicationTemplate o--> "n" Application : app
             
     
     class "Workload" {
-                 string attr1
+                 string name
                     }
-                Workload o--> "1" ModelName : assoc1
+                Workload o--> "n" Application : applications
             
     
     class "WorkloadInstance" {
-                 string attr1
+                 string name
+                 string status
+                 string message
                     }
-                WorkloadInstance o--> "1" ModelName : assoc1
+                WorkloadInstance o--> "1" Workload : app
             
     
     class "WorkloadTemplate" {
-                 string attr1
+                 string name
+                 json args
                     }
-                WorkloadTemplate o--> "1" ModelName : assoc1
+                WorkloadTemplate o--> "n" Workload : workloads
             
     
 

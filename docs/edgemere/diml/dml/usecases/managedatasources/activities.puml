@@ -1,7 +1,7 @@
 @startuml
 
 
-usecase "Manage Data Sources" as ManageDataSources
+usecase "Manage Data Sources" as ManageDataSources #yellow
 
 Actor "DataEngineer" as DataEngineer
 
@@ -16,5 +16,13 @@ ManageDataSources --> DeregisterDataSource
 usecase "RegisterDataSource" as RegisterDataSource #lightgrey
 
 ManageDataSources --> RegisterDataSource
+
+
+
+
+
+
+
+
 
 @enduml

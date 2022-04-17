@@ -13,6 +13,10 @@ package "Service Management Layer" #lightgreen {
 
 }
 
+package "Common Data Service" #ffcc88 {
+
+}
+
 package "Data Definition Framework" #ffcc88 {
 
 }
@@ -57,6 +61,8 @@ rectangle "Governance Engine" #white {
     "Data Management Layer" --> "Security Aspect"
 
     "Data Management Layer" --> "Service Management Layer"
+
+    "Data Management Layer" --> "Common Data Service"
 
 
 @enduml

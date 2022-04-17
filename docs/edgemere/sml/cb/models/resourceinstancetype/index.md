@@ -9,7 +9,7 @@ parent: classes
 
 This represents a resoure instance type in the different clouds.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -29,6 +29,135 @@ This represents a resoure instance type in the different clouds.
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
+| instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
+| parent | 1 | ResourceCost | false | false |  |
+| value | 1 | ResourceMap | false | false |  |
 | instancetypes | n | CloudType | true | true | This is a list of resource types for the cloud type |
 | parent | 1 | ResourceCost | false | false |  |
 | value | 1 | ResourceMap | false | false |  |

@@ -15,11 +15,4 @@ end box
 
 
 
-box "Data Management Layer" #ffcc88
-    boundary dml #white
-end box
-EventBus -\ dml: method()
-dml --/ EventBus: Model.Event2
-
-EventBus --/ ddf : method2()
 @enduml

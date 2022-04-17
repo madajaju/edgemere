@@ -9,7 +9,7 @@ parent: classes
 
 This is an instance of a service running on resources. The Instance is allocated to resources based on the environment and policies of the Service and the Servicelet. A set of actions can be performed on the instance as defined by the runScripts association. 
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -31,6 +31,191 @@ This is an instance of a service running on resources. The Instance is allocated
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| instances | n | Stacklet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| instances | n | Stacklet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | Resource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| instances | n | Stacklet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | AcceleratorResource | false | false |  |
+| instances | n | ComputeResource | false | false |  |
+| instances | n | NetworkResource | false | false |  |
+| instances | n | Resource | false | false |  |
+| instances | n | StorageResource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
+| instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
+| instances | n | Stacklet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
+| instances | n | AcceleratorResource | false | false |  |
+| instances | n | ComputeResource | false | false |  |
+| instances | n | NetworkResource | false | false |  |
+| instances | n | Resource | false | false |  |
+| instances | n | StorageResource | false | false |  |
+| owner | 1 | RunScript |  |  |  |
 | instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
 | instances | n | Stacklet | false | false | ServiceInstance for the servicelet |
 | services | n | StackInstance | true | true | Instances of the Services running in the Stack |

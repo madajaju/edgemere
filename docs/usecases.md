@@ -6,6 +6,8 @@ has_children: true
 ---
 # UseCases
 
+* [Apply Security Profiles](usecase-ApplySecurityProfiles)
+  * [Deploy Security Profile](usecase-ApplySecurityProfiles#DeploySecurityProfile)
 * [Find Resources](usecase-FindResources)
 * [Manage AI Models](usecase-ManageAIModels)
   * [Create AI Model](usecase-ManageAIModels#CreateAIModel)
@@ -75,6 +77,13 @@ has_children: true
   * [Get Resources](usecase-ManageResources#GetResources)
   * [List Resources](usecase-ManageResources#ListResources)
   * [Release Resources](usecase-ManageResources#ReleaseResources)
+* [Manage Security Profiles](usecase-ManageSecurityProfiles)
+  * [Create Security Profile](usecase-ManageSecurityProfiles#CreateSecurityProfile)
+  * [Disable Security Profile](usecase-ManageSecurityProfiles#DisableSecurityProfile)
+  * [Enable Security Profile](usecase-ManageSecurityProfiles#EnableSecurityProfile)
+  * [Monitor Security Profile](usecase-ManageSecurityProfiles#MonitorSecurityProfile)
+  * [Remove Security Profile](usecase-ManageSecurityProfiles#RemoveSecurityProfile)
+  * [Test Security Profile](usecase-ManageSecurityProfiles#TestSecurityProfile)
 * [Manage Services](usecase-ManageServices)
 * [Manage Stacks](usecase-ManageStacks)
   * [Deploy Stack](usecase-ManageStacks#DeployStack)

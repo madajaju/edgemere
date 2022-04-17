@@ -9,7 +9,7 @@ parent: classes
 
 This represents storage hardware in the common layer
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 

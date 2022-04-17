@@ -9,7 +9,7 @@ parent: classes
 
 This represents compute/CPU hardware
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 

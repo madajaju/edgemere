@@ -1,7 +1,7 @@
 @startuml
 
 
-usecase "Manage Applications" as ManageApplications
+usecase "Manage Applications" as ManageApplications #yellow
 
 Actor "DevOps Engineer" as DevOpsEngineer
 
@@ -32,5 +32,13 @@ ManageApplications --> MonitorApplication
 usecase "UpdateApplication" as UpdateApplication #lightgrey
 
 ManageApplications --> UpdateApplication
+
+
+
+
+
+
+
+
 
 @enduml

@@ -9,7 +9,7 @@ parent: classes
 
 DataSource represents a source of data. This could be a database, filesystem, stream of data etc..  It is an instance of a DataAdaptor. Where the DataAdapator allows for a class of data source. The DataSource takes the values of the DataAdaptor and makes them real for example, a filesystem adaptor needs a host and a root directory in order to know how to connect to it.
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -37,11 +37,312 @@ DataSource represents a source of data. This could be a database, filesystem, st
 | sources | n | DataFlowInstance | false | false |  |
 | source | 1 | DataReservation | false | false |  |
 | source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
+| sources | n | DataAdaptor | false | true | The Data Sources of the Adapator |
+| sources | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataBluePrintInstance | false | false |  |
+| sinks | n | DataFlowInstance | false | false |  |
+| sources | n | DataFlowInstance | false | false |  |
+| source | 1 | DataReservation | false | false |  |
+| source | 1 | Data |  |  | This is the DataSource that owns the data |
 
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

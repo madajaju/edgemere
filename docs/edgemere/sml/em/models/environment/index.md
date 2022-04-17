@@ -9,7 +9,7 @@ parent: classes
 
 An environment represents a group of clouds, and policies that service are deployed. Examples of environments are development, test, production
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -29,13 +29,97 @@ An environment represents a group of clouds, and policies that service are deplo
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
 | env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | Stacklet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | Stacklet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | Stacklet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
+| env | 1 | Stacklet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
+| env | 1 | Servicelet | false | false | Environment for the Servicelet |
 | env | 1 | Stacklet | false | false | Environment for the Servicelet |
 | env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
 
 
 
 ## State Net
-![State Net Diagram](./statenet.svg)
+![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
 | --- | --- | --- |

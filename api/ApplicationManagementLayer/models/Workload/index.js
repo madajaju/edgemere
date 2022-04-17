@@ -2,22 +2,43 @@
 class Workload {
     static definition = {
         name: 'Workload',
-        description: 'Description ' +
-            'long description',
+        description: 'A Workload contains a group of applications that interact based on business rules under' +
+            ' specific SLA and QoS',
         attributes: {
-            attr1: {
+            name: {
                 type: 'string',
-                description: 'description' +
-                    ' long description'
+                description: 'Name of the workload',
             }
         },
         associations: {
-            assoc1: {
-                type: 'ModelName',
-                cardinality: 1,
+            applications: {
+                type: 'Application',
+                cardinality: 'n',
                 composition: false,
                 owner: false,
             },
+            /*
+            businessRules: {
+                type: 'BusinessRule',
+                cardinality: 'n',
+                compisition: false,
+                owner: false
+            },
+             */
+            /*
+            qos: {
+                type: 'BusinessRule',
+                cardinality: 'n',
+                compisition: false,
+                owner: false
+            },
+            sla: {
+                type: 'BusinessRule',
+                cardinality: 'n',
+                compisition: false,
+                owner: false
+            }
+             */
         },
     }
 }

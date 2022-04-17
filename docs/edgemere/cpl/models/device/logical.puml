@@ -47,6 +47,1976 @@ Model o--> "1" AggregatedDevice : parent
     
         AggregatedDevice   *--> "n" Model : "devices"
     
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   *--> "n" Model : "devices"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "n" Model : "devices"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "n" Model : "devices"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "device"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   *--> "n" Model : "devices"
+    
     rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
     }
     

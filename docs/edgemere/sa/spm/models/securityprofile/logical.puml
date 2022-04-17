@@ -1,0 +1,238 @@
+@startuml
+
+class "SecurityProfile" as Model {
+ string name
+
+ 
+}
+
+rectangle "PolicyCollection" as PolicyCollection #lightblue {
+}
+
+Model o--> "1" PolicyCollection : policies
+
+
+
+
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+
+@enduml

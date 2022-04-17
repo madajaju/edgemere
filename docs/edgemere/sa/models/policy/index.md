@@ -9,7 +9,7 @@ parent: classes
 
 policy can be applied to any entity in the system including Applications, Stacks, Resource, Devices, ...
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -27,6 +27,49 @@ policy can be applied to any entity in the system including Applications, Stacks
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
+| policies | n | PolicyCollection | true | true |  |
 | policies | n | PolicyCollection | true | true |  |
 
 

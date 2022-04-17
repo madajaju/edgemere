@@ -48,6 +48,7 @@ class ServiceInstance {
                 unique: 'true',
                 composition: true,
                 owner: true,
+                via: 'owner'
             },
         },
         /*

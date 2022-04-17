@@ -6,12 +6,6 @@ class "AIModel" as Model {
  
 }
 
-rectangle "ModelName" as ModelName #lightblue {
-}
-
-Model o--> "1" ModelName : assoc1
-
-
 
 
 

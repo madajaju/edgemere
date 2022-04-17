@@ -9,7 +9,7 @@ parent: classes
 
 Image of the Service is a container that has all of the context to run a service
 
-![Logical Diagram](./logical.svg)
+![Logical Diagram](./logical.png)
 
 ## Attributes
 
@@ -29,6 +29,99 @@ Image of the Service is a container that has all of the context to run a service
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | StackInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | StackInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | StackInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | StackInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | StackInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
+| image | 1 | ServiceInstance | false | false | Image of the service instance |
+| image | 1 | StackInstance | false | false | Image of the service instance |
+| image | 1 | Deliverable |  |  |  |
 | image | 1 | ServiceInstance | false | false | Image of the service instance |
 | image | 1 | StackInstance | false | false | Image of the service instance |
 

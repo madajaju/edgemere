@@ -15,11 +15,11 @@ package "Telemetry Producer" #lightgray {
       REST --> cpl_tp_container
 
   
-    file "node producer/server.js" as producer_container
+    file "producer" as producer_container
     REST --> producer_container
     socket ---> producer_container
   
-    file "node tester/server.js" as tester_container
+    file "tester" as tester_container
     REST --> tester_container
     socket ---> tester_container
   

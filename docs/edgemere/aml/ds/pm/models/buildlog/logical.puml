@@ -1,0 +1,240 @@
+@startuml
+
+class "BuildLog" as Model {
+ string name
+ string text
+ string file
+
+ 
+}
+
+rectangle "BuildInstance" as BuildInstance #lightblue {
+}
+
+Model o--> "1" BuildInstance : parent
+
+
+
+
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   *--> "n" Model : "logs"
+    
+
+@enduml

@@ -1,0 +1,29 @@
+@startuml
+
+
+package "Security Aspect" #pink {
+
+}
+
+
+package "Security Profile Manager" #pink {
+
+    interface "Security Profile Manager" as i {
+            /edgemere/sa/spm/data/create()
+            /edgemere/sa/spm/data/govern()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Security Profile Manager" #pink {
+
+
+}
+
+
+
+@enduml

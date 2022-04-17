@@ -5,6 +5,10 @@ package "Data Management Layer" #ffcc88 {
 
 }
 
+package "Common Data Service" #ffcc88 {
+
+}
+
 package "Data Definition Framework" #ffcc88 {
 
 }
@@ -55,6 +59,8 @@ rectangle "Data Repository" #white {
 
 
     "Data Definition Framework" --> "Data Management Layer"
+
+    "Data Definition Framework" --> "Common Data Service"
 
 
 @enduml

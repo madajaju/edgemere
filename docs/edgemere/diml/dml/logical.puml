@@ -13,6 +13,9 @@ package "Service Management Layer" #lightgreen {
         }
     }
 
+package "Common Data Service" #ffcc88 {
+    }
+
 package "Data Definition Framework" #ffcc88 {
     
         class DataSource {
@@ -81,10 +84,9 @@ package "Data Management Layer" #ffcc88 {
             
     
     class "DataStrategy" {
-                 string attr1
+                 string name
                     }
-                DataStrategy o--> "1" ModelName : assoc1
-            
+    
     
 
 }
@@ -95,6 +97,8 @@ package "Data Management Layer" #ffcc88 {
     "Data Management Layer" --> "Security Aspect"
 
     "Data Management Layer" --> "Service Management Layer"
+
+    "Data Management Layer" --> "Common Data Service"
 
 
 @enduml

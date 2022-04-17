@@ -1,7 +1,7 @@
 @startuml
 
 
-usecase "Manage Workloads" as ManageWorkloads
+usecase "Manage Workloads" as ManageWorkloads #yellow
 
 Actor "Application Developer" as ApplicationDeveloper
 
@@ -32,5 +32,13 @@ ManageWorkloads --> MonitorWorkload
 usecase "UpdateWorkload" as UpdateWorkload #lightgrey
 
 ManageWorkloads --> UpdateWorkload
+
+
+
+
+
+
+
+
 
 @enduml

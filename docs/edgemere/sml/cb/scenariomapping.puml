@@ -7,16 +7,18 @@ state "IT Operations" as ITOperations {
     state "Find Resources" as ITOperationsFindResources {
     }
 }
-state "sml" as sml #lightgreen {
-state "cb" as smlcb #lightgreen {
-state "resources" as smlcbresources #lightgreen {
-state "find" as smlcbresourcesfind #lightgreen {
+state "edgemere" as edgemere #lightgreen {
+state "sml" as edgemeresml #lightgreen {
+state "cb" as edgemeresmlcb #lightgreen {
+state "resources" as edgemeresmlcbresources #lightgreen {
+state "find" as edgemeresmlcbresourcesfind #lightgreen {
+}
 }
 }
 }
 }
 
-ITOperationsFindResources --> smlcbresourcesfind
+ITOperationsFindResources --> edgemeresmlcbresourcesfind
 
 
  
@@ -24,16 +26,18 @@ state "ITOperations" as ITOperations {
     state "ManageBilling" as ITOperationsManageBilling {
     }
 }
-state "sml" as sml #lightgreen {
-state "cb" as smlcb #lightgreen {
-state "billing" as smlcbbilling #lightgreen {
-state "list" as smlcbbillinglist #lightgreen {
+state "edgemere" as edgemere #lightgreen {
+state "sml" as edgemeresml #lightgreen {
+state "cb" as edgemeresmlcb #lightgreen {
+state "billing" as edgemeresmlcbbilling #lightgreen {
+state "list" as edgemeresmlcbbillinglist #lightgreen {
+}
 }
 }
 }
 }
 
-ITOperationsManageBilling --> smlcbbillinglist
+ITOperationsManageBilling --> edgemeresmlcbbillinglist
 
 
  
@@ -41,16 +45,18 @@ state "ITOperations" as ITOperations {
     state "ManageCostModel" as ITOperationsManageCostModel {
     }
 }
-state "sml" as sml #lightgreen {
-state "cb" as smlcb #lightgreen {
-state "ResourceInstanceType" as smlcbResourceInstanceType #lightgreen {
-state "list" as smlcbResourceInstanceTypelist #lightgreen {
+state "edgemere" as edgemere #lightgreen {
+state "sml" as edgemeresml #lightgreen {
+state "cb" as edgemeresmlcb #lightgreen {
+state "ResourceInstanceType" as edgemeresmlcbResourceInstanceType #lightgreen {
+state "list" as edgemeresmlcbResourceInstanceTypelist #lightgreen {
+}
 }
 }
 }
 }
 
-ITOperationsManageCostModel --> smlcbResourceInstanceTypelist
+ITOperationsManageCostModel --> edgemeresmlcbResourceInstanceTypelist
 
 
  
@@ -58,16 +64,18 @@ state "IT Operations" as ITOperations {
     state "Manage Multi Cloud" as ITOperationsManageMultiCloud {
     }
 }
-state "sml" as sml #lightgreen {
-state "cb" as smlcb #lightgreen {
-state "multicloud" as smlcbmulticloud #lightgreen {
-state "list" as smlcbmulticloudlist #lightgreen {
+state "edgemere" as edgemere #lightgreen {
+state "sml" as edgemeresml #lightgreen {
+state "cb" as edgemeresmlcb #lightgreen {
+state "multicloud" as edgemeresmlcbmulticloud #lightgreen {
+state "list" as edgemeresmlcbmulticloudlist #lightgreen {
+}
 }
 }
 }
 }
 
-ITOperationsManageMultiCloud --> smlcbmulticloudlist
+ITOperationsManageMultiCloud --> edgemeresmlcbmulticloudlist
 
 
     state "IT Operations" as ITOperations {
@@ -76,14 +84,8 @@ ITOperationsManageMultiCloud --> smlcbmulticloudlist
             }
         }
     }
-    state "sml" as sml #lightgreen {
-state "cbmulticloud" as smlcbmulticloud #lightgreen {
-state "addclouds" as smlcbmulticloudaddclouds #lightgreen {
-}
-}
-}
-
-    ITOperationsManageMultiCloudAddCloudtoMultiCloud --> smlcbmulticloudaddclouds
+    
+    ITOperationsManageMultiCloudAddCloudtoMultiCloud --> Null
     
  
     state "IT Operations" as ITOperations {
@@ -92,14 +94,8 @@ state "addclouds" as smlcbmulticloudaddclouds #lightgreen {
             }
         }
     }
-    state "sml" as sml #lightgreen {
-state "cbmulticloud" as smlcbmulticloud #lightgreen {
-state "addpolicies" as smlcbmulticloudaddpolicies #lightgreen {
-}
-}
-}
-
-    ITOperationsManageMultiCloudManagePoliciesforMultiCloud --> smlcbmulticloudaddpolicies
+    
+    ITOperationsManageMultiCloudManagePoliciesforMultiCloud --> Null
     
  
     state "IT Operations" as ITOperations {
@@ -108,14 +104,8 @@ state "addpolicies" as smlcbmulticloudaddpolicies #lightgreen {
             }
         }
     }
-    state "sml" as sml #lightgreen {
-state "cbmulticloud" as smlcbmulticloud #lightgreen {
-state "removepolicies" as smlcbmulticloudremovepolicies #lightgreen {
-}
-}
-}
-
-    ITOperationsManageMultiCloudRemoveCloudfromMultiCloud --> smlcbmulticloudremovepolicies
+    
+    ITOperationsManageMultiCloudRemoveCloudfromMultiCloud --> Null
     
  
  
@@ -123,16 +113,18 @@ state "IT Operations" as ITOperations {
     state "Map Assets to Cloud" as ITOperationsMapAssetstoCloud {
     }
 }
-state "sml" as sml #lightgreen {
-state "cb" as smlcb #lightgreen {
-state "multicloud" as smlcbmulticloud #lightgreen {
-state "mapresources" as smlcbmulticloudmapresources #lightgreen {
+state "edgemere" as edgemere #lightgreen {
+state "sml" as edgemeresml #lightgreen {
+state "cb" as edgemeresmlcb #lightgreen {
+state "multicloud" as edgemeresmlcbmulticloud #lightgreen {
+state "mapresources" as edgemeresmlcbmulticloudmapresources #lightgreen {
+}
 }
 }
 }
 }
 
-ITOperationsMapAssetstoCloud --> smlcbmulticloudmapresources
+ITOperationsMapAssetstoCloud --> edgemeresmlcbmulticloudmapresources
 
 
  
@@ -140,16 +132,18 @@ state "IT Operations" as ITOperations {
     state "Map Services to Resources" as ITOperationsMapServicestoResources {
     }
 }
-state "sml" as sml #lightgreen {
-state "cb" as smlcb #lightgreen {
-state "service" as smlcbservice #lightgreen {
-state "mapresources" as smlcbservicemapresources #lightgreen {
+state "edgemere" as edgemere #lightgreen {
+state "sml" as edgemeresml #lightgreen {
+state "cb" as edgemeresmlcb #lightgreen {
+state "service" as edgemeresmlcbservice #lightgreen {
+state "mapresources" as edgemeresmlcbservicemapresources #lightgreen {
+}
 }
 }
 }
 }
 
-ITOperationsMapServicestoResources --> smlcbservicemapresources
+ITOperationsMapServicestoResources --> edgemeresmlcbservicemapresources
 
 
  

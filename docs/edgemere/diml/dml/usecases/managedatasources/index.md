@@ -4,16 +4,24 @@ title: Manage Data Sources
 permalink: usecase-ManageDataSources
 parent: usecases
 ---
-
 # Manage Data Sources
 
 Manage Data Sources allows the Data Engineer to register data sources to the system.
 
-![Activities Diagram](./activities.svg)
+![Activities Diagram](./activities.png)
 
 ## Actors
 
 * [DataEngineer](actor-dataengineer)
+
+
+
+
+
+
+
+
+
 
 
 ## Detail Scenarios
@@ -21,12 +29,13 @@ Manage Data Sources allows the Data Engineer to register data sources to the sys
 * [Manage Data Sources](#scenario-DeregisterDataSource)
 * [Manage Data Sources](#scenario-RegisterDataSource)
 
-  
+
+
 ### Scenario Deregister Data Source
 
 Deregister Data Source allows the data engineer to remove a data source from the system. All BluePrints and DataFlows will no longer process data generated from the source. All data that has been registered to the Meta-data management system will be marked as unavailable, but the meta-data will continue to reside in the system.
 
-![Scenario DeregisterDataSource](./deregisterdatasource.svg)
+![Scenario DeregisterDataSource](./deregisterdatasource.png)
 
 #### Steps
 
@@ -40,11 +49,12 @@ Deregister Data Source allows the data engineer to remove a data source from the
 * [DataEngineer](actor-dataengineer)
 
 
+
 ### Scenario Register Data Source
 
 Register Data Source to the system. This allows for data sources to be monitored. Data generated at the data source can now be processed by DataBluePrints.
 
-![Scenario RegisterDataSource](./registerdatasource.svg)
+![Scenario RegisterDataSource](./registerdatasource.png)
 
 #### Steps
 
@@ -62,6 +72,7 @@ Register Data Source to the system. This allows for data sources to be monitored
 #### Actors
 
 * [DataEngineer](actor-dataengineer)
+
 
 
 
