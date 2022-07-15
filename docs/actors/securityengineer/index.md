@@ -4,9 +4,6 @@ title: SecurityEngineer
 permalink: actor-securityengineer
 parent: All Actors
 ---
-
-{#actor-securityengineer}
-
 # SecurityEngineer
 
 Long description

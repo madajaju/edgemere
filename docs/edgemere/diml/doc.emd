@@ -25,13 +25,17 @@ not all of them. As more systems are moving outside of the traditional data cent
 architectures fall apart. This is where distributed processing architectures like Data Meshs become important. The
 Edgemere architect is flexible to handle the different modes of data processing.
 
-![Data Approaches](./dataapproaches.png)
+![Data Approaches](./dataaproaches.png)
+
+## Data Mesh
 
 In the Data Mesh (Distributed Data Lake) architecture the ability to move applications close to the data or move the
 data close to the applications. In the mode of data processing data is analyzed in IoT Edge Devices and results are
 pushed to the data center and linked together.
 
-![DataMesh](./datamesh.png)
+![DataMesh](./datameshnew.png)
+
+## Data Exchange
 
 Another mode of operation that has emerged is taking the Data Mesh concept and extending that to different
 classifications or owners of data. This specail case limits the movement of data and who has access to the data. This
@@ -41,6 +45,29 @@ to the application requesting the data. It also gives the ability to run analyti
 
 ![DataExchange](./dataexchange.png)
 
-The DIML architecture allows fore multiple data architectures at the same time. The architecture allows a
-[DataEngineer](actor-dataengineer) to easily build repeatable Blue Prints geared to the different architectures.
+## Data Fabric
+
+Data fabrics are the natural next architecture to emerge as it helps resolve some of the problems with data lake
+architectures caused by centralizing all of the data. Data fabrics process data on the edge where the source generates
+the data. This distributed architecture follows much of the same path that cloud technology did in the early 2000s and
+includes centralized control, orchestration, and management of the data
+
+![DataFabric](./datafabric.png)
+
+## Data Mart
+A data mart is a small data repository for structured data specific to a department. Tailored to the detailed 
+problem statements, they contain copie/s of data from a limited number of sources and typically a smaller data set. Data marts usually limit access to the data and reports to one organization or a small group of users in one organization. Data scientists leverage Data Marts to build complex analytical models, generate timely periodic reports that require highly predictable performance and work with highly sensitive data and resulting reports.
+
+![DataMart](./datamart.png)
+
+## Intelligent Data Streams
+DataStream architectures allow for processing data analytics in the stream of data. Each data stream manipulates the 
+data as data is ingested and egressed to another application, report, or data stream. Data streams allow for data to 
+be used anywhere in the ecosystem, including on the edge devices, in the data center, in the cloud, and even in transit between the different types of infrastructure. Analytics can be performed parallel across multiple devices by joining data streams through their ingress and egress ports.
+
+![DataStreams](./datastream.png)
+
+The DIML architecture allows for multiple data architectures at the same time. The architecture allows a
+[DataEngineer](actor-dataengineer) to easily build repeatable Blueprints geared to the different data architectural 
+approaches. As a result, the same system or solution can utilize any of the data operating models described above.
 

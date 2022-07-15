@@ -33,7 +33,7 @@ very different.
 * [Stack Developer](actor-stackdev) - Motivators include - Deliverying solutions in quick iterations, Very short break,
   fix, deploy cycle
 
-![UseCasesHighLevel](./usecaseshighlevel.png)
+![UseCasesHighLevel](./usecasehighlevel.png)
 
 The SML spaces is full of tools that can be integrated together to deliver the use cases demanded by the actors in this
 space. The tools can be categorized into three major categories:

@@ -5,7 +5,7 @@ const fs = require('fs');
 require('./lib/subcommander');
 let config;
 program
-    .version('0.3.2')
+    .version('0.3.3')
     .command('init', 'Initialize the connection');
 try {
     global.ailtire = { config: require('../.ailtire.js') };

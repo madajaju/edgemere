@@ -4,9 +4,6 @@ title: Data Steward
 permalink: actor-datasteward
 parent: All Actors
 ---
-
-{#actor-datasteward}
-
 # Data Steward
 
 Responsible for the governance of data in their organization. They implement policies established by the CDO.

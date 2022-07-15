@@ -42,9 +42,7 @@ Create Application is the description
 ![Scenario CreateApplication](./CreateApplication.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 
@@ -59,9 +57,7 @@ Deploy Application is the description
 ![Scenario DeployApplication](./DeployApplication.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 
@@ -76,9 +72,7 @@ Destroy Application is the description
 ![Scenario DestroyApplication](./DestroyApplication.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 
@@ -93,9 +87,7 @@ Monitor Application is the description
 ![Scenario MonitorApplication](./MonitorApplication.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 
@@ -111,9 +103,7 @@ Update Application is the description
 ![Scenario UpdateApplication](./UpdateApplication.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 

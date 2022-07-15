@@ -4,9 +4,6 @@ title: Application Developer
 permalink: actor-applicationdeveloper
 parent: All Actors
 ---
-
-{#actor-applicationdeveloper}
-
 # Application Developer
 
 The Application Developer work in coordination with DevOps to manage services, applications and workloads through the development pipeline.
@@ -14,11 +11,18 @@ The Application Developer work in coordination with DevOps to manage services, a
 The Application Developer work in coordination with [DevOps](/doc/actor/devops) to  
 manage services, applications and workloads through the development pipeline
 
-![UseCase](./UseCases.png)
+The following arethe usecases for the Application Developer and how they interaction with other subsytstems.
 
-![Activity](./Activity.png)
+![UseCase](./usecases.png)
 
-![Workflow](./Workflow.png)
+This diagram shows the activities of the Application Developer and how it interactions with Edgemeree and its 
+subsystems.
+
+![Activity](./activity.png)
+
+This is a typical workflow of an application developer in edgemere.
+
+![Workflow](./workflow.png)
 
 
 ## Use Cases

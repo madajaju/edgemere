@@ -38,11 +38,8 @@ Deregister Data Source allows the data engineer to remove a data source from the
 ![Scenario DeregisterDataSource](./DeregisterDataSource.png)
 
 #### Steps
-
 1. [dataadaptor create --name filesystem1 --file ./templates/dataadaptor-filesystem.yaml](#action-dataadaptor-create)
-
 1. [datasource create --name myDataVolume1 --adaptor filesystem1 --file ./templates/datasource.yaml](#action-datasource-create)
-
 
 #### Actors
 
@@ -57,17 +54,11 @@ Register Data Source to the system. This allows for data sources to be monitored
 ![Scenario RegisterDataSource](./RegisterDataSource.png)
 
 #### Steps
-
 1. [dataadaptor create --name filesystem1 --file ./templates/dataadaptor-filesystem.yaml](#action-dataadaptor-create)
-
 1. [datasource create --name myDataVolume1 --adaptor filesystem1 --file ./templates/datasource.yaml](#action-datasource-create)
-
 1. [datasource create --name myDataVolume2 --adaptor filesystem1 --parameters host=localhost, filesystem=/tmp/user2](#action-datasource-create)
-
 1. [datasource create --name myDataVolume3 --adaptor filesystem1 --parameters host=localhost, filesystem=/tmp/user3](#action-datasource-create)
-
 1. [datasource create --name myDataVolume4 --adaptor filesystem1 --parameters host=localhost, filesystem=/tmp/user4](#action-datasource-create)
-
 
 #### Actors
 

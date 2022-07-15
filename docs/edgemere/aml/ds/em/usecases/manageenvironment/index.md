@@ -43,9 +43,7 @@ IT Opererations create environments and assigns a Multi Cloud to the Environment
 ![Scenario CreateEnvironment](./CreateEnvironment.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 
@@ -60,9 +58,7 @@ Delete Environment allows IT Operations to delete an environment and suspend all
 ![Scenario DeleteEnvironment](./DeleteEnvironment.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 
@@ -77,9 +73,7 @@ IT Operations disables an environment so services are suspended and cannot launc
 ![Scenario DisableEnvironment](./DisableEnvironment.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 
@@ -94,9 +88,7 @@ IT Operations has the ability to enable an environment to manage services
 ![Scenario EnableEnvironment](./EnableEnvironment.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 
@@ -111,9 +103,7 @@ IT Operations adds and removes policies from the environment
 ![Scenario ManagePoliciesinEnvironment](./ManagePoliciesinEnvironment.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 
@@ -128,9 +118,7 @@ IT Operations updates attributes of the environment
 ![Scenario UpdateEnvironment](./UpdateEnvironment.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 

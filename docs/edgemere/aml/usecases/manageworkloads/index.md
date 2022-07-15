@@ -42,9 +42,7 @@ Create Workload is the description
 ![Scenario CreateWorkload](./CreateWorkload.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 
@@ -59,9 +57,7 @@ Deploy Workload is the description
 ![Scenario DeployWorkload](./DeployWorkload.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 
@@ -77,9 +73,7 @@ Destroy Workload is the description
 ![Scenario DestroyWorkload](./DestroyWorkload.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 
@@ -94,9 +88,7 @@ Monitor Workload is the description
 ![Scenario MonitorWorkload](./MonitorWorkload.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 
@@ -112,9 +104,7 @@ Update Workload is the description
 ![Scenario UpdateWorkload](./UpdateWorkload.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 

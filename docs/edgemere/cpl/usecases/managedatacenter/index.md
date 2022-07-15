@@ -41,35 +41,20 @@ IT Operator creates data centers and allows them to add devices and aggregated d
 ![Scenario CreateDataCenter](./CreateDataCenter.png)
 
 #### Steps
-
 1. [device create --name host1 --file ./templates/device.yaml](#action-device-create)
-
 1. [device create --name host2 --file ./templates/device.yaml](#action-device-create)
-
 1. [device create --name host3 --file ./templates/device.yaml](#action-device-create)
-
 1. [device create --name host4 --file ./templates/device.yaml](#action-device-create)
-
 1. [device create --name host5 --file ./templates/device.yaml](#action-device-create)
-
 1. [aggregateddevice create --name ad1](#action-aggregateddevice-create)
-
 1. [aggregateddevice create --name ad2](#action-aggregateddevice-create)
-
 1. [aggregateddevice adddevices --name ad1 --items host1,host2](#action-aggregateddevice-adddevices)
-
 1. [aggregateddevice adddevices --name ad2 --items host3,host4](#action-aggregateddevice-adddevices)
-
 1. [datacenter create --name dc1](#action-datacenter-create)
-
 1. [datacenter adddevices --name dc1 --items host1,host2](#action-datacenter-adddevices)
-
 1. [datacenter adddevices --name dc1 --items ad2](#action-datacenter-adddevices)
-
 1. [datacenter disable --name dc1](#action-datacenter-disable)
-
 1. [datacenter enable --name dc1](#action-datacenter-enable)
-
 
 #### Actors
 
@@ -84,17 +69,11 @@ IT Operations can disable a data center that will disable all of the devices in 
 ![Scenario DisableDataCenter](./DisableDataCenter.png)
 
 #### Steps
-
 1. [device create --name host1 --file ./templates/device.yaml](#action-device-create)
-
 1. [device create --name host2 --file ./templates/device.yaml](#action-device-create)
-
 1. [datacenter create --name dc1](#action-datacenter-create)
-
 1. [datacenter adddevices --name dc1 --items host1,host2](#action-datacenter-adddevices)
-
 1. [datacenter disable --name dc1](#action-datacenter-disable)
-
 
 #### Actors
 
@@ -109,19 +88,12 @@ IT Operations can enable a data center that has been disabled
 ![Scenario EnableDataCenter](./EnableDataCenter.png)
 
 #### Steps
-
 1. [device create --name host1 --file ./templates/device.yaml](#action-device-create)
-
 1. [device create --name host2 --file ./templates/device.yaml](#action-device-create)
-
 1. [datacenter create --name dc1](#action-datacenter-create)
-
 1. [datacenter adddevices --name dc1 --items host1,host2](#action-datacenter-adddevices)
-
 1. [datacenter disable --name dc1](#action-datacenter-disable)
-
 1. [datacenter enable --name dc1](#action-datacenter-enable)
-
 
 #### Actors
 
@@ -136,29 +108,17 @@ IT Operations can remove a Data Center and all of its devices and aggregated dev
 ![Scenario RemoveDataCenter](./RemoveDataCenter.png)
 
 #### Steps
-
 1. [device create --name host1 --file ./templates/device.yaml](#action-device-create)
-
 1. [device create --name host2 --file ./templates/device.yaml](#action-device-create)
-
 1. [device create --name host3 --file ./templates/device.yaml](#action-device-create)
-
 1. [device create --name host4 --file ./templates/device.yaml](#action-device-create)
-
 1. [device create --name host5 --file ./templates/device.yaml](#action-device-create)
-
 1. [aggregateddevice create --name ad1](#action-aggregateddevice-create)
-
 1. [aggregateddevice adddevices --name ad2 --items host3,host4](#action-aggregateddevice-adddevices)
-
 1. [datacenter create --name dc1](#action-datacenter-create)
-
 1. [datacenter adddevices --name dc1 --items host1,host2](#action-datacenter-adddevices)
-
 1. [datacenter adddevices --name dc1 --items ad1](#action-datacenter-adddevices)
-
 1. [datacenter destroy --name dc1](#action-datacenter-destroy)
-
 
 #### Actors
 
@@ -173,27 +133,16 @@ IT Operations updates data center characteristics
 ![Scenario UpdateDataCenter](./UpdateDataCenter.png)
 
 #### Steps
-
 1. [device create --name host1 --file ./templates/device.yaml](#action-device-create)
-
 1. [device create --name host2 --file ./templates/device.yaml](#action-device-create)
-
 1. [device create --name host3 --file ./templates/device.yaml](#action-device-create)
-
 1. [device create --name host4 --file ./templates/device.yaml](#action-device-create)
-
 1. [device create --name host5 --file ./templates/device.yaml](#action-device-create)
-
 1. [aggregateddevice create --name ad1](#action-aggregateddevice-create)
-
 1. [aggregateddevice adddevices --name ad2 --items host3,host4](#action-aggregateddevice-adddevices)
-
 1. [datacenter create --name dc1](#action-datacenter-create)
-
 1. [datacenter adddevices --name dc1 --items host1,host2](#action-datacenter-adddevices)
-
 1. [datacenter adddevices --name dc1 --items ad1](#action-datacenter-adddevices)
-
 
 #### Actors
 

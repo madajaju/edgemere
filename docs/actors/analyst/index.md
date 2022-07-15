@@ -4,9 +4,6 @@ title: Data Analyst
 permalink: actor-analyst
 parent: All Actors
 ---
-
-{#actor-analyst}
-
 # Data Analyst
 
 Uses Data solutions produced by the Data Scientist and Data Engineer to provide business value to the organization.
