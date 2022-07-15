@@ -25,102 +25,21 @@ A reservation fullfils the request to the system for resources. When a request f
 | cloud | 1 | Cloud | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
 | reservations | n | Cloud | false | true |  |
 | reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
-| reservations | n | Cloud | false | true |  |
-| reservations | n | Request | false | true |  |
 
 
 
 ## State Net
+The Reservation has a state net corresponding to instances of the class. Each state transistion will emit an 
+event that can be caught with a websocket client. The name of the event is the name of the state in all lower case.
+The following diagram is the state net for this class.
+
 ![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
@@ -145,43 +64,52 @@ A reservation fullfils the request to the system for resources. When a request f
     
 ### Action reservation confirm
 
-* REST - reservation/confirm
-* bin - reservation confirm
-* js - reservation.confirm
 
+
+* REST - reservation/confirm?
+* bin - reservation confirm 
+* js - reservation.confirm({  })
+
+#### Description
 Confirm the Reservation
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action reservation create
 
-* REST - reservation/create
-* bin - reservation create
-* js - reservation.create
 
+
+* REST - reservation/create?
+* bin - reservation create 
+* js - reservation.create({  })
+
+#### Description
 Create the Reservation
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action reservation free
 
-* REST - reservation/free
-* bin - reservation free
-* js - reservation.free
 
+
+* REST - reservation/free?
+* bin - reservation free 
+* js - reservation.free({  })
+
+#### Description
 Confirm the Reservation
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 

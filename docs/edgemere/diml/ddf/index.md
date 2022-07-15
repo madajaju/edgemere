@@ -172,7 +172,43 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| dataadaptor.create |  When an object of type DataAdaptor is created. | DataAdaptor
+| dataadaptor.destroy |  When an object of type DataAdaptor is destroyed. | DataAdaptor
+| dataadaptor.updated |  When an object of type DataAdaptor has an attribute or association updated. | DataAdaptor
+| dataadaptorinstance.create |  When an object of type DataAdaptorInstance is created. | DataAdaptorInstance
+| dataadaptorinstance.destroy |  When an object of type DataAdaptorInstance is destroyed. | DataAdaptorInstance
+| dataadaptorinstance.updated |  When an object of type DataAdaptorInstance has an attribute or association updated. | DataAdaptorInstance
+| dataadaptortemplate.create |  When an object of type DataAdaptorTemplate is created. | DataAdaptorTemplate
+| dataadaptortemplate.destroy |  When an object of type DataAdaptorTemplate is destroyed. | DataAdaptorTemplate
+| dataadaptortemplate.updated |  When an object of type DataAdaptorTemplate has an attribute or association updated. | DataAdaptorTemplate
+| datablueprint.create |  When an object of type DataBluePrint is created. | DataBluePrint
+| datablueprint.destroy |  When an object of type DataBluePrint is destroyed. | DataBluePrint
+| datablueprint.updated |  When an object of type DataBluePrint has an attribute or association updated. | DataBluePrint
+| datablueprintinstance.create |  When an object of type DataBluePrintInstance is created. | DataBluePrintInstance
+| datablueprintinstance.destroy |  When an object of type DataBluePrintInstance is destroyed. | DataBluePrintInstance
+| datablueprintinstance.updated |  When an object of type DataBluePrintInstance has an attribute or association updated. | DataBluePrintInstance
+| dataflow.create |  When an object of type DataFlow is created. | DataFlow
+| dataflow.destroy |  When an object of type DataFlow is destroyed. | DataFlow
+| dataflow.updated |  When an object of type DataFlow has an attribute or association updated. | DataFlow
+| dataflowinstance.create |  When an object of type DataFlowInstance is created. | DataFlowInstance
+| dataflowinstance.destroy |  When an object of type DataFlowInstance is destroyed. | DataFlowInstance
+| dataflowinstance.updated |  When an object of type DataFlowInstance has an attribute or association updated. | DataFlowInstance
+| dataflowtemplate.create |  When an object of type DataFlowTemplate is created. | DataFlowTemplate
+| dataflowtemplate.destroy |  When an object of type DataFlowTemplate is destroyed. | DataFlowTemplate
+| dataflowtemplate.updated |  When an object of type DataFlowTemplate has an attribute or association updated. | DataFlowTemplate
+| datapipeline.create |  When an object of type DataPipeline is created. | DataPipeline
+| datapipeline.destroy |  When an object of type DataPipeline is destroyed. | DataPipeline
+| datapipeline.updated |  When an object of type DataPipeline has an attribute or association updated. | DataPipeline
+| dataprocedure.create |  When an object of type DataProcedure is created. | DataProcedure
+| dataprocedure.destroy |  When an object of type DataProcedure is destroyed. | DataProcedure
+| dataprocedure.updated |  When an object of type DataProcedure has an attribute or association updated. | DataProcedure
+| datasource.create |  When an object of type DataSource is created. | DataSource
+| datasource.destroy |  When an object of type DataSource is destroyed. | DataSource
+| datasource.updated |  When an object of type DataSource has an attribute or association updated. | DataSource
+
+
 
 ## Interface Details
 The Data Definition Framework subsystem has a well defined interface. This interface can be accessed using a
@@ -181,11 +217,16 @@ subsystems and actors can access the system.
 
 ### Action  edgemere diml ddf data create
 
-* REST - /edgemere/diml/ddf/data/create
-* bin -  edgemere diml ddf data create
-* js - .edgemere.diml.ddf.data.create
 
+
+* REST - /edgemere/diml/ddf/data/create?attr1=string
+* bin -  edgemere diml ddf data create --attr1 string
+* js - .edgemere.diml.ddf.data.create({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -195,11 +236,16 @@ Description of the action
 
 ### Action  edgemere diml ddf data govern
 
-* REST - /edgemere/diml/ddf/data/govern
-* bin -  edgemere diml ddf data govern
-* js - .edgemere.diml.ddf.data.govern
 
+
+* REST - /edgemere/diml/ddf/data/govern?attr1=string
+* bin -  edgemere diml ddf data govern --attr1 string
+* js - .edgemere.diml.ddf.data.govern({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -209,11 +255,16 @@ Description of the action
 
 ### Action  edgemere diml ddf data source name
 
-* REST - /edgemere/diml/ddf/data/source/name
-* bin -  edgemere diml ddf data source name
-* js - .edgemere.diml.ddf.data.source.name
 
+
+* REST - /edgemere/diml/ddf/data/source/name?attr1=string
+* bin -  edgemere diml ddf data source name --attr1 string
+* js - .edgemere.diml.ddf.data.source.name({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -223,11 +274,16 @@ Description of the action
 
 ### Action  edgemere diml ddf datablueprint deploy
 
-* REST - /edgemere/diml/ddf/datablueprint/deploy
-* bin -  edgemere diml ddf datablueprint deploy
-* js - .edgemere.diml.ddf.datablueprint.deploy
 
+
+* REST - /edgemere/diml/ddf/datablueprint/deploy?name=string&amp;blueprint=string&amp;file=YAML&amp;sources=string
+* bin -  edgemere diml ddf datablueprint deploy --name string --blueprint string --file YAML --sources string
+* js - .edgemere.diml.ddf.datablueprint.deploy({ name:string,blueprint:string,file:YAML,sources:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -240,11 +296,16 @@ Description of the action
 
 ### Action  edgemere diml ddf datablueprint list
 
-* REST - /edgemere/diml/ddf/datablueprint/list
-* bin -  edgemere diml ddf datablueprint list
-* js - .edgemere.diml.ddf.datablueprint.list
 
+
+* REST - /edgemere/diml/ddf/datablueprint/list?attr1=string
+* bin -  edgemere diml ddf datablueprint list --attr1 string
+* js - .edgemere.diml.ddf.datablueprint.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -254,11 +315,16 @@ Description of the action
 
 ### Action  edgemere diml ddf datacatalog list
 
-* REST - /edgemere/diml/ddf/datacatalog/list
-* bin -  edgemere diml ddf datacatalog list
-* js - .edgemere.diml.ddf.datacatalog.list
 
+
+* REST - /edgemere/diml/ddf/datacatalog/list?attr1=string
+* bin -  edgemere diml ddf datacatalog list --attr1 string
+* js - .edgemere.diml.ddf.datacatalog.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -268,11 +334,16 @@ Description of the action
 
 ### Action  edgemere diml ddf datadaptor list
 
-* REST - /edgemere/diml/ddf/datadaptor/list
-* bin -  edgemere diml ddf datadaptor list
-* js - .edgemere.diml.ddf.datadaptor.list
 
+
+* REST - /edgemere/diml/ddf/datadaptor/list?attr1=string
+* bin -  edgemere diml ddf datadaptor list --attr1 string
+* js - .edgemere.diml.ddf.datadaptor.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -282,11 +353,16 @@ Description of the action
 
 ### Action  edgemere diml ddf datapipeline list
 
-* REST - /edgemere/diml/ddf/datapipeline/list
-* bin -  edgemere diml ddf datapipeline list
-* js - .edgemere.diml.ddf.datapipeline.list
 
+
+* REST - /edgemere/diml/ddf/datapipeline/list?attr1=string
+* bin -  edgemere diml ddf datapipeline list --attr1 string
+* js - .edgemere.diml.ddf.datapipeline.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -296,11 +372,16 @@ Description of the action
 
 ### Action  edgemere diml ddf dataprocedure list
 
-* REST - /edgemere/diml/ddf/dataprocedure/list
-* bin -  edgemere diml ddf dataprocedure list
-* js - .edgemere.diml.ddf.dataprocedure.list
 
+
+* REST - /edgemere/diml/ddf/dataprocedure/list?attr1=string
+* bin -  edgemere diml ddf dataprocedure list --attr1 string
+* js - .edgemere.diml.ddf.dataprocedure.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -310,11 +391,16 @@ Description of the action
 
 ### Action  edgemere diml ddf datasource simulate
 
-* REST - /edgemere/diml/ddf/datasource/simulate
-* bin -  edgemere diml ddf datasource simulate
-* js - .edgemere.diml.ddf.datasource.simulate
 
+
+* REST - /edgemere/diml/ddf/datasource/simulate?name=string&amp;file=YAML
+* bin -  edgemere diml ddf datasource simulate --name string --file YAML
+* js - .edgemere.diml.ddf.datasource.simulate({ name:string,file:YAML })
+
+#### Description
 Simulate data in the data source
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -325,11 +411,16 @@ Simulate data in the data source
 
 ### Action  edgemere diml ddf metadata list
 
-* REST - /edgemere/diml/ddf/metadata/list
-* bin -  edgemere diml ddf metadata list
-* js - .edgemere.diml.ddf.metadata.list
 
+
+* REST - /edgemere/diml/ddf/metadata/list?attr1=string
+* bin -  edgemere diml ddf metadata list --attr1 string
+* js - .edgemere.diml.ddf.metadata.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

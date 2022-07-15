@@ -145,11 +145,35 @@ The Data Orchestrator subsystem provides the following activities and flows that
 cases and scenarios of the subsystem.
 
 
+### Messages Handled
+
+The Data Orchestrator subsystem is an event driven architecture and handle several events. The following
+events are handled by this subsystem. Please note that this subsystem is not the only subsystem that handles
+these events.
+
+| Message | Action | Description |
+| --- | --- | --- |
+| datareference.provisioning | /diml/dml/do/datainstance/create |  |
+| datarequest.needed | /diml/dml/do/reserve |  |
+| datarequest.selected | /diml/dml/do/evaluate |  |
+
 
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| datainstance.create |  When an object of type DataInstance is created. | DataInstance
+| datainstance.destroy |  When an object of type DataInstance is destroyed. | DataInstance
+| datainstance.updated |  When an object of type DataInstance has an attribute or association updated. | DataInstance
+| datarequest.create |  When an object of type DataRequest is created. | DataRequest
+| datarequest.destroy |  When an object of type DataRequest is destroyed. | DataRequest
+| datarequest.updated |  When an object of type DataRequest has an attribute or association updated. | DataRequest
+| datareservation.create |  When an object of type DataReservation is created. | DataReservation
+| datareservation.destroy |  When an object of type DataReservation is destroyed. | DataReservation
+| datareservation.updated |  When an object of type DataReservation has an attribute or association updated. | DataReservation
+
+
 
 ## Interface Details
 The Data Orchestrator subsystem has a well defined interface. This interface can be accessed using a
@@ -158,11 +182,16 @@ subsystems and actors can access the system.
 
 ### Action  edgemere diml dml do evaluate
 
-* REST - /edgemere/diml/dml/do/evaluate
-* bin -  edgemere diml dml do evaluate
-* js - .edgemere.diml.dml.do.evaluate
 
+
+* REST - /edgemere/diml/dml/do/evaluate?request=ref
+* bin -  edgemere diml dml do evaluate --request ref
+* js - .edgemere.diml.dml.do.evaluate({ request:ref })
+
+#### Description
 Reserve a Data Instances from a Data Request
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -172,11 +201,16 @@ Reserve a Data Instances from a Data Request
 
 ### Action  edgemere diml dml do reserve
 
-* REST - /edgemere/diml/dml/do/reserve
-* bin -  edgemere diml dml do reserve
-* js - .edgemere.diml.dml.do.reserve
 
+
+* REST - /edgemere/diml/dml/do/reserve?request=ref
+* bin -  edgemere diml dml do reserve --request ref
+* js - .edgemere.diml.dml.do.reserve({ request:ref })
+
+#### Description
 Reserve a Data Instances from a Data Request
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -186,11 +220,16 @@ Reserve a Data Instances from a Data Request
 
 ### Action  edgemere diml dml do datainstance create
 
-* REST - /edgemere/diml/dml/do/datainstance/create
-* bin -  edgemere diml dml do datainstance create
-* js - .edgemere.diml.dml.do.datainstance.create
 
+
+* REST - /edgemere/diml/dml/do/datainstance/create?dataref=json
+* bin -  edgemere diml dml do datainstance create --dataref json
+* js - .edgemere.diml.dml.do.datainstance.create({ dataref:json })
+
+#### Description
 Create a Data Instance from a Data Reference
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -200,11 +239,16 @@ Create a Data Instance from a Data Reference
 
 ### Action  edgemere diml dml do datainstance destroy
 
-* REST - /edgemere/diml/dml/do/datainstance/destroy
-* bin -  edgemere diml dml do datainstance destroy
-* js - .edgemere.diml.dml.do.datainstance.destroy
 
+
+* REST - /edgemere/diml/dml/do/datainstance/destroy?attr1=string
+* bin -  edgemere diml dml do datainstance destroy --attr1 string
+* js - .edgemere.diml.dml.do.datainstance.destroy({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -214,11 +258,16 @@ Description of the action
 
 ### Action  edgemere diml dml do datainstance find
 
-* REST - /edgemere/diml/dml/do/datainstance/find
-* bin -  edgemere diml dml do datainstance find
-* js - .edgemere.diml.dml.do.datainstance.find
 
+
+* REST - /edgemere/diml/dml/do/datainstance/find?attr1=string
+* bin -  edgemere diml dml do datainstance find --attr1 string
+* js - .edgemere.diml.dml.do.datainstance.find({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -228,11 +277,16 @@ Description of the action
 
 ### Action  edgemere diml dml do datainstance list
 
-* REST - /edgemere/diml/dml/do/datainstance/list
-* bin -  edgemere diml dml do datainstance list
-* js - .edgemere.diml.dml.do.datainstance.list
 
+
+* REST - /edgemere/diml/dml/do/datainstance/list?attr1=string
+* bin -  edgemere diml dml do datainstance list --attr1 string
+* js - .edgemere.diml.dml.do.datainstance.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

@@ -26,10 +26,6 @@ This represents compute/CPU hardware
 | resources | n | Resource | false | false |  |
 
 
-## Users of the Model
-
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
 
 
 
@@ -52,11 +48,16 @@ This represents compute/CPU hardware
     
 ### Action computehardware addStats
 
-* REST - computehardware/addStats
-* bin - computehardware addStats
-* js - computehardware.addStats
 
+
+* REST - computehardware/addStats?stats=json
+* bin - computehardware addStats --stats json
+* js - computehardware.addStats({ stats:json })
+
+#### Description
 Add Stats to the Hardware
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -67,11 +68,16 @@ Add Stats to the Hardware
 
 ### Action computehardware create
 
-* REST - computehardware/create
-* bin - computehardware create
-* js - computehardware.create
 
+
+* REST - computehardware/create?name=string&amp;capabilities=json
+* bin - computehardware create --name string --capabilities json
+* js - computehardware.create({ name:string,capabilities:json })
+
+#### Description
 Create Hardware
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -83,39 +89,50 @@ Create Hardware
 
 ### Action computehardware disable
 
-* REST - computehardware/disable
-* bin - computehardware disable
-* js - computehardware.disable
 
+
+* REST - computehardware/disable?
+* bin - computehardware disable 
+* js - computehardware.disable({  })
+
+#### Description
 Disable Device and its hardware
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action computehardware enable
 
-* REST - computehardware/enable
-* bin - computehardware enable
-* js - computehardware.enable
 
+
+* REST - computehardware/enable?
+* bin - computehardware enable 
+* js - computehardware.enable({  })
+
+#### Description
 Enable Device to be used.
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action computehardware factory
 
-* REST - computehardware/factory
-* bin - computehardware factory
-* js - computehardware.factory
 
+
+* REST - computehardware/factory?name=string&amp;type=string&amp;capabilities=json
+* bin - computehardware factory --name string --type string --capabilities json
+* js - computehardware.factory({ name:string,type:string,capabilities:json })
+
+#### Description
 Create Hardware based on properties
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

@@ -27,7 +27,7 @@ package "Telemetry Aggregator" #lightgray {
     cpl_ta_container --> cpl_taimage
 
   
-      artifact cpl_ta_web
+      artifact "cpl_ta_web" as cpl_ta_web
       web_container --> cpl_ta_web
     
   }

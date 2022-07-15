@@ -31,10 +31,10 @@ package "Pipeline Manager" #lightblue {
     a_d_pm_container --> a_d_pmimage
 
   
-      artifact a_d_pm_web
+      artifact "a_d_pm_web" as a_d_pm_web
       web_container --> a_d_pm_web
     
-      artifact a_d_pm_gw
+      artifact "a_d_pm_gw" as a_d_pm_gw
       gateway_container --> a_d_pm_gw
     
   }

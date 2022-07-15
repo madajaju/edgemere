@@ -26,10 +26,6 @@ This represents network hardware
 | resources | n | Resource | false | false |  |
 
 
-## Users of the Model
-
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
 
 
 
@@ -52,11 +48,16 @@ This represents network hardware
     
 ### Action networkhardware addStats
 
-* REST - networkhardware/addStats
-* bin - networkhardware addStats
-* js - networkhardware.addStats
 
+
+* REST - networkhardware/addStats?stats=json
+* bin - networkhardware addStats --stats json
+* js - networkhardware.addStats({ stats:json })
+
+#### Description
 Add Stats to the Hardware
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -67,11 +68,16 @@ Add Stats to the Hardware
 
 ### Action networkhardware create
 
-* REST - networkhardware/create
-* bin - networkhardware create
-* js - networkhardware.create
 
+
+* REST - networkhardware/create?name=string&amp;capabilities=json
+* bin - networkhardware create --name string --capabilities json
+* js - networkhardware.create({ name:string,capabilities:json })
+
+#### Description
 Create Hardware
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -83,39 +89,50 @@ Create Hardware
 
 ### Action networkhardware disable
 
-* REST - networkhardware/disable
-* bin - networkhardware disable
-* js - networkhardware.disable
 
+
+* REST - networkhardware/disable?
+* bin - networkhardware disable 
+* js - networkhardware.disable({  })
+
+#### Description
 Disable Device and its hardware
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action networkhardware enable
 
-* REST - networkhardware/enable
-* bin - networkhardware enable
-* js - networkhardware.enable
 
+
+* REST - networkhardware/enable?
+* bin - networkhardware enable 
+* js - networkhardware.enable({  })
+
+#### Description
 Enable Device to be used.
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action networkhardware factory
 
-* REST - networkhardware/factory
-* bin - networkhardware factory
-* js - networkhardware.factory
 
+
+* REST - networkhardware/factory?name=string&amp;type=string&amp;capabilities=json
+* bin - networkhardware factory --name string --type string --capabilities json
+* js - networkhardware.factory({ name:string,type:string,capabilities:json })
+
+#### Description
 Create Hardware based on properties
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

@@ -145,11 +145,24 @@ The Device Agent subsystem provides the following activities and flows that help
 cases and scenarios of the subsystem.
 
 
+### Messages Handled
+
+The Device Agent subsystem is an event driven architecture and handle several events. The following
+events are handled by this subsystem. Please note that this subsystem is not the only subsystem that handles
+these events.
+
+| Message | Action | Description |
+| --- | --- | --- |
+| service.started | /da/service/register |  |
+
 
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+
+
 
 ## Interface Details
 The Device Agent subsystem has a well defined interface. This interface can be accessed using a
@@ -158,11 +171,16 @@ subsystems and actors can access the system.
 
 ### Action  edgemere cpl da connect
 
-* REST - /edgemere/cpl/da/connect
-* bin -  edgemere cpl da connect
-* js - .edgemere.cpl.da.connect
 
+
+* REST - /edgemere/cpl/da/connect?data=string&amp;policy=string&amp;name=string
+* bin -  edgemere cpl da connect --data string --policy string --name string
+* js - .edgemere.cpl.da.connect({ data:string,policy:string,name:string })
+
+#### Description
 Register Agent with the Manager
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -174,11 +192,16 @@ Register Agent with the Manager
 
 ### Action  edgemere cpl da register
 
-* REST - /edgemere/cpl/da/register
-* bin -  edgemere cpl da register
-* js - .edgemere.cpl.da.register
 
+
+* REST - /edgemere/cpl/da/register?data=string&amp;policy=string&amp;name=string
+* bin -  edgemere cpl da register --data string --policy string --name string
+* js - .edgemere.cpl.da.register({ data:string,policy:string,name:string })
+
+#### Description
 Register Service with the Agent
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -190,11 +213,16 @@ Register Service with the Agent
 
 ### Action  edgemere cpl da service register
 
-* REST - /edgemere/cpl/da/service/register
-* bin -  edgemere cpl da service register
-* js - .edgemere.cpl.da.service.register
 
+
+* REST - /edgemere/cpl/da/service/register?name=string&amp;instanceName=string&amp;externalURL=string&amp;internalURL=string
+* bin -  edgemere cpl da service register --name string --instanceName string --externalURL string --internalURL string
+* js - .edgemere.cpl.da.service.register({ name:string,instanceName:string,externalURL:string,internalURL:string })
+
+#### Description
 Register Service with the Agent
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

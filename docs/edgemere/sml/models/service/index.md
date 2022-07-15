@@ -31,194 +31,11 @@ A Service is an orchestratable element that represents a container or vm running
 | policies | 1 | PolicyCollection | false | false | Policies of the Service |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Stack | false | false | Child services of the service |
-| parent | 1 | Stack | false | false | Parent of the service |
-| service | 1 | Stacklet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Stack | false | false | Child services of the service |
-| parent | 1 | Stack | false | false | Parent of the service |
-| service | 1 | Stacklet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Stack | false | false | Child services of the service |
-| parent | 1 | Stack | false | false | Parent of the service |
-| service | 1 | Stacklet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| children | n | Service | false | false | Child services of the service |
-| parent | 1 | Service | false | false | Parent of the service |
-| service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
-| services | n | Stack | true | true | Services of the stack |
-| children | n | Stack | false | false | Child services of the service |
-| parent | 1 | Stack | false | false | Parent of the service |
-| service | 1 | Stacklet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
 | children | n | Service | false | false | Child services of the service |
 | parent | 1 | Service | false | false | Parent of the service |
 | service | 1 | Servicelet | false | false | Service for the servicelet, this is what service is run. This could be a service or a stack |
@@ -242,29 +59,35 @@ A Service is an orchestratable element that represents a container or vm running
     
 ### Action service create
 
-* REST - service/create
-* bin - service create
-* js - service.create
 
+
+* REST - service/create?
+* bin - service create 
+* js - service.create({  })
+
+#### Description
 Create a Service
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action service createlet
 
-* REST - service/createlet
-* bin - service createlet
-* js - service.createlet
 
+
+* REST - service/createlet?
+* bin - service createlet 
+* js - service.createlet({  })
+
+#### Description
 Create a Stack
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 

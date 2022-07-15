@@ -8,7 +8,7 @@ state "io" as sdiio #lightyellow {
 }
 
 
-state sdiio #lightyellow {
+state "sdiio" as pstatename #lightyellow {
     state "Custom Function" as iofunction {
     }
 }

@@ -8,7 +8,7 @@ state "ws" as amlws #lightblue {
 }
 
 
-state amlws #lightblue {
+state "amlws" as pstatename #lightblue {
     state "Custom Function" as wsfunction {
     }
 }

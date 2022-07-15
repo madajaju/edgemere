@@ -8,7 +8,7 @@ state "ams" as amlams #lightblue {
 }
 
 
-state amlams #lightblue {
+state "amlams" as pstatename #lightblue {
     state "Custom Function" as amsfunction {
     }
 }

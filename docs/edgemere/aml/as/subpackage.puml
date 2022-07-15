@@ -10,12 +10,19 @@ package "Analytics Services" #lightblue {
 
     interface "Analytics Services" as i {
     
+    
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Analytics Services" #lightblue {
 
@@ -23,7 +30,7 @@ package "Analytics Services" #lightblue {
 }
 
 
-    "Analytics Services" --> "Workflow Services"
+    "Workflow Services" <-- "Analytics Services"
 
 
 @enduml

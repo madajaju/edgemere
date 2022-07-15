@@ -30,10 +30,6 @@ Logical Resource of Compute CPUs that are provisioned
 | cloud | 1 | Cloud | false | false |  |
 
 
-## Users of the Model
-
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
 
 
 
@@ -50,11 +46,16 @@ Logical Resource of Compute CPUs that are provisioned
     
 ### Action computeresource factory
 
-* REST - computeresource/factory
-* bin - computeresource factory
-* js - computeresource.factory
 
+
+* REST - computeresource/factory?name=string&amp;value=object
+* bin - computeresource factory --name string --value object
+* js - computeresource.factory({ name:string,value:object })
+
+#### Description
 Create a Resource based on the hardware to resource table
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -66,15 +67,18 @@ Create a Resource based on the hardware to resource table
 
 ### Action computeresource provision
 
-* REST - computeresource/provision
-* bin - computeresource provision
-* js - computeresource.provision
 
+
+* REST - computeresource/provision?
+* bin - computeresource provision 
+* js - computeresource.provision({  })
+
+#### Description
 Provision the Resource
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 

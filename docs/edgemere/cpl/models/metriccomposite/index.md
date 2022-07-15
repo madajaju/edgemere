@@ -24,225 +24,11 @@ Composite type of Metric. This is for metrics that are a group of metrics
 | values | n | Metric | true | true |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
-| capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
-| available | 1 | PhysicalProfile |  | true | Availability of the element |
-| reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
-| metrics | 1 | PhysicalProfile |  | true | Metrics of the element |
-| requirements | 1 | Request | true | true |  |
 | capabilities | 1 | PhysicalProfile |  | true | Capabilities of the element |
 | available | 1 | PhysicalProfile |  | true | Availability of the element |
 | reserved | 1 | PhysicalProfile |  | true | Reservations of the element |
@@ -282,11 +68,16 @@ Composite type of Metric. This is for metrics that are a group of metrics
     
 ### Action metriccomposite consume
 
-* REST - metriccomposite/consume
-* bin - metriccomposite consume
-* js - metriccomposite.consume
 
+
+* REST - metriccomposite/consume?value=object
+* bin - metriccomposite consume --value object
+* js - metriccomposite.consume({ value:object })
+
+#### Description
 Substract metric to the current value up to zero
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -297,25 +88,33 @@ Substract metric to the current value up to zero
 
 ### Action metriccomposite copy
 
-* REST - metriccomposite/copy
-* bin - metriccomposite copy
-* js - metriccomposite.copy
 
+
+* REST - metriccomposite/copy?
+* bin - metriccomposite copy 
+* js - metriccomposite.copy({  })
+
+#### Description
 Copy Metric
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action metriccomposite create
 
-* REST - metriccomposite/create
-* bin - metriccomposite create
-* js - metriccomposite.create
 
+
+* REST - metriccomposite/create?name=string&amp;value=object
+* bin - metriccomposite create --name string --value object
+* js - metriccomposite.create({ name:string,value:object })
+
+#### Description
 Create Composite Metric
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -327,11 +126,16 @@ Create Composite Metric
 
 ### Action metriccomposite findDeep
 
-* REST - metriccomposite/findDeep
-* bin - metriccomposite findDeep
-* js - metriccomposite.findDeep
 
+
+* REST - metriccomposite/findDeep?value=object
+* bin - metriccomposite findDeep --value object
+* js - metriccomposite.findDeep({ value:object })
+
+#### Description
 Find Metric with name
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -342,11 +146,16 @@ Find Metric with name
 
 ### Action metriccomposite findMatchDeep
 
-* REST - metriccomposite/findMatchDeep
-* bin - metriccomposite findMatchDeep
-* js - metriccomposite.findMatchDeep
 
+
+* REST - metriccomposite/findMatchDeep?value=object
+* bin - metriccomposite findMatchDeep --value object
+* js - metriccomposite.findMatchDeep({ value:object })
+
+#### Description
 Find Metric with name
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -357,11 +166,16 @@ Find Metric with name
 
 ### Action metriccomposite lessThanEq
 
-* REST - metriccomposite/lessThanEq
-* bin - metriccomposite lessThanEq
-* js - metriccomposite.lessThanEq
 
+
+* REST - metriccomposite/lessThanEq?value=object
+* bin - metriccomposite lessThanEq --value object
+* js - metriccomposite.lessThanEq({ value:object })
+
+#### Description
 Test less than or equal to the value passed in
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -372,11 +186,16 @@ Test less than or equal to the value passed in
 
 ### Action metriccomposite minus
 
-* REST - metriccomposite/minus
-* bin - metriccomposite minus
-* js - metriccomposite.minus
 
+
+* REST - metriccomposite/minus?value=object
+* bin - metriccomposite minus --value object
+* js - metriccomposite.minus({ value:object })
+
+#### Description
 Substract metric to the current value
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -387,11 +206,16 @@ Substract metric to the current value
 
 ### Action metriccomposite plus
 
-* REST - metriccomposite/plus
-* bin - metriccomposite plus
-* js - metriccomposite.plus
 
+
+* REST - metriccomposite/plus?value=object
+* bin - metriccomposite plus --value object
+* js - metriccomposite.plus({ value:object })
+
+#### Description
 Add metric to the current value
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -402,11 +226,16 @@ Add metric to the current value
 
 ### Action metriccomposite set
 
-* REST - metriccomposite/set
-* bin - metriccomposite set
-* js - metriccomposite.set
 
+
+* REST - metriccomposite/set?value=object
+* bin - metriccomposite set --value object
+* js - metriccomposite.set({ value:object })
+
+#### Description
 Set metric to the current value
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -417,11 +246,16 @@ Set metric to the current value
 
 ### Action metriccomposite factory
 
-* REST - metriccomposite/factory
-* bin - metriccomposite factory
-* js - metriccomposite.factory
 
+
+* REST - metriccomposite/factory?name=string&amp;value=json
+* bin - metriccomposite factory --name string --value json
+* js - metriccomposite.factory({ name:string,value:json })
+
+#### Description
 Create a metric based on the metrictype table
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -433,11 +267,16 @@ Create a metric based on the metrictype table
 
 ### Action metriccomposite greaterThanEq
 
-* REST - metriccomposite/greaterThanEq
-* bin - metriccomposite greaterThanEq
-* js - metriccomposite.greaterThanEq
 
+
+* REST - metriccomposite/greaterThanEq?value=object
+* bin - metriccomposite greaterThanEq --value object
+* js - metriccomposite.greaterThanEq({ value:object })
+
+#### Description
 Test greater than or equal to the value passed in
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

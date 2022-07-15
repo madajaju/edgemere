@@ -31,10 +31,10 @@ package "Automation Framework" #lightblue {
     a_d_af_container --> a_d_afimage
 
   
-      artifact a_d_af_web
+      artifact "a_d_af_web" as a_d_af_web
       web_container --> a_d_af_web
     
-      artifact a_d_af_gw
+      artifact "a_d_af_gw" as a_d_af_gw
       gateway_container --> a_d_af_gw
     
   }

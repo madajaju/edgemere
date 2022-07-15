@@ -8,7 +8,7 @@ state "ds" as amlds #lightblue {
 }
 
 
-state amlds #lightblue {
+state "amlds" as pstatename #lightblue {
     state "Custom Function" as dsfunction {
     }
 }

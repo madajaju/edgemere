@@ -28,58 +28,20 @@ This represents a request made for data in the system the data request is made w
 | instances | n | DataInstance | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
 | request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
-| request | 1 | DataReservation | false | false |  |
 
 
 
 ## State Net
+The DataRequest has a state net corresponding to instances of the class. Each state transistion will emit an 
+event that can be caught with a websocket client. The name of the event is the name of the state in all lower case.
+The following diagram is the state net for this class.
+
 ![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |

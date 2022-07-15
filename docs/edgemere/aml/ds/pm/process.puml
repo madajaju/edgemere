@@ -10,7 +10,7 @@ state "pm" as amldspm #lightblue {
 }
 
 
-state amldspm #lightblue {
+state "amldspm" as pstatename #lightblue {
     state "Custom Function" as pmfunction {
     }
 }

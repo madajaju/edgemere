@@ -8,7 +8,7 @@ parent: usecases
 
 Manage Data Blue Prints is the description
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 
@@ -27,7 +27,7 @@ Manage Data Blue Prints is the description
 
 ## Detail Scenarios
 
-* [Manage Data Blue Prints](#scenario-CreateBluePrint)
+* [CreateBluePrint](#scenario-CreateBluePrint)
 
 
 
@@ -35,7 +35,7 @@ Manage Data Blue Prints is the description
 
 Create Blue Print is the description
 
-![Scenario CreateBluePrint](./createblueprint.png)
+![Scenario CreateBluePrint](./CreateBluePrint.png)
 
 #### Steps
 

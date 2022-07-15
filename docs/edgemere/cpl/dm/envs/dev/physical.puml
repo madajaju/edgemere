@@ -27,7 +27,7 @@ package "Device Manager" #lightgray {
     cpl_dm_container --> cpl_dmimage
 
   
-      artifact cpl_dm_web
+      artifact "cpl_dm_web" as cpl_dm_web
       web_container --> cpl_dm_web
     
   }

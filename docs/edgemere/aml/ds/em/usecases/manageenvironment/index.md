@@ -8,7 +8,7 @@ parent: usecases
 
 Manage Environment allows the actors (IT Operations and Stack Developer) to create environments, and establish policies for services running in the environment.
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 
@@ -27,12 +27,12 @@ Manage Environment allows the actors (IT Operations and Stack Developer) to crea
 
 ## Detail Scenarios
 
-* [Manage Environment](#scenario-CreateEnvironment)
-* [Manage Environment](#scenario-DeleteEnvironment)
-* [Manage Environment](#scenario-DisableEnvironment)
-* [Manage Environment](#scenario-EnableEnvironment)
-* [Manage Environment](#scenario-ManagePoliciesinEnvironment)
-* [Manage Environment](#scenario-UpdateEnvironment)
+* [CreateEnvironment](#scenario-CreateEnvironment)
+* [DeleteEnvironment](#scenario-DeleteEnvironment)
+* [DisableEnvironment](#scenario-DisableEnvironment)
+* [EnableEnvironment](#scenario-EnableEnvironment)
+* [ManagePoliciesinEnvironment](#scenario-ManagePoliciesinEnvironment)
+* [UpdateEnvironment](#scenario-UpdateEnvironment)
 
 
 
@@ -40,7 +40,7 @@ Manage Environment allows the actors (IT Operations and Stack Developer) to crea
 
 IT Opererations create environments and assigns a Multi Cloud to the Environment
 
-![Scenario CreateEnvironment](./createenvironment.png)
+![Scenario CreateEnvironment](./CreateEnvironment.png)
 
 #### Steps
 
@@ -57,7 +57,7 @@ IT Opererations create environments and assigns a Multi Cloud to the Environment
 
 Delete Environment allows IT Operations to delete an environment and suspend all services running in the environment.
 
-![Scenario DeleteEnvironment](./deleteenvironment.png)
+![Scenario DeleteEnvironment](./DeleteEnvironment.png)
 
 #### Steps
 
@@ -74,7 +74,7 @@ Delete Environment allows IT Operations to delete an environment and suspend all
 
 IT Operations disables an environment so services are suspended and cannot launch
 
-![Scenario DisableEnvironment](./disableenvironment.png)
+![Scenario DisableEnvironment](./DisableEnvironment.png)
 
 #### Steps
 
@@ -91,7 +91,7 @@ IT Operations disables an environment so services are suspended and cannot launc
 
 IT Operations has the ability to enable an environment to manage services
 
-![Scenario EnableEnvironment](./enableenvironment.png)
+![Scenario EnableEnvironment](./EnableEnvironment.png)
 
 #### Steps
 
@@ -108,7 +108,7 @@ IT Operations has the ability to enable an environment to manage services
 
 IT Operations adds and removes policies from the environment
 
-![Scenario ManagePoliciesinEnvironment](./managepoliciesinenvironment.png)
+![Scenario ManagePoliciesinEnvironment](./ManagePoliciesinEnvironment.png)
 
 #### Steps
 
@@ -125,7 +125,7 @@ IT Operations adds and removes policies from the environment
 
 IT Operations updates attributes of the environment
 
-![Scenario UpdateEnvironment](./updateenvironment.png)
+![Scenario UpdateEnvironment](./UpdateEnvironment.png)
 
 #### Steps
 

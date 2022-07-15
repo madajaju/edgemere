@@ -37,6 +37,8 @@ package "Application Management Layer" #lightblue {
 package "Service Orchestrator" #lightgreen {
 
     interface "Service Orchestrator" as i {
+            ^datareference.provisioned
+    
             /edgemere/sml/so/servicelet/assigndata()
             /edgemere/sml/so/stack/deploy()
             /edgemere/sml/so/stack/list()
@@ -46,9 +48,15 @@ package "Service Orchestrator" #lightgreen {
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Service Orchestrator" #lightgreen {
 
@@ -56,13 +64,13 @@ package "Service Orchestrator" #lightgreen {
 }
 
 
-    "Service Orchestrator" --> "Service Controller"
+    "Service Controller" <-- "Service Orchestrator"
 
-    "Service Orchestrator" --> "Service Repository"
+    "Service Repository" <-- "Service Orchestrator"
 
-    "Service Orchestrator" --> "Data Orchestrator"
+    "Data Orchestrator" <-- "Service Orchestrator"
 
-    "Service Orchestrator" --> "Infrastructure Orchestrator"
+    "Infrastructure Orchestrator" <-- "Service Orchestrator"
 
 
 @enduml

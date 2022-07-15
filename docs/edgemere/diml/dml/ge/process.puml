@@ -10,7 +10,7 @@ state "ge" as dimldmlge #lightblue {
 }
 
 
-state dimldmlge #lightblue {
+state "dimldmlge" as pstatename #lightblue {
     state "Custom Function" as gefunction {
     }
 }

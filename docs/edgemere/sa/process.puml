@@ -6,7 +6,7 @@ state "sa" as sa #pink {
 }
 
 
-state sa #pink {
+state "sa" as pstatename #pink {
     state "Custom Function" as safunction {
     }
 }

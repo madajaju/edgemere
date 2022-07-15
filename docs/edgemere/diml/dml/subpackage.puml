@@ -25,6 +25,7 @@ package "Data Definition Framework" #ffcc88 {
 package "Data Management Layer" #ffcc88 {
 
     interface "Data Management Layer" as i {
+    
             /edgemere/diml/dml/data/govern()
             /edgemere/diml/dml/data/source/name()
             /edgemere/diml/dml/datapolicy/list()
@@ -34,9 +35,15 @@ package "Data Management Layer" #ffcc88 {
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Data Management Layer" #ffcc88 {
 
@@ -56,13 +63,13 @@ rectangle "Governance Engine" #white {
 }
 
 
-    "Data Management Layer" --> "Software Defined Infrastructure"
+    "Software Defined Infrastructure" <-- "Data Management Layer"
 
-    "Data Management Layer" --> "Security Aspect"
+    "Security Aspect" <-- "Data Management Layer"
 
-    "Data Management Layer" --> "Service Management Layer"
+    "Service Management Layer" <-- "Data Management Layer"
 
-    "Data Management Layer" --> "Common Data Service"
+    "Common Data Service" <-- "Data Management Layer"
 
 
 @enduml

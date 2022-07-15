@@ -10,12 +10,19 @@ package "Provision Engine" #lightgreen {
 
     interface "Provision Engine" as i {
     
+    
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Provision Engine" #lightgreen {
 
@@ -23,7 +30,7 @@ package "Provision Engine" #lightgreen {
 }
 
 
-    "Provision Engine" --> "Software Defined Infrastructure"
+    "Software Defined Infrastructure" <-- "Provision Engine"
 
 
 @enduml

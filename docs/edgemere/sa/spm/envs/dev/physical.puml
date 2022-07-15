@@ -31,10 +31,10 @@ package "Security Profile Manager" #pink {
     s_spm_container --> s_spmimage
 
   
-      artifact s_spm_web
+      artifact "s_spm_web" as s_spm_web
       web_container --> s_spm_web
     
-      artifact s_spm_gw
+      artifact "s_spm_gw" as s_spm_gw
       gateway_container --> s_spm_gw
     
   }

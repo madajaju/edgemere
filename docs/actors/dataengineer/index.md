@@ -5,7 +5,7 @@ permalink: actor-dataengineer
 parent: All Actors
 ---
 
-{#actor-function toLowerCase() { [native code] }}
+{#actor-dataengineer}
 
 # DataEngineer
 
@@ -24,17 +24,17 @@ Responsible for operationalization of data pipeline and the automation and deplo
 * [Manage Data Sources](usecase-ManageDataSources)
 
 
-![Use Case Diagram](./usecase.png)
+![Use Case Diagram](./UseCase.png)
 
 ## User Interface
 TBD
 
 ## Command Line Interface
-* [ edgemere aml aimodel/list](action--edgemere-aml-aimodel-list) - Data Scientist manages AI models and ties them to and application and data set. DevOps will make sure when applications and AI models are updated that they are updatedtogether.
-* [ edgemere diml cds data/list](action--edgemere-diml-cds-data-list) - Manage Data is the description
-* [ edgemere diml ddf datadaptor/list](action--edgemere-diml-ddf-datadaptor-list) - Manage Data Adaptors is the description
-* [ edgemere diml ddf datablueprint/list](action--edgemere-diml-ddf-datablueprint-list) - Manage Data Blue Prints is the description
-* [ edgemere diml ddf datapipeline/list](action--edgemere-diml-ddf-datapipeline-list) - Manage Data Pipeline is the description
-* [ edgemere diml ddf dataprocedure/list](action--edgemere-diml-ddf-dataprocedure-list) - Manage Data Procedures is the description
-* [ edgemere diml dml datasource/list](action--edgemere-diml-dml-datasource-list) - Manage Data Sources allows the Data Engineer to register data sources to the system.
+* [ edgemere aml aimodel list](action--edgemere-aml-aimodel-list) - Data Scientist manages AI models and ties them to and application and data set. DevOps will make sure when applications and AI models are updated that they are updatedtogether.
+* [ edgemere diml cds data list](action--edgemere-diml-cds-data-list) - Manage Data is the description
+* [ edgemere diml ddf datadaptor list](action--edgemere-diml-ddf-datadaptor-list) - Manage Data Adaptors is the description
+* [ edgemere diml ddf datablueprint list](action--edgemere-diml-ddf-datablueprint-list) - Manage Data Blue Prints is the description
+* [ edgemere diml ddf datapipeline list](action--edgemere-diml-ddf-datapipeline-list) - Manage Data Pipeline is the description
+* [ edgemere diml ddf dataprocedure list](action--edgemere-diml-ddf-dataprocedure-list) - Manage Data Procedures is the description
+* [ edgemere diml dml datasource list](action--edgemere-diml-dml-datasource-list) - Manage Data Sources allows the Data Engineer to register data sources to the system.
 

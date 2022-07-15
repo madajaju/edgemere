@@ -9,15 +9,22 @@ package "Security Aspect" #pink {
 package "Security Profile Manager" #pink {
 
     interface "Security Profile Manager" as i {
+    
             /edgemere/sa/spm/data/create()
             /edgemere/sa/spm/data/govern()
     
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Security Profile Manager" #pink {
 

@@ -10,7 +10,7 @@ state "transform" as dimlcdstransform #lightblue {
 }
 
 
-state dimlcdstransform #lightblue {
+state "dimlcdstransform" as pstatename #lightblue {
     state "Custom Function" as transformfunction {
     }
 }

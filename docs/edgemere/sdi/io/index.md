@@ -135,11 +135,25 @@ The Infrastructure Orchestrator subsystem provides the following activities and 
 cases and scenarios of the subsystem.
 
 
+### Messages Handled
+
+The Infrastructure Orchestrator subsystem is an event driven architecture and handle several events. The following
+events are handled by this subsystem. Please note that this subsystem is not the only subsystem that handles
+these events.
+
+| Message | Action | Description |
+| --- | --- | --- |
+| request.selected | /sdi/io/evaluateRequest |  |
+| reservation.confirmed | /sdi/io/provision |  |
+
 
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+
+
 
 ## Interface Details
 The Infrastructure Orchestrator subsystem has a well defined interface. This interface can be accessed using a
@@ -148,11 +162,16 @@ subsystems and actors can access the system.
 
 ### Action  edgemere sdi io evaluaterequest
 
-* REST - /edgemere/sdi/io/evaluaterequest
-* bin -  edgemere sdi io evaluaterequest
-* js - .edgemere.sdi.io.evaluaterequest
 
+
+* REST - /edgemere/sdi/io/evaluaterequest?request=object
+* bin -  edgemere sdi io evaluaterequest --request object
+* js - .edgemere.sdi.io.evaluaterequest({ request:object })
+
+#### Description
 Evaluate Request against policies and select the appropriate reservations from the Common Physical Layer
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -162,11 +181,16 @@ Evaluate Request against policies and select the appropriate reservations from t
 
 ### Action  edgemere sdi io provision
 
-* REST - /edgemere/sdi/io/provision
-* bin -  edgemere sdi io provision
-* js - .edgemere.sdi.io.provision
 
+
+* REST - /edgemere/sdi/io/provision?obj=object
+* bin -  edgemere sdi io provision --obj object
+* js - .edgemere.sdi.io.provision({ obj:object })
+
+#### Description
 Provision Resources based on the reservation.
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

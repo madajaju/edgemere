@@ -17,6 +17,10 @@ package "Data Definition Framework" #ffcc88 {
 package "Data Orchestrator" #lightblue {
 
     interface "Data Orchestrator" as i {
+            ^datareference.provisioning
+            ^datarequest.needed
+            ^datarequest.selected
+    
             /edgemere/diml/dml/do/evaluate()
             /edgemere/diml/dml/do/reserve()
             /edgemere/diml/dml/do/datainstance/create()
@@ -27,9 +31,15 @@ package "Data Orchestrator" #lightblue {
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Data Orchestrator" #lightblue {
 

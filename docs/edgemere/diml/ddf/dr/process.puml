@@ -10,7 +10,7 @@ state "dr" as dimlddfdr #lightblue {
 }
 
 
-state dimlddfdr #lightblue {
+state "dimlddfdr" as pstatename #lightblue {
     state "Custom Function" as drfunction {
     }
 }

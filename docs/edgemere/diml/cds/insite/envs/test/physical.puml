@@ -31,10 +31,10 @@ package "Insite Services" #lightblue {
     insite_container --> insiteimage
 
   
-      artifact diml_cds_insite_web
+      artifact "diml_cds_insite_web" as diml_cds_insite_web
       web_container --> diml_cds_insite_web
     
-      artifact diml_cds_insite_gw
+      artifact "diml_cds_insite_gw" as diml_cds_insite_gw
       gateway_container --> diml_cds_insite_gw
     
   }

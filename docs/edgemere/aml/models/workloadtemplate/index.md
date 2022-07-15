@@ -24,10 +24,6 @@ A WorkloadTemplate allows developers to paramaterize workloads so they can be re
 | workloads | n | Workload | false | false |  |
 
 
-## Users of the Model
-
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
 
 
 

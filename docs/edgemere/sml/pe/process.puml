@@ -8,7 +8,7 @@ state "pe" as smlpe #lightgreen {
 }
 
 
-state smlpe #lightgreen {
+state "smlpe" as pstatename #lightgreen {
     state "Custom Function" as pefunction {
     }
 }

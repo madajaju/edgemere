@@ -156,7 +156,22 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| group.create |  When an object of type Group is created. | Group
+| group.destroy |  When an object of type Group is destroyed. | Group
+| group.updated |  When an object of type Group has an attribute or association updated. | Group
+| identity.create |  When an object of type Identity is created. | Identity
+| identity.destroy |  When an object of type Identity is destroyed. | Identity
+| identity.updated |  When an object of type Identity has an attribute or association updated. | Identity
+| identityattribute.create |  When an object of type IdentityAttribute is created. | IdentityAttribute
+| identityattribute.destroy |  When an object of type IdentityAttribute is destroyed. | IdentityAttribute
+| identityattribute.updated |  When an object of type IdentityAttribute has an attribute or association updated. | IdentityAttribute
+| user.create |  When an object of type User is created. | User
+| user.destroy |  When an object of type User is destroyed. | User
+| user.updated |  When an object of type User has an attribute or association updated. | User
+
+
 
 ## Interface Details
 The Identity Aspect subsystem has a well defined interface. This interface can be accessed using a

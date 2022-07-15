@@ -28,10 +28,6 @@ This is a combination of the stack with a specific environment. This allows for 
 | data | n | DataReference | false | false | Data References to the data in the Stacklet |
 
 
-## Users of the Model
-
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
 
 
 
@@ -46,15 +42,18 @@ This is a combination of the stack with a specific environment. This allows for 
     
 ### Action stackletdefinition create
 
-* REST - stackletdefinition/create
-* bin - stackletdefinition create
-* js - stackletdefinition.create
 
+
+* REST - stackletdefinition/create?
+* bin - stackletdefinition create 
+* js - stackletdefinition.create({  })
+
+#### Description
 Create a Stack
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 

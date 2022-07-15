@@ -5,6 +5,8 @@
 package "Device Agent" #lightgray {
 
     interface "Device Agent" as i {
+            ^service.started
+    
             /edgemere/cpl/da/connect()
             /edgemere/cpl/da/register()
             /edgemere/cpl/da/service/register()
@@ -12,9 +14,15 @@ package "Device Agent" #lightgray {
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Device Agent" #lightgray {
 

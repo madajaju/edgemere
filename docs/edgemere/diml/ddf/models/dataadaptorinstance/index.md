@@ -23,53 +23,11 @@ Description long description
 | parent | 1 | DataAdaptor | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
-| instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
 | instances | n | DataAdaptor | false | true | Instance of a DataAdaptor |
 
 

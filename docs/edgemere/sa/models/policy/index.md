@@ -23,53 +23,11 @@ policy can be applied to any entity in the system including Applications, Stacks
 | owner | 1 | PolicyCollection | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
-| policies | n | PolicyCollection | true | true |  |
 | policies | n | PolicyCollection | true | true |  |
 
 

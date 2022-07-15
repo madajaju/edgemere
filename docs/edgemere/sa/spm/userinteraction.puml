@@ -1,6 +1,19 @@
 @startuml
 
-rectangle "TBD"
+
+actor "Actor" as actor
+
+
+
+
+actor -> "Security Profile Manager": Apply Security Profiles
+"Security Profile Manager" -> bin: data govern
+bin -> REST: data/govern
+
+actor -> "Security Profile Manager": Manage Security Profiles
+"Security Profile Manager" -> bin: data govern
+bin -> REST: data/govern
+
 
 
 @enduml

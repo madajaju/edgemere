@@ -31,10 +31,10 @@ package "Environment Management" #lightgreen {
     sml_em_container --> sml_emimage
 
   
-      artifact sml_em_web
+      artifact "sml_em_web" as sml_em_web
       web_container --> sml_em_web
     
-      artifact sml_em_gw
+      artifact "sml_em_gw" as sml_em_gw
       gateway_container --> sml_em_gw
     
   }

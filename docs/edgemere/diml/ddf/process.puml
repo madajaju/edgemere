@@ -8,7 +8,7 @@ state "ddf" as dimlddf #ffcc88 {
 }
 
 
-state dimlddf #ffcc88 {
+state "dimlddf" as pstatename #ffcc88 {
     state "Custom Function" as ddffunction {
     }
 }

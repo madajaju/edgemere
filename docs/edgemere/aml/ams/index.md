@@ -138,7 +138,13 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| aimodel.create |  When an object of type AIModel is created. | AIModel
+| aimodel.destroy |  When an object of type AIModel is destroyed. | AIModel
+| aimodel.updated |  When an object of type AIModel has an attribute or association updated. | AIModel
+
+
 
 ## Interface Details
 The AI ML Services subsystem has a well defined interface. This interface can be accessed using a

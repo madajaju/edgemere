@@ -6,7 +6,7 @@ state "sdi" as sdi #lightyellow {
 }
 
 
-state sdi #lightyellow {
+state "sdi" as pstatename #lightyellow {
     state "Custom Function" as sdifunction {
     }
 }
@@ -92,14 +92,6 @@ state "needed" as sdirequestneeded #lightyellow {
 }
 
     state "cpl" as cpl #lightgray {
-state "Function" as cplfunction #lightgray {
-}
-}
-
-        sdirequestneeded ---> cplfunction
-       
-    
-    state "cpl" as cpl #lightgray {
 state "reserve" as cplreserve #lightgray {
 }
 }
@@ -113,7 +105,11 @@ state "rejected" as sdireservationrejected #lightyellow {
 }
 }
 
-    
+    state "cpl" as cpl #lightgray {
+state "Function" as cplfunction #lightgray {
+}
+}
+
         sdireservationrejected ---> cplfunction
        
     state "sdi" as sdi #lightyellow {

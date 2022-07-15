@@ -27,7 +27,7 @@ package "Data Controller" #lightblue {
     diml_dml_dc_container --> diml_dml_dcimage
 
   
-      artifact diml_dml_dc_controller
+      artifact "diml_dml_dc_controller" as diml_dml_dc_controller
       controller_container --> diml_dml_dc_controller
     
   }

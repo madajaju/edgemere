@@ -25,96 +25,11 @@ This is a step in the stage of the build.
 | instances | n | StepInstance | false | true |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
-| steps | n | Stage | true | true |  |
-| definition | 1 | StepInstance | false | false |  |
 | steps | n | Stage | true | true |  |
 | definition | 1 | StepInstance | false | false |  |
 

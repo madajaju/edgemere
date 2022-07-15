@@ -138,7 +138,10 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+
+
 
 ## Interface Details
 The Telemetry Producer subsystem has a well defined interface. This interface can be accessed using a
@@ -147,11 +150,16 @@ subsystems and actors can access the system.
 
 ### Action  edgemere cpl tp setparent
 
-* REST - /edgemere/cpl/tp/setparent
-* bin -  edgemere cpl tp setparent
-* js - .edgemere.cpl.tp.setparent
 
+
+* REST - /edgemere/cpl/tp/setparent?url=string&amp;name=string
+* bin -  edgemere cpl tp setparent --url string --name string
+* js - .edgemere.cpl.tp.setparent({ url:string,name:string })
+
+#### Description
 Set the parent for the producer to report to
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -162,24 +170,32 @@ Set the parent for the producer to report to
 
 ### Action  edgemere cpl tp stats get
 
-* REST - /edgemere/cpl/tp/stats/get
-* bin -  edgemere cpl tp stats get
-* js - .edgemere.cpl.tp.stats.get
 
+
+* REST - /edgemere/cpl/tp/stats/get?
+* bin -  edgemere cpl tp stats get 
+* js - .edgemere.cpl.tp.stats.get({  })
+
+#### Description
 get the statstics for the device
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 ### Action  edgemere cpl tp stats send
 
-* REST - /edgemere/cpl/tp/stats/send
-* bin -  edgemere cpl tp stats send
-* js - .edgemere.cpl.tp.stats.send
 
+
+* REST - /edgemere/cpl/tp/stats/send?name=string&amp;stats=string
+* bin -  edgemere cpl tp stats send --name string --stats string
+* js - .edgemere.cpl.tp.stats.send({ name:string,stats:string })
+
+#### Description
 send the statstics for the managing service
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

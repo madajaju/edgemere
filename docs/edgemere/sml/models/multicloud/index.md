@@ -24,53 +24,11 @@ Multi Cloud is an aggregation of cloud tied together with policies that services
 | polices | 1 | PolicyCollection | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
-| clouds | n | Environment | false | false |  |
 | clouds | n | Environment | false | false |  |
 
 

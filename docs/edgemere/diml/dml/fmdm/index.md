@@ -141,7 +141,19 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| lineagemetadata.create |  When an object of type LineageMetaData is created. | LineageMetaData
+| lineagemetadata.destroy |  When an object of type LineageMetaData is destroyed. | LineageMetaData
+| lineagemetadata.updated |  When an object of type LineageMetaData has an attribute or association updated. | LineageMetaData
+| metadata.create |  When an object of type MetaData is created. | MetaData
+| metadata.destroy |  When an object of type MetaData is destroyed. | MetaData
+| metadata.updated |  When an object of type MetaData has an attribute or association updated. | MetaData
+| sourcemetadata.create |  When an object of type SourceMetaData is created. | SourceMetaData
+| sourcemetadata.destroy |  When an object of type SourceMetaData is destroyed. | SourceMetaData
+| sourcemetadata.updated |  When an object of type SourceMetaData has an attribute or association updated. | SourceMetaData
+
+
 
 ## Interface Details
 The Federated Meta Data Management subsystem has a well defined interface. This interface can be accessed using a
@@ -150,11 +162,16 @@ subsystems and actors can access the system.
 
 ### Action  edgemere diml dml fmdm query
 
-* REST - /edgemere/diml/dml/fmdm/query
-* bin -  edgemere diml dml fmdm query
-* js - .edgemere.diml.dml.fmdm.query
 
+
+* REST - /edgemere/diml/dml/fmdm/query?expression=json
+* bin -  edgemere diml dml fmdm query --expression json
+* js - .edgemere.diml.dml.fmdm.query({ expression:json })
+
+#### Description
 Query the MetaData for the data in the query
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

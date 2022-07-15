@@ -8,7 +8,7 @@ parent: usecases
 
 Manage Data Adaptors is the description
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 
@@ -27,9 +27,9 @@ Manage Data Adaptors is the description
 
 ## Detail Scenarios
 
-* [Manage Data Adaptors](#scenario-AttachDataBluePrint)
-* [Manage Data Adaptors](#scenario-CreateDataAdaptor)
-* [Manage Data Adaptors](#scenario-UpdateDataAdaptor)
+* [AttachDataBluePrint](#scenario-AttachDataBluePrint)
+* [CreateDataAdaptor](#scenario-CreateDataAdaptor)
+* [UpdateDataAdaptor](#scenario-UpdateDataAdaptor)
 
 
 
@@ -37,7 +37,7 @@ Manage Data Adaptors is the description
 
 Attach Data Blue Print is the description
 
-![Scenario AttachDataBluePrint](./attachdatablueprint.png)
+![Scenario AttachDataBluePrint](./AttachDataBluePrint.png)
 
 #### Steps
 
@@ -54,7 +54,7 @@ Attach Data Blue Print is the description
 
 Create Data Adaptor is the description
 
-![Scenario CreateDataAdaptor](./createdataadaptor.png)
+![Scenario CreateDataAdaptor](./CreateDataAdaptor.png)
 
 #### Steps
 
@@ -71,7 +71,7 @@ Create Data Adaptor is the description
 
 Update Data Adaptor is the description
 
-![Scenario UpdateDataAdaptor](./updatedataadaptor.png)
+![Scenario UpdateDataAdaptor](./UpdateDataAdaptor.png)
 
 #### Steps
 

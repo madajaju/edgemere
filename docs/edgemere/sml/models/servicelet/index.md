@@ -31,6 +31,7 @@ Servicelet is the combination of a Service with the environment. This gives the 
 | data | n | DataReference | false | true | Data References to the data in the Stacklet |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
@@ -40,233 +41,8 @@ Servicelet is the combination of a Service with the environment. This gives the 
 | servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
 | servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
 | servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
 | servicelet | 1 | StackInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| servicelet | 1 | StackInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
 | servicelets | n | Stack | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| servicelet | 1 | StackInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stack | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| servicelet | 1 | StackInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stack | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| servicelet | 1 | StackInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stack | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| servicelet | 1 | StackInstance | false | false | Service and environment combined together that defines the service instance |
-| parent | 1 | DataReference | false | false |  |
-| servicelets | n | Service | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stack | true | true | Servicelets of the service (Environment) |
-| servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
-| servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
-| servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
-| servicelet | 1 | StackInstance | false | false | Service and environment combined together that defines the service instance |
 
 
 
@@ -283,25 +59,33 @@ Servicelet is the combination of a Service with the environment. This gives the 
     
 ### Action servicelet create
 
-* REST - servicelet/create
-* bin - servicelet create
-* js - servicelet.create
 
+
+* REST - servicelet/create?
+* bin - servicelet create 
+* js - servicelet.create({  })
+
+#### Description
 Create a Stack
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action servicelet deploy
 
-* REST - servicelet/deploy
-* bin - servicelet deploy
-* js - servicelet.deploy
 
+
+* REST - servicelet/deploy?tag=string&amp;args=json
+* bin - servicelet deploy --tag string --args json
+* js - servicelet.deploy({ tag:string,args:json })
+
+#### Description
 Deploy a Servicelet
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

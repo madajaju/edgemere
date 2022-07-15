@@ -10,7 +10,7 @@ state "em" as amldsem #lightgreen {
 }
 
 
-state amldsem #lightgreen {
+state "amldsem" as pstatename #lightgreen {
     state "Custom Function" as emfunction {
     }
 }

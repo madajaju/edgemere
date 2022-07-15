@@ -5,6 +5,7 @@
 package "Telemetry Producer" #lightgray {
 
     interface "Telemetry Producer" as i {
+    
             /edgemere/cpl/tp/setparent()
             /edgemere/cpl/tp/stats/get()
             /edgemere/cpl/tp/stats/send()
@@ -12,9 +13,15 @@ package "Telemetry Producer" #lightgray {
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Telemetry Producer" #lightgray {
 

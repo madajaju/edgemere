@@ -8,7 +8,7 @@ parent: usecases
 
 DevOps Engineers and Application Developers need the ability to manage applications across multiple environments, clouds, and types of infrastructure.
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 
@@ -27,11 +27,11 @@ DevOps Engineers and Application Developers need the ability to manage applicati
 
 ## Detail Scenarios
 
-* [Manage Applications](#scenario-CreateApplication)
-* [Manage Applications](#scenario-DeployApplication)
-* [Manage Applications](#scenario-DestroyApplication)
-* [Manage Applications](#scenario-MonitorApplication)
-* [Manage Applications](#scenario-UpdateApplication)
+* [CreateApplication](#scenario-CreateApplication)
+* [DeployApplication](#scenario-DeployApplication)
+* [DestroyApplication](#scenario-DestroyApplication)
+* [MonitorApplication](#scenario-MonitorApplication)
+* [UpdateApplication](#scenario-UpdateApplication)
 
 
 
@@ -39,7 +39,7 @@ DevOps Engineers and Application Developers need the ability to manage applicati
 
 Create Application is the description
 
-![Scenario CreateApplication](./createapplication.png)
+![Scenario CreateApplication](./CreateApplication.png)
 
 #### Steps
 
@@ -56,7 +56,7 @@ Create Application is the description
 
 Deploy Application is the description
 
-![Scenario DeployApplication](./deployapplication.png)
+![Scenario DeployApplication](./DeployApplication.png)
 
 #### Steps
 
@@ -73,7 +73,7 @@ Deploy Application is the description
 
 Destroy Application is the description
 
-![Scenario DestroyApplication](./destroyapplication.png)
+![Scenario DestroyApplication](./DestroyApplication.png)
 
 #### Steps
 
@@ -90,7 +90,7 @@ Destroy Application is the description
 
 Monitor Application is the description
 
-![Scenario MonitorApplication](./monitorapplication.png)
+![Scenario MonitorApplication](./MonitorApplication.png)
 
 #### Steps
 
@@ -108,7 +108,7 @@ Monitor Application is the description
 
 Update Application is the description
 
-![Scenario UpdateApplication](./updateapplication.png)
+![Scenario UpdateApplication](./UpdateApplication.png)
 
 #### Steps
 

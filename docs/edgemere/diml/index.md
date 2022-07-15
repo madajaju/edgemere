@@ -187,7 +187,10 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+
+
 
 ## Interface Details
 The Distributed Information Management Layer subsystem has a well defined interface. This interface can be accessed using a
@@ -196,11 +199,16 @@ subsystems and actors can access the system.
 
 ### Action  edgemere diml find
 
-* REST - /edgemere/diml/find
-* bin -  edgemere diml find
-* js - .edgemere.diml.find
 
+
+* REST - /edgemere/diml/find?query=json&amp;file=YAML
+* bin -  edgemere diml find --query json --file YAML
+* js - .edgemere.diml.find({ query:json,file:YAML })
+
+#### Description
 Find the data and start up an instance
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

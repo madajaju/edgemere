@@ -31,10 +31,10 @@ package "Identity Aspect" #pink {
     ia_container --> iaimage
 
   
-      artifact ia_web
+      artifact "ia_web" as ia_web
       web_container --> ia_web
     
-      artifact ia_gw
+      artifact "ia_gw" as ia_gw
       gateway_container --> ia_gw
     
   }

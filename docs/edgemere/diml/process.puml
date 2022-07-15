@@ -6,7 +6,7 @@ state "diml" as diml #ffcc88 {
 }
 
 
-state diml #ffcc88 {
+state "diml" as pstatename #ffcc88 {
     state "Custom Function" as dimlfunction {
     }
 }

@@ -19,57 +19,14 @@ IdentityAttributes enable attribute based access controls. A User has attributes
 
 ## Associations
 
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
+No associations
+
 
 
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
-| attributes | n | User | false | false |  |
 | attributes | n | User | false | false |  |
 
 

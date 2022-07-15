@@ -32,6 +32,7 @@ This represents a request being made for a resource in the cloud. This is only t
 | aggregates | n | AggregatedDevice | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
@@ -39,151 +40,18 @@ This represents a request being made for a resource in the cloud. This is only t
 | requests | n | Cloud | false | true |  |
 | request | 1 | Reservation | false | false |  |
 | request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
 | request | 1 | AcceleratorResource | false | false |  |
-| requests | n | Cloud | false | true |  |
 | request | 1 | ComputeResource | false | false |  |
 | request | 1 | NetworkResource | false | false |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| request | 1 | StorageResource | false | false |  |
-| request | 1 | AcceleratorResource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | ComputeResource | false | false |  |
-| request | 1 | NetworkResource | false | false |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
-| request | 1 | StorageResource | false | false |  |
-| request | 1 | AcceleratorResource | false | false |  |
-| requests | n | Cloud | false | true |  |
-| request | 1 | ComputeResource | false | false |  |
-| request | 1 | NetworkResource | false | false |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
 | request | 1 | StorageResource | false | false |  |
 
 
 
 ## State Net
+The Request has a state net corresponding to instances of the class. Each state transistion will emit an 
+event that can be caught with a websocket client. The name of the event is the name of the state in all lower case.
+The following diagram is the state net for this class.
+
 ![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
@@ -215,11 +83,16 @@ This represents a request being made for a resource in the cloud. This is only t
     
 ### Action request confirm
 
-* REST - request/confirm
-* bin - request confirm
-* js - request.confirm
 
+
+* REST - request/confirm?attr1=string
+* bin - request confirm --attr1 string
+* js - request.confirm({ attr1:string })
+
+#### Description
 Description of the method
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -230,25 +103,33 @@ Description of the method
 
 ### Action request evaluated
 
-* REST - request/evaluated
-* bin - request evaluated
-* js - request.evaluated
 
+
+* REST - request/evaluated?
+* bin - request evaluated 
+* js - request.evaluated({  })
+
+#### Description
 The Request is evaluated
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action request failed
 
-* REST - request/failed
-* bin - request failed
-* js - request.failed
 
+
+* REST - request/failed?message=string
+* bin - request failed --message string
+* js - request.failed({ message:string })
+
+#### Description
 Request Failed
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -259,11 +140,16 @@ Request Failed
 
 ### Action request fulfill
 
-* REST - request/fulfill
-* bin - request fulfill
-* js - request.fulfill
 
+
+* REST - request/fulfill?datacenters=object&amp;devices=object&amp;aggregates=object
+* bin - request fulfill --datacenters object --devices object --aggregates object
+* js - request.fulfill({ datacenters:object,devices:object,aggregates:object })
+
+#### Description
 Fulfill the request, the state of the request is moved to needed
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -276,15 +162,18 @@ Fulfill the request, the state of the request is moved to needed
 
 ### Action request satisfied
 
-* REST - request/satisfied
-* bin - request satisfied
-* js - request.satisfied
 
+
+* REST - request/satisfied?
+* bin - request satisfied 
+* js - request.satisfied({  })
+
+#### Description
 The Request is staisfied
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 

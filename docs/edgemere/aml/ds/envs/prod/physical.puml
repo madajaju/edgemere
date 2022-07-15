@@ -31,10 +31,10 @@ package "Developer Services" #lightblue {
     aml_ds_container --> aml_dsimage
 
   
-      artifact aml_ds_web
+      artifact "aml_ds_web" as aml_ds_web
       web_container --> aml_ds_web
     
-      artifact aml_ds_gw
+      artifact "aml_ds_gw" as aml_ds_gw
       gateway_container --> aml_ds_gw
     
   }

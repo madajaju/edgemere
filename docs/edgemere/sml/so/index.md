@@ -143,11 +143,30 @@ The Service Orchestrator subsystem provides the following activities and flows t
 cases and scenarios of the subsystem.
 
 
+### Messages Handled
+
+The Service Orchestrator subsystem is an event driven architecture and handle several events. The following
+events are handled by this subsystem. Please note that this subsystem is not the only subsystem that handles
+these events.
+
+| Message | Action | Description |
+| --- | --- | --- |
+| datareference.provisioned | /sml/so/servicelet/assignData |  |
+
 
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| serviceinstance.create |  When an object of type ServiceInstance is created. | ServiceInstance
+| serviceinstance.destroy |  When an object of type ServiceInstance is destroyed. | ServiceInstance
+| serviceinstance.updated |  When an object of type ServiceInstance has an attribute or association updated. | ServiceInstance
+| stackinstance.create |  When an object of type StackInstance is created. | StackInstance
+| stackinstance.destroy |  When an object of type StackInstance is destroyed. | StackInstance
+| stackinstance.updated |  When an object of type StackInstance has an attribute or association updated. | StackInstance
+
+
 
 ## Interface Details
 The Service Orchestrator subsystem has a well defined interface. This interface can be accessed using a
@@ -156,11 +175,16 @@ subsystems and actors can access the system.
 
 ### Action  edgemere sml so servicelet assigndata
 
-* REST - /edgemere/sml/so/servicelet/assigndata
-* bin -  edgemere sml so servicelet assigndata
-* js - .edgemere.sml.so.servicelet.assigndata
 
+
+* REST - /edgemere/sml/so/servicelet/assigndata?servicelet=ref&amp;dataReference=ref
+* bin -  edgemere sml so servicelet assigndata --servicelet ref --dataReference ref
+* js - .edgemere.sml.so.servicelet.assigndata({ servicelet:ref,dataReference:ref })
+
+#### Description
 Assign Data Instances from the Data Reference
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -171,11 +195,16 @@ Assign Data Instances from the Data Reference
 
 ### Action  edgemere sml so stack deploy
 
-* REST - /edgemere/sml/so/stack/deploy
-* bin -  edgemere sml so stack deploy
-* js - .edgemere.sml.so.stack.deploy
 
+
+* REST - /edgemere/sml/so/stack/deploy?name=string&amp;tag=string&amp;env=string&amp;args=json
+* bin -  edgemere sml so stack deploy --name string --tag string --env string --args json
+* js - .edgemere.sml.so.stack.deploy({ name:string,tag:string,env:string,args:json })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -188,11 +217,16 @@ Description of the action
 
 ### Action  edgemere sml so stack list
 
-* REST - /edgemere/sml/so/stack/list
-* bin -  edgemere sml so stack list
-* js - .edgemere.sml.so.stack.list
 
+
+* REST - /edgemere/sml/so/stack/list?attr1=string
+* bin -  edgemere sml so stack list --attr1 string
+* js - .edgemere.sml.so.stack.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -202,11 +236,16 @@ Description of the action
 
 ### Action  edgemere sml so stack uninstall
 
-* REST - /edgemere/sml/so/stack/uninstall
-* bin -  edgemere sml so stack uninstall
-* js - .edgemere.sml.so.stack.uninstall
 
+
+* REST - /edgemere/sml/so/stack/uninstall?attr1=string
+* bin -  edgemere sml so stack uninstall --attr1 string
+* js - .edgemere.sml.so.stack.uninstall({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -216,11 +255,16 @@ Description of the action
 
 ### Action  edgemere sml so stack update
 
-* REST - /edgemere/sml/so/stack/update
-* bin -  edgemere sml so stack update
-* js - .edgemere.sml.so.stack.update
 
+
+* REST - /edgemere/sml/so/stack/update?attr1=string
+* bin -  edgemere sml so stack update --attr1 string
+* js - .edgemere.sml.so.stack.update({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

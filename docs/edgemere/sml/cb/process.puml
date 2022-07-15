@@ -8,7 +8,7 @@ state "cb" as smlcb #lightgreen {
 }
 
 
-state smlcb #lightgreen {
+state "smlcb" as pstatename #lightgreen {
     state "Custom Function" as cbfunction {
     }
 }

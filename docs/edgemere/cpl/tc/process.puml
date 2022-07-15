@@ -8,7 +8,7 @@ state "tc" as cpltc #lightgray {
 }
 
 
-state cpltc #lightgray {
+state "cpltc" as pstatename #lightgray {
     state "Custom Function" as tcfunction {
     }
 }

@@ -6,7 +6,7 @@ state "cpl" as cpl #lightgray {
 }
 
 
-state cpl #lightgray {
+state "cpl" as pstatename #lightgray {
     state "Custom Function" as cplfunction {
     }
 }
@@ -120,13 +120,6 @@ state "needed" as sdirequestneeded #lightyellow {
 
         
     state "cpl" as cpl #lightgray {
-state "Function" as cplfunction #lightgray {
-}
-}
-
-    sdirequestneeded ---> cplfunction
-  
-    state "cpl" as cpl #lightgray {
 state "reserve" as cplreserve #lightgray {
 }
 }
@@ -142,7 +135,11 @@ state "rejected" as sdireservationrejected #lightyellow {
 }
 
         
-    
+    state "cpl" as cpl #lightgray {
+state "Function" as cplfunction #lightgray {
+}
+}
+
     sdireservationrejected ---> cplfunction
   
 

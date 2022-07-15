@@ -21,6 +21,7 @@ package "Security Profile Manager" #pink {
 package "Environment Management" #lightgreen {
 
     interface "Environment Management" as i {
+    
             /edgemere/aml/ds/em/environment/addpolicies()
             /edgemere/aml/ds/em/environment/create()
             /edgemere/aml/ds/em/environment/destroy()
@@ -32,9 +33,15 @@ package "Environment Management" #lightgreen {
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Environment Management" #lightgreen {
 
@@ -42,7 +49,7 @@ package "Environment Management" #lightgreen {
 }
 
 
-    "Environment Management" --> "Service Orchestrator"
+    "Service Orchestrator" <-- "Environment Management"
 
 
 @enduml

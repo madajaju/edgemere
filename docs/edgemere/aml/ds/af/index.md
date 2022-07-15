@@ -136,11 +136,23 @@ The Automation Framework subsystem provides the following activities and flows t
 cases and scenarios of the subsystem.
 
 
+### Messages Handled
+
+The Automation Framework subsystem is an event driven architecture and handle several events. The following
+events are handled by this subsystem. Please note that this subsystem is not the only subsystem that handles
+these events.
+
+| Message | Action | Description |
+| --- | --- | --- |
+
 
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+
+
 
 ## Interface Details
 The Automation Framework subsystem has a well defined interface. This interface can be accessed using a

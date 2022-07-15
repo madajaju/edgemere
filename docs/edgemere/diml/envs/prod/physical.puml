@@ -31,10 +31,10 @@ package "Distributed Information Management Layer" #ffcc88 {
     diml_container --> dimlimage
 
   
-      artifact diml_web
+      artifact "diml_web" as diml_web
       web_container --> diml_web
     
-      artifact diml_gw
+      artifact "diml_gw" as diml_gw
       gateway_container --> diml_gw
     
   }

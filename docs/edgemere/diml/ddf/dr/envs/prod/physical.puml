@@ -31,10 +31,10 @@ package "Data Repository" #lightblue {
     diml_ddf_dr_container --> diml_ddf_drimage
 
   
-      artifact diml_ddf_dr_web
+      artifact "diml_ddf_dr_web" as diml_ddf_dr_web
       web_container --> diml_ddf_dr_web
     
-      artifact diml_ddf_dr_gw
+      artifact "diml_ddf_dr_gw" as diml_ddf_dr_gw
       gateway_container --> diml_ddf_dr_gw
     
   }

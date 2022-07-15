@@ -24,53 +24,11 @@ Data Pipeline describes a pipeline to process a data source.
 | flows | n | DataFlow | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
-| pipeline | 1 | DataProcedure | false | false |  |
 | pipeline | 1 | DataProcedure | false | false |  |
 
 

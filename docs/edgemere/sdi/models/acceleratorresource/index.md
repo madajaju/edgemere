@@ -30,10 +30,6 @@ Logical Resource of Accelerators that are provisioned
 | cloud | 1 | Cloud | false | false |  |
 
 
-## Users of the Model
-
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
 
 
 
@@ -50,11 +46,16 @@ Logical Resource of Accelerators that are provisioned
     
 ### Action acceleratorresource factory
 
-* REST - acceleratorresource/factory
-* bin - acceleratorresource factory
-* js - acceleratorresource.factory
 
+
+* REST - acceleratorresource/factory?name=string&amp;value=object
+* bin - acceleratorresource factory --name string --value object
+* js - acceleratorresource.factory({ name:string,value:object })
+
+#### Description
 Create a Resource based on the hardware to resource table
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -66,15 +67,18 @@ Create a Resource based on the hardware to resource table
 
 ### Action acceleratorresource provision
 
-* REST - acceleratorresource/provision
-* bin - acceleratorresource provision
-* js - acceleratorresource.provision
 
+
+* REST - acceleratorresource/provision?
+* bin - acceleratorresource provision 
+* js - acceleratorresource.provision({  })
+
+#### Description
 Provision the Resource
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 

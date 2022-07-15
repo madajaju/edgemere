@@ -10,7 +10,7 @@ state "af" as amldsaf #lightblue {
 }
 
 
-state amldsaf #lightblue {
+state "amldsaf" as pstatename #lightblue {
     state "Custom Function" as affunction {
     }
 }

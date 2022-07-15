@@ -8,7 +8,7 @@ state "ta" as cplta #lightgray {
 }
 
 
-state cplta #lightgray {
+state "cplta" as pstatename #lightgray {
     state "Custom Function" as tafunction {
     }
 }

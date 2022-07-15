@@ -5,6 +5,8 @@
 package "Telemetry Aggregator" #lightgray {
 
     interface "Telemetry Aggregator" as i {
+            ^device.stats
+    
             /edgemere/cpl/ta/list()
             /edgemere/cpl/ta/report()
             /edgemere/cpl/ta/setparent()
@@ -15,9 +17,15 @@ package "Telemetry Aggregator" #lightgray {
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Telemetry Aggregator" #lightgray {
 

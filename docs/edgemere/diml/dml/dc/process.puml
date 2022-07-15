@@ -10,7 +10,7 @@ state "dc" as dimldmldc #lightblue {
 }
 
 
-state dimldmldc #lightblue {
+state "dimldmldc" as pstatename #lightblue {
     state "Custom Function" as dcfunction {
     }
 }

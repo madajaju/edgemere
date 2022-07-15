@@ -4,7 +4,7 @@ left to right direction
 
 
 
-state edgemere #lavender {
+state "edgemere" as pstatename #lavender {
     state "Custom Function" as edgemerefunction {
     }
 }

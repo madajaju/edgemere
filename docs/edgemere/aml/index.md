@@ -195,7 +195,28 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| application.create |  When an object of type Application is created. | Application
+| application.destroy |  When an object of type Application is destroyed. | Application
+| application.updated |  When an object of type Application has an attribute or association updated. | Application
+| applicationinstance.create |  When an object of type ApplicationInstance is created. | ApplicationInstance
+| applicationinstance.destroy |  When an object of type ApplicationInstance is destroyed. | ApplicationInstance
+| applicationinstance.updated |  When an object of type ApplicationInstance has an attribute or association updated. | ApplicationInstance
+| applicationtemplate.create |  When an object of type ApplicationTemplate is created. | ApplicationTemplate
+| applicationtemplate.destroy |  When an object of type ApplicationTemplate is destroyed. | ApplicationTemplate
+| applicationtemplate.updated |  When an object of type ApplicationTemplate has an attribute or association updated. | ApplicationTemplate
+| workload.create |  When an object of type Workload is created. | Workload
+| workload.destroy |  When an object of type Workload is destroyed. | Workload
+| workload.updated |  When an object of type Workload has an attribute or association updated. | Workload
+| workloadinstance.create |  When an object of type WorkloadInstance is created. | WorkloadInstance
+| workloadinstance.destroy |  When an object of type WorkloadInstance is destroyed. | WorkloadInstance
+| workloadinstance.updated |  When an object of type WorkloadInstance has an attribute or association updated. | WorkloadInstance
+| workloadtemplate.create |  When an object of type WorkloadTemplate is created. | WorkloadTemplate
+| workloadtemplate.destroy |  When an object of type WorkloadTemplate is destroyed. | WorkloadTemplate
+| workloadtemplate.updated |  When an object of type WorkloadTemplate has an attribute or association updated. | WorkloadTemplate
+
+
 
 ## Interface Details
 The Application Management Layer subsystem has a well defined interface. This interface can be accessed using a
@@ -204,11 +225,16 @@ subsystems and actors can access the system.
 
 ### Action  edgemere aml aimodel create
 
-* REST - /edgemere/aml/aimodel/create
-* bin -  edgemere aml aimodel create
-* js - .edgemere.aml.aimodel.create
 
+
+* REST - /edgemere/aml/aimodel/create?attr1=string
+* bin -  edgemere aml aimodel create --attr1 string
+* js - .edgemere.aml.aimodel.create({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -218,11 +244,16 @@ Description of the action
 
 ### Action  edgemere aml aimodel deploy
 
-* REST - /edgemere/aml/aimodel/deploy
-* bin -  edgemere aml aimodel deploy
-* js - .edgemere.aml.aimodel.deploy
 
+
+* REST - /edgemere/aml/aimodel/deploy?attr1=string
+* bin -  edgemere aml aimodel deploy --attr1 string
+* js - .edgemere.aml.aimodel.deploy({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -232,11 +263,16 @@ Description of the action
 
 ### Action  edgemere aml aimodel destroy
 
-* REST - /edgemere/aml/aimodel/destroy
-* bin -  edgemere aml aimodel destroy
-* js - .edgemere.aml.aimodel.destroy
 
+
+* REST - /edgemere/aml/aimodel/destroy?attr1=string
+* bin -  edgemere aml aimodel destroy --attr1 string
+* js - .edgemere.aml.aimodel.destroy({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -246,11 +282,16 @@ Description of the action
 
 ### Action  edgemere aml aimodel list
 
-* REST - /edgemere/aml/aimodel/list
-* bin -  edgemere aml aimodel list
-* js - .edgemere.aml.aimodel.list
 
+
+* REST - /edgemere/aml/aimodel/list?attr1=string
+* bin -  edgemere aml aimodel list --attr1 string
+* js - .edgemere.aml.aimodel.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -260,11 +301,16 @@ Description of the action
 
 ### Action  edgemere aml aimodel update
 
-* REST - /edgemere/aml/aimodel/update
-* bin -  edgemere aml aimodel update
-* js - .edgemere.aml.aimodel.update
 
+
+* REST - /edgemere/aml/aimodel/update?attr1=string
+* bin -  edgemere aml aimodel update --attr1 string
+* js - .edgemere.aml.aimodel.update({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -274,11 +320,16 @@ Description of the action
 
 ### Action  edgemere aml application create
 
-* REST - /edgemere/aml/application/create
-* bin -  edgemere aml application create
-* js - .edgemere.aml.application.create
 
+
+* REST - /edgemere/aml/application/create?attr1=string
+* bin -  edgemere aml application create --attr1 string
+* js - .edgemere.aml.application.create({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -288,11 +339,16 @@ Description of the action
 
 ### Action  edgemere aml application deploy
 
-* REST - /edgemere/aml/application/deploy
-* bin -  edgemere aml application deploy
-* js - .edgemere.aml.application.deploy
 
+
+* REST - /edgemere/aml/application/deploy?attr1=string
+* bin -  edgemere aml application deploy --attr1 string
+* js - .edgemere.aml.application.deploy({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -302,11 +358,16 @@ Description of the action
 
 ### Action  edgemere aml application destroy
 
-* REST - /edgemere/aml/application/destroy
-* bin -  edgemere aml application destroy
-* js - .edgemere.aml.application.destroy
 
+
+* REST - /edgemere/aml/application/destroy?attr1=string
+* bin -  edgemere aml application destroy --attr1 string
+* js - .edgemere.aml.application.destroy({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -316,11 +377,16 @@ Description of the action
 
 ### Action  edgemere aml application list
 
-* REST - /edgemere/aml/application/list
-* bin -  edgemere aml application list
-* js - .edgemere.aml.application.list
 
+
+* REST - /edgemere/aml/application/list?attr1=string
+* bin -  edgemere aml application list --attr1 string
+* js - .edgemere.aml.application.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -330,11 +396,16 @@ Description of the action
 
 ### Action  edgemere aml application monitor
 
-* REST - /edgemere/aml/application/monitor
-* bin -  edgemere aml application monitor
-* js - .edgemere.aml.application.monitor
 
+
+* REST - /edgemere/aml/application/monitor?attr1=string
+* bin -  edgemere aml application monitor --attr1 string
+* js - .edgemere.aml.application.monitor({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -344,11 +415,16 @@ Description of the action
 
 ### Action  edgemere aml application update
 
-* REST - /edgemere/aml/application/update
-* bin -  edgemere aml application update
-* js - .edgemere.aml.application.update
 
+
+* REST - /edgemere/aml/application/update?attr1=string
+* bin -  edgemere aml application update --attr1 string
+* js - .edgemere.aml.application.update({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -358,11 +434,16 @@ Description of the action
 
 ### Action  edgemere aml workload create
 
-* REST - /edgemere/aml/workload/create
-* bin -  edgemere aml workload create
-* js - .edgemere.aml.workload.create
 
+
+* REST - /edgemere/aml/workload/create?attr1=string
+* bin -  edgemere aml workload create --attr1 string
+* js - .edgemere.aml.workload.create({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -372,11 +453,16 @@ Description of the action
 
 ### Action  edgemere aml workload deploy
 
-* REST - /edgemere/aml/workload/deploy
-* bin -  edgemere aml workload deploy
-* js - .edgemere.aml.workload.deploy
 
+
+* REST - /edgemere/aml/workload/deploy?attr1=string
+* bin -  edgemere aml workload deploy --attr1 string
+* js - .edgemere.aml.workload.deploy({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -386,11 +472,16 @@ Description of the action
 
 ### Action  edgemere aml workload destroy
 
-* REST - /edgemere/aml/workload/destroy
-* bin -  edgemere aml workload destroy
-* js - .edgemere.aml.workload.destroy
 
+
+* REST - /edgemere/aml/workload/destroy?attr1=string
+* bin -  edgemere aml workload destroy --attr1 string
+* js - .edgemere.aml.workload.destroy({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -400,11 +491,16 @@ Description of the action
 
 ### Action  edgemere aml workload list
 
-* REST - /edgemere/aml/workload/list
-* bin -  edgemere aml workload list
-* js - .edgemere.aml.workload.list
 
+
+* REST - /edgemere/aml/workload/list?attr1=string
+* bin -  edgemere aml workload list --attr1 string
+* js - .edgemere.aml.workload.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -414,11 +510,16 @@ Description of the action
 
 ### Action  edgemere aml workload monitor
 
-* REST - /edgemere/aml/workload/monitor
-* bin -  edgemere aml workload monitor
-* js - .edgemere.aml.workload.monitor
 
+
+* REST - /edgemere/aml/workload/monitor?attr1=string
+* bin -  edgemere aml workload monitor --attr1 string
+* js - .edgemere.aml.workload.monitor({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -428,11 +529,16 @@ Description of the action
 
 ### Action  edgemere aml workload update
 
-* REST - /edgemere/aml/workload/update
-* bin -  edgemere aml workload update
-* js - .edgemere.aml.workload.update
 
+
+* REST - /edgemere/aml/workload/update?attr1=string
+* bin -  edgemere aml workload update --attr1 string
+* js - .edgemere.aml.workload.update({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

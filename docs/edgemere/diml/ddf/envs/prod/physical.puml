@@ -31,10 +31,10 @@ package "Data Definition Framework" #ffcc88 {
     diml_dff_container --> diml_dffimage
 
   
-      artifact diml_ddf_web
+      artifact "diml_ddf_web" as diml_ddf_web
       web_container --> diml_ddf_web
     
-      artifact diml_ddf_gw
+      artifact "diml_ddf_gw" as diml_ddf_gw
       gateway_container --> diml_ddf_gw
     
   }

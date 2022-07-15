@@ -31,10 +31,10 @@ package "Storage Services" #lightblue {
     storage_container --> storageimage
 
   
-      artifact diml_cds_storage_web
+      artifact "diml_cds_storage_web" as diml_cds_storage_web
       web_container --> diml_cds_storage_web
     
-      artifact diml_cds_storage_gw
+      artifact "diml_cds_storage_gw" as diml_cds_storage_gw
       gateway_container --> diml_cds_storage_gw
     
   }

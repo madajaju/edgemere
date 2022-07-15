@@ -31,10 +31,10 @@ package "Cloud Broker" #lightgreen {
     sml_cb_container --> sml_cbimage
 
   
-      artifact sml_cb_web
+      artifact "sml_cb_web" as sml_cb_web
       web_container --> sml_cb_web
     
-      artifact sml_cb_gw
+      artifact "sml_cb_gw" as sml_cb_gw
       gateway_container --> sml_cb_gw
     
   }

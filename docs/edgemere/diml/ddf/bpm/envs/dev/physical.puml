@@ -31,10 +31,10 @@ package "Blue Print Management" #lightblue {
     diml_ddf_bpm_container --> diml_ddf_bpmimage
 
   
-      artifact diml_ddf_bpm_web
+      artifact "diml_ddf_bpm_web" as diml_ddf_bpm_web
       web_container --> diml_ddf_bpm_web
     
-      artifact diml_ddf_bpm_gw
+      artifact "diml_ddf_bpm_gw" as diml_ddf_bpm_gw
       gateway_container --> diml_ddf_bpm_gw
     
   }

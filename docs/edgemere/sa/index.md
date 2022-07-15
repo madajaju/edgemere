@@ -149,7 +149,16 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| policy.create |  When an object of type Policy is created. | Policy
+| policy.destroy |  When an object of type Policy is destroyed. | Policy
+| policy.updated |  When an object of type Policy has an attribute or association updated. | Policy
+| policycollection.create |  When an object of type PolicyCollection is created. | PolicyCollection
+| policycollection.destroy |  When an object of type PolicyCollection is destroyed. | PolicyCollection
+| policycollection.updated |  When an object of type PolicyCollection has an attribute or association updated. | PolicyCollection
+
+
 
 ## Interface Details
 The Security Aspect subsystem has a well defined interface. This interface can be accessed using a

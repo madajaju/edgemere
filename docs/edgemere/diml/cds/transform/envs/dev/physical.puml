@@ -31,10 +31,10 @@ package "Transform Services" #lightblue {
     transform_container --> transformimage
 
   
-      artifact diml_cds_transform_web
+      artifact "diml_cds_transform_web" as diml_cds_transform_web
       web_container --> diml_cds_transform_web
     
-      artifact diml_cds_transform_gw
+      artifact "diml_cds_transform_gw" as diml_cds_transform_gw
       gateway_container --> diml_cds_transform_gw
     
   }

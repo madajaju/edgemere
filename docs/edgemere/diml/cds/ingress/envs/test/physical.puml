@@ -31,10 +31,10 @@ package "Ingress Services" #lightblue {
     ingress_container --> ingressimage
 
   
-      artifact diml_cds_ingress_web
+      artifact "diml_cds_ingress_web" as diml_cds_ingress_web
       web_container --> diml_cds_ingress_web
     
-      artifact diml_cds_ingress_gw
+      artifact "diml_cds_ingress_gw" as diml_cds_ingress_gw
       gateway_container --> diml_cds_ingress_gw
     
   }

@@ -31,10 +31,10 @@ package "Data Adaptor Framework" #lightblue {
     diml_ddf_daf_container --> diml_ddf_dafimage
 
   
-      artifact diml_ddf_daf_web
+      artifact "diml_ddf_daf_web" as diml_ddf_daf_web
       web_container --> diml_ddf_daf_web
     
-      artifact diml_ddf_daf_gw
+      artifact "diml_ddf_daf_gw" as diml_ddf_daf_gw
       gateway_container --> diml_ddf_daf_gw
     
   }

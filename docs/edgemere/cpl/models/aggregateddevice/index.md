@@ -30,6 +30,7 @@ This is a construct that has other devices under it
 | parent | 1 | AggregatedDevice | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
@@ -38,217 +39,15 @@ This is a construct that has other devices under it
 | adevices | n | DataCenter | false | true |  |
 | adevices | n | Cloud | false | false |  |
 | aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
 | parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
-| parent | 1 | Device | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
-| adevices | n | DataCenter | false | true |  |
-| adevices | n | Cloud | false | false |  |
-| aggregates | n | Request | false | false |  |
 
 
 
 ## State Net
+The AggregatedDevice has a state net corresponding to instances of the class. Each state transistion will emit an 
+event that can be caught with a websocket client. The name of the event is the name of the state in all lower case.
+The following diagram is the state net for this class.
+
 ![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
@@ -282,11 +81,16 @@ This is a construct that has other devices under it
     
 ### Action aggregateddevice addDevices
 
-* REST - aggregateddevice/addDevices
-* bin - aggregateddevice addDevices
-* js - aggregateddevice.addDevices
 
+
+* REST - aggregateddevice/addDevices?item=object
+* bin - aggregateddevice addDevices --item object
+* js - aggregateddevice.addDevices({ item:object })
+
+#### Description
 Add Devices to the Aggregated Device
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -297,39 +101,50 @@ Add Devices to the Aggregated Device
 
 ### Action aggregateddevice disable
 
-* REST - aggregateddevice/disable
-* bin - aggregateddevice disable
-* js - aggregateddevice.disable
 
+
+* REST - aggregateddevice/disable?
+* bin - aggregateddevice disable 
+* js - aggregateddevice.disable({  })
+
+#### Description
 Disable Device and its hardware
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action aggregateddevice enable
 
-* REST - aggregateddevice/enable
-* bin - aggregateddevice enable
-* js - aggregateddevice.enable
 
+
+* REST - aggregateddevice/enable?
+* bin - aggregateddevice enable 
+* js - aggregateddevice.enable({  })
+
+#### Description
 Enable Device to be used.
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action aggregateddevice reserve
 
-* REST - aggregateddevice/reserve
-* bin - aggregateddevice reserve
-* js - aggregateddevice.reserve
 
+
+* REST - aggregateddevice/reserve?request=object
+* bin - aggregateddevice reserve --request object
+* js - aggregateddevice.reserve({ request:object })
+
+#### Description
 Reserve a resource
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -340,25 +155,33 @@ Reserve a resource
 
 ### Action aggregateddevice addToHardware
 
-* REST - aggregateddevice/addToHardware
-* bin - aggregateddevice addToHardware
-* js - aggregateddevice.addToHardware
 
+
+* REST - aggregateddevice/addToHardware?
+* bin - aggregateddevice addToHardware 
+* js - aggregateddevice.addToHardware({  })
+
+#### Description
 Create a Device
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action aggregateddevice create
 
-* REST - aggregateddevice/create
-* bin - aggregateddevice create
-* js - aggregateddevice.create
 
+
+* REST - aggregateddevice/create?name=string&amp;file=YAML
+* bin - aggregateddevice create --name string --file YAML
+* js - aggregateddevice.create({ name:string,file:YAML })
+
+#### Description
 Create a Device
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -370,11 +193,16 @@ Create a Device
 
 ### Action aggregateddevice getReservations
 
-* REST - aggregateddevice/getReservations
-* bin - aggregateddevice getReservations
-* js - aggregateddevice.getReservations
 
+
+* REST - aggregateddevice/getReservations?requirements=YAML
+* bin - aggregateddevice getReservations --requirements YAML
+* js - aggregateddevice.getReservations({ requirements:YAML })
+
+#### Description
 Get reservation from the requirements
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -385,11 +213,16 @@ Get reservation from the requirements
 
 ### Action aggregateddevice provision
 
-* REST - aggregateddevice/provision
-* bin - aggregateddevice provision
-* js - aggregateddevice.provision
 
+
+* REST - aggregateddevice/provision?requirements=json
+* bin - aggregateddevice provision --requirements json
+* js - aggregateddevice.provision({ requirements:json })
+
+#### Description
 Provision Hardware to meet the requirements
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

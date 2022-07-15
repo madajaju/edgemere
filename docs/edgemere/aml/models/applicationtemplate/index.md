@@ -24,10 +24,6 @@ An ApplicationTemplate provides a template to create applications based on param
 | app | n | Application | false | false |  |
 
 
-## Users of the Model
-
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
 
 
 

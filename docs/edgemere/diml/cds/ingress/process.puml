@@ -10,7 +10,7 @@ state "ingress" as dimlcdsingress #lightblue {
 }
 
 
-state dimlcdsingress #lightblue {
+state "dimlcdsingress" as pstatename #lightblue {
     state "Custom Function" as ingressfunction {
     }
 }

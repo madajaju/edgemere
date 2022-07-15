@@ -8,7 +8,7 @@ parent: usecases
 
 IT Operations manages data centers by creating, deleting, enabling and disabling devicesand aggregated devices
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 
@@ -26,11 +26,11 @@ IT Operations manages data centers by creating, deleting, enabling and disabling
 
 ## Detail Scenarios
 
-* [Manage Data Center](#scenario-CreateDataCenter)
-* [Manage Data Center](#scenario-DisableDataCenter)
-* [Manage Data Center](#scenario-EnableDataCenter)
-* [Manage Data Center](#scenario-RemoveDataCenter)
-* [Manage Data Center](#scenario-UpdateDataCenter)
+* [CreateDataCenter](#scenario-CreateDataCenter)
+* [DisableDataCenter](#scenario-DisableDataCenter)
+* [EnableDataCenter](#scenario-EnableDataCenter)
+* [RemoveDataCenter](#scenario-RemoveDataCenter)
+* [UpdateDataCenter](#scenario-UpdateDataCenter)
 
 
 
@@ -38,7 +38,7 @@ IT Operations manages data centers by creating, deleting, enabling and disabling
 
 IT Operator creates data centers and allows them to add devices and aggregated devices
 
-![Scenario CreateDataCenter](./createdatacenter.png)
+![Scenario CreateDataCenter](./CreateDataCenter.png)
 
 #### Steps
 
@@ -81,7 +81,7 @@ IT Operator creates data centers and allows them to add devices and aggregated d
 
 IT Operations can disable a data center that will disable all of the devices in the data center. This can be used to test business continuity, move data center devices or decomission a data center.
 
-![Scenario DisableDataCenter](./disabledatacenter.png)
+![Scenario DisableDataCenter](./DisableDataCenter.png)
 
 #### Steps
 
@@ -106,7 +106,7 @@ IT Operations can disable a data center that will disable all of the devices in 
 
 IT Operations can enable a data center that has been disabled
 
-![Scenario EnableDataCenter](./enabledatacenter.png)
+![Scenario EnableDataCenter](./EnableDataCenter.png)
 
 #### Steps
 
@@ -133,7 +133,7 @@ IT Operations can enable a data center that has been disabled
 
 IT Operations can remove a Data Center and all of its devices and aggregated devices
 
-![Scenario RemoveDataCenter](./removedatacenter.png)
+![Scenario RemoveDataCenter](./RemoveDataCenter.png)
 
 #### Steps
 
@@ -170,7 +170,7 @@ IT Operations can remove a Data Center and all of its devices and aggregated dev
 
 IT Operations updates data center characteristics
 
-![Scenario UpdateDataCenter](./updatedatacenter.png)
+![Scenario UpdateDataCenter](./UpdateDataCenter.png)
 
 #### Steps
 

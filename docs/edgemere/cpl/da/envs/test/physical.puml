@@ -27,7 +27,7 @@ package "Device Agent" #lightgray {
     cpl_da_container --> cpl_daimage
 
   
-      artifact cpl_da_web
+      artifact "cpl_da_web" as cpl_da_web
       web_container --> cpl_da_web
     
   }

@@ -10,7 +10,7 @@ state "bpm" as dimlddfbpm #lightblue {
 }
 
 
-state dimlddfbpm #lightblue {
+state "dimlddfbpm" as pstatename #lightblue {
     state "Custom Function" as bpmfunction {
     }
 }

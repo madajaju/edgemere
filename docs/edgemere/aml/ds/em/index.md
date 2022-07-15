@@ -148,7 +148,13 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| environment.create |  When an object of type Environment is created. | Environment
+| environment.destroy |  When an object of type Environment is destroyed. | Environment
+| environment.updated |  When an object of type Environment has an attribute or association updated. | Environment
+
+
 
 ## Interface Details
 The Environment Management subsystem has a well defined interface. This interface can be accessed using a
@@ -157,11 +163,16 @@ subsystems and actors can access the system.
 
 ### Action  edgemere aml ds em environment addpolicies
 
-* REST - /edgemere/aml/ds/em/environment/addpolicies
-* bin -  edgemere aml ds em environment addpolicies
-* js - .edgemere.aml.ds.em.environment.addpolicies
 
+
+* REST - /edgemere/aml/ds/em/environment/addpolicies?attr1=string
+* bin -  edgemere aml ds em environment addpolicies --attr1 string
+* js - .edgemere.aml.ds.em.environment.addpolicies({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -171,11 +182,16 @@ Description of the action
 
 ### Action  edgemere aml ds em environment create
 
-* REST - /edgemere/aml/ds/em/environment/create
-* bin -  edgemere aml ds em environment create
-* js - .edgemere.aml.ds.em.environment.create
 
+
+* REST - /edgemere/aml/ds/em/environment/create?attr1=string
+* bin -  edgemere aml ds em environment create --attr1 string
+* js - .edgemere.aml.ds.em.environment.create({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -185,11 +201,16 @@ Description of the action
 
 ### Action  edgemere aml ds em environment destroy
 
-* REST - /edgemere/aml/ds/em/environment/destroy
-* bin -  edgemere aml ds em environment destroy
-* js - .edgemere.aml.ds.em.environment.destroy
 
+
+* REST - /edgemere/aml/ds/em/environment/destroy?attr1=string
+* bin -  edgemere aml ds em environment destroy --attr1 string
+* js - .edgemere.aml.ds.em.environment.destroy({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -199,11 +220,16 @@ Description of the action
 
 ### Action  edgemere aml ds em environment disable
 
-* REST - /edgemere/aml/ds/em/environment/disable
-* bin -  edgemere aml ds em environment disable
-* js - .edgemere.aml.ds.em.environment.disable
 
+
+* REST - /edgemere/aml/ds/em/environment/disable?attr1=string
+* bin -  edgemere aml ds em environment disable --attr1 string
+* js - .edgemere.aml.ds.em.environment.disable({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -213,11 +239,16 @@ Description of the action
 
 ### Action  edgemere aml ds em environment enable
 
-* REST - /edgemere/aml/ds/em/environment/enable
-* bin -  edgemere aml ds em environment enable
-* js - .edgemere.aml.ds.em.environment.enable
 
+
+* REST - /edgemere/aml/ds/em/environment/enable?attr1=string
+* bin -  edgemere aml ds em environment enable --attr1 string
+* js - .edgemere.aml.ds.em.environment.enable({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -227,11 +258,16 @@ Description of the action
 
 ### Action  edgemere aml ds em environment list
 
-* REST - /edgemere/aml/ds/em/environment/list
-* bin -  edgemere aml ds em environment list
-* js - .edgemere.aml.ds.em.environment.list
 
+
+* REST - /edgemere/aml/ds/em/environment/list?attr1=string
+* bin -  edgemere aml ds em environment list --attr1 string
+* js - .edgemere.aml.ds.em.environment.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -241,11 +277,16 @@ Description of the action
 
 ### Action  edgemere aml ds em environment update
 
-* REST - /edgemere/aml/ds/em/environment/update
-* bin -  edgemere aml ds em environment update
-* js - .edgemere.aml.ds.em.environment.update
 
+
+* REST - /edgemere/aml/ds/em/environment/update?attr1=string
+* bin -  edgemere aml ds em environment update --attr1 string
+* js - .edgemere.aml.ds.em.environment.update({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

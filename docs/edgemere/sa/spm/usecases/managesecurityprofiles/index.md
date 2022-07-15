@@ -8,7 +8,7 @@ parent: usecases
 
 Manage Security Profiles is the description
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 
@@ -26,12 +26,12 @@ Manage Security Profiles is the description
 
 ## Detail Scenarios
 
-* [Manage Security Profiles](#scenario-CreateSecurityProfile)
-* [Manage Security Profiles](#scenario-DisableSecurityProfile)
-* [Manage Security Profiles](#scenario-EnableSecurityProfile)
-* [Manage Security Profiles](#scenario-MonitorSecurityProfile)
-* [Manage Security Profiles](#scenario-RemoveSecurityProfile)
-* [Manage Security Profiles](#scenario-TestSecurityProfile)
+* [CreateSecurityProfile](#scenario-CreateSecurityProfile)
+* [DisableSecurityProfile](#scenario-DisableSecurityProfile)
+* [EnableSecurityProfile](#scenario-EnableSecurityProfile)
+* [MonitorSecurityProfile](#scenario-MonitorSecurityProfile)
+* [RemoveSecurityProfile](#scenario-RemoveSecurityProfile)
+* [TestSecurityProfile](#scenario-TestSecurityProfile)
 
 
 
@@ -39,7 +39,7 @@ Manage Security Profiles is the description
 
 Create Security Profile is the description
 
-![Scenario CreateSecurityProfile](./createsecurityprofile.png)
+![Scenario CreateSecurityProfile](./CreateSecurityProfile.png)
 
 #### Steps
 
@@ -58,7 +58,7 @@ Create Security Profile is the description
 
 Disable Security Profile is the description
 
-![Scenario DisableSecurityProfile](./disablesecurityprofile.png)
+![Scenario DisableSecurityProfile](./DisableSecurityProfile.png)
 
 #### Steps
 
@@ -77,7 +77,7 @@ Disable Security Profile is the description
 
 Enable Security Profile is the description
 
-![Scenario EnableSecurityProfile](./enablesecurityprofile.png)
+![Scenario EnableSecurityProfile](./EnableSecurityProfile.png)
 
 #### Steps
 
@@ -96,7 +96,7 @@ Enable Security Profile is the description
 
 Monitor Security Profile is the description
 
-![Scenario MonitorSecurityProfile](./monitorsecurityprofile.png)
+![Scenario MonitorSecurityProfile](./MonitorSecurityProfile.png)
 
 #### Steps
 
@@ -115,7 +115,7 @@ Monitor Security Profile is the description
 
 Remove Security Profile is the description
 
-![Scenario RemoveSecurityProfile](./removesecurityprofile.png)
+![Scenario RemoveSecurityProfile](./RemoveSecurityProfile.png)
 
 #### Steps
 
@@ -134,7 +134,7 @@ Remove Security Profile is the description
 
 Test Security Profile is the description
 
-![Scenario TestSecurityProfile](./testsecurityprofile.png)
+![Scenario TestSecurityProfile](./TestSecurityProfile.png)
 
 #### Steps
 

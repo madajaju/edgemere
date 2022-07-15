@@ -31,10 +31,10 @@ package "Service Orchestrator" #lightgreen {
     sml_so_container --> sml_soimage
 
   
-      artifact sml_so_web
+      artifact "sml_so_web" as sml_so_web
       web_container --> sml_so_web
     
-      artifact sml_so_gw
+      artifact "sml_so_gw" as sml_so_gw
       gateway_container --> sml_so_gw
     
   }

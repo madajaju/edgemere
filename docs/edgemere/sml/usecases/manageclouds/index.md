@@ -8,7 +8,7 @@ parent: usecases
 
 Manage Clouds is the description
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 

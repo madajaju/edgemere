@@ -8,7 +8,7 @@ parent: usecases
 
 Manage Resources includes creating resources, listing and planning for resources.
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 
@@ -26,9 +26,9 @@ Manage Resources includes creating resources, listing and planning for resources
 
 ## Detail Scenarios
 
-* [Manage Resources](#scenario-GetResources)
-* [Manage Resources](#scenario-ListResources)
-* [Manage Resources](#scenario-ReleaseResources)
+* [GetResources](#scenario-GetResources)
+* [ListResources](#scenario-ListResources)
+* [ReleaseResources](#scenario-ReleaseResources)
 
 
 
@@ -36,7 +36,7 @@ Manage Resources includes creating resources, listing and planning for resources
 
 Get Resources based on a set of requirements, this could be one resource or a set of resources. Requires a cloud and requirements to be specified. A name for the resources can be requested.
 
-![Scenario GetResources](./getresources.png)
+![Scenario GetResources](./GetResources.png)
 
 #### Steps
 
@@ -81,7 +81,7 @@ Get Resources based on a set of requirements, this could be one resource or a se
 
 List Resources and their utilization numbers. This is used for capacity planning.
 
-![Scenario ListResources](./listresources.png)
+![Scenario ListResources](./ListResources.png)
 
 #### Steps
 
@@ -126,7 +126,7 @@ List Resources and their utilization numbers. This is used for capacity planning
 
 Release Resources based on the name given when the Resources are requested
 
-![Scenario ReleaseResources](./releaseresources.png)
+![Scenario ReleaseResources](./ReleaseResources.png)
 
 #### Steps
 

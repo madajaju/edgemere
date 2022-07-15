@@ -25,53 +25,11 @@ Cost of the Resource
 | parent | 1 | ResourceInstanceType | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
-| costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
 | costs | n | ResourceInstanceType | true | true | Cost model for the Resource Instance Type |
 
 

@@ -6,7 +6,7 @@ state "sml" as sml #lightgreen {
 }
 
 
-state sml #lightgreen {
+state "sml" as pstatename #lightgreen {
     state "Custom Function" as smlfunction {
     }
 }

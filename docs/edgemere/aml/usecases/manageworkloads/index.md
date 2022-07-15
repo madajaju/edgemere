@@ -8,7 +8,7 @@ parent: usecases
 
 Application Developers need the ability to connect applications together through Workflows. This gives the organization the automate complex data interactions between legacy and modern applications across a hybrid infrastructure (Multi-Hybrid Cloud).
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 
@@ -27,11 +27,11 @@ Application Developers need the ability to connect applications together through
 
 ## Detail Scenarios
 
-* [Manage Workloads](#scenario-CreateWorkload)
-* [Manage Workloads](#scenario-DeployWorkload)
-* [Manage Workloads](#scenario-DestroyWorkload)
-* [Manage Workloads](#scenario-MonitorWorkload)
-* [Manage Workloads](#scenario-UpdateWorkload)
+* [CreateWorkload](#scenario-CreateWorkload)
+* [DeployWorkload](#scenario-DeployWorkload)
+* [DestroyWorkload](#scenario-DestroyWorkload)
+* [MonitorWorkload](#scenario-MonitorWorkload)
+* [UpdateWorkload](#scenario-UpdateWorkload)
 
 
 
@@ -39,7 +39,7 @@ Application Developers need the ability to connect applications together through
 
 Create Workload is the description
 
-![Scenario CreateWorkload](./createworkload.png)
+![Scenario CreateWorkload](./CreateWorkload.png)
 
 #### Steps
 
@@ -56,7 +56,7 @@ Create Workload is the description
 
 Deploy Workload is the description
 
-![Scenario DeployWorkload](./deployworkload.png)
+![Scenario DeployWorkload](./DeployWorkload.png)
 
 #### Steps
 
@@ -74,7 +74,7 @@ Deploy Workload is the description
 
 Destroy Workload is the description
 
-![Scenario DestroyWorkload](./destroyworkload.png)
+![Scenario DestroyWorkload](./DestroyWorkload.png)
 
 #### Steps
 
@@ -91,7 +91,7 @@ Destroy Workload is the description
 
 Monitor Workload is the description
 
-![Scenario MonitorWorkload](./monitorworkload.png)
+![Scenario MonitorWorkload](./MonitorWorkload.png)
 
 #### Steps
 
@@ -109,7 +109,7 @@ Monitor Workload is the description
 
 Update Workload is the description
 
-![Scenario UpdateWorkload](./updateworkload.png)
+![Scenario UpdateWorkload](./UpdateWorkload.png)
 
 #### Steps
 

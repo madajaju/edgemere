@@ -8,7 +8,7 @@ state "sr" as smlsr #lightgreen {
 }
 
 
-state smlsr #lightgreen {
+state "smlsr" as pstatename #lightgreen {
     state "Custom Function" as srfunction {
     }
 }

@@ -145,11 +145,27 @@ The Device Manager subsystem provides the following activities and flows that he
 cases and scenarios of the subsystem.
 
 
+### Messages Handled
+
+The Device Manager subsystem is an event driven architecture and handle several events. The following
+events are handled by this subsystem. Please note that this subsystem is not the only subsystem that handles
+these events.
+
+| Message | Action | Description |
+| --- | --- | --- |
+| agent.started | /dm/agent/register |  |
+
 
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| agent.create |  When an object of type Agent is created. | Agent
+| agent.destroy |  When an object of type Agent is destroyed. | Agent
+| agent.updated |  When an object of type Agent has an attribute or association updated. | Agent
+
+
 
 ## Interface Details
 The Device Manager subsystem has a well defined interface. This interface can be accessed using a
@@ -158,11 +174,16 @@ subsystems and actors can access the system.
 
 ### Action  edgemere cpl dm agent register
 
-* REST - /edgemere/cpl/dm/agent/register
-* bin -  edgemere cpl dm agent register
-* js - .edgemere.cpl.dm.agent.register
 
+
+* REST - /edgemere/cpl/dm/agent/register?url=string&amp;name=string
+* bin -  edgemere cpl dm agent register --url string --name string
+* js - .edgemere.cpl.dm.agent.register({ url:string,name:string })
+
+#### Description
 Register Agent with the Manager
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -173,11 +194,16 @@ Register Agent with the Manager
 
 ### Action  edgemere cpl dm service register
 
-* REST - /edgemere/cpl/dm/service/register
-* bin -  edgemere cpl dm service register
-* js - .edgemere.cpl.dm.service.register
 
+
+* REST - /edgemere/cpl/dm/service/register?url=string&amp;name=string
+* bin -  edgemere cpl dm service register --url string --name string
+* js - .edgemere.cpl.dm.service.register({ url:string,name:string })
+
+#### Description
 Register Agent with the Manager
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

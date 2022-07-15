@@ -8,7 +8,7 @@ state "dm" as cpldm #lightgray {
 }
 
 
-state cpldm #lightgray {
+state "cpldm" as pstatename #lightgray {
     state "Custom Function" as dmfunction {
     }
 }

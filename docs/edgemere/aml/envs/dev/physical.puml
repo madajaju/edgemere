@@ -31,10 +31,10 @@ package "Application Management Layer" #lightblue {
     aml_container --> amlimage
 
   
-      artifact aml_web
+      artifact "aml_web" as aml_web
       web_container --> aml_web
     
-      artifact aml_gw
+      artifact "aml_gw" as aml_gw
       gateway_container --> aml_gw
     
   }

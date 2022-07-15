@@ -142,11 +142,26 @@ The Security Profile Manager subsystem provides the following activities and flo
 cases and scenarios of the subsystem.
 
 
+### Messages Handled
+
+The Security Profile Manager subsystem is an event driven architecture and handle several events. The following
+events are handled by this subsystem. Please note that this subsystem is not the only subsystem that handles
+these events.
+
+| Message | Action | Description |
+| --- | --- | --- |
+
 
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| securityprofile.create |  When an object of type SecurityProfile is created. | SecurityProfile
+| securityprofile.destroy |  When an object of type SecurityProfile is destroyed. | SecurityProfile
+| securityprofile.updated |  When an object of type SecurityProfile has an attribute or association updated. | SecurityProfile
+
+
 
 ## Interface Details
 The Security Profile Manager subsystem has a well defined interface. This interface can be accessed using a
@@ -155,11 +170,16 @@ subsystems and actors can access the system.
 
 ### Action  edgemere sa spm data create
 
-* REST - /edgemere/sa/spm/data/create
-* bin -  edgemere sa spm data create
-* js - .edgemere.sa.spm.data.create
 
+
+* REST - /edgemere/sa/spm/data/create?attr1=string
+* bin -  edgemere sa spm data create --attr1 string
+* js - .edgemere.sa.spm.data.create({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -169,11 +189,16 @@ Description of the action
 
 ### Action  edgemere sa spm data govern
 
-* REST - /edgemere/sa/spm/data/govern
-* bin -  edgemere sa spm data govern
-* js - .edgemere.sa.spm.data.govern
 
+
+* REST - /edgemere/sa/spm/data/govern?attr1=string
+* bin -  edgemere sa spm data govern --attr1 string
+* js - .edgemere.sa.spm.data.govern({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

@@ -19,14 +19,9 @@ Attribute type of Metric. This is for metrics that are descriptiive not consumab
 
 ## Associations
 
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
+No associations
 
 
-## Users of the Model
-
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
 
 
 
@@ -57,11 +52,16 @@ Attribute type of Metric. This is for metrics that are descriptiive not consumab
     
 ### Action metricattribute consume
 
-* REST - metricattribute/consume
-* bin - metricattribute consume
-* js - metricattribute.consume
 
+
+* REST - metricattribute/consume?value=object
+* bin - metricattribute consume --value object
+* js - metricattribute.consume({ value:object })
+
+#### Description
 Consume attribute metric to the current value
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -72,25 +72,33 @@ Consume attribute metric to the current value
 
 ### Action metricattribute copy
 
-* REST - metricattribute/copy
-* bin - metricattribute copy
-* js - metricattribute.copy
 
+
+* REST - metricattribute/copy?
+* bin - metricattribute copy 
+* js - metricattribute.copy({  })
+
+#### Description
 Copy Metric
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action metricattribute lessThanEq
 
-* REST - metricattribute/lessThanEq
-* bin - metricattribute lessThanEq
-* js - metricattribute.lessThanEq
 
+
+* REST - metricattribute/lessThanEq?value=object
+* bin - metricattribute lessThanEq --value object
+* js - metricattribute.lessThanEq({ value:object })
+
+#### Description
 Test less than or equal to the value passed in
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -101,11 +109,16 @@ Test less than or equal to the value passed in
 
 ### Action metricattribute minus
 
-* REST - metricattribute/minus
-* bin - metricattribute minus
-* js - metricattribute.minus
 
+
+* REST - metricattribute/minus?value=object
+* bin - metricattribute minus --value object
+* js - metricattribute.minus({ value:object })
+
+#### Description
 Add attribute metric to the current value
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -116,11 +129,16 @@ Add attribute metric to the current value
 
 ### Action metricattribute plus
 
-* REST - metricattribute/plus
-* bin - metricattribute plus
-* js - metricattribute.plus
 
+
+* REST - metricattribute/plus?value=object
+* bin - metricattribute plus --value object
+* js - metricattribute.plus({ value:object })
+
+#### Description
 Add attribute metric to the current value
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -131,25 +149,33 @@ Add attribute metric to the current value
 
 ### Action metricattribute valueToString
 
-* REST - metricattribute/valueToString
-* bin - metricattribute valueToString
-* js - metricattribute.valueToString
 
+
+* REST - metricattribute/valueToString?
+* bin - metricattribute valueToString 
+* js - metricattribute.valueToString({  })
+
+#### Description
 Change to string Metric Consumeable
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action metricattribute factory
 
-* REST - metricattribute/factory
-* bin - metricattribute factory
-* js - metricattribute.factory
 
+
+* REST - metricattribute/factory?name=string&amp;value=json
+* bin - metricattribute factory --name string --value json
+* js - metricattribute.factory({ name:string,value:json })
+
+#### Description
 Create a metric based on the metrictype table
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -161,11 +187,16 @@ Create a metric based on the metrictype table
 
 ### Action metricattribute greaterThanEq
 
-* REST - metricattribute/greaterThanEq
-* bin - metricattribute greaterThanEq
-* js - metricattribute.greaterThanEq
 
+
+* REST - metricattribute/greaterThanEq?value=object
+* bin - metricattribute greaterThanEq --value object
+* js - metricattribute.greaterThanEq({ value:object })
+
+#### Description
 Test greater than or equal to the value passed in
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -176,11 +207,16 @@ Test greater than or equal to the value passed in
 
 ### Action metricattribute set
 
-* REST - metricattribute/set
-* bin - metricattribute set
-* js - metricattribute.set
 
+
+* REST - metricattribute/set?value=number
+* bin - metricattribute set --value number
+* js - metricattribute.set({ value:number })
+
+#### Description
 Add value to a metric
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

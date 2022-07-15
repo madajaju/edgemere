@@ -31,10 +31,10 @@ package "Data Orchestrator" #lightblue {
     diml_dml_do_container --> diml_dml_doimage
 
   
-      artifact diml_dml_do_web
+      artifact "diml_dml_do_web" as diml_dml_do_web
       web_container --> diml_dml_do_web
     
-      artifact diml_dml_do_gw
+      artifact "diml_dml_do_gw" as diml_dml_do_gw
       gateway_container --> diml_dml_do_gw
     
   }

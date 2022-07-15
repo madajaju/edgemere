@@ -8,7 +8,7 @@ parent: usecases
 
 Manage Meta Data is the description
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 
@@ -26,8 +26,8 @@ Manage Meta Data is the description
 
 ## Detail Scenarios
 
-* [Manage Meta Data](#scenario-CaptureMetaData)
-* [Manage Meta Data](#scenario-ManageDataCatalog)
+* [CaptureMetaData](#scenario-CaptureMetaData)
+* [ManageDataCatalog](#scenario-ManageDataCatalog)
 
 
 
@@ -35,7 +35,7 @@ Manage Meta Data is the description
 
 Capture Meta Data is the description
 
-![Scenario CaptureMetaData](./capturemetadata.png)
+![Scenario CaptureMetaData](./CaptureMetaData.png)
 
 #### Steps
 
@@ -66,7 +66,7 @@ Capture Meta Data is the description
 
 Manage Data Catalog is the description
 
-![Scenario ManageDataCatalog](./managedatacatalog.png)
+![Scenario ManageDataCatalog](./ManageDataCatalog.png)
 
 #### Steps
 

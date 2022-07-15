@@ -29,96 +29,11 @@ A Stack is an aggregation of services in one context. The Stack can have any num
 | data | n | DataReference | false | true | Data for the stack |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
-| stacks | n | StackDefinition | true | true | Services of the stack |
-| parent | 1 | StackDefinition |  |  | Services of the stack |
 | stacks | n | StackDefinition | true | true | Services of the stack |
 | parent | 1 | StackDefinition |  |  | Services of the stack |
 
@@ -135,15 +50,18 @@ A Stack is an aggregation of services in one context. The Stack can have any num
     
 ### Action stackdefinition create
 
-* REST - stackdefinition/create
-* bin - stackdefinition create
-* js - stackdefinition.create
 
+
+* REST - stackdefinition/create?
+* bin - stackdefinition create 
+* js - stackdefinition.create({  })
+
+#### Description
 Create a Stack
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 

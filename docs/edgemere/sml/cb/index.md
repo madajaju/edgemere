@@ -158,7 +158,22 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| cloudtype.create |  When an object of type CloudType is created. | CloudType
+| cloudtype.destroy |  When an object of type CloudType is destroyed. | CloudType
+| cloudtype.updated |  When an object of type CloudType has an attribute or association updated. | CloudType
+| resourcecost.create |  When an object of type ResourceCost is created. | ResourceCost
+| resourcecost.destroy |  When an object of type ResourceCost is destroyed. | ResourceCost
+| resourcecost.updated |  When an object of type ResourceCost has an attribute or association updated. | ResourceCost
+| resourceinstancetype.create |  When an object of type ResourceInstanceType is created. | ResourceInstanceType
+| resourceinstancetype.destroy |  When an object of type ResourceInstanceType is destroyed. | ResourceInstanceType
+| resourceinstancetype.updated |  When an object of type ResourceInstanceType has an attribute or association updated. | ResourceInstanceType
+| resourcemap.create |  When an object of type ResourceMap is created. | ResourceMap
+| resourcemap.destroy |  When an object of type ResourceMap is destroyed. | ResourceMap
+| resourcemap.updated |  When an object of type ResourceMap has an attribute or association updated. | ResourceMap
+
+
 
 ## Interface Details
 The Cloud Broker subsystem has a well defined interface. This interface can be accessed using a
@@ -167,11 +182,16 @@ subsystems and actors can access the system.
 
 ### Action  edgemere sml cb billing list
 
-* REST - /edgemere/sml/cb/billing/list
-* bin -  edgemere sml cb billing list
-* js - .edgemere.sml.cb.billing.list
 
+
+* REST - /edgemere/sml/cb/billing/list?attr1=string
+* bin -  edgemere sml cb billing list --attr1 string
+* js - .edgemere.sml.cb.billing.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -181,11 +201,16 @@ Description of the action
 
 ### Action  edgemere sml cb data govern
 
-* REST - /edgemere/sml/cb/data/govern
-* bin -  edgemere sml cb data govern
-* js - .edgemere.sml.cb.data.govern
 
+
+* REST - /edgemere/sml/cb/data/govern?attr1=string
+* bin -  edgemere sml cb data govern --attr1 string
+* js - .edgemere.sml.cb.data.govern({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -195,11 +220,16 @@ Description of the action
 
 ### Action  edgemere sml cb multicloud addclouds
 
-* REST - /edgemere/sml/cb/multicloud/addclouds
-* bin -  edgemere sml cb multicloud addclouds
-* js - .edgemere.sml.cb.multicloud.addclouds
 
+
+* REST - /edgemere/sml/cb/multicloud/addclouds?attr1=string
+* bin -  edgemere sml cb multicloud addclouds --attr1 string
+* js - .edgemere.sml.cb.multicloud.addclouds({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -209,11 +239,16 @@ Description of the action
 
 ### Action  edgemere sml cb multicloud addpolicies
 
-* REST - /edgemere/sml/cb/multicloud/addpolicies
-* bin -  edgemere sml cb multicloud addpolicies
-* js - .edgemere.sml.cb.multicloud.addpolicies
 
+
+* REST - /edgemere/sml/cb/multicloud/addpolicies?attr1=string
+* bin -  edgemere sml cb multicloud addpolicies --attr1 string
+* js - .edgemere.sml.cb.multicloud.addpolicies({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -223,11 +258,16 @@ Description of the action
 
 ### Action  edgemere sml cb multicloud list
 
-* REST - /edgemere/sml/cb/multicloud/list
-* bin -  edgemere sml cb multicloud list
-* js - .edgemere.sml.cb.multicloud.list
 
+
+* REST - /edgemere/sml/cb/multicloud/list?attr1=string
+* bin -  edgemere sml cb multicloud list --attr1 string
+* js - .edgemere.sml.cb.multicloud.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -237,11 +277,16 @@ Description of the action
 
 ### Action  edgemere sml cb multicloud mapresources
 
-* REST - /edgemere/sml/cb/multicloud/mapresources
-* bin -  edgemere sml cb multicloud mapresources
-* js - .edgemere.sml.cb.multicloud.mapresources
 
+
+* REST - /edgemere/sml/cb/multicloud/mapresources?attr1=string
+* bin -  edgemere sml cb multicloud mapresources --attr1 string
+* js - .edgemere.sml.cb.multicloud.mapresources({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -251,11 +296,16 @@ Description of the action
 
 ### Action  edgemere sml cb multicloud removepolicies
 
-* REST - /edgemere/sml/cb/multicloud/removepolicies
-* bin -  edgemere sml cb multicloud removepolicies
-* js - .edgemere.sml.cb.multicloud.removepolicies
 
+
+* REST - /edgemere/sml/cb/multicloud/removepolicies?attr1=string
+* bin -  edgemere sml cb multicloud removepolicies --attr1 string
+* js - .edgemere.sml.cb.multicloud.removepolicies({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -265,11 +315,16 @@ Description of the action
 
 ### Action  edgemere sml cb resourceinstancetype list
 
-* REST - /edgemere/sml/cb/resourceinstancetype/list
-* bin -  edgemere sml cb resourceinstancetype list
-* js - .edgemere.sml.cb.resourceinstancetype.list
 
+
+* REST - /edgemere/sml/cb/resourceinstancetype/list?attr1=string
+* bin -  edgemere sml cb resourceinstancetype list --attr1 string
+* js - .edgemere.sml.cb.resourceinstancetype.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -279,11 +334,16 @@ Description of the action
 
 ### Action  edgemere sml cb resources find
 
-* REST - /edgemere/sml/cb/resources/find
-* bin -  edgemere sml cb resources find
-* js - .edgemere.sml.cb.resources.find
 
+
+* REST - /edgemere/sml/cb/resources/find?attr1=string
+* bin -  edgemere sml cb resources find --attr1 string
+* js - .edgemere.sml.cb.resources.find({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -293,11 +353,16 @@ Description of the action
 
 ### Action  edgemere sml cb service mapresources
 
-* REST - /edgemere/sml/cb/service/mapresources
-* bin -  edgemere sml cb service mapresources
-* js - .edgemere.sml.cb.service.mapresources
 
+
+* REST - /edgemere/sml/cb/service/mapresources?attr1=string
+* bin -  edgemere sml cb service mapresources --attr1 string
+* js - .edgemere.sml.cb.service.mapresources({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

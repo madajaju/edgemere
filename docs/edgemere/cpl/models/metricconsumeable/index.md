@@ -19,14 +19,9 @@ Consumeable Metric that is consumed when a resource is utilized
 
 ## Associations
 
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
+No associations
 
 
-## Users of the Model
-
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
 
 
 
@@ -59,11 +54,16 @@ Consumeable Metric that is consumed when a resource is utilized
     
 ### Action metricconsumeable create
 
-* REST - metricconsumeable/create
-* bin - metricconsumeable create
-* js - metricconsumeable.create
 
+
+* REST - metricconsumeable/create?name=string&amp;value=string
+* bin - metricconsumeable create --name string --value string
+* js - metricconsumeable.create({ name:string,value:string })
+
+#### Description
 Create Composite Metric
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -75,25 +75,33 @@ Create Composite Metric
 
 ### Action metricconsumeable valueToString
 
-* REST - metricconsumeable/valueToString
-* bin - metricconsumeable valueToString
-* js - metricconsumeable.valueToString
 
+
+* REST - metricconsumeable/valueToString?
+* bin - metricconsumeable valueToString 
+* js - metricconsumeable.valueToString({  })
+
+#### Description
 Change to string Metric Consumeable
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action metricconsumeable consume
 
-* REST - metricconsumeable/consume
-* bin - metricconsumeable consume
-* js - metricconsumeable.consume
 
+
+* REST - metricconsumeable/consume?value=number
+* bin - metricconsumeable consume --value number
+* js - metricconsumeable.consume({ value:number })
+
+#### Description
 Consume value from a metric
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -104,25 +112,33 @@ Consume value from a metric
 
 ### Action metricconsumeable copy
 
-* REST - metricconsumeable/copy
-* bin - metricconsumeable copy
-* js - metricconsumeable.copy
 
+
+* REST - metricconsumeable/copy?
+* bin - metricconsumeable copy 
+* js - metricconsumeable.copy({  })
+
+#### Description
 Copy Metric
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action metricconsumeable factory
 
-* REST - metricconsumeable/factory
-* bin - metricconsumeable factory
-* js - metricconsumeable.factory
 
+
+* REST - metricconsumeable/factory?name=string&amp;value=json
+* bin - metricconsumeable factory --name string --value json
+* js - metricconsumeable.factory({ name:string,value:json })
+
+#### Description
 Create a metric based on the metrictype table
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -134,11 +150,16 @@ Create a metric based on the metrictype table
 
 ### Action metricconsumeable greaterThanEq
 
-* REST - metricconsumeable/greaterThanEq
-* bin - metricconsumeable greaterThanEq
-* js - metricconsumeable.greaterThanEq
 
+
+* REST - metricconsumeable/greaterThanEq?value=object
+* bin - metricconsumeable greaterThanEq --value object
+* js - metricconsumeable.greaterThanEq({ value:object })
+
+#### Description
 Test greater than or equal to the value passed in
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -149,11 +170,16 @@ Test greater than or equal to the value passed in
 
 ### Action metricconsumeable lessThanEq
 
-* REST - metricconsumeable/lessThanEq
-* bin - metricconsumeable lessThanEq
-* js - metricconsumeable.lessThanEq
 
+
+* REST - metricconsumeable/lessThanEq?value=object
+* bin - metricconsumeable lessThanEq --value object
+* js - metricconsumeable.lessThanEq({ value:object })
+
+#### Description
 Test less than or equal to the value passed in
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -164,11 +190,16 @@ Test less than or equal to the value passed in
 
 ### Action metricconsumeable minus
 
-* REST - metricconsumeable/minus
-* bin - metricconsumeable minus
-* js - metricconsumeable.minus
 
+
+* REST - metricconsumeable/minus?value=number
+* bin - metricconsumeable minus --value number
+* js - metricconsumeable.minus({ value:number })
+
+#### Description
 Add value to a metric
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -179,11 +210,16 @@ Add value to a metric
 
 ### Action metricconsumeable plus
 
-* REST - metricconsumeable/plus
-* bin - metricconsumeable plus
-* js - metricconsumeable.plus
 
+
+* REST - metricconsumeable/plus?value=number
+* bin - metricconsumeable plus --value number
+* js - metricconsumeable.plus({ value:number })
+
+#### Description
 Add value to a metric
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -194,11 +230,16 @@ Add value to a metric
 
 ### Action metricconsumeable set
 
-* REST - metricconsumeable/set
-* bin - metricconsumeable set
-* js - metricconsumeable.set
 
+
+* REST - metricconsumeable/set?value=number
+* bin - metricconsumeable set --value number
+* js - metricconsumeable.set({ value:number })
+
+#### Description
 Add value to a metric
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

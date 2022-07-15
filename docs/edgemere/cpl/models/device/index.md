@@ -29,6 +29,7 @@ Representation of a device in a datacenter
 | parent | 1 | AggregatedDevice | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
@@ -39,408 +40,18 @@ Representation of a device in a datacenter
 | devices | n | Cloud | false | false |  |
 | devices | n | Request | false | false |  |
 | device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
 | device | 1 | AcceleratorHardware | false | false |  |
 | device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
 | device | 1 | NetworkHardware | false | false |  |
 | device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
-| devices | n | AggregatedDevice | false | true |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| devices | n | DataCenter | false | true |  |
-| device | 1 | Hardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
-| devices | n | Cloud | false | false |  |
-| devices | n | Request | false | false |  |
-| device | 1 | Reservation | false | false |  |
 
 
 
 ## State Net
+The Device has a state net corresponding to instances of the class. Each state transistion will emit an 
+event that can be caught with a websocket client. The name of the event is the name of the state in all lower case.
+The following diagram is the state net for this class.
+
 ![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |
@@ -472,25 +83,33 @@ Representation of a device in a datacenter
     
 ### Action device addToHardware
 
-* REST - device/addToHardware
-* bin - device addToHardware
-* js - device.addToHardware
 
+
+* REST - device/addToHardware?
+* bin - device addToHardware 
+* js - device.addToHardware({  })
+
+#### Description
 Create a Device
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action device create
 
-* REST - device/create
-* bin - device create
-* js - device.create
 
+
+* REST - device/create?name=string&amp;file=YAML
+* bin - device create --name string --file YAML
+* js - device.create({ name:string,file:YAML })
+
+#### Description
 Create a Device
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -502,39 +121,50 @@ Create a Device
 
 ### Action device disable
 
-* REST - device/disable
-* bin - device disable
-* js - device.disable
 
+
+* REST - device/disable?
+* bin - device disable 
+* js - device.disable({  })
+
+#### Description
 Disable Device and its hardware
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action device enable
 
-* REST - device/enable
-* bin - device enable
-* js - device.enable
 
+
+* REST - device/enable?
+* bin - device enable 
+* js - device.enable({  })
+
+#### Description
 Enable Device to be used.
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action device getReservations
 
-* REST - device/getReservations
-* bin - device getReservations
-* js - device.getReservations
 
+
+* REST - device/getReservations?requirements=YAML
+* bin - device getReservations --requirements YAML
+* js - device.getReservations({ requirements:YAML })
+
+#### Description
 Get reservation from the requirements
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -545,11 +175,16 @@ Get reservation from the requirements
 
 ### Action device provision
 
-* REST - device/provision
-* bin - device provision
-* js - device.provision
 
+
+* REST - device/provision?requirements=json
+* bin - device provision --requirements json
+* js - device.provision({ requirements:json })
+
+#### Description
 Provision Hardware to meet the requirements
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -560,11 +195,16 @@ Provision Hardware to meet the requirements
 
 ### Action device reserve
 
-* REST - device/reserve
-* bin - device reserve
-* js - device.reserve
 
+
+* REST - device/reserve?request=object
+* bin - device reserve --request object
+* js - device.reserve({ request:object })
+
+#### Description
 Reserve a resource
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

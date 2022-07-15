@@ -21,6 +21,9 @@ package "Cloud Broker" #lightgreen {
 package "Software Defined Infrastructure" #lightyellow {
 
     interface "Software Defined Infrastructure" as i {
+            ^request.satisfied
+            ^resource.ready
+    
             /edgemere/sdi/checkrequest()
             /edgemere/sdi/reserve()
             /edgemere/sdi/resource/get()
@@ -30,9 +33,15 @@ package "Software Defined Infrastructure" #lightyellow {
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Software Defined Infrastructure" #lightyellow {
 
@@ -43,7 +52,7 @@ rectangle "Infrastructure Orchestrator" #white {
 }
 
 
-    "Software Defined Infrastructure" --> "Common Physical Layer"
+    "Common Physical Layer" <-- "Software Defined Infrastructure"
 
 
 @enduml

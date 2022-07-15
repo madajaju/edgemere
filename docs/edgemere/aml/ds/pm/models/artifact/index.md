@@ -24,96 +24,11 @@ An artifact is a generic element that is created from a build. This could be a l
 | consumer | n | LedgerEntry | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
-| input | n | LedgerEntry | false | false |  |
-| output | n | LedgerEntry | false | false |  |
 | input | n | LedgerEntry | false | false |  |
 | output | n | LedgerEntry | false | false |  |
 

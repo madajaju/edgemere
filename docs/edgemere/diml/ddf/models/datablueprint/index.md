@@ -27,182 +27,11 @@ Data Blue Print allows a Data Scientist to describe how to manage data
 | instances | n | DataBluePrintInstance | false | true |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
-| blueprint | 1 | DataAdaptor | false | false |  |
-| blueprint | 1 | DataAdaptorTemplate | false | false |  |
-| blueprint | 1 | DataBluePrintInstance | false | false |  |
-| blueprint | 1 | DataFlow | false | false |  |
 | blueprint | 1 | DataAdaptor | false | false |  |
 | blueprint | 1 | DataAdaptorTemplate | false | false |  |
 | blueprint | 1 | DataBluePrintInstance | false | false |  |
@@ -223,11 +52,16 @@ Data Blue Print allows a Data Scientist to describe how to manage data
     
 ### Action datablueprint create
 
-* REST - datablueprint/create
-* bin - datablueprint create
-* js - datablueprint.create
 
+
+* REST - datablueprint/create?name=string&amp;file=YAML
+* bin - datablueprint create --name string --file YAML
+* js - datablueprint.create({ name:string,file:YAML })
+
+#### Description
 Create a Data Blue Print
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -239,11 +73,16 @@ Create a Data Blue Print
 
 ### Action datablueprint deploy
 
-* REST - datablueprint/deploy
-* bin - datablueprint deploy
-* js - datablueprint.deploy
 
+
+* REST - datablueprint/deploy?name=string&amp;file=YAML&amp;sources=string
+* bin - datablueprint deploy --name string --file YAML --sources string
+* js - datablueprint.deploy({ name:string,file:YAML,sources:string })
+
+#### Description
 Deploy a Data Blue Print with sources
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

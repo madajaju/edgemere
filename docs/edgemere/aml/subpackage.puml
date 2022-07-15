@@ -29,6 +29,7 @@ package "Data Management Layer" #ffcc88 {
 package "Application Management Layer" #lightblue {
 
     interface "Application Management Layer" as i {
+    
             /edgemere/aml/aimodel/create()
             /edgemere/aml/aimodel/deploy()
             /edgemere/aml/aimodel/destroy()
@@ -50,9 +51,15 @@ package "Application Management Layer" #lightblue {
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Application Management Layer" #lightblue {
 
@@ -82,13 +89,13 @@ rectangle "Workflow Services" #white {
 }
 
 
-    "Application Management Layer" --> "Distributed Information Management Layer"
+    "Distributed Information Management Layer" <-- "Application Management Layer"
 
-    "Application Management Layer" --> "Service Management Layer"
+    "Service Management Layer" <-- "Application Management Layer"
 
-    "Application Management Layer" --> "Security Aspect"
+    "Security Aspect" <-- "Application Management Layer"
 
-    "Application Management Layer" --> "Identity Aspect"
+    "Identity Aspect" <-- "Application Management Layer"
 
 
 @enduml

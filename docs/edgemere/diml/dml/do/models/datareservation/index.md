@@ -25,58 +25,20 @@ Resrevation for utilixzing data and creating a data instance.
 | request | 1 | DataRequest | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
 | reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
-| reservations | n | DataRequest | false | true |  |
 
 
 
 ## State Net
+The DataReservation has a state net corresponding to instances of the class. Each state transistion will emit an 
+event that can be caught with a websocket client. The name of the event is the name of the state in all lower case.
+The following diagram is the state net for this class.
+
 ![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |

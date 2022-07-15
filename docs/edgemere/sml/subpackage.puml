@@ -33,6 +33,7 @@ package "Application Management Layer" #lightblue {
 package "Service Management Layer" #lightgreen {
 
     interface "Service Management Layer" as i {
+    
             /edgemere/sml/cloud/list()
             /edgemere/sml/data/govern()
             /edgemere/sml/data/source/name()
@@ -53,9 +54,15 @@ package "Service Management Layer" #lightgreen {
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Service Management Layer" #lightgreen {
 
@@ -90,9 +97,9 @@ rectangle "Service Repository" #white {
 }
 
 
-    "Service Management Layer" --> "Software Defined Infrastructure"
+    "Software Defined Infrastructure" <-- "Service Management Layer"
 
-    "Service Management Layer" --> "Distributed Information Management Layer"
+    "Distributed Information Management Layer" <-- "Service Management Layer"
 
 
 @enduml

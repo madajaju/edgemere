@@ -27,7 +27,7 @@ package "Service Controller" #lightgreen {
     sml_sc_container --> sml_scimage
 
   
-      artifact sml_sc_controller
+      artifact "sml_sc_controller" as sml_sc_controller
       controller_container --> sml_sc_controller
     
   }

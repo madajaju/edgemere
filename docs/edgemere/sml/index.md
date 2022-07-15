@@ -238,7 +238,40 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| image.create |  When an object of type Image is created. | Image
+| image.destroy |  When an object of type Image is destroyed. | Image
+| image.updated |  When an object of type Image has an attribute or association updated. | Image
+| multicloud.create |  When an object of type MultiCloud is created. | MultiCloud
+| multicloud.destroy |  When an object of type MultiCloud is destroyed. | MultiCloud
+| multicloud.updated |  When an object of type MultiCloud has an attribute or association updated. | MultiCloud
+| runscript.create |  When an object of type RunScript is created. | RunScript
+| runscript.destroy |  When an object of type RunScript is destroyed. | RunScript
+| runscript.updated |  When an object of type RunScript has an attribute or association updated. | RunScript
+| service.create |  When an object of type Service is created. | Service
+| service.destroy |  When an object of type Service is destroyed. | Service
+| service.updated |  When an object of type Service has an attribute or association updated. | Service
+| servicedefinition.create |  When an object of type ServiceDefinition is created. | ServiceDefinition
+| servicedefinition.destroy |  When an object of type ServiceDefinition is destroyed. | ServiceDefinition
+| servicedefinition.updated |  When an object of type ServiceDefinition has an attribute or association updated. | ServiceDefinition
+| servicelet.create |  When an object of type Servicelet is created. | Servicelet
+| servicelet.destroy |  When an object of type Servicelet is destroyed. | Servicelet
+| servicelet.updated |  When an object of type Servicelet has an attribute or association updated. | Servicelet
+| stack.create |  When an object of type Stack is created. | Stack
+| stack.destroy |  When an object of type Stack is destroyed. | Stack
+| stack.updated |  When an object of type Stack has an attribute or association updated. | Stack
+| stackdefinition.create |  When an object of type StackDefinition is created. | StackDefinition
+| stackdefinition.destroy |  When an object of type StackDefinition is destroyed. | StackDefinition
+| stackdefinition.updated |  When an object of type StackDefinition has an attribute or association updated. | StackDefinition
+| stacklet.create |  When an object of type Stacklet is created. | Stacklet
+| stacklet.destroy |  When an object of type Stacklet is destroyed. | Stacklet
+| stacklet.updated |  When an object of type Stacklet has an attribute or association updated. | Stacklet
+| stackletdefinition.create |  When an object of type StackletDefinition is created. | StackletDefinition
+| stackletdefinition.destroy |  When an object of type StackletDefinition is destroyed. | StackletDefinition
+| stackletdefinition.updated |  When an object of type StackletDefinition has an attribute or association updated. | StackletDefinition
+
+
 
 ## Interface Details
 The Service Management Layer subsystem has a well defined interface. This interface can be accessed using a
@@ -247,11 +280,16 @@ subsystems and actors can access the system.
 
 ### Action  edgemere sml cloud list
 
-* REST - /edgemere/sml/cloud/list
-* bin -  edgemere sml cloud list
-* js - .edgemere.sml.cloud.list
 
+
+* REST - /edgemere/sml/cloud/list?attr1=string
+* bin -  edgemere sml cloud list --attr1 string
+* js - .edgemere.sml.cloud.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -261,11 +299,16 @@ Description of the action
 
 ### Action  edgemere sml data govern
 
-* REST - /edgemere/sml/data/govern
-* bin -  edgemere sml data govern
-* js - .edgemere.sml.data.govern
 
+
+* REST - /edgemere/sml/data/govern?attr1=string
+* bin -  edgemere sml data govern --attr1 string
+* js - .edgemere.sml.data.govern({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -275,11 +318,16 @@ Description of the action
 
 ### Action  edgemere sml data source name
 
-* REST - /edgemere/sml/data/source/name
-* bin -  edgemere sml data source name
-* js - .edgemere.sml.data.source.name
 
+
+* REST - /edgemere/sml/data/source/name?attr1=string
+* bin -  edgemere sml data source name --attr1 string
+* js - .edgemere.sml.data.source.name({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -289,11 +337,16 @@ Description of the action
 
 ### Action  edgemere sml environmenet addpolicies
 
-* REST - /edgemere/sml/environmenet/addpolicies
-* bin -  edgemere sml environmenet addpolicies
-* js - .edgemere.sml.environmenet.addpolicies
 
+
+* REST - /edgemere/sml/environmenet/addpolicies?attr1=string
+* bin -  edgemere sml environmenet addpolicies --attr1 string
+* js - .edgemere.sml.environmenet.addpolicies({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -303,11 +356,16 @@ Description of the action
 
 ### Action  edgemere sml environment create
 
-* REST - /edgemere/sml/environment/create
-* bin -  edgemere sml environment create
-* js - .edgemere.sml.environment.create
 
+
+* REST - /edgemere/sml/environment/create?attr1=string
+* bin -  edgemere sml environment create --attr1 string
+* js - .edgemere.sml.environment.create({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -317,11 +375,16 @@ Description of the action
 
 ### Action  edgemere sml environment destroy
 
-* REST - /edgemere/sml/environment/destroy
-* bin -  edgemere sml environment destroy
-* js - .edgemere.sml.environment.destroy
 
+
+* REST - /edgemere/sml/environment/destroy?attr1=string
+* bin -  edgemere sml environment destroy --attr1 string
+* js - .edgemere.sml.environment.destroy({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -331,11 +394,16 @@ Description of the action
 
 ### Action  edgemere sml environment disable
 
-* REST - /edgemere/sml/environment/disable
-* bin -  edgemere sml environment disable
-* js - .edgemere.sml.environment.disable
 
+
+* REST - /edgemere/sml/environment/disable?attr1=string
+* bin -  edgemere sml environment disable --attr1 string
+* js - .edgemere.sml.environment.disable({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -345,11 +413,16 @@ Description of the action
 
 ### Action  edgemere sml environment enable
 
-* REST - /edgemere/sml/environment/enable
-* bin -  edgemere sml environment enable
-* js - .edgemere.sml.environment.enable
 
+
+* REST - /edgemere/sml/environment/enable?attr1=string
+* bin -  edgemere sml environment enable --attr1 string
+* js - .edgemere.sml.environment.enable({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -359,11 +432,16 @@ Description of the action
 
 ### Action  edgemere sml environment list
 
-* REST - /edgemere/sml/environment/list
-* bin -  edgemere sml environment list
-* js - .edgemere.sml.environment.list
 
+
+* REST - /edgemere/sml/environment/list?attr1=string
+* bin -  edgemere sml environment list --attr1 string
+* js - .edgemere.sml.environment.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -373,11 +451,16 @@ Description of the action
 
 ### Action  edgemere sml environment update
 
-* REST - /edgemere/sml/environment/update
-* bin -  edgemere sml environment update
-* js - .edgemere.sml.environment.update
 
+
+* REST - /edgemere/sml/environment/update?attr1=string
+* bin -  edgemere sml environment update --attr1 string
+* js - .edgemere.sml.environment.update({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -387,11 +470,16 @@ Description of the action
 
 ### Action  edgemere sml multicloud addclouds
 
-* REST - /edgemere/sml/multicloud/addclouds
-* bin -  edgemere sml multicloud addclouds
-* js - .edgemere.sml.multicloud.addclouds
 
+
+* REST - /edgemere/sml/multicloud/addclouds?attr1=string
+* bin -  edgemere sml multicloud addclouds --attr1 string
+* js - .edgemere.sml.multicloud.addclouds({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -401,11 +489,16 @@ Description of the action
 
 ### Action  edgemere sml multicloud addpolicies
 
-* REST - /edgemere/sml/multicloud/addpolicies
-* bin -  edgemere sml multicloud addpolicies
-* js - .edgemere.sml.multicloud.addpolicies
 
+
+* REST - /edgemere/sml/multicloud/addpolicies?attr1=string
+* bin -  edgemere sml multicloud addpolicies --attr1 string
+* js - .edgemere.sml.multicloud.addpolicies({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -415,11 +508,16 @@ Description of the action
 
 ### Action  edgemere sml multicloud list
 
-* REST - /edgemere/sml/multicloud/list
-* bin -  edgemere sml multicloud list
-* js - .edgemere.sml.multicloud.list
 
+
+* REST - /edgemere/sml/multicloud/list?attr1=string
+* bin -  edgemere sml multicloud list --attr1 string
+* js - .edgemere.sml.multicloud.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -429,11 +527,16 @@ Description of the action
 
 ### Action  edgemere sml multicloud removepolicies
 
-* REST - /edgemere/sml/multicloud/removepolicies
-* bin -  edgemere sml multicloud removepolicies
-* js - .edgemere.sml.multicloud.removepolicies
 
+
+* REST - /edgemere/sml/multicloud/removepolicies?attr1=string
+* bin -  edgemere sml multicloud removepolicies --attr1 string
+* js - .edgemere.sml.multicloud.removepolicies({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -443,11 +546,16 @@ Description of the action
 
 ### Action  edgemere sml service list
 
-* REST - /edgemere/sml/service/list
-* bin -  edgemere sml service list
-* js - .edgemere.sml.service.list
 
+
+* REST - /edgemere/sml/service/list?attr1=string
+* bin -  edgemere sml service list --attr1 string
+* js - .edgemere.sml.service.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -457,11 +565,16 @@ Description of the action
 
 ### Action  edgemere sml stack list
 
-* REST - /edgemere/sml/stack/list
-* bin -  edgemere sml stack list
-* js - .edgemere.sml.stack.list
 
+
+* REST - /edgemere/sml/stack/list?attr1=string
+* bin -  edgemere sml stack list --attr1 string
+* js - .edgemere.sml.stack.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

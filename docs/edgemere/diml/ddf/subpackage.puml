@@ -21,6 +21,7 @@ package "Identity Aspect" #pink {
 package "Data Definition Framework" #ffcc88 {
 
     interface "Data Definition Framework" as i {
+    
             /edgemere/diml/ddf/data/create()
             /edgemere/diml/ddf/data/govern()
             /edgemere/diml/ddf/data/source/name()
@@ -36,9 +37,15 @@ package "Data Definition Framework" #ffcc88 {
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Data Definition Framework" #ffcc88 {
 
@@ -58,9 +65,9 @@ rectangle "Data Repository" #white {
 }
 
 
-    "Data Definition Framework" --> "Data Management Layer"
+    "Data Management Layer" <-- "Data Definition Framework"
 
-    "Data Definition Framework" --> "Common Data Service"
+    "Common Data Service" <-- "Data Definition Framework"
 
 
 @enduml

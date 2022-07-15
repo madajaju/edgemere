@@ -26,53 +26,11 @@ This is an instance of the data flow when a blue print is instantiated.
 | sources | n | DataSource | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
-| flows | n | DataBluePrintInstance | false | false |  |
 | flows | n | DataBluePrintInstance | false | false |  |
 
 
@@ -88,11 +46,16 @@ This is an instance of the data flow when a blue print is instantiated.
     
 ### Action dataflowinstance create
 
-* REST - dataflowinstance/create
-* bin - dataflowinstance create
-* js - dataflowinstance.create
 
+
+* REST - dataflowinstance/create?name=string&amp;sinks=json&amp;sources=json
+* bin - dataflowinstance create --name string --sinks json --sources json
+* js - dataflowinstance.create({ name:string,sinks:json,sources:json })
+
+#### Description
 Create a Data Flow Instance
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

@@ -24,96 +24,11 @@ The Build Ledger contains a list of the steps performed during the build includi
 | parent | 1 | BuildInstance | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
-| ledger | 1 | Build | false | true |  |
-| ledger | 1 | BuildInstance | false | true |  |
 | ledger | 1 | Build | false | true |  |
 | ledger | 1 | BuildInstance | false | true |  |
 

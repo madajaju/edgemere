@@ -8,7 +8,7 @@ parent: usecases
 
 Manage Infrastructure is the description
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 
@@ -26,11 +26,11 @@ Manage Infrastructure is the description
 
 ## Detail Scenarios
 
-* [Manage Infrastructure](#scenario-AddDevice)
-* [Manage Infrastructure](#scenario-ManageAggregatedDevices)
-* [Manage Infrastructure](#scenario-ManageDataCenter)
-* [Manage Infrastructure](#scenario-RemoveDevice)
-* [Manage Infrastructure](#scenario-UpdateDevice)
+* [AddDevice](#scenario-AddDevice)
+* [ManageAggregatedDevices](#scenario-ManageAggregatedDevices)
+* [ManageDataCenter](#scenario-ManageDataCenter)
+* [RemoveDevice](#scenario-RemoveDevice)
+* [UpdateDevice](#scenario-UpdateDevice)
 
 
 
@@ -38,7 +38,7 @@ Manage Infrastructure is the description
 
 Add Device is the description
 
-![Scenario AddDevice](./adddevice.png)
+![Scenario AddDevice](./AddDevice.png)
 
 #### Steps
 
@@ -61,7 +61,7 @@ Add Device is the description
 
 Manage Aggregated Devices is the description
 
-![Scenario ManageAggregatedDevices](./manageaggregateddevices.png)
+![Scenario ManageAggregatedDevices](./ManageAggregatedDevices.png)
 
 #### Steps
 
@@ -86,7 +86,7 @@ Manage Aggregated Devices is the description
 
 Manage Data Center is the description
 
-![Scenario ManageDataCenter](./managedatacenter.png)
+![Scenario ManageDataCenter](./ManageDataCenter.png)
 
 #### Steps
 
@@ -129,7 +129,7 @@ Manage Data Center is the description
 
 Remove Device is the description
 
-![Scenario RemoveDevice](./removedevice.png)
+![Scenario RemoveDevice](./RemoveDevice.png)
 
 #### Steps
 
@@ -146,7 +146,7 @@ Remove Device is the description
 
 Update Device is the description
 
-![Scenario UpdateDevice](./updatedevice.png)
+![Scenario UpdateDevice](./UpdateDevice.png)
 
 #### Steps
 

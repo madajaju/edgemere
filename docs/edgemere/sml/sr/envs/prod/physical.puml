@@ -31,10 +31,10 @@ package "Service Repository" #lightgreen {
     sml_sr_container --> sml_srimage
 
   
-      artifact sml_sr_web
+      artifact "sml_sr_web" as sml_sr_web
       web_container --> sml_sr_web
     
-      artifact sml_sr_gw
+      artifact "sml_sr_gw" as sml_sr_gw
       gateway_container --> sml_sr_gw
     
   }

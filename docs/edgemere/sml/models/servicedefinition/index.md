@@ -18,57 +18,14 @@ This represents the definition of a service to be used to create a service
 
 ## Associations
 
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
+No associations
+
 
 
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
-| services | n | StackDefinition | true | true | Services of the stack |
 | services | n | StackDefinition | true | true | Services of the stack |
 
 

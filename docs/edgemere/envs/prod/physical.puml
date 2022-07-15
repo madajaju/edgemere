@@ -31,10 +31,10 @@ package "edgemere" #lavender {
     edgemere_container --> edgemereimage
 
   
-      artifact edgemere_web
+      artifact "edgemere_web" as edgemere_web
       web_container --> edgemere_web
     
-      artifact edgemere_doc
+      artifact "edgemere_doc" as edgemere_doc
       doc_container --> edgemere_doc
     
   }

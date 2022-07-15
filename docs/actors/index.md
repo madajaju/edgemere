@@ -19,7 +19,7 @@ is an example of a centralized organizational structure of the actors of the sys
 
 # Actors
 
-* [Actor](actor-actor) - Default Actor of the system.
+* [Actor](actor-actor) - Long description
 * [Application Developer](actor-applicationdeveloper) - The Application Developer work in coordination with DevOps to manage services, applications and workloads through the development pipeline.
 * [Chief Data Officer](actor-cdo) - Responsible for setting strategy and governance of data in the organization.
 * [Data Analyst](actor-analyst) - Uses Data solutions produced by the Data Scientist and Data Engineer to provide business value to the organization.

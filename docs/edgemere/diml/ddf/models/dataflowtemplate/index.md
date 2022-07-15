@@ -25,53 +25,11 @@ Data Flow Template is how a Blue Print refrences a Data Flow with late binding o
 | sinks | n | DataAdaptorTemplate | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
-| flows | n | DataBluePrint | false | true |  |
 | flows | n | DataBluePrint | false | true |  |
 
 
@@ -87,11 +45,16 @@ Data Flow Template is how a Blue Print refrences a Data Flow with late binding o
     
 ### Action dataflowtemplate create
 
-* REST - dataflowtemplate/create
-* bin - dataflowtemplate create
-* js - dataflowtemplate.create
 
+
+* REST - dataflowtemplate/create?name=string&amp;sinks=json&amp;sources=json
+* bin - dataflowtemplate create --name string --sinks json --sources json
+* js - dataflowtemplate.create({ name:string,sinks:json,sources:json })
+
+#### Description
 Create a Data Flow Template
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

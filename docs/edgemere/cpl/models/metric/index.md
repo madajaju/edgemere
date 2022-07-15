@@ -19,57 +19,14 @@ Metric stores information about the physical profile.
 
 ## Associations
 
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
+No associations
+
 
 
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
-| values | n | MetricComposite | true | true |  |
 | values | n | MetricComposite | true | true |  |
 
 
@@ -99,11 +56,16 @@ Metric stores information about the physical profile.
     
 ### Action metric consume
 
-* REST - metric/consume
-* bin - metric consume
-* js - metric.consume
 
+
+* REST - metric/consume?value=number
+* bin - metric consume --value number
+* js - metric.consume({ value:number })
+
+#### Description
 Consume value from a metric
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -114,25 +76,33 @@ Consume value from a metric
 
 ### Action metric copy
 
-* REST - metric/copy
-* bin - metric copy
-* js - metric.copy
 
+
+* REST - metric/copy?
+* bin - metric copy 
+* js - metric.copy({  })
+
+#### Description
 Copy Metric
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action metric factory
 
-* REST - metric/factory
-* bin - metric factory
-* js - metric.factory
 
+
+* REST - metric/factory?name=string&amp;value=json
+* bin - metric factory --name string --value json
+* js - metric.factory({ name:string,value:json })
+
+#### Description
 Create a metric based on the metrictype table
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -144,11 +114,16 @@ Create a metric based on the metrictype table
 
 ### Action metric greaterThanEq
 
-* REST - metric/greaterThanEq
-* bin - metric greaterThanEq
-* js - metric.greaterThanEq
 
+
+* REST - metric/greaterThanEq?value=object
+* bin - metric greaterThanEq --value object
+* js - metric.greaterThanEq({ value:object })
+
+#### Description
 Test greater than or equal to the value passed in
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -159,11 +134,16 @@ Test greater than or equal to the value passed in
 
 ### Action metric lessThanEq
 
-* REST - metric/lessThanEq
-* bin - metric lessThanEq
-* js - metric.lessThanEq
 
+
+* REST - metric/lessThanEq?value=object
+* bin - metric lessThanEq --value object
+* js - metric.lessThanEq({ value:object })
+
+#### Description
 Test less than or equal to the value passed in
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -174,11 +154,16 @@ Test less than or equal to the value passed in
 
 ### Action metric minus
 
-* REST - metric/minus
-* bin - metric minus
-* js - metric.minus
 
+
+* REST - metric/minus?value=number
+* bin - metric minus --value number
+* js - metric.minus({ value:number })
+
+#### Description
 Add value to a metric
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -189,11 +174,16 @@ Add value to a metric
 
 ### Action metric plus
 
-* REST - metric/plus
-* bin - metric plus
-* js - metric.plus
 
+
+* REST - metric/plus?value=number
+* bin - metric plus --value number
+* js - metric.plus({ value:number })
+
+#### Description
 Add value to a metric
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -204,11 +194,16 @@ Add value to a metric
 
 ### Action metric set
 
-* REST - metric/set
-* bin - metric set
-* js - metric.set
 
+
+* REST - metric/set?value=number
+* bin - metric set --value number
+* js - metric.set({ value:number })
+
+#### Description
 Add value to a metric
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

@@ -13,6 +13,10 @@ package "Software Defined Infrastructure" #lightyellow {
 package "Common Physical Layer" #lightgray {
 
     interface "Common Physical Layer" as i {
+            ^request.needed
+            ^reservation.rejected
+            ^resource.provisioning
+    
             /edgemere/cpl/adddevices()
             /edgemere/cpl/provision()
             /edgemere/cpl/reserve()
@@ -30,9 +34,15 @@ package "Common Physical Layer" #lightgray {
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Common Physical Layer" #lightgray {
 

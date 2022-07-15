@@ -25,53 +25,11 @@ Source Meta-Data is information about the source of the Data Instance. How to co
 | data | 1 | Data |  |  | This is a DataInstance Class that the meta-data is tied |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
-| connection | n | Data | false | true |  |
 | connection | n | Data | false | true |  |
 
 

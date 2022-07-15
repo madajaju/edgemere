@@ -148,11 +148,59 @@ The Pipeline Manager subsystem provides the following activities and flows that 
 cases and scenarios of the subsystem.
 
 
+### Messages Handled
+
+The Pipeline Manager subsystem is an event driven architecture and handle several events. The following
+events are handled by this subsystem. Please note that this subsystem is not the only subsystem that handles
+these events.
+
+| Message | Action | Description |
+| --- | --- | --- |
+
 
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| artifact.create |  When an object of type Artifact is created. | Artifact
+| artifact.destroy |  When an object of type Artifact is destroyed. | Artifact
+| artifact.updated |  When an object of type Artifact has an attribute or association updated. | Artifact
+| build.create |  When an object of type Build is created. | Build
+| build.destroy |  When an object of type Build is destroyed. | Build
+| build.updated |  When an object of type Build has an attribute or association updated. | Build
+| buildinstance.create |  When an object of type BuildInstance is created. | BuildInstance
+| buildinstance.destroy |  When an object of type BuildInstance is destroyed. | BuildInstance
+| buildinstance.updated |  When an object of type BuildInstance has an attribute or association updated. | BuildInstance
+| buildledger.create |  When an object of type BuildLedger is created. | BuildLedger
+| buildledger.destroy |  When an object of type BuildLedger is destroyed. | BuildLedger
+| buildledger.updated |  When an object of type BuildLedger has an attribute or association updated. | BuildLedger
+| buildlog.create |  When an object of type BuildLog is created. | BuildLog
+| buildlog.destroy |  When an object of type BuildLog is destroyed. | BuildLog
+| buildlog.updated |  When an object of type BuildLog has an attribute or association updated. | BuildLog
+| deliverable.create |  When an object of type Deliverable is created. | Deliverable
+| deliverable.destroy |  When an object of type Deliverable is destroyed. | Deliverable
+| deliverable.updated |  When an object of type Deliverable has an attribute or association updated. | Deliverable
+| ledgerentry.create |  When an object of type LedgerEntry is created. | LedgerEntry
+| ledgerentry.destroy |  When an object of type LedgerEntry is destroyed. | LedgerEntry
+| ledgerentry.updated |  When an object of type LedgerEntry has an attribute or association updated. | LedgerEntry
+| pipeline.create |  When an object of type Pipeline is created. | Pipeline
+| pipeline.destroy |  When an object of type Pipeline is destroyed. | Pipeline
+| pipeline.updated |  When an object of type Pipeline has an attribute or association updated. | Pipeline
+| stage.create |  When an object of type Stage is created. | Stage
+| stage.destroy |  When an object of type Stage is destroyed. | Stage
+| stage.updated |  When an object of type Stage has an attribute or association updated. | Stage
+| stageinstance.create |  When an object of type StageInstance is created. | StageInstance
+| stageinstance.destroy |  When an object of type StageInstance is destroyed. | StageInstance
+| stageinstance.updated |  When an object of type StageInstance has an attribute or association updated. | StageInstance
+| step.create |  When an object of type Step is created. | Step
+| step.destroy |  When an object of type Step is destroyed. | Step
+| step.updated |  When an object of type Step has an attribute or association updated. | Step
+| stepinstance.create |  When an object of type StepInstance is created. | StepInstance
+| stepinstance.destroy |  When an object of type StepInstance is destroyed. | StepInstance
+| stepinstance.updated |  When an object of type StepInstance has an attribute or association updated. | StepInstance
+
+
 
 ## Interface Details
 The Pipeline Manager subsystem has a well defined interface. This interface can be accessed using a

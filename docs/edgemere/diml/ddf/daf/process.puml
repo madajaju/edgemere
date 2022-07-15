@@ -10,7 +10,7 @@ state "daf" as dimlddfdaf #lightblue {
 }
 
 
-state dimlddfdaf #lightblue {
+state "dimlddfdaf" as pstatename #lightblue {
     state "Custom Function" as daffunction {
     }
 }

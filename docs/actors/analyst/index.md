@@ -5,7 +5,7 @@ permalink: actor-analyst
 parent: All Actors
 ---
 
-{#actor-function toLowerCase() { [native code] }}
+{#actor-analyst}
 
 # Data Analyst
 
@@ -18,11 +18,11 @@ The data analyst uses data to build insight based on the data scientist models. 
 * [Manage Data](usecase-ManageData)
 
 
-![Use Case Diagram](./usecase.png)
+![Use Case Diagram](./UseCase.png)
 
 ## User Interface
 TBD
 
 ## Command Line Interface
-* [ edgemere diml cds data/list](action--edgemere-diml-cds-data-list) - Manage Data is the description
+* [ edgemere diml cds data list](action--edgemere-diml-cds-data-list) - Manage Data is the description
 

@@ -148,7 +148,10 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+
+
 
 ## Interface Details
 The Common Data Service subsystem has a well defined interface. This interface can be accessed using a
@@ -157,11 +160,16 @@ subsystems and actors can access the system.
 
 ### Action  edgemere diml cds data list
 
-* REST - /edgemere/diml/cds/data/list
-* bin -  edgemere diml cds data list
-* js - .edgemere.diml.cds.data.list
 
+
+* REST - /edgemere/diml/cds/data/list?attr1=string
+* bin -  edgemere diml cds data list --attr1 string
+* js - .edgemere.diml.cds.data.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -171,11 +179,16 @@ Description of the action
 
 ### Action  edgemere diml cds data source name
 
-* REST - /edgemere/diml/cds/data/source/name
-* bin -  edgemere diml cds data source name
-* js - .edgemere.diml.cds.data.source.name
 
+
+* REST - /edgemere/diml/cds/data/source/name?attr1=string
+* bin -  edgemere diml cds data source name --attr1 string
+* js - .edgemere.diml.cds.data.source.name({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

@@ -31,10 +31,10 @@ package "Analytics Services" #lightblue {
     aml_as_container --> aml_asimage
 
   
-      artifact aml_as_web
+      artifact "aml_as_web" as aml_as_web
       web_container --> aml_as_web
     
-      artifact aml_as_gw
+      artifact "aml_as_gw" as aml_as_gw
       gateway_container --> aml_as_gw
     
   }

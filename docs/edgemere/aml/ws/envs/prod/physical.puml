@@ -31,10 +31,10 @@ package "Workflow Services" #lightblue {
     aml_ws_container --> aml_wsimage
 
   
-      artifact aml_ws_web
+      artifact "aml_ws_web" as aml_ws_web
       web_container --> aml_ws_web
     
-      artifact aml_ws_gw
+      artifact "aml_ws_gw" as aml_ws_gw
       gateway_container --> aml_ws_gw
     
   }

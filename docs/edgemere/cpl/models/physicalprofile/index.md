@@ -27,6 +27,7 @@ The Physical Profile contains the capabilities, availability, reserves andmetric
 | parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
@@ -38,458 +39,13 @@ The Physical Profile contains the capabilities, availability, reserves andmetric
 | profile | 1 | Hardware | true |  |  |
 | profile | 1 | ResourceInstanceType | true | true |  |
 | profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
 | profile | 1 | AcceleratorHardware | true |  |  |
 | profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
 | profile | 1 | NetworkHardware | true |  |  |
 | profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
 | profile | 1 | AcceleratorResource | true | true |  |
 | profile | 1 | ComputeResource | true | true |  |
 | profile | 1 | NetworkResource | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | StorageResource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | AcceleratorResource | true | true |  |
-| profile | 1 | ComputeResource | true | true |  |
-| profile | 1 | NetworkResource | true | true |  |
-| profile | 1 | Resource | true | true |  |
-| profile | 1 | StorageResource | true | true |  |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
-| profile | 1 | AcceleratorHardware | true |  |  |
-| profile | 1 | ComputeHardware | true |  |  |
-| profile | 1 | DataCenter | true |  |  |
-| profile | 1 | Hardware | true |  |  |
-| profile | 1 | NetworkHardware | true |  |  |
-| profile | 1 | StorageHardware | true |  |  |
-| profile | 1 | ResourceInstanceType | true | true |  |
-| profile | 1 | AcceleratorResource | true | true |  |
-| profile | 1 | ComputeResource | true | true |  |
-| profile | 1 | NetworkResource | true | true |  |
-| profile | 1 | Resource | true | true |  |
 | profile | 1 | StorageResource | true | true |  |
 
 
@@ -515,11 +71,16 @@ The Physical Profile contains the capabilities, availability, reserves andmetric
     
 ### Action physicalprofile combine
 
-* REST - physicalprofile/combine
-* bin - physicalprofile combine
-* js - physicalprofile.combine
 
+
+* REST - physicalprofile/combine?profile=object
+* bin - physicalprofile combine --profile object
+* js - physicalprofile.combine({ profile:object })
+
+#### Description
 Combine Physical Profile
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -530,11 +91,16 @@ Combine Physical Profile
 
 ### Action physicalprofile consume
 
-* REST - physicalprofile/consume
-* bin - physicalprofile consume
-* js - physicalprofile.consume
 
+
+* REST - physicalprofile/consume?request=object
+* bin - physicalprofile consume --request object
+* js - physicalprofile.consume({ request:object })
+
+#### Description
 Consume the requirements, part or all of the requirements
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -545,11 +111,16 @@ Consume the requirements, part or all of the requirements
 
 ### Action physicalprofile create
 
-* REST - physicalprofile/create
-* bin - physicalprofile create
-* js - physicalprofile.create
 
+
+* REST - physicalprofile/create?parent=object
+* bin - physicalprofile create --parent object
+* js - physicalprofile.create({ parent:object })
+
+#### Description
 Create Physical Profile
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -560,11 +131,16 @@ Create Physical Profile
 
 ### Action physicalprofile propagate
 
-* REST - physicalprofile/propagate
-* bin - physicalprofile propagate
-* js - physicalprofile.propagate
 
+
+* REST - physicalprofile/propagate?assoc=string&amp;operation=string&amp;value=string
+* bin - physicalprofile propagate --assoc string --operation string --value string
+* js - physicalprofile.propagate({ assoc:string,operation:string,value:string })
+
+#### Description
 Propagate Physical Profile
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -577,11 +153,16 @@ Propagate Physical Profile
 
 ### Action physicalprofile satisfies
 
-* REST - physicalprofile/satisfies
-* bin - physicalprofile satisfies
-* js - physicalprofile.satisfies
 
+
+* REST - physicalprofile/satisfies?request=object
+* bin - physicalprofile satisfies --request object
+* js - physicalprofile.satisfies({ request:object })
+
+#### Description
 Satisfies the requirements, part or all of the requirements
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -592,15 +173,18 @@ Satisfies the requirements, part or all of the requirements
 
 ### Action physicalprofile stats
 
-* REST - physicalprofile/stats
-* bin - physicalprofile stats
-* js - physicalprofile.stats
 
+
+* REST - physicalprofile/stats?
+* bin - physicalprofile stats 
+* js - physicalprofile.stats({  })
+
+#### Description
 get the Stats for the physical profile
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 

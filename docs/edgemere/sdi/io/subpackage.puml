@@ -5,15 +5,24 @@
 package "Infrastructure Orchestrator" #lightyellow {
 
     interface "Infrastructure Orchestrator" as i {
+            ^request.selected
+            ^reservation.confirmed
+    
             /edgemere/sdi/io/evaluaterequest()
             /edgemere/sdi/io/provision()
     
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Infrastructure Orchestrator" #lightyellow {
 

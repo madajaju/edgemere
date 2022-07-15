@@ -31,10 +31,10 @@ package "Infrastructure Orchestrator" #lightyellow {
     sdi_io_container --> sdi_ioimage
 
   
-      artifact sdi_io_web
+      artifact "sdi_io_web" as sdi_io_web
       web_container --> sdi_io_web
     
-      artifact sdi_io_gw
+      artifact "sdi_io_gw" as sdi_io_gw
       gateway_container --> sdi_io_gw
     
   }

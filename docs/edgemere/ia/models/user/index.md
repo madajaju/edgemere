@@ -24,53 +24,11 @@ User of the system
 | attributes | n | IdentityAttribute | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
-| users | n | Group | false | false |  |
 | users | n | Group | false | false |  |
 
 

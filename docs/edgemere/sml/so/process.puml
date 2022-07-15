@@ -8,7 +8,7 @@ state "so" as smlso #lightgreen {
 }
 
 
-state smlso #lightgreen {
+state "smlso" as pstatename #lightgreen {
     state "Custom Function" as sofunction {
     }
 }

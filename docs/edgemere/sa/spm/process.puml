@@ -8,7 +8,7 @@ state "spm" as saspm #pink {
 }
 
 
-state saspm #pink {
+state "saspm" as pstatename #pink {
     state "Custom Function" as spmfunction {
     }
 }

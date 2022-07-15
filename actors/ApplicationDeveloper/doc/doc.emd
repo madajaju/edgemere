@@ -1,8 +1,8 @@
 The Application Developer work in coordination with [DevOps](/doc/actor/devops) to  
 manage services, applications and workloads through the development pipeline
 
-![UseCase](./UseCases.puml)
+![UseCase](./UseCases.png)
 
-![Activity](./Activity.puml)
+![Activity](./Activity.png)
 
-![Workflow](./Workflow.puml)
+![Workflow](./Workflow.png)

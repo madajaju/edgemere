@@ -8,7 +8,7 @@ parent: usecases
 
 Manage Data is the description
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 
@@ -28,10 +28,10 @@ Manage Data is the description
 
 ## Detail Scenarios
 
-* [Manage Data](#scenario-DestroyData)
-* [Manage Data](#scenario-EgressData)
-* [Manage Data](#scenario-IngestData)
-* [Manage Data](#scenario-MoveData)
+* [DestroyData](#scenario-DestroyData)
+* [EgressData](#scenario-EgressData)
+* [IngestData](#scenario-IngestData)
+* [MoveData](#scenario-MoveData)
 
 
 
@@ -39,7 +39,7 @@ Manage Data is the description
 
 Destroy Data is the description
 
-![Scenario DestroyData](./destroydata.png)
+![Scenario DestroyData](./DestroyData.png)
 
 #### Steps
 
@@ -56,7 +56,7 @@ Destroy Data is the description
 
 Egress Data is the description
 
-![Scenario EgressData](./egressdata.png)
+![Scenario EgressData](./EgressData.png)
 
 #### Steps
 
@@ -73,7 +73,7 @@ Egress Data is the description
 
 Ingest Data is the description
 
-![Scenario IngestData](./ingestdata.png)
+![Scenario IngestData](./IngestData.png)
 
 #### Steps
 
@@ -90,7 +90,7 @@ Ingest Data is the description
 
 Move Data is the description
 
-![Scenario MoveData](./movedata.png)
+![Scenario MoveData](./MoveData.png)
 
 #### Steps
 

@@ -26,96 +26,11 @@ Build of the application or service contains the steps performed in each stage o
 | deliverables | n | Deliverable | false | true |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
-| build | 1 | BuildInstance | false | false |  |
-| builds | n | Pipeline | false | true |  |
 | build | 1 | BuildInstance | false | false |  |
 | builds | n | Pipeline | false | true |  |
 

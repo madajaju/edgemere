@@ -13,14 +13,21 @@ package "Data Management Layer" #ffcc88 {
 package "Federated Meta Data Management" #lightblue {
 
     interface "Federated Meta Data Management" as i {
+    
             /edgemere/diml/dml/fmdm/query()
     
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Federated Meta Data Management" #lightblue {
 

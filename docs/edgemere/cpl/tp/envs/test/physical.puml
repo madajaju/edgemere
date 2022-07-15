@@ -31,10 +31,10 @@ package "Telemetry Producer" #lightgray {
     cpl_tp_container --> cpl_tpimage
 
   
-      artifact cpl_tp_producer
+      artifact "cpl_tp_producer" as cpl_tp_producer
       producer_container --> cpl_tp_producer
     
-      artifact cpl_tp_tester
+      artifact "cpl_tp_tester" as cpl_tp_tester
       tester_container --> cpl_tp_tester
     
   }

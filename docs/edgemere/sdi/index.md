@@ -177,11 +177,49 @@ The Software Defined Infrastructure subsystem provides the following activities 
 cases and scenarios of the subsystem.
 
 
+### Messages Handled
+
+The Software Defined Infrastructure subsystem is an event driven architecture and handle several events. The following
+events are handled by this subsystem. Please note that this subsystem is not the only subsystem that handles
+these events.
+
+| Message | Action | Description |
+| --- | --- | --- |
+| request.satisfied | Custom Action |  |
+| resource.ready | /sdi/request/reserve |  |
+
 
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| acceleratorresource.create |  When an object of type AcceleratorResource is created. | AcceleratorResource
+| acceleratorresource.destroy |  When an object of type AcceleratorResource is destroyed. | AcceleratorResource
+| acceleratorresource.updated |  When an object of type AcceleratorResource has an attribute or association updated. | AcceleratorResource
+| cloud.create |  When an object of type Cloud is created. | Cloud
+| cloud.destroy |  When an object of type Cloud is destroyed. | Cloud
+| cloud.updated |  When an object of type Cloud has an attribute or association updated. | Cloud
+| computeresource.create |  When an object of type ComputeResource is created. | ComputeResource
+| computeresource.destroy |  When an object of type ComputeResource is destroyed. | ComputeResource
+| computeresource.updated |  When an object of type ComputeResource has an attribute or association updated. | ComputeResource
+| networkresource.create |  When an object of type NetworkResource is created. | NetworkResource
+| networkresource.destroy |  When an object of type NetworkResource is destroyed. | NetworkResource
+| networkresource.updated |  When an object of type NetworkResource has an attribute or association updated. | NetworkResource
+| request.create |  When an object of type Request is created. | Request
+| request.destroy |  When an object of type Request is destroyed. | Request
+| request.updated |  When an object of type Request has an attribute or association updated. | Request
+| reservation.create |  When an object of type Reservation is created. | Reservation
+| reservation.destroy |  When an object of type Reservation is destroyed. | Reservation
+| reservation.updated |  When an object of type Reservation has an attribute or association updated. | Reservation
+| resource.create |  When an object of type Resource is created. | Resource
+| resource.destroy |  When an object of type Resource is destroyed. | Resource
+| resource.updated |  When an object of type Resource has an attribute or association updated. | Resource
+| storageresource.create |  When an object of type StorageResource is created. | StorageResource
+| storageresource.destroy |  When an object of type StorageResource is destroyed. | StorageResource
+| storageresource.updated |  When an object of type StorageResource has an attribute or association updated. | StorageResource
+
+
 
 ## Interface Details
 The Software Defined Infrastructure subsystem has a well defined interface. This interface can be accessed using a
@@ -190,11 +228,16 @@ subsystems and actors can access the system.
 
 ### Action  edgemere sdi checkrequest
 
-* REST - /edgemere/sdi/checkrequest
-* bin -  edgemere sdi checkrequest
-* js - .edgemere.sdi.checkrequest
 
+
+* REST - /edgemere/sdi/checkrequest?request=obj
+* bin -  edgemere sdi checkrequest --request obj
+* js - .edgemere.sdi.checkrequest({ request:obj })
+
+#### Description
 Check the status of the request
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -204,11 +247,16 @@ Check the status of the request
 
 ### Action  edgemere sdi reserve
 
-* REST - /edgemere/sdi/reserve
-* bin -  edgemere sdi reserve
-* js - .edgemere.sdi.reserve
 
+
+* REST - /edgemere/sdi/reserve?cloud=string&amp;name=string&amp;requirements=YAML
+* bin -  edgemere sdi reserve --cloud string --name string --requirements YAML
+* js - .edgemere.sdi.reserve({ cloud:string,name:string,requirements:YAML })
+
+#### Description
 Reserve Resources from the SDI Layer
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -220,11 +268,16 @@ Reserve Resources from the SDI Layer
 
 ### Action  edgemere sdi resource get
 
-* REST - /edgemere/sdi/resource/get
-* bin -  edgemere sdi resource get
-* js - .edgemere.sdi.resource.get
 
+
+* REST - /edgemere/sdi/resource/get?cloud=string&amp;name=string&amp;requirements=YAML
+* bin -  edgemere sdi resource get --cloud string --name string --requirements YAML
+* js - .edgemere.sdi.resource.get({ cloud:string,name:string,requirements:YAML })
+
+#### Description
 Get Resources from the SDI Layer
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -236,11 +289,16 @@ Get Resources from the SDI Layer
 
 ### Action  edgemere sdi resource list
 
-* REST - /edgemere/sdi/resource/list
-* bin -  edgemere sdi resource list
-* js - .edgemere.sdi.resource.list
 
+
+* REST - /edgemere/sdi/resource/list?attr1=string
+* bin -  edgemere sdi resource list --attr1 string
+* js - .edgemere.sdi.resource.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -250,11 +308,16 @@ Description of the action
 
 ### Action  edgemere sdi resource release
 
-* REST - /edgemere/sdi/resource/release
-* bin -  edgemere sdi resource release
-* js - .edgemere.sdi.resource.release
 
+
+* REST - /edgemere/sdi/resource/release?cloud=string&amp;name=string
+* bin -  edgemere sdi resource release --cloud string --name string
+* js - .edgemere.sdi.resource.release({ cloud:string,name:string })
+
+#### Description
 Release Resources from the SDI Layer with the given name
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

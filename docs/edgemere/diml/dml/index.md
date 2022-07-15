@@ -156,7 +156,19 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| data.create |  When an object of type Data is created. | Data
+| data.destroy |  When an object of type Data is destroyed. | Data
+| data.updated |  When an object of type Data has an attribute or association updated. | Data
+| datareference.create |  When an object of type DataReference is created. | DataReference
+| datareference.destroy |  When an object of type DataReference is destroyed. | DataReference
+| datareference.updated |  When an object of type DataReference has an attribute or association updated. | DataReference
+| datastrategy.create |  When an object of type DataStrategy is created. | DataStrategy
+| datastrategy.destroy |  When an object of type DataStrategy is destroyed. | DataStrategy
+| datastrategy.updated |  When an object of type DataStrategy has an attribute or association updated. | DataStrategy
+
+
 
 ## Interface Details
 The Data Management Layer subsystem has a well defined interface. This interface can be accessed using a
@@ -165,11 +177,16 @@ subsystems and actors can access the system.
 
 ### Action  edgemere diml dml data govern
 
-* REST - /edgemere/diml/dml/data/govern
-* bin -  edgemere diml dml data govern
-* js - .edgemere.diml.dml.data.govern
 
+
+* REST - /edgemere/diml/dml/data/govern?attr1=string
+* bin -  edgemere diml dml data govern --attr1 string
+* js - .edgemere.diml.dml.data.govern({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -179,11 +196,16 @@ Description of the action
 
 ### Action  edgemere diml dml data source name
 
-* REST - /edgemere/diml/dml/data/source/name
-* bin -  edgemere diml dml data source name
-* js - .edgemere.diml.dml.data.source.name
 
+
+* REST - /edgemere/diml/dml/data/source/name?attr1=string
+* bin -  edgemere diml dml data source name --attr1 string
+* js - .edgemere.diml.dml.data.source.name({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -193,11 +215,16 @@ Description of the action
 
 ### Action  edgemere diml dml datapolicy list
 
-* REST - /edgemere/diml/dml/datapolicy/list
-* bin -  edgemere diml dml datapolicy list
-* js - .edgemere.diml.dml.datapolicy.list
 
+
+* REST - /edgemere/diml/dml/datapolicy/list?attr1=string
+* bin -  edgemere diml dml datapolicy list --attr1 string
+* js - .edgemere.diml.dml.datapolicy.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -207,11 +234,16 @@ Description of the action
 
 ### Action  edgemere diml dml datasource list
 
-* REST - /edgemere/diml/dml/datasource/list
-* bin -  edgemere diml dml datasource list
-* js - .edgemere.diml.dml.datasource.list
 
+
+* REST - /edgemere/diml/dml/datasource/list?attr1=string
+* bin -  edgemere diml dml datasource list --attr1 string
+* js - .edgemere.diml.dml.datasource.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -221,11 +253,16 @@ Description of the action
 
 ### Action  edgemere diml dml datastrategy list
 
-* REST - /edgemere/diml/dml/datastrategy/list
-* bin -  edgemere diml dml datastrategy list
-* js - .edgemere.diml.dml.datastrategy.list
 
+
+* REST - /edgemere/diml/dml/datastrategy/list?attr1=string
+* bin -  edgemere diml dml datastrategy list --attr1 string
+* js - .edgemere.diml.dml.datastrategy.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

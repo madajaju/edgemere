@@ -30,6 +30,7 @@ This represents a cloud in the ecosystem. This can be public or private onprem o
 | requests | n | Request | false | true |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
@@ -40,275 +41,9 @@ This represents a cloud in the ecosystem. This can be public or private onprem o
 | cloud | 1 | Request | false | false |  |
 | cloud | 1 | Reservation | false | false |  |
 | cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
 | cloud | 1 | AcceleratorResource | false | false |  |
 | cloud | 1 | ComputeResource | false | false |  |
 | cloud | 1 | NetworkResource | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| cloud | 1 | StorageResource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | AcceleratorResource | false | false |  |
-| cloud | 1 | ComputeResource | false | false |  |
-| cloud | 1 | NetworkResource | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
-| cloud | 1 | StorageResource | false | false |  |
-| clouds | n | CloudType | false | false |  |
-| cloud | 1 | Image | false | false |  |
-| clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | AcceleratorResource | false | false |  |
-| cloud | 1 | ComputeResource | false | false |  |
-| cloud | 1 | NetworkResource | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
 | cloud | 1 | StorageResource | false | false |  |
 
 
@@ -326,11 +61,16 @@ This represents a cloud in the ecosystem. This can be public or private onprem o
     
 ### Action cloud create
 
-* REST - cloud/create
-* bin - cloud create
-* js - cloud.create
 
+
+* REST - cloud/create?name=string&amp;type=string
+* bin - cloud create --name string --type string
+* js - cloud.create({ name:string,type:string })
+
+#### Description
 Create the Cloud
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -342,11 +82,16 @@ Create the Cloud
 
 ### Action cloud reserve
 
-* REST - cloud/reserve
-* bin - cloud reserve
-* js - cloud.reserve
 
+
+* REST - cloud/reserve?request=object
+* bin - cloud reserve --request object
+* js - cloud.reserve({ request:object })
+
+#### Description
 Reserve a resource
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

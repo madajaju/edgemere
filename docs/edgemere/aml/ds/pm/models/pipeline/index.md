@@ -24,10 +24,6 @@ A pipeline builds, tests, and deploys applications and services in the system
 | builds | n | Build | false | true |  |
 
 
-## Users of the Model
-
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
 
 
 

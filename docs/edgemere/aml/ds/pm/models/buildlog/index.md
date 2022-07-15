@@ -25,53 +25,11 @@ This is a log for the build instance. Each log represents stdout, stderr, or nay
 | parent | 1 | BuildInstance | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
-| logs | n | BuildInstance | false | true |  |
 | logs | n | BuildInstance | false | true |  |
 
 

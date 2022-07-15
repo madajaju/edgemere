@@ -14,12 +14,19 @@ package "Workflow Services" #lightblue {
 
     interface "Workflow Services" as i {
     
+    
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Workflow Services" #lightblue {
 
@@ -27,9 +34,9 @@ package "Workflow Services" #lightblue {
 }
 
 
-    "Workflow Services" --> "Developer Services"
+    "Developer Services" <-- "Workflow Services"
 
-    "Workflow Services" --> "Identity Aspect"
+    "Identity Aspect" <-- "Workflow Services"
 
 
 @enduml

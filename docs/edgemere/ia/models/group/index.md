@@ -23,53 +23,11 @@ Group representing a set of identities
 | users | n | User | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
-| groups | n | User | false | false |  |
 | groups | n | User | false | false |  |
 
 

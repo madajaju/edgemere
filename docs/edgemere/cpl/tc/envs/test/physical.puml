@@ -27,7 +27,7 @@ package "Telemetry Consumer" #lightgray {
     cpl_tc_container --> cpl_tcimage
 
   
-      artifact cpl_tc_web
+      artifact "cpl_tc_web" as cpl_tc_web
       web_container --> cpl_tc_web
     
   }

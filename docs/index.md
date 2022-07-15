@@ -1,11 +1,7 @@
 ---
-layout: default
-title: edgemere Overview
----
-
+layout: default title: edgemere Overview
 {# topPackage.name.toLowerCase()-project}
-
-# edgemere
+---
 
 Edgemere is a conceptual architecture targeted to multi-hybrid cloud and edge computing strategies including data,
 application, service, and infrastructure management. With the growth of IoT devices management of these elements from
@@ -46,7 +42,14 @@ is to utilize the current tools as a foundation to build upon for the future end
 process changes shows how the foundation can be built upon to achieve the long term architecture.
 
 
-# Actors
+# edgemere Details
+
+The following section contains details of the high level architecture of the edgemere system. It is broken
+into the actors of the system, the use cases of the system, and a high level architecture of the system including
+physical and deployment strategies. Details of these elements can be found by following the links to the complete
+architecture.
+
+## Actors
 
 There are several users of the system. We first took a use case analysis approach to the architecture. First,
 identifying the actors/users of the system and building out how the actor uses the system? What their key objectives and
@@ -54,143 +57,102 @@ goals are? and How they use the system? This list is not an exhaustive list of a
 primary actors.
 
 
-* [Actor](actor-actor)
+* [Actor](actor-actor) - Long description
   
-* [ApplicationDeveloper](actor-applicationdeveloper)
+* [ApplicationDeveloper](actor-applicationdeveloper) - The Application Developer work in coordination with DevOps to manage services, applications and workloads through the development pipeline.
   
-* [ChiefDataOfficer](actor-cdo)
+* [ChiefDataOfficer](actor-cdo) - Responsible for setting strategy and governance of data in the organization.
   
-* [DataAnalyst](actor-analyst)
+* [DataAnalyst](actor-analyst) - Uses Data solutions produced by the Data Scientist and Data Engineer to provide business value to the organization.
   
-* [DataEngineer](actor-dataengineer)
+* [DataEngineer](actor-dataengineer) - Responsible for operationalization of data pipeline and the automation and deployment of data solutions. They work closely with the Data Scientist to deliver solutions to data analyst.
   
-* [DataScientist](actor-datascientist)
+* [DataScientist](actor-datascientist) - Responsible for the architecture and development of data analytic models and solutions. They work closely with the Data engineer to deliver solutions to the Data Analyst.
   
-* [DataSteward](actor-datasteward)
+* [DataSteward](actor-datasteward) - Responsible for the governance of data in their organization. They implement policies established by the CDO.
   
-* [DevOpsEngineer](actor-devops)
+* [DevOpsEngineer](actor-devops) - Responsible for the management of the automation of the delivery of applications and solutions in the organization.
   
-* [ITOperations](actor-itops)
+* [ITOperations](actor-itops) - Responsible for the management of the infrastructure.
   
-* [StackDeveloper](actor-stackdev)
+* [StackDeveloper](actor-stackdev) - Responsible for developing reusable micro-services and application stacks in the organization.
   
 
-These actors are found in most organizations and there are several different organizational structures that can be
-employed. The key is to identify the people or organization that fits the different actors in the systems. The following
-is an example of a centralized organizational structure of the actors of the system.
+These actors are found in most organizations and there are several organizational structures that can be employed. The
+key is to identify the people or organization that fits the different actors in the systems. The following is an example
+of a centralized organizational structure of the actors of the system.
 
-# UseCases
+## UseCases
 
 
-* [Manage Environment](usecase-ManageEnvironment)
-  
-* [Manage AI Models](usecase-ManageAIModels)
-  
-* [Manage Applications](usecase-ManageApplications)
-  
-* [Manage Workloads](usecase-ManageWorkloads)
-  
-* [Manage Data Center](usecase-ManageDataCenter)
-  
-* [Manage Infrastructure](usecase-ManageInfrastructure)
-  
-* [Manage Data](usecase-ManageData)
-  
-* [Manage Data Adaptors](usecase-ManageDataAdaptors)
-  
-* [Manage Data Blue Prints](usecase-ManageDataBluePrints)
-  
-* [Manage Data Pipeline](usecase-ManageDataPipeline)
-  
-* [Manage Data Procedures](usecase-ManageDataProcedures)
-  
-* [Manage Meta Data](usecase-ManageMetaData)
-  
-* [Manage Data Instances](usecase-ManageDataInstances)
-  
-* [Manage Data Governance](usecase-ManageDataGovernance)
-  
-* [Manage Data Policies](usecase-ManageDataPolicies)
-  
-* [Manage Data Sources](usecase-ManageDataSources)
-  
-* [Manage Data Strategy](usecase-ManageDataStrategy)
-  
-* [Apply Security Profiles](usecase-ApplySecurityProfiles)
-  
-* [Manage Security Profiles](usecase-ManageSecurityProfiles)
-  
-* [Find Resources](usecase-FindResources)
-  
-* [ManageBilling](usecase-ManageBilling)
-  
-* [ManageCostModel](usecase-ManageCostModel)
-  
-* [Manage Multi Cloud](usecase-ManageMultiCloud)
-  
-* [Map Assets to Cloud](usecase-MapAssetstoCloud)
-  
-* [Map Services to Resources](usecase-MapServicestoResources)
-  
-* [Manage Stacks](usecase-ManageStacks)
-  
-* [Manage Assets](usecase-ManageAssets)
-  
-* [Manage Clouds](usecase-ManageClouds)
-  
-* [Manage Services](usecase-ManageServices)
-  
-* [Manage Resources](usecase-ManageResources)
-  
 
 ![UseCase](./usecases.png)
 
-# Solution Architecture
+## Solution Architecture
 
 The Data Model for the  edgemere shows how the different objects and classes of object interact and their
 structure.
 
-* [Application Management Layer](package--edgemere-aml)
+* [Application Management Layer](package--edgemere-aml) -
+Application Management Layer is responsible for managing applications and workflows and the development, test, deployment, and updates of those applications and workloads.
   
-* [Common Physical Layer](package--edgemere-cpl)
+* [Common Physical Layer](package--edgemere-cpl) -
+Common Physical Layer is a package that contains...
   
-* [Distributed Information Management Layer](package--edgemere-diml)
+* [Distributed Information Management Layer](package--edgemere-diml) -
+Distributed Information Management Layer is a package that contains...
   
-* [Identity Aspect](package--edgemere-ia)
+* [Identity Aspect](package--edgemere-ia) -
+Identity Aspect is a package that contains...
   
-* [Security Aspect](package--edgemere-sa)
+* [Security Aspect](package--edgemere-sa) -
+Security Aspect contains security tools and subsystems that are used throughout the architecture.
   
-* [Service Management Layer](package--edgemere-sml)
+* [Service Management Layer](package--edgemere-sml) -
+Service Management Layer is a subsystem that manages services, stacks, environments, and multi-clouds.
   
-* [Software Defined Infrastructure](package--edgemere-sdi)
+* [Software Defined Infrastructure](package--edgemere-sdi) -
+Software Defined Infrastructure(SDI) contains the abstractions for private and public clouds. The SDI layer is a common standard interface for all cloud resources both virutal, container, and bare metal.
   
 
 ![Logical Diagram](./subpackage.png)
 
-## Deployment Architecture
+### Deployment Architecture
 
-This subsystem is deployed using micro-services as shown in the diagram below. A nodejs app is used to implement the
-micro-services in the system. Each subsystem also has an CLI, REST and Web Interface exposed through a nodejs
-application. The nodejs application will interface with the micro-services and can monitor and drive work-flows through
-the mesh of micro-services.
+This subsystem is deployed using microservices as shown in the diagram below. A nodejs app is used to implement the
+microservices in the system. Each subsystem also has an CLI, REST and Web Interface exposed through a nodejs
+application. Additionally, the subsystems handle events through a WebSocket interface. The nodejs application will
+interface with the microservices and can monitor and drive work-flows through the mesh of microservices.
 
 The solution can be deployed on different environments. The standard environments in the architecture are local, dev,
 test, and prod. These environments fit into the typical devops pipelines that exist in the industry. Additional
 deployment environments can be added to fit the needs of the user.
 
-## Physical Architecture
+
+* [local](environment--edgemere-local)
+  
+* [dev](environment--edgemere-dev)
+  
+* [test](environment--edgemere-test)
+  
+* [prod](environment--edgemere-prod)
+  
+
+### Physical Architecture
 
 The edgemere architecture is physically laid out on a hybrid cloud infrastructure using a microservice
-architecture. All of the micro-services communicate to each other and the main app through a REST interface. A CLI, REST
-or Web interface is available for external systems or users to interact with the system. Each subsystem in the
-architecture uses an aggregated service/stack pattern that allows for the elasticity of services based on the workloads,
-capacity and business rules established for the solution. See each subsytem for more information on the individual
-stacks and their services.
+architecture. All the microservices communicate to each other and the administrative app through a REST and Websocket
+interface. A CLI, REST, Websocket and Web interface is available for external systems or users to interact with the
+system. Each subsystem in the architecture uses an aggregated service/stack pattern that allows for the elasticity of
+services based on the workloads, capacity and business rules established for the solution. See each subsystem for more
+information on the individual stacks and their services.
 
-## Deployment Architecture
 
-This subsystem is deployed using micro-services as shown in the diagram below. The 'micro' module is used to implement
-the micro-services in the system. The subsystem also has an CLI, REST and Web Interface exposed through a nodejs
-application. The nodejs application will interface with the micro-services and can monitor and drive work-flows through
-the mesh of micro-services.
-
+* [local](environment--edgemere-local)
+  
+* [dev](environment--edgemere-dev)
+  
+* [test](environment--edgemere-test)
+  
+* [prod](environment--edgemere-prod)
+  

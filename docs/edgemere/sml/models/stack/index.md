@@ -36,6 +36,7 @@ A Stack is an aggregation of services in one context. The Stack can have any num
 | parent | 1 | Service | false | false | Parent of the service |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
@@ -45,226 +46,7 @@ A Stack is an aggregation of services in one context. The Stack can have any num
 | stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
 | stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
 | stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
 | stack | 1 | Stack | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stack | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stack | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stack | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stacks | n | Application | true | true |  |
-| stack | 1 | Service | false | false | Parent Stack of the service |
-| stack | 1 | Stack | false | false | Parent Stack of the service |
-| stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
-| stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
-| stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
 
 
 
@@ -291,53 +73,67 @@ A Stack is an aggregation of services in one context. The Stack can have any num
     
 ### Action stack create
 
-* REST - stack/create
-* bin - stack create
-* js - stack.create
 
+
+* REST - stack/create?
+* bin - stack create 
+* js - stack.create({  })
+
+#### Description
 Create a Stack
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action stack createlet
 
-* REST - stack/createlet
-* bin - stack createlet
-* js - stack.createlet
 
+
+* REST - stack/createlet?
+* bin - stack createlet 
+* js - stack.createlet({  })
+
+#### Description
 Create a Stack
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action stack debug
 
-* REST - stack/debug
-* bin - stack debug
-* js - stack.debug
 
+
+* REST - stack/debug?
+* bin - stack debug 
+* js - stack.debug({  })
+
+#### Description
 Debug a Stack
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action stack deploy
 
-* REST - stack/deploy
-* bin - stack deploy
-* js - stack.deploy
 
+
+* REST - stack/deploy?tag=string&amp;env=string&amp;args=json
+* bin - stack deploy --tag string --env string --args json
+* js - stack.deploy({ tag:string,env:string,args:json })
+
+#### Description
 Deploy a Stack
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -350,43 +146,52 @@ Deploy a Stack
 
 ### Action stack get
 
-* REST - stack/get
-* bin - stack get
-* js - stack.get
 
+
+* REST - stack/get?
+* bin - stack get 
+* js - stack.get({  })
+
+#### Description
 Get a Stack
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action stack show
 
-* REST - stack/show
-* bin - stack show
-* js - stack.show
 
+
+* REST - stack/show?
+* bin - stack show 
+* js - stack.show({  })
+
+#### Description
 Show a Stack
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action stack update
 
-* REST - stack/update
-* bin - stack update
-* js - stack.update
 
+
+* REST - stack/update?
+* bin - stack update 
+* js - stack.update({  })
+
+#### Description
 Update a Stack
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 

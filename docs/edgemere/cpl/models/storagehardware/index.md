@@ -26,10 +26,6 @@ This represents storage hardware in the common layer
 | resources | n | Resource | false | false |  |
 
 
-## Users of the Model
-
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
 
 
 
@@ -52,11 +48,16 @@ This represents storage hardware in the common layer
     
 ### Action storagehardware addStats
 
-* REST - storagehardware/addStats
-* bin - storagehardware addStats
-* js - storagehardware.addStats
 
+
+* REST - storagehardware/addStats?stats=json
+* bin - storagehardware addStats --stats json
+* js - storagehardware.addStats({ stats:json })
+
+#### Description
 Add Stats to the Hardware
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -67,11 +68,16 @@ Add Stats to the Hardware
 
 ### Action storagehardware create
 
-* REST - storagehardware/create
-* bin - storagehardware create
-* js - storagehardware.create
 
+
+* REST - storagehardware/create?name=string&amp;capabilities=json
+* bin - storagehardware create --name string --capabilities json
+* js - storagehardware.create({ name:string,capabilities:json })
+
+#### Description
 Create Hardware
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -83,39 +89,50 @@ Create Hardware
 
 ### Action storagehardware disable
 
-* REST - storagehardware/disable
-* bin - storagehardware disable
-* js - storagehardware.disable
 
+
+* REST - storagehardware/disable?
+* bin - storagehardware disable 
+* js - storagehardware.disable({  })
+
+#### Description
 Disable Device and its hardware
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action storagehardware enable
 
-* REST - storagehardware/enable
-* bin - storagehardware enable
-* js - storagehardware.enable
 
+
+* REST - storagehardware/enable?
+* bin - storagehardware enable 
+* js - storagehardware.enable({  })
+
+#### Description
 Enable Device to be used.
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action storagehardware factory
 
-* REST - storagehardware/factory
-* bin - storagehardware factory
-* js - storagehardware.factory
 
+
+* REST - storagehardware/factory?name=string&amp;type=string&amp;capabilities=json
+* bin - storagehardware factory --name string --type string --capabilities json
+* js - storagehardware.factory({ name:string,type:string,capabilities:json })
+
+#### Description
 Create Hardware based on properties
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

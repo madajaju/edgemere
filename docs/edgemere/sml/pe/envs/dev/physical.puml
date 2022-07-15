@@ -31,10 +31,10 @@ package "Provision Engine" #lightgreen {
     sml_pe_container --> sml_peimage
 
   
-      artifact sml_pe_web
+      artifact "sml_pe_web" as sml_pe_web
       web_container --> sml_pe_web
     
-      artifact sml_pe_gw
+      artifact "sml_pe_gw" as sml_pe_gw
       gateway_container --> sml_pe_gw
     
   }

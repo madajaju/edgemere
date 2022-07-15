@@ -234,11 +234,62 @@ The Common Physical Layer subsystem provides the following activities and flows 
 cases and scenarios of the subsystem.
 
 
+### Messages Handled
+
+The Common Physical Layer subsystem is an event driven architecture and handle several events. The following
+events are handled by this subsystem. Please note that this subsystem is not the only subsystem that handles
+these events.
+
+| Message | Action | Description |
+| --- | --- | --- |
+| request.needed | /cpl/reserve |  |
+| reservation.rejected | Custom Action |  |
+| resource.provisioning | /cpl/provision |  |
+
 
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+| device.create |  When an object of type Device is created. | Device
+| device.destroy |  When an object of type Device is destroyed. | Device
+| device.updated |  When an object of type Device has an attribute or association updated. | Device
+| aggregateddevice.create |  When an object of type AggregatedDevice is created. | AggregatedDevice
+| aggregateddevice.destroy |  When an object of type AggregatedDevice is destroyed. | AggregatedDevice
+| aggregateddevice.updated |  When an object of type AggregatedDevice has an attribute or association updated. | AggregatedDevice
+| metric.create |  When an object of type Metric is created. | Metric
+| metric.destroy |  When an object of type Metric is destroyed. | Metric
+| metric.updated |  When an object of type Metric has an attribute or association updated. | Metric
+| metricattribute.create |  When an object of type MetricAttribute is created. | MetricAttribute
+| metricattribute.destroy |  When an object of type MetricAttribute is destroyed. | MetricAttribute
+| metricattribute.updated |  When an object of type MetricAttribute has an attribute or association updated. | MetricAttribute
+| metriccomposite.create |  When an object of type MetricComposite is created. | MetricComposite
+| metriccomposite.destroy |  When an object of type MetricComposite is destroyed. | MetricComposite
+| metriccomposite.updated |  When an object of type MetricComposite has an attribute or association updated. | MetricComposite
+| metricconsumeable.create |  When an object of type MetricConsumeable is created. | MetricConsumeable
+| metricconsumeable.destroy |  When an object of type MetricConsumeable is destroyed. | MetricConsumeable
+| metricconsumeable.updated |  When an object of type MetricConsumeable has an attribute or association updated. | MetricConsumeable
+| physicalprofile.create |  When an object of type PhysicalProfile is created. | PhysicalProfile
+| physicalprofile.destroy |  When an object of type PhysicalProfile is destroyed. | PhysicalProfile
+| physicalprofile.updated |  When an object of type PhysicalProfile has an attribute or association updated. | PhysicalProfile
+| hardware.create |  When an object of type Hardware is created. | Hardware
+| hardware.destroy |  When an object of type Hardware is destroyed. | Hardware
+| hardware.updated |  When an object of type Hardware has an attribute or association updated. | Hardware
+| computehardware.create |  When an object of type ComputeHardware is created. | ComputeHardware
+| computehardware.destroy |  When an object of type ComputeHardware is destroyed. | ComputeHardware
+| computehardware.updated |  When an object of type ComputeHardware has an attribute or association updated. | ComputeHardware
+| networkhardware.create |  When an object of type NetworkHardware is created. | NetworkHardware
+| networkhardware.destroy |  When an object of type NetworkHardware is destroyed. | NetworkHardware
+| networkhardware.updated |  When an object of type NetworkHardware has an attribute or association updated. | NetworkHardware
+| storagehardware.create |  When an object of type StorageHardware is created. | StorageHardware
+| storagehardware.destroy |  When an object of type StorageHardware is destroyed. | StorageHardware
+| storagehardware.updated |  When an object of type StorageHardware has an attribute or association updated. | StorageHardware
+| acceleratorhardware.create |  When an object of type AcceleratorHardware is created. | AcceleratorHardware
+| acceleratorhardware.destroy |  When an object of type AcceleratorHardware is destroyed. | AcceleratorHardware
+| acceleratorhardware.updated |  When an object of type AcceleratorHardware has an attribute or association updated. | AcceleratorHardware
+
+
 
 ## Interface Details
 The Common Physical Layer subsystem has a well defined interface. This interface can be accessed using a
@@ -247,11 +298,16 @@ subsystems and actors can access the system.
 
 ### Action  edgemere cpl adddevices
 
-* REST - /edgemere/cpl/adddevices
-* bin -  edgemere cpl adddevices
-* js - .edgemere.cpl.adddevices
 
+
+* REST - /edgemere/cpl/adddevices?item=object
+* bin -  edgemere cpl adddevices --item object
+* js - .edgemere.cpl.adddevices({ item:object })
+
+#### Description
 add devices to the data center
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -261,11 +317,16 @@ add devices to the data center
 
 ### Action  edgemere cpl provision
 
-* REST - /edgemere/cpl/provision
-* bin -  edgemere cpl provision
-* js - .edgemere.cpl.provision
 
+
+* REST - /edgemere/cpl/provision?resource=object
+* bin -  edgemere cpl provision --resource object
+* js - .edgemere.cpl.provision({ resource:object })
+
+#### Description
 Provision the resources on the devices
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -275,11 +336,16 @@ Provision the resources on the devices
 
 ### Action  edgemere cpl reserve
 
-* REST - /edgemere/cpl/reserve
-* bin -  edgemere cpl reserve
-* js - .edgemere.cpl.reserve
 
+
+* REST - /edgemere/cpl/reserve?request=object
+* bin -  edgemere cpl reserve --request object
+* js - .edgemere.cpl.reserve({ request:object })
+
+#### Description
 Get Reservations from Devices, Aggregate Deivces, and DataCenters
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -289,11 +355,16 @@ Get Reservations from Devices, Aggregate Deivces, and DataCenters
 
 ### Action  edgemere cpl data govern
 
-* REST - /edgemere/cpl/data/govern
-* bin -  edgemere cpl data govern
-* js - .edgemere.cpl.data.govern
 
+
+* REST - /edgemere/cpl/data/govern?attr1=string
+* bin -  edgemere cpl data govern --attr1 string
+* js - .edgemere.cpl.data.govern({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -303,11 +374,16 @@ Description of the action
 
 ### Action  edgemere cpl data source
 
-* REST - /edgemere/cpl/data/source
-* bin -  edgemere cpl data source
-* js - .edgemere.cpl.data.source
 
+
+* REST - /edgemere/cpl/data/source?attr1=string
+* bin -  edgemere cpl data source --attr1 string
+* js - .edgemere.cpl.data.source({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -317,11 +393,16 @@ Description of the action
 
 ### Action  edgemere cpl datacenter create
 
-* REST - /edgemere/cpl/datacenter/create
-* bin -  edgemere cpl datacenter create
-* js - .edgemere.cpl.datacenter.create
 
+
+* REST - /edgemere/cpl/datacenter/create?attr1=string
+* bin -  edgemere cpl datacenter create --attr1 string
+* js - .edgemere.cpl.datacenter.create({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -331,11 +412,16 @@ Description of the action
 
 ### Action  edgemere cpl datacenter disable
 
-* REST - /edgemere/cpl/datacenter/disable
-* bin -  edgemere cpl datacenter disable
-* js - .edgemere.cpl.datacenter.disable
 
+
+* REST - /edgemere/cpl/datacenter/disable?attr1=string
+* bin -  edgemere cpl datacenter disable --attr1 string
+* js - .edgemere.cpl.datacenter.disable({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -345,11 +431,16 @@ Description of the action
 
 ### Action  edgemere cpl datacenter enable
 
-* REST - /edgemere/cpl/datacenter/enable
-* bin -  edgemere cpl datacenter enable
-* js - .edgemere.cpl.datacenter.enable
 
+
+* REST - /edgemere/cpl/datacenter/enable?attr1=string
+* bin -  edgemere cpl datacenter enable --attr1 string
+* js - .edgemere.cpl.datacenter.enable({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -359,11 +450,16 @@ Description of the action
 
 ### Action  edgemere cpl datacenter list
 
-* REST - /edgemere/cpl/datacenter/list
-* bin -  edgemere cpl datacenter list
-* js - .edgemere.cpl.datacenter.list
 
+
+* REST - /edgemere/cpl/datacenter/list?attr1=string
+* bin -  edgemere cpl datacenter list --attr1 string
+* js - .edgemere.cpl.datacenter.list({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -373,11 +469,16 @@ Description of the action
 
 ### Action  edgemere cpl datacenter remove
 
-* REST - /edgemere/cpl/datacenter/remove
-* bin -  edgemere cpl datacenter remove
-* js - .edgemere.cpl.datacenter.remove
 
+
+* REST - /edgemere/cpl/datacenter/remove?attr1=string
+* bin -  edgemere cpl datacenter remove --attr1 string
+* js - .edgemere.cpl.datacenter.remove({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -387,11 +488,16 @@ Description of the action
 
 ### Action  edgemere cpl datacenter update
 
-* REST - /edgemere/cpl/datacenter/update
-* bin -  edgemere cpl datacenter update
-* js - .edgemere.cpl.datacenter.update
 
+
+* REST - /edgemere/cpl/datacenter/update?attr1=string
+* bin -  edgemere cpl datacenter update --attr1 string
+* js - .edgemere.cpl.datacenter.update({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -401,11 +507,16 @@ Description of the action
 
 ### Action  edgemere cpl device disable
 
-* REST - /edgemere/cpl/device/disable
-* bin -  edgemere cpl device disable
-* js - .edgemere.cpl.device.disable
 
+
+* REST - /edgemere/cpl/device/disable?name=string&amp;id=string
+* bin -  edgemere cpl device disable --name string --id string
+* js - .edgemere.cpl.device.disable({ name:string,id:string })
+
+#### Description
 Disable Device and all of its hardware
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -416,11 +527,16 @@ Disable Device and all of its hardware
 
 ### Action  edgemere cpl device enable
 
-* REST - /edgemere/cpl/device/enable
-* bin -  edgemere cpl device enable
-* js - .edgemere.cpl.device.enable
 
+
+* REST - /edgemere/cpl/device/enable?name=string&amp;id=string
+* bin -  edgemere cpl device enable --name string --id string
+* js - .edgemere.cpl.device.enable({ name:string,id:string })
+
+#### Description
 Enable Device and all of its hardware
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

@@ -23,53 +23,11 @@ Procedure run on the Data Source
 | pipeline | 1 | DataPipeline | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
-| procedures | n | DataPipeline | false | true |  |
 | procedures | n | DataPipeline | false | true |  |
 
 

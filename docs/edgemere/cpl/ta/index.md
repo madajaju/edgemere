@@ -142,11 +142,25 @@ The Telemetry Aggregator subsystem provides the following activities and flows t
 cases and scenarios of the subsystem.
 
 
+### Messages Handled
+
+The Telemetry Aggregator subsystem is an event driven architecture and handle several events. The following
+events are handled by this subsystem. Please note that this subsystem is not the only subsystem that handles
+these events.
+
+| Message | Action | Description |
+| --- | --- | --- |
+| device.stats | /ta/report |  |
+| device.stats | /tc/report |  |
+
 
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+
+
 
 ## Interface Details
 The Telemetry Aggregator subsystem has a well defined interface. This interface can be accessed using a
@@ -155,24 +169,32 @@ subsystems and actors can access the system.
 
 ### Action  edgemere cpl ta list
 
-* REST - /edgemere/cpl/ta/list
-* bin -  edgemere cpl ta list
-* js - .edgemere.cpl.ta.list
 
+
+* REST - /edgemere/cpl/ta/list?
+* bin -  edgemere cpl ta list 
+* js - .edgemere.cpl.ta.list({  })
+
+#### Description
 report the statstics for a device
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 ### Action  edgemere cpl ta report
 
-* REST - /edgemere/cpl/ta/report
-* bin -  edgemere cpl ta report
-* js - .edgemere.cpl.ta.report
 
+
+* REST - /edgemere/cpl/ta/report?name=string&amp;stats=object
+* bin -  edgemere cpl ta report --name string --stats object
+* js - .edgemere.cpl.ta.report({ name:string,stats:object })
+
+#### Description
 report the statstics for a device
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -183,11 +205,16 @@ report the statstics for a device
 
 ### Action  edgemere cpl ta setparent
 
-* REST - /edgemere/cpl/ta/setparent
-* bin -  edgemere cpl ta setparent
-* js - .edgemere.cpl.ta.setparent
 
+
+* REST - /edgemere/cpl/ta/setparent?url=string&amp;name=string
+* bin -  edgemere cpl ta setparent --url string --name string
+* js - .edgemere.cpl.ta.setparent({ url:string,name:string })
+
+#### Description
 Set the parent for the producer to report to
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -198,11 +225,16 @@ Set the parent for the producer to report to
 
 ### Action  edgemere cpl ta show
 
-* REST - /edgemere/cpl/ta/show
-* bin -  edgemere cpl ta show
-* js - .edgemere.cpl.ta.show
 
+
+* REST - /edgemere/cpl/ta/show?name=object
+* bin -  edgemere cpl ta show --name object
+* js - .edgemere.cpl.ta.show({ name:object })
+
+#### Description
 report the statstics for a device
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -212,24 +244,32 @@ report the statstics for a device
 
 ### Action  edgemere cpl ta stats get
 
-* REST - /edgemere/cpl/ta/stats/get
-* bin -  edgemere cpl ta stats get
-* js - .edgemere.cpl.ta.stats.get
 
+
+* REST - /edgemere/cpl/ta/stats/get?
+* bin -  edgemere cpl ta stats get 
+* js - .edgemere.cpl.ta.stats.get({  })
+
+#### Description
 get the statstics for the aggregated device
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 ### Action  edgemere cpl ta stats send
 
-* REST - /edgemere/cpl/ta/stats/send
-* bin -  edgemere cpl ta stats send
-* js - .edgemere.cpl.ta.stats.send
 
+
+* REST - /edgemere/cpl/ta/stats/send?name=string&amp;stats=string
+* bin -  edgemere cpl ta stats send --name string --stats string
+* js - .edgemere.cpl.ta.stats.send({ name:string,stats:string })
+
+#### Description
 send the statstics for the managing service
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

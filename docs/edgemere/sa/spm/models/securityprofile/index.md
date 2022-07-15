@@ -23,53 +23,11 @@ A SecurityProfile allows security experts to develop a common profile that can b
 | policies | 1 | PolicyCollection | false | false |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
-| profile | 1 | Environment | false | false |  |
 | profile | 1 | Environment | false | false |  |
 
 

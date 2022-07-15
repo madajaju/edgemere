@@ -9,15 +9,22 @@ package "Service Management Layer" #lightgreen {
 package "Common Data Service" #ffcc88 {
 
     interface "Common Data Service" as i {
+    
             /edgemere/diml/cds/data/list()
             /edgemere/diml/cds/data/source/name()
     
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Common Data Service" #ffcc88 {
 
@@ -37,7 +44,7 @@ rectangle "Transform Services" #white {
 }
 
 
-    "Common Data Service" --> "Service Management Layer"
+    "Service Management Layer" <-- "Common Data Service"
 
 
 @enduml

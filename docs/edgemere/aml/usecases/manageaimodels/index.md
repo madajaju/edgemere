@@ -8,7 +8,7 @@ parent: usecases
 
 Data Scientist manages AI models and ties them to and application and data set. DevOps will make sure when applications and AI models are updated that they are updatedtogether.
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 
@@ -29,10 +29,10 @@ Data Scientist manages AI models and ties them to and application and data set. 
 
 ## Detail Scenarios
 
-* [Manage AI Models](#scenario-CreateAIModel)
-* [Manage AI Models](#scenario-DeployAIModel)
-* [Manage AI Models](#scenario-DestroyAIModel)
-* [Manage AI Models](#scenario-UpdateAIModel)
+* [CreateAIModel](#scenario-CreateAIModel)
+* [DeployAIModel](#scenario-DeployAIModel)
+* [DestroyAIModel](#scenario-DestroyAIModel)
+* [UpdateAIModel](#scenario-UpdateAIModel)
 
 
 
@@ -40,7 +40,7 @@ Data Scientist manages AI models and ties them to and application and data set. 
 
 Create AI Model is the description
 
-![Scenario CreateAIModel](./createaimodel.png)
+![Scenario CreateAIModel](./CreateAIModel.png)
 
 #### Steps
 
@@ -58,7 +58,7 @@ Create AI Model is the description
 
 Deploy AI Model is the description
 
-![Scenario DeployAIModel](./deployaimodel.png)
+![Scenario DeployAIModel](./DeployAIModel.png)
 
 #### Steps
 
@@ -77,7 +77,7 @@ Deploy AI Model is the description
 
 Destroy AI Model is the description
 
-![Scenario DestroyAIModel](./destroyaimodel.png)
+![Scenario DestroyAIModel](./DestroyAIModel.png)
 
 #### Steps
 
@@ -95,7 +95,7 @@ Destroy AI Model is the description
 
 Update AI Model is the description
 
-![Scenario UpdateAIModel](./updateaimodel.png)
+![Scenario UpdateAIModel](./UpdateAIModel.png)
 
 #### Steps
 

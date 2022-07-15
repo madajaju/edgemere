@@ -31,10 +31,10 @@ package "Federated Meta Data Management" #lightblue {
     diml_dml_fmdm_container --> diml_dml_fmdmimage
 
   
-      artifact diml_dml_fmdm_web
+      artifact "diml_dml_fmdm_web" as diml_dml_fmdm_web
       web_container --> diml_dml_fmdm_web
     
-      artifact diml_dml_fmdm_gw
+      artifact "diml_dml_fmdm_gw" as diml_dml_fmdm_gw
       gateway_container --> diml_dml_fmdm_gw
     
   }

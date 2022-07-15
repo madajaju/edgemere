@@ -31,10 +31,10 @@ package "Data Management Layer" #ffcc88 {
     diml_dml_container --> diml_dmlimage
 
   
-      artifact diml_dml_web
+      artifact "diml_dml_web" as diml_dml_web
       web_container --> diml_dml_web
     
-      artifact diml_dml_gw
+      artifact "diml_dml_gw" as diml_dml_gw
       gateway_container --> diml_dml_gw
     
   }

@@ -8,7 +8,7 @@ state "da" as cplda #lightgray {
 }
 
 
-state cplda #lightgray {
+state "cplda" as pstatename #lightgray {
     state "Custom Function" as dafunction {
     }
 }

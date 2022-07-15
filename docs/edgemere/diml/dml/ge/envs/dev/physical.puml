@@ -31,10 +31,10 @@ package "Governance Engine" #lightblue {
     diml_dml_ge_container --> diml_dml_geimage
 
   
-      artifact diml_dml_ge_web
+      artifact "diml_dml_ge_web" as diml_dml_ge_web
       web_container --> diml_dml_ge_web
     
-      artifact diml_dml_ge_gw
+      artifact "diml_dml_ge_gw" as diml_dml_ge_gw
       gateway_container --> diml_dml_ge_gw
     
   }

@@ -8,7 +8,7 @@ parent: usecases
 
 Apply Security Profiles is the description
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 
@@ -26,7 +26,7 @@ Apply Security Profiles is the description
 
 ## Detail Scenarios
 
-* [Apply Security Profiles](#scenario-DeploySecurityProfile)
+* [DeploySecurityProfile](#scenario-DeploySecurityProfile)
 
 
 
@@ -34,7 +34,7 @@ Apply Security Profiles is the description
 
 Deploy Security Profile is the description
 
-![Scenario DeploySecurityProfile](./deploysecurityprofile.png)
+![Scenario DeploySecurityProfile](./DeploySecurityProfile.png)
 
 #### Steps
 

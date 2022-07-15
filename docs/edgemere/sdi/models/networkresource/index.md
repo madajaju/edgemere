@@ -30,10 +30,6 @@ Logical Resource of Network that are provisioned
 | cloud | 1 | Cloud | false | false |  |
 
 
-## Users of the Model
-
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
 
 
 
@@ -50,11 +46,16 @@ Logical Resource of Network that are provisioned
     
 ### Action networkresource factory
 
-* REST - networkresource/factory
-* bin - networkresource factory
-* js - networkresource.factory
 
+
+* REST - networkresource/factory?name=string&amp;value=object
+* bin - networkresource factory --name string --value object
+* js - networkresource.factory({ name:string,value:object })
+
+#### Description
 Create a Resource based on the hardware to resource table
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -66,15 +67,18 @@ Create a Resource based on the hardware to resource table
 
 ### Action networkresource provision
 
-* REST - networkresource/provision
-* bin - networkresource provision
-* js - networkresource.provision
 
+
+* REST - networkresource/provision?
+* bin - networkresource provision 
+* js - networkresource.provision({  })
+
+#### Description
 Provision the Resource
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 

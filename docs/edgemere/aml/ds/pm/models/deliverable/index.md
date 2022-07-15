@@ -25,53 +25,11 @@ This is the result of a build. This could be a container image, document, or lib
 | image | 1 | Image |  |  |  |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
-| deliverables | n | Build | false | true |  |
 | deliverables | n | Build | false | true |  |
 
 

@@ -27,7 +27,7 @@ package "Common Physical Layer" #lightgray {
     cpl_container --> cplimage
 
   
-      artifact cpl_web
+      artifact "cpl_web" as cpl_web
       web_container --> cpl_web
     
   }

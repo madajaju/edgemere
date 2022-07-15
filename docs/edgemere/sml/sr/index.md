@@ -140,7 +140,10 @@ cases and scenarios of the subsystem.
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+
+
 
 ## Interface Details
 The Service Repository subsystem has a well defined interface. This interface can be accessed using a
@@ -149,11 +152,16 @@ subsystems and actors can access the system.
 
 ### Action  edgemere sml sr data govern
 
-* REST - /edgemere/sml/sr/data/govern
-* bin -  edgemere sml sr data govern
-* js - .edgemere.sml.sr.data.govern
 
+
+* REST - /edgemere/sml/sr/data/govern?attr1=string
+* bin -  edgemere sml sr data govern --attr1 string
+* js - .edgemere.sml.sr.data.govern({ attr1:string })
+
+#### Description
 Description of the action
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

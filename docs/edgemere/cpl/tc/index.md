@@ -136,11 +136,26 @@ The Telemetry Consumer subsystem provides the following activities and flows tha
 cases and scenarios of the subsystem.
 
 
+### Messages Handled
+
+The Telemetry Consumer subsystem is an event driven architecture and handle several events. The following
+events are handled by this subsystem. Please note that this subsystem is not the only subsystem that handles
+these events.
+
+| Message | Action | Description |
+| --- | --- | --- |
+| adevice.stats | /tc/report |  |
+| device.stats | /ta/report |  |
+| device.stats | /tc/report |  |
+
 
 
 ### Messages Sent
 
-TBD
+| Event | Description | Emitter |
+|-------|-------------|---------|
+
+
 
 ## Interface Details
 The Telemetry Consumer subsystem has a well defined interface. This interface can be accessed using a
@@ -149,24 +164,32 @@ subsystems and actors can access the system.
 
 ### Action  edgemere cpl tc list
 
-* REST - /edgemere/cpl/tc/list
-* bin -  edgemere cpl tc list
-* js - .edgemere.cpl.tc.list
 
+
+* REST - /edgemere/cpl/tc/list?
+* bin -  edgemere cpl tc list 
+* js - .edgemere.cpl.tc.list({  })
+
+#### Description
 report the statstics for a device
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 ### Action  edgemere cpl tc report
 
-* REST - /edgemere/cpl/tc/report
-* bin -  edgemere cpl tc report
-* js - .edgemere.cpl.tc.report
 
+
+* REST - /edgemere/cpl/tc/report?name=string&amp;stats=object
+* bin -  edgemere cpl tc report --name string --stats object
+* js - .edgemere.cpl.tc.report({ name:string,stats:object })
+
+#### Description
 report the statstics for a device
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -177,11 +200,16 @@ report the statstics for a device
 
 ### Action  edgemere cpl tc show
 
-* REST - /edgemere/cpl/tc/show
-* bin -  edgemere cpl tc show
-* js - .edgemere.cpl.tc.show
 
+
+* REST - /edgemere/cpl/tc/show?name=object
+* bin -  edgemere cpl tc show --name object
+* js - .edgemere.cpl.tc.show({ name:object })
+
+#### Description
 report the statstics for a device
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

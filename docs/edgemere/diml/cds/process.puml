@@ -8,7 +8,7 @@ state "cds" as dimlcds #ffcc88 {
 }
 
 
-state dimlcds #ffcc88 {
+state "dimlcds" as pstatename #ffcc88 {
     state "Custom Function" as cdsfunction {
     }
 }

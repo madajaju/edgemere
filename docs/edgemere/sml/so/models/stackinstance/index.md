@@ -31,102 +31,21 @@ The StackInstance is the execution of the Stack. This allows for control of the 
 | runScripts | n | RunScript | true | true | Scripts to run for the different actions performed in the service |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
 | instances | n | Stack | true | true | Instances of the stack |
 | stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
-| instances | n | Stack | true | true | Instances of the stack |
-| stack | 1 | ServiceInstance | false | false | StackInstance that is running the service instance |
 
 
 
 ## State Net
+The StackInstance has a state net corresponding to instances of the class. Each state transistion will emit an 
+event that can be caught with a websocket client. The name of the event is the name of the state in all lower case.
+The following diagram is the state net for this class.
+
 ![State Net Diagram](./statenet.png)
 
 | Name | Description | Events |

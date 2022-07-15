@@ -10,7 +10,7 @@ state "insite" as dimlcdsinsite #lightblue {
 }
 
 
-state dimlcdsinsite #lightblue {
+state "dimlcdsinsite" as pstatename #lightblue {
     state "Custom Function" as insitefunction {
     }
 }

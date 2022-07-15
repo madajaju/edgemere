@@ -8,7 +8,7 @@ parent: usecases
 
 Manage Data Instances is the description
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 
@@ -27,9 +27,9 @@ Manage Data Instances is the description
 
 ## Detail Scenarios
 
-* [Manage Data Instances](#scenario-CreateDataInstance)
-* [Manage Data Instances](#scenario-FindDataInstance)
-* [Manage Data Instances](#scenario-RemoveDataInstance)
+* [CreateDataInstance](#scenario-CreateDataInstance)
+* [FindDataInstance](#scenario-FindDataInstance)
+* [RemoveDataInstance](#scenario-RemoveDataInstance)
 
 
 
@@ -37,7 +37,7 @@ Manage Data Instances is the description
 
 Create Data Instance is the description
 
-![Scenario CreateDataInstance](./createdatainstance.png)
+![Scenario CreateDataInstance](./CreateDataInstance.png)
 
 #### Steps
 
@@ -54,7 +54,7 @@ Create Data Instance is the description
 
 Find Data Instance is the description
 
-![Scenario FindDataInstance](./finddatainstance.png)
+![Scenario FindDataInstance](./FindDataInstance.png)
 
 #### Steps
 
@@ -71,7 +71,7 @@ Find Data Instance is the description
 
 Remove Data Instance is the description
 
-![Scenario RemoveDataInstance](./removedatainstance.png)
+![Scenario RemoveDataInstance](./RemoveDataInstance.png)
 
 #### Steps
 

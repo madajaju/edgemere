@@ -8,7 +8,7 @@ state "pe" as sape #pink {
 }
 
 
-state sape #pink {
+state "sape" as pstatename #pink {
     state "Custom Function" as pefunction {
     }
 }

@@ -26,10 +26,6 @@ Represents Hardware that is an accelerator
 | resources | n | Resource | false | false |  |
 
 
-## Users of the Model
-
-| Name | Cardinality | Class | Composition | Owner | Description |
-| --- | --- | --- | --- | --- | --- |
 
 
 
@@ -52,11 +48,16 @@ Represents Hardware that is an accelerator
     
 ### Action acceleratorhardware addStats
 
-* REST - acceleratorhardware/addStats
-* bin - acceleratorhardware addStats
-* js - acceleratorhardware.addStats
 
+
+* REST - acceleratorhardware/addStats?stats=json
+* bin - acceleratorhardware addStats --stats json
+* js - acceleratorhardware.addStats({ stats:json })
+
+#### Description
 Add Stats to the Hardware
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -67,11 +68,16 @@ Add Stats to the Hardware
 
 ### Action acceleratorhardware create
 
-* REST - acceleratorhardware/create
-* bin - acceleratorhardware create
-* js - acceleratorhardware.create
 
+
+* REST - acceleratorhardware/create?name=string&amp;capabilities=json
+* bin - acceleratorhardware create --name string --capabilities json
+* js - acceleratorhardware.create({ name:string,capabilities:json })
+
+#### Description
 Create Hardware
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
@@ -83,39 +89,50 @@ Create Hardware
 
 ### Action acceleratorhardware disable
 
-* REST - acceleratorhardware/disable
-* bin - acceleratorhardware disable
-* js - acceleratorhardware.disable
 
+
+* REST - acceleratorhardware/disable?
+* bin - acceleratorhardware disable 
+* js - acceleratorhardware.disable({  })
+
+#### Description
 Disable Device and its hardware
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action acceleratorhardware enable
 
-* REST - acceleratorhardware/enable
-* bin - acceleratorhardware enable
-* js - acceleratorhardware.enable
 
+
+* REST - acceleratorhardware/enable?
+* bin - acceleratorhardware enable 
+* js - acceleratorhardware.enable({  })
+
+#### Description
 Enable Device to be used.
 
-| Name | Type | Required | Description |
-|---|---|---|---|
+#### Parameters
 
+No parameters
 
 
 
 ### Action acceleratorhardware factory
 
-* REST - acceleratorhardware/factory
-* bin - acceleratorhardware factory
-* js - acceleratorhardware.factory
 
+
+* REST - acceleratorhardware/factory?name=string&amp;type=string&amp;capabilities=json
+* bin - acceleratorhardware factory --name string --type string --capabilities json
+* js - acceleratorhardware.factory({ name:string,type:string,capabilities:json })
+
+#### Description
 Create Hardware based on properties
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

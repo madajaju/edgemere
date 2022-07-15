@@ -10,7 +10,7 @@ state "storage" as dimlcdsstorage #lightblue {
 }
 
 
-state dimlcdsstorage #lightblue {
+state "dimlcdsstorage" as pstatename #lightblue {
     state "Custom Function" as storagefunction {
     }
 }

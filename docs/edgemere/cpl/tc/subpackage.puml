@@ -5,6 +5,9 @@
 package "Telemetry Consumer" #lightgray {
 
     interface "Telemetry Consumer" as i {
+            ^adevice.stats
+            ^device.stats
+    
             /edgemere/cpl/tc/list()
             /edgemere/cpl/tc/report()
             /edgemere/cpl/tc/show()
@@ -12,9 +15,15 @@ package "Telemetry Consumer" #lightgray {
     }
 }
 
-CLI ()-- i
-REST ()-- i
-Web ()-- i
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
 
 package "Telemetry Consumer" #lightgray {
 

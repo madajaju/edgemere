@@ -31,10 +31,10 @@ package "Policy Engine" #pink {
     sa_pe_container --> sa_peimage
 
   
-      artifact sa_pe_engine
+      artifact "sa_pe_engine" as sa_pe_engine
       engine_container --> sa_pe_engine
     
-      artifact sa_pe_web
+      artifact "sa_pe_web" as sa_pe_web
       web_container --> sa_pe_web
     
   }

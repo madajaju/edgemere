@@ -25,182 +25,11 @@ The Data Adaptor is the mechanism that is a proxy to the data in the physical fo
 | instances | n | DataAdaptorInstance | false | true | Instance of a DataAdaptor |
 
 
+
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
-| parent | 1 | DataAdaptorInstance | false | false |  |
-| adaptor | 1 | DataAdaptorTemplate | false | false |  |
-| adaptor | 1 | DataSource | false | false |  |
-| adaptor | 1 | Data |  |  | This is the DataAdaptor for the Data, it shows how to connect to the data |
 | parent | 1 | DataAdaptorInstance | false | false |  |
 | adaptor | 1 | DataAdaptorTemplate | false | false |  |
 | adaptor | 1 | DataSource | false | false |  |
@@ -219,11 +48,16 @@ The Data Adaptor is the mechanism that is a proxy to the data in the physical fo
     
 ### Action dataadaptor create
 
-* REST - dataadaptor/create
-* bin - dataadaptor create
-* js - dataadaptor.create
 
+
+* REST - dataadaptor/create?name=string&amp;file=YAML
+* bin - dataadaptor create --name string --file YAML
+* js - dataadaptor.create({ name:string,file:YAML })
+
+#### Description
 Create a Data Adaptor
+
+#### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|

@@ -31,10 +31,10 @@ package "AI ML Services" #lightblue {
     aml_ams_container --> aml_amsimage
 
   
-      artifact aml_ams_web
+      artifact "aml_ams_web" as aml_ams_web
       web_container --> aml_ams_web
     
-      artifact aml_ams_gw
+      artifact "aml_ams_gw" as aml_ams_gw
       gateway_container --> aml_ams_gw
     
   }
