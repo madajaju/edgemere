@@ -1,13 +1,12 @@
 module.exports = {
     name: 'Create Security Profile',
-    description: 'Create Security Profile is the description',
-    method: "data/create",
+    description: 'Create Security Profile from a secoprofile yaml file.',
+    method: "securityprofile/create",
     actors: {
-        'Actor': 'uses',
+        'SecurityEngineer': 'uses',
     },
     steps: [
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-    ]
+        { action: 'securityprofile/create', parameters: {name:'secProfile1', file:'./templates/secprofile.yml'}},
+    ],
 };
 

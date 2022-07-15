@@ -44,6 +44,7 @@ users interact with the system.
 ![Scenario Mappings Diagram](./scenariomapping.png)
 
 * [ edgemere diml cds data list](#action--edgemere-diml-cds-data-list)
+* [ edgemere diml cds data move](#action--edgemere-diml-cds-data-move)
 * [ edgemere diml cds data source name](#action--edgemere-diml-cds-data-source-name)
 
 
@@ -165,6 +166,25 @@ subsystems and actors can access the system.
 * REST - /edgemere/diml/cds/data/list?attr1=string
 * bin -  edgemere diml cds data list --attr1 string
 * js - .edgemere.diml.cds.data.list({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  edgemere diml cds data move
+
+
+
+* REST - /edgemere/diml/cds/data/move?attr1=string
+* bin -  edgemere diml cds data move --attr1 string
+* js - .edgemere.diml.cds.data.move({ attr1:string })
 
 #### Description
 Description of the action

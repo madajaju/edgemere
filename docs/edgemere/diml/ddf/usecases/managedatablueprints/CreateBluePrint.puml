@@ -1,6 +1,6 @@
 @startuml
 
-actor "Actor"
+actor "DataScientist"
 
 
 entity EventBus
@@ -18,7 +18,7 @@ box Data Definition Framework #ffcc88
     end box
 
 
-"Actor" -> ddf: Create Blue Print
+"DataScientist" -> ddf: Create Blue Print
 
     ddf -> "dataadaptor": create (name: filesystem,file: ./templates/dataadaptor-filesystem.yaml)
 

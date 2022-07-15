@@ -1,15 +1,15 @@
 @startuml
 
 left to right direction
-Actor "Actor" as Actor
-Actor "Actor" as Actor
+Actor "SecurityOperator" as SecurityOperator
+Actor "SecurityEngineer" as SecurityEngineer
 
 
 rectangle "Security Profile Manager" #pink {
 usecase "ApplySecurityProfiles" as ApplySecurityProfiles
-    Actor --> ApplySecurityProfiles
+    SecurityOperator --> ApplySecurityProfiles
     usecase "ManageSecurityProfiles" as ManageSecurityProfiles
-    Actor --> ManageSecurityProfiles
+    SecurityEngineer --> ManageSecurityProfiles
     }
 
 

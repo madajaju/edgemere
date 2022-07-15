@@ -3,14 +3,13 @@ layout: default
 title: TOC
 permalink: toc
 ---
-Version 0.3.0 
+Version 0.3.1 
 
 ### Edgemere Overview
 * [edgemere](./edgemere/index.md)
 
 ### Actors
 * [All Actors](actors)
-* [Actor](actor-actor)
 * [ApplicationDeveloper](actor-applicationdeveloper)
 * [ChiefDataOfficer](actor-cdo)
 * [DataAnalyst](actor-analyst)
@@ -19,6 +18,8 @@ Version 0.3.0
 * [DataSteward](actor-datasteward)
 * [DevOpsEngineer](actor-devops)
 * [ITOperations](actor-itops)
+* [SecurityEngineer](actor-securityengineer)
+* [SecurityOperator](actor-securityoperator)
 * [StackDeveloper](actor-stackdev)
 
  

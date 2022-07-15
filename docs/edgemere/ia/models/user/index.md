@@ -14,6 +14,9 @@ User of the system
 ## Attributes
 
 * name:string - Name of the user
+* username:string - UserName of the identity
+* password:string - Password of the identity
+* cert:string - Certificate of the identity
 
 
 ## Associations
@@ -22,6 +25,8 @@ User of the system
 | --- | --- | --- | --- | --- | --- |
 | groups | n | Group | false | false |  |
 | attributes | n | IdentityAttribute | false | false |  |
+| securityProfiles | n | SecurityProfile |  |  |  |
+| characterisitcs | n | IdentityAttribute |  |  |  |
 
 
 

@@ -19,7 +19,6 @@ is an example of a centralized organizational structure of the actors of the sys
 
 # Actors
 
-* [Actor](actor-actor) - Long description
 * [Application Developer](actor-applicationdeveloper) - The Application Developer work in coordination with DevOps to manage services, applications and workloads through the development pipeline.
 * [Chief Data Officer](actor-cdo) - Responsible for setting strategy and governance of data in the organization.
 * [Data Analyst](actor-analyst) - Uses Data solutions produced by the Data Scientist and Data Engineer to provide business value to the organization.
@@ -28,6 +27,8 @@ is an example of a centralized organizational structure of the actors of the sys
 * [Data Steward](actor-datasteward) - Responsible for the governance of data in their organization. They implement policies established by the CDO.
 * [DevOps Engineer](actor-devops) - Responsible for the management of the automation of the delivery of applications and solutions in the organization.
 * [IT Operations](actor-itops) - Responsible for the management of the infrastructure.
+* [SecurityEngineer](actor-securityengineer) - Long description
+* [Security Operator](actor-securityoperator) - Long description
 * [Stack Developer](actor-stackdev) - Responsible for developing reusable micro-services and application stacks in the organization.
 
 

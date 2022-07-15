@@ -7,12 +7,27 @@ package "Security Aspect" #pink {
         }
     }
 
+package "Identity Aspect" #pink {
+    
+        class Identity {
+        }
+    }
+
 
 package "Security Profile Manager" #pink {
 
     interface "Security Profile Manager" as i {
             /edgemere/sa/spm/data/create()
             /edgemere/sa/spm/data/govern()
+            /edgemere/sa/spm/securityprofile/attach()
+            /edgemere/sa/spm/securityprofile/create()
+            /edgemere/sa/spm/securityprofile/deploy()
+            /edgemere/sa/spm/securityprofile/destroy()
+            /edgemere/sa/spm/securityprofile/disable()
+            /edgemere/sa/spm/securityprofile/enable()
+            /edgemere/sa/spm/securityprofile/list()
+            /edgemere/sa/spm/securityprofile/status()
+            /edgemere/sa/spm/securityprofile/test()
     
     }
 }
@@ -24,8 +39,16 @@ Web ()-- i
 package "Security Profile Manager" #pink {
         class "SecurityProfile" {
                  string name
-                    }
+                             attach()
+                     deploy()
+                     destroy()
+                     disable()
+                     enable()
+                     status()
+                     test()
+            }
                 SecurityProfile o--> "1" PolicyCollection : policies
+                        SecurityProfile o--> "n" Identity : enforced
             
     
 

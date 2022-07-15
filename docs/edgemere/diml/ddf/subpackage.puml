@@ -22,9 +22,13 @@ package "Data Definition Framework" #ffcc88 {
 
     interface "Data Definition Framework" as i {
     
+            /edgemere/diml/ddf/blueprint/attach()
             /edgemere/diml/ddf/data/create()
             /edgemere/diml/ddf/data/govern()
             /edgemere/diml/ddf/data/source/name()
+            /edgemere/diml/ddf/dataadaptor/create()
+            /edgemere/diml/ddf/dataadaptor/update()
+            /edgemere/diml/ddf/datablueprint/create()
             /edgemere/diml/ddf/datablueprint/deploy()
             /edgemere/diml/ddf/datablueprint/list()
             /edgemere/diml/ddf/datacatalog/list()

@@ -207,7 +207,7 @@ export default class AScenario {
                         }
                     ],
                     onClick: function (event) {
-                        if (event.target == 'launch') {
+                        if (event.target === 'launch') {
                             let scenario = w2ui['scenariolist'].scenario;
                             $.ajax({
                                 url: `scenario/launch?id=${scenario.id}`,
@@ -329,14 +329,4 @@ function showParameters(params) {
     return Object.keys(params).map(name => {
         return `--${name}=${params[name]}`;
     }).join(' ');
-}
-
-function showGraph(scenario, mode) {
-    let data = {nodes: {}, links: {}};
-    if (mode === 'add') {
-        window.graph.addData(data.nodes, data.links);
-    } else {
-        window.graph.setData(data.nodes, data.links);
-    }
-    window.graph.showLinks();
 }

@@ -9,10 +9,20 @@ class "IdentityAttribute" as Model {
 
 
 
+    rectangle "Identity" as Identity #lightgreen {
+    }
+    
+        Identity   o--> "n" Model : "characterisitcs"
+    
     rectangle "User" as User #lightgreen {
     }
     
         User   o--> "n" Model : "attributes"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "characterisitcs"
     
 
 @enduml

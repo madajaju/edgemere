@@ -142,7 +142,6 @@ export default class APackage {
             color: pkg.color
         };
 
-        let i = 0;
         for (let iname in pkg.interface) {
             let name = iname.replace(pkg.prefix, '');
             let node = {

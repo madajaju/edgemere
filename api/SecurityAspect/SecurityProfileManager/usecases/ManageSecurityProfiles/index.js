@@ -6,14 +6,12 @@
 
 module.exports = {
     name: 'Manage Security Profiles',
-    description: 'Manage Security Profiles is the description',
-    method: 'data/govern',
+    description: 'Manage Security Profiles allows the security engineer to create, updated, and destroy security' +
+        ' profiles in the system. Security profiles are attached to identity elements in the system and enforce' +
+        ' security policies contained in the profiles.',
+    method: 'securityprofile/list',
     actors: {
-        'Actor': 'uses'
+        'SecurityEngineer': 'uses'
     },
-    // Shows dependency
-    // includes: ["UseCase Name"],
-    // Show Aggreation from a super use case
-    // extends: ["UseCase Name"],
 };
 

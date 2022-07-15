@@ -55,44 +55,44 @@ state "list" as edgemeredimlcdsdatalist #ffcc88 {
 DataEngineerManageData --> edgemeredimlcdsdatalist
 
 
-    state "Actor" as Actor {
-        state "Manage Data" as ActorManageData {
-            state "Destroy Data" as ActorManageDataDestroyData {
+    state "Data Steward" as DataSteward {
+        state "Manage Data" as DataStewardManageData {
+            state "Destroy Data" as DataStewardManageDataDestroyData {
             }
         }
     }
     
-    ActorManageDataDestroyData --> Null
+    DataStewardManageDataDestroyData --> Null
     
  
-    state "Actor" as Actor {
-        state "Manage Data" as ActorManageData {
-            state "Egress Data" as ActorManageDataEgressData {
+    state "Data Steward" as DataSteward {
+        state "Manage Data" as DataStewardManageData {
+            state "Egress Data" as DataStewardManageDataEgressData {
             }
         }
     }
     
-    ActorManageDataEgressData --> Null
+    DataStewardManageDataEgressData --> Null
     
  
-    state "Actor" as Actor {
-        state "Manage Data" as ActorManageData {
-            state "Ingest Data" as ActorManageDataIngestData {
+    state "Data Steward" as DataSteward {
+        state "Manage Data" as DataStewardManageData {
+            state "Ingest Data" as DataStewardManageDataIngestData {
             }
         }
     }
     
-    ActorManageDataIngestData --> Null
+    DataStewardManageDataIngestData --> Null
     
  
-    state "Actor" as Actor {
-        state "Manage Data" as ActorManageData {
-            state "Move Data" as ActorManageDataMoveData {
+    state "Data Steward" as DataSteward {
+        state "Manage Data" as DataStewardManageData {
+            state "Move Data" as DataStewardManageDataMoveData {
             }
         }
     }
     
-    ActorManageDataMoveData --> Null
+    DataStewardManageDataMoveData --> Null
     
  
  

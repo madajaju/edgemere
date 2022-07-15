@@ -9,7 +9,7 @@ module.exports = {
     description: 'Apply Security Profiles is the description',
     method: 'data/govern',
     actors: {
-        'Actor': 'uses'
+        'SecurityOperator': 'uses'
     },
     // Shows dependency
     // includes: ["UseCase Name"],

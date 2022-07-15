@@ -3,9 +3,9 @@
 
 usecase "Manage Security Profiles" as ManageSecurityProfiles #yellow
 
-Actor "Actor" as Actor
+Actor "SecurityEngineer" as SecurityEngineer
 
-Actor --> ManageSecurityProfiles
+SecurityEngineer --> ManageSecurityProfiles
 
 
 

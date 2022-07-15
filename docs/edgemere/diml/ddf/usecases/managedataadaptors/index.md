@@ -46,7 +46,7 @@ Attach Data Blue Print is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [Data Scientist](actor-datascientist)
 
 
 
@@ -63,7 +63,7 @@ Create Data Adaptor is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [DataEngineer](actor-dataengineer)
 
 
 
@@ -80,7 +80,7 @@ Update Data Adaptor is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [DataEngineer](actor-dataengineer)
 
 
 

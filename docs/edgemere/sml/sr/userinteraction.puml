@@ -1,14 +1,14 @@
 @startuml
 
 
-actor "Actor" as actor
+actor "ITOperations" as itops
 
 
 
 
-actor -> "Service Repository": Manage Assets
-"Service Repository" -> bin: data govern
-bin -> REST: data/govern
+itops -> "Service Repository": Manage Assets
+"Service Repository" -> bin: assets list
+bin -> REST: assets/list
 
 
 

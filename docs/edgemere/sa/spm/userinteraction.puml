@@ -1,18 +1,20 @@
 @startuml
 
 
-actor "Actor" as actor
+actor "SecurityOperator" as securityoperator
+
+actor "SecurityEngineer" as securityengineer
 
 
 
 
-actor -> "Security Profile Manager": Apply Security Profiles
+securityoperator -> "Security Profile Manager": Apply Security Profiles
 "Security Profile Manager" -> bin: data govern
 bin -> REST: data/govern
 
-actor -> "Security Profile Manager": Manage Security Profiles
-"Security Profile Manager" -> bin: data govern
-bin -> REST: data/govern
+securityengineer -> "Security Profile Manager": Manage Security Profiles
+"Security Profile Manager" -> bin: securityprofile list
+bin -> REST: securityprofile/list
 
 
 

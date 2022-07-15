@@ -7,6 +7,7 @@ has_children: true
 # UseCases
 
 * [Apply Security Profiles](usecase-ApplySecurityProfiles)
+  * [Attach Profile](usecase-ApplySecurityProfiles#AttachProfile)
   * [Deploy Security Profile](usecase-ApplySecurityProfiles#DeploySecurityProfile)
 * [Find Resources](usecase-FindResources)
 * [Manage AI Models](usecase-ManageAIModels)

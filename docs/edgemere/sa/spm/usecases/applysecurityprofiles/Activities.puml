@@ -3,11 +3,15 @@
 
 usecase "Apply Security Profiles" as ApplySecurityProfiles #yellow
 
-Actor "Actor" as Actor
+Actor "Security Operator" as SecurityOperator
 
-Actor --> ApplySecurityProfiles
+SecurityOperator --> ApplySecurityProfiles
 
 
+
+usecase "AttachProfile" as AttachProfile #lightgrey
+
+ApplySecurityProfiles --> AttachProfile
 
 usecase "DeploySecurityProfile" as DeploySecurityProfile #lightgrey
 

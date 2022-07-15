@@ -3,7 +3,7 @@ module.exports = {
     description: 'Remove Data Instance is the description',
     method: "datainstance/destroy",
     actors: {
-        'Actor': 'uses',
+        'DataEngineer': 'uses',
     },
 };
 

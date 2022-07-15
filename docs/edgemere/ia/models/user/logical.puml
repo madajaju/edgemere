@@ -2,6 +2,9 @@
 
 class "User" as Model {
  string name
+ string username
+ string password
+ string cert
 
  
 }
@@ -16,6 +19,18 @@ rectangle "IdentityAttribute" as IdentityAttribute #lightblue {
 }
 
 Model o--> "n" IdentityAttribute : attributes
+
+
+rectangle "SecurityProfile" as SecurityProfile #lightblue {
+}
+
+Model o--> "n" SecurityProfile : securityProfiles
+
+
+rectangle "IdentityAttribute" as IdentityAttribute #lightblue {
+}
+
+Model o--> "n" IdentityAttribute : characterisitcs
 
 
 

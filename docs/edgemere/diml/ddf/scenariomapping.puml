@@ -38,34 +38,34 @@ state "list" as edgemeredimlddfdatadaptorlist #ffcc88 {
 DataScientistManageDataAdaptors --> edgemeredimlddfdatadaptorlist
 
 
-    state "Actor" as Actor {
-        state "Manage Data Adaptors" as ActorManageDataAdaptors {
-            state "Attach Data Blue Print" as ActorManageDataAdaptorsAttachDataBluePrint {
+    state "Data Scientist" as DataScientist {
+        state "Manage Data Adaptors" as DataScientistManageDataAdaptors {
+            state "Attach Data Blue Print" as DataScientistManageDataAdaptorsAttachDataBluePrint {
             }
         }
     }
     
-    ActorManageDataAdaptorsAttachDataBluePrint --> Null
+    DataScientistManageDataAdaptorsAttachDataBluePrint --> Null
     
  
-    state "Actor" as Actor {
-        state "Manage Data Adaptors" as ActorManageDataAdaptors {
-            state "Create Data Adaptor" as ActorManageDataAdaptorsCreateDataAdaptor {
+    state "Data Engineer" as DataEngineer {
+        state "Manage Data Adaptors" as DataEngineerManageDataAdaptors {
+            state "Create Data Adaptor" as DataEngineerManageDataAdaptorsCreateDataAdaptor {
             }
         }
     }
     
-    ActorManageDataAdaptorsCreateDataAdaptor --> Null
+    DataEngineerManageDataAdaptorsCreateDataAdaptor --> Null
     
  
-    state "Actor" as Actor {
-        state "Manage Data Adaptors" as ActorManageDataAdaptors {
-            state "Update Data Adaptor" as ActorManageDataAdaptorsUpdateDataAdaptor {
+    state "DataEngineer" as DataEngineer {
+        state "Manage Data Adaptors" as DataEngineerManageDataAdaptors {
+            state "Update Data Adaptor" as DataEngineerManageDataAdaptorsUpdateDataAdaptor {
             }
         }
     }
     
-    ActorManageDataAdaptorsUpdateDataAdaptor --> Null
+    DataEngineerManageDataAdaptorsUpdateDataAdaptor --> Null
     
  
  
@@ -104,14 +104,14 @@ state "list" as edgemeredimlddfdatablueprintlist #ffcc88 {
 DataScientistManageDataBluePrints --> edgemeredimlddfdatablueprintlist
 
 
-    state "Actor" as Actor {
-        state "Manage Data Blue Prints" as ActorManageDataBluePrints {
-            state "Create Blue Print" as ActorManageDataBluePrintsCreateBluePrint {
+    state "DataScientist" as DataScientist {
+        state "Manage Data Blue Prints" as DataScientistManageDataBluePrints {
+            state "Create Blue Print" as DataScientistManageDataBluePrintsCreateBluePrint {
             }
         }
     }
     
-    ActorManageDataBluePrintsCreateBluePrint --> Null
+    DataScientistManageDataBluePrintsCreateBluePrint --> Null
     
  
  
@@ -188,14 +188,23 @@ state "list" as edgemeredimlddfmetadatalist #ffcc88 {
 DataScientistManageMetaData --> edgemeredimlddfmetadatalist
 
 
-    state "Actor" as Actor {
-        state "Manage Meta Data" as ActorManageMetaData {
-            state "Capture Meta Data" as ActorManageMetaDataCaptureMetaData {
+    state "DataEngineer" as DataEngineer {
+        state "Manage Meta Data" as DataEngineerManageMetaData {
+            state "Capture Meta Data" as DataEngineerManageMetaDataCaptureMetaData {
             }
         }
     }
     
-    ActorManageMetaDataCaptureMetaData --> Null
+    DataEngineerManageMetaDataCaptureMetaData --> Null
+    
+    state "DataSteward" as DataSteward {
+        state "Manage Meta Data" as DataStewardManageMetaData {
+            state "Capture Meta Data" as DataStewardManageMetaDataCaptureMetaData {
+            }
+        }
+    }
+    
+    DataStewardManageMetaDataCaptureMetaData --> Null
     
  
     state "DataScientist" as DataScientist {

@@ -1,6 +1,6 @@
 @startuml
 
-actor "Actor"
+actor "SecurityEngineer"
 
 
 entity EventBus
@@ -15,15 +15,11 @@ box Software Defined Infrastructure #lightyellow
     end box
 
 
-"Actor" -> spm: Create Security Profile
+"SecurityEngineer" -> spm: Create Security Profile
 
-    spm -> "storageresource": list (name: hello,file: ./templates/world.yml)
+    spm -> "storageresource": create (name: secProfile1,file: ./templates/secprofile.yml)
 
-    "storageresource" --/ EventBus: data.list
-
-    spm -> "storageresource": list (name: hello,file: ./templates/world.yml)
-
-    "storageresource" --/ EventBus: data.list
+    "storageresource" --/ EventBus: securityprofile.create
 
 
 

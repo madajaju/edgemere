@@ -27,7 +27,7 @@ that are elaborated in the use case descriptions.
 The following are the actors of the Service Repository subsystem. This can include people, other subsystems
 inside the solution and even external subsystems.
 
-* [Actor](actor-actor)
+* [ITOperations](actor-itops)
 
 
 ![User Interaction](./userinteraction.png)
@@ -40,6 +40,7 @@ users interact with the system.
 
 ![Scenario Mappings Diagram](./scenariomapping.png)
 
+* [ edgemere sml sr assets list](#action--edgemere-sml-sr-assets-list)
 * [ edgemere sml sr data govern](#action--edgemere-sml-sr-data-govern)
 
 
@@ -149,6 +150,25 @@ cases and scenarios of the subsystem.
 The Service Repository subsystem has a well defined interface. This interface can be accessed using a
 command line interface (CLI), REST interface, and Web user interface. This interface is how all other
 subsystems and actors can access the system.
+
+### Action  edgemere sml sr assets list
+
+
+
+* REST - /edgemere/sml/sr/assets/list?attr1=string
+* bin -  edgemere sml sr assets list --attr1 string
+* js - .edgemere.sml.sr.assets.list({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
 
 ### Action  edgemere sml sr data govern
 

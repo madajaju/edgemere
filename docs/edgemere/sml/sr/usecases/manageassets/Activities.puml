@@ -1,0 +1,20 @@
+@startuml
+
+
+usecase "Manage Assets" as ManageAssets #yellow
+
+Actor "IT Operations" as ITOperations
+
+ITOperations --> ManageAssets
+
+
+
+
+
+
+
+
+
+
+
+@enduml

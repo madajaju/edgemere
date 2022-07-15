@@ -1,18 +1,29 @@
 @startuml
 
 class "SecurityProfile" as Model {
- string attr1
+ string name
 
  
 }
 
-rectangle "ModelName" as ModelName #lightblue {
+rectangle "Policy" as Policy #lightblue {
 }
 
-Model o--> "1" ModelName : assoc1
+Model *--> "n" Policy : policies
+
+
+rectangle "Identity" as Identity #lightblue {
+}
+
+Model o--> "n" Identity : enforcing
 
 
 
 
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
 
 @enduml

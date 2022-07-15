@@ -1,4 +1,4 @@
-import {AText, AStack, AService} from './index.js';
+import {AText, AStack, AService } from './index.js';
 
 export default class AEnvironment {
     constructor(config) {

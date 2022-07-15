@@ -3,7 +3,7 @@ module.exports = {
     description: 'Find Data Instance is the description',
     method: "datainstance/find",
     actors: {
-        'Actor': 'uses',
+        'DataEngineer': 'uses',
     },
 };
 

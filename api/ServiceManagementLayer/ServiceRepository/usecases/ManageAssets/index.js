@@ -7,9 +7,9 @@
 module.exports = {
     name: 'Manage Assets',
     description: 'Manage Assets is the description',
-    method: 'data/govern',
+    method: 'assets/list',
     actors: {
-        'Actor': 'uses'
+        'ITOperations': 'uses'
     },
 };
 

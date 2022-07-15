@@ -56,7 +56,7 @@ Create Blue Print is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [Data Scientist](actor-datascientist)
 
 
 

@@ -1,9 +1,9 @@
 module.exports = {
     name: 'Create Blue Print',
     description: 'Create Blue Print is the description',
-    method: "data/create",
+    method: "datablueprint/create",
     actors: {
-        'Actor': 'uses',
+        'DataScientist': 'uses',
     },
     steps: [
         { action: 'dataadaptor/create', parameters: { name: 'filesystem', file: './templates/dataadaptor-filesystem.yaml'}},

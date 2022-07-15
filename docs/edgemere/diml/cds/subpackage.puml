@@ -11,6 +11,7 @@ package "Common Data Service" #ffcc88 {
     interface "Common Data Service" as i {
     
             /edgemere/diml/cds/data/list()
+            /edgemere/diml/cds/data/move()
             /edgemere/diml/cds/data/source/name()
     
     }

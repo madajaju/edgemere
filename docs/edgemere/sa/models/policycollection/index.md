@@ -29,7 +29,7 @@ Any entity that has policies should have a Policy Collection association
 | --- | --- | --- | --- | --- | --- |
 | policies | 1 | Environment | false | false |  |
 | owner | 1 | Policy | false | false |  |
-| policies | 1 | SecurityProfile | false | false |  |
+| policies | 1 | SecurityProfile | false | false | This is the list of policies for the profile. |
 | polices | 1 | MultiCloud | false | false |  |
 | policies | 1 | Service | false | false | Policies of the Service |
 | policies | 1 | Stack | false | false | Policy Collection |

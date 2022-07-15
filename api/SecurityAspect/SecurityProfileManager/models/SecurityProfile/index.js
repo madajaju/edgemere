@@ -12,16 +12,23 @@ class SecurityProfile {
         },
         associations: {
             policies: {
+                description: 'This is the list of policies for the profile.',
                 type: 'PolicyCollection',
                 cardinality: 1,
                 composition: false,
                 owner: false,
             },
+            enforced: {
+                description: 'This is the list of identities being managed by the profile. The profile enforces the' +
+                    ' policies against they identities.',
+                type: 'Identity',
+                cardinality: 'n',
+            }
         },
         /*
         statenet: {
             Init: {
-                description: "Initial State"
+                description: "Initial State",
                 events: {
                     create: {
                         StateName: { }
@@ -45,7 +52,8 @@ class SecurityProfile {
                 }
             }
         }
-        */
+         */
+
     }
 }
 

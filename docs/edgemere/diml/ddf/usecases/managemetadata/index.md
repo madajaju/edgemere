@@ -58,7 +58,8 @@ Capture Meta Data is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [DataEngineer](actor-dataengineer)
+* [Data Steward](actor-datasteward)
 
 
 

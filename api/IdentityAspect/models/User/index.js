@@ -3,6 +3,7 @@ class User {
     static definition = {
         name: 'User',
         description: 'User of the system',
+        extends: 'Identity',
         attributes: {
             name: {
                 type: 'string',

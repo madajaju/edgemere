@@ -1,0 +1,18 @@
+@startuml
+
+actor "DataEngineer"
+
+
+entity EventBus
+
+box Data Definition Framework #ffcc88
+    boundary ddf #white
+end box
+
+
+
+"DataEngineer" -> ddf: Update Data Adaptor
+
+
+
+@enduml

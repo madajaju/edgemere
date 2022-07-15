@@ -1,13 +1,14 @@
 module.exports = {
     name: 'Remove Security Profile',
-    description: 'Remove Security Profile is the description',
-    method: "data/create",
+    description: 'Remove Security Profile that is attached to multiple identities. All identities should be' +
+        ' re-evaluated when a profile is destroyed.',
+    method: "securityprofile/destroy",
     actors: {
-        'Actor': 'uses',
+        'SecurityEngineer': 'uses',
     },
     steps: [
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
+        { action: 'securityprofile/create', parameters: {name:'secProfileRSP', file:'./templates/secprofile.yml'}},
+        { action: 'securityprofile/destroy', parameters: {name:'secProfileRSP'}}
     ]
 };
 

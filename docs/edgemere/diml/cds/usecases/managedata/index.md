@@ -48,7 +48,7 @@ Destroy Data is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [Data Steward](actor-datasteward)
 
 
 
@@ -65,7 +65,7 @@ Egress Data is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [Data Steward](actor-datasteward)
 
 
 
@@ -82,7 +82,7 @@ Ingest Data is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [Data Steward](actor-datasteward)
 
 
 
@@ -99,7 +99,7 @@ Move Data is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [Data Steward](actor-datasteward)
 
 
 

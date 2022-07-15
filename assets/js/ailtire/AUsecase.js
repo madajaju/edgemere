@@ -26,7 +26,6 @@ export default class AUsecase {
                     }
                     for (let sname in uc.scenarios) {
                         snum++;
-                        let scenario = uc.scenarios[sname];
                         ucItem.nodes.push({
                             id: uname + sname,
                             text: sname,
@@ -72,14 +71,12 @@ export default class AUsecase {
 
     static viewDeep3D(usecase, mode) {
         let data = {nodes: {}, links: []};
-        const theta = 3.14 / 2;
 
         data.nodes[usecase.id] = {id: usecase.id, name: usecase.name, fx: 0, fy: 0, fz: 0,
             view: AUsecase.view3D,
             expandView: AUsecase.viewDeep3D,
             expandLink: `usecase/get?id=${usecase.id}`
         };
-        let bbox = {z: {max: -100, min: -1000}};
         for (let j in usecase.scenarios) {
             let scenario = usecase.scenarios[j];
             data.nodes[j] = {id: j, name: scenario.name,
@@ -152,7 +149,6 @@ export default class AUsecase {
         let data = {nodes: {}, links: []};
 
         window.graph.clearObjects();
-        const theta = 3.14 / 2;
         for (let ucname in objs) {
             let usecase = objs[ucname];
             usecase.id = ucname;
@@ -341,6 +337,7 @@ export default class AUsecase {
 
 function addUseCaseListNode(usecase, parent) {
     let uname = usecase.name.replace(/\s/g, '');
+    let snum = 0;
     let ucItem = {
         id: `${parent}.${uname}`, text: usecase.name, img: 'icon-folder', nodes: [],
         link: `usecase/get?id=${uname}`,
@@ -353,10 +350,8 @@ function addUseCaseListNode(usecase, parent) {
         // count the new use case added and all of the sub usecases and scenarios
         snum += node.count + 1;
     }
-    let snum = 0;
     for (let sname in usecase.scenarios) {
         snum++;
-        let scenario = usecase.scenarios[sname];
         ucItem.nodes.push({
             id: uname + sname,
             text: sname,

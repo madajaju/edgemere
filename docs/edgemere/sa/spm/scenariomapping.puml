@@ -3,8 +3,8 @@ left to right direction
 
 
 
-state "Actor" as Actor {
-    state "Apply Security Profiles" as ActorApplySecurityProfiles {
+state "SecurityOperator" as SecurityOperator {
+    state "Apply Security Profiles" as SecurityOperatorApplySecurityProfiles {
     }
 }
 state "edgemere" as edgemere #pink {
@@ -18,96 +18,106 @@ state "govern" as edgemeresaspmdatagovern #pink {
 }
 }
 
-ActorApplySecurityProfiles --> edgemeresaspmdatagovern
+SecurityOperatorApplySecurityProfiles --> edgemeresaspmdatagovern
 
 
-    state "Actor" as Actor {
-        state "Apply Security Profiles" as ActorApplySecurityProfiles {
-            state "Deploy Security Profile" as ActorApplySecurityProfilesDeploySecurityProfile {
+    state "SecurityEngineer" as SecurityEngineer {
+        state "Apply Security Profiles" as SecurityEngineerApplySecurityProfiles {
+            state "Attach Profile" as SecurityEngineerApplySecurityProfilesAttachProfile {
             }
         }
     }
     
-    ActorApplySecurityProfilesDeploySecurityProfile --> Null
+    SecurityEngineerApplySecurityProfilesAttachProfile --> Null
+    
+ 
+    state "SecurityEngineer" as SecurityEngineer {
+        state "Apply Security Profiles" as SecurityEngineerApplySecurityProfiles {
+            state "Deploy Security Profile" as SecurityEngineerApplySecurityProfilesDeploySecurityProfile {
+            }
+        }
+    }
+    
+    SecurityEngineerApplySecurityProfilesDeploySecurityProfile --> Null
     
  
  
-state "Actor" as Actor {
-    state "Manage Security Profiles" as ActorManageSecurityProfiles {
+state "SecurityEngineer" as SecurityEngineer {
+    state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
     }
 }
 state "edgemere" as edgemere #pink {
 state "sa" as edgemeresa #pink {
 state "spm" as edgemeresaspm #pink {
-state "data" as edgemeresaspmdata #pink {
-state "govern" as edgemeresaspmdatagovern #pink {
+state "securityprofile" as edgemeresaspmsecurityprofile #pink {
+state "list" as edgemeresaspmsecurityprofilelist #pink {
 }
 }
 }
 }
 }
 
-ActorManageSecurityProfiles --> edgemeresaspmdatagovern
+SecurityEngineerManageSecurityProfiles --> edgemeresaspmsecurityprofilelist
 
 
-    state "Actor" as Actor {
-        state "Manage Security Profiles" as ActorManageSecurityProfiles {
-            state "Create Security Profile" as ActorManageSecurityProfilesCreateSecurityProfile {
+    state "SecurityEngineer" as SecurityEngineer {
+        state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
+            state "Create Security Profile" as SecurityEngineerManageSecurityProfilesCreateSecurityProfile {
             }
         }
     }
     
-    ActorManageSecurityProfilesCreateSecurityProfile --> Null
+    SecurityEngineerManageSecurityProfilesCreateSecurityProfile --> Null
     
  
-    state "Actor" as Actor {
-        state "Manage Security Profiles" as ActorManageSecurityProfiles {
-            state "Disable Security Profile" as ActorManageSecurityProfilesDisableSecurityProfile {
+    state "SecurityEngineer" as SecurityEngineer {
+        state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
+            state "Disable Security Profile" as SecurityEngineerManageSecurityProfilesDisableSecurityProfile {
             }
         }
     }
     
-    ActorManageSecurityProfilesDisableSecurityProfile --> Null
+    SecurityEngineerManageSecurityProfilesDisableSecurityProfile --> Null
     
  
-    state "Actor" as Actor {
-        state "Manage Security Profiles" as ActorManageSecurityProfiles {
-            state "Enable Security Profile" as ActorManageSecurityProfilesEnableSecurityProfile {
+    state "SecurityEngineer" as SecurityEngineer {
+        state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
+            state "Enable Security Profile" as SecurityEngineerManageSecurityProfilesEnableSecurityProfile {
             }
         }
     }
     
-    ActorManageSecurityProfilesEnableSecurityProfile --> Null
+    SecurityEngineerManageSecurityProfilesEnableSecurityProfile --> Null
     
  
-    state "Actor" as Actor {
-        state "Manage Security Profiles" as ActorManageSecurityProfiles {
-            state "Monitor Security Profile" as ActorManageSecurityProfilesMonitorSecurityProfile {
+    state "SecurityEngineer" as SecurityEngineer {
+        state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
+            state "Monitor Security Profile" as SecurityEngineerManageSecurityProfilesMonitorSecurityProfile {
             }
         }
     }
     
-    ActorManageSecurityProfilesMonitorSecurityProfile --> Null
+    SecurityEngineerManageSecurityProfilesMonitorSecurityProfile --> Null
     
  
-    state "Actor" as Actor {
-        state "Manage Security Profiles" as ActorManageSecurityProfiles {
-            state "Remove Security Profile" as ActorManageSecurityProfilesRemoveSecurityProfile {
+    state "SecurityEngineer" as SecurityEngineer {
+        state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
+            state "Remove Security Profile" as SecurityEngineerManageSecurityProfilesRemoveSecurityProfile {
             }
         }
     }
     
-    ActorManageSecurityProfilesRemoveSecurityProfile --> Null
+    SecurityEngineerManageSecurityProfilesRemoveSecurityProfile --> Null
     
  
-    state "Actor" as Actor {
-        state "Manage Security Profiles" as ActorManageSecurityProfiles {
-            state "Test Security Profile" as ActorManageSecurityProfilesTestSecurityProfile {
+    state "SecurityEngineer" as SecurityEngineer {
+        state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
+            state "Test Security Profile" as SecurityEngineerManageSecurityProfilesTestSecurityProfile {
             }
         }
     }
     
-    ActorManageSecurityProfilesTestSecurityProfile --> Null
+    SecurityEngineerManageSecurityProfilesTestSecurityProfile --> Null
     
  
  

@@ -22,13 +22,14 @@ class Identity {
             }
         },
         associations: {
-            /* assoc1: {
-                type: 'ModelName',
-                cardinality: 1,
-                composition: false,
-                owner: false,
+            securityProfiles: {
+                type: 'SecurityProfile' ,
+                cardinality: 'n',
             },
-             */
+            characterisitcs: {
+                type: 'IdentityAttribute',
+                cardinality: 'n',
+            }
         },
         view: {
             color: "#ffcc88",

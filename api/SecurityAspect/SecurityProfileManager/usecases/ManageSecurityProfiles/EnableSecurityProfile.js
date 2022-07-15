@@ -1,13 +1,15 @@
 module.exports = {
     name: 'Enable Security Profile',
-    description: 'Enable Security Profile is the description',
-    method: "data/create",
+    description: 'Enable Security Profile should force a re-evaluation of the policies on all of the attached' +
+        ' identities in the system.',
+    method: "securityprofile/enable",
     actors: {
-        'Actor': 'uses',
+        'SecurityEngineer': 'uses',
     },
     steps: [
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
+        { action: 'securityprofile/create', parameters: {name:'secProfileESP', file:'./templates/secprofile.yml'}},
+        { action: 'securityprofile/disable', parameters: {name:'secProfileESP'}},
+        { action: 'securityprofile/enable', parameters: {name:'secProfileESP'}}
     ]
 };
 

@@ -1,4 +1,4 @@
-import {AText} from './index.js';
+import {AScenario, AText, AUsecase} from './index.js';
 
 export default class AAction {
     constructor(config) {

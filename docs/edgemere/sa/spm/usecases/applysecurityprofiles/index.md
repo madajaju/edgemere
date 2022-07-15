@@ -12,7 +12,7 @@ Apply Security Profiles is the description
 
 ## Actors
 
-* [Actor](actor-actor)
+* [Security Operator](actor-securityoperator)
 
 
 
@@ -26,26 +26,50 @@ Apply Security Profiles is the description
 
 ## Detail Scenarios
 
+* [AttachProfile](#scenario-AttachProfile)
 * [DeploySecurityProfile](#scenario-DeploySecurityProfile)
+
+
+
+### Scenario Attach Profile
+
+Attach Profile is the description
+
+![Scenario AttachProfile](./AttachProfile.png)
+
+#### Steps
+
+1. [securityprofile create --name secProfile1 --file ./templates/secprofile.yml](#action-securityprofile-create)
+
+1. [identity create --name ID1 --file ./templates/identity.yml](#action-identity-create)
+
+1. [securityprofile deploy --name secProfile1](#action-securityprofile-deploy)
+
+1. [securityprofile attach --profile secProfile1 --identity ID1](#action-securityprofile-attach)
+
+
+#### Actors
+
+* [SecurityEngineer](actor-securityengineer)
 
 
 
 ### Scenario Deploy Security Profile
 
-Deploy Security Profile is the description
+Deploy a Security Profile against an identity in the system.
 
 ![Scenario DeploySecurityProfile](./DeploySecurityProfile.png)
 
 #### Steps
 
-1. [data list --name hello --file ./templates/world.yml](#action-data-list)
+1. [securityprofile create --name secProfile1 --file ./templates/secprofile.yml](#action-securityprofile-create)
 
-1. [data list --name hello --file ./templates/world.yml](#action-data-list)
+1. [securityprofile deploy --name secProfile1](#action-securityprofile-deploy)
 
 
 #### Actors
 
-* [Actor](actor-actor)
+* [SecurityEngineer](actor-securityengineer)
 
 
 

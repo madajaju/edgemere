@@ -28,7 +28,8 @@ that are elaborated in the use case descriptions.
 The following are the actors of the Security Profile Manager subsystem. This can include people, other subsystems
 inside the solution and even external subsystems.
 
-* [Actor](actor-actor)
+* [SecurityOperator](actor-securityoperator)
+* [SecurityEngineer](actor-securityengineer)
 
 
 ![User Interaction](./userinteraction.png)
@@ -43,6 +44,15 @@ users interact with the system.
 
 * [ edgemere sa spm data create](#action--edgemere-sa-spm-data-create)
 * [ edgemere sa spm data govern](#action--edgemere-sa-spm-data-govern)
+* [ edgemere sa spm securityprofile attach](#action--edgemere-sa-spm-securityprofile-attach)
+* [ edgemere sa spm securityprofile create](#action--edgemere-sa-spm-securityprofile-create)
+* [ edgemere sa spm securityprofile deploy](#action--edgemere-sa-spm-securityprofile-deploy)
+* [ edgemere sa spm securityprofile destroy](#action--edgemere-sa-spm-securityprofile-destroy)
+* [ edgemere sa spm securityprofile disable](#action--edgemere-sa-spm-securityprofile-disable)
+* [ edgemere sa spm securityprofile enable](#action--edgemere-sa-spm-securityprofile-enable)
+* [ edgemere sa spm securityprofile list](#action--edgemere-sa-spm-securityprofile-list)
+* [ edgemere sa spm securityprofile status](#action--edgemere-sa-spm-securityprofile-status)
+* [ edgemere sa spm securityprofile test](#action--edgemere-sa-spm-securityprofile-test)
 
 
 ## Logical Artifacts
@@ -194,6 +204,177 @@ Description of the action
 * REST - /edgemere/sa/spm/data/govern?attr1=string
 * bin -  edgemere sa spm data govern --attr1 string
 * js - .edgemere.sa.spm.data.govern({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  edgemere sa spm securityprofile attach
+
+
+
+* REST - /edgemere/sa/spm/securityprofile/attach?attr1=string
+* bin -  edgemere sa spm securityprofile attach --attr1 string
+* js - .edgemere.sa.spm.securityprofile.attach({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  edgemere sa spm securityprofile create
+
+
+
+* REST - /edgemere/sa/spm/securityprofile/create?attr1=string
+* bin -  edgemere sa spm securityprofile create --attr1 string
+* js - .edgemere.sa.spm.securityprofile.create({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  edgemere sa spm securityprofile deploy
+
+
+
+* REST - /edgemere/sa/spm/securityprofile/deploy?attr1=string
+* bin -  edgemere sa spm securityprofile deploy --attr1 string
+* js - .edgemere.sa.spm.securityprofile.deploy({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  edgemere sa spm securityprofile destroy
+
+
+
+* REST - /edgemere/sa/spm/securityprofile/destroy?attr1=string
+* bin -  edgemere sa spm securityprofile destroy --attr1 string
+* js - .edgemere.sa.spm.securityprofile.destroy({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  edgemere sa spm securityprofile disable
+
+
+
+* REST - /edgemere/sa/spm/securityprofile/disable?attr1=string
+* bin -  edgemere sa spm securityprofile disable --attr1 string
+* js - .edgemere.sa.spm.securityprofile.disable({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  edgemere sa spm securityprofile enable
+
+
+
+* REST - /edgemere/sa/spm/securityprofile/enable?attr1=string
+* bin -  edgemere sa spm securityprofile enable --attr1 string
+* js - .edgemere.sa.spm.securityprofile.enable({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  edgemere sa spm securityprofile list
+
+
+
+* REST - /edgemere/sa/spm/securityprofile/list?attr1=string
+* bin -  edgemere sa spm securityprofile list --attr1 string
+* js - .edgemere.sa.spm.securityprofile.list({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  edgemere sa spm securityprofile status
+
+
+
+* REST - /edgemere/sa/spm/securityprofile/status?attr1=string
+* bin -  edgemere sa spm securityprofile status --attr1 string
+* js - .edgemere.sa.spm.securityprofile.status({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  edgemere sa spm securityprofile test
+
+
+
+* REST - /edgemere/sa/spm/securityprofile/test?attr1=string
+* bin -  edgemere sa spm securityprofile test --attr1 string
+* js - .edgemere.sa.spm.securityprofile.test({ attr1:string })
 
 #### Description
 Description of the action

@@ -27,7 +27,9 @@ No associations
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| characterisitcs | n | Identity |  |  |  |
 | attributes | n | User | false | false |  |
+| characterisitcs | n | User |  |  |  |
 
 
 

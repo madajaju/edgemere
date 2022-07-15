@@ -1,17 +1,14 @@
 The Application Developer work in coordination with [DevOps](/doc/actor/devops) to  
 manage services, applications and workloads through the development pipeline
 
-The following are the usecases of the application developer and how they propagate through the system.
+The following arethe usecases for the Application Developer and how they interaction with other subsytstems.
 
 ![UseCase](./usecases.png)
 
-The following diagram shows how the Apoplication developer interaction with the application management layer and the 
-supporting service management layer in the system.
+This diagram shows the activities of the Application Developer and how it interactions with Edgemeree and its 
+subsystems.
 
 ![Activity](./activity.png)
 
-The following diagram shows the typical workflow of the application developer when writing, testing, deploying and 
-managing 
-services and stacks in the system.
-
+This is a typical workflow of an application developer in edgemere.
 ![Workflow](./workflow.png)

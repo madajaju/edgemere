@@ -3,7 +3,8 @@ module.exports = {
     description: 'Capture Meta Data is the description',
     method: "data/create",
     actors: {
-        'Actor': 'uses',
+        'DataEngineer': 'uses',
+        'DataSteward': 'uses',
     },
     steps: [
         {

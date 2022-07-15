@@ -1,6 +1,6 @@
 @startuml
 
-actor "Actor"
+actor "SecurityEngineer"
 
 
 entity EventBus
@@ -14,16 +14,27 @@ box Software Defined Infrastructure #lightyellow
             participant storageresource
     end box
 
+box Security Profile Manager #pink
+    end box
 
-"Actor" -> spm: Test Security Profile
 
-    spm -> "storageresource": list (name: hello,file: ./templates/world.yml)
+"SecurityEngineer" -> spm: Test Security Profile
 
-    "storageresource" --/ EventBus: data.list
+    spm -> "storageresource": create (name: secProfileTSP1,file: ./templates/secprofile.yml)
 
-    spm -> "storageresource": list (name: hello,file: ./templates/world.yml)
+    "storageresource" --/ EventBus: securityprofile.create
 
-    "storageresource" --/ EventBus: data.list
+    spm -> "storageresource": create (name: secProfileTSP2,file: ./templates/secprofile.yml)
+
+    "storageresource" --/ EventBus: securityprofile.create
+
+    spm -> "storageresource": create (name: secProfileTSP3,file: ./templates/secprofile.yml)
+
+    "storageresource" --/ EventBus: securityprofile.create
+
+    spm -> "securityprofile": test (name: secProfileTSP1)
+
+    "securityprofile" --/ EventBus: securityprofile.test
 
 
 

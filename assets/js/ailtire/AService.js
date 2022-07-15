@@ -1,4 +1,4 @@
-import {AText} from './index.js';
+import {AScenario, AText, AUsecase} from './index.js';
 
 export default class AService {
     constructor(config) {
@@ -14,6 +14,7 @@ export default class AService {
         } else if (type === 'Sourced') {
             color = "green";
         }
+        const theta = 3.14 / 2;
         const opacity = node.opacity || 1;
 
         const material = new THREE.MeshPhongMaterial({color: color, transparent: true, opacity: opacity});

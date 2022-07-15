@@ -9,6 +9,18 @@ class "Identity" as Model {
  
 }
 
+rectangle "SecurityProfile" as SecurityProfile #lightblue {
+}
+
+Model o--> "n" SecurityProfile : securityProfiles
+
+
+rectangle "IdentityAttribute" as IdentityAttribute #lightblue {
+}
+
+Model o--> "n" IdentityAttribute : characterisitcs
+
+
 
 
     rectangle "DataBluePrint" as DataBluePrint #lightgreen {
@@ -20,6 +32,11 @@ class "Identity" as Model {
     }
     
         DataBluePrintInstance   o--> "1" Model : "identity"
+    
+    rectangle "SecurityProfile" as SecurityProfile #lightgreen {
+    }
+    
+        SecurityProfile   o--> "n" Model : "enforced"
     
 
 @enduml

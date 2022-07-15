@@ -1,13 +1,13 @@
 module.exports = {
     name: 'Deploy Security Profile',
-    description: 'Deploy Security Profile is the description',
-    method: "data/create",
+    description: 'Deploy a Security Profile against an identity in the system.',
+    method: "securityprofile/deploy",
     actors: {
-        'Actor': 'uses',
+        'SecurityEngineer': 'uses',
     },
     steps: [
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
+        { action: 'securityprofile/create', parameters: {name:'secProfile1', file:'./templates/secprofile.yml'}},
+        { action: 'securityprofile/deploy', parameters: {name:'secProfile1'}}
     ]
 };
 

@@ -1,9 +1,9 @@
 module.exports = {
     name: 'Update Data Adaptor',
     description: 'Update Data Adaptor is the description',
-    method: "data/source/name",
+    method: "dataadaptor/update",
     actors: {
-        'Actor': 'uses',
+        'DataEngineer': 'uses',
     },
 };
 

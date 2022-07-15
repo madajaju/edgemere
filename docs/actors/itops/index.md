@@ -24,6 +24,7 @@ Responsible for the management of the infrastructure.
 * [Manage Multi Cloud](usecase-ManageMultiCloud)
 * [Map Assets to Cloud](usecase-MapAssetstoCloud)
 * [Map Services to Resources](usecase-MapServicestoResources)
+* [Manage Assets](usecase-ManageAssets)
 * [Manage Clouds](usecase-ManageClouds)
 * [Manage Resources](usecase-ManageResources)
 
@@ -43,6 +44,7 @@ TBD
 * [ edgemere sml cb multicloud list](action--edgemere-sml-cb-multicloud-list) - Manage Multi Cloud allows actors to create multi-clouds by adding clouds. Management of policies for the multi-cloud and all of the services deployed to a multi-cloud is performed by IT Operations.
 * [ edgemere sml cb multicloud mapresources](action--edgemere-sml-cb-multicloud-mapresources) - Map Assets to Cloud allows IT Operations to map assets to resource instance types. The Resource Instance Type allows services to access preconfigurated configurations of resource types.
 * [ edgemere sml cb service mapresources](action--edgemere-sml-cb-service-mapresources) - Map Services to Resources allows the system and actors to map service level agreements to specific resource instance types, or create new resource instance types dynamically on the fly. This allows for the reuse of resources that might already be allocated and can be shared for optimization of resources and time to deployments.
+* [ edgemere sml sr assets list](action--edgemere-sml-sr-assets-list) - Manage Assets is the description
 * [ edgemere sml Cloud list](action--edgemere-sml-Cloud-list) - Manage Clouds is the description
 * [ edgemere sdi resource list](action--edgemere-sdi-resource-list) - Manage Resources includes creating resources, listing and planning for resources.
 

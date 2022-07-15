@@ -1,9 +1,9 @@
 module.exports = {
     name: 'Attach Data Blue Print',
     description: 'Attach Data Blue Print is the description',
-    method: "data/source/name",
+    method: "blueprint/attach",
     actors: {
-        'Actor': 'uses',
+        'Data Scientist': 'uses',
     },
 };
 

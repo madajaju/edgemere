@@ -15,6 +15,16 @@ state "smlsr" as pstatename #lightgreen {
 
         state "sml" as sml #lightgreen {
 state "sr" as smlsr #lightgreen {
+state "assets" as smlsrassets #lightgreen {
+state "list" as smlsrassetslist #lightgreen {
+}
+}
+}
+}
+
+
+        state "sml" as sml #lightgreen {
+state "sr" as smlsr #lightgreen {
 state "data" as smlsrdata #lightgreen {
 state "govern" as smlsrdatagovern #lightgreen {
 }

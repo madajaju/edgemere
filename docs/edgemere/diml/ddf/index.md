@@ -47,9 +47,13 @@ users interact with the system.
 
 ![Scenario Mappings Diagram](./scenariomapping.png)
 
+* [ edgemere diml ddf blueprint attach](#action--edgemere-diml-ddf-blueprint-attach)
 * [ edgemere diml ddf data create](#action--edgemere-diml-ddf-data-create)
 * [ edgemere diml ddf data govern](#action--edgemere-diml-ddf-data-govern)
 * [ edgemere diml ddf data source name](#action--edgemere-diml-ddf-data-source-name)
+* [ edgemere diml ddf dataadaptor create](#action--edgemere-diml-ddf-dataadaptor-create)
+* [ edgemere diml ddf dataadaptor update](#action--edgemere-diml-ddf-dataadaptor-update)
+* [ edgemere diml ddf datablueprint create](#action--edgemere-diml-ddf-datablueprint-create)
 * [ edgemere diml ddf datablueprint deploy](#action--edgemere-diml-ddf-datablueprint-deploy)
 * [ edgemere diml ddf datablueprint list](#action--edgemere-diml-ddf-datablueprint-list)
 * [ edgemere diml ddf datacatalog list](#action--edgemere-diml-ddf-datacatalog-list)
@@ -215,6 +219,25 @@ The Data Definition Framework subsystem has a well defined interface. This inter
 command line interface (CLI), REST interface, and Web user interface. This interface is how all other
 subsystems and actors can access the system.
 
+### Action  edgemere diml ddf blueprint attach
+
+
+
+* REST - /edgemere/diml/ddf/blueprint/attach?attr1=string
+* bin -  edgemere diml ddf blueprint attach --attr1 string
+* js - .edgemere.diml.ddf.blueprint.attach({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
 ### Action  edgemere diml ddf data create
 
 
@@ -260,6 +283,63 @@ Description of the action
 * REST - /edgemere/diml/ddf/data/source/name?attr1=string
 * bin -  edgemere diml ddf data source name --attr1 string
 * js - .edgemere.diml.ddf.data.source.name({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  edgemere diml ddf dataadaptor create
+
+
+
+* REST - /edgemere/diml/ddf/dataadaptor/create?attr1=string
+* bin -  edgemere diml ddf dataadaptor create --attr1 string
+* js - .edgemere.diml.ddf.dataadaptor.create({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  edgemere diml ddf dataadaptor update
+
+
+
+* REST - /edgemere/diml/ddf/dataadaptor/update?attr1=string
+* bin -  edgemere diml ddf dataadaptor update --attr1 string
+* js - .edgemere.diml.ddf.dataadaptor.update({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  edgemere diml ddf datablueprint create
+
+
+
+* REST - /edgemere/diml/ddf/datablueprint/create?attr1=string
+* bin -  edgemere diml ddf datablueprint create --attr1 string
+* js - .edgemere.diml.ddf.datablueprint.create({ attr1:string })
 
 #### Description
 Description of the action

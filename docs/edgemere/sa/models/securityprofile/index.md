@@ -7,26 +7,29 @@ parent: classes
 
 # SecurityProfile
 
-Description long description
+A security profile consist of a set of security policies that are deployed against a specific environment, application, stack, individual (Identity element).
 
 ![Logical Diagram](./logical.png)
 
 ## Attributes
 
-* attr1:string - description long description
+* name:string - Name of the security profile.
 
 
 ## Associations
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| assoc1 | 1 | ModelName | false | false |  |
+| policies | n | Policy | true | true |  |
+| enforcing | n | Identity | false |  |  |
+
 
 
 ## Users of the Model
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
+| profile | 1 | Environment | false | false |  |
 
 
 

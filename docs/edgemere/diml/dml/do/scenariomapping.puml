@@ -52,24 +52,24 @@ ApplicationDeveloperManageDataInstances --> edgemeredimldmldodatainstancelist
     ApplicationDeveloperManageDataInstancesCreateDataInstance --> Null
     
  
-    state "Actor" as Actor {
-        state "Manage Data Instances" as ActorManageDataInstances {
-            state "Find Data Instance" as ActorManageDataInstancesFindDataInstance {
+    state "DataEngineer" as DataEngineer {
+        state "Manage Data Instances" as DataEngineerManageDataInstances {
+            state "Find Data Instance" as DataEngineerManageDataInstancesFindDataInstance {
             }
         }
     }
     
-    ActorManageDataInstancesFindDataInstance --> Null
+    DataEngineerManageDataInstancesFindDataInstance --> Null
     
  
-    state "Actor" as Actor {
-        state "Manage Data Instances" as ActorManageDataInstances {
-            state "Remove Data Instance" as ActorManageDataInstancesRemoveDataInstance {
+    state "DataEngineer" as DataEngineer {
+        state "Manage Data Instances" as DataEngineerManageDataInstances {
+            state "Remove Data Instance" as DataEngineerManageDataInstancesRemoveDataInstance {
             }
         }
     }
     
-    ActorManageDataInstancesRemoveDataInstance --> Null
+    DataEngineerManageDataInstancesRemoveDataInstance --> Null
     
  
  

@@ -1,4 +1,4 @@
-import {AText} from './index.js';
+import {AScenario, AText, AUsecase} from './index.js';
 
 export default class AAttribute {
     constructor(config) {
@@ -14,6 +14,7 @@ export default class AAttribute {
         } else if (type === 'Sourced') {
             color = "green";
         }
+        const theta = 3.14 / 2;
         const group = new THREE.Group();
         const material = new THREE.MeshLambertMaterial({color: color, opacity: 1});
         const center = new THREE.BoxGeometry(100, 50, 30);

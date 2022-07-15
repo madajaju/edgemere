@@ -1,9 +1,9 @@
 module.exports = {
     name: 'Move Data',
     description: 'Move Data is the description',
-    method: "data/source/name",
+    method: "data/move",
     actors: {
-        'Actor': 'uses',
+        'Data Steward': 'uses',
     },
 };
 

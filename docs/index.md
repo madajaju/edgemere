@@ -57,8 +57,6 @@ goals are? and How they use the system? This list is not an exhaustive list of a
 primary actors.
 
 
-* [Actor](actor-actor) - Long description
-  
 * [ApplicationDeveloper](actor-applicationdeveloper) - The Application Developer work in coordination with DevOps to manage services, applications and workloads through the development pipeline.
   
 * [ChiefDataOfficer](actor-cdo) - Responsible for setting strategy and governance of data in the organization.
@@ -74,6 +72,10 @@ primary actors.
 * [DevOpsEngineer](actor-devops) - Responsible for the management of the automation of the delivery of applications and solutions in the organization.
   
 * [ITOperations](actor-itops) - Responsible for the management of the infrastructure.
+  
+* [SecurityEngineer](actor-securityengineer) - Long description
+  
+* [SecurityOperator](actor-securityoperator) - Long description
   
 * [StackDeveloper](actor-stackdev) - Responsible for developing reusable micro-services and application stacks in the organization.
   

@@ -21,7 +21,10 @@ Identity of the entity in the system
 
 ## Associations
 
-No associations
+| Name | Cardinality | Class | Composition | Owner | Description |
+| --- | --- | --- | --- | --- | --- |
+| securityProfiles | n | SecurityProfile |  |  |  |
+| characterisitcs | n | IdentityAttribute |  |  |  |
 
 
 
@@ -31,6 +34,7 @@ No associations
 | --- | --- | --- | --- | --- | --- |
 | identity | 1 | DataBluePrint | false | false |  |
 | identity | 1 | DataBluePrintInstance | false | false |  |
+| enforced | n | SecurityProfile |  |  | This is the list of identities being managed by the profile. The profile enforces the policies against they identities. |
 
 
 

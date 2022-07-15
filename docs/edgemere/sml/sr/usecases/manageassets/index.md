@@ -12,7 +12,7 @@ Manage Assets is the description
 
 ## Actors
 
-* [Actor](actor-actor)
+* [IT Operations](actor-itops)
 
 
 

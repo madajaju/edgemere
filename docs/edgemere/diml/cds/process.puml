@@ -26,6 +26,16 @@ state "list" as dimlcdsdatalist #ffcc88 {
         state "diml" as diml #ffcc88 {
 state "cds" as dimlcds #ffcc88 {
 state "data" as dimlcdsdata #ffcc88 {
+state "move" as dimlcdsdatamove #ffcc88 {
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "cds" as dimlcds #ffcc88 {
+state "data" as dimlcdsdata #ffcc88 {
 state "source" as dimlcdsdatasource #ffcc88 {
 state "name" as dimlcdsdatasourcename #ffcc88 {
 }

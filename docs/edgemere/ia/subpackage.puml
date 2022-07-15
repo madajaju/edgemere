@@ -5,6 +5,10 @@ package "Identity Aspect" #pink {
 
 }
 
+package "Security Profile Manager" #pink {
+
+}
+
 
 package "Identity Aspect" #pink {
 

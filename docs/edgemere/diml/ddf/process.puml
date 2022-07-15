@@ -15,6 +15,16 @@ state "dimlddf" as pstatename #ffcc88 {
 
         state "diml" as diml #ffcc88 {
 state "ddf" as dimlddf #ffcc88 {
+state "blueprint" as dimlddfblueprint #ffcc88 {
+state "attach" as dimlddfblueprintattach #ffcc88 {
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "ddf" as dimlddf #ffcc88 {
 state "data" as dimlddfdata #ffcc88 {
 state "create" as dimlddfdatacreate #ffcc88 {
 }
@@ -39,6 +49,36 @@ state "data" as dimlddfdata #ffcc88 {
 state "source" as dimlddfdatasource #ffcc88 {
 state "name" as dimlddfdatasourcename #ffcc88 {
 }
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "ddf" as dimlddf #ffcc88 {
+state "dataadaptor" as dimlddfdataadaptor #ffcc88 {
+state "create" as dimlddfdataadaptorcreate #ffcc88 {
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "ddf" as dimlddf #ffcc88 {
+state "dataadaptor" as dimlddfdataadaptor #ffcc88 {
+state "update" as dimlddfdataadaptorupdate #ffcc88 {
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "ddf" as dimlddf #ffcc88 {
+state "datablueprint" as dimlddfdatablueprint #ffcc88 {
+state "create" as dimlddfdatablueprintcreate #ffcc88 {
 }
 }
 }

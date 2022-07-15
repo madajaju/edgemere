@@ -1,6 +1,6 @@
 @startuml
 
-actor "Actor"
+actor "SecurityEngineer"
 
 
 entity EventBus
@@ -14,16 +14,23 @@ box Software Defined Infrastructure #lightyellow
             participant storageresource
     end box
 
+box Security Profile Manager #pink
+    end box
 
-"Actor" -> spm: Enable Security Profile
 
-    spm -> "storageresource": list (name: hello,file: ./templates/world.yml)
+"SecurityEngineer" -> spm: Enable Security Profile
 
-    "storageresource" --/ EventBus: data.list
+    spm -> "storageresource": create (name: secProfileESP,file: ./templates/secprofile.yml)
 
-    spm -> "storageresource": list (name: hello,file: ./templates/world.yml)
+    "storageresource" --/ EventBus: securityprofile.create
 
-    "storageresource" --/ EventBus: data.list
+    spm -> "securityprofile": disable (name: secProfileESP)
+
+    "securityprofile" --/ EventBus: securityprofile.disable
+
+    spm -> "securityprofile": enable (name: secProfileESP)
+
+    "securityprofile" --/ EventBus: securityprofile.enable
 
 
 
