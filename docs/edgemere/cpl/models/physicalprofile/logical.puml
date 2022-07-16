@@ -1,0 +1,123 @@
+@startuml
+
+class "PhysicalProfile" as Model {
+ string name
+
+ combine()
+ consume()
+ create()
+ propagate()
+ satisfies()
+ stats()
+ 
+}
+
+rectangle "MetricComposite" as MetricComposite #lightblue {
+}
+
+Model *--> "1" MetricComposite : capabilities
+
+
+rectangle "MetricComposite" as MetricComposite #lightblue {
+}
+
+Model *--> "1" MetricComposite : available
+
+
+rectangle "MetricComposite" as MetricComposite #lightblue {
+}
+
+Model *--> "1" MetricComposite : reserved
+
+
+rectangle "MetricComposite" as MetricComposite #lightblue {
+}
+
+Model *--> "1" MetricComposite : metrics
+
+
+rectangle "PhysicalProfile" as PhysicalProfile #lightblue {
+}
+
+Model o--> "1" PhysicalProfile : parent
+
+
+
+
+    rectangle "Device" as Device #lightgreen {
+    }
+    
+        Device   o--> "1" Model : "profile"
+    
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   o--> "1" Model : "profile"
+    
+    rectangle "PhysicalProfile" as PhysicalProfile #lightgreen {
+    }
+    
+        PhysicalProfile   o--> "1" Model : "parent"
+    
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   o--> "1" Model : "profile"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "profile"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "1" Model : "profile"
+    
+    rectangle "Resource" as Resource #lightgreen {
+    }
+    
+        Resource   *--> "1" Model : "profile"
+    
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "profile"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "profile"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "profile"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "profile"
+    
+    rectangle "AcceleratorResource" as AcceleratorResource #lightgreen {
+    }
+    
+        AcceleratorResource   *--> "1" Model : "profile"
+    
+    rectangle "ComputeResource" as ComputeResource #lightgreen {
+    }
+    
+        ComputeResource   *--> "1" Model : "profile"
+    
+    rectangle "NetworkResource" as NetworkResource #lightgreen {
+    }
+    
+        NetworkResource   *--> "1" Model : "profile"
+    
+    rectangle "StorageResource" as StorageResource #lightgreen {
+    }
+    
+        StorageResource   *--> "1" Model : "profile"
+    
+
+@enduml

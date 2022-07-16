@@ -1,0 +1,24 @@
+The Application Management Layer (AML) contains abstractions that help App Development,  
+DevOps and IT Operations manage complex workflows and applications through the application  
+development lifecycle. The AML sits at the top of the system stack and communicates directly with  
+the [Distributed Information Management Layer](package--edgemere-dml) and the  
+[Service Management Layer](package--edgemere-sml). It also leverages the  
+[Identity Aspect](package--edgemere-ia) and [Security Aspect](package--edgemere-sa) layers.
+
+![AML Overall](./aml.png)
+
+The AML contains sub-packages that group common-off-the-shelf tools integrated.  
+In the Analytics Services package, standard tools for analytics can be found, including collection,  
+analytics, and insight. AI/ML Services represent the myriad of tools and services that focus  
+on Artificial Intelligence and Machine Learning algorithms and solutions.
+
+These two packages take advantage of the application and workflow services that allow  
+these solutions are to be orchestrated at the highest level of integration by providing a  
+framework and common definition framework to show how these applications and workflow  
+interact.
+
+Several tool suites have been built to aid SecDevOps. These tools are  
+grouped in the SecDevOps Services and include Automation Frameworks (Salt, Chef,  
+puppet, ansible), CICD tools (Gitlab, GitHub, Jenkins, etc...) and Environment Management.
+
+![AML details](amldetail.png)

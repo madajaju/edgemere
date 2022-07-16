@@ -1,0 +1,170 @@
+@startuml
+left to right direction
+
+
+state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "do" as dimldmldo #lightblue {
+}
+}
+}
+
+
+state "dimldmldo" as pstatename #lightblue {
+    state "Custom Function" as dofunction {
+    }
+}
+
+        state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "do" as dimldmldo #lightblue {
+state "evaluate" as dimldmldoevaluate #lightblue {
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "do" as dimldmldo #lightblue {
+state "reserve" as dimldmldoreserve #lightblue {
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "do" as dimldmldo #lightblue {
+state "datainstance" as dimldmldodatainstance #lightblue {
+state "create" as dimldmldodatainstancecreate #lightblue {
+}
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "do" as dimldmldo #lightblue {
+state "datainstance" as dimldmldodatainstance #lightblue {
+state "destroy" as dimldmldodatainstancedestroy #lightblue {
+}
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "do" as dimldmldo #lightblue {
+state "datainstance" as dimldmldodatainstance #lightblue {
+state "find" as dimldmldodatainstancefind #lightblue {
+}
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "do" as dimldmldo #lightblue {
+state "datainstance" as dimldmldodatainstance #lightblue {
+state "list" as dimldmldodatainstancelist #lightblue {
+}
+}
+}
+}
+}
+
+
+
+
+        state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "DataReference" as dimldmldatareference #ffcc88 {
+state "provisioning" as dimldmldatareferenceprovisioning #ffcc88 {
+}
+}
+}
+}
+
+        
+    state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "do" as dimldmldo #lightblue {
+state "datainstance" as dimldmldodatainstance #lightblue {
+state "create" as dimldmldodatainstancecreate #lightblue {
+}
+}
+}
+}
+}
+
+    dimldmldatareferenceprovisioning ---> dimldmldodatainstancecreate
+  
+
+        state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "do" as dimldmldo #lightblue {
+state "DataRequest" as dimldmldodatarequest #lightblue {
+state "needed" as dimldmldodatarequestneeded #lightblue {
+}
+}
+}
+}
+}
+
+        
+    state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "do" as dimldmldo #lightblue {
+state "reserve" as dimldmldoreserve #lightblue {
+}
+}
+}
+}
+
+    dimldmldodatarequestneeded ---> dimldmldoreserve
+  
+
+        state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "do" as dimldmldo #lightblue {
+state "DataRequest" as dimldmldodatarequest #lightblue {
+state "selected" as dimldmldodatarequestselected #lightblue {
+}
+}
+}
+}
+}
+
+        
+    state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "do" as dimldmldo #lightblue {
+state "evaluate" as dimldmldoevaluate #lightblue {
+}
+}
+}
+}
+
+    dimldmldodatarequestselected ---> dimldmldoevaluate
+  
+
+
+    
+    
+        
+       
+    
+    
+        
+       
+
+@enduml

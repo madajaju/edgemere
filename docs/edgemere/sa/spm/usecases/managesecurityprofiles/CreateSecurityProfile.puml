@@ -1,0 +1,26 @@
+@startuml
+
+actor "SecurityEngineer"
+
+
+entity EventBus
+
+box Security Profile Manager #pink
+    boundary spm #white
+end box
+
+
+box Software Defined Infrastructure #lightyellow
+            participant storageresource
+    end box
+
+
+"SecurityEngineer" -> spm: Create Security Profile
+
+    spm -> "storageresource": create (name: secProfile1,file: ./templates/secprofile.yml)
+
+    "storageresource" --/ EventBus: securityprofile.create
+
+
+
+@enduml

@@ -1,0 +1,41 @@
+@startuml
+
+actor "SecurityEngineer"
+
+
+entity EventBus
+
+box Security Profile Manager #pink
+    boundary spm #white
+end box
+
+
+box Software Defined Infrastructure #lightyellow
+            participant storageresource
+    end box
+
+box Security Profile Manager #pink
+    end box
+
+
+"SecurityEngineer" -> spm: Attach Profile
+
+    spm -> "storageresource": create (name: secProfile1,file: ./templates/secprofile.yml)
+
+    "storageresource" --/ EventBus: securityprofile.create
+
+    spm -> "storageresource": create (name: ID1,file: ./templates/identity.yml)
+
+    "storageresource" --/ EventBus: identity.create
+
+    spm -> "securityprofile": deploy (name: secProfile1)
+
+    "securityprofile" --/ EventBus: securityprofile.deploy
+
+    spm -> "securityprofile": attach (profile: secProfile1,identity: ID1)
+
+    "securityprofile" --/ EventBus: securityprofile.attach
+
+
+
+@enduml

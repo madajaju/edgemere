@@ -1,0 +1,28 @@
+@startuml
+
+
+usecase "Apply Security Profiles" as ApplySecurityProfiles #yellow
+
+Actor "Security Operator" as SecurityOperator
+
+SecurityOperator --> ApplySecurityProfiles
+
+
+
+usecase "AttachProfile" as AttachProfile #lightgrey
+
+ApplySecurityProfiles --> AttachProfile
+
+usecase "DeploySecurityProfile" as DeploySecurityProfile #lightgrey
+
+ApplySecurityProfiles --> DeploySecurityProfile
+
+
+
+
+
+
+
+
+
+@enduml

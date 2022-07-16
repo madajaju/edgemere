@@ -1,0 +1,56 @@
+@startuml
+left to right direction
+
+
+
+state "IT Operations" as ITOperations {
+    state "Manage Clouds" as ITOperationsManageClouds {
+    }
+}
+state "edgemere" as edgemere #lightgreen {
+state "sml" as edgemeresml #lightgreen {
+state "Cloud" as edgemeresmlCloud #lightgreen {
+state "list" as edgemeresmlCloudlist #lightgreen {
+}
+}
+}
+}
+
+ITOperationsManageClouds --> edgemeresmlCloudlist
+
+
+ 
+state "Stack Developer" as StackDeveloper {
+    state "Manage Services" as StackDeveloperManageServices {
+    }
+}
+state "edgemere" as edgemere #lightgreen {
+state "sml" as edgemeresml #lightgreen {
+state "service" as edgemeresmlservice #lightgreen {
+state "list" as edgemeresmlservicelist #lightgreen {
+}
+}
+}
+}
+
+StackDeveloperManageServices --> edgemeresmlservicelist
+
+state "Application Developer" as ApplicationDeveloper {
+    state "Manage Services" as ApplicationDeveloperManageServices {
+    }
+}
+state "edgemere" as edgemere #lightgreen {
+state "sml" as edgemeresml #lightgreen {
+state "service" as edgemeresmlservice #lightgreen {
+state "list" as edgemeresmlservicelist #lightgreen {
+}
+}
+}
+}
+
+ApplicationDeveloperManageServices --> edgemeresmlservicelist
+
+
+ 
+
+@enduml

@@ -1,0 +1,43 @@
+@startuml
+
+actor "IT Operations"
+
+
+entity EventBus
+
+box Common Physical Layer #lightgray
+    boundary cpl #white
+end box
+
+
+box Common Physical Layer #lightgray
+            participant device
+            participant aggregateddevice
+    end box
+
+
+"IT Operations" -> cpl: Manage Aggregated Devices
+
+    cpl -> "device": create (name: hostmad1,file: ./templates/device.yaml)
+
+    "device" --/ EventBus: device.create
+
+    cpl -> "device": create (name: hostmad2,file: ./templates/device.yaml)
+
+    "device" --/ EventBus: device.create
+
+    cpl -> "device": create (name: hostmad3,file: ./templates/device.yaml)
+
+    "device" --/ EventBus: device.create
+
+    cpl -> "aggregateddevice": create (name: admad1)
+
+    "aggregateddevice" --/ EventBus: aggregateddevice.create
+
+    cpl -> "aggregateddevice": adddevices (name: ad1,items: hostmad1,hostmad2,hostmad3)
+
+    "aggregateddevice" --/ EventBus: aggregateddevice.adddevices
+
+
+
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+
+
+
+package "Governance Engine" #lightblue {
+
+    interface "Governance Engine" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Governance Engine" #lightblue {
+    
+}
+
+
+
+@enduml

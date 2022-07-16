@@ -1,0 +1,19 @@
+@startuml
+
+class "WorkloadTemplate" as Model {
+ string name
+ json args
+
+ 
+}
+
+rectangle "Workload" as Workload #lightblue {
+}
+
+Model o--> "n" Workload : workloads
+
+
+
+
+
+@enduml

@@ -1,0 +1,19 @@
+@startuml
+
+class "ApplicationTemplate" as Model {
+ string name
+ json args
+
+ 
+}
+
+rectangle "Application" as Application #lightblue {
+}
+
+Model o--> "n" Application : app
+
+
+
+
+
+@enduml

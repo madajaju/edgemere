@@ -1,0 +1,16 @@
+@startuml
+
+left to right direction
+Actor "SecurityOperator" as SecurityOperator
+Actor "SecurityEngineer" as SecurityEngineer
+
+
+rectangle "Security Profile Manager" #pink {
+usecase "ApplySecurityProfiles" as ApplySecurityProfiles
+    SecurityOperator --> ApplySecurityProfiles
+    usecase "ManageSecurityProfiles" as ManageSecurityProfiles
+    SecurityEngineer --> ManageSecurityProfiles
+    }
+
+
+@enduml

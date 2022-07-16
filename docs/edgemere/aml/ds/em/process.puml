@@ -1,0 +1,106 @@
+@startuml
+left to right direction
+
+
+state "aml" as aml #lightblue {
+state "ds" as amlds #lightblue {
+state "em" as amldsem #lightgreen {
+}
+}
+}
+
+
+state "amldsem" as pstatename #lightgreen {
+    state "Custom Function" as emfunction {
+    }
+}
+
+        state "aml" as aml #lightblue {
+state "ds" as amlds #lightblue {
+state "em" as amldsem #lightgreen {
+state "environment" as amldsemenvironment #lightgreen {
+state "addpolicies" as amldsemenvironmentaddpolicies #lightgreen {
+}
+}
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "ds" as amlds #lightblue {
+state "em" as amldsem #lightgreen {
+state "environment" as amldsemenvironment #lightgreen {
+state "create" as amldsemenvironmentcreate #lightgreen {
+}
+}
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "ds" as amlds #lightblue {
+state "em" as amldsem #lightgreen {
+state "environment" as amldsemenvironment #lightgreen {
+state "destroy" as amldsemenvironmentdestroy #lightgreen {
+}
+}
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "ds" as amlds #lightblue {
+state "em" as amldsem #lightgreen {
+state "environment" as amldsemenvironment #lightgreen {
+state "disable" as amldsemenvironmentdisable #lightgreen {
+}
+}
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "ds" as amlds #lightblue {
+state "em" as amldsem #lightgreen {
+state "environment" as amldsemenvironment #lightgreen {
+state "enable" as amldsemenvironmentenable #lightgreen {
+}
+}
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "ds" as amlds #lightblue {
+state "em" as amldsem #lightgreen {
+state "environment" as amldsemenvironment #lightgreen {
+state "list" as amldsemenvironmentlist #lightgreen {
+}
+}
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "ds" as amlds #lightblue {
+state "em" as amldsem #lightgreen {
+state "environment" as amldsemenvironment #lightgreen {
+state "update" as amldsemenvironmentupdate #lightgreen {
+}
+}
+}
+}
+}
+
+
+
+
+
+
+@enduml

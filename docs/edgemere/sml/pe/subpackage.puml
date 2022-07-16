@@ -1,0 +1,36 @@
+@startuml
+
+
+package "Software Defined Infrastructure" #lightyellow {
+
+}
+
+
+package "Provision Engine" #lightgreen {
+
+    interface "Provision Engine" as i {
+    
+    
+    }
+}
+
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
+
+package "Provision Engine" #lightgreen {
+
+
+}
+
+
+    "Software Defined Infrastructure" <-- "Provision Engine"
+
+
+@enduml

@@ -1,0 +1,36 @@
+@startuml
+
+
+package "Workflow Services" #lightblue {
+
+}
+
+
+package "Analytics Services" #lightblue {
+
+    interface "Analytics Services" as i {
+    
+    
+    }
+}
+
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
+
+package "Analytics Services" #lightblue {
+
+
+}
+
+
+    "Workflow Services" <-- "Analytics Services"
+
+
+@enduml

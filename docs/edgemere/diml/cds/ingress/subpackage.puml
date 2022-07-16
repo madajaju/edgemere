@@ -1,0 +1,30 @@
+@startuml
+
+
+
+package "Ingress Services" #lightblue {
+
+    interface "Ingress Services" as i {
+    
+    
+    }
+}
+
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
+
+package "Ingress Services" #lightblue {
+
+
+}
+
+
+
+@enduml

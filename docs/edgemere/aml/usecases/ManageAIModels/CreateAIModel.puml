@@ -1,0 +1,35 @@
+@startuml
+
+actor "Application Developer"
+
+actor "Data Scientist"
+
+
+entity EventBus
+
+box Application Management Layer #lightblue
+    boundary aml #white
+end box
+
+
+box Software Defined Infrastructure #lightyellow
+            participant storageresource
+    end box
+
+
+"Application Developer" -> aml: Create AI Model
+
+    aml -> "storageresource": create (name: name1)
+
+    "storageresource" --/ EventBus: aimodel.create
+
+
+"Data Scientist" -> aml: Create AI Model
+
+    aml -> "storageresource": create (name: name1)
+
+    "storageresource" --/ EventBus: aimodel.create
+
+
+
+@enduml

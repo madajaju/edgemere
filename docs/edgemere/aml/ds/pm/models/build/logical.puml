@@ -1,0 +1,41 @@
+@startuml
+
+class "Build" as Model {
+ string name
+ string tag
+
+ 
+}
+
+rectangle "BuildLedger" as BuildLedger #lightblue {
+}
+
+Model *--> "1" BuildLedger : ledger
+
+
+rectangle "StageInstance" as StageInstance #lightblue {
+}
+
+Model o--> "1" StageInstance : stages
+
+
+rectangle "Deliverable" as Deliverable #lightblue {
+}
+
+Model *--> "n" Deliverable : deliverables
+
+
+
+
+    rectangle "BuildInstance" as BuildInstance #lightgreen {
+    }
+    
+        BuildInstance   o--> "1" Model : "build"
+    
+    rectangle "Pipeline" as Pipeline #lightgreen {
+    }
+    
+        Pipeline   *--> "n" Model : "builds"
+    
+
+@enduml

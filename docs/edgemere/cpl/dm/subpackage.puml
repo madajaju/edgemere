@@ -1,0 +1,33 @@
+@startuml
+
+
+
+package "Device Manager" #lightgray {
+
+    interface "Device Manager" as i {
+            ^agent.started
+    
+            /edgemere/cpl/dm/agent/register()
+            /edgemere/cpl/dm/service/register()
+    
+    }
+}
+
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
+
+package "Device Manager" #lightgray {
+
+
+}
+
+
+
+@enduml

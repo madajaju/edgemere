@@ -1,0 +1,16 @@
+@startuml
+
+left to right direction
+
+
+Actor "Data Analyst" as DataAnalyst
+
+
+rectangle "Common Data Service" as cds #ffcc88 {
+        usecase "Manage Data" as ManageData
+    DataAnalyst --> ManageData
+
+}
+
+
+@enduml

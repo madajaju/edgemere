@@ -1,0 +1,33 @@
+@startuml
+
+actor "SecurityEngineer"
+
+
+entity EventBus
+
+box Security Profile Manager #pink
+    boundary spm #white
+end box
+
+
+box Software Defined Infrastructure #lightyellow
+            participant storageresource
+    end box
+
+box Security Profile Manager #pink
+    end box
+
+
+"SecurityEngineer" -> spm: Remove Security Profile
+
+    spm -> "storageresource": create (name: secProfileRSP,file: ./templates/secprofile.yml)
+
+    "storageresource" --/ EventBus: securityprofile.create
+
+    spm -> "securityprofile": destroy (name: secProfileRSP)
+
+    "securityprofile" --/ EventBus: securityprofile.destroy
+
+
+
+@enduml

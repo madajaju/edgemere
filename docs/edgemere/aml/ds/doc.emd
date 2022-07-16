@@ -1,0 +1,30 @@
+Developer Services include all of the services and subsystems developers need to develop, deploy and maintain  
+applications and services in the system. This includes DevSecOps Services.
+
+## Developer Services High-Level Architecture
+
+![HighLevel](./HighLevel.png)  
+The subsystems included in the Developer Services include
+
+*   [Automation Frameworks](package--edgemere-aml-ds-af)
+*   [CICD Pipeline](package--edgemere-aml-ds-pm)
+*   [Security Profiles](package--edgemere-sa-spm)
+*   [Environments](package--edgemere-aml-ds-em)
+
+## High-Level Deployment Architecture
+
+![Overview](./Overview.png)
+
+The developer services sit on top of the [Service Management Layer,](package--edgemere-sml) which provides a  
+multi-hybrid orchestration for the developer services to deploy specific [environments](package--edgemere-aml-ds-em) to  
+develop, test and deploy applications and services. The [Multi-Hybrid Cloud](package--edgemere-sml) abstracts IOT,  
+Public Clouds, Private Clouds, and Legacy infrastructure this is part of the  
+[Software-Defined Infrastructure Layer](package--edgemere-sdi).
+
+## Continuous Integration & Continuous Deliver PipeLine
+
+![CICD Pipelin](./CICDPipeline.png)
+
+## Environment centric Deployments
+
+![Environment Deployment](./EnvironmentDeployments.png)

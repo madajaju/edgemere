@@ -1,0 +1,20 @@
+@startuml
+
+
+usecase "Manage Data Strategy" as ManageDataStrategy #yellow
+
+Actor "Chief Data Officer" as ChiefDataOfficer
+
+ChiefDataOfficer --> ManageDataStrategy
+
+
+
+
+
+
+
+
+
+
+
+@enduml

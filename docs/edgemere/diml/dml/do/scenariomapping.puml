@@ -1,0 +1,77 @@
+@startuml
+left to right direction
+
+
+
+state "DataScientist" as DataScientist {
+    state "Manage Data Instances" as DataScientistManageDataInstances {
+    }
+}
+state "edgemere" as edgemere #lightblue {
+state "diml" as edgemerediml #lightblue {
+state "dml" as edgemeredimldml #lightblue {
+state "do" as edgemeredimldmldo #lightblue {
+state "datainstance" as edgemeredimldmldodatainstance #lightblue {
+state "list" as edgemeredimldmldodatainstancelist #lightblue {
+}
+}
+}
+}
+}
+}
+
+DataScientistManageDataInstances --> edgemeredimldmldodatainstancelist
+
+state "ApplicationDeveloper" as ApplicationDeveloper {
+    state "Manage Data Instances" as ApplicationDeveloperManageDataInstances {
+    }
+}
+state "edgemere" as edgemere #lightblue {
+state "diml" as edgemerediml #lightblue {
+state "dml" as edgemeredimldml #lightblue {
+state "do" as edgemeredimldmldo #lightblue {
+state "datainstance" as edgemeredimldmldodatainstance #lightblue {
+state "list" as edgemeredimldmldodatainstancelist #lightblue {
+}
+}
+}
+}
+}
+}
+
+ApplicationDeveloperManageDataInstances --> edgemeredimldmldodatainstancelist
+
+
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Data Instances" as ApplicationDeveloperManageDataInstances {
+            state "Create Data Instance" as ApplicationDeveloperManageDataInstancesCreateDataInstance {
+            }
+        }
+    }
+    
+    ApplicationDeveloperManageDataInstancesCreateDataInstance --> Null
+    
+ 
+    state "DataEngineer" as DataEngineer {
+        state "Manage Data Instances" as DataEngineerManageDataInstances {
+            state "Find Data Instance" as DataEngineerManageDataInstancesFindDataInstance {
+            }
+        }
+    }
+    
+    DataEngineerManageDataInstancesFindDataInstance --> Null
+    
+ 
+    state "DataEngineer" as DataEngineer {
+        state "Manage Data Instances" as DataEngineerManageDataInstances {
+            state "Remove Data Instance" as DataEngineerManageDataInstancesRemoveDataInstance {
+            }
+        }
+    }
+    
+    DataEngineerManageDataInstancesRemoveDataInstance --> Null
+    
+ 
+ 
+
+@enduml

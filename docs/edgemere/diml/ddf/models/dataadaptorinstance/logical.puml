@@ -1,0 +1,23 @@
+@startuml
+
+class "DataAdaptorInstance" as Model {
+ string name
+
+ 
+}
+
+rectangle "DataAdaptor" as DataAdaptor #lightblue {
+}
+
+Model o--> "1" DataAdaptor : parent
+
+
+
+
+    rectangle "DataAdaptor" as DataAdaptor #lightgreen {
+    }
+    
+        DataAdaptor   *--> "n" Model : "instances"
+    
+
+@enduml

@@ -1,0 +1,46 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Analytics Services" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " edgemere aml as" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as aml_as_container
+      REST --> aml_as_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+    file "gateway" as gateway_container
+    REST --> gateway_container
+    socket ---> gateway_container
+  
+  }
+  folder images #ffffff {
+    collections "aml_as" as aml_asimage
+    artifact "ailtire:swarm" as ailtireswarm
+    aml_asimage <|-- ailtireswarm
+    aml_as_container --> aml_asimage
+
+  
+      artifact "aml_as_web" as aml_as_web
+      web_container --> aml_as_web
+    
+      artifact "aml_as_gw" as aml_as_gw
+      gateway_container --> aml_as_gw
+    
+  }
+}
+CLI " edgemere aml as" -- binName
+Web "/edgemere/aml/as" - REST
+WebSocket ".edgemere.aml.as" -- socket
+
+@enduml

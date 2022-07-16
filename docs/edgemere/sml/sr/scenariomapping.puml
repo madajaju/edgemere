@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+
+
+
+state "ITOperations" as ITOperations {
+    state "Manage Assets" as ITOperationsManageAssets {
+    }
+}
+state "edgemere" as edgemere #lightgreen {
+state "sml" as edgemeresml #lightgreen {
+state "sr" as edgemeresmlsr #lightgreen {
+state "assets" as edgemeresmlsrassets #lightgreen {
+state "list" as edgemeresmlsrassetslist #lightgreen {
+}
+}
+}
+}
+}
+
+ITOperationsManageAssets --> edgemeresmlsrassetslist
+
+
+ 
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+
+actor "IT Operations"
+
+
+entity EventBus
+
+box Environment Management #lightgreen
+    boundary em #white
+end box
+
+
+
+"IT Operations" -> em: Enable Environment
+
+
+
+@enduml

@@ -1,0 +1,32 @@
+@startuml
+
+
+usecase "Manage Resources" as ManageResources #yellow
+
+Actor "IT Operations" as ITOperations
+
+ITOperations --> ManageResources
+
+
+
+usecase "GetResources" as GetResources #lightgrey
+
+ManageResources --> GetResources
+
+usecase "ListResources" as ListResources #lightgrey
+
+ManageResources --> ListResources
+
+usecase "ReleaseResources" as ReleaseResources #lightgrey
+
+ManageResources --> ReleaseResources
+
+
+
+
+
+
+
+
+
+@enduml

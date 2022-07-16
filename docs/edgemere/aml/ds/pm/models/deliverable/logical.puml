@@ -1,0 +1,30 @@
+@startuml
+
+class "Deliverable" as Model {
+ string name
+ string version
+
+ 
+}
+
+rectangle "BuildInstance" as BuildInstance #lightblue {
+}
+
+Model o--> "1" BuildInstance : parent
+
+
+rectangle "Image" as Image #lightblue {
+}
+
+Model o--> "1" Image : image
+
+
+
+
+    rectangle "Build" as Build #lightgreen {
+    }
+    
+        Build   *--> "n" Model : "deliverables"
+    
+
+@enduml

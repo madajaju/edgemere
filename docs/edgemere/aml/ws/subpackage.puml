@@ -1,0 +1,42 @@
+@startuml
+
+
+package "Developer Services" #lightblue {
+
+}
+
+package "Identity Aspect" #pink {
+
+}
+
+
+package "Workflow Services" #lightblue {
+
+    interface "Workflow Services" as i {
+    
+    
+    }
+}
+
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
+
+package "Workflow Services" #lightblue {
+
+
+}
+
+
+    "Developer Services" <-- "Workflow Services"
+
+    "Identity Aspect" <-- "Workflow Services"
+
+
+@enduml

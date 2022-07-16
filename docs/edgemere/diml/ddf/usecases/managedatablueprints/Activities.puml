@@ -1,0 +1,28 @@
+@startuml
+
+
+usecase "Manage Data Blue Prints" as ManageDataBluePrints #yellow
+
+Actor "DataEngineer" as DataEngineer
+
+DataEngineer --> ManageDataBluePrints
+
+Actor "Data Scientist" as DataScientist
+
+DataScientist --> ManageDataBluePrints
+
+
+
+usecase "CreateBluePrint" as CreateBluePrint #lightgrey
+
+ManageDataBluePrints --> CreateBluePrint
+
+
+
+
+
+
+
+
+
+@enduml

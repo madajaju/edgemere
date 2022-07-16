@@ -1,0 +1,189 @@
+@startuml
+
+
+package "Data Management Layer" #ffcc88 {
+    
+        class Data {
+        }
+    }
+
+package "Common Data Service" #ffcc88 {
+    }
+
+package "Data Definition Framework" #ffcc88 {
+    
+        class DataBluePrint {
+        }
+    
+        class DataSource {
+        }
+    
+        class DataAdaptorInstance {
+        }
+    
+        class DataAdaptor {
+        }
+    
+        class DataAdaptorTemplate {
+        }
+    
+        class DataFlowTemplate {
+        }
+    
+        class DataBluePrintInstance {
+        }
+    
+        class DataFlowInstance {
+        }
+    
+        class DataFlow {
+        }
+    
+        class DataProcedure {
+        }
+    
+        class DataPipeline {
+        }
+    }
+
+package "Identity Aspect" #pink {
+    
+        class Identity {
+        }
+    }
+
+
+package "Data Definition Framework" #ffcc88 {
+
+    interface "Data Definition Framework" as i {
+            /edgemere/diml/ddf/blueprint/attach()
+            /edgemere/diml/ddf/data/create()
+            /edgemere/diml/ddf/data/govern()
+            /edgemere/diml/ddf/data/source/name()
+            /edgemere/diml/ddf/dataadaptor/create()
+            /edgemere/diml/ddf/dataadaptor/update()
+            /edgemere/diml/ddf/datablueprint/create()
+            /edgemere/diml/ddf/datablueprint/deploy()
+            /edgemere/diml/ddf/datablueprint/list()
+            /edgemere/diml/ddf/datacatalog/list()
+            /edgemere/diml/ddf/datadaptor/list()
+            /edgemere/diml/ddf/datapipeline/list()
+            /edgemere/diml/ddf/dataprocedure/list()
+            /edgemere/diml/ddf/datasource/simulate()
+            /edgemere/diml/ddf/metadata/list()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Data Definition Framework" #ffcc88 {
+        class "DataAdaptor" {
+                 string name
+                             create()
+            }
+                DataAdaptor o--> "1" DataBluePrint : blueprint
+                        DataAdaptor *--> "n" DataSource : sources
+                        DataAdaptor *--> "n" DataAdaptorInstance : instances
+            
+    
+    class "DataAdaptorInstance" {
+                 string name
+                    }
+                DataAdaptorInstance o--> "1" DataAdaptor : parent
+            
+    
+    class "DataAdaptorTemplate" {
+                 string name
+                 json args
+                    }
+                DataAdaptorTemplate o--> "1" DataAdaptor : adaptor
+                        DataAdaptorTemplate o--> "1" DataBluePrint : blueprint
+            
+    
+    class "DataBluePrint" {
+                 string name
+                 string version
+                             create()
+                     deploy()
+            }
+                DataBluePrint *--> "n" DataAdaptorTemplate : adaptors
+                        DataBluePrint o--> "1" Identity : identity
+                        DataBluePrint *--> "n" DataFlowTemplate : flows
+                        DataBluePrint *--> "n" DataBluePrintInstance : instances
+            
+    
+    class "DataBluePrintInstance" {
+                 string name
+                 json parameters
+                    }
+                DataBluePrintInstance o--> "n" DataSource : sources
+                        DataBluePrintInstance o--> "n" DataSource : sinks
+                        DataBluePrintInstance o--> "n" DataFlowInstance : flows
+                        DataBluePrintInstance o--> "1" Identity : identity
+                        DataBluePrintInstance o--> "1" DataBluePrint : blueprint
+            
+    
+    class "DataFlow" {
+                 string name
+                 string version
+                 string parameters
+                             create()
+            }
+                DataFlow o--> "1" DataBluePrint : blueprint
+            
+    
+    class "DataFlowInstance" {
+                 string name
+                             create()
+            }
+                DataFlowInstance o--> "1" DataBluePrintInstance : blueprint
+                        DataFlowInstance o--> "1" DataFlow : dataflow
+                        DataFlowInstance o--> "n" DataSource : sinks
+                        DataFlowInstance o--> "n" DataSource : sources
+            
+    
+    class "DataFlowTemplate" {
+                 string name
+                             create()
+            }
+                DataFlowTemplate o--> "1" DataFlow : flow
+                        DataFlowTemplate o--> "n" DataAdaptorTemplate : sources
+                        DataFlowTemplate o--> "n" DataAdaptorTemplate : sinks
+            
+    
+    class "DataPipeline" {
+                 string name
+                    }
+                DataPipeline *--> "n" DataProcedure : procedures
+                        DataPipeline o--> "n" DataFlow : flows
+            
+    
+    class "DataProcedure" {
+                 string name
+                    }
+                DataProcedure o--> "1" DataPipeline : pipeline
+            
+    
+    class "DataSource" {
+                 string name
+                 json parameters
+                             create()
+            }
+                DataSource o--> "n" DataBluePrintInstance : blueprints
+                        DataSource o--> "1" DataAdaptor : adaptor
+                        DataSource *--> "n" Data : data
+            
+    
+
+}
+
+
+    "Data Definition Framework" --> "Data Management Layer"
+
+    "Data Definition Framework" --> "Common Data Service"
+
+
+@enduml

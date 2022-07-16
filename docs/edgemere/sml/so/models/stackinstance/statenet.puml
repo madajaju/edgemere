@@ -1,0 +1,30 @@
+@startuml
+
+
+
+state StackInstance #lightgreen {
+
+    state Init #lightgreen {
+    }
+
+    state Deploying #lightgreen {
+    }
+
+    state Running #lightgreen {
+    }
+
+    state Failed #lightgreen {
+    }
+
+    state Completed #lightgreen {
+    }
+
+}
+
+
+Init --> Deploying : create
+
+
+
+
+@enduml

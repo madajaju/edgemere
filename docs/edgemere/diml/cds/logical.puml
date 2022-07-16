@@ -1,0 +1,30 @@
+@startuml
+
+
+package "Service Management Layer" #lightgreen {
+    }
+
+
+package "Common Data Service" #ffcc88 {
+
+    interface "Common Data Service" as i {
+            /edgemere/diml/cds/data/list()
+            /edgemere/diml/cds/data/move()
+            /edgemere/diml/cds/data/source/name()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Common Data Service" #ffcc88 {
+    
+}
+
+
+    "Common Data Service" --> "Service Management Layer"
+
+
+@enduml

@@ -1,0 +1,46 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Service Orchestrator" #lightgreen {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " edgemere sml so" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as sml_so_container
+      REST --> sml_so_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+    file "gateway" as gateway_container
+    REST --> gateway_container
+    socket ---> gateway_container
+  
+  }
+  folder images #ffffff {
+    collections "sml_so" as sml_soimage
+    artifact "ailtire:swarm" as ailtireswarm
+    sml_soimage <|-- ailtireswarm
+    sml_so_container --> sml_soimage
+
+  
+      artifact "sml_so_web" as sml_so_web
+      web_container --> sml_so_web
+    
+      artifact "sml_so_gw" as sml_so_gw
+      gateway_container --> sml_so_gw
+    
+  }
+}
+CLI " edgemere sml so" -- binName
+Web "/edgemere/sml/so" - REST
+WebSocket ".edgemere.sml.so" -- socket
+
+@enduml

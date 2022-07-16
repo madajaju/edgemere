@@ -1,0 +1,76 @@
+@startuml
+
+
+package "Identity Aspect" #pink {
+    
+        class User {
+        }
+    
+        class IdentityAttribute {
+        }
+    
+        class Group {
+        }
+    }
+
+package "Security Profile Manager" #pink {
+    
+        class SecurityProfile {
+        }
+    }
+
+
+package "Identity Aspect" #pink {
+
+    interface "Identity Aspect" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Identity Aspect" #pink {
+        class "Group" {
+                 string name
+                    }
+                Group o--> "n" User : users
+            
+    
+    class "Identity" {
+                 string name
+                 string username
+                 string password
+                 string cert
+                    }
+                Identity o--> "n" SecurityProfile : securityProfiles
+                        Identity o--> "n" IdentityAttribute : characterisitcs
+            
+    
+    class "IdentityAttribute" {
+                 string name
+                 string value
+                    }
+    
+    
+    class "User" {
+                 string name
+                 string username
+                 string password
+                 string cert
+                    }
+                User o--> "n" Group : groups
+                        User o--> "n" IdentityAttribute : attributes
+                        User o--> "n" SecurityProfile : securityProfiles
+                        User o--> "n" IdentityAttribute : characterisitcs
+            
+    
+        Identity <|-- User
+    
+
+}
+
+
+
+@enduml

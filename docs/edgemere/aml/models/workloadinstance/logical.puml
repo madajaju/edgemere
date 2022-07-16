@@ -1,0 +1,20 @@
+@startuml
+
+class "WorkloadInstance" as Model {
+ string name
+ string status
+ string message
+
+ 
+}
+
+rectangle "Workload" as Workload #lightblue {
+}
+
+Model o--> "1" Workload : app
+
+
+
+
+
+@enduml

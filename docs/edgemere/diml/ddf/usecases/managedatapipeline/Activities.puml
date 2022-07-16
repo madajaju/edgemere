@@ -1,0 +1,20 @@
+@startuml
+
+
+usecase "Manage Data Pipeline" as ManageDataPipeline #yellow
+
+Actor "DataEngineer" as DataEngineer
+
+DataEngineer --> ManageDataPipeline
+
+
+
+
+
+
+
+
+
+
+
+@enduml

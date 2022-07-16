@@ -1,0 +1,23 @@
+@startuml
+
+class "Group" as Model {
+ string name
+
+ 
+}
+
+rectangle "User" as User #lightblue {
+}
+
+Model o--> "n" User : users
+
+
+
+
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "groups"
+    
+
+@enduml

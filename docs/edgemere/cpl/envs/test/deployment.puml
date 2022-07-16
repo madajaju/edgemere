@@ -1,0 +1,109 @@
+@startuml
+
+left to right direction
+
+
+boundary ailtire_appname_family #orange
+
+
+entity ailtire_appname_telemetry_family #black
+
+entity ailtire_appname_cpl_family #blue
+
+rectangle "cpl_da" as cpl_daStack #lightgray {
+    queue cpl_daStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+rectangle "cpl_dm" as cpl_dmStack #lightgray {
+    queue cpl_dmStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+rectangle "cpl_tc" as cpl_tcStack #lightgray {
+    queue cpl_tcStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+
+
+
+package "cpl" #lightgray {
+    queue telemetrynet #black [
+            <b><color:white>telemetry</color></b>
+    ]
+    
+    telemetrynet -[#black]- ailtire_appname_telemetry_family
+    
+    queue childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#blue]- ailtire_appname_cpl_family
+    
+    queue siblingnet #red [
+            <b><color:white>sibling</color></b>
+    ]
+    
+    queue parentnet #orange [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#orange]- ailtire_appname_family
+    
+
+
+node "frontend" as frontendService {
+    
+}
+node "web" as webService
+node "deviceagent" as deviceagentService
+node "devicemanager" as devicemanagerService
+node "telemetry" as telemetryService
+
+
+        artifact "cpl_web:latest" as cpl_weblatestimage
+            collections "cpl_da:latest" as cpl_dalatestimage
+            collections "cpl_dm:latest" as cpl_dmlatestimage
+            collections "cpl_tc:latest" as cpl_tclatestimage
+    
+        artifact "traefik:latest" as traefiklatestimage
+    
+}
+
+external -[#black]- frontendService
+
+webService -[#blue]- childrennet
+
+webService -[#orange]- parentnet
+
+deviceagentService -[#blue]- childrennet
+
+deviceagentService -[#orange]- parentnet
+
+devicemanagerService -[#blue]- childrennet
+
+devicemanagerService -[#orange]- parentnet
+
+telemetryService -[#blue]- childrennet
+
+telemetryService -[#orange]- parentnet
+
+telemetryService -[#black]- telemetrynet
+webService .... cpl_weblatestimage
+deviceagentService .... cpl_dalatestimage
+devicemanagerService .... cpl_dmlatestimage
+telemetryService .... cpl_tclatestimage
+
+frontendService .... traefiklatestimage
+
+cpl_dalatestimage --> cpl_daStack
+    
+cpl_dmlatestimage --> cpl_dmStack
+    
+cpl_dmStacksnet --[#blue]-- ailtire_appname_cpl_family
+    
+cpl_tclatestimage --> cpl_tcStack
+    
+
+@enduml

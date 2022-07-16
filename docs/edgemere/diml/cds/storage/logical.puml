@@ -1,0 +1,22 @@
+@startuml
+
+
+
+package "Storage Services" #lightblue {
+
+    interface "Storage Services" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Storage Services" #lightblue {
+    
+}
+
+
+
+@enduml

@@ -1,0 +1,33 @@
+@startuml
+
+left to right direction
+
+
+queue external #black [
+    <b><color:white>external</color></b>
+]
+    
+interface 3001
+3001 -- external
+    
+
+
+
+
+
+package "cpl_tc" #lightgray {
+
+node "consumer" as consumerService
+node "producer" as producerService
+
+
+        artifact "cpl_tc_web:latest" as cpl_tc_weblatestimage
+    
+        artifact "cpl_tp_producer:latest" as cpl_tp_producerlatestimage
+    
+}
+consumerService .... cpl_tc_weblatestimage
+producerService .... cpl_tp_producerlatestimage
+
+
+@enduml

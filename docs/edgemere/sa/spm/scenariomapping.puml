@@ -1,0 +1,125 @@
+@startuml
+left to right direction
+
+
+
+state "SecurityOperator" as SecurityOperator {
+    state "Apply Security Profiles" as SecurityOperatorApplySecurityProfiles {
+    }
+}
+state "edgemere" as edgemere #pink {
+state "sa" as edgemeresa #pink {
+state "spm" as edgemeresaspm #pink {
+state "data" as edgemeresaspmdata #pink {
+state "govern" as edgemeresaspmdatagovern #pink {
+}
+}
+}
+}
+}
+
+SecurityOperatorApplySecurityProfiles --> edgemeresaspmdatagovern
+
+
+    state "SecurityEngineer" as SecurityEngineer {
+        state "Apply Security Profiles" as SecurityEngineerApplySecurityProfiles {
+            state "Attach Profile" as SecurityEngineerApplySecurityProfilesAttachProfile {
+            }
+        }
+    }
+    
+    SecurityEngineerApplySecurityProfilesAttachProfile --> Null
+    
+ 
+    state "SecurityEngineer" as SecurityEngineer {
+        state "Apply Security Profiles" as SecurityEngineerApplySecurityProfiles {
+            state "Deploy Security Profile" as SecurityEngineerApplySecurityProfilesDeploySecurityProfile {
+            }
+        }
+    }
+    
+    SecurityEngineerApplySecurityProfilesDeploySecurityProfile --> Null
+    
+ 
+ 
+state "SecurityEngineer" as SecurityEngineer {
+    state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
+    }
+}
+state "edgemere" as edgemere #pink {
+state "sa" as edgemeresa #pink {
+state "spm" as edgemeresaspm #pink {
+state "securityprofile" as edgemeresaspmsecurityprofile #pink {
+state "list" as edgemeresaspmsecurityprofilelist #pink {
+}
+}
+}
+}
+}
+
+SecurityEngineerManageSecurityProfiles --> edgemeresaspmsecurityprofilelist
+
+
+    state "SecurityEngineer" as SecurityEngineer {
+        state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
+            state "Create Security Profile" as SecurityEngineerManageSecurityProfilesCreateSecurityProfile {
+            }
+        }
+    }
+    
+    SecurityEngineerManageSecurityProfilesCreateSecurityProfile --> Null
+    
+ 
+    state "SecurityEngineer" as SecurityEngineer {
+        state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
+            state "Disable Security Profile" as SecurityEngineerManageSecurityProfilesDisableSecurityProfile {
+            }
+        }
+    }
+    
+    SecurityEngineerManageSecurityProfilesDisableSecurityProfile --> Null
+    
+ 
+    state "SecurityEngineer" as SecurityEngineer {
+        state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
+            state "Enable Security Profile" as SecurityEngineerManageSecurityProfilesEnableSecurityProfile {
+            }
+        }
+    }
+    
+    SecurityEngineerManageSecurityProfilesEnableSecurityProfile --> Null
+    
+ 
+    state "SecurityEngineer" as SecurityEngineer {
+        state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
+            state "Monitor Security Profile" as SecurityEngineerManageSecurityProfilesMonitorSecurityProfile {
+            }
+        }
+    }
+    
+    SecurityEngineerManageSecurityProfilesMonitorSecurityProfile --> Null
+    
+ 
+    state "SecurityEngineer" as SecurityEngineer {
+        state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
+            state "Remove Security Profile" as SecurityEngineerManageSecurityProfilesRemoveSecurityProfile {
+            }
+        }
+    }
+    
+    SecurityEngineerManageSecurityProfilesRemoveSecurityProfile --> Null
+    
+ 
+    state "SecurityEngineer" as SecurityEngineer {
+        state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
+            state "Test Security Profile" as SecurityEngineerManageSecurityProfilesTestSecurityProfile {
+            }
+        }
+    }
+    
+    SecurityEngineerManageSecurityProfilesTestSecurityProfile --> Null
+    
+ 
+ 
+
+@enduml

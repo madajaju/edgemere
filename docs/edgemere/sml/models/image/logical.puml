@@ -1,0 +1,35 @@
+@startuml
+
+class "Image" as Model {
+ string name
+ string file
+ string version
+
+ 
+}
+
+rectangle "Cloud" as Cloud #lightblue {
+}
+
+Model o--> "1" Cloud : cloud
+
+
+
+
+    rectangle "Deliverable" as Deliverable #lightgreen {
+    }
+    
+        Deliverable   o--> "1" Model : "image"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "1" Model : "image"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "image"
+    
+
+@enduml

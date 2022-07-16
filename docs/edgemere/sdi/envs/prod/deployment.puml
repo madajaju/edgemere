@@ -1,0 +1,67 @@
+@startuml
+
+left to right direction
+
+
+boundary ailtire_appname_family #red
+
+
+entity ailtire_appname_sdi_family #black
+
+rectangle "sdi_io" as sdi_ioStack #lightyellow {
+    queue sdi_ioStacksnet #black [
+        <b><color:white>parent</color></b>
+    ]
+}
+
+
+
+package "sdi" #lightyellow {
+    queue childrennet #black [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#black]- ailtire_appname_sdi_family
+    
+    queue siblingnet #blue [
+            <b><color:white>sibling</color></b>
+    ]
+    
+    queue parentnet #red [
+            <b><color:white>parent</color></b>
+    ]
+    
+    parentnet -[#red]- ailtire_appname_family
+    
+
+node "orchestrator" as orchestratorService
+node "frontend" as frontendService
+node "gw" as gwService
+
+        collections "sdi_io" as sdi_ioimage
+    
+        artifact "sdi_web" as sdi_webimage
+    
+        artifact "sdi_gw" as sdi_gwimage
+    
+}
+
+orchestratorService -[#black]- childrennet
+
+orchestratorService -[#red]- parentnet
+
+frontendService -[#blue]- siblingnet
+
+gwService -[#black]- childrennet
+
+gwService -[#blue]- siblingnet
+orchestratorService .... sdi_ioimage
+frontendService .... sdi_webimage
+gwService .... sdi_gwimage
+
+sdi_ioimage --> sdi_ioStack
+    
+sdi_ioStacksnet --[#black]-- ailtire_appname_sdi_family
+    
+
+@enduml

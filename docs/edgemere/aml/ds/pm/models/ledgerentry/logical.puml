@@ -1,0 +1,46 @@
+@startuml
+
+class "LedgerEntry" as Model {
+ string time
+ string message
+
+ 
+}
+
+rectangle "StepInstance" as StepInstance #lightblue {
+}
+
+Model o--> "1" StepInstance : step
+
+
+rectangle "Artifact" as Artifact #lightblue {
+}
+
+Model o--> "n" Artifact : input
+
+
+rectangle "Artifact" as Artifact #lightblue {
+}
+
+Model o--> "n" Artifact : output
+
+
+
+
+    rectangle "Artifact" as Artifact #lightgreen {
+    }
+    
+        Artifact   o--> "1" Model : "creator"
+    
+    rectangle "Artifact" as Artifact #lightgreen {
+    }
+    
+        Artifact   o--> "n" Model : "consumer"
+    
+    rectangle "BuildLedger" as BuildLedger #lightgreen {
+    }
+    
+        BuildLedger   *--> "n" Model : "entries"
+    
+
+@enduml

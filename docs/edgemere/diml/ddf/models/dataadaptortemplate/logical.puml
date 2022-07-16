@@ -1,0 +1,40 @@
+@startuml
+
+class "DataAdaptorTemplate" as Model {
+ string name
+ json args
+
+ 
+}
+
+rectangle "DataAdaptor" as DataAdaptor #lightblue {
+}
+
+Model o--> "1" DataAdaptor : adaptor
+
+
+rectangle "DataBluePrint" as DataBluePrint #lightblue {
+}
+
+Model o--> "1" DataBluePrint : blueprint
+
+
+
+
+    rectangle "DataBluePrint" as DataBluePrint #lightgreen {
+    }
+    
+        DataBluePrint   *--> "n" Model : "adaptors"
+    
+    rectangle "DataFlowTemplate" as DataFlowTemplate #lightgreen {
+    }
+    
+        DataFlowTemplate   o--> "n" Model : "sources"
+    
+    rectangle "DataFlowTemplate" as DataFlowTemplate #lightgreen {
+    }
+    
+        DataFlowTemplate   o--> "n" Model : "sinks"
+    
+
+@enduml

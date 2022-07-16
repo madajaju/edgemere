@@ -1,0 +1,28 @@
+@startuml
+
+actor "DataEngineer"
+
+actor "DevOpsEngineer"
+
+actor "ApplicationDeveloper"
+
+
+entity EventBus
+
+box Application Management Layer #lightblue
+    boundary aml #white
+end box
+
+
+
+"DataEngineer" -> aml: Update AI Model
+
+
+"DevOpsEngineer" -> aml: Update AI Model
+
+
+"ApplicationDeveloper" -> aml: Update AI Model
+
+
+
+@enduml

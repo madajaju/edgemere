@@ -1,0 +1,92 @@
+@startuml
+
+class "ServiceInstance" as Model {
+
+ 
+}
+
+rectangle "Image" as Image #lightblue {
+}
+
+Model o--> "1" Image : image
+
+
+rectangle "DataInstance" as DataInstance #lightblue {
+}
+
+Model o--> "n" DataInstance : data
+
+
+rectangle "Resource" as Resource #lightblue {
+}
+
+Model o--> "n" Resource : resources
+
+
+rectangle "Servicelet" as Servicelet #lightblue {
+}
+
+Model o--> "1" Servicelet : servicelet
+
+
+rectangle "StackInstance" as StackInstance #lightblue {
+}
+
+Model o--> "1" StackInstance : stack
+
+
+rectangle "RunScript" as RunScript #lightblue {
+}
+
+Model *--> "n" RunScript : runScripts
+
+
+
+
+    rectangle "RunScript" as RunScript #lightgreen {
+    }
+    
+        RunScript   o--> "1" Model : "owner"
+    
+    rectangle "Servicelet" as Servicelet #lightgreen {
+    }
+    
+        Servicelet   o--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   *--> "n" Model : "services"
+    
+    rectangle "Resource" as Resource #lightgreen {
+    }
+    
+        Resource   o--> "n" Model : "instances"
+    
+    rectangle "Stacklet" as Stacklet #lightgreen {
+    }
+    
+        Stacklet   o--> "n" Model : "instances"
+    
+    rectangle "AcceleratorResource" as AcceleratorResource #lightgreen {
+    }
+    
+        AcceleratorResource   o--> "n" Model : "instances"
+    
+    rectangle "ComputeResource" as ComputeResource #lightgreen {
+    }
+    
+        ComputeResource   o--> "n" Model : "instances"
+    
+    rectangle "NetworkResource" as NetworkResource #lightgreen {
+    }
+    
+        NetworkResource   o--> "n" Model : "instances"
+    
+    rectangle "StorageResource" as StorageResource #lightgreen {
+    }
+    
+        StorageResource   o--> "n" Model : "instances"
+    
+
+@enduml

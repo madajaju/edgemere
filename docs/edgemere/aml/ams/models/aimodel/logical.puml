@@ -1,0 +1,12 @@
+@startuml
+
+class "AIModel" as Model {
+ string attr1
+
+ 
+}
+
+
+
+
+@enduml

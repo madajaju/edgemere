@@ -1,0 +1,12 @@
+@startuml
+
+class "DataStrategy" as Model {
+ string name
+
+ 
+}
+
+
+
+
+@enduml

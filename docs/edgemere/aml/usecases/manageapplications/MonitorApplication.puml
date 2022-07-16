@@ -1,0 +1,23 @@
+@startuml
+
+actor "DevOps Engineer"
+
+actor "Application Developer"
+
+
+entity EventBus
+
+box Application Management Layer #lightblue
+    boundary aml #white
+end box
+
+
+
+"DevOps Engineer" -> aml: Monitor Application
+
+
+"Application Developer" -> aml: Monitor Application
+
+
+
+@enduml

@@ -1,0 +1,241 @@
+@startuml
+
+
+package "Software Defined Infrastructure" #lightyellow {
+    
+        class Cloud {
+        }
+    
+        class Resource {
+        }
+    }
+
+package "Distributed Information Management Layer" #ffcc88 {
+    }
+
+package "Security Aspect" #pink {
+    
+        class PolicyCollection {
+        }
+    }
+
+package "Service Orchestrator" #lightgreen {
+    
+        class ServiceInstance {
+        }
+    
+        class StackInstance {
+        }
+    }
+
+package "Service Management Layer" #lightgreen {
+    
+        class Stack {
+        }
+    
+        class Servicelet {
+        }
+    
+        class Service {
+        }
+    
+        class Stacklet {
+        }
+    
+        class StackDefinition {
+        }
+    
+        class ServiceDefinition {
+        }
+    }
+
+package "Environment Management" #lightgreen {
+    
+        class Environment {
+        }
+    }
+
+package "Data Management Layer" #ffcc88 {
+    
+        class DataReference {
+        }
+    }
+
+package "Application Management Layer" #lightblue {
+    
+        class Application {
+        }
+    }
+
+
+package "Service Management Layer" #lightgreen {
+
+    interface "Service Management Layer" as i {
+            /edgemere/sml/cloud/list()
+            /edgemere/sml/data/govern()
+            /edgemere/sml/data/source/name()
+            /edgemere/sml/environmenet/addpolicies()
+            /edgemere/sml/environment/create()
+            /edgemere/sml/environment/destroy()
+            /edgemere/sml/environment/disable()
+            /edgemere/sml/environment/enable()
+            /edgemere/sml/environment/list()
+            /edgemere/sml/environment/update()
+            /edgemere/sml/multicloud/addclouds()
+            /edgemere/sml/multicloud/addpolicies()
+            /edgemere/sml/multicloud/list()
+            /edgemere/sml/multicloud/removepolicies()
+            /edgemere/sml/service/list()
+            /edgemere/sml/stack/list()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Service Management Layer" #lightgreen {
+        class "Image" {
+                 string name
+                 string file
+                 string version
+                    }
+                Image o--> "1" Cloud : cloud
+            
+    
+    class "MultiCloud" {
+                 string name
+                    }
+                MultiCloud o--> "n" Cloud : clouds
+                        MultiCloud o--> "1" PolicyCollection : polices
+            
+    
+    class "RunScript" {
+                 string name
+                    }
+                RunScript o--> "1" ServiceInstance : owner
+            
+    
+    class "Service" {
+                 string name
+                 string version
+                 json ports
+                 json expose
+                 json parameters
+                             create()
+                     createlet()
+            }
+                Service o--> "1" Stack : stack
+                        Service *--> "n" Servicelet : servicelets
+                        Service o--> "n" Service : children
+                        Service o--> "1" Service : parent
+                        Service o--> "1" PolicyCollection : policies
+            
+    
+    class "ServiceDefinition" {
+                 string name
+                    }
+    
+    
+    class "Servicelet" {
+                 string name
+                 json args
+                 number replicas
+                 json ports
+                             create()
+                     deploy()
+            }
+                Servicelet o--> "n" Resource : resources
+                        Servicelet o--> "1" Stacklet : parent
+                        Servicelet o--> "n" ServiceInstance : instances
+                        Servicelet o--> "1" Service : service
+                        Servicelet o--> "1" Environment : env
+                        Servicelet *--> "n" DataReference : data
+            
+    
+    class "Stack" {
+                 string name
+                 string version
+                 json ports
+                 json expose
+                 json parameters
+                             create()
+                     createlet()
+                     debug()
+                     deploy()
+                     get()
+                     show()
+                     update()
+            }
+                Stack o--> "1" PolicyCollection : policies
+                        Stack *--> "n" Stacklet : stacklets
+                        Stack *--> "n" Service : services
+                        Stack *--> "n" StackInstance : instances
+                        Stack o--> "1" Application : app
+                        Stack *--> "n" DataReference : data
+                        Stack o--> "1" Stack : stack
+                        Stack *--> "n" Servicelet : servicelets
+                        Stack o--> "n" Service : children
+                        Stack o--> "1" Service : parent
+            
+    
+        Service <|-- Stack
+    
+    class "StackDefinition" {
+                 string name
+                 string version
+                 json parameters
+                             create()
+            }
+                StackDefinition *--> "n" Stacklet : stacklets
+                        StackDefinition *--> "n" StackDefinition : stacks
+                        StackDefinition o--> "1" StackDefinition : parent
+                        StackDefinition *--> "n" ServiceDefinition : services
+                        StackDefinition *--> "n" DataReference : data
+            
+    
+    class "Stacklet" {
+                 string name
+                 string version
+                 json parameters
+                 json args
+                 number replicas
+                 json ports
+                             create()
+                     deploy()
+            }
+                Stacklet o--> "1" Stack : stack
+                        Stacklet *--> "n" Servicelet : servicelets
+                        Stacklet o--> "n" Resource : resources
+                        Stacklet o--> "1" Stacklet : parent
+                        Stacklet o--> "n" ServiceInstance : instances
+                        Stacklet o--> "1" Service : service
+                        Stacklet o--> "1" Environment : env
+                        Stacklet *--> "n" DataReference : data
+            
+    
+        Servicelet <|-- Stacklet
+    
+    class "StackletDefinition" {
+                 string name
+                 string version
+                 json parameters
+                             create()
+            }
+                StackletDefinition o--> "1" Stack : stack
+                        StackletDefinition o--> "1" Environment : env
+                        StackletDefinition *--> "n" Servicelet : servicelets
+                        StackletDefinition o--> "n" DataReference : data
+            
+    
+
+}
+
+
+    "Service Management Layer" --> "Software Defined Infrastructure"
+
+    "Service Management Layer" --> "Distributed Information Management Layer"
+
+
+@enduml

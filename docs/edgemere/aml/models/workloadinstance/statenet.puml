@@ -1,0 +1,46 @@
+@startuml
+
+
+
+state WorkloadInstance #lightblue {
+
+    state Init #lightblue {
+    }
+
+    state Initializing #lightblue {
+    }
+
+    state Running #lightblue {
+    }
+
+    state Stopping #lightblue {
+    }
+
+    state Stopped #lightblue {
+    }
+
+    state Exit #lightblue {
+    }
+
+    state Failed #lightblue {
+    }
+
+}
+
+
+Init --> Initializing : create
+
+Initializing --> Running : provisoned
+
+Running --> Stopping : kill
+
+Stopping --> Stopped : stopped
+
+Stopped --> Exit : exit
+
+Stopped --> Failed : failed
+
+
+
+
+@enduml

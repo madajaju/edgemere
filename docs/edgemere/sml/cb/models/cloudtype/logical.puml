@@ -1,0 +1,42 @@
+@startuml
+
+class "CloudType" as Model {
+ string name
+
+ create()
+ 
+}
+
+rectangle "Cloud" as Cloud #lightblue {
+}
+
+Model o--> "n" Cloud : clouds
+
+
+rectangle "ResourceMap" as ResourceMap #lightblue {
+}
+
+Model *--> "n" ResourceMap : assetmap
+
+
+rectangle "ResourceInstanceType" as ResourceInstanceType #lightblue {
+}
+
+Model *--> "n" ResourceInstanceType : instancetypes
+
+
+rectangle "ResourceMap" as ResourceMap #lightblue {
+}
+
+Model *--> "n" ResourceMap : metricmap
+
+
+
+
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   o--> "1" Model : "type"
+    
+
+@enduml

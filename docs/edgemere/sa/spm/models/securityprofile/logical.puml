@@ -1,0 +1,46 @@
+@startuml
+
+class "SecurityProfile" as Model {
+ string name
+
+ attach()
+ deploy()
+ destroy()
+ disable()
+ enable()
+ status()
+ test()
+ 
+}
+
+rectangle "PolicyCollection" as PolicyCollection #lightblue {
+}
+
+Model o--> "1" PolicyCollection : policies
+
+
+rectangle "Identity" as Identity #lightblue {
+}
+
+Model o--> "n" Identity : enforced
+
+
+
+
+    rectangle "Environment" as Environment #lightgreen {
+    }
+    
+        Environment   o--> "1" Model : "profile"
+    
+    rectangle "Identity" as Identity #lightgreen {
+    }
+    
+        Identity   o--> "n" Model : "securityProfiles"
+    
+    rectangle "User" as User #lightgreen {
+    }
+    
+        User   o--> "n" Model : "securityProfiles"
+    
+
+@enduml

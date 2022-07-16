@@ -1,0 +1,71 @@
+@startuml
+
+
+
+state Request #lightyellow {
+
+    state Init #lightyellow {
+    }
+
+    state Needed #lightyellow {
+    }
+
+    state Failed #lightyellow {
+    }
+
+    state Selected #lightyellow {
+    }
+
+    state Satisfied #lightyellow {
+    }
+
+    state Evaluated #lightyellow {
+    }
+
+    state Completed #lightyellow {
+    }
+
+}
+
+
+Init --> Needed : fulfill
+
+Needed --> Selected : selected
+
+Needed --> Failed : failed
+
+Selected --> Evaluated : evaluated
+
+Satisfied --> Completed : complete
+
+Evaluated --> Satisfied : satisfied
+
+Evaluated --> Failed : failed
+
+
+
+ state "edgemere" as edgemere #lightgray {
+state "cpl" as edgemerecpl #lightgray {
+state "reserve" as edgemerecplreserve #lightgray {
+}
+}
+}
+
+ Needed -[#black]--> edgemerecplreserve
+ 
+ state "edgemere" as edgemere #lightyellow {
+state "sdi" as edgemeresdi #lightyellow {
+state "io" as edgemeresdiio #lightyellow {
+state "evaluateRequest" as edgemeresdiioevaluateRequest #lightyellow {
+}
+}
+}
+}
+
+ Selected -[#black]--> edgemeresdiioevaluateRequest
+ 
+ 
+ Satisfied -[#black]--> Null
+ 
+
+@enduml

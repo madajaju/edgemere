@@ -1,0 +1,130 @@
+@startuml
+left to right direction
+
+
+state "sa" as sa #pink {
+state "spm" as saspm #pink {
+}
+}
+
+
+state "saspm" as pstatename #pink {
+    state "Custom Function" as spmfunction {
+    }
+}
+
+        state "sa" as sa #pink {
+state "spm" as saspm #pink {
+state "data" as saspmdata #pink {
+state "create" as saspmdatacreate #pink {
+}
+}
+}
+}
+
+
+        state "sa" as sa #pink {
+state "spm" as saspm #pink {
+state "data" as saspmdata #pink {
+state "govern" as saspmdatagovern #pink {
+}
+}
+}
+}
+
+
+        state "sa" as sa #pink {
+state "spm" as saspm #pink {
+state "securityprofile" as saspmsecurityprofile #pink {
+state "attach" as saspmsecurityprofileattach #pink {
+}
+}
+}
+}
+
+
+        state "sa" as sa #pink {
+state "spm" as saspm #pink {
+state "securityprofile" as saspmsecurityprofile #pink {
+state "create" as saspmsecurityprofilecreate #pink {
+}
+}
+}
+}
+
+
+        state "sa" as sa #pink {
+state "spm" as saspm #pink {
+state "securityprofile" as saspmsecurityprofile #pink {
+state "deploy" as saspmsecurityprofiledeploy #pink {
+}
+}
+}
+}
+
+
+        state "sa" as sa #pink {
+state "spm" as saspm #pink {
+state "securityprofile" as saspmsecurityprofile #pink {
+state "destroy" as saspmsecurityprofiledestroy #pink {
+}
+}
+}
+}
+
+
+        state "sa" as sa #pink {
+state "spm" as saspm #pink {
+state "securityprofile" as saspmsecurityprofile #pink {
+state "disable" as saspmsecurityprofiledisable #pink {
+}
+}
+}
+}
+
+
+        state "sa" as sa #pink {
+state "spm" as saspm #pink {
+state "securityprofile" as saspmsecurityprofile #pink {
+state "enable" as saspmsecurityprofileenable #pink {
+}
+}
+}
+}
+
+
+        state "sa" as sa #pink {
+state "spm" as saspm #pink {
+state "securityprofile" as saspmsecurityprofile #pink {
+state "list" as saspmsecurityprofilelist #pink {
+}
+}
+}
+}
+
+
+        state "sa" as sa #pink {
+state "spm" as saspm #pink {
+state "securityprofile" as saspmsecurityprofile #pink {
+state "status" as saspmsecurityprofilestatus #pink {
+}
+}
+}
+}
+
+
+        state "sa" as sa #pink {
+state "spm" as saspm #pink {
+state "securityprofile" as saspmsecurityprofile #pink {
+state "test" as saspmsecurityprofiletest #pink {
+}
+}
+}
+}
+
+
+
+
+
+
+@enduml

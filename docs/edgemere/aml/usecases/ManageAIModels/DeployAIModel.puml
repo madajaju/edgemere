@@ -1,0 +1,28 @@
+@startuml
+
+actor "DevOpsEngineer"
+
+actor "ApplicationDeveloper"
+
+actor "DataEngineer"
+
+
+entity EventBus
+
+box Application Management Layer #lightblue
+    boundary aml #white
+end box
+
+
+
+"DevOpsEngineer" -> aml: Deploy AI Model
+
+
+"ApplicationDeveloper" -> aml: Deploy AI Model
+
+
+"DataEngineer" -> aml: Deploy AI Model
+
+
+
+@enduml

@@ -1,0 +1,31 @@
+@startuml
+
+actor "Data Engineer"
+
+
+entity EventBus
+
+box Data Management Layer #ffcc88
+    boundary dml #white
+end box
+
+
+box Data Definition Framework #ffcc88
+            participant dataadaptor
+            participant datasource
+    end box
+
+
+"Data Engineer" -> dml: Deregister Data Source
+
+    dml -> "dataadaptor": create (name: filesystem1,file: ./templates/dataadaptor-filesystem.yaml)
+
+    "dataadaptor" --/ EventBus: dataadaptor.create
+
+    dml -> "datasource": create (name: myDataVolume1,adaptor: filesystem1,file: ./templates/datasource.yaml)
+
+    "datasource" --/ EventBus: datasource.create
+
+
+
+@enduml

@@ -1,0 +1,46 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Developer Services" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " edgemere aml ds" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as aml_ds_container
+      REST --> aml_ds_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+    file "gateway" as gateway_container
+    REST --> gateway_container
+    socket ---> gateway_container
+  
+  }
+  folder images #ffffff {
+    collections "aml_ds" as aml_dsimage
+    artifact "ailtire:swarm" as ailtireswarm
+    aml_dsimage <|-- ailtireswarm
+    aml_ds_container --> aml_dsimage
+
+  
+      artifact "aml_ds_web" as aml_ds_web
+      web_container --> aml_ds_web
+    
+      artifact "aml_ds_gw" as aml_ds_gw
+      gateway_container --> aml_ds_gw
+    
+  }
+}
+CLI " edgemere aml ds" -- binName
+Web "/edgemere/aml/ds" - REST
+WebSocket ".edgemere.aml.ds" -- socket
+
+@enduml

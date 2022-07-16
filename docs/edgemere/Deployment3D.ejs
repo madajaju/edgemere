@@ -1,0 +1,122 @@
+<head>
+    <script src="/js/aframe.js"></script>
+    <script src="/js/three.js"></script>
+    <script src="/js/d3.js"></script>
+    <script src="/js/3d-force-graph.js"></script>
+    <script src="/js/d3-force-3d.js"></script>
+    <script src="/js/d3-octree.js"></script>
+    <script src="/js/Graph3DLogical.js"></script>
+    <script src="/js/forceInACube.js"></script>
+</head>
+<body>
+<div style="display:none;">
+    <div id="scratchspace" style="display:none;">
+        <a-scene embedded height="0px" width="0px">
+            <a-entity id="ObjectGarden" position="-10 20 -100">
+                <a-box id="pkg3D" position="0 0 0" width="100" height="30" depth="10" color="#cccccc"></a-box>
+                <a-box id="pkg3DSelected" position="0 0 0" width="100" height="30" depth="10" color="#ffff00"></a-box>
+                <a-box id="pkg3DTargeted" position="0 0 0" width="100" height="30" depth="10" color="#ff0000"></a-box>
+                <a-box id="pkg3DSourced" position="0 0 0" width="100" height="30" depth="10" color="#00ff00"></a-box>
+
+                <a-box id="net3D" position="0 0 0" width="100" height="30" depth="10" color="#cccccc"></a-box>
+                <a-box id="net3DSelected" position="0 0 0" width="100" height="30" depth="10" color="#ffff00"></a-box>
+                <a-box id="net3DTargeted" position="0 0 0" width="100" height="30" depth="10" color="#ff0000"></a-box>
+                <a-box id="net3DSourced" position="0 0 0" width="100" height="30" depth="10" color="#00ff00"></a-sbox
+
+                <a-box id="boundry3D" position="0 0 0" width="100" height="30" depth="10" color="#cccccc"></a-box>
+                <a-box id="boundry3DSelected" position="0 0 0" width="100" height="30" depth="10" color="#ffff00"></a-box>
+                <a-box id="boundry3DTargeted" position="0 0 0" width="100" height="30" depth="10" color="#ff0000"></a-box>
+                <a-box id="boundry3DSourced" position="0 0 0" width="100" height="30" depth="10" color="#00ff00"></a-sbox
+
+                <a-box id="srv3D" position="0 0 0" width="100" height="30" depth="10" color="#cccccc"></a-box>
+                <a-box id="srv3DSelected" position="0 0 0" width="100" height="30" depth="10" color="#ffff00"></a-box>
+                <a-box id="srv3DTargeted" position="0 0 0" width="100" height="30" depth="10" color="#ff0000"></a-box>
+                <a-box id="srv3DSourced" position="0 0 0" width="100" height="30" depth="10" color="#00ff00"></a-sbox
+
+                <a-sphere id="port3D" position="0 0 0" radius="10" color="#cccccc"></a-sphere>
+                <a-sphere id="port3DSelected" position="0 0 0" radius="10" color="#ffff00"></a-sphere>
+                <a-sphere id="port3DTargeted" position="0 0 0" radius="10" color="#ff0000"></a-sphere>
+                <a-sphere id="port3DSourced" position="0 0 0" radius="10" color="#00ff00"></a-sphere>
+
+                <a-sphere id="image3D" position="0 0 0" radius="10" color="#cccccc"></a-sphere>
+                <a-sphere id="image3DSelected" position="0 0 0" radius="10" color="#ffff00"></a-sphere>
+                <a-sphere id="image3DTargeted" position="0 0 0" radius="10" color="#ff0000"></a-sphere>
+                <a-sphere id="image3DSourced" position="0 0 0" radius="10" color="#00ff00"></a-sphere>
+
+                <a-sphere id="default3D" position="0 0 0" radius="10" color="#cccccc"></a-sphere>
+                <a-sphere id="default3DSelected" position="0 0 0" radius="10" color="#ffff00"></a-sphere>
+                <a-sphere id="default3DTargeted" position="0 0 0" radius="10" color="#ff0000"></a-sphere>
+                <a-sphere id="default3DSourced" position="0 0 0" radius="10" color="#00ff00"></a-sphere>
+            </a-entity>
+        </a-scene>
+    </div>
+</div>
+<div id="deployment3D">
+
+</div>
+<div class="modelGraph" id="deployment3D">
+    <script type="module">
+        let data = {nodes: {}, links: []};
+        // data.nodes["<%= package.name %>"] = {id:"<%= package.name %>", name:"<%= package.name %>", group: "package", color: "<%= package.color %>", level:"top", view:'package3D'};
+        <%
+        if(deploy && Object.keys(deploy.ports).length > 0) {
+        %>
+            data.nodes["external"] = {id:"external", name:"external", group: "network", color: "gray", level:"top", view:'net3D'};
+        <% for(let port in deploy.ports) {
+        %>
+            data.nodes["Port<%= port %>"] = {id:"Port<%= port %>", name:"Port<%= port %>", group: "port", color: "gray", level:"top", view:'port3D'};
+            data.links.push({source:"external", target:"Port<%= port %>", value: 1, color: 'gray'});
+        <%
+            }
+        }
+        for(let nname in deploy.ingress) {
+        %>
+            data.nodes["<%= nname %>"] = {id:"<%= nname %>", name:"<%= nname %>", group: "boundry", color: "blue", level:"ingress", view:'boundry3D'};
+        <%
+        }
+        for(let nname in deploy.egress) {
+        %>
+            data.nodes["<%= nname %>"] = {id:"<%= nname %>", name:"<%= nname %>", group: "children", color: "red", level:"egress", view:'net3D'};
+        <%
+        }
+        for(let nname in deploy.networks) {
+            let network = deploy.networks[nname];
+        %>
+            data.nodes["<%= nname %>"] = {id:"<%= nname %>", name:"<%= nname %>", group: "network", color: "purple", level:"top", view:'net3D'};
+        <%
+            if(network.attachable) {
+                 %>
+                data.links.push({source:"<%= nname %>", target:"<%= network.name %>", value: 1, color: 'orange'});
+                 <%
+            }
+            if(network.external) {
+                %>
+                data.links.push({source:"<%= nname %>", target:"<%= network.name %>", value: 1, color: 'orange'});
+                <%
+            }
+        }
+        for(let image in deploy.images) {
+            %> data.nodes["Image<%= image %>"] = {id:"Image<%= image %>", name:"<%= image %>", group: "image", color: "gray", level:"image", view:'image3D'}; <%
+        }
+        for(let sname in deploy.services) {
+            let service = deploy.services[sname];
+            %>
+            data.nodes["Service<%= sname %>"] = {id:"Service<%= sname %>", name:"<%= sname %>", group: "service", color: "yellow", level:"service", view:'srv3D'};
+            data.links.push({source:"Image<%= service.image %>", target:"Service<%= sname %>", value: 20, color: 'gray'});
+            <%
+            if(Array.isArray(service.networks)) {
+                for(let j in service.networks) {
+                    %> data.links.push({source:"Service<%= sname %>", target:"<%= service.networks[j] %>", value: 20, color: 'blue'}); <%
+                }
+            }
+            else {
+                for(let j in service.networks) {
+                    %> data.links.push({source:"Service<%= sname %>", target:"<%= j %>", value: 20, color: 'blue'}); <%
+                }
+            }
+        }
+        %>
+        let graph = new Graph3DLogical("deployment3D", data, {background:"#000000", width:1000, height:600});
+
+    </script>
+</div>

@@ -1,0 +1,103 @@
+@startuml
+left to right direction
+
+
+
+state "Chief Data Officer" as ChiefDataOfficer {
+    state "Manage Data Governance" as ChiefDataOfficerManageDataGovernance {
+    }
+}
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "dml" as edgemeredimldml #ffcc88 {
+state "data" as edgemeredimldmldata #ffcc88 {
+state "govern" as edgemeredimldmldatagovern #ffcc88 {
+}
+}
+}
+}
+}
+
+ChiefDataOfficerManageDataGovernance --> edgemeredimldmldatagovern
+
+
+ 
+state "Chief Data Officer" as ChiefDataOfficer {
+    state "Manage Data Policies" as ChiefDataOfficerManageDataPolicies {
+    }
+}
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "dml" as edgemeredimldml #ffcc88 {
+state "datapolicy" as edgemeredimldmldatapolicy #ffcc88 {
+state "list" as edgemeredimldmldatapolicylist #ffcc88 {
+}
+}
+}
+}
+}
+
+ChiefDataOfficerManageDataPolicies --> edgemeredimldmldatapolicylist
+
+
+ 
+state "Data Engineer" as DataEngineer {
+    state "Manage Data Sources" as DataEngineerManageDataSources {
+    }
+}
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "dml" as edgemeredimldml #ffcc88 {
+state "datasource" as edgemeredimldmldatasource #ffcc88 {
+state "list" as edgemeredimldmldatasourcelist #ffcc88 {
+}
+}
+}
+}
+}
+
+DataEngineerManageDataSources --> edgemeredimldmldatasourcelist
+
+
+    state "Data Engineer" as DataEngineer {
+        state "Manage Data Sources" as DataEngineerManageDataSources {
+            state "Deregister Data Source" as DataEngineerManageDataSourcesDeregisterDataSource {
+            }
+        }
+    }
+    
+    DataEngineerManageDataSourcesDeregisterDataSource --> Null
+    
+ 
+    state "DataEngineer" as DataEngineer {
+        state "Manage Data Sources" as DataEngineerManageDataSources {
+            state "Register Data Source" as DataEngineerManageDataSourcesRegisterDataSource {
+            }
+        }
+    }
+    
+    DataEngineerManageDataSourcesRegisterDataSource --> Null
+    
+ 
+ 
+state "Chief Data Officer" as ChiefDataOfficer {
+    state "Manage Data Strategy" as ChiefDataOfficerManageDataStrategy {
+    }
+}
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "dml" as edgemeredimldml #ffcc88 {
+state "datastrategy" as edgemeredimldmldatastrategy #ffcc88 {
+state "list" as edgemeredimldmldatastrategylist #ffcc88 {
+}
+}
+}
+}
+}
+
+ChiefDataOfficerManageDataStrategy --> edgemeredimldmldatastrategylist
+
+
+ 
+
+@enduml

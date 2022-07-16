@@ -1,0 +1,13 @@
+@startuml
+
+
+
+state LedgerEntry #lightblue {
+
+}
+
+
+
+
+
+@enduml

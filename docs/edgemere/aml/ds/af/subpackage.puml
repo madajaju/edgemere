@@ -1,0 +1,30 @@
+@startuml
+
+
+
+package "Automation Framework" #lightblue {
+
+    interface "Automation Framework" as i {
+    
+    
+    }
+}
+
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
+
+package "Automation Framework" #lightblue {
+
+
+}
+
+
+
+@enduml

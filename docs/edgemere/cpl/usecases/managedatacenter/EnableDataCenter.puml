@@ -1,0 +1,47 @@
+@startuml
+
+actor "IT Operations"
+
+
+entity EventBus
+
+box Common Physical Layer #lightgray
+    boundary cpl #white
+end box
+
+
+box Common Physical Layer #lightgray
+            participant device
+            participant datacenter
+    end box
+
+
+"IT Operations" -> cpl: Enable Data Center
+
+    cpl -> "device": create (name: host1,file: ./templates/device.yaml)
+
+    "device" --/ EventBus: device.create
+
+    cpl -> "device": create (name: host2,file: ./templates/device.yaml)
+
+    "device" --/ EventBus: device.create
+
+    cpl -> "datacenter": create (name: dc1)
+
+    "datacenter" --/ EventBus: datacenter.create
+
+    cpl -> "datacenter": adddevices (name: dc1,items: host1,host2)
+
+    "datacenter" --/ EventBus: datacenter.adddevices
+
+    cpl -> "datacenter": disable (name: dc1)
+
+    "datacenter" --/ EventBus: datacenter.disable
+
+    cpl -> "datacenter": enable (name: dc1)
+
+    "datacenter" --/ EventBus: datacenter.enable
+
+
+
+@enduml

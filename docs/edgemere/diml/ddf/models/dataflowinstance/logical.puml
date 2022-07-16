@@ -1,0 +1,42 @@
+@startuml
+
+class "DataFlowInstance" as Model {
+ string name
+
+ create()
+ 
+}
+
+rectangle "DataBluePrintInstance" as DataBluePrintInstance #lightblue {
+}
+
+Model o--> "1" DataBluePrintInstance : blueprint
+
+
+rectangle "DataFlow" as DataFlow #lightblue {
+}
+
+Model o--> "1" DataFlow : dataflow
+
+
+rectangle "DataSource" as DataSource #lightblue {
+}
+
+Model o--> "n" DataSource : sinks
+
+
+rectangle "DataSource" as DataSource #lightblue {
+}
+
+Model o--> "n" DataSource : sources
+
+
+
+
+    rectangle "DataBluePrintInstance" as DataBluePrintInstance #lightgreen {
+    }
+    
+        DataBluePrintInstance   o--> "n" Model : "flows"
+    
+
+@enduml

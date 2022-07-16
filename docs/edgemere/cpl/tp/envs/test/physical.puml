@@ -1,0 +1,46 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Telemetry Producer" #lightgray {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " edgemere cpl tp" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose-test.yml" as cpl_tp_container
+      REST --> cpl_tp_container
+
+  
+    file "producer" as producer_container
+    REST --> producer_container
+    socket ---> producer_container
+  
+    file "tester" as tester_container
+    REST --> tester_container
+    socket ---> tester_container
+  
+  }
+  folder images #ffffff {
+    collections "cpl_tp" as cpl_tpimage
+    artifact "ailtire:swarm" as ailtireswarm
+    cpl_tpimage <|-- ailtireswarm
+    cpl_tp_container --> cpl_tpimage
+
+  
+      artifact "cpl_tp_producer" as cpl_tp_producer
+      producer_container --> cpl_tp_producer
+    
+      artifact "cpl_tp_tester" as cpl_tp_tester
+      tester_container --> cpl_tp_tester
+    
+  }
+}
+CLI " edgemere cpl tp" -- binName
+Web "/edgemere/cpl/tp" - REST
+WebSocket ".edgemere.cpl.tp" -- socket
+
+@enduml

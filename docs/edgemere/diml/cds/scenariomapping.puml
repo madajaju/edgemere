@@ -1,0 +1,100 @@
+@startuml
+left to right direction
+
+
+
+state "Data Scientist" as DataScientist {
+    state "Manage Data" as DataScientistManageData {
+    }
+}
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "cds" as edgemeredimlcds #ffcc88 {
+state "data" as edgemeredimlcdsdata #ffcc88 {
+state "list" as edgemeredimlcdsdatalist #ffcc88 {
+}
+}
+}
+}
+}
+
+DataScientistManageData --> edgemeredimlcdsdatalist
+
+state "Data Analyst" as DataAnalyst {
+    state "Manage Data" as DataAnalystManageData {
+    }
+}
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "cds" as edgemeredimlcds #ffcc88 {
+state "data" as edgemeredimlcdsdata #ffcc88 {
+state "list" as edgemeredimlcdsdatalist #ffcc88 {
+}
+}
+}
+}
+}
+
+DataAnalystManageData --> edgemeredimlcdsdatalist
+
+state "Data Engineer" as DataEngineer {
+    state "Manage Data" as DataEngineerManageData {
+    }
+}
+state "edgemere" as edgemere #ffcc88 {
+state "diml" as edgemerediml #ffcc88 {
+state "cds" as edgemeredimlcds #ffcc88 {
+state "data" as edgemeredimlcdsdata #ffcc88 {
+state "list" as edgemeredimlcdsdatalist #ffcc88 {
+}
+}
+}
+}
+}
+
+DataEngineerManageData --> edgemeredimlcdsdatalist
+
+
+    state "Data Steward" as DataSteward {
+        state "Manage Data" as DataStewardManageData {
+            state "Destroy Data" as DataStewardManageDataDestroyData {
+            }
+        }
+    }
+    
+    DataStewardManageDataDestroyData --> Null
+    
+ 
+    state "Data Steward" as DataSteward {
+        state "Manage Data" as DataStewardManageData {
+            state "Egress Data" as DataStewardManageDataEgressData {
+            }
+        }
+    }
+    
+    DataStewardManageDataEgressData --> Null
+    
+ 
+    state "Data Steward" as DataSteward {
+        state "Manage Data" as DataStewardManageData {
+            state "Ingest Data" as DataStewardManageDataIngestData {
+            }
+        }
+    }
+    
+    DataStewardManageDataIngestData --> Null
+    
+ 
+    state "Data Steward" as DataSteward {
+        state "Manage Data" as DataStewardManageData {
+            state "Move Data" as DataStewardManageDataMoveData {
+            }
+        }
+    }
+    
+    DataStewardManageDataMoveData --> Null
+    
+ 
+ 
+
+@enduml

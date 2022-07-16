@@ -1,0 +1,154 @@
+@startuml
+left to right direction
+
+
+state "aml" as aml #lightblue {
+}
+
+
+state "aml" as pstatename #lightblue {
+    state "Custom Function" as amlfunction {
+    }
+}
+
+        state "aml" as aml #lightblue {
+state "aimodel" as amlaimodel #lightblue {
+state "create" as amlaimodelcreate #lightblue {
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "aimodel" as amlaimodel #lightblue {
+state "deploy" as amlaimodeldeploy #lightblue {
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "aimodel" as amlaimodel #lightblue {
+state "destroy" as amlaimodeldestroy #lightblue {
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "aimodel" as amlaimodel #lightblue {
+state "list" as amlaimodellist #lightblue {
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "aimodel" as amlaimodel #lightblue {
+state "update" as amlaimodelupdate #lightblue {
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "application" as amlapplication #lightblue {
+state "create" as amlapplicationcreate #lightblue {
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "application" as amlapplication #lightblue {
+state "deploy" as amlapplicationdeploy #lightblue {
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "application" as amlapplication #lightblue {
+state "destroy" as amlapplicationdestroy #lightblue {
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "application" as amlapplication #lightblue {
+state "list" as amlapplicationlist #lightblue {
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "application" as amlapplication #lightblue {
+state "monitor" as amlapplicationmonitor #lightblue {
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "application" as amlapplication #lightblue {
+state "update" as amlapplicationupdate #lightblue {
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "workload" as amlworkload #lightblue {
+state "create" as amlworkloadcreate #lightblue {
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "workload" as amlworkload #lightblue {
+state "deploy" as amlworkloaddeploy #lightblue {
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "workload" as amlworkload #lightblue {
+state "destroy" as amlworkloaddestroy #lightblue {
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "workload" as amlworkload #lightblue {
+state "list" as amlworkloadlist #lightblue {
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "workload" as amlworkload #lightblue {
+state "monitor" as amlworkloadmonitor #lightblue {
+}
+}
+}
+
+
+        state "aml" as aml #lightblue {
+state "workload" as amlworkload #lightblue {
+state "update" as amlworkloadupdate #lightblue {
+}
+}
+}
+
+
+
+
+
+
+@enduml

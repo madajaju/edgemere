@@ -1,0 +1,50 @@
+@startuml
+
+class "Stage" as Model {
+ string name
+
+ 
+}
+
+rectangle "StageInstance" as StageInstance #lightblue {
+}
+
+Model o--> "n" StageInstance : instances
+
+
+rectangle "Step" as Step #lightblue {
+}
+
+Model *--> "n" Step : steps
+
+
+rectangle "Environment" as Environment #lightblue {
+}
+
+Model o--> "1" Environment : environment
+
+
+
+
+    rectangle "Pipeline" as Pipeline #lightgreen {
+    }
+    
+        Pipeline   *--> "n" Model : "stages"
+    
+    rectangle "StageInstance" as StageInstance #lightgreen {
+    }
+    
+        StageInstance   o--> "1" Model : "definition"
+    
+    rectangle "Step" as Step #lightgreen {
+    }
+    
+        Step   o--> "1" Model : "stage"
+    
+    rectangle "StepInstance" as StepInstance #lightgreen {
+    }
+    
+        StepInstance   o--> "1" Model : "stage"
+    
+
+@enduml

@@ -1,0 +1,39 @@
+@startuml
+
+class "StepInstance" as Model {
+ string name
+
+ 
+}
+
+rectangle "Step" as Step #lightblue {
+}
+
+Model o--> "1" Step : definition
+
+
+rectangle "Stage" as Stage #lightblue {
+}
+
+Model o--> "1" Stage : stage
+
+
+
+
+    rectangle "LedgerEntry" as LedgerEntry #lightgreen {
+    }
+    
+        LedgerEntry   o--> "1" Model : "step"
+    
+    rectangle "StageInstance" as StageInstance #lightgreen {
+    }
+    
+        StageInstance   *--> "n" Model : "steps"
+    
+    rectangle "Step" as Step #lightgreen {
+    }
+    
+        Step   *--> "n" Model : "instances"
+    
+
+@enduml

@@ -1,0 +1,27 @@
+@startuml
+
+
+actor "ITOperations" as itops
+
+actor "StackDeveloper" as stackdev
+
+actor "ApplicationDeveloper" as applicationdeveloper
+
+
+
+
+itops -> "Service Management Layer": Manage Clouds
+"Service Management Layer" -> bin: Cloud list
+bin -> REST: Cloud/list
+
+stackdev -> "Service Management Layer": Manage Services
+"Service Management Layer" -> bin: service list
+bin -> REST: service/list
+
+applicationdeveloper -> "Service Management Layer": Manage Services
+"Service Management Layer" -> bin: service list
+bin -> REST: service/list
+
+
+
+@enduml

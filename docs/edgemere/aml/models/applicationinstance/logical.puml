@@ -1,0 +1,30 @@
+@startuml
+
+class "ApplicationInstance" as Model {
+ string name
+ string status
+ string message
+
+ 
+}
+
+rectangle "Application" as Application #lightblue {
+}
+
+Model o--> "1" Application : app
+
+
+
+
+    rectangle "Application" as Application #lightgreen {
+    }
+    
+        Application   *--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "app"
+    
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+
+actor "Application Developer"
+
+
+entity EventBus
+
+box Application Management Layer #lightblue
+    boundary aml #white
+end box
+
+
+
+"Application Developer" -> aml: Create Application
+
+
+
+@enduml

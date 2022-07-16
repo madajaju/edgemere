@@ -1,0 +1,105 @@
+@startuml
+
+
+package "Software Defined Infrastructure" #lightyellow {
+
+}
+
+package "Distributed Information Management Layer" #ffcc88 {
+
+}
+
+package "Security Aspect" #pink {
+
+}
+
+package "Service Management Layer" #lightgreen {
+
+}
+
+package "Environment Management" #lightgreen {
+
+}
+
+package "Data Management Layer" #ffcc88 {
+
+}
+
+package "Application Management Layer" #lightblue {
+
+}
+
+
+package "Service Management Layer" #lightgreen {
+
+    interface "Service Management Layer" as i {
+    
+            /edgemere/sml/cloud/list()
+            /edgemere/sml/data/govern()
+            /edgemere/sml/data/source/name()
+            /edgemere/sml/environmenet/addpolicies()
+            /edgemere/sml/environment/create()
+            /edgemere/sml/environment/destroy()
+            /edgemere/sml/environment/disable()
+            /edgemere/sml/environment/enable()
+            /edgemere/sml/environment/list()
+            /edgemere/sml/environment/update()
+            /edgemere/sml/multicloud/addclouds()
+            /edgemere/sml/multicloud/addpolicies()
+            /edgemere/sml/multicloud/list()
+            /edgemere/sml/multicloud/removepolicies()
+            /edgemere/sml/service/list()
+            /edgemere/sml/stack/list()
+    
+    }
+}
+
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
+
+package "Service Management Layer" #lightgreen {
+
+
+rectangle "Cloud Broker" #white {
+}
+
+rectangle "Provision Engine" #white {
+}
+
+rectangle "Service Controller" #white {
+}
+
+rectangle "Service Orchestrator" #white {
+}
+
+rectangle "Service Repository" #white {
+}
+
+    "Provision Engine" --> "Software Defined Infrastructure"
+    
+    "Service Controller" --> "Provision Engine"
+    
+    "Service Orchestrator" --> "Service Controller"
+    
+    "Service Orchestrator" --> "Service Repository"
+    
+    "Service Orchestrator" --> "Data Orchestrator"
+    
+    "Service Orchestrator" --> "Infrastructure Orchestrator"
+    
+}
+
+
+    "Software Defined Infrastructure" <-- "Service Management Layer"
+
+    "Distributed Information Management Layer" <-- "Service Management Layer"
+
+
+@enduml

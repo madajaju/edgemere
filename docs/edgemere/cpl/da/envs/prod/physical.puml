@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+package "Device Agent" #lightgray {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    component " edgemere cpl da" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as cpl_da_container
+      REST --> cpl_da_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "cpl_da" as cpl_daimage
+    artifact "ailtire:swarm" as ailtireswarm
+    cpl_daimage <|-- ailtireswarm
+    cpl_da_container --> cpl_daimage
+
+  
+      artifact "cpl_da_web" as cpl_da_web
+      web_container --> cpl_da_web
+    
+  }
+}
+CLI " edgemere cpl da" -- binName
+Web "/edgemere/cpl/da" - REST
+WebSocket ".edgemere.cpl.da" -- socket
+
+@enduml

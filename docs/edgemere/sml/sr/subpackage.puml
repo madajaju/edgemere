@@ -1,0 +1,32 @@
+@startuml
+
+
+
+package "Service Repository" #lightgreen {
+
+    interface "Service Repository" as i {
+    
+            /edgemere/sml/sr/assets/list()
+            /edgemere/sml/sr/data/govern()
+    
+    }
+}
+
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
+
+package "Service Repository" #lightgreen {
+
+
+}
+
+
+
+@enduml

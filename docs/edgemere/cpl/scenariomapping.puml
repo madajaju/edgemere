@@ -1,0 +1,141 @@
+@startuml
+left to right direction
+
+
+
+state "IT Operations" as ITOperations {
+    state "Manage Data Center" as ITOperationsManageDataCenter {
+    }
+}
+state "edgemere" as edgemere #lightgray {
+state "cpl" as edgemerecpl #lightgray {
+state "datacenter" as edgemerecpldatacenter #lightgray {
+state "list" as edgemerecpldatacenterlist #lightgray {
+}
+}
+}
+}
+
+ITOperationsManageDataCenter --> edgemerecpldatacenterlist
+
+
+    state "IT Operations" as ITOperations {
+        state "Manage Data Center" as ITOperationsManageDataCenter {
+            state "Create Data Center" as ITOperationsManageDataCenterCreateDataCenter {
+            }
+        }
+    }
+    
+    ITOperationsManageDataCenterCreateDataCenter --> Null
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Data Center" as ITOperationsManageDataCenter {
+            state "Disable Data Center" as ITOperationsManageDataCenterDisableDataCenter {
+            }
+        }
+    }
+    
+    ITOperationsManageDataCenterDisableDataCenter --> Null
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Data Center" as ITOperationsManageDataCenter {
+            state "Enable Data Center" as ITOperationsManageDataCenterEnableDataCenter {
+            }
+        }
+    }
+    
+    ITOperationsManageDataCenterEnableDataCenter --> Null
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Data Center" as ITOperationsManageDataCenter {
+            state "Remove Data Center" as ITOperationsManageDataCenterRemoveDataCenter {
+            }
+        }
+    }
+    
+    ITOperationsManageDataCenterRemoveDataCenter --> Null
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Data Center" as ITOperationsManageDataCenter {
+            state "Update Data Center" as ITOperationsManageDataCenterUpdateDataCenter {
+            }
+        }
+    }
+    
+    ITOperationsManageDataCenterUpdateDataCenter --> Null
+    
+ 
+ 
+state "IT Operations" as ITOperations {
+    state "Manage Infrastructure" as ITOperationsManageInfrastructure {
+    }
+}
+state "edgemere" as edgemere #lightgray {
+state "cpl" as edgemerecpl #lightgray {
+state "data" as edgemerecpldata #lightgray {
+state "govern" as edgemerecpldatagovern #lightgray {
+}
+}
+}
+}
+
+ITOperationsManageInfrastructure --> edgemerecpldatagovern
+
+
+    state "IT Operations" as ITOperations {
+        state "Manage Infrastructure" as ITOperationsManageInfrastructure {
+            state "Add Device" as ITOperationsManageInfrastructureAddDevice {
+            }
+        }
+    }
+    
+    ITOperationsManageInfrastructureAddDevice --> Null
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Infrastructure" as ITOperationsManageInfrastructure {
+            state "Manage Aggregated Devices" as ITOperationsManageInfrastructureManageAggregatedDevices {
+            }
+        }
+    }
+    
+    ITOperationsManageInfrastructureManageAggregatedDevices --> Null
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Infrastructure" as ITOperationsManageInfrastructure {
+            state "Manage Data Center" as ITOperationsManageInfrastructureManageDataCenter {
+            }
+        }
+    }
+    
+    ITOperationsManageInfrastructureManageDataCenter --> Null
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Infrastructure" as ITOperationsManageInfrastructure {
+            state "Remove Device" as ITOperationsManageInfrastructureRemoveDevice {
+            }
+        }
+    }
+    
+    ITOperationsManageInfrastructureRemoveDevice --> Null
+    
+ 
+    state "IT Operations" as ITOperations {
+        state "Manage Infrastructure" as ITOperationsManageInfrastructure {
+            state "Update Device" as ITOperationsManageInfrastructureUpdateDevice {
+            }
+        }
+    }
+    
+    ITOperationsManageInfrastructureUpdateDevice --> Null
+    
+ 
+ 
+
+@enduml

@@ -1,0 +1,115 @@
+@startuml
+
+
+package "Service Controller" #lightgreen {
+    }
+
+package "Service Repository" #lightgreen {
+    }
+
+package "Data Orchestrator" #lightblue {
+    
+        class DataInstance {
+        }
+    }
+
+package "Infrastructure Orchestrator" #lightyellow {
+    }
+
+package "Service Management Layer" #lightgreen {
+    
+        class Image {
+        }
+    
+        class Servicelet {
+        }
+    
+        class RunScript {
+        }
+    
+        class Stack {
+        }
+    
+        class Stacklet {
+        }
+    }
+
+package "Software Defined Infrastructure" #lightyellow {
+    
+        class Resource {
+        }
+    }
+
+package "Service Orchestrator" #lightgreen {
+    
+        class StackInstance {
+        }
+    
+        class ServiceInstance {
+        }
+    }
+
+package "Application Management Layer" #lightblue {
+    
+        class ApplicationInstance {
+        }
+    }
+
+
+package "Service Orchestrator" #lightgreen {
+
+    interface "Service Orchestrator" as i {
+            /edgemere/sml/so/servicelet/assigndata()
+            /edgemere/sml/so/stack/deploy()
+            /edgemere/sml/so/stack/list()
+            /edgemere/sml/so/stack/uninstall()
+            /edgemere/sml/so/stack/update()
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Service Orchestrator" #lightgreen {
+        class "ServiceInstance" {
+                    }
+                ServiceInstance o--> "1" Image : image
+                        ServiceInstance o--> "n" DataInstance : data
+                        ServiceInstance o--> "n" Resource : resources
+                        ServiceInstance o--> "1" Servicelet : servicelet
+                        ServiceInstance o--> "1" StackInstance : stack
+                        ServiceInstance *--> "n" RunScript : runScripts
+            
+    
+    class "StackInstance" {
+                 string name
+                    }
+                StackInstance o--> "1" ApplicationInstance : app
+                        StackInstance o--> "1" Stack : stack
+                        StackInstance o--> "1" Stacklet : stacklet
+                        StackInstance *--> "n" ServiceInstance : services
+                        StackInstance o--> "1" Image : image
+                        StackInstance o--> "n" DataInstance : data
+                        StackInstance o--> "n" Resource : resources
+                        StackInstance o--> "1" Servicelet : servicelet
+                        StackInstance *--> "n" RunScript : runScripts
+            
+    
+        ServiceInstance <|-- StackInstance
+    
+
+}
+
+
+    "Service Orchestrator" --> "Service Controller"
+
+    "Service Orchestrator" --> "Service Repository"
+
+    "Service Orchestrator" --> "Data Orchestrator"
+
+    "Service Orchestrator" --> "Infrastructure Orchestrator"
+
+
+@enduml

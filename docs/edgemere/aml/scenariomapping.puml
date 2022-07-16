@@ -1,0 +1,372 @@
+@startuml
+left to right direction
+
+
+
+state "Data Scientist" as DataScientist {
+    state "Manage AI Models" as DataScientistManageAIModels {
+    }
+}
+state "edgemere" as edgemere #lightblue {
+state "aml" as edgemereaml #lightblue {
+state "aimodel" as edgemereamlaimodel #lightblue {
+state "list" as edgemereamlaimodellist #lightblue {
+}
+}
+}
+}
+
+DataScientistManageAIModels --> edgemereamlaimodellist
+
+state "DevOps Engineer" as DevOpsEngineer {
+    state "Manage AI Models" as DevOpsEngineerManageAIModels {
+    }
+}
+state "edgemere" as edgemere #lightblue {
+state "aml" as edgemereaml #lightblue {
+state "aimodel" as edgemereamlaimodel #lightblue {
+state "list" as edgemereamlaimodellist #lightblue {
+}
+}
+}
+}
+
+DevOpsEngineerManageAIModels --> edgemereamlaimodellist
+
+state "ApplicationDeveloper" as ApplicationDeveloper {
+    state "Manage AI Models" as ApplicationDeveloperManageAIModels {
+    }
+}
+state "edgemere" as edgemere #lightblue {
+state "aml" as edgemereaml #lightblue {
+state "aimodel" as edgemereamlaimodel #lightblue {
+state "list" as edgemereamlaimodellist #lightblue {
+}
+}
+}
+}
+
+ApplicationDeveloperManageAIModels --> edgemereamlaimodellist
+
+state "DataEngineer" as DataEngineer {
+    state "Manage AI Models" as DataEngineerManageAIModels {
+    }
+}
+state "edgemere" as edgemere #lightblue {
+state "aml" as edgemereaml #lightblue {
+state "aimodel" as edgemereamlaimodel #lightblue {
+state "list" as edgemereamlaimodellist #lightblue {
+}
+}
+}
+}
+
+DataEngineerManageAIModels --> edgemereamlaimodellist
+
+
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage AI Models" as ApplicationDeveloperManageAIModels {
+            state "Create AI Model" as ApplicationDeveloperManageAIModelsCreateAIModel {
+            }
+        }
+    }
+    
+    ApplicationDeveloperManageAIModelsCreateAIModel --> Null
+    
+    state "Data Scientist" as DataScientist {
+        state "Manage AI Models" as DataScientistManageAIModels {
+            state "Create AI Model" as DataScientistManageAIModelsCreateAIModel {
+            }
+        }
+    }
+    
+    DataScientistManageAIModelsCreateAIModel --> Null
+    
+ 
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Manage AI Models" as DevOpsEngineerManageAIModels {
+            state "Deploy AI Model" as DevOpsEngineerManageAIModelsDeployAIModel {
+            }
+        }
+    }
+    
+    DevOpsEngineerManageAIModelsDeployAIModel --> Null
+    
+    state "ApplicationDeveloper" as ApplicationDeveloper {
+        state "Manage AI Models" as ApplicationDeveloperManageAIModels {
+            state "Deploy AI Model" as ApplicationDeveloperManageAIModelsDeployAIModel {
+            }
+        }
+    }
+    
+    ApplicationDeveloperManageAIModelsDeployAIModel --> Null
+    
+    state "DataEngineer" as DataEngineer {
+        state "Manage AI Models" as DataEngineerManageAIModels {
+            state "Deploy AI Model" as DataEngineerManageAIModelsDeployAIModel {
+            }
+        }
+    }
+    
+    DataEngineerManageAIModelsDeployAIModel --> Null
+    
+ 
+    state "DataEngineer" as DataEngineer {
+        state "Manage AI Models" as DataEngineerManageAIModels {
+            state "Destroy AI Model" as DataEngineerManageAIModelsDestroyAIModel {
+            }
+        }
+    }
+    
+    DataEngineerManageAIModelsDestroyAIModel --> Null
+    
+    state "ApplicationDeveloper" as ApplicationDeveloper {
+        state "Manage AI Models" as ApplicationDeveloperManageAIModels {
+            state "Destroy AI Model" as ApplicationDeveloperManageAIModelsDestroyAIModel {
+            }
+        }
+    }
+    
+    ApplicationDeveloperManageAIModelsDestroyAIModel --> Null
+    
+ 
+    state "DataEngineer" as DataEngineer {
+        state "Manage AI Models" as DataEngineerManageAIModels {
+            state "Update AI Model" as DataEngineerManageAIModelsUpdateAIModel {
+            }
+        }
+    }
+    
+    DataEngineerManageAIModelsUpdateAIModel --> Null
+    
+    state "DevOpsEngineer" as DevOpsEngineer {
+        state "Manage AI Models" as DevOpsEngineerManageAIModels {
+            state "Update AI Model" as DevOpsEngineerManageAIModelsUpdateAIModel {
+            }
+        }
+    }
+    
+    DevOpsEngineerManageAIModelsUpdateAIModel --> Null
+    
+    state "ApplicationDeveloper" as ApplicationDeveloper {
+        state "Manage AI Models" as ApplicationDeveloperManageAIModels {
+            state "Update AI Model" as ApplicationDeveloperManageAIModelsUpdateAIModel {
+            }
+        }
+    }
+    
+    ApplicationDeveloperManageAIModelsUpdateAIModel --> Null
+    
+ 
+ 
+state "DevOps Engineer" as DevOpsEngineer {
+    state "Manage Applications" as DevOpsEngineerManageApplications {
+    }
+}
+state "edgemere" as edgemere #lightblue {
+state "aml" as edgemereaml #lightblue {
+state "application" as edgemereamlapplication #lightblue {
+state "list" as edgemereamlapplicationlist #lightblue {
+}
+}
+}
+}
+
+DevOpsEngineerManageApplications --> edgemereamlapplicationlist
+
+state "Application Developer" as ApplicationDeveloper {
+    state "Manage Applications" as ApplicationDeveloperManageApplications {
+    }
+}
+state "edgemere" as edgemere #lightblue {
+state "aml" as edgemereaml #lightblue {
+state "application" as edgemereamlapplication #lightblue {
+state "list" as edgemereamlapplicationlist #lightblue {
+}
+}
+}
+}
+
+ApplicationDeveloperManageApplications --> edgemereamlapplicationlist
+
+
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Applications" as ApplicationDeveloperManageApplications {
+            state "Create Application" as ApplicationDeveloperManageApplicationsCreateApplication {
+            }
+        }
+    }
+    
+    ApplicationDeveloperManageApplicationsCreateApplication --> Null
+    
+ 
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Applications" as DevOpsEngineerManageApplications {
+            state "Deploy Application" as DevOpsEngineerManageApplicationsDeployApplication {
+            }
+        }
+    }
+    
+    DevOpsEngineerManageApplicationsDeployApplication --> Null
+    
+ 
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Applications" as DevOpsEngineerManageApplications {
+            state "Destroy Application" as DevOpsEngineerManageApplicationsDestroyApplication {
+            }
+        }
+    }
+    
+    DevOpsEngineerManageApplicationsDestroyApplication --> Null
+    
+ 
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Applications" as DevOpsEngineerManageApplications {
+            state "Monitor Application" as DevOpsEngineerManageApplicationsMonitorApplication {
+            }
+        }
+    }
+    
+    DevOpsEngineerManageApplicationsMonitorApplication --> Null
+    
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Applications" as ApplicationDeveloperManageApplications {
+            state "Monitor Application" as ApplicationDeveloperManageApplicationsMonitorApplication {
+            }
+        }
+    }
+    
+    ApplicationDeveloperManageApplicationsMonitorApplication --> Null
+    
+ 
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Applications" as ApplicationDeveloperManageApplications {
+            state "Update Application" as ApplicationDeveloperManageApplicationsUpdateApplication {
+            }
+        }
+    }
+    
+    ApplicationDeveloperManageApplicationsUpdateApplication --> Null
+    
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Applications" as DevOpsEngineerManageApplications {
+            state "Update Application" as DevOpsEngineerManageApplicationsUpdateApplication {
+            }
+        }
+    }
+    
+    DevOpsEngineerManageApplicationsUpdateApplication --> Null
+    
+ 
+ 
+state "Application Developer" as ApplicationDeveloper {
+    state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
+    }
+}
+state "edgemere" as edgemere #lightblue {
+state "aml" as edgemereaml #lightblue {
+state "workload" as edgemereamlworkload #lightblue {
+state "list" as edgemereamlworkloadlist #lightblue {
+}
+}
+}
+}
+
+ApplicationDeveloperManageWorkloads --> edgemereamlworkloadlist
+
+state "DevOps Engineer" as DevOpsEngineer {
+    state "Manage Workloads" as DevOpsEngineerManageWorkloads {
+    }
+}
+state "edgemere" as edgemere #lightblue {
+state "aml" as edgemereaml #lightblue {
+state "workload" as edgemereamlworkload #lightblue {
+state "list" as edgemereamlworkloadlist #lightblue {
+}
+}
+}
+}
+
+DevOpsEngineerManageWorkloads --> edgemereamlworkloadlist
+
+
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
+            state "Create Workload" as ApplicationDeveloperManageWorkloadsCreateWorkload {
+            }
+        }
+    }
+    
+    ApplicationDeveloperManageWorkloadsCreateWorkload --> Null
+    
+ 
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
+            state "Deploy Workload" as ApplicationDeveloperManageWorkloadsDeployWorkload {
+            }
+        }
+    }
+    
+    ApplicationDeveloperManageWorkloadsDeployWorkload --> Null
+    
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Workloads" as DevOpsEngineerManageWorkloads {
+            state "Deploy Workload" as DevOpsEngineerManageWorkloadsDeployWorkload {
+            }
+        }
+    }
+    
+    DevOpsEngineerManageWorkloadsDeployWorkload --> Null
+    
+ 
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Workloads" as DevOpsEngineerManageWorkloads {
+            state "Destroy Workload" as DevOpsEngineerManageWorkloadsDestroyWorkload {
+            }
+        }
+    }
+    
+    DevOpsEngineerManageWorkloadsDestroyWorkload --> Null
+    
+ 
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
+            state "Monitor Workload" as ApplicationDeveloperManageWorkloadsMonitorWorkload {
+            }
+        }
+    }
+    
+    ApplicationDeveloperManageWorkloadsMonitorWorkload --> Null
+    
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Workloads" as DevOpsEngineerManageWorkloads {
+            state "Monitor Workload" as DevOpsEngineerManageWorkloadsMonitorWorkload {
+            }
+        }
+    }
+    
+    DevOpsEngineerManageWorkloadsMonitorWorkload --> Null
+    
+ 
+    state "Application Developer" as ApplicationDeveloper {
+        state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
+            state "Update Workload" as ApplicationDeveloperManageWorkloadsUpdateWorkload {
+            }
+        }
+    }
+    
+    ApplicationDeveloperManageWorkloadsUpdateWorkload --> Null
+    
+    state "DevOps Engineer" as DevOpsEngineer {
+        state "Manage Workloads" as DevOpsEngineerManageWorkloads {
+            state "Update Workload" as DevOpsEngineerManageWorkloadsUpdateWorkload {
+            }
+        }
+    }
+    
+    DevOpsEngineerManageWorkloadsUpdateWorkload --> Null
+    
+ 
+ 
+
+@enduml

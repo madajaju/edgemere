@@ -1,0 +1,49 @@
+@startuml
+
+
+actor "DataScientist" as datascientist
+
+actor "DevOpsEngineer" as devops
+
+actor "ApplicationDeveloper" as applicationdeveloper
+
+actor "DataEngineer" as dataengineer
+
+
+
+
+datascientist -> "Application Management Layer": Manage AI Models
+"Application Management Layer" -> bin: aimodel list
+bin -> REST: aimodel/list
+
+devops -> "Application Management Layer": Manage AI Models
+"Application Management Layer" -> bin: aimodel list
+bin -> REST: aimodel/list
+
+devops -> "Application Management Layer": Manage Applications
+"Application Management Layer" -> bin: application list
+bin -> REST: application/list
+
+devops -> "Application Management Layer": Manage Workloads
+"Application Management Layer" -> bin: workload list
+bin -> REST: workload/list
+
+applicationdeveloper -> "Application Management Layer": Manage AI Models
+"Application Management Layer" -> bin: aimodel list
+bin -> REST: aimodel/list
+
+applicationdeveloper -> "Application Management Layer": Manage Applications
+"Application Management Layer" -> bin: application list
+bin -> REST: application/list
+
+applicationdeveloper -> "Application Management Layer": Manage Workloads
+"Application Management Layer" -> bin: workload list
+bin -> REST: workload/list
+
+dataengineer -> "Application Management Layer": Manage AI Models
+"Application Management Layer" -> bin: aimodel list
+bin -> REST: aimodel/list
+
+
+
+@enduml

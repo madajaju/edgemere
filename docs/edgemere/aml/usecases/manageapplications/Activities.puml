@@ -1,0 +1,44 @@
+@startuml
+
+
+usecase "Manage Applications" as ManageApplications #yellow
+
+Actor "DevOps Engineer" as DevOpsEngineer
+
+DevOpsEngineer --> ManageApplications
+
+Actor "Application Developer" as ApplicationDeveloper
+
+ApplicationDeveloper --> ManageApplications
+
+
+
+usecase "CreateApplication" as CreateApplication #lightgrey
+
+ManageApplications --> CreateApplication
+
+usecase "DeployApplication" as DeployApplication #lightgrey
+
+ManageApplications --> DeployApplication
+
+usecase "DestroyApplication" as DestroyApplication #lightgrey
+
+ManageApplications --> DestroyApplication
+
+usecase "MonitorApplication" as MonitorApplication #lightgrey
+
+ManageApplications --> MonitorApplication
+
+usecase "UpdateApplication" as UpdateApplication #lightgrey
+
+ManageApplications --> UpdateApplication
+
+
+
+
+
+
+
+
+
+@enduml

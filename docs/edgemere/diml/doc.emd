@@ -1,0 +1,73 @@
+The Distributed Information Management Layer (DIML) focuses on the management of data across the ecosystem. Including
+data lifecycle management, data security and governance, storage infrastructure, analytics, data sources, and
+application data usage. Almost all of the actors of the architecture have some input into the DIML. Including
+[Chief Data Officer](actor-cdo), [Data Steward](actor-datasteward), [IT Operations](actor-itops)
+, [Application Developer](actor-applicationdeveloper)
+[Data Scientist](actor-datascientist), and [Data Engineer](actor-dataengineer)
+
+![UC Actor](./ucactor.png)
+
+The DIML is the newest architectural element in the edgemere architecture. It was developed to handle the complexity of
+managing data across multiple data centers, clouds, and IoT edge devices. This layer was created out of the
+[Application Management Layer](package--egdemere-aml),[Sevice Management Layer](package-edgemere-sml), and
+[Software Defined Infrastructure Layer](package--edgemere-sdi). It is a middleware layer that depends on
+the [Software Defined Infrastructure Layer](package--edgemere-sdi), and a co-dependence on the
+[Service Management Layer](package--edgemere-sml). The [Application Management Layer](package--edgemere-aml) depends on
+the DIML.
+
+![DIML Overview](./diml.png)
+
+There are many different approaches to working with data. All of these approaches can be boiled down to two major models
+of operation: centralized processing and distributed processing. The centralized processing approach utilizes data
+architecture to provide benefits to the end users. There are many data architectures for centralized processing, two of
+which are Data Warehouse and Data Lakes. The centralized processing paradigm is good for some of the data use cases but
+not all of them. As more systems are moving outside of the traditional data center walls, many of the centralized data
+architectures fall apart. This is where distributed processing architectures like Data Meshs become important. The
+Edgemere architect is flexible to handle the different modes of data processing.
+
+![Data Approaches](./dataaproaches.png)
+
+## Data Mesh
+
+In the Data Mesh (Distributed Data Lake) architecture the ability to move applications close to the data or move the
+data close to the applications. In the mode of data processing data is analyzed in IoT Edge Devices and results are
+pushed to the data center and linked together.
+
+![DataMesh](./datameshnew.png)
+
+## Data Exchange
+
+Another mode of operation that has emerged is taking the Data Mesh concept and extending that to different
+classifications or owners of data. This specail case limits the movement of data and who has access to the data. This
+use case is abundant in Government and Healthcare where privacy and classification regulations limit the ability to
+freely access data. This architecture, Data Exchange, allows for policy gates to limit the data that can be passed back
+to the application requesting the data. It also gives the ability to run analytics/services in the geo-fenced data site.
+
+![DataExchange](./dataexchange.png)
+
+## Data Fabric
+
+Data fabrics are the natural next architecture to emerge as it helps resolve some of the problems with data lake
+architectures caused by centralizing all of the data. Data fabrics process data on the edge where the source generates
+the data. This distributed architecture follows much of the same path that cloud technology did in the early 2000s and
+includes centralized control, orchestration, and management of the data
+
+![DataFabric](./datafabric.png)
+
+## Data Mart
+A data mart is a small data repository for structured data specific to a department. Tailored to the detailed 
+problem statements, they contain copie/s of data from a limited number of sources and typically a smaller data set. Data marts usually limit access to the data and reports to one organization or a small group of users in one organization. Data scientists leverage Data Marts to build complex analytical models, generate timely periodic reports that require highly predictable performance and work with highly sensitive data and resulting reports.
+
+![DataMart](./datamart.png)
+
+## Intelligent Data Streams
+DataStream architectures allow for processing data analytics in the stream of data. Each data stream manipulates the 
+data as data is ingested and egressed to another application, report, or data stream. Data streams allow for data to 
+be used anywhere in the ecosystem, including on the edge devices, in the data center, in the cloud, and even in transit between the different types of infrastructure. Analytics can be performed parallel across multiple devices by joining data streams through their ingress and egress ports.
+
+![DataStreams](./datastream.png)
+
+The DIML architecture allows for multiple data architectures at the same time. The architecture allows a
+[DataEngineer](actor-dataengineer) to easily build repeatable Blueprints geared to the different data architectural 
+approaches. As a result, the same system or solution can utilize any of the data operating models described above.
+

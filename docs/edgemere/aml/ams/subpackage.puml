@@ -1,0 +1,36 @@
+@startuml
+
+
+package "Workflow Services" #lightblue {
+
+}
+
+
+package "AI ML Services" #lightblue {
+
+    interface "AI ML Services" as i {
+    
+    
+    }
+}
+
+circle REST
+circle Web
+circle CLI
+circle WebSocket
+
+i -down- Web
+i -down- CLI
+i -down- REST
+WebSocket -left- i: events >
+
+package "AI ML Services" #lightblue {
+
+
+}
+
+
+    "Workflow Services" <-- "AI ML Services"
+
+
+@enduml
