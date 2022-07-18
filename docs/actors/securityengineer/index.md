@@ -4,6 +4,9 @@ title: SecurityEngineer
 permalink: actor-securityengineer
 parent: All Actors
 ---
+
+{#actor-function toLowerCase() { [native code] }}
+
 # SecurityEngineer
 
 Long description

@@ -39,7 +39,9 @@ It Operations adds clouds to the multicloud
 ![Scenario AddCloudtoMultiCloud](./AddCloudtoMultiCloud.png)
 
 #### Steps
+
 1. To Be Defined
+
 
 #### Actors
 
@@ -54,7 +56,9 @@ IT Operations adds,removes,enables and disables policies to a multicloud
 ![Scenario ManagePoliciesforMultiCloud](./ManagePoliciesforMultiCloud.png)
 
 #### Steps
+
 1. To Be Defined
+
 
 #### Actors
 
@@ -69,7 +73,9 @@ IT Operations removes or adds policies from Multi Cloud
 ![Scenario ManagePoliciesforMultiCloud](./ManagePoliciesforMultiCloud.png)
 
 #### Steps
+
 1. To Be Defined
+
 
 #### Actors
 

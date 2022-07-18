@@ -40,7 +40,9 @@ Deploy Stack allows a devops engineer to deploy a stack to an environment. Param
 ![Scenario DeployStack](./DeployStack.png)
 
 #### Steps
+
 1. To Be Defined
+
 
 #### Actors
 
@@ -55,7 +57,9 @@ Uninstall Stack shuts down the stack and all of its services.
 ![Scenario UninstallStack](./UninstallStack.png)
 
 #### Steps
+
 1. To Be Defined
+
 
 #### Actors
 
@@ -70,7 +74,9 @@ Update Stack allows the DevOps Engineer to update the stack after it has been de
 ![Scenario UpdateStack](./UpdateStack.png)
 
 #### Steps
+
 1. To Be Defined
+
 
 #### Actors
 

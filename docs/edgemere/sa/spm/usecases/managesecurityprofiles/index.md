@@ -42,7 +42,9 @@ Create Security Profile from a secoprofile yaml file.
 ![Scenario CreateSecurityProfile](./CreateSecurityProfile.png)
 
 #### Steps
+
 1. [securityprofile create --name secProfile1 --file ./templates/secprofile.yml](#action-securityprofile-create)
+
 
 #### Actors
 
@@ -57,8 +59,11 @@ Disable Security Profile that has been created. This should remove the policies 
 ![Scenario DisableSecurityProfile](./DisableSecurityProfile.png)
 
 #### Steps
+
 1. [securityprofile create --name secProfileDSP --file ./templates/secprofile.yml](#action-securityprofile-create)
+
 1. [securityprofile disable --name secProfileDSP](#action-securityprofile-disable)
+
 
 #### Actors
 
@@ -73,9 +78,13 @@ Enable Security Profile should force a re-evaluation of the policies on all of t
 ![Scenario EnableSecurityProfile](./EnableSecurityProfile.png)
 
 #### Steps
+
 1. [securityprofile create --name secProfileESP --file ./templates/secprofile.yml](#action-securityprofile-create)
+
 1. [securityprofile disable --name secProfileESP](#action-securityprofile-disable)
+
 1. [securityprofile enable --name secProfileESP](#action-securityprofile-enable)
+
 
 #### Actors
 
@@ -90,8 +99,11 @@ Monitor Security Profile allows the security engineer to monitor the status of t
 ![Scenario MonitorSecurityProfile](./MonitorSecurityProfile.png)
 
 #### Steps
+
 1. [securityprofile create --name secProfileMSP --file ./templates/secprofile.yml](#action-securityprofile-create)
+
 1. [securityprofile status --name secProfileMSP](#action-securityprofile-status)
+
 
 #### Actors
 
@@ -106,8 +118,11 @@ Remove Security Profile that is attached to multiple identities. All identities 
 ![Scenario RemoveSecurityProfile](./RemoveSecurityProfile.png)
 
 #### Steps
+
 1. [securityprofile create --name secProfileRSP --file ./templates/secprofile.yml](#action-securityprofile-create)
+
 1. [securityprofile destroy --name secProfileRSP](#action-securityprofile-destroy)
+
 
 #### Actors
 
@@ -122,10 +137,15 @@ Test Security Profile if the profile has conflicting policies and if the profile
 ![Scenario TestSecurityProfile](./TestSecurityProfile.png)
 
 #### Steps
+
 1. [securityprofile create --name secProfileTSP1 --file ./templates/secprofile.yml](#action-securityprofile-create)
+
 1. [securityprofile create --name secProfileTSP2 --file ./templates/secprofile.yml](#action-securityprofile-create)
+
 1. [securityprofile create --name secProfileTSP3 --file ./templates/secprofile.yml](#action-securityprofile-create)
+
 1. [securityprofile test --name secProfileTSP1](#action-securityprofile-test)
+
 
 #### Actors
 
