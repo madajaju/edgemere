@@ -3,8 +3,23 @@ import {AScenario, AText, AUsecase} from './index.js';
 export default class AActor {
     constructor(config) {
         this.config = config;
-        console.log("AUsecase:", config);
     }
+    static default = {
+        fontSize: 20,
+        height: 100,
+        width: 50,
+        depth: 50
+    }
+
+
+    static calculateBox(node) {
+        let height = AActor.default.height;
+        let width = AActor.default.width;
+        let depth = AActor.default.depth;
+        let radius = Math.max(Math.sqrt(width*width + height*height), Math.sqrt(height*height + depth*depth), Math.sqrt(width*width + depth*depth));
+        return {w: width, h: height, d: depth, r:radius};
+    }
+
     static showList(panel, parent) {
         $.ajax({
             url: 'actor/list',
@@ -74,7 +89,7 @@ export default class AActor {
         });
     }
     static view3D(node, type) {
-        let color = node.color || "lightgray";
+        let color = node.color || "#aaaaaa";
         if (type === 'Selected') {
             color = "yellow";
         } else if (type === 'Targeted') {
@@ -82,7 +97,8 @@ export default class AActor {
         } else if (type === 'Sourced') {
             color = "green";
         }
-        const theta = 3.14 / 2;
+        let size = AActor.calculateBox(node);
+        const theta = Math.PI / 2;
         const group = new THREE.Group();
         const head = new THREE.SphereGeometry(15, 16, 12);
         const material = new THREE.MeshLambertMaterial({color: color, opacity: 1});
@@ -109,7 +125,7 @@ export default class AActor {
         llegObj.position.set(-11, -58, 0);
         group.add(llegObj);
 
-        let label = AText.view3D({text: node.name.replace(/\s/g, '\n'), color: "#ffffff", width: 50, size: 20});
+        let label = AText.view3D({text: node.name.replace(/\s/g, '\n'), color: "#ffffff", width: size.w, size: AActor.default.fontSize});
         label.position.set(0, -30, 10);
         group.add(label);
 
@@ -126,9 +142,10 @@ export default class AActor {
             }
         }
         group.aid = node.id;
-        node.box = 100;
+        node.box = size.r;
         node.expandLink = `actor/get?id=${node.id}`;
         node.expandView = AActor.viewDeep3D;
+        node.getDetail = AActor.getDetail;
 
         return group;
     }
@@ -223,11 +240,20 @@ export default class AActor {
             i++;
             data.links.push({source: actor.shortname, target: j, value: 0.1});
             for (let k in uc.scenarios) {
-                if (data.nodes.hasOwnProperty(k)) {
-                    data.links.push({source: j, target: k, value: 0.1});
+                let id = `${j}.${k}`
+                if (data.nodes.hasOwnProperty(id)) {
+                    data.links.push({source: j, target: id, value: 0.1});
                 }
             }
         }
+        window.graph.graph.cameraPosition(
+            {x: 0, y: 0, z: 1000}, // new position
+            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+            3000  // ms transition duration.
+        );
+        setTimeout(() => {
+            window.graph.graph.zoomToFit(1000)
+        }, 4500);
         if (mode === 'add') {
             window.graph.addData(data.nodes, data.links);
         } else {
@@ -235,13 +261,20 @@ export default class AActor {
         }
         window.graph.showLinks();
     }
-
-    handle(result) {
-        showGraph(result, 'new');
+    static getDetail(node) {
+        $.ajax({
+            url: node.expandLink,
+            success: (results) => {
+                AActor.showDetail(results);
+            }
+        });
+    }
+    static showDetail(result) {
         let records = [];
         if (!w2ui['objlist']) {
             $('#objlist').w2grid({name: 'objlist'});
         }
+        w2ui['objlist'].result = result;
         if (!w2ui['objdetail']) {
             $('#objdetail').w2grid({
                 name: 'objdetail',
@@ -262,6 +295,23 @@ export default class AActor {
                     }
                 ]
             });
+        }
+        w2ui['objlist'].onClick = function (event) {
+            let record = this.get(event.recid);
+            w2ui['objdetail'].header = `${record.name} Details`;
+            w2ui['objdetail'].show.columnHeaders = true;
+            w2ui['objdetail'].clear();
+            let drecords = [];
+            let k = 0;
+            let values = record.detail.split('|');
+            for (let i in values) {
+                let [name, value] = values[i].split('^');
+                if(!value) { value = name; name = record.name; }
+                k++;
+                drecords.push({recid: k, name: name, value: value});
+            }
+            w2ui['objdetail'].add(drecords);
+            window.graph.selectNodeByID(event.recid);
         }
         let cols = [
             {field: 'name', size: "20%", resizeable: true, label: "Name", sortable: true},
@@ -293,10 +343,10 @@ export default class AActor {
         w2ui['objlist'].records = records;
         w2ui['objlist'].refresh();
     }
-}
-
-function showGraph(actor, mode) {
-    AActor.viewDeep3D(actor, mode);
+    static handle(result) {
+        AActor.viewDeep3D(result, "new");
+        AActor.showDetail(result);
+    }
 }
 
 function getDetails(objs) {
@@ -306,7 +356,7 @@ function getDetails(objs) {
         let item = objs[j];
         inum++;
         let name = item.name || j;
-        items.push(`<span onclick="expandObject('${item.link}');">${name}</span>`);
+        items.push(`<span onclick="expandObject('${item.link}');">${name}</span>^${item.description}`);
     }
     return items;
 }

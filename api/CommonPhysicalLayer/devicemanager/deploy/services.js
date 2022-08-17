@@ -3,7 +3,7 @@ module.exports = {
         data_orchestrator: {
             image: "diml_dml_do",
             interface: {
-                admin: { path: '/data', port: 3000, protocol:"http"},
+                do: { path: '/data', port: 3000, protocol:"http"},
             },
             networks: {
                 siblings: {}
@@ -12,7 +12,7 @@ module.exports = {
         policy_engine: {
             image: "sa_pe",
             interface: {
-                web: {path:'/policy', port: 3000 },
+                pe: {path:'/policy', port: 3000 },
             },
             networks: {
                 siblings: {}
@@ -21,7 +21,7 @@ module.exports = {
         service_orchestrator: {
             image: "sml_so",
             interface: {
-                web: {path:'/service', port: 3000 },
+                so: {path:'/service', port: 3000 },
             },
             networks: {
                 siblings: {}
@@ -30,7 +30,7 @@ module.exports = {
         telemetry_aggregator: {
             image: "cpl_ta",
             interface: {
-                web: {path:'/telemetry', port: 3000 },
+                ta: {path:'/telemetry', port: 3000 },
             },
             networks: {
                 siblings: {}
@@ -39,7 +39,7 @@ module.exports = {
         portal: {
             image: "cpl_dm_web",
             interface: {
-                web: {path:'/admin', port: 3000 },
+                dm: {path:'/admin', port: 3000 },
             },
             networks: {
                 siblings: {}

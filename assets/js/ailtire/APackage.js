@@ -1,9 +1,10 @@
-import {AUsecase, AModel, AText} from './index.js';
+import {AUsecase, AModel, AText, AInterface, AHandler} from './index.js';
 
 export default class APackage {
     constructor(config) {
         this.config = config;
     }
+
     static showList(panel, parent) {
         $.ajax({
             url: 'package/list',
@@ -14,8 +15,26 @@ export default class APackage {
             }
         });
     }
+
+    static default = {
+        fontSize: 20,
+        height: 200,
+        width: 200,
+        depth: 20
+    }
+
+
+    static calculateBox(node) {
+        let fontSize = node.fontSize || APackage.default.fontSize;
+        let width = node.name.length * fontSize / 2;
+        let height = APackage.default.height;
+        let depth = APackage.default.depth;
+        let radius = Math.max(Math.sqrt(width * width + height * height), Math.sqrt(height * height + depth * depth), Math.sqrt(width * width + depth * depth));
+        return {w: width, h: height, d: depth, r: radius};
+    }
+
     static view3D(node, type) {
-        let color = node.color || "lightgray";
+        let color = node.color || "#00aaff";
         if (type === 'Selected') {
             color = "yellow";
         } else if (type === 'Targeted') {
@@ -23,22 +42,37 @@ export default class APackage {
         } else if (type === 'Sourced') {
             color = "green";
         }
-        let nameArray = node.name.split(/\s/);
-        let width = 0;
-        for(let i in nameArray) {
-            width = Math.max(width, nameArray[i].length);
-        }
-        let textSize = node.textSize || 30;
-        let shape = node.cube || {x: width*(textSize*0.6), y: textSize*nameArray.length, z: 20};
+        let size = APackage.calculateBox(node);
+        let fontSize = node.fontSize || APackage.default.fontSize;
+        let shape = node.cube || {x: size.w, y: size.h, z: size.d};
         let opacity = node.opacity || 1;
         let geometry = new THREE.BoxGeometry(shape.x, shape.y, shape.z);
-        const material = new THREE.MeshPhongMaterial({color: color, opacity: opacity, transparent:true});
+        const material = new THREE.MeshPhysicalMaterial({
+            color: color,
+            transparent: true,
+            opacity: opacity,
+            depthTest: true,
+            depthWrite: true,
+            alphaTest: 0,
+            reflectivity: 0.2,
+            thickness: 6,
+            metalness: 0,
+            side: THREE.DoubleSide
+        });
         const box = new THREE.Mesh(geometry, material);
 
-        let label = AText.view3D({text:node.name.replace(/\s/g, '\n'), color:"#ffffff", width: shape.x , size: textSize });
-        label.position.set(0,0,shape.z/2 + 4);
+        let label = AText.view3D({
+            text: node.name.replace(/\s/g, '\n'),
+            color: "#ffffff",
+            width: shape.x,
+            size: fontSize
+        });
+        let labelhieght = node.name.split(/\s/).length*fontSize;
+        label.position.set(0, (shape.y/2)-labelhieght, shape.z / 2 + 4);
         box.add(label);
-        box.position.set(node.x, node.y, node.z);
+        if(node.x && node.y && node.z) {
+            box.position.set(node.x, node.y, node.z);
+        }
         if (node.rotate) {
             if (node.rotate.x) {
                 box.applyMatrix4(new THREE.Matrix4().makeRotationX(node.rotate.x));
@@ -51,125 +85,71 @@ export default class APackage {
             }
         }
         box.aid = node.id;
-        box.expandLink = `package/get?id=${node.id}`;
-        box.expandView= APackage.viewDeep3D;
-        node.box = 150;
+        node.expandLink = `package/get?id=${node.id}`;
+        node.expandView = APackage.viewDeep3D;
+        node.getDetail = APackage.getDetail;
+        node.box = node.box || size.r;
         return box;
-
-    }
-
-    static viewSubPackage3D(pkg, mode) {
-        let data = { nodes:{}, links: [] };
-        for(let pname in pkg.subpackages) {
-            let spkg = pkg.subpackages[pname];
-            let node = {
-                id: pname,
-                name: spkg.name,
-                // cube: { x: 300, y: 50, z: 10 },
-                textSize: 10,
-                color: spkg.color,
-                view: APackage.view3D,
-                expandView: APackage.viewDeep3D,
-                expandLink: `package/get?id=${pname}`
-            }
-            data.nodes[pname] = node;
-            for(let i in spkg.depends) {
-                data.links.push({source: pname, target: spkg.depends[i], color: 'rgba(255,255,0,1)', value: 1.0, width: 3});
-            }
-        }
-        if (mode === 'add') {
-            window.graph.addData(data.nodes, data.links);
-        } else {
-            window.graph.setData(data.nodes, data.links);
-        }
-        window.graph.graph.cameraPosition(
-            {x: 0, y: 0, z: 1000}, // new position
-            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-            3000  // ms transition duration.
-        );
-        window.graph.showLinks();
     }
 
     static viewDeep3D(pkg, mode) {
-        const theta = 3.14 / 2; // 90 degrees
+        const theta = Math.PI / 2; // 90 degrees
         let data = {nodes: {}, links: []};
-        let inum = Object.keys(pkg.interface).length;
-        let hnum = Object.keys(pkg.handlers).length;
-        let unum = Object.keys(pkg.usecases).length;
-        let cnum = Object.keys(pkg.classes).length;
-        let pnum = Object.keys(pkg.subpackages).length;
-
-        let xfactor = Math.round(Math.sqrt(inum) + 0.5);
-        let zfactor = Math.round((inum / xfactor) + 0.5);
-        if (pnum > inum) {
-            xfactor = Math.round(Math.sqrt(pnum) + 0.5);
-            zfactor = Math.round((pnum / xfactor) + 0.5);
-        }
-        if(cnum > pnum) {
-            xfactor = Math.round(Math.sqrt(cnum) + 0.5);
-            zfactor = Math.round((cnum / xfactor) + 0.5);
-        }
-        let yfactoru = Math.round((unum / xfactor) + 0.5);
-        let yfactorc = Math.round((cnum / xfactor) + 0.5);
-        let yfactorh = Math.round((hnum / zfactor) + 0.5);
-        let yfactor = Math.max(yfactoru, yfactorc, yfactorh);
+        const size = APackage.calculateDeepBox(pkg);
 
         window.graph.clearObjects();
 
-        let package3d = {x: xfactor * 150 + 50, y: yfactor * 150 + 50, z: zfactor * 150 + 50};
+        let package3d = {x: size.w, y: size.h, z: size.d};
         let bbox = {
             parent: pkg.shortname,
-            x: {min: (-package3d.x / 2) + 30, max: (package3d.x / 2) - 30},
-            y: {min: (-package3d.y / 2) + 30, max: (package3d.y / 2) - 30},
-            z: {min: (-package3d.z / 2) + 30, max: (package3d.z / 2) - 30}
+            x: {min: (-package3d.x / 2), max: (package3d.x / 2)},
+            y: {min: (-package3d.y / 2), max: (package3d.y / 2)},
+            z: {min: (-package3d.z / 2), max: (package3d.z / 2)}
         }
-        // package3d.x = package3d.x / 2;
-        // package3d.y = package3d.y / 2;
-        // package3d.z = package3d.z / 2;
 
         data.nodes[pkg.shortname] = {
             id: pkg.shortname,
             name: pkg.name,
+            description: pkg.description,
             cube: package3d,
-            textSize: 30,
+            fontSize: 30,
             fx: 0,
             fy: 0,
             fz: 0,
+            box: 1, // Make it so items can get really close to the parent package.
             view: APackage.view3D,
             expandView: APackage.viewDeep3D,
             expandLink: `package/get?id=${pkg.shortname}`,
+            getDetail: APackage.getDetail,
             opacity: 0.5,
             color: pkg.color
         };
-
+        let inodes = [];
         for (let iname in pkg.interface) {
             let name = iname.replace(pkg.prefix, '');
             let node = {
                 id: iname,
                 name: name,
-                rbox: { parent: pkg.shortname,
-                    x: bbox.x,
-                    z: bbox.z,
-                    y: {min: bbox.y.max + 50, max: bbox.y.max + 50}
-                },
-                view: interface3DView
+                description: pkg.interface[iname].description,
+                view: AInterface.view3D,
             };
             data.nodes[iname] = node;
+            inodes.push(node);
         }
+        layoutRowColumn(data.nodes[pkg.shortname], inodes, size.interface, "top");
+
+        let hnodes = [];
         for (let hname in pkg.handlers) {
             let handler = pkg.handlers[hname];
             let node = {
                 id: hname,
                 name: handler.name,
-                rbox: { parent: pkg.shortname, y: bbox.y, z: bbox.z,
-                    x: {min: bbox.x.max + 50, max: bbox.x.max + 50}
-                },
-                view: handler3DView
+                description: pkg.handlers[hname].description,
+                view: AHandler.view3D
             };
 
             data.nodes[hname] = node;
-            // let obj3d = handler3DView(node, "");
-            // window.graph.addObject(obj3d);
+            hnodes.push(node);
             for (let h in handler.handlers) {
                 let hand = handler.handlers[h];
                 if (hand.action) {
@@ -179,20 +159,20 @@ export default class APackage {
                 }
             }
         }
+        layoutRowColumn(data.nodes[pkg.shortname], hnodes, size.handlers, "right");
 
+        let ucnodes = [];
         for (let uname in pkg.usecases) {
             let uc = pkg.usecases[uname];
 
             let node = {
                 id: uname, name: uc.name,
-                rbox: { parent: pkg.shortname, x: bbox.x, y: bbox.y,
-                    z: {min: bbox.z.max + 50, max: bbox.z.max + 50}
-                },
+                description: uc.description,
+                fontSize: 15,
                 view: AUsecase.view3D,
-                expandView: AUsecase.viewDeep3D,
-                expandLink: `usecase/get?id=${uname}`,
             }
             data.nodes[uname] = node;
+            ucnodes.push(node);
             if (uc.method) {
                 data.links.push({
                     source: uname,
@@ -203,56 +183,68 @@ export default class APackage {
                 });
             }
         }
+        layoutRowColumn(data.nodes[pkg.shortname], ucnodes, size.usecases, "front");
 
+        let cnodes = [];
         for (let cname in pkg.classes) {
             let cls = pkg.classes[cname];
-            let node = {id: cname, name: cls.name,
-                rbox: { parent: pkg.shortname, x: bbox.x, y: bbox.y,
+            let node = {
+                id: cname, name: cls.name,
+                description: cls.description,
+                rbox: {
+                    parent: pkg.shortname, x: bbox.x, y: bbox.y,
                     z: {min: bbox.z.min - 50, max: bbox.z.min - 50}
                 },
-                rotate: {y: 2*theta},
+                rotate: {y: 2 * theta},
                 view: AModel.view3D,
-                expandView: AModel.viewDeep3D,
-                expandLink: `model/get?id=${cname}`,
             }
             data.nodes[cname] = node;
+            cnodes.push(node);
         }
-
+        layoutRowColumn(data.nodes[pkg.shortname], cnodes, size.classes, "back");
+        let spnodes = [];
         for (let pname in pkg.subpackages) {
             let spkg = pkg.subpackages[pname];
             let node = {
                 id: pname,
                 name: spkg.name,
+                description: spkg.description,
                 rotate: {x: theta},
-                textSize: 15,
-                rbox: { parent: pkg.shortname, x: bbox.x, z: bbox.z,
-                    y: {min: bbox.y.min - 50, max: bbox.y.min - 50}},
+                rbox: {
+                    parent: pkg.shortname, x: bbox.x, z: bbox.z,
+                    y: {min: bbox.y.min - 50, max: bbox.y.min - 50}
+                },
                 color: spkg.color,
                 view: APackage.view3D,
-                expandView: APackage.viewDeep3D,
-                expandLink: `package/get?id=${pname}`,
             }
             data.nodes[pname] = node;
-
-            for(let i in spkg.depends) {
-                data.links.push({source: pname, target: spkg.depends[i], color: 'rgba(255,255,0,1)', value: 1.0, width: 3});
+            spnodes.push(node);
+            for (let i in spkg.depends) {
+                data.links.push({
+                    source: pname,
+                    target: spkg.depends[i],
+                    color: 'rgba(255,255,0,1)',
+                    value: 1.0,
+                    width: 3
+                });
             }
         }
+
+        layoutRowColumn(data.nodes[pkg.shortname], spnodes, size.subpackages, "bottom");
 
         for (let pname in pkg.depends) {
             let spkg = pkg.depends[pname];
             let node = {
                 id: pname,
                 name: spkg.name,
-                rbox: { parent: pkg.shortname, y: bbox.y, z: bbox.z,
+                description: spkg.description,
+                rbox: {
+                    parent: pkg.shortname, y: bbox.y, z: bbox.z,
                     x: {min: bbox.x.min - 80, max: bbox.x.min - 80}
                 },
-                textSize: 30,
                 color: spkg.color,
                 rotate: {y: -theta},
                 view: APackage.view3D,
-                expandView: APackage.viewDeep3D,
-                expandLink: `package/get?id=${pname}`
             }
             data.nodes[pname] = node;
             data.links.push({source: pkg.shortname, target: pname, value: 0.1, color: 'rgba(255,255,255,1)', width: 5});
@@ -262,80 +254,175 @@ export default class APackage {
         } else {
             window.graph.setData(data.nodes, data.links);
         }
+        let distance = Math.max(Math.sqrt((size.w / 2) ** 2 + (size.h / 2) ** 2) * 2, size.d * 2);
         window.graph.graph.cameraPosition(
-            {x: 0, y: 0, z: 1000}, // new position
+            {x: 0, y: 0, z: distance}, // new position
             {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
             3000  // ms transition duration.
         );
         window.graph.showLinks();
 
-        window.graph.toolbar.setToolBar( [
-            { type: 'button',  id: 'classes',  text: 'Classes', img: 'w2ui-icon-search',
+        window.graph.toolbar.setToolBar([
+            {
+                type: 'button', id: 'classes', text: 'Classes', img: 'w2ui-icon-search',
                 onClick: (event) => {
+                    let distance = Math.sqrt((size.w / 2) ** 2 + (size.h / 2) ** 2) * 2;
                     window.graph.graph.cameraPosition(
-                        {x: 0, y: -0, z: -1000}, // new position
+                        {x: 0, y: -0, z: -distance}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
                         1000
                     );
-                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},500);
+                    setTimeout(() => {
+                        window.graph.graph.zoomToFit(1000)
+                    }, 500);
                 }
             },
-            { type: 'button',  id: 'subpackage',  text: 'Sub Packages', img: 'w2ui-icon-search',
+            {
+                type: 'button', id: 'subpackage', text: 'Sub Packages', img: 'w2ui-icon-search',
                 onClick: (event) => {
+                    let distance = Math.sqrt((size.w / 2) ** 2 + (size.d / 2) ** 2) * 2;
                     window.graph.graph.cameraPosition(
-                        {x: 0, y: -1000, z: 0}, // new position
+                        {x: 0, y: -distance, z: 0}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
                         1000
                     );
-                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},500);
+                    setTimeout(() => {
+                        window.graph.graph.zoomToFit(1000)
+                    }, 500);
                 }
             },
-            { type: 'button',  id: 'interface',  text: 'Interface', img: 'w2ui-icon-search',
+            {
+                type: 'button', id: 'interface', text: 'Interface', img: 'w2ui-icon-search',
                 onClick: (event) => {
+                    let distance = Math.sqrt((size.w / 2) ** 2 + (size.d / 2) ** 2) * 2;
                     window.graph.graph.cameraPosition(
-                        {x: 0, y: 1000, z: 0}, // new position
+                        {x: 0, y: distance, z: 0}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
                         1000
                     );
-                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},500);
+                    setTimeout(() => {
+                        window.graph.graph.zoomToFit(1000)
+                    }, 500);
                 }
             },
-            { type: 'button',  id: 'handlers',  text: 'Handlers', img: 'w2ui-icon-search',
+            {
+                type: 'button', id: 'handlers', text: 'Handlers', img: 'w2ui-icon-search',
                 onClick: (event) => {
+                    let distance = Math.sqrt((size.h / 2) ** 2 + (size.d / 2) ** 2) * 2;
                     window.graph.graph.cameraPosition(
-                        {x: 1000, y: 0, z: 0}, // new position
+                        {x: distance, y: 0, z: 0}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
                         1000
                     );
-                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},500);
+                    setTimeout(() => {
+                        window.graph.graph.zoomToFit(1000)
+                    }, 500);
                 }
             },
-            { type: 'button',  id: 'usecases',  text: 'UseCases', img: 'w2ui-icon-search',
+            {
+                type: 'button', id: 'usecases', text: 'UseCases', img: 'w2ui-icon-search',
                 onClick: (event) => {
+                    let distance = Math.sqrt((size.w / 2) ** 2 + (size.h / 2) ** 2) * 2;
                     window.graph.graph.cameraPosition(
-                        {x: 0, y: 0, z: 1000}, // new position
+                        {x: 0, y: 0, z: distance}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
                         1000
                     );
-                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},500);
+                    setTimeout(() => {
+                        window.graph.graph.zoomToFit(1000)
+                    }, 500);
                 }
             },
-            { type: 'button',  id: 'dependents',  text: 'Dependents', img: 'w2ui-icon-search',
+            {
+                type: 'button', id: 'dependents', text: 'Dependents', img: 'w2ui-icon-search',
                 onClick: (event) => {
+                    let distance = Math.sqrt((size.d / 2) ** 2 + (size.h / 2) ** 2) * 2;
                     window.graph.graph.cameraPosition(
-                        {x: -1000, y: 0, z: 0}, // new position
+                        {x: -distance, y: 0, z: 0}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
                         1000
                     );
-                    setTimeout(() => { window.graph.graph.zoomToFit(1000)},500);
+                    setTimeout(() => {
+                        window.graph.graph.zoomToFit(1000)
+                    }, 500);
                 }
             },
         ]);
     }
 
-    handle(result) {
-        showGraph(result, 'new');
+    static handle(result) {
+        APackage.viewDeep3D(result, 'new');
+        APackage.showDetail(result);
+    }
 
+    static calculateGroupBox(items, fn) {
+        let asize = {
+            stats: {
+                w: {sum: 0, max: 0},
+                h: {sum: 0, max: 0},
+                d: {sum: 0, max: 0},
+                r: {sum: 0, max: 0},
+                area: 0,
+                num: 0,
+            }, set: [],
+            box: {w: 0, h: 0, d: 0, rows: 0, cols: 0},
+        };
+
+        for (let aname in items) {
+            let size = fn({name: items[aname].name});
+            asize.set.push(size);
+            asize.stats.w.sum += size.w;
+            asize.stats.w.max = Math.max(size.w, asize.stats.w.max);
+            asize.stats.d.sum += size.d;
+            asize.stats.d.max = Math.max(size.d, asize.stats.d.max);
+            asize.stats.h.sum += size.h;
+            asize.stats.h.max = Math.max(size.h, asize.stats.h.max);
+            asize.stats.r.sum += size.r;
+            asize.stats.r.max = Math.max(size.w, asize.stats.r.max);
+            asize.stats.area += size.w * size.h;
+            asize.stats.num++;
+        }
+        asize.box.rows = Math.round(Math.sqrt(asize.stats.num) + 0.5);
+        asize.box.cols = Math.round((asize.stats.num / asize.box.rows) + 0.5);
+        asize.box.w = Math.max(Math.sqrt(asize.stats.area), asize.stats.r.max * asize.box.cols);
+        asize.box.h = Math.max(Math.sqrt(asize.stats.area), asize.stats.r.max * asize.box.rows);
+        return asize;
+    }
+
+    static calculateDeepBox(pkg) {
+        let ibox = APackage.calculateGroupBox(pkg.interface, AInterface.calculateBox); // XZ
+        let hbox = APackage.calculateGroupBox(pkg.handlers, AHandler.calculateBox); // YZ
+        let ubox = APackage.calculateGroupBox(pkg.usecases, AUsecase.calculateBox); // XY
+        let cbox = APackage.calculateGroupBox(pkg.classes, AModel.calculateBox); // XY
+        let pbox = APackage.calculateGroupBox(pkg.subpackages, APackage.calculateBox); // XZ
+        let dbox = APackage.calculateGroupBox(pkg.depends, APackage.calculateBox); // YZ
+
+        /* X is always the width, Y is height with X, Y is width with Z, Z is always h */
+        let fontWidth = pkg.name.length * APackage.default.fontSize / 2;
+        const wnum = Math.max(ibox.box.w, ubox.box.w, cbox.box.w, pbox.box.w, 100, fontWidth);
+        const hnum = Math.max(hbox.box.w, ubox.box.h, cbox.box.h, dbox.box.w, 100);
+        const dnum = Math.max(ibox.box.h, hbox.box.h, pbox.box.h, dbox.box.h, 100);
+
+        const radius = Math.max(Math.sqrt(wnum ** 2 + hnum ** 2), Math.sqrt(hnum ** 2 + dnum ** 2), Math.sqrt(wnum ** 2 + dnum ** 2));
+        return {
+            w: wnum*1.10, h: hnum*1.10, d: dnum*1.10, r: radius,
+            interface: ibox,
+            handlers: hbox,
+            usecases: ubox,
+            classes: cbox,
+            subpackages: pbox,
+            depends: dbox
+        }
+    }
+    static getDetail(node) {
+        $.ajax({
+            url: node.expandLink,
+            success: (results) => {
+                APackage.showDetail(results);
+            }
+        });
+    }
+    static showDetail(result) {
         let records = [];
         let cols = [
             {field: 'name', size: "20%", resizeable: true, label: "Name", sortable: true},
@@ -362,174 +449,29 @@ export default class APackage {
         w2ui['objlist'].records = records;
         // Clear the detail list
         w2ui['objdetail'].clear();
+
         w2ui['objlist'].onClick = function (event) {
-            // this.showDetail(event);
-            w2ui['objdetail'].clear();
             let record = this.get(event.recid);
+            w2ui['objdetail'].header = `${record.name} Details`;
+            w2ui['objdetail'].show.columnHeaders = true;
+            w2ui['objdetail'].clear();
             let drecords = [];
             let k = 0;
             let values = record.detail.split('|');
             for (let i in values) {
-                let value = values[i];
+                let [name, value] = values[i].split('^');
+                if (!value) {
+                    value = name;
+                    name = record.name;
+                }
                 k++;
-                drecords.push({recid: k, name: record.name, value: value});
+                drecords.push({recid: k, name: name, value: value});
             }
             w2ui['objdetail'].add(drecords);
             window.graph.selectNodeByID(event.recid);
         }
         w2ui['objlist'].refresh();
     }
-}
-
-function showGraph(pkg, mode) {
-    APackage.viewDeep3D(pkg, mode);
-}
-
-function handler3DView(node, type) {
-    let opacity = node.opacity || 1.0;
-    let color = "magenta";
-    if (type === 'Selected') {
-        color = "yellow";
-    } else if (type === 'Targeted') {
-        color = "red";
-    } else if (type === 'Sourced') {
-        color = "green";
-    }
-    const theta = 3.14 / 2;
-    let geometry = new THREE.ConeGeometry(20, 40);
-    geometry.applyMatrix4(new THREE.Matrix4().makeRotationX(theta));
-    const material = new THREE.MeshPhongMaterial({
-        color: color,
-        transparent: true,
-        opacity: opacity,
-        depthTest: true,
-        depthWrite: true,
-        flatShading: true,
-        vertexColors: true,
-        reflectivity: 1,
-        refractionRatio: 1,
-        side: THREE.DoubleSide
-    });
-    const box = new THREE.Mesh(geometry, material);
-    let geo2 = new THREE.CylinderGeometry(5, 5, 30);
-    geo2.applyMatrix4(new THREE.Matrix4().makeRotationX(theta));
-    const material2 = new THREE.MeshPhongMaterial({color: color, opacity: 1});
-    const item2 = new THREE.Mesh(geo2, material2);
-    item2.position.set(0, 0, 20);
-    const group = new THREE.Group();
-    group.add(box);
-    group.add(item2);
-    group.applyMatrix4(new THREE.Matrix4().makeRotationY(-theta));
-    group.position.set(node.x, node.y, node.z);
-
-    let label = AText.view3D({text:node.name.replace(/\./g, '\n'), color:"#ffffff", width: 200, size: 12});
-    label.position.set(0,0, 23);
-    label.applyMatrix4(new THREE.Matrix4().makeRotationY(-2*theta));
-    group.add(label);
-
-    group.aid = node.id;
-    return group;
-}
-
-function package3DView(node, type) {
-    let color = node.color;
-    if (type === 'Selected') {
-        color = "yellow";
-    } else if (type === 'Targeted') {
-        color = "red";
-    } else if (type === 'Sourced') {
-        color = "green";
-    }
-    let geometry = new THREE.BoxGeometry(75, 20, 50);
-    const material = new THREE.MeshPhongMaterial({color: color, opacity: 1});
-    const box = new THREE.Mesh(geometry, material);
-    /* let geo2 = new THREE.TextGeometry( node.name );
-    const material2 = new THREE.MeshLambertMaterial( {color: "black", opacity:1} );
-    const text = new THREE.Mesh( geometry, material2 );
-    text.position.set(0,0,10);
-    const group = new THREE.Group();
-    group.add( box );
-    group.add( text );
-     */
-
-    let label = AText.view3D({text: node.name, color: "#ffffff", width: 75, size: 15 * (75 / 100)});
-    // label.applyMatrix4(new THREE.Matrix4().makeScale(w/100, w/100, w/100));
-    label.position.set(0, (h / 2) - 15, (d / 2) + 1);
-    box.add(label)
-    box.position.set(node.x, node.y, node.z);
-    box.aid = node.id;
-    return box;
-}
-
-function depend3DView(node, type) {
-    let color = node.color;
-    if (type === 'Selected') {
-        color = "yellow";
-    } else if (type === 'Targeted') {
-        color = "red";
-    } else if (type === 'Sourced') {
-        color = "green";
-    }
-    let geometry = new THREE.BoxGeometry(20, 75, 50);
-    const material = new THREE.MeshPhongMaterial({color: color, opacity: 1});
-    const box = new THREE.Mesh(geometry, material);
-    const myText = new SpriteText(node.name.replace(/\s/g, '\n'));
-    myText.position.set(-20, 0, 0);
-    box.add(myText);
-    box.position.set(node.x, node.y, node.z);
-    box.aid = node.id;
-    return box;
-}
-
-function usecase3DView(node, type) {
-    let color = "yellow";
-    if (type === 'Selected') {
-        color = "yellow";
-    } else if (type === 'Targeted') {
-        color = "red";
-    } else if (type === 'Sourced') {
-        color = "green";
-    }
-    let geometry = new THREE.SphereGeometry(10, 16, 12);
-    geometry.applyMatrix4(new THREE.Matrix4().makeScale(4.0, 2.0, 1.0));
-    const material = new THREE.MeshPhongMaterial({color: color, opacity: 1});
-    const retval = new THREE.Mesh(geometry, material);
-    retval.position.set(node.x, node.y, node.z);
-    const myText = new SpriteText(node.name.replace(/\s/g, '\n'));
-    myText.position.set(0, 0, 15);
-    retval.add(myText);
-    retval.aid = node.id;
-    return retval;
-}
-
-function interface3DView(node, type) {
-    let color = "blue";
-    if (type === 'Selected') {
-        color = "yellow";
-    } else if (type === 'Targeted') {
-        color = "red";
-    } else if (type === 'Sourced') {
-        color = "green";
-    }
-    let geo = new THREE.SphereGeometry(20, 16, 12);
-    const material = new THREE.MeshPhongMaterial({color: color, opacity: 1});
-    const item1 = new THREE.Mesh(geo, material);
-    let geo2 = new THREE.CylinderGeometry(5, 5, 30);
-    const material2 = new THREE.MeshPhongMaterial({color: color, opacity: 1});
-    const item2 = new THREE.Mesh(geo2, material2);
-    item2.position.set(0, -30, 0);
-    const group = new THREE.Group();
-    group.add(item1);
-    group.add(item2);
-    group.position.set(node.x, node.y, node.z);
-    let name = node.name;
-    name.replace('/','');
-    let label = AText.view3D({text:name.replace(/\//g, '\n'), color:"#ffffff", width: 50, size: 12});
-    label.applyMatrix4(new THREE.Matrix4().makeRotationX(-3.14/2));
-    label.position.set(0,20+1,0);
-    group.add(label)
-    group.aid = node.id;
-    return group;
 }
 
 function getDetails(objs) {
@@ -539,9 +481,88 @@ function getDetails(objs) {
         let item = objs[j];
         inum++;
         let name = item.name || j;
-        items.push(`<span onclick="expandObject('${item.link}');">${name}</span>`);
+        items.push(`<span onclick="expandObject('${item.link}');">${name}</span>^${item.description}`);
     }
     return items;
+}
+
+function layoutRowColumn(parentNode, nodes, size, direction) {
+    let prevNode = parentNode;
+    let row = 0;
+    let col = 0;
+    let bbox = {
+        x: {min: -parentNode.cube.x / 2, max: parentNode.cube.x / 2},
+        y: {min: -parentNode.cube.y / 2, max: parentNode.cube.y / 2},
+        z: {min: -parentNode.cube.z / 2, max: parentNode.cube.z / 2},
+    }
+
+
+    for (let i in nodes) {
+        let node = nodes[i];
+        // Make sure I have the right number of rows.
+        if (row >= size.box.rows) {
+            row = 0;
+            col++;
+        }
+        if (direction === 'top') {
+            let offset = {
+                w: Math.max(parentNode.cube.x/(size.box.cols+1), size.stats.w.max)*1.10,
+                h: Math.max(parentNode.cube.z/(size.box.rows+1), size.stats.h.max)*1.10
+            }
+            node.rbox = {
+                parent: prevNode.id,
+                fx: bbox.x.min + offset.w/2 + (col * offset.w),
+                fy: bbox.y.max,
+                fz: bbox.z.max - offset.h/2 - (row * offset.h),
+            }
+        } else if (direction === 'bottom') {
+            let offset = {
+                w: Math.max(parentNode.cube.x/(size.box.cols+1), size.stats.w.max)*1.10,
+                h: Math.max(parentNode.cube.z/(size.box.rows+1), size.stats.h.max)*1.10
+            }
+            node.rbox = {
+                parent: prevNode.id,
+                fx: bbox.x.min + offset.w/2 + (col * offset.w),
+                fy: bbox.y.min - 30,
+                fz: bbox.z.max - offset.h/2 - (row * offset.h),
+            }
+        } else if (direction === 'right') {
+            let offset = {
+                w: parentNode.cube.z/(size.box.cols+1),
+                h: parentNode.cube.y/(size.box.rows+1),
+            }
+            node.rbox = {
+                parent: prevNode.id,
+                fx: bbox.x.max,
+                fy: bbox.y.max - offset.h/2 - (row * offset.h),
+                fz: bbox.z.max - offset.w/2 - (col * offset.w),
+            }
+        } else if (direction === 'back') {
+            let offset = {
+                w: Math.max(parentNode.cube.x/(size.box.cols+1), size.stats.w.max)*1.10,
+                h: Math.max(parentNode.cube.y/(size.box.rows+1), size.stats.h.max)*1.10
+            }
+            node.rbox = {
+                parent: prevNode.id,
+                fx:  bbox.x.max - offset.w/2 - (col * offset.w),
+                fz:  bbox.z.min,
+                fy: bbox.y.max - offset.h/2 - (row * offset.h),
+            }
+        } else if (direction === 'front') {
+            let offset = {
+                w: Math.max(parentNode.cube.x/(size.box.cols+1), size.stats.w.max)*1.10,
+                h: Math.max(parentNode.cube.y/(size.box.rows+1), size.stats.h.max)*1.10
+            }
+            node.rbox = {
+                parent: prevNode.id,
+                fx: bbox.x.min + offset.w/2 + (col * offset.w),
+                fz:  bbox.z.max,
+                fy: bbox.y.min + offset.h/2 + (row * offset.h),
+            }
+        }
+        row++;
+    }
+    return;
 }
 
 function getPackageNodes(pkg) {

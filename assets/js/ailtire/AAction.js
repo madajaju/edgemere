@@ -5,8 +5,45 @@ export default class AAction {
         this.config = config;
     }
 
+    static default = {
+        fontSize: 20,
+        height: 20,
+        width: 100,
+        depth: 20
+    }
+
+
+    static calculateBox(node) {
+        let fontSize = node.fontSize || AAction.default.fontSize;
+        let nameArray = node.name.split(/\s/).map(item => {
+            return item.length;
+        });
+        let maxLetters = nameArray.reduce(function (a, b) {
+            return Math.max(a, b);
+        }, -Infinity);
+        let height = (nameArray.length * fontSize) / 2 + 10;
+        let width = maxLetters * (fontSize / 2) + 20;
+        let depth = height * 2;
+        let radius = Math.max(Math.sqrt(width * width + height * height), Math.sqrt(height * height + depth * depth), Math.sqrt(width * width + depth * depth));
+
+        return {w: width, h: height * 2, d: depth, r: radius};
+    }
+
+    static getDetail(node) {
+        $.ajax({
+            url: node.expandLink,
+            success: (results) => {
+                AAction.showDetail(results);
+            }
+        });
+    }
+    static showDetail(result) {
+        console.log(result);
+    }
     static view3D(node, type) {
-        let color = node.color || "blue";
+        let opacity = node.opacity || 1;
+        let fontSize = node.fontSize || AAction.default.fontSize;
+        let color = node.color || "#0000aa";
         if (type === 'Selected') {
             color = "yellow";
         } else if (type === 'Targeted') {
@@ -14,27 +51,29 @@ export default class AAction {
         } else if (type === 'Sourced') {
             color = "green";
         }
-        let w = node.w || 120;
-        let h = node.h || 40;
-
-        const theta = 3.14 / 2;
+        let size = AAction.calculateBox(node);
+        let height = size.h;
+        let width = size.w;
         const group = new THREE.Group();
-        const material = new THREE.MeshLambertMaterial({color: color, opacity: 1});
-        const left = new THREE.SphereGeometry(h/2, 16, 12);
-        let leftObj = new THREE.Mesh(left,material);
-        leftObj.position.set(-(w-h)/2,0,0)
-        const right = new THREE.SphereGeometry(h/2, 16, 12);
-        let rightObj = new THREE.Mesh(right,material);
-        rightObj.position.set((w-h)/2,0,0)
-        const center = new THREE.CylinderGeometry(h/2, h/2, w - h);
-        let centerObj = new THREE.Mesh(center,material);
-        centerObj.applyMatrix4(new THREE.Matrix4().makeRotationZ(theta));
-        group.add(leftObj);
-        group.add(rightObj);
-        group.add(centerObj);
+        let cobj = new THREE.CapsuleGeometry(height / 2, width, 4, 8);
+        const material = new THREE.MeshPhysicalMaterial({
+            color: color,
+            transparent: true,
+            opacity: opacity,
+            depthTest: true,
+            depthWrite: true,
+            alphaTest: 0,
+            reflectivity: 0.2,
+            thickness: 6,
+            metalness: 0,
+            side: THREE.DoubleSide
+        });
+        let capsule = new THREE.Mesh(cobj, material);
+        capsule.applyMatrix4(new THREE.Matrix4().makeRotationZ(Math.PI / 2));
+        group.add(capsule);
 
-        let label = AText.view3D({text:node.name, color:"#ffffff", width: w-h, size: (h/2)});
-        label.position.set(0,0,(h/2) + 1);
+        let label = AText.view3D({text: node.name, color: "#ffffff", width: width, size: fontSize});
+        label.position.set(0, 0, height / 2 + 2);
         label.applyMatrix4(new THREE.Matrix4().makeScale(1, 1, 1));
         group.add(label);
 
@@ -51,9 +90,10 @@ export default class AAction {
             }
         }
         group.aid = node.id;
-        node.box = h;
+        node.box = size.r * 2;
         node.expandLink = `action/get?id=${node.id}`;
         node.expandView = AAction.viewDeep3D;
+        node.getDetail = AAction.getDetail;
 
         return group;
     }

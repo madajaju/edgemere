@@ -1,10 +1,17 @@
 import { AText, AState } from './index.js';
 
-export default class AAction {
+export default class AStateNet {
     constructor(config) {
         this.config = config;
     }
-
+    static calculateBox(statenet) {
+        let retval = 0;
+        for (let sname in statenet) {
+           let size = AState.calculateBox({name: sname});
+           retval += size.r;
+        }
+        return retval;
+    }
     static view3D(node, type) {
         let color = node.color || "green";
         if (type === 'Selected') {
@@ -15,7 +22,7 @@ export default class AAction {
             color = "green";
         }
 
-        const theta = 3.14 / 2;
+        const theta = Math.PI / 2;
         const group = new THREE.Group();
         const material = new THREE.MeshLambertMaterial({color: color, opacity: 1});
         const left = new THREE.SphereGeometry(10, 16, 12);
@@ -51,12 +58,24 @@ export default class AAction {
         node.box = 1;
         node.expandLink = `statenet/get?id=${node.id}`;
         node.expandView = AStateNet.viewDeep3D;
+        node.getDetail = AStateNet.getDetail;
+
         return group;
     }
+    static getDetail(node) {
+        $.ajax({
+            url: node.expandLink,
+            success: (results) => {
+                AStateNet.showDetail(results);
+            }
+        });
+    }
+    static showDetail(result) {
 
+    }
     static viewDeep3D(statenet,opts) {
         let data = {nodes:{}, links:[]};
-        const theta = 3.14/2;
+        const theta = Math.PI/2;
         if(statenet) {
             for(let sname in statenet) {
                 let state = statenet[sname];
@@ -66,9 +85,6 @@ export default class AAction {
                 }
                 data.nodes[opts.id+sname] = {
                     id: opts.id+sname,
-                    width: 100,
-                    height: 50,
-                    depth: 20,
                     name: sname,
                     view:AState.view3D,
                     rbox: rbox,

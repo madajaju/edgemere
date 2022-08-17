@@ -31,7 +31,7 @@ module.exports = {
             type: "stack",
             image: "cpl_dm",
             interface: {
-                da: {path:"/dm", port:3000}
+                dm: {path:"/dm", port:3000}
             },
             volumes: {
                 docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
@@ -48,7 +48,7 @@ module.exports = {
             type: "stack",
             image: "cpl_tc",
             interface: {
-                da: {path:"/dm", port:3000}
+                tc: {path:"/tc", port:3000}
             },
             volumes: {
                 docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }

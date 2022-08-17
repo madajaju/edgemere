@@ -4,9 +4,6 @@ title: Security Operator
 permalink: actor-securityoperator
 parent: All Actors
 ---
-
-{#actor-function toLowerCase() { [native code] }}
-
 # Security Operator
 
 Long description

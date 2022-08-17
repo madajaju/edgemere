@@ -1,3 +1,5 @@
+import {AObject} from './index.js';
+
 export default class A3DGraph {
     constructor(config) {
         this.config = config;
@@ -29,12 +31,12 @@ export default class A3DGraph {
         this.config.toolbar.refresh();
     }
 
-    addObjectToGraph(result) {
+    static addObjectToGraph(result) {
         let retval = {records: {}, columns: result.columns};
-        retval.records[result.record.id] = result.record;
-        AModel.processObjectsForGraph(retval, 'add');
+        retval.records[result.record._id] = result.record;
+        AObject.processObjectsForGraph(retval, 'add');
         // Select the item in the Graph and centralize on it.
-        window.graph.selectNodeByID(result.record.id);
+        window.graph.selectNodeByID(result.record._id);
     }
 }
 

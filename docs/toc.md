@@ -3,7 +3,7 @@ layout: default
 title: TOC
 permalink: toc
 ---
-Version 0.3.3 
+Version 0.3.5 
 
 ### Edgemere Overview
 * [edgemere](./edgemere/index.md)

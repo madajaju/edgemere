@@ -4,9 +4,6 @@ title: Data Scientist
 permalink: actor-datascientist
 parent: All Actors
 ---
-
-{#actor-function toLowerCase() { [native code] }}
-
 # Data Scientist
 
 Responsible for the architecture and development of data analytic models and solutions. They work closely with the Data engineer to deliver solutions to the Data Analyst.

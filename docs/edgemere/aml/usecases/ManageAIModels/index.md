@@ -43,9 +43,7 @@ Create AI Model is the description
 ![Scenario CreateAIModel](./CreateAIModel.png)
 
 #### Steps
-
 1. [aimodel create --name name1](#action-aimodel-create)
-
 
 #### Actors
 
@@ -61,9 +59,7 @@ Deploy AI Model is the description
 ![Scenario DeployAIModel](./DeployAIModel.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 
@@ -80,9 +76,7 @@ Destroy AI Model is the description
 ![Scenario DestroyAIModel](./DestroyAIModel.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 
@@ -98,9 +92,7 @@ Update AI Model is the description
 ![Scenario UpdateAIModel](./UpdateAIModel.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 

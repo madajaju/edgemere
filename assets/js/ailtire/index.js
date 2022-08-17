@@ -13,6 +13,7 @@ import AStack from './AStack.js';
 import AService from './AService.js';
 import ANetwork from './ANetwork.js';
 import AImage from './AImage.js';
+import AHandler from './AHandler.js';
 import AVolume from './AVolume.js';
 import AInterface from './AInterface.js';
 import AEnvironment from './AEnvironment.js';
@@ -34,6 +35,7 @@ export {
     AService,
     ANetwork,
     AImage,
+    AHandler,
     AVolume,
     AInterface,
     AEnvironment,

@@ -13,8 +13,26 @@ export default class AEnvironment {
             }
         });
     }
+    static default = {
+        fontSize: 20,
+        height: 100,
+        width: 50,
+        depth: 20
+    }
+
+    static calculateBox(node) {
+        let nameArray = node.name.split(/\s/).map(item => {return item.length;});
+        let maxLetters = nameArray.reduce(function(a, b) { return Math.max(a, b); }, -Infinity);
+        let height = nameArray.length*AEnvironment.default.fontSize;
+        let width = maxLetters * AEnvironment.default.fontSize + 10;
+        let depth = AEnvironment.default.depth;
+        let radius = Math.max(Math.sqrt(width*width + height*height), Math.sqrt(height*height + depth*depth), Math.sqrt(width*width + depth*depth));
+        return {w: width, h: height, d: AEnvironment.default.depth, r:radius};
+    }
+
     static view3D(node, type) {
-        let color = "blue";
+        let opacity = node.opacity || 1;
+        let color = "#ff8866";
         if (type === 'Selected') {
             color = "yellow";
         } else if (type === 'Targeted') {
@@ -22,14 +40,27 @@ export default class AEnvironment {
         } else if (type === 'Sourced') {
             color = "green";
         }
-        let geo = new THREE.BoxGeometry(100, 50, 20);
-        const material = new THREE.MeshPhongMaterial({color: color, opacity: 1});
+        let size = AEnvironment.calculateBox(node);
+        let geo = new THREE.BoxGeometry(size.w, size.h, size.d);
+        const material = new THREE.MeshPhysicalMaterial({
+            color: color,
+            transparent: true,
+            opacity: opacity,
+            depthTest: true,
+            depthWrite: true,
+            alphaTest: 0,
+            reflectivity: 0.2,
+            thickness: 6,
+            metalness: 0,
+            side: THREE.DoubleSide
+        });
+
         const retval = new THREE.Mesh(geo, material);
         retval.position.set(node.x, node.y, node.z);
         let name = node.name;
         name.replace('/','');
-        let label = AText.view3D({text:name.replace(/\//g, '\n'), color:"#ffffff", width: 50, size: 16});
-        label.position.set(0,0,11);
+        let label = AText.view3D({text:name.replace(/\//g, '\n'), color:"#ffffff", width: size.w, size: AEnvironment.default.fontSize});
+        label.position.set(0,0,(size.d/2)+1);
         retval.add(label)
         retval.aid = node.id;
         if (node.rotate) {
@@ -43,9 +74,10 @@ export default class AEnvironment {
                 retval.applyMatrix4(new THREE.Matrix4().makeRotationZ(node.rotate.z));
             }
         }
-        node.box = 50;
-        node.expandLink = `environment/get?id=${node.id}`;
+        node.box = size.r;
+        node.expandLink = `env/get?id=${node.id}`;
         node.expandView = AEnvironment.viewDeep3D;
+        node.getDetail = AEnvironment.getDetail;
 
         return retval;
     }
@@ -61,7 +93,7 @@ export default class AEnvironment {
                 name: env.id,
                 view: AEnvironment.view3D,
                 expandView: AEnvironment.viewDeep3D,
-                expandLink: `environment/get?id=${env.id}`
+                expandLink: `env/get?id=${env.id}`
             };
         }
 
@@ -70,36 +102,39 @@ export default class AEnvironment {
     }
     static viewDeep3D(obj, mode ) {
         let data = {nodes:{}, links: []};
-        console.log(obj);
         for(let sname in obj.stacks) {
-            data.nodes[sname] = {
-                id: sname,
+            let id = obj.stacks[sname].id;
+            data.nodes[id] = {
+                id: id,
                 name: sname,
                 view: AStack.view3D,
-                expandView: AStack.viewDeep3D,
-                expandLink: `deployment/get?id=${sname}`,
                 group: "deployment",
             }
         }
         for(let sname in obj.stacks) {
             let stack = obj.stacks[sname];
+            let stid = stack.id;
             for (let srname in stack.design.services) {
                 let service = stack.design.services[srname];
-                let extendedName = `${sname}.${srname}`;
+                let extendedName = `${stid}.${srname}`;
                 // Stacks are unique alread. But Service names might not be. They need to be fully qualified.
                 if(service.type === 'stack') {
-                    extendedName = service.image;
+                    // The service type as a stack is the sidecar container and points to a stack. G
+                    // Get the stack from the list of stacks.
+                    if(obj.stacks.hasOwnProperty(service.image)) {
+                        extendedName = obj.stacks[service.image].id;
+                    } else {
+                        extendedName = service.image;
+                    }
                 }
                 if(!data.nodes.hasOwnProperty(extendedName)) {
                     data.nodes[extendedName] = {
                         id: extendedName,
                         name: srname,
                         view: AService.view3D,
-                        expandView: AService.viewDeep3D,
-                        expandLink: `service/get?id=${extendedName}`,
                     }
                 }
-                data.links.push({target: extendedName, source: sname, value: 30});
+                data.links.push({target: extendedName, source: stid, value: 30});
             }
         }
         if (mode === 'add') {
@@ -108,9 +143,16 @@ export default class AEnvironment {
             window.graph.setData(data.nodes, data.links);
         }
     }
-    handle(result) {
-        AEnvironment.viewDeep3D(result, 'new');
-       let records = [];
+    static getDetail(node) {
+        $.ajax({
+            url: node.expandLink,
+            success: (results) => {
+                AEnvironment.showDetail(results);
+            }
+        });
+    }
+    static showDetail(result) {
+        let records = [];
         let cols = [
             {field: 'name', size: "20%", resizeable: true, label: "Name", sortable: true},
             {field: 'services', size: "20%", resizeable: true, label: "Services", sortable: true},
@@ -119,6 +161,9 @@ export default class AEnvironment {
             {field: 'interface', size: "20%", resizeable: true, caption: "Interface", sortable: true}
         ];
         w2ui['objlist'].columns = cols;
+        w2ui['objlist'].show.columnHeaders = true
+        w2ui['objlist'].header = result._name;
+
         for(let sname in result.stacks) {
             let stack = result.stacks[sname];
             if(stack.design) {
@@ -129,22 +174,22 @@ export default class AEnvironment {
                 if(stack.design.services) {
                     let objs = stack.design.services;
                     rec.services = Object.keys(objs).length;
-                    rec.servicesdetail = getDetails(objs, 'service/get').join(", ");
+                    rec.servicesdetail = "Services|" + getDetails(objs, 'service/get').join(", ");
                 }
                 if(stack.design.networks) {
                     let objs = stack.design.networks;
                     rec.networks = Object.keys(objs).length;
-                    rec.networksdetail = getDetails(objs, 'network/get').join(", ");
+                    rec.networksdetail = "Networks|" + getDetails(objs, 'network/get').join(", ");
                 }
                 if(stack.design.data) {
                     let objs = stack.design.data;
                     rec.data= Object.keys(objs).length;
-                    rec.datadetail = getDetails(objs, "data/get").join(", ");
+                    rec.datadetail = "Data|" + getDetails(objs, "data/get").join(", ");
                 }
                 if(stack.design.interface) {
                     let objs = stack.design.interface;
                     rec.interface = Object.keys(objs).length;
-                    rec.interfacedetail = getDetails(objs, "interface/get").join(", ");
+                    rec.interfacedetail = "Interface|" + getDetails(objs, "interface/get").join(", ");
                 }
                 records.push(rec);
             }
@@ -160,20 +205,20 @@ export default class AEnvironment {
             let drecords = [];
             let k = 0;
             for(let rname in record) {
+                k++;
                 if(rname.includes('detail')) {
-                    let values = record[rname].split('|');
-                    for (let i in values) {
-                        let value = values[i];
-                        k++;
-                        drecords.push({recid: k, name: record.name, value: value});
-                    }
+                    let [vname, value] = record[rname].split('|');
+                    drecords.push({recid: k, name: vname, value: value});
                 }
             }
-            w2ui['objdetail'].add(drecords);
+            w2ui['objdetail'].add(drecords)
             window.graph.selectNodeByID(event.recid);
         }
         w2ui['objlist'].refresh();
-
+    }
+    static handle(result) {
+        AEnvironment.viewDeep3D(result, 'new');
+        AEnvironment.showDetail(result);
     }
 }
 function getDetails(objs,link) {
@@ -182,9 +227,9 @@ function getDetails(objs,link) {
     for (let j in objs) {
         let item = objs[j];
         inum++;
-        let name = item.name || j;
-        let nlink = item.link || `${link}?id=${name}`;
-        items.push(`<span onclick="expandObject('${nlink}');">${name}</span>`);
+        let iname = item.name || j;
+        let nlink = item.link || `${link}?id=${iname}`;
+        items.push(`<span onclick="expandObject('${nlink}');">${iname}</span>`);
     }
     return items;
 }
@@ -198,7 +243,7 @@ function getDeploymentNodes(deployments) {
             text: ename,
             img: 'icon-folder',
             view: 'environment',
-            link: `environment/get?id=${ename}`,
+            link: `env/get?id=${ename}`,
             nodes: []
         };
         if (env.stacks) {

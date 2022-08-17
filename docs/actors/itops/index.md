@@ -4,9 +4,6 @@ title: IT Operations
 permalink: actor-itops
 parent: All Actors
 ---
-
-{#actor-function toLowerCase() { [native code] }}
-
 # IT Operations
 
 Responsible for the management of the infrastructure.

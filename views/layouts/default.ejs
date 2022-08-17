@@ -11,9 +11,9 @@ hostURL += ':' + global.ailtire.config.listenPort;
     <title>Edgemere</title>
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script> -->
     <link rel="stylesheet/less" type="text/css" href="styles/importer.less"/>
-    <script type="module" src="js/ckeditor.js"></script>
 
     <base href="http://<%= hostURL %><%= global.ailtire.config.urlPrefix %>/">
+    <script type="module" src="js/ckeditor.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/w2ui.js"></script>
     <link rel="stylesheet" href="styles/w2ui.css"/>
@@ -23,7 +23,6 @@ hostURL += ':' + global.ailtire.config.listenPort;
     <script src="js/3d-force-graph.js"></script>
     <script src="js/d3-octree.js"></script>
     <script src="js/d3-force-3d.js"></script>
-    <script src="js/Graph3D.js"></script>
     <script src="/socket.io/socket.io.js"></script>
 </head>
 <script type="text/javascript">
@@ -55,14 +54,8 @@ hostURL += ':' + global.ailtire.config.listenPort;
 <script type="module">
 
     import {APackage, AScenario, AUsecase, AActor, AModel, AStack, AEnvironment,AObject,A3DGraph} from './js/ailtire/index.js';
+    import {Graph3D} from './js/Graph3D.js';
     let selectedObject ={};
-    let pkgview = new APackage({});
-    let scenarioview = new AScenario({});
-    let usecaseview = new AUsecase({});
-    let actorview = new AActor({});
-    let modelview = new AModel({});
-    let stackview = new AStack({});
-    let envview = new AEnvironment({});
 
     // common colors to use based on status
     const scolor = {
@@ -81,13 +74,13 @@ hostURL += ':' + global.ailtire.config.listenPort;
     };
 
     const handlers = {
-        scenario: scenarioview.handle,
-        package: pkgview.handle,
-        usecase: usecaseview.handle,
-        actor: actorview.handle,
-        model: modelview.handle,
-        stack: stackview.handle,
-        environment: envview.handle,
+        scenario: AScenario.handle,
+        package: APackage.handle,
+        usecase: AUsecase.handle,
+        actor: AActor.handle,
+        model: AModel.handle,
+        stack: AStack.handle,
+        environment: AEnvironment.handle,
     }
     // currentView is set to null first.
     let currentView = null;
@@ -301,12 +294,11 @@ hostURL += ':' + global.ailtire.config.listenPort;
             ],
             onClick: function (event) {
                 if (event.object.link) {
-                    // w2ui['layout'].content('main', `<iframe name="mainframe" style="width: 100%; height: 100%;" src="${event.object.link}"></iframe>`, 'slide-bottom');
                     // Get the information from the link and load it in the mainpage and the preview
                     currentView = event.object.link;
                     $.ajax({
                         url: event.object.link,
-                        success: AModel.objectList
+                        success: AObject.handle
                     });
                 }
             }
@@ -352,7 +344,7 @@ hostURL += ':' + global.ailtire.config.listenPort;
                 } else if (event.object.id === 'deployments') {
                     window.graph.toolbar.setToolBar();
                     $.ajax({
-                        url: 'environment/list',
+                        url: 'env/list',
                         success: (results) => { AEnvironment.viewList3D(results.environments); },
                         error: function(req, text,err) {
                             console.log(text);
@@ -376,11 +368,14 @@ hostURL += ':' + global.ailtire.config.listenPort;
                 // Show the top level Architecture
                 if (event.object.link) {
                     // Get the information from the link and load it in the mainpage and the preview
-                    selectedObject = event.object
+                    selectedObject = event.object;
+                    currentView = event.object.view;
                     $.ajax({
                         url: event.object.link,
-                        success: handlers[event.object.view],
-                        error: function(req, text, err) {
+                        success: (results) => {
+                            handlers[event.object.view](results);
+                        },
+                        error: (req, text, err) => {
                             console.log(text);
                         }
                     });
@@ -431,33 +426,38 @@ hostURL += ':' + global.ailtire.config.listenPort;
             background: "#004488",
             width: width,
             height: height,
-            selectCallback: (id) => {
+            selectCallback: (node) => {
                 if (w2ui['objlist']) {
                     w2ui['objlist'].selectNone();
-                    w2ui['objlist'].select(id);
-                    w2ui['objdetail'].clear();
-                    let record = w2ui['objlist'].get(id);
-                    let drecords = [];
-                    let k = 0;
-                    for (let name in record) {
-                        if (name.includes('detail')) {
-                            k++;
-                            let aname = name.replace('detail', '');
-                            drecords.push({recid: k, name: aname, value: record[name]});
-                        }
+                    w2ui['objlist'].select(node.id);
+                    if(node.hasOwnProperty('getDetail')) {
+                        node.getDetail(node);
+                    } else {
+                        AObject.showDetail(node.id);
                     }
-                    w2ui['objdetail'].add(drecords);
                 }
             },
             expandObject: (link) => {
                 AObject.expandObject(link);
+            },
+            expandDesign: (node) => {
+                $.ajax({
+                    url: node.expandLink,
+                    success: (results) => {
+                        console.log("Results:", results);
+                        node.expandView(results, "add");
+                    },
+                    failed: (error) => {
+                        console.error("Error:", error);
+                    }
+                });
             }
         });
         graph.toolbar = graphPanel;
         window.graph = graph;
 
         let socket = io(window.location.origin,
-            {path: window.location.pathname + 'socket.io'}
+            {path: window.location.pathname + '/socket.io'}
         );
         socket.onAny((event, msg) => {
             showEvent(event);
@@ -475,7 +475,7 @@ hostURL += ':' + global.ailtire.config.listenPort;
                     obj = msg.obj;
                 }
                 if (currentView.includes('scenario')) {
-                    scenarioview.handleEvent(event, obj);
+                    AScenario.handleEvent(event, obj);
                 } else if (event.includes(model)) {
                     // Add the node to the list and to the graph.
                     if (obj) {

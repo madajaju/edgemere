@@ -1,12 +1,26 @@
-import {AScenario, AText, AUsecase} from './index.js';
+import {AAction, AScenario, AText, AUsecase} from './index.js';
 
 export default class AService {
     constructor(config) {
         this.config = config;
     }
+    static default = {
+        fontSize: 20,
+        height: 30,
+        width: 15,
+        depth: 15
+    }
+
+    static calculateBox(node) {
+        let height = AService.default.height;
+        let depth = AService.default.depth;
+        let width = AService.default.width;
+        let radius = Math.max(Math.sqrt(width*width + height*height), Math.sqrt(height*height + depth*depth), Math.sqrt(width*width + depth*depth));
+        return {w: width, h: height, d: depth,r: radius};
+    }
 
     static view3D(node, type) {
-        let color = node.color || "#aa4488";
+        let color = node.color || "#cc6688";
         if (type === 'Selected') {
             color = "yellow";
         } else if (type === 'Targeted') {
@@ -16,15 +30,26 @@ export default class AService {
         }
         const theta = 3.14 / 2;
         const opacity = node.opacity || 1;
+        const size = AService.calculateBox(node);
+        const material = new THREE.MeshPhysicalMaterial({
+            color: color,
+            transparent: true,
+            opacity: opacity,
+            depthTest: true,
+            depthWrite: true,
+            alphaTest: 0,
+            reflectivity: 0.2,
+            thickness: 6,
+            metalness: 0,
+            side: THREE.DoubleSide
+        });
 
-        const material = new THREE.MeshPhongMaterial({color: color, transparent: true, opacity: opacity});
-
-        const stack = new THREE.CylinderGeometry(7.5, 15, 30, 20);
+        const stack = new THREE.CylinderGeometry(size.w/2, size.d, size.h,AService.default.fontSize);
         let obj = new THREE.Mesh(stack, material);
         obj.position.set(0, 0, 0);
 
         let label = AText.view3D({text: node.name, color: "#ffffff", width: 80, size: 20});
-        label.position.set(0, 0, 14);
+        label.position.set(0, 0, size.d);
         obj.add(label);
 
         obj.position.set(node.x, node.y, node.z);
@@ -40,11 +65,23 @@ export default class AService {
             }
         }
         obj.aid = node.id;
-        node.box = 50;
+        node.box = size.r;
         node.expandLink = `service/get?id=${node.id}`;
         node.expandView = AService.viewDeep3D;
+        node.getDetail = AService.getDetail;
 
         return obj;
+    }
+    static getDetail(node) {
+        $.ajax({
+            url: node.expandLink,
+            success: (results) => {
+                AService.showDetail(results);
+            }
+        });
+    }
+    static showDetail(result) {
+
     }
 
     static viewDeep3D(obj) {

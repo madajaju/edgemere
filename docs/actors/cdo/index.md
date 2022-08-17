@@ -4,9 +4,6 @@ title: Chief Data Officer
 permalink: actor-cdo
 parent: All Actors
 ---
-
-{#actor-function toLowerCase() { [native code] }}
-
 # Chief Data Officer
 
 Responsible for setting strategy and governance of data in the organization.

@@ -1,5 +1,4 @@
-import {AAction, AAttribute, AStateNet, AText} from './index.js';
-
+import {AAction, AAttribute, AStateNet, AText, AObject} from './index.js';
 
 export default class AModel {
     static scolor = {
@@ -16,6 +15,12 @@ export default class AModel {
         selected: "#aaffaa",
         evaluated: "#ffffaa",
     };
+    static default = {
+        fontSize: 20,
+        height: 150,
+        width: 100,
+        depth: 20
+    }
 
     constructor(config) {
         this.config = config;
@@ -48,8 +53,16 @@ export default class AModel {
         });
     }
 
+    static calculateBox(node) {
+        let width = Math.max(node.name.length * AModel.default.fontSize / 2, AModel.default.width);
+        let height = AModel.default.height;
+        let depth = AModel.default.depth;
+        let radius = Math.max(Math.sqrt(width * width + height * height), Math.sqrt(height * height + depth * depth), Math.sqrt(width * width + depth * depth));
+        return {w: width, h: height, d: depth, r: radius};
+    }
+
     static view3D(node, type) {
-        let color = node.color || "orange";
+        let color = node.color || "#00bbaa";
         if (type === 'Selected') {
             color = "yellow";
         } else if (type === 'Targeted') {
@@ -57,9 +70,10 @@ export default class AModel {
         } else if (type === 'Sourced') {
             color = "green";
         }
-        let w = 100;
-        let h = 100;
-        let d = 20;
+        let size = AModel.calculateBox(node);
+        let w = size.w;
+        let h = size.h;
+        let d = size.d;
         if (node.cube) {
             w = node.cube.w;
             h = node.cube.h;
@@ -68,18 +82,21 @@ export default class AModel {
         let opacity = node.opacity || 1;
 
         let geometry = new THREE.BoxGeometry(w, h, d);
-        const material = new THREE.MeshPhongMaterial({
+
+        //const material = new THREE.MeshLambertMaterial({color: color, opacity: 1});
+        const material = new THREE.MeshPhysicalMaterial({
             color: color,
             transparent: true,
             opacity: opacity,
             depthTest: true,
             depthWrite: true,
-            flatShading: true,
-            vertexColors: true,
-            reflectivity: 1,
-            refractionRatio: 1,
+            alphaTest: 0,
+            reflectivity: 0.2,
+            thickness: 6,
+            metalness: 0,
             side: THREE.DoubleSide
         });
+
         const retval = new THREE.Mesh(geometry, material);
         retval.aid = node.id;
         // Find the Model Element and show it here.
@@ -104,39 +121,23 @@ export default class AModel {
                 retval.applyMatrix4(new THREE.Matrix4().makeRotationZ(node.rotate.z));
             }
         }
-        let label = AText.view3D({text: node.name, color: "#ffffff", width: w, size: 20 * (w / 100)});
+        let label = AText.view3D({text: node.name, color: "#ffffff", width: w, size: AModel.default.fontSize});
         // label.applyMatrix4(new THREE.Matrix4().makeScale(w/100, w/100, w/100));
-        label.position.set(0, (h / 2) - 20, (d / 2) + 1);
+        label.position.set(0, (h / 2) - AModel.default.fontSize, (d / 2) + 2);
         retval.add(label)
-        if (typeof node.box !== 'string') {
-            node.box = node.box || Math.sqrt(d * d + h * h + w * w);
-        } else {
-            node.box = null;
-        }
+        node.box = node.box || size.r;
         node.expandLink = `model/get?id=${node.id}`;
         node.expandView = AModel.viewDeep3D;
+        node.getDetail = AModel.getDetail;
         return retval;
     }
 
     static viewDeep3D(cls, mode) {
         let data = {nodes: {}, links: []};
-        let atnum = Object.keys(cls._attributes).length; // XZ on the tp of the Model
-        let acnum = Object.keys(cls.methods).length; //  YZ on right of the Model
-        let asnum = Object.keys(cls._associations).length; // YZ on left of the Model
-        let snum = 0; // XZ on the bottom of the Model.
-        if (cls.statenet) {
-            snum = Object.keys(cls.statenet).length;
-        }
-        let xnum = Math.max(acnum, snum * 3);
-        let ynum = Math.max(acnum, asnum * 3);
-        let znum = Math.max(acnum, atnum, asnum * 3, snum * 3);
+        let size = AModel.calculateDeepBox(cls);
 
-        let xfactor = Math.round(Math.sqrt(xnum) + 0.5);
-        let yfactor = Math.round(Math.sqrt(ynum) + 0.5);
-        let zfactor = Math.round((znum / xfactor) + 0.5);
-
-        const theta = 3.14 / 2;
-        let model3d = {w: xfactor * 100 + 50, h: yfactor * 100 + 25, d: zfactor * 100 + 50};
+        const theta = Math.PI / 2;
+        let model3d = {w: size.w, h: size.h, d: size.d};
         let bbox = {
             parent: cls.id,
             x: {min: -model3d.w / 2 + 20, max: model3d.w / 2 - 20},
@@ -148,11 +149,12 @@ export default class AModel {
             id: cls.id,
             name: cls.name,
             cube: model3d,
+            description: cls.description,
             opacity: 0.5,
             fx: 0,
             fy: 0,
             fz: 0,
-            box: "None",
+            box: 1, // Prevents contention with the collide algo.
             view: AModel.view3D,
             expandView: AModel.viewDeep3D,
             expandLink: `model/get?id=${cls.id}`
@@ -186,7 +188,6 @@ export default class AModel {
                     rotate: {y: -theta}
                 };
             }
-            // data.links.push({target:clsid, source: cls.id, value: 0.1, name: aname, arrow: 20, relpos: 1, curve: 0.1 });
             data.nodes[`Assoc${clsid}`] = {
                 id: `Assoc${clsid}`,
                 name: `${aname} : ${assoc.type}`,
@@ -200,7 +201,7 @@ export default class AModel {
             }
             prevID = `Assoc${clsid}`;
             row++;
-            if (row < yfactor) {
+            if (row <= size.attributes.box.rows) {
                 arbox = {
                     parent: prevID, x: {min: 0, max: 0}, // Col
                     y: {min: 0, max: 0}, z: {min: -80, max: -80}, // Row
@@ -211,7 +212,10 @@ export default class AModel {
                 col++;
                 arbox = {
                     parent: cls.id,
-                    x: {min: bbox.x.min + 70 + (col * 120), max: bbox.x.min + 70 + (col * 120)},
+                    x: {
+                        min: bbox.x.min + 70 + (col * size.attributes.stats.w.max),
+                        max: bbox.x.min + 70 + (col * size.attributes.stats.w.max)
+                    },
                     y: {min: bbox.y.max + 80, max: bbox.y.max + 80},
                     z: {min: bbox.z.max - 60, max: bbox.z.max - 60},
                 }
@@ -226,7 +230,7 @@ export default class AModel {
             };
             prevID = clsid;
             row++;
-            if (row < yfactor) {
+            if (row < size.attributes.box.rows) {
                 arbox = {
                     parent: prevID, x: {min: 0, max: 0}, // Col
                     y: {min: 0, max: 0}, z: {min: -80, max: -80}, // Row
@@ -263,7 +267,7 @@ export default class AModel {
             };
             prevID = `${cls.id}-${mname}`;
             row++;
-            if (row < yfactor) {
+            if (row < size.methods.box.rows) {
                 arbox = {
                     parent: prevID, x: {min: 0, max: 0}, // Col
                     y: {min: -100, max: -100}, // Row
@@ -302,218 +306,95 @@ export default class AModel {
             };
             AStateNet.viewDeep3D(cls.statenet, mode);
         }
-        window.graph.graph.cameraPosition({x: 0, y: 0, z: 1000}, // new position
+        window.graph.graph.cameraPosition({x: 0, y: 0, z: size.d * 2}, // new position
             {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
             3000  // ms transition duration.
         );
         window.graph.showLinks();
 
-        window.graph.toolbar.setToolBar([{
-            type: 'button', id: 'states', text: 'States', img: 'w2ui-icon-search', callback: (event) => {
-                window.graph.graph.cameraPosition({x: 0, y: 0, z: 1000}, // new position
-                    {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                    1000);
-                setTimeout(() => {
-                    window.graph.graph.cameraPosition({x: 0, y: -1000, z: 0}, // new position
+        window.graph.toolbar.setToolBar([
+            {
+                type: 'button', id: 'fit', text: 'Show All', img: 'w2ui-icon-zoom',
+                onClick: (event) => {
+                    window.graph.graph.zoomToFit(1000);
+                }
+            },
+            {
+                type: 'button', id: 'states', text: 'States', img: 'w2ui-icon-search', onClick: (event) => {
+                    window.graph.graph.cameraPosition({x: 0, y: 0, z: size.d * 2}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
                         1000);
-                }, 500);
-                setTimeout(() => {
-                    window.graph.graph.zoomToFit(1000)
-                }, 1500);
-            }
-        }, {
-            type: 'button', id: 'attributes', text: 'Attributes', img: 'w2ui-icon-search', callback: (event) => {
-                window.graph.graph.cameraPosition({x: 0, y: 0, z: 1000}, // new position
-                    {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                    1000);
-                setTimeout(() => {
-                    window.graph.graph.cameraPosition({x: 0, y: 1000, z: 0}, // new position
+                    setTimeout(() => {
+                        window.graph.graph.cameraPosition({x: 0, y: -size.h * 2, z: 0}, // new position
+                            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                            1000);
+                    }, 500);
+                    setTimeout(() => {
+                        window.graph.graph.zoomToFit(1000)
+                    }, 1500);
+                }
+            }, {
+                type: 'button', id: 'attributes', text: 'Attributes', img: 'w2ui-icon-search', onClick: (event) => {
+                    window.graph.graph.cameraPosition({x: 0, y: 0, z: size.d * 2}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
                         1000);
-                }, 500);
-                setTimeout(() => {
-                    window.graph.graph.zoomToFit(1000)
-                }, 1500);
-            }
-        }, {
-            type: 'button', id: 'methods', text: 'Method', img: 'w2ui-icon-search', callback: (event) => {
-                window.graph.graph.cameraPosition({x: 0, y: 0, z: 1000}, // new position
-                    {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                    1000);
-                setTimeout(() => {
-                    window.graph.graph.cameraPosition({x: 1000, y: 0, z: 0}, // new position
+                    setTimeout(() => {
+                        window.graph.graph.cameraPosition({x: 0, y: size.h * 2, z: 0}, // new position
+                            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                            1000);
+                    }, 500);
+                    setTimeout(() => {
+                        window.graph.graph.zoomToFit(1000)
+                    }, 1500);
+                }
+            }, {
+                type: 'button', id: 'methods', text: 'Method', img: 'w2ui-icon-search', onClick: (event) => {
+                    window.graph.graph.cameraPosition({x: 0, y: 0, z: size.d * 2}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
                         1000);
-                }, 500);
-                setTimeout(() => {
-                    window.graph.graph.zoomToFit(1000)
-                }, 1500);
-            }
-        }, {
-            type: 'button', id: 'associations', text: 'Associations', img: 'w2ui-icon-search', callback: (event) => {
-                window.graph.graph.cameraPosition({x: 0, y: 0, z: 1000}, // new position
-                    {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                    1000);
-                setTimeout(() => {
-                    window.graph.graph.cameraPosition({x: -1000, y: 0, z: 0}, // new position
+                    setTimeout(() => {
+                        window.graph.graph.cameraPosition({x: size.w * 2, y: 0, z: 0}, // new position
+                            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                            1000);
+                    }, 500);
+                    setTimeout(() => {
+                        window.graph.graph.zoomToFit(1000)
+                    }, 1500);
+                }
+            }, {
+                type: 'button',
+                id: 'associations',
+                text: 'Associations',
+                img: 'w2ui-icon-search',
+                onClick: (event) => {
+                    window.graph.graph.cameraPosition({x: 0, y: 0, z: size.d * 2}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
                         1000);
-                }, 500);
-                setTimeout(() => {
-                    window.graph.graph.zoomToFit(1000)
-                }, 1500);
+                    setTimeout(() => {
+                        window.graph.graph.cameraPosition({x: -size.w * 2, y: size.h * 1.25, z: 0}, // new position
+                            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                            1000);
+                    }, 500);
+                    setTimeout(() => {
+                        window.graph.graph.zoomToFit(1000)
+                    }, 1500);
+                }
             }
-        },]);
+        ]);
     }
 
     static objectList(result) {
-        let myForm = AModel.viewList(result);
+        let myForm = AObject.viewList(result);
         // Preload the detail with all of the model information.
-        let detail = AModel.createDetail(result);
-
-        $('#objlist').w2render(myForm.name);
-        myForm.refresh();
+        AModel.createDetail(result);
 
         AModel.processObjectsForGraph(result, 'new');
     }
 
     static expandObject(link) {
         $.ajax({
-            url: link, success: AModel.processObjectShow
+            url: link, success: AModel.getDetail
         });
-    }
-
-    static processObjectShow(result) {
-        if (!w2ui['objlist']) {
-            $('#objlist').w2grid({name: 'objlist'});
-        }
-        if (!w2ui['objdetail']) {
-            $('#objdetail').w2grid({
-                name: 'objdetail', header: 'Details', show: {header: true, columnHeaders: false}, columns: [{
-                    field: 'name',
-                    text: 'Name',
-                    size: '100px',
-                    style: 'background-color: #efefef; border-bottom: 1px solid white; padding-right: 5px;',
-                    attr: "align=right"
-                }, {
-                    field: 'value', text: 'Value', size: '100%', render: function (record) {
-                        return '<div>' + record.value + '</div>';
-                    }
-                }]
-            });
-        }
-
-        let records = [];
-        let cols = [{field: 'name', size: "20%", resizeable: true, text: "Name", sortable: true}, {
-            field: 'value',
-            size: "80%",
-            resizeable: true,
-            text: "Value",
-            sortable: true
-        },];
-        let rec = result.record;
-        let i = 0;
-        for (let j in result.columns) {
-            i++;
-            let attr = rec[j];
-            let ritem;
-            if (attr) {
-                if (attr.count) {
-                    // set the non-detaul value to the count
-                    // Now set the detail value
-                    let values = [];
-                    for (let k in attr.values) {
-                        let mvalue = attr.values[k];
-                        if (mvalue.link) {
-                            values.push(`<span onclick="expandObject('${mvalue.link}');">${mvalue.name}</span>`);
-                        } else {
-                            values.push(mvalue.name);
-                        }
-                    }
-                    ritem = {recid: rec.id, name: j, value: attr.count, detail: values.join(', ')};
-                } else {
-                    if (result.columns[j].cardinality === 1) {
-                        ritem = {
-                            recid: rec.id,
-                            name: j,
-                            value: rec[j].name,
-                            detail: `<span onclick="expandObject('${rec[j].link}');">${rec[j].name}</span>`
-                        };
-                    } else {
-                        ritem = {recid: rec.id, name: j, value: rec[j].name, detail: rec[j].name};
-                    }
-                }
-                records.push(ritem);
-            }
-        }
-        w2ui['objlist'].columns = cols;
-        w2ui['objlist'].records = records;
-        // Clear the detail list
-        w2ui['objdetail'].clear();
-        w2ui['objlist'].refresh();
-        let retval = {records: {}, columns: result.columns};
-        retval.records[result.record.id] = result.record;
-        AModel.processObjectsForGraph(retval, 'new');
-    }
-
-    static processObjectsForGraph(objs, mode) {
-        let data = {nodes: {}, links: []};
-        for (let i in objs.records) {
-            let rec = objs.records[i];
-            data.nodes[rec.id] = {
-                id: rec.id, name: rec.name.name, group: rec.type, level: rec.package, view: rec.type + '3D'
-            }
-            // Now add the nodes of the associations
-            // Go through the cols and get the associations
-            for (let j in objs.columns) {
-                let col = objs.columns[j];
-                let colname = col.name.toLowerCase();
-                // this checks if it was an association
-                if (rec[colname] && col.hasOwnProperty('cardinality')) {
-                    let obj = rec[colname];
-                    if (col.cardinality === 1) {
-                        data.nodes[obj.id] = {
-                            id: obj.id, name: obj.name, group: obj.type, level: col.package, view: obj.type + '3D'
-                        };
-                        if (col.owner || col.composition) {
-                            data.links.push({
-                                source: rec.id, target: obj.id, value: 0.1
-                            });
-                        } else {
-                            data.links.push({
-                                source: obj.id, target: rec.id, value: 0.1
-                            });
-                        }
-                    } else {
-                        for (let k in obj.values) {
-                            let aobj = obj.values[k];
-                            data.nodes[aobj.id] = {
-                                id: aobj.id,
-                                name: aobj.name,
-                                group: aobj.type,
-                                level: col.package,
-                                view: aobj.type + '3D'
-                            };
-                            if (col.owner || col.composition) {
-                                data.links.push({
-                                    source: rec.id, target: aobj.id, value: 5
-                                });
-                            } else {
-                                data.links.push({
-                                    target: rec.id, source: aobj.id, value: 5
-                                });
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        if (mode === 'add') {
-            window.graph.addData(data.nodes, data.links);
-        } else {
-            window.graph.setData(data.nodes, data.links);
-        }
     }
 
     static viewEdit(result) {
@@ -540,52 +421,6 @@ export default class AModel {
         }
         // form.refresh();
         return form;
-    }
-
-    static viewList(results) {
-        let myForm = AModel.createList(results);
-        myForm.results = results;
-        let records = [];
-        for (let i in results.records) {
-            let rec = results.records[i];
-            let color = AModel.scolor[`${rec.state.toLowerCase()}`];
-            let ritem = {
-                recid: rec.id,
-                state: rec.state,
-                statedetail: rec.state,
-                "w2ui": {"style": {0: `background-color: ${color}`}}
-            };
-            for (let j in results.columns) {
-                let attr = rec[j];
-                let colname = j;
-
-                if (attr) {
-                    if (attr.count) {
-                        // set the non-detaul value to the count
-                        ritem[j] = attr.count;
-
-                        // Now set the detail value
-                        let values = [];
-                        for (let k in attr.values) {
-                            let mvalue = attr.values[k];
-                            if (mvalue.link) {
-                                values.push(`<span onclick="AModel.expandObject('${mvalue.link}');">${mvalue.name}</span>`);
-                            } else {
-                                values.push(mvalue.name);
-                            }
-                        }
-                        ritem[j + 'detail'] = values.join(', ');
-                    } else {
-                        ritem[colname] = rec[j].name;
-                        ritem[j + 'detail'] = rec[j].name;
-                    }
-                }
-            }
-            records.push(ritem);
-        }
-        myForm.add(records);
-        myForm.refresh();
-        return myForm;
     }
 
     static viewDetail(model, records) {
@@ -722,91 +557,47 @@ export default class AModel {
         return w2ui[model.name + 'Edit'];
     }
 
-    static createList(results) {
-        let modelName = results.name + 'List';
-        let modelDetail = results.name + 'Detail';
-        if (w2ui[modelName]) {
-            return w2ui[modelName];
-        }
+    static createInfo(results) {
         if (!results.columns) {
             results.columns = []
         }
-        let size = `${100 / Object.keys(results.columns).length + 1}%`;
-        let cols = [{field: 'state', size: size, resizeable: true, text: 'State', sortable: true}];
-        for (let i in results.columns) {
-            cols.push({
-                field: results.columns[i].name.toLowerCase(),
-                size: size,
-                resizeable: true,
-                text: results.columns[i].name,
-                sortable: true
-            });
-        }
+        let i = 0;
+        let cols = [
+            {field: 'name', size: "20%", resizeable: true, label: "Name", sortable: true},
+            {field: 'value', size: "80%", resizeable: true, label: "Value", sortable: true},
+        ];
+        let retForm = w2ui['objlist'];
+        retForm.modelName = results.name;
+        retForm.columns = cols;
+        w2ui['objdetail'].clear();
+        retForm.onClick = function (event) {
+            // this.showDetail(event);
+            let record = this.get(event.recid);
+            w2ui['objdetail'].header = `${record.name} Details`;
+            w2ui['objdetail'].show.columnHeaders = true;
+            w2ui['objdetail'].clear();
+            let drecords = [];
+            let k = 0;
+            let values = record.detail.split('|');
+            for (let i in values) {
 
-        $().w2grid({
-            name: modelName, modelName: results.name, columns: cols, show: {
-                header: true,
-                columnHeaders: true,
-                toolbar: true,
-                toolbarSave: true,
-                toolbarAdd: true,
-                toolbarEdit: true,
-                toolbarDelete: true
-            }, onAdd: (event) => {
-                let myForm = w2ui[event.target];
-                let editForm = AModel.viewEdit({
-                    name: myForm.results.name, columns: myForm.results.columns, record: null
-                });
-                AModel.popup(editForm);
-            }, onEdit: (event) => {
-                let myForm = w2ui[event.target];
-                let items = myForm.getSelection();
-                let record;
-                for (let i in myForm.results.records) {
-                    if (myForm.results.records[i].id === items[0]) {
-                        record = myForm.results.records[i];
-                        break;
-                    }
+                let [name, value] = values[i].split('^');
+                if (!value) {
+                    value = name;
+                    name = record.name;
                 }
-                $.ajax({
-                    url: `${record.type}?id=${record.id}`, success: function (results) {
-                        let editForm = AModel.viewEdit({
-                            name: myForm.results.name, columns: myForm.results.columns, record: results.record
-                        });
-                        AModel.popup(editForm);
-                    }, failure: function (results) {
-                        console.error("AJAX Failed:", results);
-                    }
-                });
-                console.log("Fired AJAX");
-            }, onSave: (event) => {
-                console.log("Save");
-            }, onDelete: (event) => {
-                let items = w2ui[modelName].getSelection();
-                AModel.viewEdit(items[0]);
-            }, onSelect: (event) => {
-                let myForm = w2ui[event.target];
-                myForm.selected = event.recid;
-                let record = myForm.get(event.recid);
-                let drecords = [];
-                let k = 0;
-                for (let name in record) {
-                    if (name.includes('detail')) {
-                        k++;
-                        let aname = name.replace('detail', '');
-                        drecords.push({recid: k, name: aname, value: record[name]});
-                    }
-                }
-                let detailForm = AModel.viewDetail({name: myForm.modelName, id: event.recid}, drecords)
-                // myForm.select(event.recid);
-                window.graph.selectNodeByID(event.recid);
+                k++;
+                drecords.push({recid: k, name: name, value: value});
             }
-        });
-        return w2ui[modelName];
+            w2ui['objdetail'].add(drecords);
+            window.graph.selectNodeByID(event.recid);
+        };
+
+        retForm.refresh();
+        return retForm
     }
 
     static createDetail(results) {
-
         let modelName = results.name + 'Detail';
         if (w2ui[modelName]) {
             return w2ui[modelName];
@@ -1066,7 +857,7 @@ export default class AModel {
                     // specifying an onOpen handler instead is equivalent to specifying an onBeforeOpen handler, which would make this code execute too early and hence not deliver.
                     $('#editModelDocDialog').w2render(editForm.name);
                     editForm.editors = {documentation: null, summary: null}
-                    ClassicEditor.create(document.querySelector('#documentation'), { })
+                    ClassicEditor.create(document.querySelector('#documentation'), {})
                         .then(editor => {
                             editForm.editors.documentation = editor;
                         });
@@ -1078,17 +869,136 @@ export default class AModel {
             }
         })
     }
-    handle(result) {
+
+    static handle(result) {
         AModel.viewDeep3D(result, 'new');
-        let records = [];
-        AModel.viewDetail({name: result.name}, result);
-        if (!result.name) {
-            AModel.viewList({name: result.name});
-        } else {
-            AModel.viewList(result);
-        }
-        AModel.viewEdit({name: result.name}, result);
+        AModel.showDetail(result);
     }
+
+    static calculateGroupBox(items, fn) {
+        let asize = {
+            stats: {
+                w: {sum: 0, max: 0},
+                h: {sum: 0, max: 0},
+                d: {sum: 0, max: 0},
+                r: {sum: 0, max: 0},
+                area: 0,
+                num: 0,
+            }, set: [],
+            box: {w: 0, h: 0, d: 0, rows: 0, cols: 0},
+        };
+
+        for (let aname in items) {
+            let size = fn({name: items[aname].name});
+            asize.set.push(size);
+            asize.stats.w.sum += size.w;
+            asize.stats.w.max = Math.max(size.w, asize.stats.w.max);
+            asize.stats.d.sum += size.d;
+            asize.stats.d.max = Math.max(size.d, asize.stats.d.max);
+            asize.stats.h.sum += size.h;
+            asize.stats.h.max = Math.max(size.h, asize.stats.h.max);
+            asize.stats.r.sum += size.r;
+            asize.stats.r.max = Math.max(size.w, asize.stats.r.max);
+            asize.stats.area += size.w * size.h;
+            asize.stats.num++;
+        }
+        asize.box.rows = Math.round(Math.sqrt(asize.stats.num) + 0.5);
+        asize.box.cols = Math.round((asize.stats.num / asize.box.rows) + 0.5);
+        asize.box.w = Math.max(Math.sqrt(asize.stats.area), asize.stats.r.max * asize.box.cols);
+        asize.box.h = Math.max(Math.sqrt(asize.stats.area), asize.stats.r.max * asize.box.rows);
+        return asize;
+    }
+
+    static getDetail(node) {
+        $.ajax({
+            url: node.expandLink,
+            success: (results) => {
+                AModel.showDetail(results);
+            }
+        });
+    }
+
+    static showDetail(results) {
+        let myForm = AModel.createInfo(results);
+        myForm.results = results;
+        let records = [];
+        let i = 0;
+        records.push({recid: i++, name: 'name', value: results.name, detail: results.name});
+        records.push({recid: i++, name: 'Description', value: results.description, detail: results.description});
+        records.push({recid: i++, name: 'Package', value: results.package, detail: results.package});
+
+        let attDetails = getAttributeDetails(results._attributes);
+        records.push({recid: i++, name: 'Attributes', value: attDetails.length, detail: attDetails.join('|')});
+        let assocDetails = getAssocDetails(results._associations);
+        records.push({recid: i++, name: 'Associations', value: assocDetails.length, detail: assocDetails.join('|')});
+        let methodDetails = getMethodDetails(results.methods);
+        records.push({recid: i++, name: 'Methods', value: methodDetails.length, detail: methodDetails.join('|')});
+
+        myForm.records = records;
+        myForm.refresh();
+        return myForm;
+    }
+
+    static calculateDeepBox(node) {
+        let aitems = {};
+        for (let name in node._attributes) {
+            aitems[name] = {name: `${name} : ${node._attributes[name].type}`}
+        }
+        ;
+        for (let name in node._associations) {
+            aitems[name] = {name: `${name} : ${node._associations[name].type}`}
+        }
+        ;
+
+        let abox = AModel.calculateGroupBox(aitems, AAttribute.calculateBox);
+        // let sbox = AStateNet.calculateBox(node.statenet);
+        let sbox = {box: {w: 0, h: 0}};
+        let mbox = AModel.calculateGroupBox(node.methods, AAction.calculateBox);
+
+        const wnum = Math.max(abox.box.w, sbox.box.w);
+        const hnum = mbox.box.h;
+        const dnum = Math.max(abox.box.h, sbox.box.h, mbox.box.w);
+
+        const radius = Math.max(Math.sqrt(wnum ** 2 + hnum ** 2), Math.sqrt(hnum ** 2 + dnum ** 2), Math.sqrt(wnum ** 2 + dnum ** 2));
+        return {w: wnum, h: hnum, d: dnum, r: radius, attributes: abox, states: sbox, methods: mbox};
+    }
+
+}
+
+function getAttributeDetails(attributes) {
+    let items = [];
+    let i = 0;
+    for (let j in attributes) {
+        let item = attributes[j];
+        i++;
+        let name = `${j} : ${item.type}`;
+        items.push(`${name}^${item.description}`);
+    }
+    return items;
+}
+
+function getMethodDetails(methods) {
+    let items = [];
+    let i = 0;
+    for (let j in methods) {
+        let item = methods[j];
+        i++;
+        let name = `${j}`;
+        items.push(`${name}^${item.description}`);
+    }
+    return items;
+}
+
+function getAssocDetails(assocs) {
+    let items = [];
+    let i = 0;
+    for (let j in assocs) {
+        let item = assocs[j];
+        i++;
+        let name = `${j}:${item.type}`;
+        items.push(`${name}^[${item.cardinality}] - ${item.description}`);
+    }
+    return items;
 }
 
 function getEditForm(record, setURL) {

@@ -4,9 +4,25 @@ export default class AVolume {
     constructor(config) {
         this.config = config;
     }
+    static default = {
+        fontSize: 15,
+        height: 40,
+        width: 40,
+        depth: 40,
+    }
+
+    static calculateBox(node) {
+        let nameArray = node.name.split(/\s/).map(item => {return item.length;});
+        let maxLetters = nameArray.reduce(function(a, b) { return Math.max(a, b); }, -Infinity);
+        let height = nameArray.length*AVolume.default.fontSize*2;
+        let width = maxLetters * (AVolume.default.fontSize/2) + 10;
+        let depth = width;
+        let radius = Math.max(Math.sqrt(width*width + height*height), Math.sqrt(height*height + depth*depth), Math.sqrt(width*width + depth*depth));
+        return {w: width, h: height, d: depth, r: radius};
+    }
 
     static view3D(node, type) {
-        let color = node.color || "#00aaaa";
+        let color = node.color || "#44aa88";
         if (type === 'Selected') {
             color = "yellow";
         } else if (type === 'Targeted') {
@@ -15,15 +31,27 @@ export default class AVolume {
             color = "green";
         }
         const opacity = node.opacity || 1;
+        const size = AVolume.calculateBox(node);
 
-        const material = new THREE.MeshPhongMaterial({color: color, transparent: true, opacity: opacity});
+        const material = new THREE.MeshPhysicalMaterial({
+            color: color,
+            transparent: true,
+            opacity: opacity,
+            depthTest: true,
+            depthWrite: true,
+            alphaTest: 0,
+            reflectivity: 0.2,
+            thickness: 6,
+            metalness: 0,
+            side: THREE.DoubleSide
+        });
 
-        const stack = new THREE.CylinderGeometry(40, 40, 30, 20);
+        const stack = new THREE.CylinderGeometry(size.w/2, size.w/2, size.h, 20);
         let obj = new THREE.Mesh(stack, material);
         obj.position.set(0, 0, 0);
 
-        let label = AText.view3D({text: node.name, color: "#ffffff", width: 120, size: 20});
-        label.position.set(0, 0, 41);
+        let label = AText.view3D({text: node.name, color: "#ffffff", width: size.w, size: AVolume.default.fontSize});
+        label.position.set(0, 0, size.w/2);
         obj.add(label);
 
         obj.position.set(node.x, node.y, node.z);
@@ -39,13 +67,25 @@ export default class AVolume {
             }
         }
         obj.aid = node.id;
-        node.box = 120;
-        node.expandLink = `actor/get?id=${node.id}`;
+        node.box = size.r;
+        node.expandLink = `volume/get?id=${node.id}`;
         node.expandView = AVolume.viewDeep3D;
+        node.getDetail = AVolume.getDetail;
 
         return obj;
     }
 
+    static getDetail(node) {
+        $.ajax({
+            url: node.expandLink,
+            success: (results) => {
+                AVolume.showDetail(results);
+            }
+        });
+    }
+    static showDetail(result) {
+
+    }
     static viewDeep3D(obj) {
 
     }

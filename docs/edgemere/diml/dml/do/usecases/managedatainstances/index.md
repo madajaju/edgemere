@@ -40,9 +40,7 @@ Create Data Instance is the description
 ![Scenario CreateDataInstance](./CreateDataInstance.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 
@@ -57,9 +55,7 @@ Find Data Instance is the description
 ![Scenario FindDataInstance](./FindDataInstance.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 
@@ -74,9 +70,7 @@ Remove Data Instance is the description
 ![Scenario RemoveDataInstance](./RemoveDataInstance.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 

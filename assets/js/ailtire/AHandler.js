@@ -1,29 +1,29 @@
 import { AText } from './index.js';
 
-export default class AInterface {
+export default class AHandler {
     constructor(config) {
         this.config = config;
     }
 
     static default = {
         fontSize: 16,
-        height: 40,
-        width: 40,
-        depth: 30
+        height: 80,
+        width: 20,
+        depth: 20
     }
 
     static calculateBox(node) {
-        let height = AInterface.default.height;
-        let width = AInterface.default.width;
-        let depth = AInterface.default.depth;
-        let radius = width/2;
+        let height = AHandler.default.height;
+        let width = AHandler.default.width;
+        let depth = AHandler.default.depth;
+        let radius = Math.max(Math.sqrt(width*width + height*height), Math.sqrt(height*height + depth*depth), Math.sqrt(width*width + depth*depth));
         return {w: width, h: height, d: depth, r:radius};
     }
 
     static view3D(node, type) {
         let opacity = node.opacity || 1;
-        let size = AInterface.calculateBox(node);
-        let color = "#0088FF";
+        let size = AHandler.calculateBox(node);
+        let color = "#7700cc";
         if (type === 'Selected') {
             color = "yellow";
         } else if (type === 'Targeted') {
@@ -31,7 +31,9 @@ export default class AInterface {
         } else if (type === 'Sourced') {
             color = "green";
         }
-        let geo = new THREE.SphereGeometry(size.w/2);
+        const theta = Math.PI / 2;
+        let geometry = new THREE.ConeGeometry(size.w, size.h/2);
+        geometry.applyMatrix4(new THREE.Matrix4().makeRotationX(theta));
         const material = new THREE.MeshPhysicalMaterial({
             color: color,
             transparent: true,
@@ -44,8 +46,9 @@ export default class AInterface {
             metalness: 0,
             side: THREE.DoubleSide
         });
-        const item1 = new THREE.Mesh(geo, material);
-        let geo2 = new THREE.CylinderGeometry(size.w/4, size.w/4, size.d);
+        const box = new THREE.Mesh(geometry, material);
+        let geo2 = new THREE.CylinderGeometry(size.w/4, size.w/4, size.h/2);
+        geo2.applyMatrix4(new THREE.Matrix4().makeRotationX(theta));
         const material2 = new THREE.MeshPhysicalMaterial({
             color: color,
             transparent: true,
@@ -59,34 +62,23 @@ export default class AInterface {
             side: THREE.DoubleSide
         });
         const item2 = new THREE.Mesh(geo2, material2);
-        item2.position.set(0, -size.d/2, 0);
+        item2.position.set(0, 0, size.w);
         const group = new THREE.Group();
-        group.add(item1);
+        group.add(box);
         group.add(item2);
+        group.applyMatrix4(new THREE.Matrix4().makeRotationY(-theta));
         group.position.set(node.x, node.y, node.z);
-        let name = node.name;
-        name.replace('/','');
-        let label = AText.view3D({text:name.replace(/\//g, '\n'), color:"#ffffff", width: 50, size: AInterface.default.fontSize});
-        label.applyMatrix4(new THREE.Matrix4().makeRotationX(-Math.PI/2));
-        label.position.set(0,(size.w/2)+1,0);
-        group.add(label)
+
+        let label = AText.view3D({text:node.name.replace(/\./g, '\n'), color:"#ffffff", width: 200, size: 12});
+        label.position.set(0,0, size.d+3);
+        label.applyMatrix4(new THREE.Matrix4().makeRotationY(-2*theta));
+        group.add(label);
+
         group.aid = node.id;
-        if (node.rotate) {
-            if (node.rotate.x) {
-                group.applyMatrix4(new THREE.Matrix4().makeRotationX(node.rotate.x));
-            }
-            if (node.rotate.y) {
-                group.applyMatrix4(new THREE.Matrix4().makeRotationY(node.rotate.y));
-            }
-            if (node.rotate.z) {
-                group.applyMatrix4(new THREE.Matrix4().makeRotationZ(node.rotate.z));
-            }
-        }
-        group.aid = node.id;
-        node.box = size.r;
-        node.expandLink = `interface/get?id=${node.id}`;
-        node.expandView = AInterface.viewDeep3D;
-        node.getDetail = AInterface.getDetail;
+        node.box = node.box || size.width;
+        node.expandLink = `handler/get?id=${node.id}`;
+        node.expandView = AHandler.viewDeep3D;
+        node.getDetail = AHandler.getDetail;
 
         return group;
     }
@@ -94,7 +86,7 @@ export default class AInterface {
         $.ajax({
             url: node.expandLink,
             success: (results) => {
-                AInterface.showDetail(results);
+                AHandler.showDetail(results);
             }
         });
     }

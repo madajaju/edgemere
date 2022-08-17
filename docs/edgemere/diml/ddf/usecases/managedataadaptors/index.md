@@ -40,9 +40,7 @@ Attach Data Blue Print is the description
 ![Scenario AttachDataBluePrint](./AttachDataBluePrint.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 
@@ -57,9 +55,7 @@ Create Data Adaptor is the description
 ![Scenario CreateDataAdaptor](./CreateDataAdaptor.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 
@@ -74,9 +70,7 @@ Update Data Adaptor is the description
 ![Scenario UpdateDataAdaptor](./UpdateDataAdaptor.png)
 
 #### Steps
-
 1. To Be Defined
-
 
 #### Actors
 

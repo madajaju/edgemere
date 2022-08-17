@@ -4,9 +4,6 @@ title: DevOps Engineer
 permalink: actor-devops
 parent: All Actors
 ---
-
-{#actor-function toLowerCase() { [native code] }}
-
 # DevOps Engineer
 
 Responsible for the management of the automation of the delivery of applications and solutions in the organization.

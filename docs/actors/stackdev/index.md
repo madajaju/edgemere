@@ -4,9 +4,6 @@ title: Stack Developer
 permalink: actor-stackdev
 parent: All Actors
 ---
-
-{#actor-function toLowerCase() { [native code] }}
-
 # Stack Developer
 
 Responsible for developing reusable micro-services and application stacks in the organization.

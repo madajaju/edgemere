@@ -4,9 +4,6 @@ title: Application Developer
 permalink: actor-applicationdeveloper
 parent: All Actors
 ---
-
-{#actor-function toLowerCase() { [native code] }}
-
 # Application Developer
 
 The Application Developer work in coordination with DevOps to manage services, applications and workloads through the development pipeline.

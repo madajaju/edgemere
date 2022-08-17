@@ -1,15 +1,69 @@
-import {AText} from './index.js';
+import {AText, A3DGraph} from './index.js';
 
 export default class AObject {
+    static scolor = {
+        started: "#aaffff",
+        create: "#aaffff",
+        completed: "#aaffaa",
+        failed: "#ffaaaa",
+        enabled: "#aaffaa",
+        disable: "#aaaaaa",
+        rejected: "#ffaaaa",
+        accepted: "#aaffff",
+        update: "#aaffff",
+        needed: "#ffbb44",
+        selected: "#aaffaa",
+        evaluated: "#ffffaa",
+    };
+
     constructor(config) {
         this.config = config;
     }
+
     static showList() {
 
     }
+
     static expandObject(link) {
         expandObjectOnGraph(link);
     }
+
+    static showDetail(id) {
+        let myListForm = w2ui['objlist'];
+        if (!myListForm) {
+            return;
+        }
+        let aresults = myListForm.results;
+        if(!aresults) {
+            return;
+        }
+
+        for (let i in aresults.records) {
+            if (aresults.records[i]._id === id) {
+                let results = aresults.records[i];
+                w2ui['objdetail'].header = `${results._name} Details`;
+                w2ui['objdetail'].show.columnHeaders = true;
+                w2ui['objdetail'].clear();
+
+                let drecords = [];
+                let k = 0;
+                for (let i in results) {
+                    let name = i;
+                    let value = results[i];
+                    if (results[i].hasOwnProperty('count')) {
+                        value = results[i].count;
+                    } else if (results[i].hasOwnProperty('name')) {
+                        value = results[i].name;
+                    }
+                    k++;
+                    drecords.push({recid: k, name: name, value: value});
+                }
+                w2ui['objdetail'].records = drecords;
+                w2ui['objdetail'].refresh();
+            }
+        }
+    }
+
     static addObject(obj, creator) {
         // Add the object to the list
         let ritem = {recid: obj._attributes.id};
@@ -105,21 +159,104 @@ export default class AObject {
             }
         }
         // If there is a creator and there is not an rbox then add an rbox to the creator.
-        if(creator) {
+        if (creator) {
             let rbox = {
-                parent:creator,
-                x:{min:-200,max: 200},
-                z:{min:-400,max:0},
-                y: {min:-200, max:200}
+                parent: creator,
+                x: {min: -200, max: 200},
+                z: {min: -1000, max: -700},
+                y: {min: -200, max: 200}
             }
 
-            for(let i in data.nodes) {
-                if(!data.nodes[i].rbox) {
+            for (let i in data.nodes) {
+                if (!data.nodes[i].rbox) {
                     data.nodes[i].rbox = rbox;
                 }
             }
         }
         window.graph.addData(data.nodes, data.links);
+    }
+
+    static createList(results) {
+        let cols = [
+            {field: 'state', size: "10%", resizeable: true, label: "State", sortable: true},
+            {field: 'id', size: "20%", resizeable: true, label: "ID", sortable: true},
+            {field: 'name', size: "70%", resizeable: true, label: "Object Name", sortable: true},
+        ];
+        let retForm = w2ui['objlist'];
+        retForm.modelName = results.name;
+        retForm.columns = cols;
+        retForm.header = `${results.name} Objects (${results.records.length})`;
+        retForm.show.columnHeaders = true;
+        retForm.show.header = true;
+        w2ui['objdetail'].clear();
+        retForm.onClick = function (event) {
+            // The detail is loaded in the showDetail which is called after the node is selected in the graph.
+            // this happens in the callback function for selecting a node.
+            window.graph.selectNodeByID(event.recid);
+        };
+
+        retForm.refresh();
+        return retForm
+    }
+
+    static viewList(results) {
+        let myForm = AObject.createList(results);
+        myForm.results = results;
+        let records = [];
+        for (let i in results.records) {
+            let rec = results.records[i];
+            let color = AObject.scolor[`${rec._state.toLowerCase()}`];
+            let ritem = {
+                recid: rec._id,
+                id: rec._id,
+                state: rec._state,
+                name: rec._name,
+                statedetail: rec._state,
+                results: rec,
+                "w2ui": {"style": {0: `background-color: ${color}`}}
+            };
+            /*
+            for (let j in results.columns) {
+                let attr = rec[j];
+                let colname = j;
+                if (attr) {
+                    if (attr.count) {
+                        // set the non-detaul value to the count
+                        ritem[j] = attr.count;
+
+                        // Now set the detail value
+                        let values = [];
+                        for (let k in attr.values) {
+                            let mvalue = attr.values[k];
+                            if (mvalue.link) {
+                                values.push(`<span onclick="AObject.expandObject('${mvalue.link}');">${mvalue.name}</span>`);
+                            } else {
+                                values.push(mvalue.name);
+                            }
+                        }
+                        ritem[j + 'detail'] = values.join(', ');
+                    } else {
+                        ritem[colname] = rec[j].name;
+                        ritem[j + 'detail'] = rec[j].name;
+                    }
+                }
+            }
+             */
+            records.push(ritem);
+        }
+        myForm.records = records;
+        myForm.refresh();
+        return myForm;
+    }
+
+    static viewDetail(model, records) {
+        let myForm = AObject.createDetail(model);
+        $('#objdetail').w2render(myForm.name);
+        myForm.clear();
+        myForm.model = model.name;
+        myForm.oid = model.id;
+        myForm.add(records);
+        myForm.refresh();
     }
 
     static view3D(node, type) {
@@ -177,6 +314,93 @@ export default class AObject {
 
     static viewDeep3D(obj) {
 
+    }
+
+    static handle(results) {
+        window.graph.setDuplicateLink(false);
+        AObject.processObjectsForGraph(results, 'new');
+        AObject.viewList(results);
+    }
+
+    static processObjectsForGraph(objs, mode) {
+        let data = {nodes: {}, links: []};
+        for (let i in objs.records) {
+            let rec = objs.records[i];
+            // Fix the problem with naming objects.
+            if (!rec.hasOwnProperty('name')) {
+                rec._name = rec._id;
+            }
+            ;
+            data.nodes[rec._id] = {
+                id: rec._id,
+                name: rec._name,
+                group: rec._type,
+                level: rec._package,
+                view: rec._type + '3D',
+                link: rec._link
+            }
+            // Now add the nodes of the associations
+            // Go through the cols and get the associations
+            for (let j in objs.columns) {
+                let col = objs.columns[j];
+                let colname = col.name.toLowerCase();
+                // this checks if it was an association
+                if (rec[colname] && col.hasOwnProperty('cardinality')) {
+                    let obj = rec[colname];
+                    if (col.cardinality === 1) {
+                        if (obj._name.length < 1) {
+                            obj._name = obj._id;
+                        }
+                        data.nodes[obj._id] = {
+                            id: obj._id,
+                            name: obj._name,
+                            group: obj._type,
+                            level: col.package,
+                            view: obj._type + '3D',
+                            link: obj._link
+                        };
+                        if (col.owner || col.composition) {
+                            data.links.push({
+                                source: rec._id, target: obj._id, value: 0.1
+                            });
+                        } else {
+                            data.links.push({
+                                source: obj._id, target: rec._id, value: 0.1
+                            });
+                        }
+                    } else {
+                        for (let k in obj.values) {
+                            let aobj = obj.values[k];
+                            if (aobj._name.length < 1) {
+                                aobj._name = aobj.id;
+                            }
+                            data.nodes[aobj._id] = {
+                                id: aobj._id,
+                                name: aobj._name,
+                                group: aobj._type,
+                                level: col.package,
+                                view: aobj._type + '3D',
+                                link: aobj._link
+                            };
+                            if (col.owner || col.composition) {
+                                data.links.push({
+                                    source: rec._id, target: aobj._id, value: 5
+                                });
+                            } else {
+                                data.links.push({
+                                    target: rec._id, source: aobj._id, value: 5
+                                });
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if (mode === 'add') {
+            window.graph.addData(data.nodes, data.links);
+        } else {
+            window.graph.setData(data.nodes, data.links);
+        }
     }
 }
 
