@@ -17,7 +17,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "ailtire": "latest",
+    "ailtire": "0.4.5",
     "mocha": "^9.2.2",
     "systeminformation": "^5.11.8"
   }
