@@ -1,5 +1,5 @@
 {
-  "name": "_cpl_deviceagent",
+  "name": "edgemere_cpl_deviceagent",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
