@@ -18,7 +18,7 @@
   "license": "MIT",
   "dependencies": {
     "ailtire": "latest",
-    "mocha": "^9.2.2",
+    "mocha": "^10.0.0",
     "systeminformation": "latest"
   }
 }
