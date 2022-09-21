@@ -2,221 +2,261 @@
 left to right direction
 
 
-
-state "Data Engineer" as DataEngineer {
-    state "Manage Data Adaptors" as DataEngineerManageDataAdaptors {
-    }
-}
-state "edgemere" as edgemere #ffcc88 {
-state "diml" as edgemerediml #ffcc88 {
-state "ddf" as edgemeredimlddf #ffcc88 {
-state "datadaptor" as edgemeredimlddfdatadaptor #ffcc88 {
-state "list" as edgemeredimlddfdatadaptorlist #ffcc88 {
-}
-}
+    package "edgemere" as edgemere {
+package "diml" as edgemerediml {
+package "ddf" as edgemeredimlddf #ffcc88 {
+ component "blueprint" as edgemeredimlddfblueprint
+ interface "attach" as edgemeredimlddfblueprintattach
+edgemeredimlddfblueprint -- edgemeredimlddfblueprintattach
 }
 }
 }
 
-DataEngineerManageDataAdaptors --> edgemeredimlddfdatadaptorlist
-
-state "Data Scientist" as DataScientist {
-    state "Manage Data Adaptors" as DataScientistManageDataAdaptors {
-    }
-}
-state "edgemere" as edgemere #ffcc88 {
-state "diml" as edgemerediml #ffcc88 {
-state "ddf" as edgemeredimlddf #ffcc88 {
-state "datadaptor" as edgemeredimlddfdatadaptor #ffcc88 {
-state "list" as edgemeredimlddfdatadaptorlist #ffcc88 {
-}
-}
+    
+    package "edgemere" as edgemere {
+package "diml" as edgemerediml {
+package "ddf" as edgemeredimlddf #ffcc88 {
+ component "data" as edgemeredimlddfdata
+ interface "create" as edgemeredimlddfdatacreate
+edgemeredimlddfdata -- edgemeredimlddfdatacreate
 }
 }
 }
 
-DataScientistManageDataAdaptors --> edgemeredimlddfdatadaptorlist
+    
+    package "edgemere" as edgemere {
+package "diml" as edgemerediml {
+package "ddf" as edgemeredimlddf #ffcc88 {
+ component "data" as edgemeredimlddfdata
+ interface "govern" as edgemeredimlddfdatagovern
+edgemeredimlddfdata -- edgemeredimlddfdatagovern
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "diml" as edgemerediml {
+package "ddf" as edgemeredimlddf #ffcc88 {
+package "data" as edgemeredimlddfdata {
+ component "source" as edgemeredimlddfdatasource
+ interface "name" as edgemeredimlddfdatasourcename
+edgemeredimlddfdatasource -- edgemeredimlddfdatasourcename
+}
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "diml" as edgemerediml {
+package "ddf" as edgemeredimlddf #ffcc88 {
+ component "dataadaptor" as edgemeredimlddfdataadaptor
+ interface "create" as edgemeredimlddfdataadaptorcreate
+edgemeredimlddfdataadaptor -- edgemeredimlddfdataadaptorcreate
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "diml" as edgemerediml {
+package "ddf" as edgemeredimlddf #ffcc88 {
+ component "dataadaptor" as edgemeredimlddfdataadaptor
+ interface "update" as edgemeredimlddfdataadaptorupdate
+edgemeredimlddfdataadaptor -- edgemeredimlddfdataadaptorupdate
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "diml" as edgemerediml {
+package "ddf" as edgemeredimlddf #ffcc88 {
+ component "datablueprint" as edgemeredimlddfdatablueprint
+ interface "create" as edgemeredimlddfdatablueprintcreate
+edgemeredimlddfdatablueprint -- edgemeredimlddfdatablueprintcreate
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "diml" as edgemerediml {
+package "ddf" as edgemeredimlddf #ffcc88 {
+ component "datablueprint" as edgemeredimlddfdatablueprint
+ interface "deploy" as edgemeredimlddfdatablueprintdeploy
+edgemeredimlddfdatablueprint -- edgemeredimlddfdatablueprintdeploy
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "diml" as edgemerediml {
+package "ddf" as edgemeredimlddf #ffcc88 {
+ component "datablueprint" as edgemeredimlddfdatablueprint
+ interface "list" as edgemeredimlddfdatablueprintlist
+edgemeredimlddfdatablueprint -- edgemeredimlddfdatablueprintlist
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "diml" as edgemerediml {
+package "ddf" as edgemeredimlddf #ffcc88 {
+ component "datacatalog" as edgemeredimlddfdatacatalog
+ interface "list" as edgemeredimlddfdatacataloglist
+edgemeredimlddfdatacatalog -- edgemeredimlddfdatacataloglist
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "diml" as edgemerediml {
+package "ddf" as edgemeredimlddf #ffcc88 {
+ component "datadaptor" as edgemeredimlddfdatadaptor
+ interface "list" as edgemeredimlddfdatadaptorlist
+edgemeredimlddfdatadaptor -- edgemeredimlddfdatadaptorlist
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "diml" as edgemerediml {
+package "ddf" as edgemeredimlddf #ffcc88 {
+ component "datapipeline" as edgemeredimlddfdatapipeline
+ interface "list" as edgemeredimlddfdatapipelinelist
+edgemeredimlddfdatapipeline -- edgemeredimlddfdatapipelinelist
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "diml" as edgemerediml {
+package "ddf" as edgemeredimlddf #ffcc88 {
+ component "dataprocedure" as edgemeredimlddfdataprocedure
+ interface "list" as edgemeredimlddfdataprocedurelist
+edgemeredimlddfdataprocedure -- edgemeredimlddfdataprocedurelist
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "diml" as edgemerediml {
+package "ddf" as edgemeredimlddf #ffcc88 {
+ component "datasource" as edgemeredimlddfdatasource
+ interface "simulate" as edgemeredimlddfdatasourcesimulate
+edgemeredimlddfdatasource -- edgemeredimlddfdatasourcesimulate
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "diml" as edgemerediml {
+package "ddf" as edgemeredimlddf #ffcc88 {
+ component "metadata" as edgemeredimlddfmetadata
+ interface "list" as edgemeredimlddfmetadatalist
+edgemeredimlddfmetadata -- edgemeredimlddfmetadatalist
+}
+}
+}
+
+    
 
 
-    state "Data Scientist" as DataScientist {
-        state "Manage Data Adaptors" as DataScientistManageDataAdaptors {
-            state "Attach Data Blue Print" as DataScientistManageDataAdaptorsAttachDataBluePrint {
-            }
+
+
+
+
+
+        rectangle "Manage Data" as ManageData #ffffaa {
+            ("Destroy Data")/ as DataStewardManageDataDestroyData
         }
-    }
     
-    DataScientistManageDataAdaptorsAttachDataBluePrint --> Null
+    edgemeredimlddfdatasourcename <-- DataStewardManageDataDestroyData
     
- 
-    state "Data Engineer" as DataEngineer {
-        state "Manage Data Adaptors" as DataEngineerManageDataAdaptors {
-            state "Create Data Adaptor" as DataEngineerManageDataAdaptorsCreateDataAdaptor {
-            }
+        rectangle "Manage Data" as ManageData #ffffaa {
+            ("Egress Data")/ as DataStewardManageDataEgressData
         }
-    }
     
-    DataEngineerManageDataAdaptorsCreateDataAdaptor --> Null
+    edgemeredimlddfdatasourcename <-- DataStewardManageDataEgressData
     
- 
-    state "DataEngineer" as DataEngineer {
-        state "Manage Data Adaptors" as DataEngineerManageDataAdaptors {
-            state "Update Data Adaptor" as DataEngineerManageDataAdaptorsUpdateDataAdaptor {
-            }
+        rectangle "Manage Data" as ManageData #ffffaa {
+            ("Ingest Data")/ as DataStewardManageDataIngestData
         }
-    }
     
-    DataEngineerManageDataAdaptorsUpdateDataAdaptor --> Null
+    edgemeredimlddfdatasourcename <-- DataStewardManageDataIngestData
     
- 
- 
-state "Data Engineer" as DataEngineer {
-    state "Manage Data Blue Prints" as DataEngineerManageDataBluePrints {
-    }
-}
-state "edgemere" as edgemere #ffcc88 {
-state "diml" as edgemerediml #ffcc88 {
-state "ddf" as edgemeredimlddf #ffcc88 {
-state "datablueprint" as edgemeredimlddfdatablueprint #ffcc88 {
-state "list" as edgemeredimlddfdatablueprintlist #ffcc88 {
-}
-}
-}
-}
-}
 
-DataEngineerManageDataBluePrints --> edgemeredimlddfdatablueprintlist
-
-state "Data Scientist" as DataScientist {
-    state "Manage Data Blue Prints" as DataScientistManageDataBluePrints {
-    }
-}
-state "edgemere" as edgemere #ffcc88 {
-state "diml" as edgemerediml #ffcc88 {
-state "ddf" as edgemeredimlddf #ffcc88 {
-state "datablueprint" as edgemeredimlddfdatablueprint #ffcc88 {
-state "list" as edgemeredimlddfdatablueprintlist #ffcc88 {
-}
-}
-}
-}
-}
-
-DataScientistManageDataBluePrints --> edgemeredimlddfdatablueprintlist
-
-
-    state "DataScientist" as DataScientist {
-        state "Manage Data Blue Prints" as DataScientistManageDataBluePrints {
-            state "Create Blue Print" as DataScientistManageDataBluePrintsCreateBluePrint {
-            }
+        rectangle "Manage Data Adaptors" as ManageDataAdaptors #ffffaa {
+            ("Attach Data Blue Print")/ as DataScientistManageDataAdaptorsAttachDataBluePrint
         }
-    }
     
-    DataScientistManageDataBluePrintsCreateBluePrint --> Null
+    edgemeredimlddfblueprintattach <-- DataScientistManageDataAdaptorsAttachDataBluePrint
     
- 
- 
-state "Data Engineer" as DataEngineer {
-    state "Manage Data Pipeline" as DataEngineerManageDataPipeline {
-    }
-}
-state "edgemere" as edgemere #ffcc88 {
-state "diml" as edgemerediml #ffcc88 {
-state "ddf" as edgemeredimlddf #ffcc88 {
-state "datapipeline" as edgemeredimlddfdatapipeline #ffcc88 {
-state "list" as edgemeredimlddfdatapipelinelist #ffcc88 {
-}
-}
-}
-}
-}
-
-DataEngineerManageDataPipeline --> edgemeredimlddfdatapipelinelist
-
-
- 
-state "Data Engineer" as DataEngineer {
-    state "Manage Data Procedures" as DataEngineerManageDataProcedures {
-    }
-}
-state "edgemere" as edgemere #ffcc88 {
-state "diml" as edgemerediml #ffcc88 {
-state "ddf" as edgemeredimlddf #ffcc88 {
-state "dataprocedure" as edgemeredimlddfdataprocedure #ffcc88 {
-state "list" as edgemeredimlddfdataprocedurelist #ffcc88 {
-}
-}
-}
-}
-}
-
-DataEngineerManageDataProcedures --> edgemeredimlddfdataprocedurelist
-
-state "Chief Data Officer" as ChiefDataOfficer {
-    state "Manage Data Procedures" as ChiefDataOfficerManageDataProcedures {
-    }
-}
-state "edgemere" as edgemere #ffcc88 {
-state "diml" as edgemerediml #ffcc88 {
-state "ddf" as edgemeredimlddf #ffcc88 {
-state "dataprocedure" as edgemeredimlddfdataprocedure #ffcc88 {
-state "list" as edgemeredimlddfdataprocedurelist #ffcc88 {
-}
-}
-}
-}
-}
-
-ChiefDataOfficerManageDataProcedures --> edgemeredimlddfdataprocedurelist
-
-
- 
-state "Data Scientist" as DataScientist {
-    state "Manage Meta Data" as DataScientistManageMetaData {
-    }
-}
-state "edgemere" as edgemere #ffcc88 {
-state "diml" as edgemerediml #ffcc88 {
-state "ddf" as edgemeredimlddf #ffcc88 {
-state "metadata" as edgemeredimlddfmetadata #ffcc88 {
-state "list" as edgemeredimlddfmetadatalist #ffcc88 {
-}
-}
-}
-}
-}
-
-DataScientistManageMetaData --> edgemeredimlddfmetadatalist
-
-
-    state "DataEngineer" as DataEngineer {
-        state "Manage Meta Data" as DataEngineerManageMetaData {
-            state "Capture Meta Data" as DataEngineerManageMetaDataCaptureMetaData {
-            }
+        rectangle "Manage Data Adaptors" as ManageDataAdaptors #ffffaa {
+            ("Create Data Adaptor")/ as DataEngineerManageDataAdaptorsCreateDataAdaptor
         }
-    }
     
-    DataEngineerManageMetaDataCaptureMetaData --> Null
+    edgemeredimlddfdataadaptorcreate <-- DataEngineerManageDataAdaptorsCreateDataAdaptor
     
-    state "DataSteward" as DataSteward {
-        state "Manage Meta Data" as DataStewardManageMetaData {
-            state "Capture Meta Data" as DataStewardManageMetaDataCaptureMetaData {
-            }
+        rectangle "Manage Data Adaptors" as ManageDataAdaptors #ffffaa {
+            ("Update Data Adaptor")/ as DataEngineerManageDataAdaptorsUpdateDataAdaptor
         }
-    }
     
-    DataStewardManageMetaDataCaptureMetaData --> Null
+    edgemeredimlddfdataadaptorupdate <-- DataEngineerManageDataAdaptorsUpdateDataAdaptor
     
- 
-    state "DataScientist" as DataScientist {
-        state "Manage Meta Data" as DataScientistManageMetaData {
-            state "Manage Data Catalog" as DataScientistManageMetaDataManageDataCatalog {
-            }
+
+        rectangle "Manage Data Blue Prints" as ManageDataBluePrints #ffffaa {
+            ("Create Blue Print")/ as DataScientistManageDataBluePrintsCreateBluePrint
         }
-    }
     
-    DataScientistManageMetaDataManageDataCatalog --> Null
+    edgemeredimlddfdatablueprintcreate <-- DataScientistManageDataBluePrintsCreateBluePrint
     
- 
- 
+
+
+
+        rectangle "Manage Meta Data" as ManageMetaData #ffffaa {
+            ("Capture Meta Data")/ as DataEngineerManageMetaDataCaptureMetaData
+        }
+    
+    edgemeredimlddfdatacreate <-- DataEngineerManageMetaDataCaptureMetaData
+    
+        rectangle "Manage Meta Data" as ManageMetaData #ffffaa {
+            ("Capture Meta Data")/ as DataStewardManageMetaDataCaptureMetaData
+        }
+    
+    edgemeredimlddfdatacreate <-- DataStewardManageMetaDataCaptureMetaData
+    
+        rectangle "Manage Meta Data" as ManageMetaData #ffffaa {
+            ("Manage Data Catalog")/ as DataScientistManageMetaDataManageDataCatalog
+        }
+    
+    edgemeredimlddfdatacataloglist <-- DataScientistManageMetaDataManageDataCatalog
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @enduml

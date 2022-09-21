@@ -11,17 +11,13 @@ package "Data Definition Framework" #ffcc88 {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as diml_dff_container
+      file "node server.js\n" as diml_dff_container
       REST --> diml_dff_container
 
   
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
   
   }
   folder images #ffffff {
@@ -33,9 +29,6 @@ package "Data Definition Framework" #ffcc88 {
   
       artifact "diml_ddf_web" as diml_ddf_web
       web_container --> diml_ddf_web
-    
-      artifact "diml_ddf_gw" as diml_ddf_gw
-      gateway_container --> diml_ddf_gw
     
   }
 }

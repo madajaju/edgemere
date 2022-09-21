@@ -2,7 +2,7 @@
   interface CLI
   interface Web
   interface WebSocket
-package "Workflow Services" #lightblue {
+package "Workflow Services" #88cccc {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {
@@ -11,17 +11,13 @@ package "Workflow Services" #lightblue {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as aml_ws_container
+      file "node server.js\n" as aml_ws_container
       REST --> aml_ws_container
 
   
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
   
   }
   folder images #ffffff {
@@ -33,9 +29,6 @@ package "Workflow Services" #lightblue {
   
       artifact "aml_ws_web" as aml_ws_web
       web_container --> aml_ws_web
-    
-      artifact "aml_ws_gw" as aml_ws_gw
-      gateway_container --> aml_ws_gw
     
   }
 }

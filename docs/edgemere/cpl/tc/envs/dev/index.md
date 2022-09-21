@@ -2,10 +2,11 @@
 layout: default
 title: Environment dev
 permalink: environment--edgemere-cpl-tc-dev
-nav_exclude: true
+parent: environment-dev
+grand_parent: Environments
 ---
 
-### dev
+### Telemetry Consumer dev
 
 
 #### Deployment

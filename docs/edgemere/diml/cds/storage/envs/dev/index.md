@@ -2,10 +2,11 @@
 layout: default
 title: Environment dev
 permalink: environment--edgemere-diml-cds-storage-dev
-nav_exclude: true
+parent: environment-dev
+grand_parent: Environments
 ---
 
-### dev
+### Storage Services dev
 
 
 #### Deployment
@@ -31,7 +32,6 @@ the subsystem's logic.
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
 | frontend | diml_cds_storage_web |  |  | sibling |
-| gw | diml_cds_storage_gw |  |  | children,sibling |
 
 
 #### Networks

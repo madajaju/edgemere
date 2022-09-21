@@ -4,11 +4,11 @@
 package "Developer Services" #lightblue {
     }
 
-package "Identity Aspect" #pink {
+package "Identity Aspect" #cc8888 {
     }
 
 
-package "Workflow Services" #lightblue {
+package "Workflow Services" #88cccc {
 
     interface "Workflow Services" as i {
     
@@ -19,7 +19,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Workflow Services" #lightblue {
+package "Workflow Services" #88cccc {
     
 }
 

@@ -15,7 +15,7 @@ interface 3001
 
 
 
-package "cpl_tc" #lightgray {
+package "cpl_tc" #cccccc {
 
 node "consumer" as consumerService
 node "producer" as producerService

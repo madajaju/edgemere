@@ -9,7 +9,7 @@ Actor "IT Operations" as ITOperations
 Actor "IT Operations" as ITOperations
 
 
-rectangle "Cloud Broker" #lightgreen {
+rectangle "Cloud Broker" #88cc88 {
 usecase "FindResources" as FindResources
     ITOperations --> FindResources
     usecase "ManageBilling" as ManageBilling

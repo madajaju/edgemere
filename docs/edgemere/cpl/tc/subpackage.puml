@@ -2,7 +2,7 @@
 
 
 
-package "Telemetry Consumer" #lightgray {
+package "Telemetry Consumer" #cccccc {
 
     interface "Telemetry Consumer" as i {
             ^adevice.stats
@@ -25,7 +25,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Telemetry Consumer" #lightgray {
+package "Telemetry Consumer" #cccccc {
 
 
 }

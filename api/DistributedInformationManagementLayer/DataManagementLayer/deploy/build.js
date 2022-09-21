@@ -1,7 +1,7 @@
 
 module.exports = {
     web: {
-        dir: '..',
+        dir: '.',
         cmd: 'node web/server.js',
         file: 'web/Dockerfile',
         tag: 'diml_dml_web',
@@ -10,7 +10,7 @@ module.exports = {
         }
     },
     gateway: {
-        dir: '..',
+        dir: '.',
         cmd: 'node gateway/server.js',
         file: 'gateway/Dockerfile',
         tag: 'diml_dml_gw',

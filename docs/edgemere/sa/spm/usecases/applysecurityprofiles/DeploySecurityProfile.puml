@@ -5,16 +5,16 @@ actor "SecurityEngineer"
 
 entity EventBus
 
-box Security Profile Manager #pink
+box Security Profile Manager #cc8888
     boundary spm #white
 end box
 
 
-box Software Defined Infrastructure #lightyellow
+box Software Defined Infrastructure #cccc88
             participant storageresource
     end box
 
-box Security Profile Manager #pink
+box Security Profile Manager #cc8888
     end box
 
 

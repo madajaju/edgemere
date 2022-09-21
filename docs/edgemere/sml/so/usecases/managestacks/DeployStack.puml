@@ -5,7 +5,7 @@ actor "DevOps Engineer"
 
 entity EventBus
 
-box Service Orchestrator #lightgreen
+box Service Orchestrator #88cc88
     boundary so #white
 end box
 

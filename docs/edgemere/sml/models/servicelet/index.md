@@ -2,7 +2,7 @@
 layout: default
 title: Class Servicelet
 permalink: class-Servicelet
-parent: classes
+parent: Classes
 ---
 
 # Servicelet

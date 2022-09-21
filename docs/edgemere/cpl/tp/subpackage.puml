@@ -2,7 +2,7 @@
 
 
 
-package "Telemetry Producer" #lightgray {
+package "Telemetry Producer" #cccccc {
 
     interface "Telemetry Producer" as i {
     
@@ -23,7 +23,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Telemetry Producer" #lightgray {
+package "Telemetry Producer" #cccccc {
 
 
 }

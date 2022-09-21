@@ -3,6 +3,7 @@ layout: default
 title: All Actors
 permalink: all-actors
 has_children: true
+nav_order: 2
 ---
 
 There are several users of the system. We first took a use case analysis approach to the architecture. First,

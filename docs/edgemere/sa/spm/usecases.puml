@@ -5,7 +5,7 @@ Actor "SecurityOperator" as SecurityOperator
 Actor "SecurityEngineer" as SecurityEngineer
 
 
-rectangle "Security Profile Manager" #pink {
+rectangle "Security Profile Manager" #cc8888 {
 usecase "ApplySecurityProfiles" as ApplySecurityProfiles
     SecurityOperator --> ApplySecurityProfiles
     usecase "ManageSecurityProfiles" as ManageSecurityProfiles

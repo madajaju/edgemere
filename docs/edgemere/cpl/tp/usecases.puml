@@ -3,7 +3,7 @@
 left to right direction
 
 
-rectangle "Telemetry Producer" #lightgray {
+rectangle "Telemetry Producer" #cccccc {
 }
 
 

@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Blue Print Management
+title: Package Blue Print Management
 permalink: package--edgemere-diml-ddf-bpm
-parent: Data Definition Framework
-grand_parent: Distributed Information Management Layer
+parent: Package Data Definition Framework
+grand_parent: Package Distributed Information Management Layer
 ---
 
 # Blue Print Management
@@ -102,8 +101,7 @@ can be found [here](environment--edgemere-diml-ddf-bpm-dev)
 
 Services in the dev environment
 
-* frontend : diml_ddf_bpm_web
-* gw : diml_ddf_bpm_gw
+* web : diml_ddf_bpm_web
 
 
 ### test
@@ -113,8 +111,7 @@ can be found [here](environment--edgemere-diml-ddf-bpm-test)
 
 Services in the test environment
 
-* frontend : diml_ddf_bpm_web
-* gw : diml_ddf_bpm_gw
+* web : diml_ddf_bpm_web
 
 
 ### prod
@@ -124,8 +121,7 @@ can be found [here](environment--edgemere-diml-ddf-bpm-prod)
 
 Services in the prod environment
 
-* frontend : diml_ddf_bpm_web
-* gw : diml_ddf_bpm_gw
+* web : diml_ddf_bpm_web
 
 
 ## Activities and Flows

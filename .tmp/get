@@ -2,8 +2,8 @@
 const bent = require('bent');
 const program = require('commander');
 const YAML = require('yamljs');
-global.ailtire = { config: require('/mnt/c/Users/dwpulsip/work/edgemere/bin/lib/../../.ailtire.js') };
-program.command('get [options]', 'Get Resources from the SDI Layer')
+global.ailtire = { config: require('C:\\Users\\dwpulsip\\IdeaProjects\\edgemere\\bin\\lib/../../.ailtire.js') };
+program.description('Get Resources from the SDI Layer')
 	.option('--cloud <string>', 'Cloud to request the Resources')
 	.option('--name <string>', 'The name of the Resource to create.')
 	.option('--requirements <YAML>', 'The Requirements to create the resource');
@@ -12,14 +12,18 @@ let url = global.ailtire.config.host;
 let args = {};
 let params = '/sdi/resource/get?';
 params += 'mode=json';
-if(program['cloud']) { args['cloud'] = program['cloud']; }
-if(program['name']) { args['name'] = program['name']; }
-if(program['requirements']) { args['requirements'] = YAML.load(program['requirements']); }
+let options = program.opts();
 
+if(options['cloud']) { args['cloud'] = options['cloud']; }
+if(options['name']) { args['name'] = options['name']; }
+if(options['requirements']) { args['requirements'] = YAML.load(options['requirements']); }
+
+        console.log("URL:", url);
+        console.log("Args:", args);
 const post = bent(url, 'POST', 'json', 200);
 (async () => {
     const response = await post(params, args);
-    console.log(response.results);
+    console.log("Response:", response);
 })().catch(e => {
     // Deal with the fact the chain failed
     console.error("Response Error:", e);

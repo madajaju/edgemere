@@ -2,6 +2,66 @@
 left to right direction
 
 
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+ component "da" as edgemerecplda
+ interface "connect" as edgemerecpldaconnect
+edgemerecplda -- edgemerecpldaconnect
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+ component "da" as edgemerecplda
+ interface "register" as edgemerecpldaregister
+edgemerecplda -- edgemerecpldaregister
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+package "da" as edgemerecplda #cccccc {
+ component "service" as edgemerecpldaservice
+ interface "register" as edgemerecpldaserviceregister
+edgemerecpldaservice -- edgemerecpldaserviceregister
+}
+}
+}
+
+    
+hexagon "service.started" as servicestarted
+            edgemerecplda <-- servicestarted
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @enduml

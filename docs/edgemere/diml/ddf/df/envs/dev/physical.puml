@@ -11,17 +11,13 @@ package "Data Flow" #lightblue {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as diml_ddf_df_container
+      file "node server.js\n" as diml_ddf_df_container
       REST --> diml_ddf_df_container
 
   
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
   
   }
   folder images #ffffff {
@@ -33,9 +29,6 @@ package "Data Flow" #lightblue {
   
       artifact "diml_ddf_df_web" as diml_ddf_df_web
       web_container --> diml_ddf_df_web
-    
-      artifact "diml_ddf_df_gw" as diml_ddf_df_gw
-      gateway_container --> diml_ddf_df_gw
     
   }
 }

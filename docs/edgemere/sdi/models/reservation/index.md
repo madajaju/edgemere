@@ -2,7 +2,7 @@
 layout: default
 title: Class Reservation
 permalink: class-Reservation
-parent: classes
+parent: Classes
 ---
 
 # Reservation

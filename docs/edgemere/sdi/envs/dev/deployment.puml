@@ -3,65 +3,57 @@
 left to right direction
 
 
-boundary ailtire_appname_family #red
+boundary parent #black
 
 
-entity ailtire_appname_sdi_family #black
+entity children #blue
 
-rectangle "sdi_io" as sdi_ioStack #lightyellow {
-    queue sdi_ioStacksnet #black [
+rectangle "sdi_io" as sdi_ioStack #cccc88 {
+    queue sdi_ioStacksnet #blue [
         <b><color:white>parent</color></b>
     ]
 }
 
 
 
-package "sdi" #lightyellow {
-    queue childrennet #black [
-            <b><color:white>children</color></b>
-    ]
-    
-    childrennet -[#black]- ailtire_appname_sdi_family
-    
-    queue siblingnet #blue [
-            <b><color:white>sibling</color></b>
-    ]
-    
-    queue parentnet #red [
+package "sdi" #cccc88 {
+    queue parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#red]- ailtire_appname_family
+    parentnet -[#black]- parent
+    
+    queue childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#blue]- children
+    
+    queue siblingsnet #red [
+            <b><color:white>siblings</color></b>
+    ]
     
 
 node "orchestrator" as orchestratorService
-node "frontend" as frontendService
-node "gw" as gwService
+node "web" as webService
 
         collections "sdi_io" as sdi_ioimage
     
         artifact "sdi_web" as sdi_webimage
     
-        artifact "sdi_gw" as sdi_gwimage
-    
 }
 
-orchestratorService -[#black]- childrennet
+orchestratorService -[#blue]- childrennet
 
-orchestratorService -[#red]- parentnet
+orchestratorService -[#red]- siblingsnet
 
-frontendService -[#blue]- siblingnet
+webService -[#blue]- childrennet
 
-gwService -[#black]- childrennet
-
-gwService -[#blue]- siblingnet
+webService -[#red]- siblingsnet
 orchestratorService .... sdi_ioimage
-frontendService .... sdi_webimage
-gwService .... sdi_gwimage
+webService .... sdi_webimage
 
 sdi_ioimage --> sdi_ioStack
-    
-sdi_ioStacksnet --[#black]-- ailtire_appname_sdi_family
     
 
 @enduml

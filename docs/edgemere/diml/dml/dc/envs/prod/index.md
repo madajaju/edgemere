@@ -2,10 +2,11 @@
 layout: default
 title: Environment prod
 permalink: environment--edgemere-diml-dml-dc-prod
-nav_exclude: true
+parent: environment-prod
+grand_parent: Environments
 ---
 
-### prod
+### Data Controller prod
 
 
 #### Deployment
@@ -30,8 +31,7 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| frontend | diml_dml_dc_web |  |  | sibling |
-| gw | diml_dml_dc_gw |  |  | children,sibling |
+| controller | diml_dml_dc_controller |  |  | children,siblings |
 
 
 #### Networks
@@ -44,9 +44,9 @@ stack in a layer of networks.
 
 | Name | Type | External Name | Ports |
 | --- | --- | --- | --- |
-| children | egress | ailtire_appname_diml_dml_dc_family |
-| sibling | internal |  |
-| parent | ingress | ailtire_parent_network_family |
+| parent | ingress | parent |
+| children | egress | children |
+| siblings | internal |  |
 
 
 The Stack is micro-segmented off and there are a set of ports that are open for the ingress networks. The following

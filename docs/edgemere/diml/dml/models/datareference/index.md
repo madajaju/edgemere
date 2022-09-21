@@ -2,7 +2,7 @@
 layout: default
 title: Class DataReference
 permalink: class-DataReference
-parent: classes
+parent: Classes
 ---
 
 # DataReference

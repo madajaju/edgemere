@@ -2,10 +2,11 @@
 layout: default
 title: Environment prod
 permalink: environment--edgemere-diml-cds-insite-prod
-nav_exclude: true
+parent: environment-prod
+grand_parent: Environments
 ---
 
-### prod
+### Insite Services prod
 
 
 #### Deployment
@@ -31,7 +32,6 @@ the subsystem's logic.
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
 | frontend | diml_cds_insite_web |  |  | sibling |
-| gw | diml_cds_insite_gw |  |  | children,sibling |
 
 
 #### Networks

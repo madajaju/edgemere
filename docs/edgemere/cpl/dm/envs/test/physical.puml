@@ -2,7 +2,7 @@
   interface CLI
   interface Web
   interface WebSocket
-package "Device Manager" #lightgray {
+package "Device Manager" #cccccc {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {
@@ -11,7 +11,7 @@ package "Device Manager" #lightgray {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as cpl_dm_container
+      file "node server.js\n" as cpl_dm_container
       REST --> cpl_dm_container
 
   

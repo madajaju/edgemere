@@ -1,4 +1,4 @@
-import {AText, AStack, AService } from './index.js';
+import {AText, AStack, AService, A3DGraph, ASelectedHUD} from './index.js';
 
 export default class AEnvironment {
     constructor(config) {
@@ -26,7 +26,7 @@ export default class AEnvironment {
         let height = nameArray.length*AEnvironment.default.fontSize;
         let width = maxLetters * AEnvironment.default.fontSize + 10;
         let depth = AEnvironment.default.depth;
-        let radius = Math.max(Math.sqrt(width*width + height*height), Math.sqrt(height*height + depth*depth), Math.sqrt(width*width + depth*depth));
+        let radius = Math.max(Math.sqrt(width*width + height*height), Math.sqrt(height*height + depth*depth), Math.sqrt(width*width + depth*depth))/2;
         return {w: width, h: height, d: AEnvironment.default.depth, r:radius};
     }
 
@@ -75,8 +75,8 @@ export default class AEnvironment {
             }
         }
         node.box = size.r;
-        node.expandLink = `env/get?id=${node.id}`;
-        node.expandView = AEnvironment.viewDeep3D;
+        node.expandLink = node.expandLink || `env/get?id=${node.id}`;
+        node.expandView = node.expandView || AEnvironment.handle;
         node.getDetail = AEnvironment.getDetail;
 
         return retval;
@@ -87,14 +87,21 @@ export default class AEnvironment {
         window.graph.clearObjects();
         for (let ename in objs) {
             let env = objs[ename];
-            env.id = ename;
-            data.nodes[env.id] = {
-                id: env.id,
-                name: env.id,
+            data.nodes[ename] = {
+                id: ename,
+                name: ename,
                 view: AEnvironment.view3D,
-                expandView: AEnvironment.viewDeep3D,
-                expandLink: `env/get?id=${env.id}`
             };
+            for(let sname in env) {
+                let stack = env[sname];
+                stack.id = `${ename}.${sname}`;
+                data.nodes[stack.id] = {
+                    id: stack.id,
+                    name: sname,
+                    view: AStack.view3D,
+                }
+                data.links.push({target: ename, source: stack.id, width: 1.0, value: 10 });
+            }
         }
 
         window.graph.setData(data.nodes, data.links);
@@ -114,9 +121,9 @@ export default class AEnvironment {
         for(let sname in obj.stacks) {
             let stack = obj.stacks[sname];
             let stid = stack.id;
-            for (let srname in stack.design.services) {
-                let service = stack.design.services[srname];
-                let extendedName = `${stid}.${srname}`;
+            for (let srname in stack.services) {
+                let service = stack.services[srname];
+                let extendedName = srname;
                 // Stacks are unique alread. But Service names might not be. They need to be fully qualified.
                 if(service.type === 'stack') {
                     // The service type as a stack is the sidecar container and points to a stack. G
@@ -130,7 +137,7 @@ export default class AEnvironment {
                 if(!data.nodes.hasOwnProperty(extendedName)) {
                     data.nodes[extendedName] = {
                         id: extendedName,
-                        name: srname,
+                        name: extendedName,
                         view: AService.view3D,
                     }
                 }
@@ -166,28 +173,28 @@ export default class AEnvironment {
 
         for(let sname in result.stacks) {
             let stack = result.stacks[sname];
-            if(stack.design) {
+            if(stack) {
                 let rec = {
                     recid: sname,
                     name: sname,
                 }
-                if(stack.design.services) {
-                    let objs = stack.design.services;
+                if(stack.services) {
+                    let objs = stack.services;
                     rec.services = Object.keys(objs).length;
                     rec.servicesdetail = "Services|" + getDetails(objs, 'service/get').join(", ");
                 }
-                if(stack.design.networks) {
-                    let objs = stack.design.networks;
+                if(stack.networks) {
+                    let objs = stack.networks;
                     rec.networks = Object.keys(objs).length;
                     rec.networksdetail = "Networks|" + getDetails(objs, 'network/get').join(", ");
                 }
-                if(stack.design.data) {
-                    let objs = stack.design.data;
+                if(stack.data) {
+                    let objs = stack.data;
                     rec.data= Object.keys(objs).length;
                     rec.datadetail = "Data|" + getDetails(objs, "data/get").join(", ");
                 }
-                if(stack.design.interface) {
-                    let objs = stack.design.interface;
+                if(stack.interface) {
+                    let objs = stack.interface;
                     rec.interface = Object.keys(objs).length;
                     rec.interfacedetail = "Interface|" + getDetails(objs, "interface/get").join(", ");
                 }
@@ -214,11 +221,84 @@ export default class AEnvironment {
             w2ui['objdetail'].add(drecords)
             window.graph.selectNodeByID(event.recid);
         }
+        ASelectedHUD.update('Environment', records);
+        w2ui['objlist'].refresh();
+    }
+    static showListDetail(result) {
+        let records = [];
+        let cols = [
+            {field: 'name', size: "20%", resizeable: true, label: "Name", sortable: true},
+            {field: 'services', size: "20%", resizeable: true, label: "Services", sortable: true},
+            {field: 'networks', size: "20%", resizeable: true, label: "Networks", sortable: true},
+            {field: 'data', size: "20%", resizeable: true, label: "Data", sortable: true},
+            {field: 'interface', size: "20%", resizeable: true, caption: "Interface", sortable: true}
+        ];
+        w2ui['objlist'].columns = cols;
+        w2ui['objlist'].show.columnHeaders = true
+        w2ui['objlist'].header = result._name;
+        for(let ename in result) {
+            let env = result[ename];
+            for (let sname in env) {
+                let stack = env[sname];
+                if (stack) {
+                    let rec = {
+                        recid: sname,
+                        name: sname,
+                    }
+                    if (stack.services) {
+                        let objs = stack.services;
+                        rec.services = Object.keys(objs).length;
+                        rec.servicesdetail = "Services|" + getDetails(objs, 'service/get').join(", ");
+                    }
+                    if (stack.networks) {
+                        let objs = stack.networks;
+                        rec.networks = Object.keys(objs).length;
+                        rec.networksdetail = "Networks|" + getDetails(objs, 'network/get').join(", ");
+                    }
+                    if (stack.data) {
+                        let objs = stack.data;
+                        rec.data = Object.keys(objs).length;
+                        rec.datadetail = "Data|" + getDetails(objs, "data/get").join(", ");
+                    }
+                    if (stack.interface) {
+                        let objs = stack.interface;
+                        rec.interface = Object.keys(objs).length;
+                        rec.interfacedetail = "Interface|" + getDetails(objs, "interface/get").join(", ");
+                    }
+                    records.push(rec);
+                }
+            }
+        }
+
+        w2ui['objlist'].records = records;
+        ASelectedHUD.update('Environments', records);
+        // Clear the detail list
+        w2ui['objdetail'].clear();
+        w2ui['objlist'].onClick = function (event) {
+            // this.showDetail(event);
+            w2ui['objdetail'].clear();
+            let record = this.get(event.recid);
+            let drecords = [];
+            let k = 0;
+            for(let rname in record) {
+                k++;
+                if(rname.includes('detail')) {
+                    let [vname, value] = record[rname].split('|');
+                    drecords.push({recid: k, name: vname, value: value});
+                }
+            }
+            w2ui['objdetail'].add(drecords)
+            window.graph.selectNodeByID(event.recid);
+        }
         w2ui['objlist'].refresh();
     }
     static handle(result) {
         AEnvironment.viewDeep3D(result, 'new');
         AEnvironment.showDetail(result);
+    }
+    static handleList(result) {
+        AEnvironment.viewList3D(result, 'new');
+        AEnvironment.showListDetail(result);
     }
 }
 function getDetails(objs,link) {

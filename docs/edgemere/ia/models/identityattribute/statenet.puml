@@ -2,12 +2,12 @@
 
 
 
-state IdentityAttribute #pink {
+state IdentityAttribute #cc8888 {
+
+
+
 
 }
-
-
-
 
 
 @enduml

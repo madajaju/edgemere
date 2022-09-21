@@ -2,12 +2,12 @@
 
 
 
-state StorageHardware #lightgray {
+state StorageHardware #cccccc {
+
+
+
 
 }
-
-
-
 
 
 @enduml

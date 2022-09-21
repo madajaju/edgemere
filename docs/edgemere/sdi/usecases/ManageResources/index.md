@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Manage Resources
 permalink: usecase-ManageResources
-parent: usecases
+parent: UseCases
 ---
 # Manage Resources
 

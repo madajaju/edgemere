@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Manage Data Pipeline
 permalink: usecase-ManageDataPipeline
-parent: usecases
+parent: UseCases
 ---
 # Manage Data Pipeline
 

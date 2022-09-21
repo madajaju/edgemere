@@ -2,140 +2,140 @@
 left to right direction
 
 
-state "sml" as sml #lightgreen {
+state "sml" as sml #88cc88 {
 }
 
 
-state "sml" as pstatename #lightgreen {
+state "sml" as pstatename #88cc88 {
     state "Custom Function" as smlfunction {
     }
 }
 
-        state "sml" as sml #lightgreen {
-state "cloud" as smlcloud #lightgreen {
-state "list" as smlcloudlist #lightgreen {
+        state "sml" as sml #88cc88 {
+state "cloud" as smlcloud #88cc88 {
+state "list" as smlcloudlist #88cc88 {
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "data" as smldata #lightgreen {
-state "govern" as smldatagovern #lightgreen {
+        state "sml" as sml #88cc88 {
+state "data" as smldata #88cc88 {
+state "govern" as smldatagovern #88cc88 {
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "data" as smldata #lightgreen {
-state "source" as smldatasource #lightgreen {
-state "name" as smldatasourcename #lightgreen {
+        state "sml" as sml #88cc88 {
+state "data" as smldata #88cc88 {
+state "source" as smldatasource #88cc88 {
+state "name" as smldatasourcename #88cc88 {
 }
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "environmenet" as smlenvironmenet #lightgreen {
-state "addpolicies" as smlenvironmenetaddpolicies #lightgreen {
+        state "sml" as sml #88cc88 {
+state "environmenet" as smlenvironmenet #88cc88 {
+state "addpolicies" as smlenvironmenetaddpolicies #88cc88 {
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "environment" as smlenvironment #lightgreen {
-state "create" as smlenvironmentcreate #lightgreen {
+        state "sml" as sml #88cc88 {
+state "environment" as smlenvironment #88cc88 {
+state "create" as smlenvironmentcreate #88cc88 {
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "environment" as smlenvironment #lightgreen {
-state "destroy" as smlenvironmentdestroy #lightgreen {
+        state "sml" as sml #88cc88 {
+state "environment" as smlenvironment #88cc88 {
+state "destroy" as smlenvironmentdestroy #88cc88 {
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "environment" as smlenvironment #lightgreen {
-state "disable" as smlenvironmentdisable #lightgreen {
+        state "sml" as sml #88cc88 {
+state "environment" as smlenvironment #88cc88 {
+state "disable" as smlenvironmentdisable #88cc88 {
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "environment" as smlenvironment #lightgreen {
-state "enable" as smlenvironmentenable #lightgreen {
+        state "sml" as sml #88cc88 {
+state "environment" as smlenvironment #88cc88 {
+state "enable" as smlenvironmentenable #88cc88 {
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "environment" as smlenvironment #lightgreen {
-state "list" as smlenvironmentlist #lightgreen {
+        state "sml" as sml #88cc88 {
+state "environment" as smlenvironment #88cc88 {
+state "list" as smlenvironmentlist #88cc88 {
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "environment" as smlenvironment #lightgreen {
-state "update" as smlenvironmentupdate #lightgreen {
+        state "sml" as sml #88cc88 {
+state "environment" as smlenvironment #88cc88 {
+state "update" as smlenvironmentupdate #88cc88 {
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "multicloud" as smlmulticloud #lightgreen {
-state "addclouds" as smlmulticloudaddclouds #lightgreen {
+        state "sml" as sml #88cc88 {
+state "multicloud" as smlmulticloud #88cc88 {
+state "addclouds" as smlmulticloudaddclouds #88cc88 {
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "multicloud" as smlmulticloud #lightgreen {
-state "addpolicies" as smlmulticloudaddpolicies #lightgreen {
+        state "sml" as sml #88cc88 {
+state "multicloud" as smlmulticloud #88cc88 {
+state "addpolicies" as smlmulticloudaddpolicies #88cc88 {
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "multicloud" as smlmulticloud #lightgreen {
-state "list" as smlmulticloudlist #lightgreen {
+        state "sml" as sml #88cc88 {
+state "multicloud" as smlmulticloud #88cc88 {
+state "list" as smlmulticloudlist #88cc88 {
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "multicloud" as smlmulticloud #lightgreen {
-state "removepolicies" as smlmulticloudremovepolicies #lightgreen {
+        state "sml" as sml #88cc88 {
+state "multicloud" as smlmulticloud #88cc88 {
+state "removepolicies" as smlmulticloudremovepolicies #88cc88 {
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "service" as smlservice #lightgreen {
-state "list" as smlservicelist #lightgreen {
+        state "sml" as sml #88cc88 {
+state "service" as smlservice #88cc88 {
+state "list" as smlservicelist #88cc88 {
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "stack" as smlstack #lightgreen {
-state "list" as smlstacklist #lightgreen {
+        state "sml" as sml #88cc88 {
+state "stack" as smlstack #88cc88 {
+state "list" as smlstacklist #88cc88 {
 }
 }
 }
@@ -144,9 +144,9 @@ state "list" as smlstacklist #lightgreen {
 
 
 
-    state "sml" as sml #lightgreen {
-state "Service" as smlservice #lightgreen {
-state "started" as smlservicestarted #lightgreen {
+    state "sml" as sml #88cc88 {
+state "Service" as smlservice #88cc88 {
+state "started" as smlservicestarted #88cc88 {
 }
 }
 }

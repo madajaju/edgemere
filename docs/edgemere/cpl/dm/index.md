@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Device Manager
+title: Package Device Manager
 permalink: package--edgemere-cpl-dm
-parent: Common Physical Layer
-grand_parent: edgemere
+parent: Package Common Physical Layer
+grand_parent: Package edgemere
 ---
 
 # Device Manager
@@ -105,10 +104,10 @@ can be found [here](environment--edgemere-cpl-dm-dev)
 
 Services in the dev environment
 
-* data_orchestrator : diml_dml_do:latest
-* policy_engine : sa_pe:latest
-* service_orchestrator : sml_so:latest
-* telemetry_aggregator : cpl_ta:latest
+* data_orchestrator : diml_dml_do
+* policy_engine : sa_pe
+* service_orchestrator : sml_so
+* telemetry_aggregator : cpl_ta
 * portal : cpl_dm_web
 
 
@@ -119,10 +118,10 @@ can be found [here](environment--edgemere-cpl-dm-test)
 
 Services in the test environment
 
-* data_orchestrator : diml_dml_do:latest
-* policy_engine : sa_pe:latest
-* service_orchestrator : sml_so:latest
-* telemetry_aggregator : cpl_ta:latest
+* data_orchestrator : diml_dml_do
+* policy_engine : sa_pe
+* service_orchestrator : sml_so
+* telemetry_aggregator : cpl_ta
 * portal : cpl_dm_web
 
 
@@ -133,10 +132,10 @@ can be found [here](environment--edgemere-cpl-dm-prod)
 
 Services in the prod environment
 
-* data_orchestrator : diml_dml_do:latest
-* policy_engine : sa_pe:latest
-* service_orchestrator : sml_so:latest
-* telemetry_aggregator : cpl_ta:latest
+* data_orchestrator : diml_dml_do
+* policy_engine : sa_pe
+* service_orchestrator : sml_so
+* telemetry_aggregator : cpl_ta
 * portal : cpl_dm_web
 
 

@@ -1,16 +1,16 @@
 @startuml
 
 
-package "Common Physical Layer" #lightgray {
+package "Common Physical Layer" #cccccc {
 
 }
 
-package "Software Defined Infrastructure" #lightyellow {
+package "Software Defined Infrastructure" #cccc88 {
 
 }
 
 
-package "Common Physical Layer" #lightgray {
+package "Common Physical Layer" #cccccc {
 
     interface "Common Physical Layer" as i {
             ^request.needed
@@ -44,7 +44,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Common Physical Layer" #lightgray {
+package "Common Physical Layer" #cccccc {
 
 
 rectangle "Device Agent" #white {

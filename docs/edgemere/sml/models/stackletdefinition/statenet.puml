@@ -2,12 +2,12 @@
 
 
 
-state StackletDefinition #lightgreen {
+state StackletDefinition #88cc88 {
+
+
+
 
 }
-
-
-
 
 
 @enduml

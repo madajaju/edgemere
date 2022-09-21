@@ -2,10 +2,11 @@
 layout: default
 title: Environment prod
 permalink: environment--edgemere-aml-ds-pm-prod
-nav_exclude: true
+parent: environment-prod
+grand_parent: Environments
 ---
 
-### prod
+### Pipeline Manager prod
 
 
 #### Deployment

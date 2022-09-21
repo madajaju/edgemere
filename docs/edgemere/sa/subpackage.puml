@@ -1,12 +1,12 @@
 @startuml
 
 
-package "Security Aspect" #pink {
+package "Security Aspect" #cc8888 {
 
 }
 
 
-package "Security Aspect" #pink {
+package "Security Aspect" #cc8888 {
 
     interface "Security Aspect" as i {
     
@@ -24,7 +24,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Security Aspect" #pink {
+package "Security Aspect" #cc8888 {
 
 
 rectangle "Policy Engine" #white {

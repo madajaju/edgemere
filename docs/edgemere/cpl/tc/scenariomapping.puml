@@ -2,6 +2,68 @@
 left to right direction
 
 
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+ component "tc" as edgemerecpltc
+ interface "list" as edgemerecpltclist
+edgemerecpltc -- edgemerecpltclist
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+ component "tc" as edgemerecpltc
+ interface "report" as edgemerecpltcreport
+edgemerecpltc -- edgemerecpltcreport
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+ component "tc" as edgemerecpltc
+ interface "show" as edgemerecpltcshow
+edgemerecpltc -- edgemerecpltcshow
+}
+}
+
+    
+hexagon "adevice.stats" as adevicestats
+            edgemerecpltc <-- adevicestats
+        
+hexagon "device.stats" as devicestats
+            edgemerecpltc <-- devicestats
+                edgemerecpltc <-- devicestats
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @enduml

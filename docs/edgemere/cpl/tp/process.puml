@@ -2,39 +2,39 @@
 left to right direction
 
 
-state "cpl" as cpl #lightgray {
-state "tp" as cpltp #lightgray {
+state "cpl" as cpl #cccccc {
+state "tp" as cpltp #cccccc {
 }
 }
 
 
-state "cpltp" as pstatename #lightgray {
+state "cpltp" as pstatename #cccccc {
     state "Custom Function" as tpfunction {
     }
 }
 
-        state "cpl" as cpl #lightgray {
-state "tp" as cpltp #lightgray {
-state "setparent" as cpltpsetparent #lightgray {
+        state "cpl" as cpl #cccccc {
+state "tp" as cpltp #cccccc {
+state "setparent" as cpltpsetparent #cccccc {
 }
 }
 }
 
 
-        state "cpl" as cpl #lightgray {
-state "tp" as cpltp #lightgray {
-state "stats" as cpltpstats #lightgray {
-state "get" as cpltpstatsget #lightgray {
+        state "cpl" as cpl #cccccc {
+state "tp" as cpltp #cccccc {
+state "stats" as cpltpstats #cccccc {
+state "get" as cpltpstatsget #cccccc {
 }
 }
 }
 }
 
 
-        state "cpl" as cpl #lightgray {
-state "tp" as cpltp #lightgray {
-state "stats" as cpltpstats #lightgray {
-state "send" as cpltpstatssend #lightgray {
+        state "cpl" as cpl #cccccc {
+state "tp" as cpltp #cccccc {
+state "stats" as cpltpstats #cccccc {
+state "send" as cpltpstatssend #cccccc {
 }
 }
 }

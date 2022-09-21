@@ -4,6 +4,6 @@ module.exports = {
     description: 'Provision Engine is a subsystem that provisions services onto the resources. It should provision' +
         ' everything necessary for the service to be deployed. Including but not limited to OS, libraries, security' +
         ' patches, monitoring etc...',
-    color: '#lightgreen',
+    color: '#88cc88',
     depends: [ "Software Defined Infrastructure" ]
 };

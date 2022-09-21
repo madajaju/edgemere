@@ -25,50 +25,30 @@ state DataRequest #lightblue {
     state Completed #lightblue {
     }
 
+
+
+
+Init -[#black]--> Needed : fulfill
+
+Needed -[#black]--> Selected : selected
+
+Needed -[#black]--> Failed : failed
+
+Selected -[#black]--> Evaluated : evaluated
+
+Satisfied -[#black]--> Completed : complete
+
+Evaluated -[#black]--> Satisfied : satisfied
+
+Evaluated -[#black]--> Failed : failed
+
 }
 
-
-Init --> Needed : fulfill
-
-Needed --> Selected : selected
-
-Needed --> Failed : failed
-
-Selected --> Evaluated : evaluated
-
-Satisfied --> Completed : complete
-
-Evaluated --> Satisfied : satisfied
-
-Evaluated --> Failed : failed
-
-
-
- state "edgemere" as edgemere #lightblue {
-state "diml" as edgemerediml #lightblue {
-state "dml" as edgemeredimldml #lightblue {
-state "do" as edgemeredimldmldo #lightblue {
-state "reserve" as edgemeredimldmldoreserve #lightblue {
-}
-}
-}
-}
-}
-
- Needed -[#black]--> edgemeredimldmldoreserve
  
- state "edgemere" as edgemere #lightblue {
-state "diml" as edgemerediml #lightblue {
-state "dml" as edgemeredimldml #lightblue {
-state "do" as edgemeredimldmldo #lightblue {
-state "evaluate" as edgemeredimldmldoevaluate #lightblue {
-}
-}
-}
-}
-}
-
- Selected -[#black]--> edgemeredimldmldoevaluate
+ Needed -[#black]--> Null
+ 
+ 
+ Selected -[#black]--> Null
  
 
 @enduml

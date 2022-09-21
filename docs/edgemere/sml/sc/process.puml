@@ -2,13 +2,13 @@
 left to right direction
 
 
-state "sml" as sml #lightgreen {
-state "sc" as smlsc #lightgreen {
+state "sml" as sml #88cc88 {
+state "sc" as smlsc #88cc88 {
 }
 }
 
 
-state "smlsc" as pstatename #lightgreen {
+state "smlsc" as pstatename #88cc88 {
     state "Custom Function" as scfunction {
     }
 }

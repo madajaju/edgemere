@@ -2,7 +2,7 @@
 layout: default
 title: Class LedgerEntry
 permalink: class-LedgerEntry
-parent: classes
+parent: Classes
 ---
 
 # LedgerEntry

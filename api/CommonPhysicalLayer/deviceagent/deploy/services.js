@@ -1,6 +1,7 @@
 module.exports = {
     services: {
         datacontroller: {
+            type: 'stack',
             image: "diml_dml_dc_controller",
             interface: {
                 admin: { path: '/data', port: 3000, protocol:"http"},
@@ -10,6 +11,7 @@ module.exports = {
             }
         },
         policyengine: {
+            type: 'stack',
             image: "sa_pe_engine",
             interface: {
                 web: {path:'/policy', port: 3000 },
@@ -19,6 +21,7 @@ module.exports = {
             }
         },
         servicecontroller: {
+            type: 'stack',
             image: "sml_sc",
             interface: {
                 web: {path:'/service', port: 3000 },
@@ -28,6 +31,7 @@ module.exports = {
             }
         },
         telemetry_producer: {
+            type: 'stack',
             image: "cpl_tp_producer",
             interface: {
                 web: {path:'/telemetry', port: 3000 },
@@ -37,6 +41,7 @@ module.exports = {
             }
         },
         portal: {
+            type: 'stack',
             image: "cpl_da_web",
             interface: {
                 web: {path:'/admin', port: 3000 },

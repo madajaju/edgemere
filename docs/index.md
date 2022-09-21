@@ -1,7 +1,8 @@
 ---
-layout: default title: edgemere Overview
-{# topPackage.name.toLowerCase()-project}
+title: Overview
+nav_order: 1
 ---
+# edgemere
 
 Edgemere is a conceptual architecture targeted to multi-hybrid cloud and edge computing strategies including data,
 application, service, and infrastructure management. With the growth of IoT devices management of these elements from

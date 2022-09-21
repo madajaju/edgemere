@@ -1,4 +1,4 @@
-import {AUsecase, AModel, AText, AInterface, AHandler} from './index.js';
+import {AUsecase, AModel, AText, AInterface, AHandler,A3DGraph, ASelectedHUD} from './index.js';
 
 export default class APackage {
     constructor(config) {
@@ -29,7 +29,7 @@ export default class APackage {
         let width = node.name.length * fontSize / 2;
         let height = APackage.default.height;
         let depth = APackage.default.depth;
-        let radius = Math.max(Math.sqrt(width * width + height * height), Math.sqrt(height * height + depth * depth), Math.sqrt(width * width + depth * depth));
+        let radius = Math.max(Math.sqrt(width * width + height * height), Math.sqrt(height * height + depth * depth), Math.sqrt(width * width + depth * depth))/2;
         return {w: width, h: height, d: depth, r: radius};
     }
 
@@ -85,8 +85,8 @@ export default class APackage {
             }
         }
         box.aid = node.id;
-        node.expandLink = `package/get?id=${node.id}`;
-        node.expandView = APackage.viewDeep3D;
+        node.expandLink = node.expandLink || `package/get?id=${node.id}`;
+        node.expandView = node.expandView || APackage.handle;
         node.getDetail = APackage.getDetail;
         node.box = node.box || size.r;
         return box;
@@ -118,7 +118,7 @@ export default class APackage {
             fz: 0,
             box: 1, // Make it so items can get really close to the parent package.
             view: APackage.view3D,
-            expandView: APackage.viewDeep3D,
+            expandView: APackage.handle,
             expandLink: `package/get?id=${pkg.shortname}`,
             getDetail: APackage.getDetail,
             opacity: 0.5,
@@ -155,7 +155,7 @@ export default class APackage {
                 if (hand.action) {
                     let aname = hand.action.replace('/' + pkg.shortname, pkg.prefix);
                     // window.graph.addLink({source:hname, target: aname, color: 'magenta'});
-                    data.links.push({source: hname, target: aname, color: 'rgba(255,255,0,1)', value: 0.1, width: 5});
+                    data.links.push({source: hname, target: aname, color: '#ffffbb', value: 0.1, width: 5});
                 }
             }
         }
@@ -170,6 +170,7 @@ export default class APackage {
                 description: uc.description,
                 fontSize: 15,
                 view: AUsecase.view3D,
+                rotate: {x: theta},
             }
             data.nodes[uname] = node;
             ucnodes.push(node);
@@ -177,13 +178,13 @@ export default class APackage {
                 data.links.push({
                     source: uname,
                     target: pkg.prefix + '/' + uc.method,
-                    color: 'rgba(255,255,0,1)',
+                    color: '#ffffbb',
                     value: 0.1,
                     width: 5
                 });
             }
         }
-        layoutRowColumn(data.nodes[pkg.shortname], ucnodes, size.usecases, "front");
+        layoutRowColumn(data.nodes[pkg.shortname], ucnodes, size.usecases, "bottom");
 
         let cnodes = [];
         for (let cname in pkg.classes) {
@@ -209,28 +210,15 @@ export default class APackage {
                 id: pname,
                 name: spkg.name,
                 description: spkg.description,
-                rotate: {x: theta},
-                rbox: {
-                    parent: pkg.shortname, x: bbox.x, z: bbox.z,
-                    y: {min: bbox.y.min - 50, max: bbox.y.min - 50}
-                },
+                rotate: {y: -theta},
                 color: spkg.color,
                 view: APackage.view3D,
             }
             data.nodes[pname] = node;
             spnodes.push(node);
-            for (let i in spkg.depends) {
-                data.links.push({
-                    source: pname,
-                    target: spkg.depends[i],
-                    color: 'rgba(255,255,0,1)',
-                    value: 1.0,
-                    width: 3
-                });
-            }
         }
 
-        layoutRowColumn(data.nodes[pkg.shortname], spnodes, size.subpackages, "bottom");
+        layoutRowColumn(data.nodes[pkg.shortname], spnodes, size.subpackages, "left");
 
         for (let pname in pkg.depends) {
             let spkg = pkg.depends[pname];
@@ -239,15 +227,17 @@ export default class APackage {
                 name: spkg.name,
                 description: spkg.description,
                 rbox: {
-                    parent: pkg.shortname, y: bbox.y, z: bbox.z,
-                    x: {min: bbox.x.min - 80, max: bbox.x.min - 80}
+                    parent: pkg.shortname,
+                    y: {min: bbox.y.max, max: bbox.y.max*2},
+                    z: bbox.z,
+                    fx: bbox.x.min - 150,
                 },
                 color: spkg.color,
                 rotate: {y: -theta},
                 view: APackage.view3D,
             }
             data.nodes[pname] = node;
-            data.links.push({source: pkg.shortname, target: pname, value: 0.1, color: 'rgba(255,255,255,1)', width: 5});
+            data.links.push({ source: pkg.shortname, target: pname, color: '#ffffbb', value: 1.0, width: 2 });
         }
         if (mode === 'add') {
             window.graph.addData(data.nodes, data.links);
@@ -324,7 +314,7 @@ export default class APackage {
                 onClick: (event) => {
                     let distance = Math.sqrt((size.w / 2) ** 2 + (size.h / 2) ** 2) * 2;
                     window.graph.graph.cameraPosition(
-                        {x: 0, y: 0, z: distance}, // new position
+                        {x: 0, y: -distance, z: 0}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
                         1000
                     );
@@ -353,6 +343,10 @@ export default class APackage {
     static handle(result) {
         APackage.viewDeep3D(result, 'new');
         APackage.showDetail(result);
+    }
+    static handleList(result) {
+        APackage.viewDeep3D(result, 'new');
+        APackage.showListDetail(result);
     }
 
     static calculateGroupBox(items, fn) {
@@ -399,9 +393,9 @@ export default class APackage {
 
         /* X is always the width, Y is height with X, Y is width with Z, Z is always h */
         let fontWidth = pkg.name.length * APackage.default.fontSize / 2;
-        const wnum = Math.max(ibox.box.w, ubox.box.w, cbox.box.w, pbox.box.w, 100, fontWidth);
-        const hnum = Math.max(hbox.box.w, ubox.box.h, cbox.box.h, dbox.box.w, 100);
-        const dnum = Math.max(ibox.box.h, hbox.box.h, pbox.box.h, dbox.box.h, 100);
+        const wnum = Math.max(ibox.box.w, ubox.box.w, cbox.box.w, 100, fontWidth);
+        const hnum = Math.max(hbox.box.w, ubox.box.h, cbox.box.h, dbox.box.h, pbox.box.h, 100);
+        const dnum = Math.max(ibox.box.h, hbox.box.h, pbox.box.w, dbox.box.w, 100);
 
         const radius = Math.max(Math.sqrt(wnum ** 2 + hnum ** 2), Math.sqrt(hnum ** 2 + dnum ** 2), Math.sqrt(wnum ** 2 + dnum ** 2));
         return {
@@ -423,6 +417,57 @@ export default class APackage {
         });
     }
     static showDetail(result) {
+        let records = [];
+        let cols = [
+            {field: 'name', size: "20%", resizeable: true, label: "Name", sortable: true},
+            {field: 'value', size: "80%", resizeable: true, label: "Value", sortable: true},
+        ];
+        w2ui['objlist'].columns = cols;
+        let i = 0;
+        records.push({recid: i++, name: 'name', value: result.name, detail: result.name});
+        records.push({recid: i++, name: 'Abbv Name', value: result.shortname, detail: result.shortname});
+        records.push({recid: i++, name: 'Description', value: result.description, detail: result.description});
+        records.push({recid: i++, name: 'Color', value: result.color, detail: result.color});
+        records.push({recid: i++, name: 'Prefix', value: result.prefix, detail: result.prefix});
+        let classdetails = getDetails(result.classes);
+        records.push({recid: i++, name: 'Classes', value: classdetails.length, detail: classdetails.join('|')});
+        let spkgs = getDetails(result.subpackages);
+        records.push({recid: i++, name: 'Sub Packages', value: spkgs.length, detail: spkgs.join('|')});
+        let interfaces = getDetails(result.interface);
+        records.push({recid: i++, name: 'Interfaces', value: interfaces.length, detail: interfaces.join('|')});
+        let handlers = getDetails(result.handlers);
+        records.push({recid: i++, name: 'Handlers', value: handlers.length, detail: handlers.join('|')});
+        let usecases = getDetails(result.usecases);
+        records.push({recid: i++, name: 'Use Cases', value: usecases.length, detail: usecases.join('|')});
+
+        w2ui['objlist'].records = records;
+        // Clear the detail list
+        w2ui['objdetail'].clear();
+
+        w2ui['objlist'].onClick = function (event) {
+            let record = this.get(event.recid);
+            w2ui['objdetail'].header = `${record.name} Details`;
+            w2ui['objdetail'].show.columnHeaders = true;
+            w2ui['objdetail'].clear();
+            let drecords = [];
+            let k = 0;
+            let values = record.detail.split('|');
+            for (let i in values) {
+                let [name, value] = values[i].split('^');
+                if (!value) {
+                    value = name;
+                    name = record.name;
+                }
+                k++;
+                drecords.push({recid: k, name: name, value: value});
+            }
+            w2ui['objdetail'].add(drecords);
+            window.graph.selectNodeByID(event.recid);
+        }
+        ASelectedHUD.update('Package', records);
+        w2ui['objlist'].refresh();
+    }
+    static showListDetail(result) {
         let records = [];
         let cols = [
             {field: 'name', size: "20%", resizeable: true, label: "Name", sortable: true},
@@ -536,6 +581,17 @@ function layoutRowColumn(parentNode, nodes, size, direction) {
                 fx: bbox.x.max,
                 fy: bbox.y.max - offset.h/2 - (row * offset.h),
                 fz: bbox.z.max - offset.w/2 - (col * offset.w),
+            }
+        } else if (direction === 'left') {
+            let offset = {
+                w: Math.max(parentNode.cube.z / (size.box.cols + 1), size.stats.w.max) * 1.10,
+                h: Math.max(parentNode.cube.y / (size.box.rows + 1), size.stats.h.max) * 1.10
+            }
+            node.rbox = {
+                parent: prevNode.id,
+                fx: bbox.x.min - size.stats.d.max,
+                fy: bbox.y.max - offset.h / 2 - (row * offset.h),
+                fz: bbox.z.max - offset.w / 2 - (col * offset.w),
             }
         } else if (direction === 'back') {
             let offset = {

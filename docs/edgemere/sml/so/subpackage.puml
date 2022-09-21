@@ -1,11 +1,11 @@
 @startuml
 
 
-package "Service Controller" #lightgreen {
+package "Service Controller" #88cc88 {
 
 }
 
-package "Service Repository" #lightgreen {
+package "Service Repository" #88cc88 {
 
 }
 
@@ -13,28 +13,28 @@ package "Data Orchestrator" #lightblue {
 
 }
 
-package "Infrastructure Orchestrator" #lightyellow {
+package "Infrastructure Orchestrator" #cccc88 {
 
 }
 
-package "Service Management Layer" #lightgreen {
+package "Service Management Layer" #88cc88 {
 
 }
 
-package "Software Defined Infrastructure" #lightyellow {
+package "Software Defined Infrastructure" #cccc88 {
 
 }
 
-package "Service Orchestrator" #lightgreen {
+package "Service Orchestrator" #88cc88 {
 
 }
 
-package "Application Management Layer" #lightblue {
+package "Application Management Layer" #88cccc {
 
 }
 
 
-package "Service Orchestrator" #lightgreen {
+package "Service Orchestrator" #88cc88 {
 
     interface "Service Orchestrator" as i {
             ^datareference.provisioned
@@ -58,7 +58,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Service Orchestrator" #lightgreen {
+package "Service Orchestrator" #88cc88 {
 
 
 }

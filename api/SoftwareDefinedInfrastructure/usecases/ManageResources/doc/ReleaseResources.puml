@@ -1,11 +1,11 @@
 @startuml
 actor "IT Operations"
-box sdi #lightyellow
+box sdi #cccc88
     boundary sdi #white
     participant Cloud #white
     participant Request #white
 end box
-boundary cpl #lightgray
+boundary cpl #cccccc
 entity EventBus
 "IT Operations" -> sdi: sdi/getresources(cloud, name, requirements)
 sdi -> sdi: getresources(cloud, name, requirements)

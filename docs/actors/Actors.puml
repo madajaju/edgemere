@@ -26,7 +26,7 @@ Actor "Stack Developer" as StackDeveloper
 
 
 
-rectangle "Application Management Layer" as aml  #lightblue {
+rectangle "Application Management Layer" as aml  #88cccc {
         usecase "Manage AI Models" as ManageAIModels
     
         DataScientist ---> ManageAIModels
@@ -62,7 +62,7 @@ rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
 
 }
 
-rectangle "Service Management Layer" as sml  #lightgreen {
+rectangle "Service Management Layer" as sml  #88cc88 {
         usecase "Manage Stacks" as ManageStacks
     
         StackDeveloper ---> ManageStacks
@@ -72,7 +72,7 @@ rectangle "Service Management Layer" as sml  #lightgreen {
 
 }
 
-rectangle "Service Management Layer" as sml  #lightgreen {
+rectangle "Service Management Layer" as sml  #88cc88 {
         usecase "Manage Services" as ManageServices
     
         StackDeveloper --> ManageServices
@@ -148,7 +148,7 @@ rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
 
 }
 
-rectangle "Application Management Layer" as aml  #lightblue {
+rectangle "Application Management Layer" as aml  #88cccc {
         usecase "Manage Environment" as ManageEnvironment
     
         ITOperations --> ManageEnvironment
@@ -158,7 +158,7 @@ rectangle "Application Management Layer" as aml  #lightblue {
 
 }
 
-rectangle "Common Physical Layer" as cpl  #lightgray {
+rectangle "Common Physical Layer" as cpl  #cccccc {
         usecase "Manage Data Center" as ManageDataCenter
     
         ITOperations ---> ManageDataCenter
@@ -170,7 +170,7 @@ rectangle "Common Physical Layer" as cpl  #lightgray {
 
 }
 
-rectangle "Service Management Layer" as sml  #lightgreen {
+rectangle "Service Management Layer" as sml  #88cc88 {
         usecase "Find Resources" as FindResources
     
         ITOperations --> FindResources
@@ -198,7 +198,7 @@ rectangle "Service Management Layer" as sml  #lightgreen {
 
 }
 
-rectangle "Service Management Layer" as sml  #lightgreen {
+rectangle "Service Management Layer" as sml  #88cc88 {
         usecase "Manage Assets" as ManageAssets
     
         ITOperations ---> ManageAssets
@@ -206,7 +206,7 @@ rectangle "Service Management Layer" as sml  #lightgreen {
 
 }
 
-rectangle "Software Defined Infrastructure" as sdi  #lightyellow {
+rectangle "Software Defined Infrastructure" as sdi  #cccc88 {
         usecase "Manage Resources" as ManageResources
     
         ITOperations --> ManageResources
@@ -214,7 +214,7 @@ rectangle "Software Defined Infrastructure" as sdi  #lightyellow {
 
 }
 
-rectangle "Security Aspect" as sa  #pink {
+rectangle "Security Aspect" as sa  #cc8888 {
         usecase "Manage Security Profiles" as ManageSecurityProfiles
     
         SecurityEngineer ---> ManageSecurityProfiles

@@ -2,67 +2,53 @@
 
 
 
-state Request #lightyellow {
+state Request #cccc88 {
 
-    state Init #lightyellow {
+    state Init #cccc88 {
     }
 
-    state Needed #lightyellow {
+    state Needed #cccc88 {
     }
 
-    state Failed #lightyellow {
+    state Failed #cccc88 {
     }
 
-    state Selected #lightyellow {
+    state Selected #cccc88 {
     }
 
-    state Satisfied #lightyellow {
+    state Satisfied #cccc88 {
     }
 
-    state Evaluated #lightyellow {
+    state Evaluated #cccc88 {
     }
 
-    state Completed #lightyellow {
+    state Completed #cccc88 {
     }
+
+
+
+
+Init -[#black]--> Needed : fulfill
+
+Needed -[#black]--> Selected : selected
+
+Needed -[#black]--> Failed : failed
+
+Selected -[#black]--> Evaluated : evaluated
+
+Satisfied -[#black]--> Completed : complete
+
+Evaluated -[#black]--> Satisfied : satisfied
+
+Evaluated -[#black]--> Failed : failed
 
 }
 
-
-Init --> Needed : fulfill
-
-Needed --> Selected : selected
-
-Needed --> Failed : failed
-
-Selected --> Evaluated : evaluated
-
-Satisfied --> Completed : complete
-
-Evaluated --> Satisfied : satisfied
-
-Evaluated --> Failed : failed
-
-
-
- state "edgemere" as edgemere #lightgray {
-state "cpl" as edgemerecpl #lightgray {
-state "reserve" as edgemerecplreserve #lightgray {
-}
-}
-}
-
- Needed -[#black]--> edgemerecplreserve
  
- state "edgemere" as edgemere #lightyellow {
-state "sdi" as edgemeresdi #lightyellow {
-state "io" as edgemeresdiio #lightyellow {
-state "evaluateRequest" as edgemeresdiioevaluateRequest #lightyellow {
-}
-}
-}
-}
-
- Selected -[#black]--> edgemeresdiioevaluateRequest
+ Needed -[#black]--> Null
+ 
+ 
+ Selected -[#black]--> Null
  
  
  Satisfied -[#black]--> Null

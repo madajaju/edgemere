@@ -2,29 +2,29 @@
 
 
 
-state StackInstance #lightgreen {
+state StackInstance #88cc88 {
 
-    state Init #lightgreen {
+    state Init #88cc88 {
     }
 
-    state Deploying #lightgreen {
+    state Deploying #88cc88 {
     }
 
-    state Running #lightgreen {
+    state Running #88cc88 {
     }
 
-    state Failed #lightgreen {
+    state Failed #88cc88 {
     }
 
-    state Completed #lightgreen {
+    state Completed #88cc88 {
     }
+
+
+
+
+Init -[#black]--> Deploying : create
 
 }
-
-
-Init --> Deploying : create
-
-
 
 
 @enduml

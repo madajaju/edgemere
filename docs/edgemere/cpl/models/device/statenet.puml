@@ -2,29 +2,29 @@
 
 
 
-state Device #lightgray {
+state Device #cccccc {
 
-    state Init #lightgray {
+    state Init #cccccc {
     }
 
-    state Enabled #lightgray {
+    state Enabled #cccccc {
     }
 
-    state Disabled #lightgray {
+    state Disabled #cccccc {
     }
+
+
+
+
+Init -[#black]--> Enabled : create
+
+Init -[#black]--> Enabled : reserve
+
+Enabled -[#black]--> Disabled : disable
+
+Disabled -[#black]--> Enabled : enable
 
 }
-
-
-Init --> Enabled : create
-
-Init --> Enabled : reserve
-
-Enabled --> Disabled : disable
-
-Disabled --> Enabled : enable
-
-
 
 
 @enduml

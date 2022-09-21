@@ -15,7 +15,7 @@ interface 3001
 
 
 
-package "cpl_ta" #lightgray {
+package "cpl_ta" #cccccc {
 
 node "consumer" as consumerService
 node "aggregator" as aggregatorService

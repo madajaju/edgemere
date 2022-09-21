@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Apply Security Profiles
 permalink: usecase-ApplySecurityProfiles
-parent: usecases
+parent: UseCases
 ---
 # Apply Security Profiles
 

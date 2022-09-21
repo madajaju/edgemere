@@ -3,7 +3,7 @@
 left to right direction
 
 
-rectangle "Service Controller" #lightgreen {
+rectangle "Service Controller" #88cc88 {
 }
 
 

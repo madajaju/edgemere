@@ -1,8 +1,7 @@
 ---
-layout: default
-title: Service Management Layer
+title: Package Service Management Layer
 permalink: package--edgemere-sml
-parent: edgemere
+parent: Package edgemere
 has_children: true
 ---
 
@@ -203,8 +202,13 @@ can be found [here](environment--edgemere-sml-dev)
 
 Services in the dev environment
 
-* frontend : sml_web
-* gw : sml_gw
+* broker : sml_cb
+* envmangaer : sml_em
+* provision : sml_pe
+* controller : sml_sc
+* orchestrator : sml_so
+* repo : sml_sr
+* web : sml_web
 
 
 ### test
@@ -214,8 +218,13 @@ can be found [here](environment--edgemere-sml-test)
 
 Services in the test environment
 
-* frontend : sml_web
-* gw : sml_gw
+* broker : sml_cb
+* envmangaer : sml_em
+* provision : sml_pe
+* controller : sml_sc
+* orchestrator : sml_so
+* repo : sml_sr
+* web : sml_web
 
 
 ### prod
@@ -225,8 +234,13 @@ can be found [here](environment--edgemere-sml-prod)
 
 Services in the prod environment
 
-* frontend : sml_web
-* gw : sml_gw
+* broker : sml_cb
+* envmangaer : sml_em
+* provision : sml_pe
+* controller : sml_sc
+* orchestrator : sml_so
+* repo : sml_sr
+* web : sml_web
 
 
 ## Activities and Flows

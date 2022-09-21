@@ -2,7 +2,7 @@
 layout: default
 title: Class Resource
 permalink: class-Resource
-parent: classes
+parent: Classes
 ---
 
 # Resource

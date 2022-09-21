@@ -2,7 +2,7 @@
 layout: default
 title: Class StorageHardware
 permalink: class-StorageHardware
-parent: classes
+parent: Classes
 ---
 
 # StorageHardware

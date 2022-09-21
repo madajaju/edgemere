@@ -1,7 +1,7 @@
 @startuml
 
 
-package "Service Management Layer" #lightgreen {
+package "Service Management Layer" #88cc88 {
 
 }
 

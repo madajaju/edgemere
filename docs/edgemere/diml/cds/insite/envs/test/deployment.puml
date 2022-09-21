@@ -30,22 +30,14 @@ package "insite" #lightblue {
     
 
 node "frontend" as frontendService
-node "gw" as gwService
 
 
         artifact "diml_cds_insite_web" as diml_cds_insite_webimage
     
-        artifact "diml_cds_insite_gw" as diml_cds_insite_gwimage
-    
 }
 
 frontendService -[#blue]- siblingnet
-
-gwService -[#black]- childrennet
-
-gwService -[#blue]- siblingnet
 frontendService .... diml_cds_insite_webimage
-gwService .... diml_cds_insite_gwimage
 
 
 @enduml

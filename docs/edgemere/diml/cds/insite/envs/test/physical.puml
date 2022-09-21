@@ -19,10 +19,6 @@ package "Insite Services" #lightblue {
     REST --> web_container
     socket ---> web_container
   
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
-  
   }
   folder images #ffffff {
     collections "insite" as insiteimage
@@ -33,9 +29,6 @@ package "Insite Services" #lightblue {
   
       artifact "diml_cds_insite_web" as diml_cds_insite_web
       web_container --> diml_cds_insite_web
-    
-      artifact "diml_cds_insite_gw" as diml_cds_insite_gw
-      gateway_container --> diml_cds_insite_gw
     
   }
 }

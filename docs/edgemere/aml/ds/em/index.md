@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Environment Management
+title: Package Environment Management
 permalink: package--edgemere-aml-ds-em
-parent: Developer Services
-grand_parent: Application Management Layer
+parent: Package Developer Services
+grand_parent: Package Application Management Layer
 ---
 
 # Environment Management
@@ -113,8 +112,7 @@ can be found [here](environment--edgemere-aml-ds-em-dev)
 
 Services in the dev environment
 
-* frontend : sml_em_web
-* gw : sml_em_gw
+* web : sml_em_web
 
 
 ### test
@@ -124,8 +122,7 @@ can be found [here](environment--edgemere-aml-ds-em-test)
 
 Services in the test environment
 
-* frontend : sml_em_web
-* gw : sml_em_gw
+* web : sml_em_web
 
 
 ### prod
@@ -135,8 +132,7 @@ can be found [here](environment--edgemere-aml-ds-em-prod)
 
 Services in the prod environment
 
-* frontend : sml_em_web
-* gw : sml_em_gw
+* web : sml_em_web
 
 
 ## Activities and Flows

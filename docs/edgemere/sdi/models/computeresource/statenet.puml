@@ -2,12 +2,12 @@
 
 
 
-state ComputeResource #lightyellow {
+state ComputeResource #cccc88 {
+
+
+
 
 }
-
-
-
 
 
 @enduml

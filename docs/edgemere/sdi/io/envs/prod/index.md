@@ -2,10 +2,11 @@
 layout: default
 title: Environment prod
 permalink: environment--edgemere-sdi-io-prod
-nav_exclude: true
+parent: environment-prod
+grand_parent: Environments
 ---
 
-### prod
+### Infrastructure Orchestrator prod
 
 
 #### Deployment
@@ -30,8 +31,7 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| frontend | sdi_io_web |  |  | sibling |
-| gw | sdi_io_gw |  |  | children,sibling |
+| web | sdi_io_web |  |  | children,siblings |
 
 
 #### Networks
@@ -44,9 +44,9 @@ stack in a layer of networks.
 
 | Name | Type | External Name | Ports |
 | --- | --- | --- | --- |
-| children | egress | ailtire_appname_sdi_io_family |
-| sibling | internal |  |
-| parent | ingress | ailtire_appname_sdi_family |
+| parent | ingress | parent |
+| children | egress | children |
+| siblings | internal |  |
 
 
 The Stack is micro-segmented off and there are a set of ports that are open for the ingress networks. The following

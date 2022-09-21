@@ -2,150 +2,162 @@
 left to right direction
 
 
-
-state "IT Operations" as ITOperations {
-    state "Find Resources" as ITOperationsFindResources {
-    }
-}
-state "edgemere" as edgemere #lightgreen {
-state "sml" as edgemeresml #lightgreen {
-state "cb" as edgemeresmlcb #lightgreen {
-state "resources" as edgemeresmlcbresources #lightgreen {
-state "find" as edgemeresmlcbresourcesfind #lightgreen {
-}
-}
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml {
+package "cb" as edgemeresmlcb #88cc88 {
+ component "billing" as edgemeresmlcbbilling
+ interface "list" as edgemeresmlcbbillinglist
+edgemeresmlcbbilling -- edgemeresmlcbbillinglist
 }
 }
 }
 
-ITOperationsFindResources --> edgemeresmlcbresourcesfind
-
-
- 
-state "ITOperations" as ITOperations {
-    state "ManageBilling" as ITOperationsManageBilling {
-    }
-}
-state "edgemere" as edgemere #lightgreen {
-state "sml" as edgemeresml #lightgreen {
-state "cb" as edgemeresmlcb #lightgreen {
-state "billing" as edgemeresmlcbbilling #lightgreen {
-state "list" as edgemeresmlcbbillinglist #lightgreen {
-}
-}
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml {
+package "cb" as edgemeresmlcb #88cc88 {
+ component "data" as edgemeresmlcbdata
+ interface "govern" as edgemeresmlcbdatagovern
+edgemeresmlcbdata -- edgemeresmlcbdatagovern
 }
 }
 }
 
-ITOperationsManageBilling --> edgemeresmlcbbillinglist
-
-
- 
-state "ITOperations" as ITOperations {
-    state "ManageCostModel" as ITOperationsManageCostModel {
-    }
-}
-state "edgemere" as edgemere #lightgreen {
-state "sml" as edgemeresml #lightgreen {
-state "cb" as edgemeresmlcb #lightgreen {
-state "ResourceInstanceType" as edgemeresmlcbResourceInstanceType #lightgreen {
-state "list" as edgemeresmlcbResourceInstanceTypelist #lightgreen {
-}
-}
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml {
+package "cb" as edgemeresmlcb #88cc88 {
+ component "multicloud" as edgemeresmlcbmulticloud
+ interface "addclouds" as edgemeresmlcbmulticloudaddclouds
+edgemeresmlcbmulticloud -- edgemeresmlcbmulticloudaddclouds
 }
 }
 }
 
-ITOperationsManageCostModel --> edgemeresmlcbResourceInstanceTypelist
-
-
- 
-state "IT Operations" as ITOperations {
-    state "Manage Multi Cloud" as ITOperationsManageMultiCloud {
-    }
-}
-state "edgemere" as edgemere #lightgreen {
-state "sml" as edgemeresml #lightgreen {
-state "cb" as edgemeresmlcb #lightgreen {
-state "multicloud" as edgemeresmlcbmulticloud #lightgreen {
-state "list" as edgemeresmlcbmulticloudlist #lightgreen {
-}
-}
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml {
+package "cb" as edgemeresmlcb #88cc88 {
+ component "multicloud" as edgemeresmlcbmulticloud
+ interface "addpolicies" as edgemeresmlcbmulticloudaddpolicies
+edgemeresmlcbmulticloud -- edgemeresmlcbmulticloudaddpolicies
 }
 }
 }
 
-ITOperationsManageMultiCloud --> edgemeresmlcbmulticloudlist
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml {
+package "cb" as edgemeresmlcb #88cc88 {
+ component "multicloud" as edgemeresmlcbmulticloud
+ interface "list" as edgemeresmlcbmulticloudlist
+edgemeresmlcbmulticloud -- edgemeresmlcbmulticloudlist
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml {
+package "cb" as edgemeresmlcb #88cc88 {
+ component "multicloud" as edgemeresmlcbmulticloud
+ interface "mapresources" as edgemeresmlcbmulticloudmapresources
+edgemeresmlcbmulticloud -- edgemeresmlcbmulticloudmapresources
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml {
+package "cb" as edgemeresmlcb #88cc88 {
+ component "multicloud" as edgemeresmlcbmulticloud
+ interface "removepolicies" as edgemeresmlcbmulticloudremovepolicies
+edgemeresmlcbmulticloud -- edgemeresmlcbmulticloudremovepolicies
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml {
+package "cb" as edgemeresmlcb #88cc88 {
+ component "resourceinstancetype" as edgemeresmlcbresourceinstancetype
+ interface "list" as edgemeresmlcbresourceinstancetypelist
+edgemeresmlcbresourceinstancetype -- edgemeresmlcbresourceinstancetypelist
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml {
+package "cb" as edgemeresmlcb #88cc88 {
+ component "resources" as edgemeresmlcbresources
+ interface "find" as edgemeresmlcbresourcesfind
+edgemeresmlcbresources -- edgemeresmlcbresourcesfind
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml {
+package "cb" as edgemeresmlcb #88cc88 {
+ component "service" as edgemeresmlcbservice
+ interface "mapresources" as edgemeresmlcbservicemapresources
+edgemeresmlcbservice -- edgemeresmlcbservicemapresources
+}
+}
+}
+
+    
 
 
-    state "IT Operations" as ITOperations {
-        state "Manage Multi Cloud" as ITOperationsManageMultiCloud {
-            state "Add Cloud to Multi Cloud" as ITOperationsManageMultiCloudAddCloudtoMultiCloud {
-            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        rectangle "Manage Multi Cloud" as ManageMultiCloud #ffffaa {
+            ("Add Cloud to Multi Cloud")/ as ITOperationsManageMultiCloudAddCloudtoMultiCloud
         }
-    }
     
-    ITOperationsManageMultiCloudAddCloudtoMultiCloud --> Null
+    edgemeresmlcbmulticloudaddclouds <-- ITOperationsManageMultiCloudAddCloudtoMultiCloud
     
- 
-    state "IT Operations" as ITOperations {
-        state "Manage Multi Cloud" as ITOperationsManageMultiCloud {
-            state "Manage Policies for Multi Cloud" as ITOperationsManageMultiCloudManagePoliciesforMultiCloud {
-            }
+        rectangle "Manage Multi Cloud" as ManageMultiCloud #ffffaa {
+            ("Manage Policies for Multi Cloud")/ as ITOperationsManageMultiCloudManagePoliciesforMultiCloud
         }
-    }
     
-    ITOperationsManageMultiCloudManagePoliciesforMultiCloud --> Null
+    edgemeresmlcbmulticloudaddpolicies <-- ITOperationsManageMultiCloudManagePoliciesforMultiCloud
     
- 
-    state "IT Operations" as ITOperations {
-        state "Manage Multi Cloud" as ITOperationsManageMultiCloud {
-            state "Manage Policies for Multi Cloud" as ITOperationsManageMultiCloudRemoveCloudfromMultiCloud {
-            }
+        rectangle "Manage Multi Cloud" as ManageMultiCloud #ffffaa {
+            ("Manage Policies for Multi Cloud")/ as ITOperationsManageMultiCloudRemoveCloudfromMultiCloud
         }
-    }
     
-    ITOperationsManageMultiCloudRemoveCloudfromMultiCloud --> Null
+    edgemeresmlcbmulticloudremovepolicies <-- ITOperationsManageMultiCloudRemoveCloudfromMultiCloud
     
- 
- 
-state "IT Operations" as ITOperations {
-    state "Map Assets to Cloud" as ITOperationsMapAssetstoCloud {
-    }
-}
-state "edgemere" as edgemere #lightgreen {
-state "sml" as edgemeresml #lightgreen {
-state "cb" as edgemeresmlcb #lightgreen {
-state "multicloud" as edgemeresmlcbmulticloud #lightgreen {
-state "mapresources" as edgemeresmlcbmulticloudmapresources #lightgreen {
-}
-}
-}
-}
-}
-
-ITOperationsMapAssetstoCloud --> edgemeresmlcbmulticloudmapresources
 
 
- 
-state "IT Operations" as ITOperations {
-    state "Map Services to Resources" as ITOperationsMapServicestoResources {
-    }
-}
-state "edgemere" as edgemere #lightgreen {
-state "sml" as edgemeresml #lightgreen {
-state "cb" as edgemeresmlcb #lightgreen {
-state "service" as edgemeresmlcbservice #lightgreen {
-state "mapresources" as edgemeresmlcbservicemapresources #lightgreen {
-}
-}
-}
-}
-}
-
-ITOperationsMapServicestoResources --> edgemeresmlcbservicemapresources
 
 
- 
+
+
 
 @enduml

@@ -1,6 +1,7 @@
 module.exports = {
     services: {
         data_orchestrator: {
+            type: 'stack',
             image: "diml_dml_do",
             interface: {
                 do: { path: '/data', port: 3000, protocol:"http"},
@@ -10,6 +11,7 @@ module.exports = {
             }
         },
         policy_engine: {
+            type: 'stack',
             image: "sa_pe",
             interface: {
                 pe: {path:'/policy', port: 3000 },
@@ -19,6 +21,7 @@ module.exports = {
             }
         },
         service_orchestrator: {
+            type: 'stack',
             image: "sml_so",
             interface: {
                 so: {path:'/service', port: 3000 },
@@ -28,6 +31,7 @@ module.exports = {
             }
         },
         telemetry_aggregator: {
+            type: 'stack',
             image: "cpl_ta",
             interface: {
                 ta: {path:'/telemetry', port: 3000 },

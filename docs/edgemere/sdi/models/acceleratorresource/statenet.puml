@@ -2,12 +2,12 @@
 
 
 
-state AcceleratorResource #lightyellow {
+state AcceleratorResource #cccc88 {
+
+
+
 
 }
-
-
-
 
 
 @enduml

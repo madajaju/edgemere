@@ -2,106 +2,161 @@
 left to right direction
 
 
-
-state "IT Operations" as ITOperations {
-    state "Manage Environment" as ITOperationsManageEnvironment {
-    }
-}
-state "edgemere" as edgemere #lightgreen {
-state "aml" as edgemereaml #lightgreen {
-state "ds" as edgemereamlds #lightgreen {
-state "em" as edgemereamldsem #lightgreen {
-state "environment" as edgemereamldsemenvironment #lightgreen {
-state "list" as edgemereamldsemenvironmentlist #lightgreen {
-}
-}
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml {
+package "ds" as edgemereamlds {
+package "em" as edgemereamldsem #88cc88 {
+ component "environment" as edgemereamldsemenvironment
+ interface "addpolicies" as edgemereamldsemenvironmentaddpolicies
+edgemereamldsemenvironment -- edgemereamldsemenvironmentaddpolicies
 }
 }
 }
 }
 
-ITOperationsManageEnvironment --> edgemereamldsemenvironmentlist
-
-state "Stack Developer" as StackDeveloper {
-    state "Manage Environment" as StackDeveloperManageEnvironment {
-    }
-}
-state "edgemere" as edgemere #lightgreen {
-state "aml" as edgemereaml #lightgreen {
-state "ds" as edgemereamlds #lightgreen {
-state "em" as edgemereamldsem #lightgreen {
-state "environment" as edgemereamldsemenvironment #lightgreen {
-state "list" as edgemereamldsemenvironmentlist #lightgreen {
-}
-}
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml {
+package "ds" as edgemereamlds {
+package "em" as edgemereamldsem #88cc88 {
+ component "environment" as edgemereamldsemenvironment
+ interface "create" as edgemereamldsemenvironmentcreate
+edgemereamldsemenvironment -- edgemereamldsemenvironmentcreate
 }
 }
 }
 }
 
-StackDeveloperManageEnvironment --> edgemereamldsemenvironmentlist
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml {
+package "ds" as edgemereamlds {
+package "em" as edgemereamldsem #88cc88 {
+ component "environment" as edgemereamldsemenvironment
+ interface "destroy" as edgemereamldsemenvironmentdestroy
+edgemereamldsemenvironment -- edgemereamldsemenvironmentdestroy
+}
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml {
+package "ds" as edgemereamlds {
+package "em" as edgemereamldsem #88cc88 {
+ component "environment" as edgemereamldsemenvironment
+ interface "disable" as edgemereamldsemenvironmentdisable
+edgemereamldsemenvironment -- edgemereamldsemenvironmentdisable
+}
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml {
+package "ds" as edgemereamlds {
+package "em" as edgemereamldsem #88cc88 {
+ component "environment" as edgemereamldsemenvironment
+ interface "enable" as edgemereamldsemenvironmentenable
+edgemereamldsemenvironment -- edgemereamldsemenvironmentenable
+}
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml {
+package "ds" as edgemereamlds {
+package "em" as edgemereamldsem #88cc88 {
+ component "environment" as edgemereamldsemenvironment
+ interface "list" as edgemereamldsemenvironmentlist
+edgemereamldsemenvironment -- edgemereamldsemenvironmentlist
+}
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml {
+package "ds" as edgemereamlds {
+package "em" as edgemereamldsem #88cc88 {
+ component "environment" as edgemereamldsemenvironment
+ interface "update" as edgemereamldsemenvironmentupdate
+edgemereamldsemenvironment -- edgemereamldsemenvironmentupdate
+}
+}
+}
+}
+
+    
+
+        rectangle "Manage Environment" as ManageEnvironment #ffffaa {
+            ("Create Environment")/ as ITOperationsManageEnvironmentCreateEnvironment
+        }
+    
+    edgemereamldsemenvironmentcreate <-- ITOperationsManageEnvironmentCreateEnvironment
+    
+        rectangle "Manage Environment" as ManageEnvironment #ffffaa {
+            ("Delete Environment")/ as ITOperationsManageEnvironmentDeleteEnvironment
+        }
+    
+    edgemereamldsemenvironmentdestroy <-- ITOperationsManageEnvironmentDeleteEnvironment
+    
+        rectangle "Manage Environment" as ManageEnvironment #ffffaa {
+            ("Disable Environment")/ as ITOperationsManageEnvironmentDisableEnvironment
+        }
+    
+    edgemereamldsemenvironmentdisable <-- ITOperationsManageEnvironmentDisableEnvironment
+    
+        rectangle "Manage Environment" as ManageEnvironment #ffffaa {
+            ("Enable Environment")/ as ITOperationsManageEnvironmentEnableEnvironment
+        }
+    
+    edgemereamldsemenvironmentenable <-- ITOperationsManageEnvironmentEnableEnvironment
+    
+        rectangle "Manage Environment" as ManageEnvironment #ffffaa {
+            ("Manage Policies in Environment")/ as ITOperationsManageEnvironmentManagePoliciesinEnvironment
+        }
+    
+    edgemereamldsemenvironmentaddpolicies <-- ITOperationsManageEnvironmentManagePoliciesinEnvironment
+    
+        rectangle "Manage Environment" as ManageEnvironment #ffffaa {
+            ("Update Environment")/ as ITOperationsManageEnvironmentUpdateEnvironment
+        }
+    
+    edgemereamldsemenvironmentupdate <-- ITOperationsManageEnvironmentUpdateEnvironment
+    
 
 
-    state "IT Operations" as ITOperations {
-        state "Manage Environment" as ITOperationsManageEnvironment {
-            state "Create Environment" as ITOperationsManageEnvironmentCreateEnvironment {
-            }
-        }
-    }
-    
-    ITOperationsManageEnvironmentCreateEnvironment --> Null
-    
- 
-    state "IT Operations" as ITOperations {
-        state "Manage Environment" as ITOperationsManageEnvironment {
-            state "Delete Environment" as ITOperationsManageEnvironmentDeleteEnvironment {
-            }
-        }
-    }
-    
-    ITOperationsManageEnvironmentDeleteEnvironment --> Null
-    
- 
-    state "IT Operations" as ITOperations {
-        state "Manage Environment" as ITOperationsManageEnvironment {
-            state "Disable Environment" as ITOperationsManageEnvironmentDisableEnvironment {
-            }
-        }
-    }
-    
-    ITOperationsManageEnvironmentDisableEnvironment --> Null
-    
- 
-    state "IT Operations" as ITOperations {
-        state "Manage Environment" as ITOperationsManageEnvironment {
-            state "Enable Environment" as ITOperationsManageEnvironmentEnableEnvironment {
-            }
-        }
-    }
-    
-    ITOperationsManageEnvironmentEnableEnvironment --> Null
-    
- 
-    state "IT Operations" as ITOperations {
-        state "Manage Environment" as ITOperationsManageEnvironment {
-            state "Manage Policies in Environment" as ITOperationsManageEnvironmentManagePoliciesinEnvironment {
-            }
-        }
-    }
-    
-    ITOperationsManageEnvironmentManagePoliciesinEnvironment --> Null
-    
- 
-    state "IT Operations" as ITOperations {
-        state "Manage Environment" as ITOperationsManageEnvironment {
-            state "Update Environment" as ITOperationsManageEnvironmentUpdateEnvironment {
-            }
-        }
-    }
-    
-    ITOperationsManageEnvironmentUpdateEnvironment --> Null
-    
- 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @enduml

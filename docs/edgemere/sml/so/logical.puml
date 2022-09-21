@@ -1,10 +1,10 @@
 @startuml
 
 
-package "Service Controller" #lightgreen {
+package "Service Controller" #88cc88 {
     }
 
-package "Service Repository" #lightgreen {
+package "Service Repository" #88cc88 {
     }
 
 package "Data Orchestrator" #lightblue {
@@ -13,10 +13,10 @@ package "Data Orchestrator" #lightblue {
         }
     }
 
-package "Infrastructure Orchestrator" #lightyellow {
+package "Infrastructure Orchestrator" #cccc88 {
     }
 
-package "Service Management Layer" #lightgreen {
+package "Service Management Layer" #88cc88 {
     
         class Image {
         }
@@ -34,13 +34,13 @@ package "Service Management Layer" #lightgreen {
         }
     }
 
-package "Software Defined Infrastructure" #lightyellow {
+package "Software Defined Infrastructure" #cccc88 {
     
         class Resource {
         }
     }
 
-package "Service Orchestrator" #lightgreen {
+package "Service Orchestrator" #88cc88 {
     
         class StackInstance {
         }
@@ -49,14 +49,14 @@ package "Service Orchestrator" #lightgreen {
         }
     }
 
-package "Application Management Layer" #lightblue {
+package "Application Management Layer" #88cccc {
     
         class ApplicationInstance {
         }
     }
 
 
-package "Service Orchestrator" #lightgreen {
+package "Service Orchestrator" #88cc88 {
 
     interface "Service Orchestrator" as i {
             /edgemere/sml/so/servicelet/assigndata()
@@ -72,7 +72,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Service Orchestrator" #lightgreen {
+package "Service Orchestrator" #88cc88 {
         class "ServiceInstance" {
                     }
                 ServiceInstance o--> "1" Image : image

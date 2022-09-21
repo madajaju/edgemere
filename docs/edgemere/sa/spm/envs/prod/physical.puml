@@ -2,7 +2,7 @@
   interface CLI
   interface Web
   interface WebSocket
-package "Security Profile Manager" #pink {
+package "Security Profile Manager" #cc8888 {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {
@@ -19,10 +19,6 @@ package "Security Profile Manager" #pink {
     REST --> web_container
     socket ---> web_container
   
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
-  
   }
   folder images #ffffff {
     collections "s_spm" as s_spmimage
@@ -33,9 +29,6 @@ package "Security Profile Manager" #pink {
   
       artifact "s_spm_web" as s_spm_web
       web_container --> s_spm_web
-    
-      artifact "s_spm_gw" as s_spm_gw
-      gateway_container --> s_spm_gw
     
   }
 }

@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Service Controller
+title: Package Service Controller
 permalink: package--edgemere-sml-sc
-parent: Service Management Layer
-grand_parent: edgemere
+parent: Package Service Management Layer
+grand_parent: Package edgemere
 ---
 
 # Service Controller
@@ -102,8 +101,7 @@ can be found [here](environment--edgemere-sml-sc-dev)
 
 Services in the dev environment
 
-* frontend : sml_sc_web
-* gw : sml_sc_gw
+* gw : sml_sc_controller
 
 
 ### test
@@ -113,8 +111,7 @@ can be found [here](environment--edgemere-sml-sc-test)
 
 Services in the test environment
 
-* frontend : sml_sc_web
-* gw : sml_sc_gw
+* gw : sml_sc_controller
 
 
 ### prod
@@ -124,8 +121,7 @@ can be found [here](environment--edgemere-sml-sc-prod)
 
 Services in the prod environment
 
-* frontend : sml_sc_web
-* gw : sml_sc_gw
+* gw : sml_sc_controller
 
 
 ## Activities and Flows

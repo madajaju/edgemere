@@ -2,7 +2,7 @@
 layout: default
 title: Class Hardware
 permalink: class-Hardware
-parent: classes
+parent: Classes
 ---
 
 # Hardware

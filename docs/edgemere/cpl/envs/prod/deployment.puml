@@ -3,107 +3,95 @@
 left to right direction
 
 
-boundary ailtire_appname_family #orange
+boundary parent #blue
 
 
-entity ailtire_appname_telemetry_family #black
+entity telemetry #black
 
-entity ailtire_appname_cpl_family #blue
+entity children #red
 
-rectangle "cpl_da" as cpl_daStack #lightgray {
-    queue cpl_daStacksnet #blue [
+rectangle "cpl_da" as cpl_daStack #cccccc {
+    queue cpl_daStacksnet #red [
         <b><color:white>parent</color></b>
     ]
 }
-rectangle "cpl_dm" as cpl_dmStack #lightgray {
-    queue cpl_dmStacksnet #blue [
+rectangle "cpl_dm" as cpl_dmStack #cccccc {
+    queue cpl_dmStacksnet #red [
         <b><color:white>parent</color></b>
     ]
 }
-rectangle "cpl_tc" as cpl_tcStack #lightgray {
-    queue cpl_tcStacksnet #blue [
+rectangle "cpl_tc" as cpl_tcStack #cccccc {
+    queue cpl_tcStacksnet #red [
         <b><color:white>parent</color></b>
     ]
 }
 
 
 
-package "cpl" #lightgray {
+package "cpl" #cccccc {
     queue telemetrynet #black [
             <b><color:white>telemetry</color></b>
     ]
     
-    telemetrynet -[#black]- ailtire_appname_telemetry_family
+    telemetrynet -[#black]- telemetry
     
-    queue childrennet #blue [
-            <b><color:white>children</color></b>
-    ]
-    
-    childrennet -[#blue]- ailtire_appname_cpl_family
-    
-    queue siblingnet #red [
-            <b><color:white>sibling</color></b>
-    ]
-    
-    queue parentnet #orange [
+    queue parentnet #blue [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#orange]- ailtire_appname_family
+    parentnet -[#blue]- parent
+    
+    queue childrennet #red [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#red]- children
+    
+    queue siblingsnet #orange [
+            <b><color:white>siblings</color></b>
+    ]
     
 
-
-node "frontend" as frontendService {
-    
-}
 node "web" as webService
 node "deviceagent" as deviceagentService
 node "devicemanager" as devicemanagerService
 node "telemetry" as telemetryService
 
 
-        artifact "cpl_web:latest" as cpl_weblatestimage
-            collections "cpl_da:latest" as cpl_dalatestimage
-            collections "cpl_dm:latest" as cpl_dmlatestimage
-            collections "cpl_tc:latest" as cpl_tclatestimage
-    
-        artifact "traefik:latest" as traefiklatestimage
+        artifact "aml_web" as aml_webimage
+            collections "cpl_da" as cpl_daimage
+            collections "cpl_dm" as cpl_dmimage
+            collections "cpl_tc" as cpl_tcimage
     
 }
 
-external -[#black]- frontendService
+webService -[#red]- childrennet
 
-webService -[#blue]- childrennet
+webService -[#orange]- siblingsnet
 
-webService -[#orange]- parentnet
+deviceagentService -[#red]- childrennet
 
-deviceagentService -[#blue]- childrennet
+deviceagentService -[#blue]- parentnet
 
-deviceagentService -[#orange]- parentnet
+devicemanagerService -[#red]- childrennet
 
-devicemanagerService -[#blue]- childrennet
+devicemanagerService -[#blue]- parentnet
 
-devicemanagerService -[#orange]- parentnet
+telemetryService -[#red]- childrennet
 
-telemetryService -[#blue]- childrennet
-
-telemetryService -[#orange]- parentnet
+telemetryService -[#blue]- parentnet
 
 telemetryService -[#black]- telemetrynet
-webService .... cpl_weblatestimage
-deviceagentService .... cpl_dalatestimage
-devicemanagerService .... cpl_dmlatestimage
-telemetryService .... cpl_tclatestimage
+webService .... aml_webimage
+deviceagentService .... cpl_daimage
+devicemanagerService .... cpl_dmimage
+telemetryService .... cpl_tcimage
 
-frontendService .... traefiklatestimage
-
-cpl_dalatestimage --> cpl_daStack
+cpl_daimage --> cpl_daStack
     
-cpl_dmlatestimage --> cpl_dmStack
+cpl_dmimage --> cpl_dmStack
     
-cpl_dmStacksnet --[#blue]-- ailtire_appname_cpl_family
-    
-cpl_tclatestimage --> cpl_tcStack
+cpl_tcimage --> cpl_tcStack
     
 
 @enduml

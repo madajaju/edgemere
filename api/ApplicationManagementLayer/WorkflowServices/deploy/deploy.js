@@ -4,22 +4,19 @@ module.exports = {
     contexts: {
         dev: {
             type: 'swarm',
-            tag: 'aml_ws_dev',
-            file: 'docker-compose.yml',
+            tag: 'aml_ws:dev',
             design: 'services.js',
             env: {}
         },
         test: {
             type: 'swarm',
-            tag: 'aml_ws_test',
-            file: 'docker-compose.yml',
+            tag: 'aml_ws:test',
             design: 'services.js',
             env: {}
         },
         prod: {
             type: 'swarm',
-            tag: 'aml_ws_test',
-            file: 'docker-compose.yml',
+            tag: 'aml_ws:prod',
             design: 'services.js',
             env: {}
         }

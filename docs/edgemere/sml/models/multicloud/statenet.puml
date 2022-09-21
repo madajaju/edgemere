@@ -2,12 +2,12 @@
 
 
 
-state MultiCloud #lightgreen {
+state MultiCloud #88cc88 {
+
+
+
 
 }
-
-
-
 
 
 @enduml

@@ -5,19 +5,19 @@ module.exports = {
         dev: {
             type: 'swarm',
             tag: 'diml_dml_fmdm:dev',
-            file: 'docker-compose.yml',
+            design: 'services.js',
             env: {}
         },
         test: {
             type: 'swarm',
             tag: 'diml_dml_fmdm:test',
-            file: 'docker-compose.yml',
+            design: 'services.js',
             env: {}
         },
         prod: {
             type: 'swarm',
             tag: 'diml_dml_fmdm:prod',
-            file: 'docker-compose.yml',
+            design: 'services.js',
             env: {}
         }
     }

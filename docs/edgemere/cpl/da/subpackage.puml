@@ -2,7 +2,7 @@
 
 
 
-package "Device Agent" #lightgray {
+package "Device Agent" #cccccc {
 
     interface "Device Agent" as i {
             ^service.started
@@ -24,7 +24,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Device Agent" #lightgray {
+package "Device Agent" #cccccc {
 
 
 }

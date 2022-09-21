@@ -24,7 +24,7 @@ export default class AAction {
         let height = (nameArray.length * fontSize) / 2 + 10;
         let width = maxLetters * (fontSize / 2) + 20;
         let depth = height * 2;
-        let radius = Math.max(Math.sqrt(width * width + height * height), Math.sqrt(height * height + depth * depth), Math.sqrt(width * width + depth * depth));
+        let radius = Math.max(Math.sqrt(width * width + height * height), Math.sqrt(height * height + depth * depth), Math.sqrt(width * width + depth * depth))/2;
 
         return {w: width, h: height * 2, d: depth, r: radius};
     }
@@ -90,7 +90,7 @@ export default class AAction {
             }
         }
         group.aid = node.id;
-        node.box = size.r * 2;
+        node.box = size.r;
         node.expandLink = `action/get?id=${node.id}`;
         node.expandView = AAction.viewDeep3D;
         node.getDetail = AAction.getDetail;

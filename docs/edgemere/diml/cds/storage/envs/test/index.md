@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--edgemere-diml-cds-storage-test
-nav_exclude: true
+parent: environment-test
+grand_parent: Environments
 ---
 
-### test
+### Storage Services test
 
 
 #### Deployment
@@ -31,7 +32,6 @@ the subsystem's logic.
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
 | frontend | diml_cds_storage_web |  |  | sibling |
-| gw | diml_cds_storage_gw |  |  | children,sibling |
 
 
 #### Networks

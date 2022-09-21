@@ -2,10 +2,11 @@
 layout: default
 title: Environment prod
 permalink: environment--edgemere-cpl-tc-prod
-nav_exclude: true
+parent: environment-prod
+grand_parent: Environments
 ---
 
-### prod
+### Telemetry Consumer prod
 
 
 #### Deployment

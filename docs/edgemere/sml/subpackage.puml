@@ -1,7 +1,7 @@
 @startuml
 
 
-package "Software Defined Infrastructure" #lightyellow {
+package "Software Defined Infrastructure" #cccc88 {
 
 }
 
@@ -9,15 +9,15 @@ package "Distributed Information Management Layer" #ffcc88 {
 
 }
 
-package "Security Aspect" #pink {
+package "Security Aspect" #cc8888 {
 
 }
 
-package "Service Management Layer" #lightgreen {
+package "Service Management Layer" #88cc88 {
 
 }
 
-package "Environment Management" #lightgreen {
+package "Environment Management" #88cc88 {
 
 }
 
@@ -25,12 +25,12 @@ package "Data Management Layer" #ffcc88 {
 
 }
 
-package "Application Management Layer" #lightblue {
+package "Application Management Layer" #88cccc {
 
 }
 
 
-package "Service Management Layer" #lightgreen {
+package "Service Management Layer" #88cc88 {
 
     interface "Service Management Layer" as i {
     
@@ -64,7 +64,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Service Management Layer" #lightgreen {
+package "Service Management Layer" #88cc88 {
 
 
 rectangle "Cloud Broker" #white {

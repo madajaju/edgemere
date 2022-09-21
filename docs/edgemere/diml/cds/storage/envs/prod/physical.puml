@@ -19,10 +19,6 @@ package "Storage Services" #lightblue {
     REST --> web_container
     socket ---> web_container
   
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
-  
   }
   folder images #ffffff {
     collections "storage" as storageimage
@@ -33,9 +29,6 @@ package "Storage Services" #lightblue {
   
       artifact "diml_cds_storage_web" as diml_cds_storage_web
       web_container --> diml_cds_storage_web
-    
-      artifact "diml_cds_storage_gw" as diml_cds_storage_gw
-      gateway_container --> diml_cds_storage_gw
     
   }
 }

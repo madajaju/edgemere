@@ -2,28 +2,28 @@
 left to right direction
 
 
-state "sdi" as sdi #lightyellow {
-state "io" as sdiio #lightyellow {
+state "sdi" as sdi #cccc88 {
+state "io" as sdiio #cccc88 {
 }
 }
 
 
-state "sdiio" as pstatename #lightyellow {
+state "sdiio" as pstatename #cccc88 {
     state "Custom Function" as iofunction {
     }
 }
 
-        state "sdi" as sdi #lightyellow {
-state "io" as sdiio #lightyellow {
-state "evaluaterequest" as sdiioevaluaterequest #lightyellow {
+        state "sdi" as sdi #cccc88 {
+state "io" as sdiio #cccc88 {
+state "evaluaterequest" as sdiioevaluaterequest #cccc88 {
 }
 }
 }
 
 
-        state "sdi" as sdi #lightyellow {
-state "io" as sdiio #lightyellow {
-state "provision" as sdiioprovision #lightyellow {
+        state "sdi" as sdi #cccc88 {
+state "io" as sdiio #cccc88 {
+state "provision" as sdiioprovision #cccc88 {
 }
 }
 }
@@ -31,17 +31,17 @@ state "provision" as sdiioprovision #lightyellow {
 
 
 
-        state "sdi" as sdi #lightyellow {
-state "Request" as sdirequest #lightyellow {
-state "selected" as sdirequestselected #lightyellow {
+        state "sdi" as sdi #cccc88 {
+state "Request" as sdirequest #cccc88 {
+state "selected" as sdirequestselected #cccc88 {
 }
 }
 }
 
         
-    state "sdi" as sdi #lightyellow {
-state "io" as sdiio #lightyellow {
-state "evaluateRequest" as sdiioevaluaterequest #lightyellow {
+    state "sdi" as sdi #cccc88 {
+state "io" as sdiio #cccc88 {
+state "evaluateRequest" as sdiioevaluaterequest #cccc88 {
 }
 }
 }
@@ -49,17 +49,17 @@ state "evaluateRequest" as sdiioevaluaterequest #lightyellow {
     sdirequestselected ---> sdiioevaluaterequest
   
 
-        state "sdi" as sdi #lightyellow {
-state "Reservation" as sdireservation #lightyellow {
-state "confirmed" as sdireservationconfirmed #lightyellow {
+        state "sdi" as sdi #cccc88 {
+state "Reservation" as sdireservation #cccc88 {
+state "confirmed" as sdireservationconfirmed #cccc88 {
 }
 }
 }
 
         
-    state "sdi" as sdi #lightyellow {
-state "io" as sdiio #lightyellow {
-state "provision" as sdiioprovision #lightyellow {
+    state "sdi" as sdi #cccc88 {
+state "io" as sdiio #cccc88 {
+state "provision" as sdiioprovision #cccc88 {
 }
 }
 }

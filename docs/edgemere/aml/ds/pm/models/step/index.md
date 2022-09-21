@@ -2,7 +2,7 @@
 layout: default
 title: Class Step
 permalink: class-Step
-parent: classes
+parent: Classes
 ---
 
 # Step

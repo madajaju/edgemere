@@ -2,7 +2,7 @@
 layout: default
 title: Class ServiceDefinition
 permalink: class-ServiceDefinition
-parent: classes
+parent: Classes
 ---
 
 # ServiceDefinition

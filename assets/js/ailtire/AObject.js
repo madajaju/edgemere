@@ -1,4 +1,4 @@
-import {AText, A3DGraph} from './index.js';
+import {AText, A3DGraph, ASelectedHUD} from './index.js';
 
 export default class AObject {
     static scolor = {
@@ -34,7 +34,7 @@ export default class AObject {
             return;
         }
         let aresults = myListForm.results;
-        if(!aresults) {
+        if (!aresults) {
             return;
         }
 
@@ -60,6 +60,7 @@ export default class AObject {
                 }
                 w2ui['objdetail'].records = drecords;
                 w2ui['objdetail'].refresh();
+                ASelectedHUD.update(results._name + ' Details', drecords);
             }
         }
     }
@@ -98,78 +99,30 @@ export default class AObject {
             id: obj._attributes.id,
             name: obj._attributes.name,
             group: obj.definition.name,
+            universe: "Created",
             level: obj.definition.package.shortname,
             view: obj.definition.name + '3D'
         }
         if (creator) {
-            data.links.push({target: obj._attributes.id, source: creator, value: 0.01, color: "lightgreen"});
+            data.links.push({target: obj._attributes.id, source: creator, value: 50, width: 0.5, color: "lightgreen"});
         }
         // Now add the nodes of the associations
         // Go through the cols and get the associations
-        for (let i in obj.definition.associations) {
-            if (obj._associations.hasOwnProperty(i)) {
-                let aobj = obj._associations[i];
-                let assoc = obj.definition.associations[i];
-                if (assoc.cardinality === 1) {
-                    data.nodes[aobj._attributes.id] = {
-                        id: aobj._attributes.id,
-                        name: aobj._attributes.name,
-                        group: aobj.definition.name,
-                        level: aobj.definition.package.shortname,
-                        view: aobj.definition.name + '3D'
-                    };
-                    if (assoc.owner || assoc.composite) {
-                        data.links.push({
-                            source: obj._attributes.id,
-                            target: aobj._attributes.id,
-                            value: 0.1
-                        });
-                    } else {
-                        data.links.push({
-                            target: obj._attributes.id,
-                            source: aobj._attributes.id,
-                            value: 0.1
-                        });
-                    }
-                } else {
-                    for (let j in aobj) {
-                        let aaobj = aobj[j];
-                        data.nodes[aaobj._attributes.id] = {
-                            id: aaobj._attributes.id,
-                            name: aaobj._attributes.name,
-                            group: aaobj.definition.name,
-                            level: aaobj.definition.package.shortname,
-                            view: aaobj.definition.name + '3D'
-                        };
-                        if (assoc.owner || assoc.composite) {
-                            data.links.push({
-                                source: obj._attributes.id,
-                                target: aaobj._attributes.id,
-                                value: 5
-                            });
-                        } else {
-                            data.links.push({
-                                target: obj._attributes.id,
-                                source: aaobj._attributes.id,
-                                value: 5
-                            });
-                        }
-                    }
-                }
-            }
-        }
+
+        addRelationshipObjects(data, obj.definition,obj._associations, data.nodes[obj._attributes.id]);
         // If there is a creator and there is not an rbox then add an rbox to the creator.
         if (creator) {
             let rbox = {
                 parent: creator,
-                x: {min: -200, max: 200},
-                z: {min: -1000, max: -700},
-                y: {min: -200, max: 200}
+                x: {min: -2000, max: 2000},
+                z: {min: -2000, max: -700},
+                y: {min: -2000, max: 2000}
             }
 
             for (let i in data.nodes) {
                 if (!data.nodes[i].rbox) {
                     data.nodes[i].rbox = rbox;
+                    data.universe = "Created";
                 }
             }
         }
@@ -215,36 +168,23 @@ export default class AObject {
                 results: rec,
                 "w2ui": {"style": {0: `background-color: ${color}`}}
             };
-            /*
-            for (let j in results.columns) {
-                let attr = rec[j];
-                let colname = j;
-                if (attr) {
-                    if (attr.count) {
-                        // set the non-detaul value to the count
-                        ritem[j] = attr.count;
-
-                        // Now set the detail value
-                        let values = [];
-                        for (let k in attr.values) {
-                            let mvalue = attr.values[k];
-                            if (mvalue.link) {
-                                values.push(`<span onclick="AObject.expandObject('${mvalue.link}');">${mvalue.name}</span>`);
-                            } else {
-                                values.push(mvalue.name);
-                            }
-                        }
-                        ritem[j + 'detail'] = values.join(', ');
-                    } else {
-                        ritem[colname] = rec[j].name;
-                        ritem[j + 'detail'] = rec[j].name;
-                    }
-                }
-            }
-             */
             records.push(ritem);
         }
         myForm.records = records;
+        // Create new records that show the number of each state.
+        let jmap = {};
+        for(let i in records) {
+            let rec = records[i];
+            if(!jmap.hasOwnProperty(rec.state)) {
+                jmap[rec.state] = {name: rec.state, value: 0};
+            }
+            jmap[rec.state].value++;
+        }
+        let jrecords = [{name:'Total', value: records.length}]
+        for(let name in jmap) {
+            jrecords.push({name:name, value:jmap[name].value});
+        }
+        ASelectedHUD.update(results.name + 's', jrecords);
         myForm.refresh();
         return myForm;
     }
@@ -343,10 +283,9 @@ export default class AObject {
             // Go through the cols and get the associations
             for (let j in objs.columns) {
                 let col = objs.columns[j];
-                let colname = col.name.toLowerCase();
                 // this checks if it was an association
-                if (rec[colname] && col.hasOwnProperty('cardinality')) {
-                    let obj = rec[colname];
+                if (rec[j] && col.hasOwnProperty('cardinality')) {
+                    let obj = rec[j];
                     if (col.cardinality === 1) {
                         if (obj._name.length < 1) {
                             obj._name = obj._id;
@@ -361,11 +300,11 @@ export default class AObject {
                         };
                         if (col.owner || col.composition) {
                             data.links.push({
-                                source: rec._id, target: obj._id, value: 0.1
+                                source: rec._id, target: obj._id, value: 1, width: 0.5
                             });
                         } else {
                             data.links.push({
-                                source: obj._id, target: rec._id, value: 0.1
+                                source: obj._id, target: rec._id, value: 10, width: 0.5
                             });
                         }
                     } else {
@@ -384,11 +323,11 @@ export default class AObject {
                             };
                             if (col.owner || col.composition) {
                                 data.links.push({
-                                    source: rec._id, target: aobj._id, value: 5
+                                    source: rec._id, target: aobj._id, value: 1, width: 0.5
                                 });
                             } else {
                                 data.links.push({
-                                    target: rec._id, source: aobj._id, value: 5
+                                    target: rec._id, source: aobj._id, value: 10, width: 0.5
                                 });
                             }
                         }
@@ -409,4 +348,69 @@ function expandObjectOnGraph(link) {
         url: link,
         success: A3DGraph.addObjectToGraph
     });
+}
+
+function addRelationshipObjects(data, definition, associations,parent) {
+    for (let i in associations) {
+        if (associations.hasOwnProperty(i)) {
+            let aobj = associations[i];
+            if(!definition.associations.hasOwnProperty(i)) {
+                console.log("i:", i);
+            } else {
+                let assoc = definition.associations[i];
+                if (assoc.cardinality === 1) {
+                    data.nodes[aobj._attributes.id] = {
+                        id: aobj._attributes.id,
+                        name: aobj._attributes.name,
+                        group: aobj.definition.name,
+                        level: aobj.definition.package.shortname,
+                        universe: "Created",
+                        view: aobj.definition.name + '3D'
+                    };
+                    if (assoc.owner || assoc.composite) {
+                        data.links.push({
+                            source: obj._attributes.id,
+                            target: aobj._attributes.id,
+                            value: 1,
+                            width: 0.5
+                        });
+                    } else {
+                        data.links.push({
+                            target: parent.id,
+                            source: aobj._attributes.id,
+                            value: 10,
+                            width: 0.5,
+                        });
+                    }
+                } else {
+                    for (let j in aobj) {
+                        let aaobj = aobj[j];
+                        data.nodes[aaobj._attributes.id] = {
+                            id: aaobj._attributes.id,
+                            name: aaobj._attributes.name,
+                            group: aaobj.definition.name,
+                            level: aaobj.definition.package.shortname,
+                            universe: "Created",
+                            view: aaobj.definition.name + '3D'
+                        };
+                        if (assoc.owner || assoc.composite) {
+                            data.links.push({
+                                source: parent.id,
+                                target: aaobj._attributes.id,
+                                value: 1,
+                                width: 0.5
+                            });
+                        } else {
+                            data.links.push({
+                                target: parent.id,
+                                source: aaobj._attributes.id,
+                                value: 10,
+                                width: 0.5
+                            });
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

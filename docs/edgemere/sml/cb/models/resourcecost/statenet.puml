@@ -2,12 +2,12 @@
 
 
 
-state ResourceCost #lightgreen {
+state ResourceCost #88cc88 {
+
+
+
 
 }
-
-
-
 
 
 @enduml

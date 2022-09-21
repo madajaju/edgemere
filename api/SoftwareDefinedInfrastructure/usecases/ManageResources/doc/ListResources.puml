@@ -1,6 +1,6 @@
 @startuml
 actor "IT Operations"
-box sdi #lightyellow
+box sdi #cccc88
     boundary sdi #white
     participant Resource #white
 end box

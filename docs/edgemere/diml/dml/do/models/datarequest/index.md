@@ -2,7 +2,7 @@
 layout: default
 title: Class DataRequest
 permalink: class-DataRequest
-parent: classes
+parent: Classes
 ---
 
 # DataRequest

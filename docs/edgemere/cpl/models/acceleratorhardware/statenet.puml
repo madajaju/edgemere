@@ -2,12 +2,12 @@
 
 
 
-state AcceleratorHardware #lightgray {
+state AcceleratorHardware #cccccc {
+
+
+
 
 }
-
-
-
 
 
 @enduml

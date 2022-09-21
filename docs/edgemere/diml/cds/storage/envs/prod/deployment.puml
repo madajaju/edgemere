@@ -30,22 +30,14 @@ package "storage" #lightblue {
     
 
 node "frontend" as frontendService
-node "gw" as gwService
 
 
         artifact "diml_cds_storage_web" as diml_cds_storage_webimage
     
-        artifact "diml_cds_storage_gw" as diml_cds_storage_gwimage
-    
 }
 
 frontendService -[#blue]- siblingnet
-
-gwService -[#black]- childrennet
-
-gwService -[#blue]- siblingnet
 frontendService .... diml_cds_storage_webimage
-gwService .... diml_cds_storage_gwimage
 
 
 @enduml

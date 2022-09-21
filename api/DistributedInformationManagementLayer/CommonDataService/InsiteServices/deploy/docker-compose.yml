@@ -4,16 +4,6 @@ services:
     image: diml_cds_insite_web
     networks:
       - sibling
-  gw:
-    image: diml_cds_insite_gw
-    networks:
-      children:
-        aliases:
-          - parent
-          - top
-      sibling:
-        aliases:
-          - gateway
 
 networks:
   children:

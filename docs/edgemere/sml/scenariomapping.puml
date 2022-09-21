@@ -2,55 +2,246 @@
 left to right direction
 
 
-
-state "IT Operations" as ITOperations {
-    state "Manage Clouds" as ITOperationsManageClouds {
-    }
-}
-state "edgemere" as edgemere #lightgreen {
-state "sml" as edgemeresml #lightgreen {
-state "Cloud" as edgemeresmlCloud #lightgreen {
-state "list" as edgemeresmlCloudlist #lightgreen {
-}
-}
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml #88cc88 {
+ component "cloud" as edgemeresmlcloud
+ interface "list" as edgemeresmlcloudlist
+edgemeresmlcloud -- edgemeresmlcloudlist
 }
 }
 
-ITOperationsManageClouds --> edgemeresmlCloudlist
-
-
- 
-state "Stack Developer" as StackDeveloper {
-    state "Manage Services" as StackDeveloperManageServices {
-    }
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml #88cc88 {
+ component "data" as edgemeresmldata
+ interface "govern" as edgemeresmldatagovern
+edgemeresmldata -- edgemeresmldatagovern
 }
-state "edgemere" as edgemere #lightgreen {
-state "sml" as edgemeresml #lightgreen {
-state "service" as edgemeresmlservice #lightgreen {
-state "list" as edgemeresmlservicelist #lightgreen {
 }
+
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml #88cc88 {
+package "data" as edgemeresmldata {
+ component "source" as edgemeresmldatasource
+ interface "name" as edgemeresmldatasourcename
+edgemeresmldatasource -- edgemeresmldatasourcename
 }
 }
 }
 
-StackDeveloperManageServices --> edgemeresmlservicelist
-
-state "Application Developer" as ApplicationDeveloper {
-    state "Manage Services" as ApplicationDeveloperManageServices {
-    }
-}
-state "edgemere" as edgemere #lightgreen {
-state "sml" as edgemeresml #lightgreen {
-state "service" as edgemeresmlservice #lightgreen {
-state "list" as edgemeresmlservicelist #lightgreen {
-}
-}
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml #88cc88 {
+ component "environmenet" as edgemeresmlenvironmenet
+ interface "addpolicies" as edgemeresmlenvironmenetaddpolicies
+edgemeresmlenvironmenet -- edgemeresmlenvironmenetaddpolicies
 }
 }
 
-ApplicationDeveloperManageServices --> edgemeresmlservicelist
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml #88cc88 {
+ component "environment" as edgemeresmlenvironment
+ interface "create" as edgemeresmlenvironmentcreate
+edgemeresmlenvironment -- edgemeresmlenvironmentcreate
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml #88cc88 {
+ component "environment" as edgemeresmlenvironment
+ interface "destroy" as edgemeresmlenvironmentdestroy
+edgemeresmlenvironment -- edgemeresmlenvironmentdestroy
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml #88cc88 {
+ component "environment" as edgemeresmlenvironment
+ interface "disable" as edgemeresmlenvironmentdisable
+edgemeresmlenvironment -- edgemeresmlenvironmentdisable
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml #88cc88 {
+ component "environment" as edgemeresmlenvironment
+ interface "enable" as edgemeresmlenvironmentenable
+edgemeresmlenvironment -- edgemeresmlenvironmentenable
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml #88cc88 {
+ component "environment" as edgemeresmlenvironment
+ interface "list" as edgemeresmlenvironmentlist
+edgemeresmlenvironment -- edgemeresmlenvironmentlist
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml #88cc88 {
+ component "environment" as edgemeresmlenvironment
+ interface "update" as edgemeresmlenvironmentupdate
+edgemeresmlenvironment -- edgemeresmlenvironmentupdate
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml #88cc88 {
+ component "multicloud" as edgemeresmlmulticloud
+ interface "addclouds" as edgemeresmlmulticloudaddclouds
+edgemeresmlmulticloud -- edgemeresmlmulticloudaddclouds
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml #88cc88 {
+ component "multicloud" as edgemeresmlmulticloud
+ interface "addpolicies" as edgemeresmlmulticloudaddpolicies
+edgemeresmlmulticloud -- edgemeresmlmulticloudaddpolicies
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml #88cc88 {
+ component "multicloud" as edgemeresmlmulticloud
+ interface "list" as edgemeresmlmulticloudlist
+edgemeresmlmulticloud -- edgemeresmlmulticloudlist
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml #88cc88 {
+ component "multicloud" as edgemeresmlmulticloud
+ interface "removepolicies" as edgemeresmlmulticloudremovepolicies
+edgemeresmlmulticloud -- edgemeresmlmulticloudremovepolicies
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml #88cc88 {
+ component "service" as edgemeresmlservice
+ interface "list" as edgemeresmlservicelist
+edgemeresmlservice -- edgemeresmlservicelist
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml #88cc88 {
+ component "stack" as edgemeresmlstack
+ interface "list" as edgemeresmlstacklist
+edgemeresmlstack -- edgemeresmlstacklist
+}
+}
+
+    
+
+        rectangle "Manage Environment" as ManageEnvironment #ffffaa {
+            ("Create Environment")/ as ITOperationsManageEnvironmentCreateEnvironment
+        }
+    
+    edgemeresmlenvironmentcreate <-- ITOperationsManageEnvironmentCreateEnvironment
+    
+        rectangle "Manage Environment" as ManageEnvironment #ffffaa {
+            ("Delete Environment")/ as ITOperationsManageEnvironmentDeleteEnvironment
+        }
+    
+    edgemeresmlenvironmentdestroy <-- ITOperationsManageEnvironmentDeleteEnvironment
+    
+        rectangle "Manage Environment" as ManageEnvironment #ffffaa {
+            ("Disable Environment")/ as ITOperationsManageEnvironmentDisableEnvironment
+        }
+    
+    edgemeresmlenvironmentdisable <-- ITOperationsManageEnvironmentDisableEnvironment
+    
+        rectangle "Manage Environment" as ManageEnvironment #ffffaa {
+            ("Enable Environment")/ as ITOperationsManageEnvironmentEnableEnvironment
+        }
+    
+    edgemeresmlenvironmentenable <-- ITOperationsManageEnvironmentEnableEnvironment
+    
+        rectangle "Manage Environment" as ManageEnvironment #ffffaa {
+            ("Update Environment")/ as ITOperationsManageEnvironmentUpdateEnvironment
+        }
+    
+    edgemeresmlenvironmentupdate <-- ITOperationsManageEnvironmentUpdateEnvironment
+    
 
 
- 
+
+
+
+
+        rectangle "Manage Data" as ManageData #ffffaa {
+            ("Destroy Data")/ as DataStewardManageDataDestroyData
+        }
+    
+    edgemeresmldatasourcename <-- DataStewardManageDataDestroyData
+    
+        rectangle "Manage Data" as ManageData #ffffaa {
+            ("Egress Data")/ as DataStewardManageDataEgressData
+        }
+    
+    edgemeresmldatasourcename <-- DataStewardManageDataEgressData
+    
+        rectangle "Manage Data" as ManageData #ffffaa {
+            ("Ingest Data")/ as DataStewardManageDataIngestData
+        }
+    
+    edgemeresmldatasourcename <-- DataStewardManageDataIngestData
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        rectangle "Manage Multi Cloud" as ManageMultiCloud #ffffaa {
+            ("Add Cloud to Multi Cloud")/ as ITOperationsManageMultiCloudAddCloudtoMultiCloud
+        }
+    
+    edgemeresmlmulticloudaddclouds <-- ITOperationsManageMultiCloudAddCloudtoMultiCloud
+    
+        rectangle "Manage Multi Cloud" as ManageMultiCloud #ffffaa {
+            ("Manage Policies for Multi Cloud")/ as ITOperationsManageMultiCloudManagePoliciesforMultiCloud
+        }
+    
+    edgemeresmlmulticloudaddpolicies <-- ITOperationsManageMultiCloudManagePoliciesforMultiCloud
+    
+        rectangle "Manage Multi Cloud" as ManageMultiCloud #ffffaa {
+            ("Manage Policies for Multi Cloud")/ as ITOperationsManageMultiCloudRemoveCloudfromMultiCloud
+        }
+    
+    edgemeresmlmulticloudremovepolicies <-- ITOperationsManageMultiCloudRemoveCloudfromMultiCloud
+    
+
+
+
+
+
+
 
 @enduml

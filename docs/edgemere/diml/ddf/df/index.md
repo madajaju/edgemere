@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Data Flow
+title: Package Data Flow
 permalink: package--edgemere-diml-ddf-df
-parent: Data Definition Framework
-grand_parent: Distributed Information Management Layer
+parent: Package Data Definition Framework
+grand_parent: Package Distributed Information Management Layer
 ---
 
 # Data Flow
@@ -102,8 +101,7 @@ can be found [here](environment--edgemere-diml-ddf-df-dev)
 
 Services in the dev environment
 
-* frontend : diml_ddf_df_web
-* gw : diml_ddf_df_gw
+* web : diml_ddf_df_web
 
 
 ### test
@@ -113,8 +111,7 @@ can be found [here](environment--edgemere-diml-ddf-df-test)
 
 Services in the test environment
 
-* frontend : diml_ddf_df_web
-* gw : diml_ddf_df_gw
+* web : diml_ddf_df_web
 
 
 ### prod
@@ -124,8 +121,7 @@ can be found [here](environment--edgemere-diml-ddf-df-prod)
 
 Services in the prod environment
 
-* frontend : diml_ddf_df_web
-* gw : diml_ddf_df_gw
+* web : diml_ddf_df_web
 
 
 ## Activities and Flows

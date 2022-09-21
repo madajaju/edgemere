@@ -37,13 +37,13 @@ package "Pipeline Manager" #lightblue {
         }
     }
 
-package "Service Management Layer" #lightgreen {
+package "Service Management Layer" #88cc88 {
     
         class Image {
         }
     }
 
-package "Environment Management" #lightgreen {
+package "Environment Management" #88cc88 {
     
         class Environment {
         }

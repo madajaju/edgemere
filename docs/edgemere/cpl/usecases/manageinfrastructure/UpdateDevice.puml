@@ -5,7 +5,7 @@ actor "IT Operations"
 
 entity EventBus
 
-box Common Physical Layer #lightgray
+box Common Physical Layer #cccccc
     boundary cpl #white
 end box
 

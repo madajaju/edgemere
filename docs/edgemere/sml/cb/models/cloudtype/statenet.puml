@@ -2,12 +2,12 @@
 
 
 
-state CloudType #lightgreen {
+state CloudType #88cc88 {
+
+
+
 
 }
-
-
-
 
 
 @enduml

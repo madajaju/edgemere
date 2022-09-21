@@ -2,10 +2,11 @@
 layout: default
 title: Environment dev
 permalink: environment--edgemere-aml-ds-af-dev
-nav_exclude: true
+parent: environment-dev
+grand_parent: Environments
 ---
 
-### dev
+### Automation Framework dev
 
 
 #### Deployment

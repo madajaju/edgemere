@@ -2,7 +2,7 @@
 layout: default
 title: Class ApplicationTemplate
 permalink: class-ApplicationTemplate
-parent: classes
+parent: Classes
 ---
 
 # ApplicationTemplate

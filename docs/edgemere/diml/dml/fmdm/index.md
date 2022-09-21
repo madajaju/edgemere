@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Federated Meta Data Management
+title: Package Federated Meta Data Management
 permalink: package--edgemere-diml-dml-fmdm
-parent: Data Management Layer
-grand_parent: Distributed Information Management Layer
+parent: Package Data Management Layer
+grand_parent: Package Distributed Information Management Layer
 ---
 
 # Federated Meta Data Management
@@ -106,8 +105,7 @@ can be found [here](environment--edgemere-diml-dml-fmdm-dev)
 
 Services in the dev environment
 
-* frontend : diml_dml_fmdm_web
-* gw : diml_dml_fmdm_gw
+* web : diml_dml_fmdm_web
 
 
 ### test
@@ -117,8 +115,7 @@ can be found [here](environment--edgemere-diml-dml-fmdm-test)
 
 Services in the test environment
 
-* frontend : diml_dml_fmdm_web
-* gw : diml_dml_fmdm_gw
+* web : diml_dml_fmdm_web
 
 
 ### prod
@@ -128,8 +125,7 @@ can be found [here](environment--edgemere-diml-dml-fmdm-prod)
 
 Services in the prod environment
 
-* frontend : diml_dml_fmdm_web
-* gw : diml_dml_fmdm_gw
+* web : diml_dml_fmdm_web
 
 
 ## Activities and Flows

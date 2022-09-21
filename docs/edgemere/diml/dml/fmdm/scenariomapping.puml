@@ -2,6 +2,45 @@
 left to right direction
 
 
+    package "edgemere" as edgemere {
+package "diml" as edgemerediml {
+package "dml" as edgemeredimldml {
+ component "fmdm" as edgemeredimldmlfmdm
+ interface "query" as edgemeredimldmlfmdmquery
+edgemeredimldmlfmdm -- edgemeredimldmlfmdmquery
+}
+}
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @enduml

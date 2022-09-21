@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Manage Workloads
 permalink: usecase-ManageWorkloads
-parent: usecases
+parent: UseCases
 ---
 # Manage Workloads
 

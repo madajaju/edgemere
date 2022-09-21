@@ -1,4 +1,4 @@
-import { AText } from './index.js';
+import { AText, A3DGraph, ASelectedHUD} from './index.js';
 
 export default class AHandler {
     constructor(config) {
@@ -16,7 +16,7 @@ export default class AHandler {
         let height = AHandler.default.height;
         let width = AHandler.default.width;
         let depth = AHandler.default.depth;
-        let radius = Math.max(Math.sqrt(width*width + height*height), Math.sqrt(height*height + depth*depth), Math.sqrt(width*width + depth*depth));
+        let radius = Math.max(Math.sqrt(width*width + height*height), Math.sqrt(height*height + depth*depth), Math.sqrt(width*width + depth*depth))/2;
         return {w: width, h: height, d: depth, r:radius};
     }
 
@@ -47,6 +47,7 @@ export default class AHandler {
             side: THREE.DoubleSide
         });
         const box = new THREE.Mesh(geometry, material);
+        box.position.set(0,0,-size.w);
         let geo2 = new THREE.CylinderGeometry(size.w/4, size.w/4, size.h/2);
         geo2.applyMatrix4(new THREE.Matrix4().makeRotationX(theta));
         const material2 = new THREE.MeshPhysicalMaterial({
@@ -62,7 +63,7 @@ export default class AHandler {
             side: THREE.DoubleSide
         });
         const item2 = new THREE.Mesh(geo2, material2);
-        item2.position.set(0, 0, size.w);
+        item2.position.set(0, 0, 0);
         const group = new THREE.Group();
         group.add(box);
         group.add(item2);
@@ -70,14 +71,14 @@ export default class AHandler {
         group.position.set(node.x, node.y, node.z);
 
         let label = AText.view3D({text:node.name.replace(/\./g, '\n'), color:"#ffffff", width: 200, size: 12});
-        label.position.set(0,0, size.d+3);
+        label.position.set(0,0, 2*size.d+1);
         label.applyMatrix4(new THREE.Matrix4().makeRotationY(-2*theta));
         group.add(label);
 
         group.aid = node.id;
         node.box = node.box || size.width;
         node.expandLink = `handler/get?id=${node.id}`;
-        node.expandView = AHandler.viewDeep3D;
+        node.expandView = AHandler.handle;
         node.getDetail = AHandler.getDetail;
 
         return group;
@@ -91,9 +92,13 @@ export default class AHandler {
         });
     }
     static showDetail(result) {
+        ASelectedHUD.update('Handler', []);
 
     }
     static viewDeep3D(obj) {
+
+    }
+    static handle(results) {
 
     }
 }

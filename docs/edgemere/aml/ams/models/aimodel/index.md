@@ -2,7 +2,7 @@
 layout: default
 title: Class AIModel
 permalink: class-AIModel
-parent: classes
+parent: Classes
 ---
 
 # AIModel

@@ -1,7 +1,7 @@
 @startuml
 
 
-package "Common Physical Layer" #lightgray {
+package "Common Physical Layer" #cccccc {
     
         class PhysicalProfile {
         }
@@ -25,14 +25,14 @@ package "Common Physical Layer" #lightgray {
         }
     }
 
-package "Software Defined Infrastructure" #lightyellow {
+package "Software Defined Infrastructure" #cccc88 {
     
         class Resource {
         }
     }
 
 
-package "Common Physical Layer" #lightgray {
+package "Common Physical Layer" #cccccc {
 
     interface "Common Physical Layer" as i {
             /edgemere/cpl/adddevices()
@@ -56,7 +56,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Common Physical Layer" #lightgray {
+package "Common Physical Layer" #cccccc {
         class "Device" {
                  string name
                  string ename

@@ -6,7 +6,7 @@ left to right direction
 Actor "Security Operator" as SecurityOperator
 
 
-rectangle "Security Profile Manager" as spm #pink {
+rectangle "Security Profile Manager" as spm #cc8888 {
         usecase "Apply Security Profiles" as ApplySecurityProfiles
     SecurityOperator --> ApplySecurityProfiles
 

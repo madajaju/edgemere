@@ -2,10 +2,11 @@
 layout: default
 title: Environment dev
 permalink: environment--edgemere-sa-spm-dev
-nav_exclude: true
+parent: environment-dev
+grand_parent: Environments
 ---
 
-### dev
+### Security Profile Manager dev
 
 
 #### Deployment

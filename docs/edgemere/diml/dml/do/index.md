@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Data Orchestrator
+title: Package Data Orchestrator
 permalink: package--edgemere-diml-dml-do
-parent: Data Management Layer
-grand_parent: Distributed Information Management Layer
+parent: Package Data Management Layer
+grand_parent: Package Distributed Information Management Layer
 ---
 
 # Data Orchestrator
@@ -114,8 +113,7 @@ can be found [here](environment--edgemere-diml-dml-do-dev)
 
 Services in the dev environment
 
-* frontend : diml_dml_do_web
-* gw : diml_dml_do_gw
+* web : diml_dml_do_web
 
 
 ### test
@@ -125,8 +123,7 @@ can be found [here](environment--edgemere-diml-dml-do-test)
 
 Services in the test environment
 
-* frontend : diml_dml_do_web
-* gw : diml_dml_do_gw
+* web : diml_dml_do_web
 
 
 ### prod
@@ -136,8 +133,7 @@ can be found [here](environment--edgemere-diml-dml-do-prod)
 
 Services in the prod environment
 
-* frontend : diml_dml_do_web
-* gw : diml_dml_do_gw
+* web : diml_dml_do_web
 
 
 ## Activities and Flows

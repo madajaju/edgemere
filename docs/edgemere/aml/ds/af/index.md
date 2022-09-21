@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Automation Framework
+title: Package Automation Framework
 permalink: package--edgemere-aml-ds-af
-parent: Developer Services
-grand_parent: Application Management Layer
+parent: Package Developer Services
+grand_parent: Package Application Management Layer
 ---
 
 # Automation Framework

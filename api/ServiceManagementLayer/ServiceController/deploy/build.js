@@ -1,7 +1,7 @@
 
 module.exports = {
     controller: {
-        dir: '..',
+        dir: '.',
         cmd: 'node controller/server.js',
         file: 'controller/Dockerfile',
         tag: 'sml_sc_controller',

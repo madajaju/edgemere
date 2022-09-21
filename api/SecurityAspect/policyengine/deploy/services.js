@@ -1,19 +1,19 @@
 module.exports = {
     services: {
-        gw: {
-            image: "sa_pe_gw",
+        web: {
+            image: "sa_pe_web",
             interface: {
-                admin: { path: '/gw', port: 3000, protocol:"http"},
+                web: {path:'/web', port: 3000 },
             },
             networks: {
                 children: {},
                 siblings: {}
             }
         },
-        web: {
-            image: "sa_pe_web",
+        engine: {
+            image: "sa_pe_engine",
             interface: {
-                web: {path:'/web', port: 3000 },
+                engine: {path:'/engine', port: 3000 },
             },
             networks: {
                 children: {},

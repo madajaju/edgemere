@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--edgemere-cpl-tc-test
-nav_exclude: true
+parent: environment-test
+grand_parent: Environments
 ---
 
-### test
+### Telemetry Consumer test
 
 
 #### Deployment

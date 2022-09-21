@@ -2,12 +2,12 @@
 
 
 
-state PhysicalProfile #lightgray {
+state PhysicalProfile #cccccc {
+
+
+
 
 }
-
-
-
 
 
 @enduml

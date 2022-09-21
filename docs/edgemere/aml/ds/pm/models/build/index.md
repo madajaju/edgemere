@@ -2,7 +2,7 @@
 layout: default
 title: Class Build
 permalink: class-Build
-parent: classes
+parent: Classes
 ---
 
 # Build

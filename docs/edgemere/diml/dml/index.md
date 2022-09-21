@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Data Management Layer
+title: Package Data Management Layer
 permalink: package--edgemere-diml-dml
-parent: Distributed Information Management Layer
-grand_parent: edgemere
+parent: Package Distributed Information Management Layer
+grand_parent: Package edgemere
 has_children: true
 ---
 

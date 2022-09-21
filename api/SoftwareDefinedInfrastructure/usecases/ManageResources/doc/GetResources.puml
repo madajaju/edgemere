@@ -1,6 +1,6 @@
 @startuml
 actor "IT Operations"
-box sdi #lightyellow
+box sdi #cccc88
     boundary sdi #white
     participant Cloud #white
     participant Request #white
@@ -8,7 +8,7 @@ box sdi #lightyellow
     participant "Selected Reservation" #white
     participant Resource #white
 end box
-box cpl #lightgray
+box cpl #cccccc
 boundary cpl #white
 end box
 entity EventBus

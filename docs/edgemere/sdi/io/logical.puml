@@ -2,7 +2,7 @@
 
 
 
-package "Infrastructure Orchestrator" #lightyellow {
+package "Infrastructure Orchestrator" #cccc88 {
 
     interface "Infrastructure Orchestrator" as i {
             /edgemere/sdi/io/evaluaterequest()
@@ -15,7 +15,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Infrastructure Orchestrator" #lightyellow {
+package "Infrastructure Orchestrator" #cccc88 {
     
 }
 

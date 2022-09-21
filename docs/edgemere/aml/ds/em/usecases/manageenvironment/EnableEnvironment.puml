@@ -5,7 +5,7 @@ actor "IT Operations"
 
 entity EventBus
 
-box Environment Management #lightgreen
+box Environment Management #88cc88
     boundary em #white
 end box
 

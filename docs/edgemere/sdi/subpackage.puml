@@ -1,24 +1,24 @@
 @startuml
 
 
-package "Common Physical Layer" #lightgray {
+package "Common Physical Layer" #cccccc {
 
 }
 
-package "Software Defined Infrastructure" #lightyellow {
+package "Software Defined Infrastructure" #cccc88 {
 
 }
 
-package "Service Orchestrator" #lightgreen {
+package "Service Orchestrator" #88cc88 {
 
 }
 
-package "Cloud Broker" #lightgreen {
+package "Cloud Broker" #88cc88 {
 
 }
 
 
-package "Software Defined Infrastructure" #lightyellow {
+package "Software Defined Infrastructure" #cccc88 {
 
     interface "Software Defined Infrastructure" as i {
             ^request.satisfied
@@ -43,7 +43,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Software Defined Infrastructure" #lightyellow {
+package "Software Defined Infrastructure" #cccc88 {
 
 
 rectangle "Infrastructure Orchestrator" #white {

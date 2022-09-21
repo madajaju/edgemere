@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--edgemere-sa-test
-nav_exclude: true
+parent: environment-test
+grand_parent: Environments
 ---
 
-### test
+### Security Aspect test
 
 
 #### Deployment
@@ -30,8 +31,7 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| frontend | sa_web |  |  | sibling |
-| gw | sa_gw |  |  | children,sibling |
+| web | sa_web |  |  | children,siblings |
 
 
 #### Networks
@@ -44,9 +44,9 @@ stack in a layer of networks.
 
 | Name | Type | External Name | Ports |
 | --- | --- | --- | --- |
-| children | egress | ailtire_appname_sa_family |
-| sibling | internal |  |
-| parent | ingress | ailtire_parent_network |
+| parent | ingress | parent |
+| children | egress | children |
+| siblings | internal |  |
 
 
 The Stack is micro-segmented off and there are a set of ports that are open for the ingress networks. The following

@@ -2,10 +2,11 @@
 layout: default
 title: Environment prod
 permalink: environment--edgemere-cpl-da-prod
-nav_exclude: true
+parent: environment-prod
+grand_parent: Environments
 ---
 
-### prod
+### Device Agent prod
 
 
 #### Deployment
@@ -30,11 +31,11 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| datacontroller | diml_dml_dc_controller:latest | /data | 3000 | children |
-| policyengine | sa_pe_engine:latest | /policy | 3000 | children |
-| servicecontroller | sml_sc:latest | /service | 3000 | children |
-| telemetry_producer | cpl_tp_producer:latest | /telemetry | 3000 | sibling |
-| portal | cpl_da_web | /admin | 3000 | sibling |
+| datacontroller | diml_dml_dc_controller |  |  | siblings |
+| policyengine | sa_pe_engine |  |  | siblings |
+| servicecontroller | sml_sc |  |  | siblings |
+| telemetry_producer | cpl_tp_producer |  |  | siblings |
+| portal | cpl_da_web |  |  | siblings |
 
 
 #### Networks
@@ -47,8 +48,9 @@ stack in a layer of networks.
 
 | Name | Type | External Name | Ports |
 | --- | --- | --- | --- |
-| children | egress | ailtire_appname_cpl_da_family |
-| sibling | internal |  |
+| parent | ingress | parent |
+| children | egress | children |
+| siblings | internal |  |
 
 
 The Stack is micro-segmented off and there are a set of ports that are open for the ingress networks. The following

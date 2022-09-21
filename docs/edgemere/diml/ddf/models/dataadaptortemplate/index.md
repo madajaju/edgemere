@@ -2,7 +2,7 @@
 layout: default
 title: Class DataAdaptorTemplate
 permalink: class-DataAdaptorTemplate
-parent: classes
+parent: Classes
 ---
 
 # DataAdaptorTemplate

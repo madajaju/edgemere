@@ -4,19 +4,19 @@ module.exports = {
     contexts: {
         dev: {
             type: 'swarm',
-            tag: 'diml_cds_ingress_dev',
+            tag: 'diml_cds_ingress:dev',
             file: 'docker-compose.yml',
             env: {}
         },
         test: {
             type: 'swarm',
-            tag: 'diml_cds_ingress_test',
+            tag: 'diml_cds_ingress:test',
             file: 'docker-compose.yml',
             env: {}
         },
         prod: {
             type: 'swarm',
-            tag: 'diml_cds_ingress_prod',
+            tag: 'diml_cds_ingress:prod',
             file: 'docker-compose.yml',
             env: {}
         }

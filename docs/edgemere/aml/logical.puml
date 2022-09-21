@@ -4,19 +4,19 @@
 package "Distributed Information Management Layer" #ffcc88 {
     }
 
-package "Service Management Layer" #lightgreen {
+package "Service Management Layer" #88cc88 {
     
         class Stack {
         }
     }
 
-package "Security Aspect" #pink {
+package "Security Aspect" #cc8888 {
     }
 
-package "Identity Aspect" #pink {
+package "Identity Aspect" #cc8888 {
     }
 
-package "Application Management Layer" #lightblue {
+package "Application Management Layer" #88cccc {
     
         class Workload {
         }
@@ -35,7 +35,7 @@ package "Data Management Layer" #ffcc88 {
     }
 
 
-package "Application Management Layer" #lightblue {
+package "Application Management Layer" #88cccc {
 
     interface "Application Management Layer" as i {
             /edgemere/aml/aimodel/create()
@@ -63,7 +63,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Application Management Layer" #lightblue {
+package "Application Management Layer" #88cccc {
         class "Application" {
                  string name
                  string version

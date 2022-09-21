@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Manage Data Sources
 permalink: usecase-ManageDataSources
-parent: usecases
+parent: UseCases
 ---
 # Manage Data Sources
 

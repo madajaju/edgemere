@@ -1,16 +1,5 @@
 module.exports = {
     services: {
-        admin: {
-            image: "edgemere_admin",
-            volumes: {
-                docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
-            },
-            interface: {
-                admin: { path: '/admin', port: 3000, protocol:"http"},
-            },
-            policies: { },
-            environment: { },
-        },
         aml: {
             type: "stack",
             image: "aml",
@@ -23,10 +12,10 @@ module.exports = {
         },
         cpl: {
             type: "stack",
+            image: "cpl",
             volumes: {
                 docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }
             },
-            image: "cpl",
             interface: {
                 cpl: {path:'/cpl', port: 3000 },
             }
@@ -79,16 +68,6 @@ module.exports = {
             },
             interface: {
                 sdi: {path:'/sml', port: 3000 },
-            }
-        },
-        pubsub: {
-            image: "redis",
-            interface: {
-                pubsub: {path:'/pubsub', port: 80 },
-            },
-            networks: {
-                children: {},
-                siblings: {}
             }
         },
         web: {

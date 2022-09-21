@@ -2,7 +2,7 @@
 layout: default
 title: Class BuildLedger
 permalink: class-BuildLedger
-parent: classes
+parent: Classes
 ---
 
 # BuildLedger

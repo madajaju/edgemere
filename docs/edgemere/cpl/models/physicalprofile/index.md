@@ -2,7 +2,7 @@
 layout: default
 title: Class PhysicalProfile
 permalink: class-PhysicalProfile
-parent: classes
+parent: Classes
 ---
 
 # PhysicalProfile

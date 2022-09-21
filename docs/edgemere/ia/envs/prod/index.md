@@ -2,10 +2,11 @@
 layout: default
 title: Environment prod
 permalink: environment--edgemere-ia-prod
-nav_exclude: true
+parent: environment-prod
+grand_parent: Environments
 ---
 
-### prod
+### Identity Aspect prod
 
 
 #### Deployment
@@ -30,8 +31,7 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| frontend | ia_web |  |  | sibling |
-| gw | ia_gw |  |  | children,sibling |
+| web | ia_web |  |  | children,siblings |
 
 
 #### Networks
@@ -44,9 +44,9 @@ stack in a layer of networks.
 
 | Name | Type | External Name | Ports |
 | --- | --- | --- | --- |
-| children | egress | ailtire_appname_ia_family |
-| sibling | internal |  |
-| parent | ingress | ailtire_appname_family |
+| parent | ingress | parent |
+| children | egress | children |
+| siblings | internal |  |
 
 
 The Stack is micro-segmented off and there are a set of ports that are open for the ingress networks. The following

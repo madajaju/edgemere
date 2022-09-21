@@ -9,7 +9,7 @@ actor "DataEngineer"
 
 entity EventBus
 
-box Application Management Layer #lightblue
+box Application Management Layer #88cccc
     boundary aml #white
 end box
 

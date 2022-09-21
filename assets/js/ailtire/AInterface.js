@@ -1,4 +1,4 @@
-import { AText } from './index.js';
+import {AText, A3DGraph, ASelectedHUD} from './index.js';
 
 export default class AInterface {
     constructor(config) {
@@ -16,8 +16,8 @@ export default class AInterface {
         let height = AInterface.default.height;
         let width = AInterface.default.width;
         let depth = AInterface.default.depth;
-        let radius = width/2;
-        return {w: width, h: height, d: depth, r:radius};
+        let radius = width / 2;
+        return {w: width, h: height, d: depth, r: radius};
     }
 
     static view3D(node, type) {
@@ -31,7 +31,7 @@ export default class AInterface {
         } else if (type === 'Sourced') {
             color = "green";
         }
-        let geo = new THREE.SphereGeometry(size.w/2);
+        let geo = new THREE.SphereGeometry(size.w / 2);
         const material = new THREE.MeshPhysicalMaterial({
             color: color,
             transparent: true,
@@ -45,7 +45,8 @@ export default class AInterface {
             side: THREE.DoubleSide
         });
         const item1 = new THREE.Mesh(geo, material);
-        let geo2 = new THREE.CylinderGeometry(size.w/4, size.w/4, size.d);
+        item1.position.set(0, 3 * size.d / 2, 0);
+        let geo2 = new THREE.CylinderGeometry(size.w / 4, size.w / 4, size.d);
         const material2 = new THREE.MeshPhysicalMaterial({
             color: color,
             transparent: true,
@@ -59,16 +60,21 @@ export default class AInterface {
             side: THREE.DoubleSide
         });
         const item2 = new THREE.Mesh(geo2, material2);
-        item2.position.set(0, -size.d/2, 0);
+        item2.position.set(0, size.d / 2, 0);
         const group = new THREE.Group();
         group.add(item1);
         group.add(item2);
         group.position.set(node.x, node.y, node.z);
         let name = node.name;
-        name.replace('/','');
-        let label = AText.view3D({text:name.replace(/\//g, '\n'), color:"#ffffff", width: 50, size: AInterface.default.fontSize});
-        label.applyMatrix4(new THREE.Matrix4().makeRotationX(-Math.PI/2));
-        label.position.set(0,(size.w/2)+1,0);
+        name.replace('/', '');
+        let label = AText.view3D({
+            text: name.replace(/\//g, '\n'),
+            color: "#ffffff",
+            width: 50,
+            size: AInterface.default.fontSize
+        });
+        label.applyMatrix4(new THREE.Matrix4().makeRotationX(-Math.PI / 2));
+        label.position.set(0, 5 * size.d / 2, 0);
         group.add(label)
         group.aid = node.id;
         if (node.rotate) {
@@ -85,11 +91,12 @@ export default class AInterface {
         group.aid = node.id;
         node.box = size.r;
         node.expandLink = `interface/get?id=${node.id}`;
-        node.expandView = AInterface.viewDeep3D;
+        node.expandView = AInterface.handle;
         node.getDetail = AInterface.getDetail;
 
         return group;
     }
+
     static getDetail(node) {
         $.ajax({
             url: node.expandLink,
@@ -98,10 +105,16 @@ export default class AInterface {
             }
         });
     }
+
     static showDetail(result) {
+        ASelectedHUD.update('Interface', []);
+    }
+
+    static viewDeep3D(obj) {
 
     }
-    static viewDeep3D(obj) {
+
+    static handle(results) {
 
     }
 }

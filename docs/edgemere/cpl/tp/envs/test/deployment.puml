@@ -8,7 +8,7 @@ left to right direction
 
 
 
-package "cpl_tp" #lightgray {
+package "cpl_tp" #cccccc {
 
 node "producer" as producerService
 node "tester" as testerService

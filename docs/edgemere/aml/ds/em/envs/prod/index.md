@@ -2,10 +2,11 @@
 layout: default
 title: Environment prod
 permalink: environment--edgemere-aml-ds-em-prod
-nav_exclude: true
+parent: environment-prod
+grand_parent: Environments
 ---
 
-### prod
+### Environment Management prod
 
 
 #### Deployment
@@ -30,8 +31,7 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| frontend | sml_em_web |  |  | sibling |
-| gw | sml_em_gw |  |  | children,sibling |
+| web | sml_em_web |  |  | children,siblings |
 
 
 #### Networks
@@ -44,9 +44,9 @@ stack in a layer of networks.
 
 | Name | Type | External Name | Ports |
 | --- | --- | --- | --- |
-| children | egress | ailtire_appname_sml_em_family |
-| sibling | internal |  |
-| parent | ingress | ailtire_appname_sml_family |
+| parent | ingress | parent |
+| children | egress | children |
+| siblings | internal |  |
 
 
 The Stack is micro-segmented off and there are a set of ports that are open for the ingress networks. The following

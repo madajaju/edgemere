@@ -2,12 +2,12 @@
 
 
 
-state Agent #lightgray {
+state Agent #cccccc {
+
+
+
 
 }
-
-
-
 
 
 @enduml

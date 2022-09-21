@@ -1,15 +1,5 @@
 module.exports = {
     services: {
-        gw: {
-            image: "diml_ddf_bpm_gw",
-            interface: {
-                admin: { path: '/gw', port: 3000, protocol:"http"},
-            },
-            networks: {
-                children: {},
-                siblings: {}
-            }
-        },
         web: {
             image: "diml_ddf_bpm_web",
             interface: {

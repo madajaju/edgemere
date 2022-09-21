@@ -2,12 +2,14 @@
 layout: default
 title: TOC
 permalink: toc
+nav_order: 8
 ---
-Version 0.3.5 
+Version 0.3.6 
 
-### Edgemere Overview
+## edgemere Overview
 * [edgemere](./edgemere/index.md)
 
+## Use Case View
 ### Actors
 * [All Actors](actors)
 * [ApplicationDeveloper](actor-applicationdeveloper)
@@ -22,7 +24,103 @@ Version 0.3.5
 * [SecurityOperator](actor-securityoperator)
 * [StackDeveloper](actor-stackdev)
 
- 
+
+### Use Cases
+* [Apply Security Profiles](usecase-ApplySecurityProfiles)
+  * [Attach Profile](usecase-ApplySecurityProfiles#AttachProfile)
+  * [Deploy Security Profile](usecase-ApplySecurityProfiles#DeploySecurityProfile)
+* [Find Resources](usecase-FindResources)
+* [Manage AI Models](usecase-ManageAIModels)
+  * [Create AI Model](usecase-ManageAIModels#CreateAIModel)
+  * [Deploy AI Model](usecase-ManageAIModels#DeployAIModel)
+  * [Destroy AI Model](usecase-ManageAIModels#DestroyAIModel)
+  * [Update AI Model](usecase-ManageAIModels#UpdateAIModel)
+* [Manage Applications](usecase-ManageApplications)
+  * [Create Application](usecase-ManageApplications#CreateApplication)
+  * [Deploy Application](usecase-ManageApplications#DeployApplication)
+  * [Destroy Application](usecase-ManageApplications#DestroyApplication)
+  * [Monitor Application](usecase-ManageApplications#MonitorApplication)
+  * [Update Application](usecase-ManageApplications#UpdateApplication)
+* [Manage Assets](usecase-ManageAssets)
+* [ManageBilling](usecase-ManageBilling)
+* [Manage Clouds](usecase-ManageClouds)
+* [ManageCostModel](usecase-ManageCostModel)
+* [Manage Data](usecase-ManageData)
+  * [Destroy Data](usecase-ManageData#DestroyData)
+  * [Egress Data](usecase-ManageData#EgressData)
+  * [Ingest Data](usecase-ManageData#IngestData)
+  * [Move Data](usecase-ManageData#MoveData)
+* [Manage Data Adaptors](usecase-ManageDataAdaptors)
+  * [Attach Data Blue Print](usecase-ManageDataAdaptors#AttachDataBluePrint)
+  * [Create Data Adaptor](usecase-ManageDataAdaptors#CreateDataAdaptor)
+  * [Update Data Adaptor](usecase-ManageDataAdaptors#UpdateDataAdaptor)
+* [Manage Data Blue Prints](usecase-ManageDataBluePrints)
+  * [Create Blue Print](usecase-ManageDataBluePrints#CreateBluePrint)
+* [Manage Data Center](usecase-ManageDataCenter)
+  * [Create Data Center](usecase-ManageDataCenter#CreateDataCenter)
+  * [Disable Data Center](usecase-ManageDataCenter#DisableDataCenter)
+  * [Enable Data Center](usecase-ManageDataCenter#EnableDataCenter)
+  * [Remove Data Center](usecase-ManageDataCenter#RemoveDataCenter)
+  * [Update Data Center](usecase-ManageDataCenter#UpdateDataCenter)
+* [Manage Data Governance](usecase-ManageDataGovernance)
+* [Manage Data Instances](usecase-ManageDataInstances)
+  * [Create Data Instance](usecase-ManageDataInstances#CreateDataInstance)
+  * [Find Data Instance](usecase-ManageDataInstances#FindDataInstance)
+  * [Remove Data Instance](usecase-ManageDataInstances#RemoveDataInstance)
+* [Manage Data Pipeline](usecase-ManageDataPipeline)
+* [Manage Data Policies](usecase-ManageDataPolicies)
+* [Manage Data Procedures](usecase-ManageDataProcedures)
+* [Manage Data Sources](usecase-ManageDataSources)
+  * [Deregister Data Source](usecase-ManageDataSources#DeregisterDataSource)
+  * [Register Data Source](usecase-ManageDataSources#RegisterDataSource)
+* [Manage Data Strategy](usecase-ManageDataStrategy)
+* [Manage Environment](usecase-ManageEnvironment)
+  * [Create Environment](usecase-ManageEnvironment#CreateEnvironment)
+  * [Delete Environment](usecase-ManageEnvironment#DeleteEnvironment)
+  * [Disable Environment](usecase-ManageEnvironment#DisableEnvironment)
+  * [Enable Environment](usecase-ManageEnvironment#EnableEnvironment)
+  * [Manage Policies in Environment](usecase-ManageEnvironment#ManagePoliciesinEnvironment)
+  * [Update Environment](usecase-ManageEnvironment#UpdateEnvironment)
+* [Manage Infrastructure](usecase-ManageInfrastructure)
+  * [Add Device](usecase-ManageInfrastructure#AddDevice)
+  * [Manage Aggregated Devices](usecase-ManageInfrastructure#ManageAggregatedDevices)
+  * [Manage Data Center](usecase-ManageInfrastructure#ManageDataCenter)
+  * [Remove Device](usecase-ManageInfrastructure#RemoveDevice)
+  * [Update Device](usecase-ManageInfrastructure#UpdateDevice)
+* [Manage Meta Data](usecase-ManageMetaData)
+  * [Capture Meta Data](usecase-ManageMetaData#CaptureMetaData)
+  * [Manage Data Catalog](usecase-ManageMetaData#ManageDataCatalog)
+* [Manage Multi Cloud](usecase-ManageMultiCloud)
+  * [Add Cloud to Multi Cloud](usecase-ManageMultiCloud#AddCloudtoMultiCloud)
+  * [Manage Policies for Multi Cloud](usecase-ManageMultiCloud#ManagePoliciesforMultiCloud)
+  * [Manage Policies for Multi Cloud](usecase-ManageMultiCloud#RemoveCloudfromMultiCloud)
+* [Manage Resources](usecase-ManageResources)
+  * [Get Resources](usecase-ManageResources#GetResources)
+  * [List Resources](usecase-ManageResources#ListResources)
+  * [Release Resources](usecase-ManageResources#ReleaseResources)
+* [Manage Security Profiles](usecase-ManageSecurityProfiles)
+  * [Create Security Profile](usecase-ManageSecurityProfiles#CreateSecurityProfile)
+  * [Disable Security Profile](usecase-ManageSecurityProfiles#DisableSecurityProfile)
+  * [Enable Security Profile](usecase-ManageSecurityProfiles#EnableSecurityProfile)
+  * [Monitor Security Profile](usecase-ManageSecurityProfiles#MonitorSecurityProfile)
+  * [Remove Security Profile](usecase-ManageSecurityProfiles#RemoveSecurityProfile)
+  * [Test Security Profile](usecase-ManageSecurityProfiles#TestSecurityProfile)
+* [Manage Services](usecase-ManageServices)
+* [Manage Stacks](usecase-ManageStacks)
+  * [Deploy Stack](usecase-ManageStacks#DeployStack)
+  * [Uninstall Stack](usecase-ManageStacks#UninstallStack)
+  * [Update Stack](usecase-ManageStacks#UpdateStack)
+* [Manage Workloads](usecase-ManageWorkloads)
+  * [Create Workload](usecase-ManageWorkloads#CreateWorkload)
+  * [Deploy Workload](usecase-ManageWorkloads#DeployWorkload)
+  * [Destroy Workload](usecase-ManageWorkloads#DestroyWorkload)
+  * [Monitor Workload](usecase-ManageWorkloads#MonitorWorkload)
+  * [Update Workload](usecase-ManageWorkloads#UpdateWorkload)
+* [Map Assets to Cloud](usecase-MapAssetstoCloud)
+* [Map Services to Resources](usecase-MapServicestoResources)
+
+## Logical View
+
 ### Packages 
 * [Application Management Layer](package--edgemere-aml)
   * [AI ML Services](package--edgemere-aml-ams)
@@ -68,36 +166,260 @@ Version 0.3.5
   * [Infrastructure Orchestrator](package--edgemere-sdi-io)
 
    
-### Use Cases  
-* [Manage Environment](usecase-ManageEnvironment)
-* [Manage AI Models](usecase-ManageAIModels)
-* [Manage Applications](usecase-ManageApplications)
-* [Manage Workloads](usecase-ManageWorkloads)
-* [Manage Data Center](usecase-ManageDataCenter)
-* [Manage Infrastructure](usecase-ManageInfrastructure)
-* [Manage Data](usecase-ManageData)
-* [Manage Data Adaptors](usecase-ManageDataAdaptors)
-* [Manage Data Blue Prints](usecase-ManageDataBluePrints)
-* [Manage Data Pipeline](usecase-ManageDataPipeline)
-* [Manage Data Procedures](usecase-ManageDataProcedures)
-* [Manage Meta Data](usecase-ManageMetaData)
-* [Manage Data Instances](usecase-ManageDataInstances)
-* [Manage Data Governance](usecase-ManageDataGovernance)
-* [Manage Data Policies](usecase-ManageDataPolicies)
-* [Manage Data Sources](usecase-ManageDataSources)
-* [Manage Data Strategy](usecase-ManageDataStrategy)
-* [Apply Security Profiles](usecase-ApplySecurityProfiles)
-* [Manage Security Profiles](usecase-ManageSecurityProfiles)
-* [Find Resources](usecase-FindResources)
-* [ManageBilling](usecase-ManageBilling)
-* [ManageCostModel](usecase-ManageCostModel)
-* [Manage Multi Cloud](usecase-ManageMultiCloud)
-* [Map Assets to Cloud](usecase-MapAssetstoCloud)
-* [Map Services to Resources](usecase-MapServicestoResources)
-* [Manage Stacks](usecase-ManageStacks)
-* [Manage Assets](usecase-ManageAssets)
-* [Manage Clouds](usecase-ManageClouds)
-* [Manage Services](usecase-ManageServices)
-* [Manage Resources](usecase-ManageResources)
+### Classes
+* [AIModel](class-AIModel)
+* [AcceleratorHardware](class-AcceleratorHardware)
+* [AcceleratorResource](class-AcceleratorResource)
+* [Agent](class-Agent)
+* [AggregatedDevice](class-AggregatedDevice)
+* [Application](class-Application)
+* [ApplicationInstance](class-ApplicationInstance)
+* [ApplicationTemplate](class-ApplicationTemplate)
+* [Artifact](class-Artifact)
+* [Build](class-Build)
+* [BuildInstance](class-BuildInstance)
+* [BuildLedger](class-BuildLedger)
+* [BuildLog](class-BuildLog)
+* [Cloud](class-Cloud)
+* [CloudType](class-CloudType)
+* [ComputeHardware](class-ComputeHardware)
+* [ComputeResource](class-ComputeResource)
+* [Data](class-Data)
+* [DataAdaptor](class-DataAdaptor)
+* [DataAdaptorInstance](class-DataAdaptorInstance)
+* [DataAdaptorTemplate](class-DataAdaptorTemplate)
+* [DataBluePrint](class-DataBluePrint)
+* [DataBluePrintInstance](class-DataBluePrintInstance)
+* [DataCenter](class-DataCenter)
+* [DataFlow](class-DataFlow)
+* [DataFlowInstance](class-DataFlowInstance)
+* [DataFlowTemplate](class-DataFlowTemplate)
+* [DataInstance](class-DataInstance)
+* [DataPipeline](class-DataPipeline)
+* [DataProcedure](class-DataProcedure)
+* [DataReference](class-DataReference)
+* [DataRequest](class-DataRequest)
+* [DataReservation](class-DataReservation)
+* [DataSource](class-DataSource)
+* [DataStrategy](class-DataStrategy)
+* [Deliverable](class-Deliverable)
+* [Device](class-Device)
+* [Environment](class-Environment)
+* [Group](class-Group)
+* [Hardware](class-Hardware)
+* [Identity](class-Identity)
+* [IdentityAttribute](class-IdentityAttribute)
+* [Image](class-Image)
+* [LedgerEntry](class-LedgerEntry)
+* [LineageMetaData](class-LineageMetaData)
+* [MetaData](class-MetaData)
+* [Metric](class-Metric)
+* [MetricAttribute](class-MetricAttribute)
+* [MetricComposite](class-MetricComposite)
+* [MetricConsumeable](class-MetricConsumeable)
+* [MultiCloud](class-MultiCloud)
+* [NetworkHardware](class-NetworkHardware)
+* [NetworkResource](class-NetworkResource)
+* [PhysicalProfile](class-PhysicalProfile)
+* [Pipeline](class-Pipeline)
+* [Policy](class-Policy)
+* [PolicyCollection](class-PolicyCollection)
+* [Request](class-Request)
+* [Reservation](class-Reservation)
+* [Resource](class-Resource)
+* [ResourceCost](class-ResourceCost)
+* [ResourceInstanceType](class-ResourceInstanceType)
+* [ResourceMap](class-ResourceMap)
+* [RunScript](class-RunScript)
+* [SecurityProfile](class-SecurityProfile)
+* [Service](class-Service)
+* [ServiceDefinition](class-ServiceDefinition)
+* [ServiceInstance](class-ServiceInstance)
+* [Servicelet](class-Servicelet)
+* [SourceMetaData](class-SourceMetaData)
+* [Stack](class-Stack)
+* [StackDefinition](class-StackDefinition)
+* [StackInstance](class-StackInstance)
+* [Stacklet](class-Stacklet)
+* [StackletDefinition](class-StackletDefinition)
+* [Stage](class-Stage)
+* [StageInstance](class-StageInstance)
+* [Step](class-Step)
+* [StepInstance](class-StepInstance)
+* [StorageHardware](class-StorageHardware)
+* [StorageResource](class-StorageResource)
+* [User](class-User)
+* [Workload](class-Workload)
+* [WorkloadInstance](class-WorkloadInstance)
+* [WorkloadTemplate](class-WorkloadTemplate)
 
 
+## Process View
+
+## Implementation View
+
+### External Dependencies
+
+External Dependencies of the application 
+
+### Container Images
+
+The architecture utilizes a micro-service design pattern for the deployment architecture. The following is a list of 
+the container images for the deployment of the solution.
+
+
+* [aml_ams_web](image-aml_ams_web)
+
+* [aml_as_web](image-aml_as_web)
+
+* [aml_web](image-aml_web)
+
+* [a_d_af_web](image-a_d_af_web)
+
+* [aml_ds_web](image-aml_ds_web)
+
+* [sml_em_web](image-sml_em_web)
+
+* [a_d_pm_web](image-a_d_pm_web)
+
+* [aml_ws_web](image-aml_ws_web)
+
+* [cpl_web](image-cpl_web)
+
+* [cpl_da_web](image-cpl_da_web)
+
+* [cpl_dm_web](image-cpl_dm_web)
+
+* [cpl_ta_web](image-cpl_ta_web)
+
+* [cpl_tc_web](image-cpl_tc_web)
+
+* [cpl_tp_producer](image-cpl_tp_producer)
+
+* [cpl_tp_tester](image-cpl_tp_tester)
+
+* [diml_cds_web](image-diml_cds_web)
+
+* [diml_cds_ingress_web](image-diml_cds_ingress_web)
+
+* [diml_cds_insite_web](image-diml_cds_insite_web)
+
+* [diml_cds_storage_web](image-diml_cds_storage_web)
+
+* [diml_cds_transform_web](image-diml_cds_transform_web)
+
+* [diml_ddf_bpm_web](image-diml_ddf_bpm_web)
+
+* [diml_ddf_daf_web](image-diml_ddf_daf_web)
+
+* [diml_ddf_df_web](image-diml_ddf_df_web)
+
+* [diml_ddf_dr_web](image-diml_ddf_dr_web)
+
+* [diml_ddf_web](image-diml_ddf_web)
+
+* [diml_dml_dc_controller](image-diml_dml_dc_controller)
+
+* [diml_dml_do_web](image-diml_dml_do_web)
+
+* [diml_dml_web](image-diml_dml_web)
+
+* [diml_dml_gw](image-diml_dml_gw)
+
+* [diml_dml_fmdm_web](image-diml_dml_fmdm_web)
+
+* [diml_dml_ge_web](image-diml_dml_ge_web)
+
+* [diml_web](image-diml_web)
+
+* [ia_web](image-ia_web)
+
+* [sa_web](image-sa_web)
+
+* [sa_pe_engine](image-sa_pe_engine)
+
+* [sa_pe_web](image-sa_pe_web)
+
+* [s_spm_web](image-s_spm_web)
+
+* [sml_cb_web](image-sml_cb_web)
+
+* [sml_web](image-sml_web)
+
+* [sml_pe_web](image-sml_pe_web)
+
+* [sml_sc_controller](image-sml_sc_controller)
+
+* [sml_so_web](image-sml_so_web)
+
+* [sml_sr_web](image-sml_sr_web)
+
+* [sdi_web](image-sdi_web)
+
+* [sdi_io_web](image-sdi_io_web)
+
+* [edgemere_web](image-edgemere_web)
+
+* [edgemere_doc](image-edgemere_doc)
+
+* [node:alpine](image-node:alpine)
+
+* [madajaju/node_plantuml](image-madajaju/node_plantuml)
+
+## Deployment View
+
+### Environments
+
+
+* [dev](environment-dev)
+
+* [test](environment-test)
+
+* [prod](environment-prod)
+
+* [local](environment-local)
+
+### Services
+* aml_ams - [dev](environment-dev-aml_ams), [test](environment-test-aml_ams), [prod](environment-prod-aml_ams)
+* aml_as - [dev](environment-dev-aml_as), [test](environment-test-aml_as), [prod](environment-prod-aml_as)
+* aml - [dev](environment-dev-aml), [test](environment-test-aml), [prod](environment-prod-aml)
+* a_d_af - [dev](environment-dev-a_d_af), [test](environment-test-a_d_af), [prod](environment-prod-a_d_af)
+* aml_ds - [dev](environment-dev-aml_ds), [test](environment-test-aml_ds), [prod](environment-prod-aml_ds)
+* sml_em - [dev](environment-dev-sml_em), [test](environment-test-sml_em), [prod](environment-prod-sml_em)
+* a_d_pm - [dev](environment-dev-a_d_pm), [test](environment-test-a_d_pm), [prod](environment-prod-a_d_pm)
+* aml_ws - [dev](environment-dev-aml_ws), [test](environment-test-aml_ws), [prod](environment-prod-aml_ws)
+* cpl - [dev](environment-dev-cpl), [test](environment-test-cpl), [prod](environment-prod-cpl)
+* cpl_da - [dev](environment-dev-cpl_da), [test](environment-test-cpl_da), [prod](environment-prod-cpl_da)
+* cpl_dm - [dev](environment-dev-cpl_dm), [test](environment-test-cpl_dm), [prod](environment-prod-cpl_dm)
+* cpl_ta - [dev](environment-dev-cpl_ta), [test](environment-test-cpl_ta), [prod](environment-prod-cpl_ta)
+* cpl_tc - [dev](environment-dev-cpl_tc), [test](environment-test-cpl_tc), [prod](environment-prod-cpl_tc)
+* cpl_tp - [dev](environment-dev-cpl_tp), [test](environment-test-cpl_tp), [prod](environment-prod-cpl_tp)
+* dimlcds - [dev](environment-dev-dimlcds), [test](environment-test-dimlcds), [prod](environment-prod-dimlcds)
+* ingress - [dev](environment-dev-ingress), [test](environment-test-ingress), [prod](environment-prod-ingress)
+* insite - [dev](environment-dev-insite), [test](environment-test-insite), [prod](environment-prod-insite)
+* storage - [dev](environment-dev-storage), [test](environment-test-storage), [prod](environment-prod-storage)
+* transform - [dev](environment-dev-transform), [test](environment-test-transform), [prod](environment-prod-transform)
+* diml_ddf_bpm - [dev](environment-dev-diml_ddf_bpm), [test](environment-test-diml_ddf_bpm), [prod](environment-prod-diml_ddf_bpm)
+* diml_ddf_daf - [dev](environment-dev-diml_ddf_daf), [test](environment-test-diml_ddf_daf), [prod](environment-prod-diml_ddf_daf)
+* diml_ddf_df - [dev](environment-dev-diml_ddf_df), [test](environment-test-diml_ddf_df), [prod](environment-prod-diml_ddf_df)
+* diml_ddf_dr - [dev](environment-dev-diml_ddf_dr), [test](environment-test-diml_ddf_dr), [prod](environment-prod-diml_ddf_dr)
+* diml_dff - [dev](environment-dev-diml_dff), [test](environment-test-diml_dff), [prod](environment-prod-diml_dff)
+* diml_dml_dc - [dev](environment-dev-diml_dml_dc), [test](environment-test-diml_dml_dc), [prod](environment-prod-diml_dml_dc)
+* diml_dml_do - [dev](environment-dev-diml_dml_do), [test](environment-test-diml_dml_do), [prod](environment-prod-diml_dml_do)
+* diml_dml - [dev](environment-dev-diml_dml), [test](environment-test-diml_dml), [prod](environment-prod-diml_dml)
+* diml_dml_fmdm - [dev](environment-dev-diml_dml_fmdm), [test](environment-test-diml_dml_fmdm), [prod](environment-prod-diml_dml_fmdm)
+* diml_dml_ge - [dev](environment-dev-diml_dml_ge), [test](environment-test-diml_dml_ge), [prod](environment-prod-diml_dml_ge)
+* diml - [dev](environment-dev-diml), [test](environment-test-diml), [prod](environment-prod-diml)
+* ia - [dev](environment-dev-ia), [test](environment-test-ia), [prod](environment-prod-ia)
+* sa - [dev](environment-dev-sa), [test](environment-test-sa), [prod](environment-prod-sa)
+* sa_pe - [dev](environment-dev-sa_pe), [test](environment-test-sa_pe), [prod](environment-prod-sa_pe)
+* s_spm - [dev](environment-dev-s_spm), [test](environment-test-s_spm), [prod](environment-prod-s_spm)
+* sml_cb - [dev](environment-dev-sml_cb), [test](environment-test-sml_cb), [prod](environment-prod-sml_cb)
+* sml - [dev](environment-dev-sml), [test](environment-test-sml), [prod](environment-prod-sml)
+* sml_pe - [dev](environment-dev-sml_pe), [test](environment-test-sml_pe), [prod](environment-prod-sml_pe)
+* sml_sc - [dev](environment-dev-sml_sc), [test](environment-test-sml_sc), [prod](environment-prod-sml_sc)
+* sml_so - [dev](environment-dev-sml_so), [test](environment-test-sml_so), [prod](environment-prod-sml_so)
+* sml_sr - [dev](environment-dev-sml_sr), [test](environment-test-sml_sr), [prod](environment-prod-sml_sr)
+* sdi - [dev](environment-dev-sdi), [test](environment-test-sdi), [prod](environment-prod-sdi)
+* sdi_io - [dev](environment-dev-sdi_io), [test](environment-test-sdi_io), [prod](environment-prod-sdi_io)
+* edgemere - [dev](environment-dev-edgemere), [test](environment-test-edgemere), [prod](environment-prod-edgemere), [local](environment-local-edgemere)

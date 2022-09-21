@@ -1,12 +1,12 @@
 @startuml
 
 
-package "Provision Engine" #lightgreen {
+package "Provision Engine" #88cc88 {
 
 }
 
 
-package "Service Controller" #lightgreen {
+package "Service Controller" #88cc88 {
 
     interface "Service Controller" as i {
     
@@ -24,7 +24,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Service Controller" #lightgreen {
+package "Service Controller" #88cc88 {
 
 
 }

@@ -2,7 +2,7 @@
 layout: default
 title: Class DataInstance
 permalink: class-DataInstance
-parent: classes
+parent: Classes
 ---
 
 # DataInstance

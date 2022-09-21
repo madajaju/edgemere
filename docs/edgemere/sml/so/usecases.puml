@@ -5,7 +5,7 @@ Actor "Stack Developer" as StackDeveloper
 Actor "Application Developer" as ApplicationDeveloper
 
 
-rectangle "Service Orchestrator" #lightgreen {
+rectangle "Service Orchestrator" #88cc88 {
 usecase "ManageStacks" as ManageStacks
     StackDeveloper --> ManageStacks
     ApplicationDeveloper --> ManageStacks

@@ -1,4 +1,4 @@
-import  {AText} from './index.js';
+import  {AText, A3DGraph, ASelectedHUD} from './index.js';
 
 export default class AVolume {
     constructor(config) {
@@ -17,7 +17,7 @@ export default class AVolume {
         let height = nameArray.length*AVolume.default.fontSize*2;
         let width = maxLetters * (AVolume.default.fontSize/2) + 10;
         let depth = width;
-        let radius = Math.max(Math.sqrt(width*width + height*height), Math.sqrt(height*height + depth*depth), Math.sqrt(width*width + depth*depth));
+        let radius = Math.max(Math.sqrt(width*width + height*height), Math.sqrt(height*height + depth*depth), Math.sqrt(width*width + depth*depth))/2;
         return {w: width, h: height, d: depth, r: radius};
     }
 
@@ -69,7 +69,7 @@ export default class AVolume {
         obj.aid = node.id;
         node.box = size.r;
         node.expandLink = `volume/get?id=${node.id}`;
-        node.expandView = AVolume.viewDeep3D;
+        node.expandView = AVolume.handle;
         node.getDetail = AVolume.getDetail;
 
         return obj;
@@ -84,10 +84,14 @@ export default class AVolume {
         });
     }
     static showDetail(result) {
-
+        ASelectedHUD.update('Volume', []);
     }
     static viewDeep3D(obj) {
 
     }
+    static handle(results) {
+
+    }
+
 }
 

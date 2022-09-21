@@ -3,7 +3,7 @@
 left to right direction
 
 
-rectangle "Infrastructure Orchestrator" #lightyellow {
+rectangle "Infrastructure Orchestrator" #cccc88 {
 }
 
 

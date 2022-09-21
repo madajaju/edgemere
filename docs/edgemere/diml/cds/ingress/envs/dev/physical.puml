@@ -19,10 +19,6 @@ package "Ingress Services" #lightblue {
     REST --> web_container
     socket ---> web_container
   
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
-  
   }
   folder images #ffffff {
     collections "ingress" as ingressimage
@@ -33,9 +29,6 @@ package "Ingress Services" #lightblue {
   
       artifact "diml_cds_ingress_web" as diml_cds_ingress_web
       web_container --> diml_cds_ingress_web
-    
-      artifact "diml_cds_ingress_gw" as diml_cds_ingress_gw
-      gateway_container --> diml_cds_ingress_gw
     
   }
 }

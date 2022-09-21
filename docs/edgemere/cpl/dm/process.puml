@@ -2,31 +2,31 @@
 left to right direction
 
 
-state "cpl" as cpl #lightgray {
-state "dm" as cpldm #lightgray {
+state "cpl" as cpl #cccccc {
+state "dm" as cpldm #cccccc {
 }
 }
 
 
-state "cpldm" as pstatename #lightgray {
+state "cpldm" as pstatename #cccccc {
     state "Custom Function" as dmfunction {
     }
 }
 
-        state "cpl" as cpl #lightgray {
-state "dm" as cpldm #lightgray {
-state "agent" as cpldmagent #lightgray {
-state "register" as cpldmagentregister #lightgray {
+        state "cpl" as cpl #cccccc {
+state "dm" as cpldm #cccccc {
+state "agent" as cpldmagent #cccccc {
+state "register" as cpldmagentregister #cccccc {
 }
 }
 }
 }
 
 
-        state "cpl" as cpl #lightgray {
-state "dm" as cpldm #lightgray {
-state "service" as cpldmservice #lightgray {
-state "register" as cpldmserviceregister #lightgray {
+        state "cpl" as cpl #cccccc {
+state "dm" as cpldm #cccccc {
+state "service" as cpldmservice #cccccc {
+state "register" as cpldmserviceregister #cccccc {
 }
 }
 }
@@ -35,10 +35,10 @@ state "register" as cpldmserviceregister #lightgray {
 
 
 
-        state "cpl" as cpl #lightgray {
-state "dm" as cpldm #lightgray {
-state "Agent" as cpldmagent #lightgray {
-state "started" as cpldmagentstarted #lightgray {
+        state "cpl" as cpl #cccccc {
+state "dm" as cpldm #cccccc {
+state "Agent" as cpldmagent #cccccc {
+state "started" as cpldmagentstarted #cccccc {
 }
 }
 }

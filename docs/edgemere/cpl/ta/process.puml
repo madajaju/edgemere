@@ -2,74 +2,74 @@
 left to right direction
 
 
-state "cpl" as cpl #lightgray {
-state "ta" as cplta #lightgray {
+state "cpl" as cpl #cccccc {
+state "ta" as cplta #cccccc {
 }
 }
 
 
-state "cplta" as pstatename #lightgray {
+state "cplta" as pstatename #cccccc {
     state "Custom Function" as tafunction {
     }
 }
 
-        state "cpl" as cpl #lightgray {
-state "ta" as cplta #lightgray {
-state "list" as cpltalist #lightgray {
+        state "cpl" as cpl #cccccc {
+state "ta" as cplta #cccccc {
+state "list" as cpltalist #cccccc {
 }
 }
 }
 
 
-        state "cpl" as cpl #lightgray {
-state "ta" as cplta #lightgray {
-state "report" as cpltareport #lightgray {
+        state "cpl" as cpl #cccccc {
+state "ta" as cplta #cccccc {
+state "report" as cpltareport #cccccc {
 }
 }
 }
 
 
-        state "cpl" as cpl #lightgray {
-state "ta" as cplta #lightgray {
-state "setparent" as cpltasetparent #lightgray {
+        state "cpl" as cpl #cccccc {
+state "ta" as cplta #cccccc {
+state "setparent" as cpltasetparent #cccccc {
 }
 }
 }
 
 
-        state "cpl" as cpl #lightgray {
-state "ta" as cplta #lightgray {
-state "show" as cpltashow #lightgray {
+        state "cpl" as cpl #cccccc {
+state "ta" as cplta #cccccc {
+state "show" as cpltashow #cccccc {
 }
 }
 }
 
 
-        state "cpl" as cpl #lightgray {
-state "ta" as cplta #lightgray {
-state "stats" as cpltastats #lightgray {
-state "get" as cpltastatsget #lightgray {
-}
-}
-}
-}
-
-
-        state "cpl" as cpl #lightgray {
-state "ta" as cplta #lightgray {
-state "stats" as cpltastats #lightgray {
-state "send" as cpltastatssend #lightgray {
+        state "cpl" as cpl #cccccc {
+state "ta" as cplta #cccccc {
+state "stats" as cpltastats #cccccc {
+state "get" as cpltastatsget #cccccc {
 }
 }
 }
 }
 
 
+        state "cpl" as cpl #cccccc {
+state "ta" as cplta #cccccc {
+state "stats" as cpltastats #cccccc {
+state "send" as cpltastatssend #cccccc {
+}
+}
+}
+}
 
 
-        state "cpl" as cpl #lightgray {
-state "Device" as cpldevice #lightgray {
-state "stats" as cpldevicestats #lightgray {
+
+
+        state "cpl" as cpl #cccccc {
+state "Device" as cpldevice #cccccc {
+state "stats" as cpldevicestats #cccccc {
 }
 }
 }

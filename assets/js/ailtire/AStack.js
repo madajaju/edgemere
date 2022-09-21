@@ -1,4 +1,4 @@
-import {AAction, AAttribute, AImage, AInterface, ANetwork, AService, AText, AVolume} from './index.js';
+import {AAction, AAttribute, AImage, AInterface, ANetwork, AService, AText, AVolume, A3DGraph, ASelectedHUD} from './index.js';
 
 export default class AStack {
     constructor(config) {
@@ -17,7 +17,7 @@ export default class AStack {
         let height = AStack.default.height * 2;
         let depth = AStack.default.depth * 2;
         let width = AStack.default.width * 2;
-        let radius = Math.max(Math.sqrt(width * width + height * height), Math.sqrt(height * height + depth * depth), Math.sqrt(width * width + depth * depth));
+        let radius = Math.max(Math.sqrt(width * width + height * height), Math.sqrt(height * height + depth * depth), Math.sqrt(width * width + depth * depth))/2;
         return {w: width, h: height, d: depth, r: radius};
     }
 
@@ -79,7 +79,7 @@ export default class AStack {
         }
         group.aid = node.id;
         node.box = size.r;
-        node.expandView = AStack.viewDeep3D;
+        node.expandView = AStack.handle;
         node.expandLink = `deployment/get?id=${node.id}`;
         node.getDetail = AStack.getDetail;
 
@@ -120,7 +120,6 @@ export default class AStack {
         // Clear the detail list
         w2ui['objdetail'].clear();
         w2ui['objlist'].onClick = function (event) {
-            // this.showDetail(event);
             w2ui['objdetail'].clear();
             let record = this.get(event.recid);
             let drecords = [];
@@ -134,6 +133,7 @@ export default class AStack {
             w2ui['objdetail'].add(drecords);
             window.graph.selectNodeByID(event.recid);
         }
+        ASelectedHUD.update("Stack", records);
         w2ui['objlist'].refresh();
     }
 
@@ -213,7 +213,7 @@ export default class AStack {
             id: obj.id,
             name: obj.name + "\n" + obj.id,
             view: AStack.viewBig3D,
-            expandView: AStack.viewDeep3D,
+            expandView: AStack.handle,
             expandLink: `deployment/get?id=${obj.id}`,
             getDetail: AStack.getDetail,
             fontSize: obj.fontSize,
@@ -232,22 +232,23 @@ export default class AStack {
             let inter = obj.interface[sname];
             data.nodes["I-" + sname] = {
                 id: "I-" + sname,
-                name: inter.path,
+                name: sname,
                 view: AInterface.view3D,
             }
             inodes["I-" + sname] = data.nodes["I-" + sname];
 
             let service = obj.interface[sname].service;
 
+
             let view = AService.view3D;
-            let expandView = AService.viewDeep3D;
+            let expandView = AService.handle;
             if (service.type === 'stack' || service.type === 'Stack') {
                 view = AStack.view3D;
-                expandView = AStack.viewDeep3D;
+                expandView = AStack.handle;
             }
             data.nodes[service.id] = {
                 id: service.id,
-                name: sname,
+                name: service.id,
                 view: view,
                 expandView: expandView,
                 expandLink: `deployment/get?id=${service.id}`,

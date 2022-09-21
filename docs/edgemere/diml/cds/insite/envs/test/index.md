@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--edgemere-diml-cds-insite-test
-nav_exclude: true
+parent: environment-test
+grand_parent: Environments
 ---
 
-### test
+### Insite Services test
 
 
 #### Deployment
@@ -31,7 +32,6 @@ the subsystem's logic.
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
 | frontend | diml_cds_insite_web |  |  | sibling |
-| gw | diml_cds_insite_gw |  |  | children,sibling |
 
 
 #### Networks

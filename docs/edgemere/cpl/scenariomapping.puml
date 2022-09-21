@@ -2,140 +2,214 @@
 left to right direction
 
 
-
-state "IT Operations" as ITOperations {
-    state "Manage Data Center" as ITOperationsManageDataCenter {
-    }
-}
-state "edgemere" as edgemere #lightgray {
-state "cpl" as edgemerecpl #lightgray {
-state "datacenter" as edgemerecpldatacenter #lightgray {
-state "list" as edgemerecpldatacenterlist #lightgray {
-}
-}
-}
+    package "edgemere" as edgemere {
+ component "cpl" as edgemerecpl
+ interface "adddevices" as edgemerecpladddevices
+edgemerecpl -- edgemerecpladddevices
 }
 
-ITOperationsManageDataCenter --> edgemerecpldatacenterlist
+    
+    package "edgemere" as edgemere {
+ component "cpl" as edgemerecpl
+ interface "provision" as edgemerecplprovision
+edgemerecpl -- edgemerecplprovision
+}
 
+    
+    package "edgemere" as edgemere {
+ component "cpl" as edgemerecpl
+ interface "reserve" as edgemerecplreserve
+edgemerecpl -- edgemerecplreserve
+}
 
-    state "IT Operations" as ITOperations {
-        state "Manage Data Center" as ITOperationsManageDataCenter {
-            state "Create Data Center" as ITOperationsManageDataCenterCreateDataCenter {
-            }
-        }
-    }
     
-    ITOperationsManageDataCenterCreateDataCenter --> Null
-    
- 
-    state "IT Operations" as ITOperations {
-        state "Manage Data Center" as ITOperationsManageDataCenter {
-            state "Disable Data Center" as ITOperationsManageDataCenterDisableDataCenter {
-            }
-        }
-    }
-    
-    ITOperationsManageDataCenterDisableDataCenter --> Null
-    
- 
-    state "IT Operations" as ITOperations {
-        state "Manage Data Center" as ITOperationsManageDataCenter {
-            state "Enable Data Center" as ITOperationsManageDataCenterEnableDataCenter {
-            }
-        }
-    }
-    
-    ITOperationsManageDataCenterEnableDataCenter --> Null
-    
- 
-    state "IT Operations" as ITOperations {
-        state "Manage Data Center" as ITOperationsManageDataCenter {
-            state "Remove Data Center" as ITOperationsManageDataCenterRemoveDataCenter {
-            }
-        }
-    }
-    
-    ITOperationsManageDataCenterRemoveDataCenter --> Null
-    
- 
-    state "IT Operations" as ITOperations {
-        state "Manage Data Center" as ITOperationsManageDataCenter {
-            state "Update Data Center" as ITOperationsManageDataCenterUpdateDataCenter {
-            }
-        }
-    }
-    
-    ITOperationsManageDataCenterUpdateDataCenter --> Null
-    
- 
- 
-state "IT Operations" as ITOperations {
-    state "Manage Infrastructure" as ITOperationsManageInfrastructure {
-    }
-}
-state "edgemere" as edgemere #lightgray {
-state "cpl" as edgemerecpl #lightgray {
-state "data" as edgemerecpldata #lightgray {
-state "govern" as edgemerecpldatagovern #lightgray {
-}
-}
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl #cccccc {
+ component "data" as edgemerecpldata
+ interface "govern" as edgemerecpldatagovern
+edgemerecpldata -- edgemerecpldatagovern
 }
 }
 
-ITOperationsManageInfrastructure --> edgemerecpldatagovern
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl #cccccc {
+ component "data" as edgemerecpldata
+ interface "source" as edgemerecpldatasource
+edgemerecpldata -- edgemerecpldatasource
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl #cccccc {
+ component "datacenter" as edgemerecpldatacenter
+ interface "create" as edgemerecpldatacentercreate
+edgemerecpldatacenter -- edgemerecpldatacentercreate
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl #cccccc {
+ component "datacenter" as edgemerecpldatacenter
+ interface "disable" as edgemerecpldatacenterdisable
+edgemerecpldatacenter -- edgemerecpldatacenterdisable
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl #cccccc {
+ component "datacenter" as edgemerecpldatacenter
+ interface "enable" as edgemerecpldatacenterenable
+edgemerecpldatacenter -- edgemerecpldatacenterenable
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl #cccccc {
+ component "datacenter" as edgemerecpldatacenter
+ interface "list" as edgemerecpldatacenterlist
+edgemerecpldatacenter -- edgemerecpldatacenterlist
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl #cccccc {
+ component "datacenter" as edgemerecpldatacenter
+ interface "remove" as edgemerecpldatacenterremove
+edgemerecpldatacenter -- edgemerecpldatacenterremove
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl #cccccc {
+ component "datacenter" as edgemerecpldatacenter
+ interface "update" as edgemerecpldatacenterupdate
+edgemerecpldatacenter -- edgemerecpldatacenterupdate
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl #cccccc {
+ component "device" as edgemerecpldevice
+ interface "disable" as edgemerecpldevicedisable
+edgemerecpldevice -- edgemerecpldevicedisable
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl #cccccc {
+ component "device" as edgemerecpldevice
+ interface "enable" as edgemerecpldeviceenable
+edgemerecpldevice -- edgemerecpldeviceenable
+}
+}
+
+    
+hexagon "request.needed" as requestneeded
+            edgemerecpl <-- requestneeded
+        
+hexagon "reservation.rejected" as reservationrejected
+            edgemerecpl <-- reservationrejected
+        
+hexagon "resource.provisioning" as resourceprovisioning
+            edgemerecpl <-- resourceprovisioning
+        
 
 
-    state "IT Operations" as ITOperations {
-        state "Manage Infrastructure" as ITOperationsManageInfrastructure {
-            state "Add Device" as ITOperationsManageInfrastructureAddDevice {
-            }
+
+
+
+        rectangle "Manage Data Center" as ManageDataCenter #ffffaa {
+            ("Create Data Center")/ as ITOperationsManageDataCenterCreateDataCenter
         }
-    }
     
-    ITOperationsManageInfrastructureAddDevice --> Null
+    edgemerecpldatacentercreate <-- ITOperationsManageDataCenterCreateDataCenter
     
- 
-    state "IT Operations" as ITOperations {
-        state "Manage Infrastructure" as ITOperationsManageInfrastructure {
-            state "Manage Aggregated Devices" as ITOperationsManageInfrastructureManageAggregatedDevices {
-            }
+        rectangle "Manage Data Center" as ManageDataCenter #ffffaa {
+            ("Disable Data Center")/ as ITOperationsManageDataCenterDisableDataCenter
         }
-    }
     
-    ITOperationsManageInfrastructureManageAggregatedDevices --> Null
+    edgemerecpldatacenterdisable <-- ITOperationsManageDataCenterDisableDataCenter
     
- 
-    state "IT Operations" as ITOperations {
-        state "Manage Infrastructure" as ITOperationsManageInfrastructure {
-            state "Manage Data Center" as ITOperationsManageInfrastructureManageDataCenter {
-            }
+        rectangle "Manage Data Center" as ManageDataCenter #ffffaa {
+            ("Enable Data Center")/ as ITOperationsManageDataCenterEnableDataCenter
         }
-    }
     
-    ITOperationsManageInfrastructureManageDataCenter --> Null
+    edgemerecpldatacenterenable <-- ITOperationsManageDataCenterEnableDataCenter
     
- 
-    state "IT Operations" as ITOperations {
-        state "Manage Infrastructure" as ITOperationsManageInfrastructure {
-            state "Remove Device" as ITOperationsManageInfrastructureRemoveDevice {
-            }
+        rectangle "Manage Data Center" as ManageDataCenter #ffffaa {
+            ("Remove Data Center")/ as ITOperationsManageDataCenterRemoveDataCenter
         }
-    }
     
-    ITOperationsManageInfrastructureRemoveDevice --> Null
+    edgemerecpldatacenterremove <-- ITOperationsManageDataCenterRemoveDataCenter
     
- 
-    state "IT Operations" as ITOperations {
-        state "Manage Infrastructure" as ITOperationsManageInfrastructure {
-            state "Update Device" as ITOperationsManageInfrastructureUpdateDevice {
-            }
+        rectangle "Manage Data Center" as ManageDataCenter #ffffaa {
+            ("Update Data Center")/ as ITOperationsManageDataCenterUpdateDataCenter
         }
-    }
     
-    ITOperationsManageInfrastructureUpdateDevice --> Null
+    edgemerecpldatacenterupdate <-- ITOperationsManageDataCenterUpdateDataCenter
     
- 
- 
+
+        rectangle "Manage Infrastructure" as ManageInfrastructure #ffffaa {
+            ("Add Device")/ as ITOperationsManageInfrastructureAddDevice
+        }
+    
+    edgemerecpldatasource <-- ITOperationsManageInfrastructureAddDevice
+    
+        rectangle "Manage Infrastructure" as ManageInfrastructure #ffffaa {
+            ("Manage Aggregated Devices")/ as ITOperationsManageInfrastructureManageAggregatedDevices
+        }
+    
+    edgemerecpldatasource <-- ITOperationsManageInfrastructureManageAggregatedDevices
+    
+        rectangle "Manage Infrastructure" as ManageInfrastructure #ffffaa {
+            ("Manage Data Center")/ as ITOperationsManageInfrastructureManageDataCenter
+        }
+    
+    edgemerecpldatasource <-- ITOperationsManageInfrastructureManageDataCenter
+    
+        rectangle "Manage Infrastructure" as ManageInfrastructure #ffffaa {
+            ("Remove Device")/ as ITOperationsManageInfrastructureRemoveDevice
+        }
+    
+    edgemerecpldatasource <-- ITOperationsManageInfrastructureRemoveDevice
+    
+        rectangle "Manage Infrastructure" as ManageInfrastructure #ffffaa {
+            ("Update Device")/ as ITOperationsManageInfrastructureUpdateDevice
+        }
+    
+    edgemerecpldatasource <-- ITOperationsManageInfrastructureUpdateDevice
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @enduml

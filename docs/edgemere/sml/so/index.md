@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Service Orchestrator
+title: Package Service Orchestrator
 permalink: package--edgemere-sml-so
-parent: Service Management Layer
-grand_parent: edgemere
+parent: Package Service Management Layer
+grand_parent: Package edgemere
 ---
 
 # Service Orchestrator
@@ -112,8 +111,7 @@ can be found [here](environment--edgemere-sml-so-dev)
 
 Services in the dev environment
 
-* frontend : sml_so_web
-* gw : sml_so_gw
+* web : sml_so_web
 
 
 ### test
@@ -123,8 +121,7 @@ can be found [here](environment--edgemere-sml-so-test)
 
 Services in the test environment
 
-* frontend : sml_so_web
-* gw : sml_so_gw
+* web : sml_so_web
 
 
 ### prod
@@ -134,8 +131,7 @@ can be found [here](environment--edgemere-sml-so-prod)
 
 Services in the prod environment
 
-* frontend : sml_so_web
-* gw : sml_so_gw
+* web : sml_so_web
 
 
 ## Activities and Flows

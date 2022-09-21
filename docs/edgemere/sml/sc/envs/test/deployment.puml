@@ -3,49 +3,43 @@
 left to right direction
 
 
-boundary ailtire_parent_network_family #red
+boundary parent #black
 
 
-entity ailtire_appname_sml_sc_family #black
+entity children #blue
 
 
 
 
-package "sml_sc" #lightgreen {
-    queue childrennet #black [
-            <b><color:white>children</color></b>
-    ]
-    
-    childrennet -[#black]- ailtire_appname_sml_sc_family
-    
-    queue siblingnet #blue [
-            <b><color:white>sibling</color></b>
-    ]
-    
-    queue parentnet #red [
+package "sml_sc" #88cc88 {
+    queue parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#red]- ailtire_parent_network_family
+    parentnet -[#black]- parent
+    
+    queue childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#blue]- children
+    
+    queue siblingsnet #red [
+            <b><color:white>siblings</color></b>
+    ]
     
 
-node "frontend" as frontendService
 node "gw" as gwService
 
 
-        artifact "sml_sc_web" as sml_sc_webimage
-    
-        artifact "sml_sc_gw" as sml_sc_gwimage
+        artifact "sml_sc_controller" as sml_sc_controllerimage
     
 }
 
-frontendService -[#blue]- siblingnet
+gwService -[#blue]- childrennet
 
-gwService -[#black]- childrennet
-
-gwService -[#blue]- siblingnet
-frontendService .... sml_sc_webimage
-gwService .... sml_sc_gwimage
+gwService -[#red]- siblingsnet
+gwService .... sml_sc_controllerimage
 
 
 @enduml

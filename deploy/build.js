@@ -2,7 +2,7 @@
 module.exports = {
     web: {
         dir: '..',
-        file: 'web/Dockerfile',
+        file: 'deploy/web/Dockerfile',
         tag: 'edgemere_web',
         env: {
 
@@ -10,7 +10,7 @@ module.exports = {
     },
     doc: {
         dir: '..',
-        file: 'doc/Dockerfile',
+        file: 'deploy/doc/Dockerfile',
         tag: 'edgemere_doc',
         env: {
 

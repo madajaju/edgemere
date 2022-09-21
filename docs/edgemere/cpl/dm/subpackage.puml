@@ -2,7 +2,7 @@
 
 
 
-package "Device Manager" #lightgray {
+package "Device Manager" #cccccc {
 
     interface "Device Manager" as i {
             ^agent.started
@@ -23,7 +23,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Device Manager" #lightgray {
+package "Device Manager" #cccccc {
 
 
 }

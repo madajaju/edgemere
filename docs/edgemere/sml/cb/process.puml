@@ -2,111 +2,111 @@
 left to right direction
 
 
-state "sml" as sml #lightgreen {
-state "cb" as smlcb #lightgreen {
+state "sml" as sml #88cc88 {
+state "cb" as smlcb #88cc88 {
 }
 }
 
 
-state "smlcb" as pstatename #lightgreen {
+state "smlcb" as pstatename #88cc88 {
     state "Custom Function" as cbfunction {
     }
 }
 
-        state "sml" as sml #lightgreen {
-state "cb" as smlcb #lightgreen {
-state "billing" as smlcbbilling #lightgreen {
-state "list" as smlcbbillinglist #lightgreen {
+        state "sml" as sml #88cc88 {
+state "cb" as smlcb #88cc88 {
+state "billing" as smlcbbilling #88cc88 {
+state "list" as smlcbbillinglist #88cc88 {
 }
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "cb" as smlcb #lightgreen {
-state "data" as smlcbdata #lightgreen {
-state "govern" as smlcbdatagovern #lightgreen {
+        state "sml" as sml #88cc88 {
+state "cb" as smlcb #88cc88 {
+state "data" as smlcbdata #88cc88 {
+state "govern" as smlcbdatagovern #88cc88 {
 }
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "cb" as smlcb #lightgreen {
-state "multicloud" as smlcbmulticloud #lightgreen {
-state "addclouds" as smlcbmulticloudaddclouds #lightgreen {
+        state "sml" as sml #88cc88 {
+state "cb" as smlcb #88cc88 {
+state "multicloud" as smlcbmulticloud #88cc88 {
+state "addclouds" as smlcbmulticloudaddclouds #88cc88 {
 }
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "cb" as smlcb #lightgreen {
-state "multicloud" as smlcbmulticloud #lightgreen {
-state "addpolicies" as smlcbmulticloudaddpolicies #lightgreen {
+        state "sml" as sml #88cc88 {
+state "cb" as smlcb #88cc88 {
+state "multicloud" as smlcbmulticloud #88cc88 {
+state "addpolicies" as smlcbmulticloudaddpolicies #88cc88 {
 }
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "cb" as smlcb #lightgreen {
-state "multicloud" as smlcbmulticloud #lightgreen {
-state "list" as smlcbmulticloudlist #lightgreen {
+        state "sml" as sml #88cc88 {
+state "cb" as smlcb #88cc88 {
+state "multicloud" as smlcbmulticloud #88cc88 {
+state "list" as smlcbmulticloudlist #88cc88 {
 }
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "cb" as smlcb #lightgreen {
-state "multicloud" as smlcbmulticloud #lightgreen {
-state "mapresources" as smlcbmulticloudmapresources #lightgreen {
+        state "sml" as sml #88cc88 {
+state "cb" as smlcb #88cc88 {
+state "multicloud" as smlcbmulticloud #88cc88 {
+state "mapresources" as smlcbmulticloudmapresources #88cc88 {
 }
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "cb" as smlcb #lightgreen {
-state "multicloud" as smlcbmulticloud #lightgreen {
-state "removepolicies" as smlcbmulticloudremovepolicies #lightgreen {
+        state "sml" as sml #88cc88 {
+state "cb" as smlcb #88cc88 {
+state "multicloud" as smlcbmulticloud #88cc88 {
+state "removepolicies" as smlcbmulticloudremovepolicies #88cc88 {
 }
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "cb" as smlcb #lightgreen {
-state "resourceinstancetype" as smlcbresourceinstancetype #lightgreen {
-state "list" as smlcbresourceinstancetypelist #lightgreen {
+        state "sml" as sml #88cc88 {
+state "cb" as smlcb #88cc88 {
+state "resourceinstancetype" as smlcbresourceinstancetype #88cc88 {
+state "list" as smlcbresourceinstancetypelist #88cc88 {
 }
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "cb" as smlcb #lightgreen {
-state "resources" as smlcbresources #lightgreen {
-state "find" as smlcbresourcesfind #lightgreen {
+        state "sml" as sml #88cc88 {
+state "cb" as smlcb #88cc88 {
+state "resources" as smlcbresources #88cc88 {
+state "find" as smlcbresourcesfind #88cc88 {
 }
 }
 }
 }
 
 
-        state "sml" as sml #lightgreen {
-state "cb" as smlcb #lightgreen {
-state "service" as smlcbservice #lightgreen {
-state "mapresources" as smlcbservicemapresources #lightgreen {
+        state "sml" as sml #88cc88 {
+state "cb" as smlcb #88cc88 {
+state "service" as smlcbservice #88cc88 {
+state "mapresources" as smlcbservicemapresources #88cc88 {
 }
 }
 }

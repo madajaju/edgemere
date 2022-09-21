@@ -1,8 +1,7 @@
 ---
-layout: default
-title: Software Defined Infrastructure
+title: Package Software Defined Infrastructure
 permalink: package--edgemere-sdi
-parent: edgemere
+parent: Package edgemere
 has_children: true
 ---
 
@@ -144,8 +143,7 @@ can be found [here](environment--edgemere-sdi-dev)
 Services in the dev environment
 
 * orchestrator : sdi_io
-* frontend : sdi_web
-* gw : sdi_gw
+* web : sdi_web
 
 
 ### test
@@ -156,8 +154,7 @@ can be found [here](environment--edgemere-sdi-test)
 Services in the test environment
 
 * orchestrator : sdi_io
-* frontend : sdi_web
-* gw : sdi_gw
+* web : sdi_web
 
 
 ### prod
@@ -168,8 +165,7 @@ can be found [here](environment--edgemere-sdi-prod)
 Services in the prod environment
 
 * orchestrator : sdi_io
-* frontend : sdi_web
-* gw : sdi_gw
+* web : sdi_web
 
 
 ## Activities and Flows

@@ -3,7 +3,7 @@
 left to right direction
 
 
-rectangle "Telemetry Aggregator" #lightgray {
+rectangle "Telemetry Aggregator" #cccccc {
 }
 
 

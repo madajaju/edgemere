@@ -2,6 +2,58 @@
 left to right direction
 
 
+    package "edgemere" as edgemere {
+package "sdi" as edgemeresdi {
+ component "io" as edgemeresdiio
+ interface "evaluaterequest" as edgemeresdiioevaluaterequest
+edgemeresdiio -- edgemeresdiioevaluaterequest
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sdi" as edgemeresdi {
+ component "io" as edgemeresdiio
+ interface "provision" as edgemeresdiioprovision
+edgemeresdiio -- edgemeresdiioprovision
+}
+}
+
+    
+hexagon "request.selected" as requestselected
+            edgemeresdiio <-- requestselected
+        
+hexagon "reservation.confirmed" as reservationconfirmed
+            edgemeresdiio <-- reservationconfirmed
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @enduml

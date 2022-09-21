@@ -2,7 +2,7 @@
 layout: default
 title: Class DataFlowInstance
 permalink: class-DataFlowInstance
-parent: classes
+parent: Classes
 ---
 
 # DataFlowInstance

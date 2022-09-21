@@ -2,12 +2,12 @@
 
 
 
-state SecurityProfile #pink {
+state SecurityProfile #cc8888 {
+
+
+
 
 }
-
-
-
 
 
 @enduml

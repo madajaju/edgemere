@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Manage Meta Data
 permalink: usecase-ManageMetaData
-parent: usecases
+parent: UseCases
 ---
 # Manage Meta Data
 

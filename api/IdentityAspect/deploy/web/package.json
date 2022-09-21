@@ -16,10 +16,5 @@
   "license": "MIT",
   "dependencies": {
     "ailtire": "latest",
-    "commander": "^4.1.0",
-    "ejs": "^3.0.1",
-    "express": "^4.17.1",
-    "gulp": "^4.0.2",
-    "mocha": "^7.0.0"
   }
 }

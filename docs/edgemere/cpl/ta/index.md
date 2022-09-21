@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Telemetry Aggregator
+title: Package Telemetry Aggregator
 permalink: package--edgemere-cpl-ta
-parent: Common Physical Layer
-grand_parent: edgemere
+parent: Package Common Physical Layer
+grand_parent: Package edgemere
 ---
 
 # Telemetry Aggregator

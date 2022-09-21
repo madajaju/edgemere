@@ -2,7 +2,7 @@
 layout: default
 title: Class Stage
 permalink: class-Stage
-parent: classes
+parent: Classes
 ---
 
 # Stage

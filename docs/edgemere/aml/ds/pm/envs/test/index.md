@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--edgemere-aml-ds-pm-test
-nav_exclude: true
+parent: environment-test
+grand_parent: Environments
 ---
 
-### test
+### Pipeline Manager test
 
 
 #### Deployment

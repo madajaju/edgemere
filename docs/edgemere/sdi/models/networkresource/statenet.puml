@@ -2,12 +2,12 @@
 
 
 
-state NetworkResource #lightyellow {
+state NetworkResource #cccc88 {
+
+
+
 
 }
-
-
-
 
 
 @enduml

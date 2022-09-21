@@ -2,12 +2,12 @@
 
 
 
-state MetricComposite #lightgray {
+state MetricComposite #cccccc {
+
+
+
 
 }
-
-
-
 
 
 @enduml

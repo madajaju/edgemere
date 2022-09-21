@@ -3,49 +3,43 @@
 left to right direction
 
 
-boundary ailtire_appname_sdi_family #red
+boundary parent #black
 
 
-entity ailtire_appname_sdi_io_family #black
+entity children #blue
 
 
 
 
-package "sdi_io" #lightyellow {
-    queue childrennet #black [
-            <b><color:white>children</color></b>
-    ]
-    
-    childrennet -[#black]- ailtire_appname_sdi_io_family
-    
-    queue siblingnet #blue [
-            <b><color:white>sibling</color></b>
-    ]
-    
-    queue parentnet #red [
+package "sdi_io" #cccc88 {
+    queue parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#red]- ailtire_appname_sdi_family
+    parentnet -[#black]- parent
+    
+    queue childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#blue]- children
+    
+    queue siblingsnet #red [
+            <b><color:white>siblings</color></b>
+    ]
     
 
-node "frontend" as frontendService
-node "gw" as gwService
+node "web" as webService
 
 
         artifact "sdi_io_web" as sdi_io_webimage
     
-        artifact "sdi_io_gw" as sdi_io_gwimage
-    
 }
 
-frontendService -[#blue]- siblingnet
+webService -[#blue]- childrennet
 
-gwService -[#black]- childrennet
-
-gwService -[#blue]- siblingnet
-frontendService .... sdi_io_webimage
-gwService .... sdi_io_gwimage
+webService -[#red]- siblingsnet
+webService .... sdi_io_webimage
 
 
 @enduml

@@ -2,7 +2,7 @@
 layout: default
 title: Class StageInstance
 permalink: class-StageInstance
-parent: classes
+parent: Classes
 ---
 
 # StageInstance

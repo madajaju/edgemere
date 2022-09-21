@@ -2,13 +2,13 @@
 left to right direction
 
 
-state "aml" as aml #lightblue {
-state "ws" as amlws #lightblue {
+state "aml" as aml #88cccc {
+state "ws" as amlws #88cccc {
 }
 }
 
 
-state "amlws" as pstatename #lightblue {
+state "amlws" as pstatename #88cccc {
     state "Custom Function" as wsfunction {
     }
 }

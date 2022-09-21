@@ -4,7 +4,7 @@ left to right direction
 Actor "IT Operations" as ITOperations
 
 
-rectangle "Software Defined Infrastructure" #lightyellow {
+rectangle "Software Defined Infrastructure" #cccc88 {
 usecase "ManageResources" as ManageResources
     ITOperations --> ManageResources
     }

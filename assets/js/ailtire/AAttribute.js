@@ -1,4 +1,4 @@
-import {AScenario, AText, AUsecase} from './index.js';
+import {AScenario, AText, AUsecase, A3DGraph, ASelectedHUD} from './index.js';
 
 export default class AAttribute {
     constructor(config) {
@@ -18,7 +18,7 @@ export default class AAttribute {
         let height = nameArray.length*AAttribute.default.fontSize;
         let width = maxLetters * (AAttribute.default.fontSize/2) + 10;
         let depth = AAttribute.default.depth;
-        let radius = Math.max(Math.sqrt(width*width + height*height), Math.sqrt(height*height + depth*depth), Math.sqrt(width*width + depth*depth));
+        let radius = Math.max(Math.sqrt(width*width + height*height), Math.sqrt(height*height + depth*depth), Math.sqrt(width*width + depth*depth))/2;
         return {w: width, h: height, d: depth, r: radius};
     }
 
@@ -72,7 +72,7 @@ export default class AAttribute {
         group.aid = node.id;
         node.box = size.r;
         node.expandLink = `attribute/get?id=${node.id}`;
-        node.expandView = AAttribute.viewDeep3D;
+        node.expandView = AAttribute.handle;
         node.getDetail = AAttribute.getDetail;
 
         return group;
@@ -86,9 +86,12 @@ export default class AAttribute {
         });
     }
     static showDetail(result) {
-        console.log(result);
+        ASelectedHUD.update('Attribute' ,[]);
     }
     static viewDeep3D(obj) {
+
+    }
+    static handle(results) {
 
     }
 }

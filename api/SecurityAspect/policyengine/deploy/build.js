@@ -1,7 +1,7 @@
 
 module.exports = {
     engine: {
-        dir: '..',
+        dir: '.',
         cmd: 'node web/server.js',
         file: 'engine/Dockerfile',
         tag: 'sa_pe_engine',
@@ -9,7 +9,7 @@ module.exports = {
         }
     },
     web: {
-        dir: '..',
+        dir: '.',
         cmd: 'node web/server.js',
         file: 'engine/Dockerfile',
         tag: 'sa_pe_web',

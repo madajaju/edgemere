@@ -1,20 +1,20 @@
 @startuml
 
 
-package "Software Defined Infrastructure" #lightyellow {
+package "Software Defined Infrastructure" #cccc88 {
 
 }
 
-package "Cloud Broker" #lightgreen {
+package "Cloud Broker" #88cc88 {
 
 }
 
-package "Common Physical Layer" #lightgray {
+package "Common Physical Layer" #cccccc {
 
 }
 
 
-package "Cloud Broker" #lightgreen {
+package "Cloud Broker" #88cc88 {
 
     interface "Cloud Broker" as i {
     
@@ -42,7 +42,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Cloud Broker" #lightgreen {
+package "Cloud Broker" #88cc88 {
 
 
 }

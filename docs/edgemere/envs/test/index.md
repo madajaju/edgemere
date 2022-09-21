@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--edgemere-test
-nav_exclude: true
+parent: environment-test
+grand_parent: Environments
 ---
 
-### test
+### edgemere test
 
 
 #### Deployment
@@ -30,17 +31,15 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| admin | edgemere:latest | /admin | 3000 | children |
-| aml | aml:latest |  |  | children |
-| cpl | cpl:latest | /cpl | 3000 | children |
-| diml | diml:latest |  |  | children |
-| ia | ia:latest |  |  | children |
-| sa | sa:latest |  |  | children |
-| sml | sml:latest |  |  | children |
-| sdi | sdi:latest |  |  | children |
-| pubsub | redis | /pubsub | 80 | children,sibling |
-| web | edgemere_web | /web | 3000 | sibling,children |
-| doc | edgemere_doc | /docs | 8088 | sibling,children |
+| aml | aml |  |  | children |
+| cpl | cpl |  |  | children |
+| diml | diml |  |  | children |
+| ia | ia |  |  | children |
+| sa | sa |  |  | children |
+| sml | sml |  |  | children |
+| sdi | sdi |  |  | children |
+| web | edgemere_web |  |  | children,siblings |
+| doc | edgemere_doc |  |  | siblings |
 
 
 #### Networks
@@ -53,8 +52,9 @@ stack in a layer of networks.
 
 | Name | Type | External Name | Ports |
 | --- | --- | --- | --- |
-| children | egress | ailtire_appname_family |
-| sibling | internal |  |
+| parent | ingress | parent |
+| children | egress | children |
+| siblings | internal |  |
 
 
 The Stack is micro-segmented off and there are a set of ports that are open for the ingress networks. The following
@@ -62,9 +62,6 @@ table shows the ports available and the internal port mappings and services on t
 
 | External Access Port | To Port | Service |
 | --- | --- | --- |
-| 80 | 80 | frontend |
-| 443 | 443 | frontend |
-| 8080 | 8080 | frontend |
 
 
 

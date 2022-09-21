@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Infrastructure Orchestrator
+title: Package Infrastructure Orchestrator
 permalink: package--edgemere-sdi-io
-parent: Software Defined Infrastructure
-grand_parent: edgemere
+parent: Package Software Defined Infrastructure
+grand_parent: Package edgemere
 ---
 
 # Infrastructure Orchestrator
@@ -104,8 +103,7 @@ can be found [here](environment--edgemere-sdi-io-dev)
 
 Services in the dev environment
 
-* frontend : sdi_io_web
-* gw : sdi_io_gw
+* web : sdi_io_web
 
 
 ### test
@@ -115,8 +113,7 @@ can be found [here](environment--edgemere-sdi-io-test)
 
 Services in the test environment
 
-* frontend : sdi_io_web
-* gw : sdi_io_gw
+* web : sdi_io_web
 
 
 ### prod
@@ -126,8 +123,7 @@ can be found [here](environment--edgemere-sdi-io-prod)
 
 Services in the prod environment
 
-* frontend : sdi_io_web
-* gw : sdi_io_gw
+* web : sdi_io_web
 
 
 ## Activities and Flows

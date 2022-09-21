@@ -2,7 +2,7 @@
 layout: default
 title: Class Deliverable
 permalink: class-Deliverable
-parent: classes
+parent: Classes
 ---
 
 # Deliverable

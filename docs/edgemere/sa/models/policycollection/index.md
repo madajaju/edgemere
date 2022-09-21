@@ -2,7 +2,7 @@
 layout: default
 title: Class PolicyCollection
 permalink: class-PolicyCollection
-parent: classes
+parent: Classes
 ---
 
 # PolicyCollection

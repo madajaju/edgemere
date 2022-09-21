@@ -2,7 +2,7 @@
   interface CLI
   interface Web
   interface WebSocket
-package "Identity Aspect" #pink {
+package "Identity Aspect" #cc8888 {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {
@@ -11,17 +11,13 @@ package "Identity Aspect" #pink {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as ia_container
+      file "node server.js\n" as ia_container
       REST --> ia_container
 
   
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
   
   }
   folder images #ffffff {
@@ -33,9 +29,6 @@ package "Identity Aspect" #pink {
   
       artifact "ia_web" as ia_web
       web_container --> ia_web
-    
-      artifact "ia_gw" as ia_gw
-      gateway_container --> ia_gw
     
   }
 }

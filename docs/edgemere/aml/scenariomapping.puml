@@ -2,371 +2,337 @@
 left to right direction
 
 
-
-state "Data Scientist" as DataScientist {
-    state "Manage AI Models" as DataScientistManageAIModels {
-    }
-}
-state "edgemere" as edgemere #lightblue {
-state "aml" as edgemereaml #lightblue {
-state "aimodel" as edgemereamlaimodel #lightblue {
-state "list" as edgemereamlaimodellist #lightblue {
-}
-}
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "aimodel" as edgemereamlaimodel
+ interface "create" as edgemereamlaimodelcreate
+edgemereamlaimodel -- edgemereamlaimodelcreate
 }
 }
 
-DataScientistManageAIModels --> edgemereamlaimodellist
-
-state "DevOps Engineer" as DevOpsEngineer {
-    state "Manage AI Models" as DevOpsEngineerManageAIModels {
-    }
-}
-state "edgemere" as edgemere #lightblue {
-state "aml" as edgemereaml #lightblue {
-state "aimodel" as edgemereamlaimodel #lightblue {
-state "list" as edgemereamlaimodellist #lightblue {
-}
-}
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "aimodel" as edgemereamlaimodel
+ interface "deploy" as edgemereamlaimodeldeploy
+edgemereamlaimodel -- edgemereamlaimodeldeploy
 }
 }
 
-DevOpsEngineerManageAIModels --> edgemereamlaimodellist
-
-state "ApplicationDeveloper" as ApplicationDeveloper {
-    state "Manage AI Models" as ApplicationDeveloperManageAIModels {
-    }
-}
-state "edgemere" as edgemere #lightblue {
-state "aml" as edgemereaml #lightblue {
-state "aimodel" as edgemereamlaimodel #lightblue {
-state "list" as edgemereamlaimodellist #lightblue {
-}
-}
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "aimodel" as edgemereamlaimodel
+ interface "destroy" as edgemereamlaimodeldestroy
+edgemereamlaimodel -- edgemereamlaimodeldestroy
 }
 }
 
-ApplicationDeveloperManageAIModels --> edgemereamlaimodellist
-
-state "DataEngineer" as DataEngineer {
-    state "Manage AI Models" as DataEngineerManageAIModels {
-    }
-}
-state "edgemere" as edgemere #lightblue {
-state "aml" as edgemereaml #lightblue {
-state "aimodel" as edgemereamlaimodel #lightblue {
-state "list" as edgemereamlaimodellist #lightblue {
-}
-}
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "aimodel" as edgemereamlaimodel
+ interface "list" as edgemereamlaimodellist
+edgemereamlaimodel -- edgemereamlaimodellist
 }
 }
 
-DataEngineerManageAIModels --> edgemereamlaimodellist
-
-
-    state "Application Developer" as ApplicationDeveloper {
-        state "Manage AI Models" as ApplicationDeveloperManageAIModels {
-            state "Create AI Model" as ApplicationDeveloperManageAIModelsCreateAIModel {
-            }
-        }
-    }
     
-    ApplicationDeveloperManageAIModelsCreateAIModel --> Null
-    
-    state "Data Scientist" as DataScientist {
-        state "Manage AI Models" as DataScientistManageAIModels {
-            state "Create AI Model" as DataScientistManageAIModelsCreateAIModel {
-            }
-        }
-    }
-    
-    DataScientistManageAIModelsCreateAIModel --> Null
-    
- 
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Manage AI Models" as DevOpsEngineerManageAIModels {
-            state "Deploy AI Model" as DevOpsEngineerManageAIModelsDeployAIModel {
-            }
-        }
-    }
-    
-    DevOpsEngineerManageAIModelsDeployAIModel --> Null
-    
-    state "ApplicationDeveloper" as ApplicationDeveloper {
-        state "Manage AI Models" as ApplicationDeveloperManageAIModels {
-            state "Deploy AI Model" as ApplicationDeveloperManageAIModelsDeployAIModel {
-            }
-        }
-    }
-    
-    ApplicationDeveloperManageAIModelsDeployAIModel --> Null
-    
-    state "DataEngineer" as DataEngineer {
-        state "Manage AI Models" as DataEngineerManageAIModels {
-            state "Deploy AI Model" as DataEngineerManageAIModelsDeployAIModel {
-            }
-        }
-    }
-    
-    DataEngineerManageAIModelsDeployAIModel --> Null
-    
- 
-    state "DataEngineer" as DataEngineer {
-        state "Manage AI Models" as DataEngineerManageAIModels {
-            state "Destroy AI Model" as DataEngineerManageAIModelsDestroyAIModel {
-            }
-        }
-    }
-    
-    DataEngineerManageAIModelsDestroyAIModel --> Null
-    
-    state "ApplicationDeveloper" as ApplicationDeveloper {
-        state "Manage AI Models" as ApplicationDeveloperManageAIModels {
-            state "Destroy AI Model" as ApplicationDeveloperManageAIModelsDestroyAIModel {
-            }
-        }
-    }
-    
-    ApplicationDeveloperManageAIModelsDestroyAIModel --> Null
-    
- 
-    state "DataEngineer" as DataEngineer {
-        state "Manage AI Models" as DataEngineerManageAIModels {
-            state "Update AI Model" as DataEngineerManageAIModelsUpdateAIModel {
-            }
-        }
-    }
-    
-    DataEngineerManageAIModelsUpdateAIModel --> Null
-    
-    state "DevOpsEngineer" as DevOpsEngineer {
-        state "Manage AI Models" as DevOpsEngineerManageAIModels {
-            state "Update AI Model" as DevOpsEngineerManageAIModelsUpdateAIModel {
-            }
-        }
-    }
-    
-    DevOpsEngineerManageAIModelsUpdateAIModel --> Null
-    
-    state "ApplicationDeveloper" as ApplicationDeveloper {
-        state "Manage AI Models" as ApplicationDeveloperManageAIModels {
-            state "Update AI Model" as ApplicationDeveloperManageAIModelsUpdateAIModel {
-            }
-        }
-    }
-    
-    ApplicationDeveloperManageAIModelsUpdateAIModel --> Null
-    
- 
- 
-state "DevOps Engineer" as DevOpsEngineer {
-    state "Manage Applications" as DevOpsEngineerManageApplications {
-    }
-}
-state "edgemere" as edgemere #lightblue {
-state "aml" as edgemereaml #lightblue {
-state "application" as edgemereamlapplication #lightblue {
-state "list" as edgemereamlapplicationlist #lightblue {
-}
-}
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "aimodel" as edgemereamlaimodel
+ interface "update" as edgemereamlaimodelupdate
+edgemereamlaimodel -- edgemereamlaimodelupdate
 }
 }
 
-DevOpsEngineerManageApplications --> edgemereamlapplicationlist
-
-state "Application Developer" as ApplicationDeveloper {
-    state "Manage Applications" as ApplicationDeveloperManageApplications {
-    }
-}
-state "edgemere" as edgemere #lightblue {
-state "aml" as edgemereaml #lightblue {
-state "application" as edgemereamlapplication #lightblue {
-state "list" as edgemereamlapplicationlist #lightblue {
-}
-}
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "application" as edgemereamlapplication
+ interface "create" as edgemereamlapplicationcreate
+edgemereamlapplication -- edgemereamlapplicationcreate
 }
 }
 
-ApplicationDeveloperManageApplications --> edgemereamlapplicationlist
-
-
-    state "Application Developer" as ApplicationDeveloper {
-        state "Manage Applications" as ApplicationDeveloperManageApplications {
-            state "Create Application" as ApplicationDeveloperManageApplicationsCreateApplication {
-            }
-        }
-    }
     
-    ApplicationDeveloperManageApplicationsCreateApplication --> Null
-    
- 
-    state "DevOps Engineer" as DevOpsEngineer {
-        state "Manage Applications" as DevOpsEngineerManageApplications {
-            state "Deploy Application" as DevOpsEngineerManageApplicationsDeployApplication {
-            }
-        }
-    }
-    
-    DevOpsEngineerManageApplicationsDeployApplication --> Null
-    
- 
-    state "DevOps Engineer" as DevOpsEngineer {
-        state "Manage Applications" as DevOpsEngineerManageApplications {
-            state "Destroy Application" as DevOpsEngineerManageApplicationsDestroyApplication {
-            }
-        }
-    }
-    
-    DevOpsEngineerManageApplicationsDestroyApplication --> Null
-    
- 
-    state "DevOps Engineer" as DevOpsEngineer {
-        state "Manage Applications" as DevOpsEngineerManageApplications {
-            state "Monitor Application" as DevOpsEngineerManageApplicationsMonitorApplication {
-            }
-        }
-    }
-    
-    DevOpsEngineerManageApplicationsMonitorApplication --> Null
-    
-    state "Application Developer" as ApplicationDeveloper {
-        state "Manage Applications" as ApplicationDeveloperManageApplications {
-            state "Monitor Application" as ApplicationDeveloperManageApplicationsMonitorApplication {
-            }
-        }
-    }
-    
-    ApplicationDeveloperManageApplicationsMonitorApplication --> Null
-    
- 
-    state "Application Developer" as ApplicationDeveloper {
-        state "Manage Applications" as ApplicationDeveloperManageApplications {
-            state "Update Application" as ApplicationDeveloperManageApplicationsUpdateApplication {
-            }
-        }
-    }
-    
-    ApplicationDeveloperManageApplicationsUpdateApplication --> Null
-    
-    state "DevOps Engineer" as DevOpsEngineer {
-        state "Manage Applications" as DevOpsEngineerManageApplications {
-            state "Update Application" as DevOpsEngineerManageApplicationsUpdateApplication {
-            }
-        }
-    }
-    
-    DevOpsEngineerManageApplicationsUpdateApplication --> Null
-    
- 
- 
-state "Application Developer" as ApplicationDeveloper {
-    state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
-    }
-}
-state "edgemere" as edgemere #lightblue {
-state "aml" as edgemereaml #lightblue {
-state "workload" as edgemereamlworkload #lightblue {
-state "list" as edgemereamlworkloadlist #lightblue {
-}
-}
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "application" as edgemereamlapplication
+ interface "deploy" as edgemereamlapplicationdeploy
+edgemereamlapplication -- edgemereamlapplicationdeploy
 }
 }
 
-ApplicationDeveloperManageWorkloads --> edgemereamlworkloadlist
-
-state "DevOps Engineer" as DevOpsEngineer {
-    state "Manage Workloads" as DevOpsEngineerManageWorkloads {
-    }
-}
-state "edgemere" as edgemere #lightblue {
-state "aml" as edgemereaml #lightblue {
-state "workload" as edgemereamlworkload #lightblue {
-state "list" as edgemereamlworkloadlist #lightblue {
-}
-}
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "application" as edgemereamlapplication
+ interface "destroy" as edgemereamlapplicationdestroy
+edgemereamlapplication -- edgemereamlapplicationdestroy
 }
 }
 
-DevOpsEngineerManageWorkloads --> edgemereamlworkloadlist
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "application" as edgemereamlapplication
+ interface "list" as edgemereamlapplicationlist
+edgemereamlapplication -- edgemereamlapplicationlist
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "application" as edgemereamlapplication
+ interface "monitor" as edgemereamlapplicationmonitor
+edgemereamlapplication -- edgemereamlapplicationmonitor
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "application" as edgemereamlapplication
+ interface "update" as edgemereamlapplicationupdate
+edgemereamlapplication -- edgemereamlapplicationupdate
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "workload" as edgemereamlworkload
+ interface "create" as edgemereamlworkloadcreate
+edgemereamlworkload -- edgemereamlworkloadcreate
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "workload" as edgemereamlworkload
+ interface "deploy" as edgemereamlworkloaddeploy
+edgemereamlworkload -- edgemereamlworkloaddeploy
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "workload" as edgemereamlworkload
+ interface "destroy" as edgemereamlworkloaddestroy
+edgemereamlworkload -- edgemereamlworkloaddestroy
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "workload" as edgemereamlworkload
+ interface "list" as edgemereamlworkloadlist
+edgemereamlworkload -- edgemereamlworkloadlist
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "workload" as edgemereamlworkload
+ interface "monitor" as edgemereamlworkloadmonitor
+edgemereamlworkload -- edgemereamlworkloadmonitor
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "workload" as edgemereamlworkload
+ interface "update" as edgemereamlworkloadupdate
+edgemereamlworkload -- edgemereamlworkloadupdate
+}
+}
+
+    
 
 
-    state "Application Developer" as ApplicationDeveloper {
-        state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
-            state "Create Workload" as ApplicationDeveloperManageWorkloadsCreateWorkload {
-            }
+        rectangle "Manage AI Models" as ManageAIModels #ffffaa {
+            ("Create AI Model")/ as ApplicationDeveloperManageAIModelsCreateAIModel
         }
-    }
     
-    ApplicationDeveloperManageWorkloadsCreateWorkload --> Null
+    edgemereamlaimodelcreate <-- ApplicationDeveloperManageAIModelsCreateAIModel
     
- 
-    state "Application Developer" as ApplicationDeveloper {
-        state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
-            state "Deploy Workload" as ApplicationDeveloperManageWorkloadsDeployWorkload {
-            }
+        rectangle "Manage AI Models" as ManageAIModels #ffffaa {
+            ("Create AI Model")/ as DataScientistManageAIModelsCreateAIModel
         }
-    }
     
-    ApplicationDeveloperManageWorkloadsDeployWorkload --> Null
+    edgemereamlaimodelcreate <-- DataScientistManageAIModelsCreateAIModel
     
-    state "DevOps Engineer" as DevOpsEngineer {
-        state "Manage Workloads" as DevOpsEngineerManageWorkloads {
-            state "Deploy Workload" as DevOpsEngineerManageWorkloadsDeployWorkload {
-            }
+        rectangle "Manage AI Models" as ManageAIModels #ffffaa {
+            ("Deploy AI Model")/ as DevOpsEngineerManageAIModelsDeployAIModel
         }
-    }
     
-    DevOpsEngineerManageWorkloadsDeployWorkload --> Null
+    edgemereamlaimodeldeploy <-- DevOpsEngineerManageAIModelsDeployAIModel
     
- 
-    state "DevOps Engineer" as DevOpsEngineer {
-        state "Manage Workloads" as DevOpsEngineerManageWorkloads {
-            state "Destroy Workload" as DevOpsEngineerManageWorkloadsDestroyWorkload {
-            }
+        rectangle "Manage AI Models" as ManageAIModels #ffffaa {
+            ("Deploy AI Model")/ as ApplicationDeveloperManageAIModelsDeployAIModel
         }
-    }
     
-    DevOpsEngineerManageWorkloadsDestroyWorkload --> Null
+    edgemereamlaimodeldeploy <-- ApplicationDeveloperManageAIModelsDeployAIModel
     
- 
-    state "Application Developer" as ApplicationDeveloper {
-        state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
-            state "Monitor Workload" as ApplicationDeveloperManageWorkloadsMonitorWorkload {
-            }
+        rectangle "Manage AI Models" as ManageAIModels #ffffaa {
+            ("Deploy AI Model")/ as DataEngineerManageAIModelsDeployAIModel
         }
-    }
     
-    ApplicationDeveloperManageWorkloadsMonitorWorkload --> Null
+    edgemereamlaimodeldeploy <-- DataEngineerManageAIModelsDeployAIModel
     
-    state "DevOps Engineer" as DevOpsEngineer {
-        state "Manage Workloads" as DevOpsEngineerManageWorkloads {
-            state "Monitor Workload" as DevOpsEngineerManageWorkloadsMonitorWorkload {
-            }
+        rectangle "Manage AI Models" as ManageAIModels #ffffaa {
+            ("Destroy AI Model")/ as DataEngineerManageAIModelsDestroyAIModel
         }
-    }
     
-    DevOpsEngineerManageWorkloadsMonitorWorkload --> Null
+    edgemereamlaimodeldestroy <-- DataEngineerManageAIModelsDestroyAIModel
     
- 
-    state "Application Developer" as ApplicationDeveloper {
-        state "Manage Workloads" as ApplicationDeveloperManageWorkloads {
-            state "Update Workload" as ApplicationDeveloperManageWorkloadsUpdateWorkload {
-            }
+        rectangle "Manage AI Models" as ManageAIModels #ffffaa {
+            ("Destroy AI Model")/ as ApplicationDeveloperManageAIModelsDestroyAIModel
         }
-    }
     
-    ApplicationDeveloperManageWorkloadsUpdateWorkload --> Null
+    edgemereamlaimodeldestroy <-- ApplicationDeveloperManageAIModelsDestroyAIModel
     
-    state "DevOps Engineer" as DevOpsEngineer {
-        state "Manage Workloads" as DevOpsEngineerManageWorkloads {
-            state "Update Workload" as DevOpsEngineerManageWorkloadsUpdateWorkload {
-            }
+        rectangle "Manage AI Models" as ManageAIModels #ffffaa {
+            ("Update AI Model")/ as DataEngineerManageAIModelsUpdateAIModel
         }
-    }
     
-    DevOpsEngineerManageWorkloadsUpdateWorkload --> Null
+    edgemereamlaimodelupdate <-- DataEngineerManageAIModelsUpdateAIModel
     
- 
- 
+        rectangle "Manage AI Models" as ManageAIModels #ffffaa {
+            ("Update AI Model")/ as DevOpsEngineerManageAIModelsUpdateAIModel
+        }
+    
+    edgemereamlaimodelupdate <-- DevOpsEngineerManageAIModelsUpdateAIModel
+    
+        rectangle "Manage AI Models" as ManageAIModels #ffffaa {
+            ("Update AI Model")/ as ApplicationDeveloperManageAIModelsUpdateAIModel
+        }
+    
+    edgemereamlaimodelupdate <-- ApplicationDeveloperManageAIModelsUpdateAIModel
+    
+
+        rectangle "Manage Applications" as ManageApplications #ffffaa {
+            ("Create Application")/ as ApplicationDeveloperManageApplicationsCreateApplication
+        }
+    
+    edgemereamlapplicationcreate <-- ApplicationDeveloperManageApplicationsCreateApplication
+    
+        rectangle "Manage Applications" as ManageApplications #ffffaa {
+            ("Deploy Application")/ as DevOpsEngineerManageApplicationsDeployApplication
+        }
+    
+    edgemereamlapplicationdeploy <-- DevOpsEngineerManageApplicationsDeployApplication
+    
+        rectangle "Manage Applications" as ManageApplications #ffffaa {
+            ("Destroy Application")/ as DevOpsEngineerManageApplicationsDestroyApplication
+        }
+    
+    edgemereamlapplicationdestroy <-- DevOpsEngineerManageApplicationsDestroyApplication
+    
+        rectangle "Manage Applications" as ManageApplications #ffffaa {
+            ("Monitor Application")/ as DevOpsEngineerManageApplicationsMonitorApplication
+        }
+    
+    edgemereamlapplicationmonitor <-- DevOpsEngineerManageApplicationsMonitorApplication
+    
+        rectangle "Manage Applications" as ManageApplications #ffffaa {
+            ("Monitor Application")/ as ApplicationDeveloperManageApplicationsMonitorApplication
+        }
+    
+    edgemereamlapplicationmonitor <-- ApplicationDeveloperManageApplicationsMonitorApplication
+    
+        rectangle "Manage Applications" as ManageApplications #ffffaa {
+            ("Update Application")/ as ApplicationDeveloperManageApplicationsUpdateApplication
+        }
+    
+    edgemereamlapplicationupdate <-- ApplicationDeveloperManageApplicationsUpdateApplication
+    
+        rectangle "Manage Applications" as ManageApplications #ffffaa {
+            ("Update Application")/ as DevOpsEngineerManageApplicationsUpdateApplication
+        }
+    
+    edgemereamlapplicationupdate <-- DevOpsEngineerManageApplicationsUpdateApplication
+    
+
+        rectangle "Manage Workloads" as ManageWorkloads #ffffaa {
+            ("Create Workload")/ as ApplicationDeveloperManageWorkloadsCreateWorkload
+        }
+    
+    edgemereamlworkloadcreate <-- ApplicationDeveloperManageWorkloadsCreateWorkload
+    
+        rectangle "Manage Workloads" as ManageWorkloads #ffffaa {
+            ("Deploy Workload")/ as ApplicationDeveloperManageWorkloadsDeployWorkload
+        }
+    
+    edgemereamlworkloaddeploy <-- ApplicationDeveloperManageWorkloadsDeployWorkload
+    
+        rectangle "Manage Workloads" as ManageWorkloads #ffffaa {
+            ("Deploy Workload")/ as DevOpsEngineerManageWorkloadsDeployWorkload
+        }
+    
+    edgemereamlworkloaddeploy <-- DevOpsEngineerManageWorkloadsDeployWorkload
+    
+        rectangle "Manage Workloads" as ManageWorkloads #ffffaa {
+            ("Destroy Workload")/ as DevOpsEngineerManageWorkloadsDestroyWorkload
+        }
+    
+    edgemereamlworkloaddestroy <-- DevOpsEngineerManageWorkloadsDestroyWorkload
+    
+        rectangle "Manage Workloads" as ManageWorkloads #ffffaa {
+            ("Monitor Workload")/ as ApplicationDeveloperManageWorkloadsMonitorWorkload
+        }
+    
+    edgemereamlworkloadmonitor <-- ApplicationDeveloperManageWorkloadsMonitorWorkload
+    
+        rectangle "Manage Workloads" as ManageWorkloads #ffffaa {
+            ("Monitor Workload")/ as DevOpsEngineerManageWorkloadsMonitorWorkload
+        }
+    
+    edgemereamlworkloadmonitor <-- DevOpsEngineerManageWorkloadsMonitorWorkload
+    
+        rectangle "Manage Workloads" as ManageWorkloads #ffffaa {
+            ("Update Workload")/ as ApplicationDeveloperManageWorkloadsUpdateWorkload
+        }
+    
+    edgemereamlworkloadupdate <-- ApplicationDeveloperManageWorkloadsUpdateWorkload
+    
+        rectangle "Manage Workloads" as ManageWorkloads #ffffaa {
+            ("Update Workload")/ as DevOpsEngineerManageWorkloadsUpdateWorkload
+        }
+    
+    edgemereamlworkloadupdate <-- DevOpsEngineerManageWorkloadsUpdateWorkload
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @enduml

@@ -1,9 +1,8 @@
 ---
-layout: default
-title: AI ML Services
+title: Package AI ML Services
 permalink: package--edgemere-aml-ams
-parent: Application Management Layer
-grand_parent: edgemere
+parent: Package Application Management Layer
+grand_parent: Package edgemere
 ---
 
 # AI ML Services
@@ -103,8 +102,7 @@ can be found [here](environment--edgemere-aml-ams-dev)
 
 Services in the dev environment
 
-* frontend : aml_ams_web
-* gw : aml_ams_gw
+* web : aml_ams_web
 
 
 ### test
@@ -114,8 +112,7 @@ can be found [here](environment--edgemere-aml-ams-test)
 
 Services in the test environment
 
-* frontend : aml_ams_web
-* gw : aml_ams_gw
+* web : aml_ams_web
 
 
 ### prod
@@ -125,8 +122,7 @@ can be found [here](environment--edgemere-aml-ams-prod)
 
 Services in the prod environment
 
-* frontend : aml_ams_web
-* gw : aml_ams_gw
+* web : aml_ams_web
 
 
 ## Activities and Flows

@@ -2,7 +2,7 @@
 layout: default
 title: Class BuildInstance
 permalink: class-BuildInstance
-parent: classes
+parent: Classes
 ---
 
 # BuildInstance

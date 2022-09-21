@@ -4,19 +4,19 @@ module.exports = {
     contexts: {
         dev: {
             type: 'swarm',
-            tag: 'cpl_tc_dev',
+            tag: 'cpl_tc:dev',
             file: 'docker-compose.yml',
             env: {}
         },
         test: {
             type: 'swarm',
-            tag: 'cpl_tc_test',
+            tag: 'cpl_tc:test',
             file: 'docker-compose.yml',
             env: {}
         },
         prod: {
             type: 'swarm',
-            tag: 'cpl_tc_prod',
+            tag: 'cpl_tc:prod',
             file: 'docker-compose.yml',
             env: {}
         }

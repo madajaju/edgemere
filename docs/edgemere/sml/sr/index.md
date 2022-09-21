@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Service Repository
+title: Package Service Repository
 permalink: package--edgemere-sml-sr
-parent: Service Management Layer
-grand_parent: edgemere
+parent: Package Service Management Layer
+grand_parent: Package edgemere
 ---
 
 # Service Repository
@@ -106,8 +105,7 @@ can be found [here](environment--edgemere-sml-sr-dev)
 
 Services in the dev environment
 
-* frontend : sml_sr_web
-* gw : sml_sr_gw
+* web : sml_sr_web
 
 
 ### test
@@ -117,8 +115,7 @@ can be found [here](environment--edgemere-sml-sr-test)
 
 Services in the test environment
 
-* frontend : sml_sr_web
-* gw : sml_sr_gw
+* web : sml_sr_web
 
 
 ### prod
@@ -128,8 +125,7 @@ can be found [here](environment--edgemere-sml-sr-prod)
 
 Services in the prod environment
 
-* frontend : sml_sr_web
-* gw : sml_sr_gw
+* web : sml_sr_web
 
 
 ## Activities and Flows

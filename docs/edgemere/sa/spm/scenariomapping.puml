@@ -2,124 +2,215 @@
 left to right direction
 
 
-
-state "SecurityOperator" as SecurityOperator {
-    state "Apply Security Profiles" as SecurityOperatorApplySecurityProfiles {
-    }
-}
-state "edgemere" as edgemere #pink {
-state "sa" as edgemeresa #pink {
-state "spm" as edgemeresaspm #pink {
-state "data" as edgemeresaspmdata #pink {
-state "govern" as edgemeresaspmdatagovern #pink {
-}
-}
+    package "edgemere" as edgemere {
+package "sa" as edgemeresa {
+package "spm" as edgemeresaspm #cc8888 {
+ component "data" as edgemeresaspmdata
+ interface "create" as edgemeresaspmdatacreate
+edgemeresaspmdata -- edgemeresaspmdatacreate
 }
 }
 }
 
-SecurityOperatorApplySecurityProfiles --> edgemeresaspmdatagovern
-
-
-    state "SecurityEngineer" as SecurityEngineer {
-        state "Apply Security Profiles" as SecurityEngineerApplySecurityProfiles {
-            state "Attach Profile" as SecurityEngineerApplySecurityProfilesAttachProfile {
-            }
-        }
-    }
     
-    SecurityEngineerApplySecurityProfilesAttachProfile --> Null
-    
- 
-    state "SecurityEngineer" as SecurityEngineer {
-        state "Apply Security Profiles" as SecurityEngineerApplySecurityProfiles {
-            state "Deploy Security Profile" as SecurityEngineerApplySecurityProfilesDeploySecurityProfile {
-            }
-        }
-    }
-    
-    SecurityEngineerApplySecurityProfilesDeploySecurityProfile --> Null
-    
- 
- 
-state "SecurityEngineer" as SecurityEngineer {
-    state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
-    }
-}
-state "edgemere" as edgemere #pink {
-state "sa" as edgemeresa #pink {
-state "spm" as edgemeresaspm #pink {
-state "securityprofile" as edgemeresaspmsecurityprofile #pink {
-state "list" as edgemeresaspmsecurityprofilelist #pink {
-}
-}
+    package "edgemere" as edgemere {
+package "sa" as edgemeresa {
+package "spm" as edgemeresaspm #cc8888 {
+ component "data" as edgemeresaspmdata
+ interface "govern" as edgemeresaspmdatagovern
+edgemeresaspmdata -- edgemeresaspmdatagovern
 }
 }
 }
 
-SecurityEngineerManageSecurityProfiles --> edgemeresaspmsecurityprofilelist
+    
+    package "edgemere" as edgemere {
+package "sa" as edgemeresa {
+package "spm" as edgemeresaspm #cc8888 {
+ component "securityprofile" as edgemeresaspmsecurityprofile
+ interface "attach" as edgemeresaspmsecurityprofileattach
+edgemeresaspmsecurityprofile -- edgemeresaspmsecurityprofileattach
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sa" as edgemeresa {
+package "spm" as edgemeresaspm #cc8888 {
+ component "securityprofile" as edgemeresaspmsecurityprofile
+ interface "create" as edgemeresaspmsecurityprofilecreate
+edgemeresaspmsecurityprofile -- edgemeresaspmsecurityprofilecreate
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sa" as edgemeresa {
+package "spm" as edgemeresaspm #cc8888 {
+ component "securityprofile" as edgemeresaspmsecurityprofile
+ interface "deploy" as edgemeresaspmsecurityprofiledeploy
+edgemeresaspmsecurityprofile -- edgemeresaspmsecurityprofiledeploy
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sa" as edgemeresa {
+package "spm" as edgemeresaspm #cc8888 {
+ component "securityprofile" as edgemeresaspmsecurityprofile
+ interface "destroy" as edgemeresaspmsecurityprofiledestroy
+edgemeresaspmsecurityprofile -- edgemeresaspmsecurityprofiledestroy
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sa" as edgemeresa {
+package "spm" as edgemeresaspm #cc8888 {
+ component "securityprofile" as edgemeresaspmsecurityprofile
+ interface "disable" as edgemeresaspmsecurityprofiledisable
+edgemeresaspmsecurityprofile -- edgemeresaspmsecurityprofiledisable
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sa" as edgemeresa {
+package "spm" as edgemeresaspm #cc8888 {
+ component "securityprofile" as edgemeresaspmsecurityprofile
+ interface "enable" as edgemeresaspmsecurityprofileenable
+edgemeresaspmsecurityprofile -- edgemeresaspmsecurityprofileenable
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sa" as edgemeresa {
+package "spm" as edgemeresaspm #cc8888 {
+ component "securityprofile" as edgemeresaspmsecurityprofile
+ interface "list" as edgemeresaspmsecurityprofilelist
+edgemeresaspmsecurityprofile -- edgemeresaspmsecurityprofilelist
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sa" as edgemeresa {
+package "spm" as edgemeresaspm #cc8888 {
+ component "securityprofile" as edgemeresaspmsecurityprofile
+ interface "status" as edgemeresaspmsecurityprofilestatus
+edgemeresaspmsecurityprofile -- edgemeresaspmsecurityprofilestatus
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sa" as edgemeresa {
+package "spm" as edgemeresaspm #cc8888 {
+ component "securityprofile" as edgemeresaspmsecurityprofile
+ interface "test" as edgemeresaspmsecurityprofiletest
+edgemeresaspmsecurityprofile -- edgemeresaspmsecurityprofiletest
+}
+}
+}
+
+    
 
 
-    state "SecurityEngineer" as SecurityEngineer {
-        state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
-            state "Create Security Profile" as SecurityEngineerManageSecurityProfilesCreateSecurityProfile {
-            }
+
+
+
+
+
+
+
+
+
+
+        rectangle "Manage Meta Data" as ManageMetaData #ffffaa {
+            ("Capture Meta Data")/ as DataEngineerManageMetaDataCaptureMetaData
         }
-    }
     
-    SecurityEngineerManageSecurityProfilesCreateSecurityProfile --> Null
+    edgemeresaspmdatacreate <-- DataEngineerManageMetaDataCaptureMetaData
     
- 
-    state "SecurityEngineer" as SecurityEngineer {
-        state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
-            state "Disable Security Profile" as SecurityEngineerManageSecurityProfilesDisableSecurityProfile {
-            }
+        rectangle "Manage Meta Data" as ManageMetaData #ffffaa {
+            ("Capture Meta Data")/ as DataStewardManageMetaDataCaptureMetaData
         }
-    }
     
-    SecurityEngineerManageSecurityProfilesDisableSecurityProfile --> Null
+    edgemeresaspmdatacreate <-- DataStewardManageMetaDataCaptureMetaData
     
- 
-    state "SecurityEngineer" as SecurityEngineer {
-        state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
-            state "Enable Security Profile" as SecurityEngineerManageSecurityProfilesEnableSecurityProfile {
-            }
+
+
+
+
+
+
+        rectangle "Apply Security Profiles" as ApplySecurityProfiles #ffffaa {
+            ("Attach Profile")/ as SecurityEngineerApplySecurityProfilesAttachProfile
         }
-    }
     
-    SecurityEngineerManageSecurityProfilesEnableSecurityProfile --> Null
+    edgemeresaspmsecurityprofileattach <-- SecurityEngineerApplySecurityProfilesAttachProfile
     
- 
-    state "SecurityEngineer" as SecurityEngineer {
-        state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
-            state "Monitor Security Profile" as SecurityEngineerManageSecurityProfilesMonitorSecurityProfile {
-            }
+        rectangle "Apply Security Profiles" as ApplySecurityProfiles #ffffaa {
+            ("Deploy Security Profile")/ as SecurityEngineerApplySecurityProfilesDeploySecurityProfile
         }
-    }
     
-    SecurityEngineerManageSecurityProfilesMonitorSecurityProfile --> Null
+    edgemeresaspmsecurityprofiledeploy <-- SecurityEngineerApplySecurityProfilesDeploySecurityProfile
     
- 
-    state "SecurityEngineer" as SecurityEngineer {
-        state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
-            state "Remove Security Profile" as SecurityEngineerManageSecurityProfilesRemoveSecurityProfile {
-            }
+
+        rectangle "Manage Security Profiles" as ManageSecurityProfiles #ffffaa {
+            ("Create Security Profile")/ as SecurityEngineerManageSecurityProfilesCreateSecurityProfile
         }
-    }
     
-    SecurityEngineerManageSecurityProfilesRemoveSecurityProfile --> Null
+    edgemeresaspmsecurityprofilecreate <-- SecurityEngineerManageSecurityProfilesCreateSecurityProfile
     
- 
-    state "SecurityEngineer" as SecurityEngineer {
-        state "Manage Security Profiles" as SecurityEngineerManageSecurityProfiles {
-            state "Test Security Profile" as SecurityEngineerManageSecurityProfilesTestSecurityProfile {
-            }
+        rectangle "Manage Security Profiles" as ManageSecurityProfiles #ffffaa {
+            ("Disable Security Profile")/ as SecurityEngineerManageSecurityProfilesDisableSecurityProfile
         }
-    }
     
-    SecurityEngineerManageSecurityProfilesTestSecurityProfile --> Null
+    edgemeresaspmsecurityprofiledisable <-- SecurityEngineerManageSecurityProfilesDisableSecurityProfile
     
- 
- 
+        rectangle "Manage Security Profiles" as ManageSecurityProfiles #ffffaa {
+            ("Enable Security Profile")/ as SecurityEngineerManageSecurityProfilesEnableSecurityProfile
+        }
+    
+    edgemeresaspmsecurityprofileenable <-- SecurityEngineerManageSecurityProfilesEnableSecurityProfile
+    
+        rectangle "Manage Security Profiles" as ManageSecurityProfiles #ffffaa {
+            ("Monitor Security Profile")/ as SecurityEngineerManageSecurityProfilesMonitorSecurityProfile
+        }
+    
+    edgemeresaspmsecurityprofilestatus <-- SecurityEngineerManageSecurityProfilesMonitorSecurityProfile
+    
+        rectangle "Manage Security Profiles" as ManageSecurityProfiles #ffffaa {
+            ("Remove Security Profile")/ as SecurityEngineerManageSecurityProfilesRemoveSecurityProfile
+        }
+    
+    edgemeresaspmsecurityprofiledestroy <-- SecurityEngineerManageSecurityProfilesRemoveSecurityProfile
+    
+        rectangle "Manage Security Profiles" as ManageSecurityProfiles #ffffaa {
+            ("Test Security Profile")/ as SecurityEngineerManageSecurityProfilesTestSecurityProfile
+        }
+    
+    edgemeresaspmsecurityprofiletest <-- SecurityEngineerManageSecurityProfilesTestSecurityProfile
+    
+
+
+
+
+
+
+
+
+
+
 
 @enduml

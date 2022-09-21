@@ -2,10 +2,11 @@
 layout: default
 title: Environment dev
 permalink: environment--edgemere-diml-dev
-nav_exclude: true
+parent: environment-dev
+grand_parent: Environments
 ---
 
-### dev
+### Distributed Information Management Layer dev
 
 
 #### Deployment
@@ -30,8 +31,10 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| frontend | diml_web |  |  | sibling |
-| gw | diml_gw |  |  | children,sibling |
+| web | diml_web |  |  | children,siblings |
+| diml_cds | diml_cds |  |  | children |
+| diml_ddf | diml_ddf |  |  | children |
+| diml_dml | diml_dml |  |  | children |
 
 
 #### Networks
@@ -44,9 +47,9 @@ stack in a layer of networks.
 
 | Name | Type | External Name | Ports |
 | --- | --- | --- | --- |
-| children | egress | ailtire_appname_diml_family |
-| sibling | internal |  |
-| parent | ingress | ailtire_appname_family |
+| parent | ingress | parent |
+| children | egress | children |
+| siblings | internal |  |
 
 
 The Stack is micro-segmented off and there are a set of ports that are open for the ingress networks. The following

@@ -6,7 +6,7 @@ left to right direction
 Actor "DevOps Engineer" as DevOpsEngineer
 
 
-rectangle "Application Management Layer" as aml #lightblue {
+rectangle "Application Management Layer" as aml #88cccc {
         usecase "Manage AI Models" as ManageAIModels
     DevOpsEngineer --> ManageAIModels
     usecase "Manage Applications" as ManageApplications

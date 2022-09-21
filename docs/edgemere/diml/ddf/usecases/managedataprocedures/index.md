@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Manage Data Procedures
 permalink: usecase-ManageDataProcedures
-parent: usecases
+parent: UseCases
 ---
 # Manage Data Procedures
 

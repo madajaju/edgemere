@@ -3,7 +3,7 @@
 left to right direction
 
 
-rectangle "Device Manager" #lightgray {
+rectangle "Device Manager" #cccccc {
 }
 
 

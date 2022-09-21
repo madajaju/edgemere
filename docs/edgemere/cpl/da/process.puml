@@ -2,37 +2,37 @@
 left to right direction
 
 
-state "cpl" as cpl #lightgray {
-state "da" as cplda #lightgray {
+state "cpl" as cpl #cccccc {
+state "da" as cplda #cccccc {
 }
 }
 
 
-state "cplda" as pstatename #lightgray {
+state "cplda" as pstatename #cccccc {
     state "Custom Function" as dafunction {
     }
 }
 
-        state "cpl" as cpl #lightgray {
-state "da" as cplda #lightgray {
-state "connect" as cpldaconnect #lightgray {
+        state "cpl" as cpl #cccccc {
+state "da" as cplda #cccccc {
+state "connect" as cpldaconnect #cccccc {
 }
 }
 }
 
 
-        state "cpl" as cpl #lightgray {
-state "da" as cplda #lightgray {
-state "register" as cpldaregister #lightgray {
+        state "cpl" as cpl #cccccc {
+state "da" as cplda #cccccc {
+state "register" as cpldaregister #cccccc {
 }
 }
 }
 
 
-        state "cpl" as cpl #lightgray {
-state "da" as cplda #lightgray {
-state "service" as cpldaservice #lightgray {
-state "register" as cpldaserviceregister #lightgray {
+        state "cpl" as cpl #cccccc {
+state "da" as cplda #cccccc {
+state "service" as cpldaservice #cccccc {
+state "register" as cpldaserviceregister #cccccc {
 }
 }
 }
@@ -41,9 +41,9 @@ state "register" as cpldaserviceregister #lightgray {
 
 
 
-        state "sml" as sml #lightgreen {
-state "Service" as smlservice #lightgreen {
-state "started" as smlservicestarted #lightgreen {
+        state "sml" as sml #88cc88 {
+state "Service" as smlservice #88cc88 {
+state "started" as smlservicestarted #88cc88 {
 }
 }
 }

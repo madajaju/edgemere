@@ -1,8 +1,7 @@
 ---
-layout: default
-title: Identity Aspect
+title: Package Identity Aspect
 permalink: package--edgemere-ia
-parent: edgemere
+parent: Package edgemere
 ---
 
 # Identity Aspect
@@ -121,8 +120,7 @@ can be found [here](environment--edgemere-ia-dev)
 
 Services in the dev environment
 
-* frontend : ia_web
-* gw : ia_gw
+* web : ia_web
 
 
 ### test
@@ -132,8 +130,7 @@ can be found [here](environment--edgemere-ia-test)
 
 Services in the test environment
 
-* frontend : ia_web
-* gw : ia_gw
+* web : ia_web
 
 
 ### prod
@@ -143,8 +140,7 @@ can be found [here](environment--edgemere-ia-prod)
 
 Services in the prod environment
 
-* frontend : ia_web
-* gw : ia_gw
+* web : ia_web
 
 
 ## Activities and Flows

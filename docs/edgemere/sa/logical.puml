@@ -1,7 +1,7 @@
 @startuml
 
 
-package "Security Aspect" #pink {
+package "Security Aspect" #cc8888 {
     
         class PolicyCollection {
         }
@@ -11,7 +11,7 @@ package "Security Aspect" #pink {
     }
 
 
-package "Security Aspect" #pink {
+package "Security Aspect" #cc8888 {
 
     interface "Security Aspect" as i {
     
@@ -22,7 +22,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Security Aspect" #pink {
+package "Security Aspect" #cc8888 {
         class "Policy" {
                  string name
                     }

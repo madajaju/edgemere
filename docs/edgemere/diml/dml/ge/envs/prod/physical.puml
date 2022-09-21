@@ -11,17 +11,13 @@ package "Governance Engine" #lightblue {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as diml_dml_ge_container
+      file "node server.js\n" as diml_dml_ge_container
       REST --> diml_dml_ge_container
 
   
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
   
   }
   folder images #ffffff {
@@ -33,9 +29,6 @@ package "Governance Engine" #lightblue {
   
       artifact "diml_dml_ge_web" as diml_dml_ge_web
       web_container --> diml_dml_ge_web
-    
-      artifact "diml_dml_ge_gw" as diml_dml_ge_gw
-      gateway_container --> diml_dml_ge_gw
     
   }
 }

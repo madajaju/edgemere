@@ -2,46 +2,40 @@
 
 
 
-state Resource #lightyellow {
+state Resource #cccc88 {
 
-    state Init #lightyellow {
+    state Init #cccc88 {
     }
 
-    state Provisioning #lightyellow {
+    state Provisioning #cccc88 {
     }
 
-    state Failed #lightyellow {
+    state Failed #cccc88 {
     }
 
-    state Ready #lightyellow {
+    state Ready #cccc88 {
     }
 
-    state Disabled #lightyellow {
+    state Disabled #cccc88 {
     }
+
+
+
+
+Init -[#black]--> Provisioning : provision
+
+Init -[#black]--> Disabled : disable
+
+Provisioning -[#black]--> Ready : finishedProvision
+
+Provisioning -[#black]--> Failed : failedProvision
+
+Ready -[#black]--> Disabled : disable
 
 }
 
-
-Init --> Provisioning : provision
-
-Init --> Disabled : disable
-
-Provisioning --> Ready : finishedProvision
-
-Provisioning --> Failed : failedProvision
-
-Ready --> Disabled : disable
-
-
-
- state "edgemere" as edgemere #lightgray {
-state "cpl" as edgemerecpl #lightgray {
-state "provision" as edgemerecplprovision #lightgray {
-}
-}
-}
-
- Provisioning -[#black]--> edgemerecplprovision
+ 
+ Provisioning -[#black]--> Null
  
  
  Ready -[#black]--> Null

@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Pipeline Manager
+title: Package Pipeline Manager
 permalink: package--edgemere-aml-ds-pm
-parent: Developer Services
-grand_parent: Application Management Layer
+parent: Package Developer Services
+grand_parent: Package Application Management Layer
 ---
 
 # Pipeline Manager

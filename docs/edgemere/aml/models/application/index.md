@@ -2,7 +2,7 @@
 layout: default
 title: Class Application
 permalink: class-Application
-parent: classes
+parent: Classes
 ---
 
 # Application

@@ -12,16 +12,6 @@ module.exports = {
             policies: { },
             environment: { },
         },
-        pubsub: {
-            image: "redis:latest",
-            interface: {
-                pubsub: {path:'/pubsub', port: 80 },
-            },
-            networks: {
-                children: {},
-                siblings: {},
-            }
-        },
         web: {
             image: "edgemere_web",
             interface: {

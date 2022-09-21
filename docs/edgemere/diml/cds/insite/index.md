@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Insite Services
+title: Package Insite Services
 permalink: package--edgemere-diml-cds-insite
-parent: Common Data Service
-grand_parent: Distributed Information Management Layer
+parent: Package Common Data Service
+grand_parent: Package Distributed Information Management Layer
 ---
 
 # Insite Services
@@ -103,7 +102,6 @@ can be found [here](environment--edgemere-diml-cds-insite-dev)
 Services in the dev environment
 
 * frontend : diml_cds_insite_web
-* gw : diml_cds_insite_gw
 
 
 ### test
@@ -114,7 +112,6 @@ can be found [here](environment--edgemere-diml-cds-insite-test)
 Services in the test environment
 
 * frontend : diml_cds_insite_web
-* gw : diml_cds_insite_gw
 
 
 ### prod
@@ -125,7 +122,6 @@ can be found [here](environment--edgemere-diml-cds-insite-prod)
 Services in the prod environment
 
 * frontend : diml_cds_insite_web
-* gw : diml_cds_insite_gw
 
 
 ## Activities and Flows

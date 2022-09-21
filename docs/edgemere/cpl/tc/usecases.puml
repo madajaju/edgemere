@@ -3,7 +3,7 @@
 left to right direction
 
 
-rectangle "Telemetry Consumer" #lightgray {
+rectangle "Telemetry Consumer" #cccccc {
 }
 
 

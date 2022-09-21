@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Workflow Services
+title: Package Workflow Services
 permalink: package--edgemere-aml-ws
-parent: Application Management Layer
-grand_parent: edgemere
+parent: Package Application Management Layer
+grand_parent: Package edgemere
 ---
 
 # Workflow Services
@@ -102,8 +101,7 @@ can be found [here](environment--edgemere-aml-ws-dev)
 
 Services in the dev environment
 
-* frontend : aml_ws_web
-* gw : aml_ws_gw
+* web : aml_ws_web
 
 
 ### test
@@ -113,8 +111,7 @@ can be found [here](environment--edgemere-aml-ws-test)
 
 Services in the test environment
 
-* frontend : aml_ws_web
-* gw : aml_ws_gw
+* web : aml_ws_web
 
 
 ### prod
@@ -124,8 +121,7 @@ can be found [here](environment--edgemere-aml-ws-prod)
 
 Services in the prod environment
 
-* frontend : aml_ws_web
-* gw : aml_ws_gw
+* web : aml_ws_web
 
 
 ## Activities and Flows

@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Analytics Services
+title: Package Analytics Services
 permalink: package--edgemere-aml-as
-parent: Application Management Layer
-grand_parent: edgemere
+parent: Package Application Management Layer
+grand_parent: Package edgemere
 ---
 
 # Analytics Services
@@ -102,8 +101,7 @@ can be found [here](environment--edgemere-aml-as-dev)
 
 Services in the dev environment
 
-* frontend : aml_as_web
-* gw : aml_as_gw
+* web : aml_as_web
 
 
 ### test
@@ -113,8 +111,7 @@ can be found [here](environment--edgemere-aml-as-test)
 
 Services in the test environment
 
-* frontend : aml_as_web
-* gw : aml_as_gw
+* web : aml_as_web
 
 
 ### prod
@@ -124,8 +121,7 @@ can be found [here](environment--edgemere-aml-as-prod)
 
 Services in the prod environment
 
-* frontend : aml_as_web
-* gw : aml_as_gw
+* web : aml_as_web
 
 
 ## Activities and Flows

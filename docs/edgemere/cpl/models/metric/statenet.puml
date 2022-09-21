@@ -2,12 +2,12 @@
 
 
 
-state Metric #lightgray {
+state Metric #cccccc {
+
+
+
 
 }
-
-
-
 
 
 @enduml

@@ -2,7 +2,7 @@
 layout: default
 title: Class Pipeline
 permalink: class-Pipeline
-parent: classes
+parent: Classes
 ---
 
 # Pipeline

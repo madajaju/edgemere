@@ -2,7 +2,7 @@
 left to right direction
 
 
-state "aml" as aml #lightblue {
+state "aml" as aml #88cccc {
 state "ds" as amlds #lightblue {
 state "pm" as amldspm #lightblue {
 }

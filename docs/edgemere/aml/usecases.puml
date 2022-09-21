@@ -11,7 +11,7 @@ Actor "Application Developer" as ApplicationDeveloper
 Actor "DevOps Engineer" as DevOpsEngineer
 
 
-rectangle "Application Management Layer" #lightblue {
+rectangle "Application Management Layer" #88cccc {
 usecase "ManageAIModels" as ManageAIModels
     DataScientist --> ManageAIModels
     DevOpsEngineer --> ManageAIModels

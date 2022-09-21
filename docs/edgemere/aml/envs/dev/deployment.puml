@@ -3,49 +3,91 @@
 left to right direction
 
 
-boundary ailtire_appname_family #red
+boundary parent #black
 
 
-entity ailtire_appname_aml_family #black
+entity children #blue
 
-
-
-
-package "aml" #lightblue {
-    queue childrennet #black [
-            <b><color:white>children</color></b>
+rectangle "aml_as" as aml_asStack #88cccc {
+    queue aml_asStacksnet #blue [
+        <b><color:white>parent</color></b>
     ]
-    
-    childrennet -[#black]- ailtire_appname_aml_family
-    
-    queue siblingnet #blue [
-            <b><color:white>sibling</color></b>
+}
+rectangle "aml_ds" as aml_dsStack #lightblue {
+    queue aml_dsStacksnet #blue [
+        <b><color:white>parent</color></b>
     ]
-    
-    queue parentnet #red [
+}
+rectangle "aml_ws" as aml_wsStack #88cccc {
+    queue aml_wsStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+rectangle "aml_ams" as aml_amsStack #88cccc {
+    queue aml_amsStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+
+
+
+package "aml" #88cccc {
+    queue parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#red]- ailtire_appname_family
+    parentnet -[#black]- parent
+    
+    queue childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#blue]- children
+    
+    queue siblingsnet #red [
+            <b><color:white>siblings</color></b>
+    ]
     
 
-node "frontend" as frontendService
-node "gw" as gwService
+node "aml_web" as aml_webService
+node "aml_as" as aml_asService
+node "aml_ds" as aml_dsService
+node "aml_ws" as aml_wsService
+node "aml_ams" as aml_amsService
 
 
         artifact "aml_web" as aml_webimage
-    
-        artifact "aml_gw" as aml_gwimage
+            collections "aml_as" as aml_asimage
+            collections "aml_ds" as aml_dsimage
+            collections "aml_ws" as aml_wsimage
+            collections "aml_ams" as aml_amsimage
     
 }
 
-frontendService -[#blue]- siblingnet
+aml_webService -[#blue]- childrennet
 
-gwService -[#black]- childrennet
+aml_webService -[#red]- siblingsnet
 
-gwService -[#blue]- siblingnet
-frontendService .... aml_webimage
-gwService .... aml_gwimage
+aml_asService -[#blue]- childrennet
 
+aml_dsService -[#blue]- childrennet
+
+aml_wsService -[#blue]- childrennet
+
+aml_amsService -[#blue]- childrennet
+aml_webService .... aml_webimage
+aml_asService .... aml_asimage
+aml_dsService .... aml_dsimage
+aml_wsService .... aml_wsimage
+aml_amsService .... aml_amsimage
+
+aml_asimage --> aml_asStack
+    
+aml_dsimage --> aml_dsStack
+    
+aml_wsimage --> aml_wsStack
+    
+aml_amsimage --> aml_amsStack
+    
 
 @enduml

@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--edgemere-cpl-dm-test
-nav_exclude: true
+parent: environment-test
+grand_parent: Environments
 ---
 
-### test
+### Device Manager test
 
 
 #### Deployment
@@ -30,11 +31,11 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| data_orchestrator | diml_dml_do:latest |  |  | children,parent |
-| policy_engine | sa_pe:latest |  |  | children,parent |
-| service_orchestrator | sml_so:latest |  |  | children,parent |
-| telemetry_aggregator | cpl_ta:latest |  |  | children,parent |
-| portal | cpl_dm_web | /admin | 3000 | sibling |
+| data_orchestrator | diml_dml_do |  |  | siblings |
+| policy_engine | sa_pe |  |  | siblings |
+| service_orchestrator | sml_so |  |  | siblings |
+| telemetry_aggregator | cpl_ta |  |  | siblings |
+| portal | cpl_dm_web |  |  | siblings |
 
 
 #### Networks
@@ -47,9 +48,9 @@ stack in a layer of networks.
 
 | Name | Type | External Name | Ports |
 | --- | --- | --- | --- |
-| children | egress | ailtire_appname_cpl_dm_family |
-| sibling | internal |  |
-| parent | ingress | ailtire_appname_cpl_family |
+| parent | ingress | parent |
+| children | egress | children |
+| siblings | internal |  |
 
 
 The Stack is micro-segmented off and there are a set of ports that are open for the ingress networks. The following

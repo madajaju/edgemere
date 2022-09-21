@@ -2,12 +2,12 @@
 
 
 
-state MetricConsumeable #lightgray {
+state MetricConsumeable #cccccc {
+
+
+
 
 }
-
-
-
 
 
 @enduml

@@ -2,10 +2,11 @@
 layout: default
 title: Environment dev
 permalink: environment--edgemere-cpl-dev
-nav_exclude: true
+parent: environment-dev
+grand_parent: Environments
 ---
 
-### dev
+### Common Physical Layer dev
 
 
 #### Deployment
@@ -30,10 +31,10 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| web | cpl_web:latest | /web | 3000 | children,parent |
-| deviceagent | cpl_da:latest | /da | 3000 | children,parent |
-| devicemanager | cpl_dm:latest | /dm | 3000 | children,parent |
-| telemetry | cpl_tc:latest | /telemetry | 3000 | children,parent,telemetry |
+| web | aml_web |  |  | children,siblings |
+| deviceagent | cpl_da |  |  | children,parent |
+| devicemanager | cpl_dm |  |  | children,parent |
+| telemetry | cpl_tc |  |  | children,parent,telemetry |
 
 
 #### Networks
@@ -46,10 +47,10 @@ stack in a layer of networks.
 
 | Name | Type | External Name | Ports |
 | --- | --- | --- | --- |
-| telemetry | egress | ailtire_appname_telemetry_family |
-| children | egress | ailtire_appname_cpl_family |
-| sibling | internal |  |
-| parent | ingress | ailtire_appname_family |
+| telemetry | egress | _telemetry_family |
+| parent | ingress | parent |
+| children | egress | children |
+| siblings | internal |  |
 
 
 The Stack is micro-segmented off and there are a set of ports that are open for the ingress networks. The following

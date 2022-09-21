@@ -1,20 +1,20 @@
 @startuml
 
 
-package "Security Aspect" #pink {
+package "Security Aspect" #cc8888 {
     
         class PolicyCollection {
         }
     }
 
-package "Identity Aspect" #pink {
+package "Identity Aspect" #cc8888 {
     
         class Identity {
         }
     }
 
 
-package "Security Profile Manager" #pink {
+package "Security Profile Manager" #cc8888 {
 
     interface "Security Profile Manager" as i {
             /edgemere/sa/spm/data/create()
@@ -36,7 +36,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Security Profile Manager" #pink {
+package "Security Profile Manager" #cc8888 {
         class "SecurityProfile" {
                  string name
                              attach()

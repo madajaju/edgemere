@@ -2,7 +2,7 @@
 layout: default
 title: Class StorageResource
 permalink: class-StorageResource
-parent: classes
+parent: Classes
 ---
 
 # StorageResource

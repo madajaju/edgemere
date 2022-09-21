@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Storage Services
+title: Package Storage Services
 permalink: package--edgemere-diml-cds-storage
-parent: Common Data Service
-grand_parent: Distributed Information Management Layer
+parent: Package Common Data Service
+grand_parent: Package Distributed Information Management Layer
 ---
 
 # Storage Services
@@ -103,7 +102,6 @@ can be found [here](environment--edgemere-diml-cds-storage-dev)
 Services in the dev environment
 
 * frontend : diml_cds_storage_web
-* gw : diml_cds_storage_gw
 
 
 ### test
@@ -114,7 +112,6 @@ can be found [here](environment--edgemere-diml-cds-storage-test)
 Services in the test environment
 
 * frontend : diml_cds_storage_web
-* gw : diml_cds_storage_gw
 
 
 ### prod
@@ -125,7 +122,6 @@ can be found [here](environment--edgemere-diml-cds-storage-prod)
 Services in the prod environment
 
 * frontend : diml_cds_storage_web
-* gw : diml_cds_storage_gw
 
 
 ## Activities and Flows

@@ -2,7 +2,7 @@
 layout: default
 title: Class SecurityProfile
 permalink: class-SecurityProfile
-parent: classes
+parent: Classes
 ---
 
 # SecurityProfile

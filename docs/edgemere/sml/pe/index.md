@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Provision Engine
+title: Package Provision Engine
 permalink: package--edgemere-sml-pe
-parent: Service Management Layer
-grand_parent: edgemere
+parent: Package Service Management Layer
+grand_parent: Package edgemere
 ---
 
 # Provision Engine
@@ -102,8 +101,7 @@ can be found [here](environment--edgemere-sml-pe-dev)
 
 Services in the dev environment
 
-* frontend : sml_pe_web
-* gw : sml_pe_gw
+* web : sml_pe_web
 
 
 ### test
@@ -113,8 +111,7 @@ can be found [here](environment--edgemere-sml-pe-test)
 
 Services in the test environment
 
-* frontend : sml_pe_web
-* gw : sml_pe_gw
+* web : sml_pe_web
 
 
 ### prod
@@ -124,8 +121,7 @@ can be found [here](environment--edgemere-sml-pe-prod)
 
 Services in the prod environment
 
-* frontend : sml_pe_web
-* gw : sml_pe_gw
+* web : sml_pe_web
 
 
 ## Activities and Flows

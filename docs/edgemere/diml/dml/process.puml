@@ -99,10 +99,10 @@ state "provisioned" as dimldmldatareferenceprovisioned #ffcc88 {
 }
 }
 
-    state "sml" as sml #lightgreen {
-state "so" as smlso #lightgreen {
-state "servicelet" as smlsoservicelet #lightgreen {
-state "assignData" as smlsoserviceletassigndata #lightgreen {
+    state "sml" as sml #88cc88 {
+state "so" as smlso #88cc88 {
+state "servicelet" as smlsoservicelet #88cc88 {
+state "assignData" as smlsoserviceletassigndata #88cc88 {
 }
 }
 }

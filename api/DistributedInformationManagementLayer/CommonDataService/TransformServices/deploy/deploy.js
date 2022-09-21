@@ -3,19 +3,19 @@ module.exports = {
     contexts: {
         dev: {
             type: 'swarm',
-            tag: 'diml_cds_transform_dev',
+            tag: 'diml_cds_transform:dev',
             file: 'docker-compose.yml',
             env: {}
         },
         test: {
             type: 'swarm',
-            tag: 'diml_cds_transform_test',
+            tag: 'diml_cds_transform:test',
             file: 'docker-compose.yml',
             env: {}
         },
         prod: {
             type: 'swarm',
-            tag: 'diml_cds_transform_prod',
+            tag: 'diml_cds_transform:prod',
             file: 'docker-compose.yml',
             env: {}
         }

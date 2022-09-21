@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Map Services to Resources
 permalink: usecase-MapServicestoResources
-parent: usecases
+parent: UseCases
 ---
 # Map Services to Resources
 

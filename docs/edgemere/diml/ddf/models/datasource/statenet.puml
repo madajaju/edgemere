@@ -16,16 +16,16 @@ state DataSource #ffcc88 {
     state Shutdown #ffcc88 {
     }
 
+
+
+
+Init -[#black]--> Ready : create
+
+Ready -[#black]--> Suspended : suspend
+
+Ready -[#black]--> Shutdown : shutdown
+
 }
-
-
-Init --> Ready : create
-
-Ready --> Suspended : suspend
-
-Ready --> Shutdown : shutdown
-
-
 
 
 @enduml

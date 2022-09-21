@@ -2,7 +2,7 @@
 layout: default
 title: Class Metric
 permalink: class-Metric
-parent: classes
+parent: Classes
 ---
 
 # Metric

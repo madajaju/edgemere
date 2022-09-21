@@ -2,7 +2,7 @@
 layout: default
 title: Class MultiCloud
 permalink: class-MultiCloud
-parent: classes
+parent: Classes
 ---
 
 # MultiCloud

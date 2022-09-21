@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Data Repository
+title: Package Data Repository
 permalink: package--edgemere-diml-ddf-dr
-parent: Data Definition Framework
-grand_parent: Distributed Information Management Layer
+parent: Package Data Definition Framework
+grand_parent: Package Distributed Information Management Layer
 ---
 
 # Data Repository
@@ -102,8 +101,7 @@ can be found [here](environment--edgemere-diml-ddf-dr-dev)
 
 Services in the dev environment
 
-* frontend : diml_ddf_dr_web
-* gw : diml_ddf_dr_gw
+* web : diml_ddf_dr_web
 
 
 ### test
@@ -113,8 +111,7 @@ can be found [here](environment--edgemere-diml-ddf-dr-test)
 
 Services in the test environment
 
-* frontend : diml_ddf_dr_web
-* gw : diml_ddf_dr_gw
+* web : diml_ddf_dr_web
 
 
 ### prod
@@ -124,8 +121,7 @@ can be found [here](environment--edgemere-diml-ddf-dr-prod)
 
 Services in the prod environment
 
-* frontend : diml_ddf_dr_web
-* gw : diml_ddf_dr_gw
+* web : diml_ddf_dr_web
 
 
 ## Activities and Flows

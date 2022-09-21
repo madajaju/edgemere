@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Developer Services
+title: Package Developer Services
 permalink: package--edgemere-aml-ds
-parent: Application Management Layer
-grand_parent: edgemere
+parent: Package Application Management Layer
+grand_parent: Package edgemere
 has_children: true
 ---
 
@@ -136,8 +135,7 @@ can be found [here](environment--edgemere-aml-ds-dev)
 
 Services in the dev environment
 
-* frontend : aml_ds_web
-* gw : aml_ds_gw
+* web : aml_ds_web
 
 
 ### test
@@ -147,8 +145,7 @@ can be found [here](environment--edgemere-aml-ds-test)
 
 Services in the test environment
 
-* frontend : aml_ds_web
-* gw : aml_ds_gw
+* web : aml_ds_web
 
 
 ### prod
@@ -158,8 +155,7 @@ can be found [here](environment--edgemere-aml-ds-prod)
 
 Services in the prod environment
 
-* frontend : aml_ds_web
-* gw : aml_ds_gw
+* web : aml_ds_web
 
 
 ## Activities and Flows

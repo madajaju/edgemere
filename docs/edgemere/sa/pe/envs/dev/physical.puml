@@ -2,7 +2,7 @@
   interface CLI
   interface Web
   interface WebSocket
-package "Policy Engine" #pink {
+package "Policy Engine" #cc8888 {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {
@@ -11,7 +11,7 @@ package "Policy Engine" #pink {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as sa_pe_container
+      file "node server.js\n" as sa_pe_container
       REST --> sa_pe_container
 
   

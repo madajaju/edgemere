@@ -36,16 +36,6 @@ module.exports = {
             volumes: { docker: { source: "/var/run/docker.sock", target: "/var/run/docker.sock" }},
             interface: { aml_as: {path:'/repo', port: 3000}},
         },
-        gw: {
-            image: "sml_gw",
-            interface: {
-                admin: { path: '/gw', port: 3000, protocol:"http"},
-            },
-            networks: {
-                children: {},
-                siblings: {}
-            }
-        },
         web: {
             image: "sml_web",
             interface: {

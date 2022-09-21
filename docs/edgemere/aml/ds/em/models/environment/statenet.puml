@@ -2,27 +2,27 @@
 
 
 
-state Environment #lightgreen {
+state Environment #88cc88 {
 
-    state Init #lightgreen {
+    state Init #88cc88 {
     }
 
-    state Enabled #lightgreen {
+    state Enabled #88cc88 {
     }
 
-    state Disabled #lightgreen {
+    state Disabled #88cc88 {
     }
+
+
+
+
+Init -[#black]--> Enabled : create
+
+Enabled -[#black]--> Disabled : disable
+
+Disabled -[#black]--> Enabled : enable
 
 }
-
-
-Init --> Enabled : create
-
-Enabled --> Disabled : disable
-
-Disabled --> Enabled : enable
-
-
 
 
 @enduml

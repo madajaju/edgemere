@@ -2,7 +2,7 @@
 
 
 
-package "Device Manager" #lightgray {
+package "Device Manager" #cccccc {
 
     interface "Device Manager" as i {
             /edgemere/cpl/dm/agent/register()
@@ -15,7 +15,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Device Manager" #lightgray {
+package "Device Manager" #cccccc {
         class "Agent" {
                  string name
                  string url

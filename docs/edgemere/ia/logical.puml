@@ -1,7 +1,7 @@
 @startuml
 
 
-package "Identity Aspect" #pink {
+package "Identity Aspect" #cc8888 {
     
         class User {
         }
@@ -13,14 +13,14 @@ package "Identity Aspect" #pink {
         }
     }
 
-package "Security Profile Manager" #pink {
+package "Security Profile Manager" #cc8888 {
     
         class SecurityProfile {
         }
     }
 
 
-package "Identity Aspect" #pink {
+package "Identity Aspect" #cc8888 {
 
     interface "Identity Aspect" as i {
     
@@ -31,7 +31,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Identity Aspect" #pink {
+package "Identity Aspect" #cc8888 {
         class "Group" {
                  string name
                     }

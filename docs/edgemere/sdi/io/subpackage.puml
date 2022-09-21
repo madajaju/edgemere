@@ -2,7 +2,7 @@
 
 
 
-package "Infrastructure Orchestrator" #lightyellow {
+package "Infrastructure Orchestrator" #cccc88 {
 
     interface "Infrastructure Orchestrator" as i {
             ^request.selected
@@ -24,7 +24,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Infrastructure Orchestrator" #lightyellow {
+package "Infrastructure Orchestrator" #cccc88 {
 
 
 }

@@ -2,6 +2,65 @@
 left to right direction
 
 
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+ component "tp" as edgemerecpltp
+ interface "setparent" as edgemerecpltpsetparent
+edgemerecpltp -- edgemerecpltpsetparent
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+package "tp" as edgemerecpltp #cccccc {
+ component "stats" as edgemerecpltpstats
+ interface "get" as edgemerecpltpstatsget
+edgemerecpltpstats -- edgemerecpltpstatsget
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+package "tp" as edgemerecpltp #cccccc {
+ component "stats" as edgemerecpltpstats
+ interface "send" as edgemerecpltpstatssend
+edgemerecpltpstats -- edgemerecpltpstatssend
+}
+}
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @enduml

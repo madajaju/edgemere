@@ -2,7 +2,7 @@
 layout: default
 title: Class SourceMetaData
 permalink: class-SourceMetaData
-parent: classes
+parent: Classes
 ---
 
 # SourceMetaData

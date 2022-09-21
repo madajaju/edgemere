@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--edgemere-diml-cds-transform-test
-nav_exclude: true
+parent: environment-test
+grand_parent: Environments
 ---
 
-### test
+### Transform Services test
 
 
 #### Deployment

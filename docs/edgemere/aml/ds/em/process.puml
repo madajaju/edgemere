@@ -2,24 +2,24 @@
 left to right direction
 
 
-state "aml" as aml #lightblue {
+state "aml" as aml #88cccc {
 state "ds" as amlds #lightblue {
-state "em" as amldsem #lightgreen {
+state "em" as amldsem #88cc88 {
 }
 }
 }
 
 
-state "amldsem" as pstatename #lightgreen {
+state "amldsem" as pstatename #88cc88 {
     state "Custom Function" as emfunction {
     }
 }
 
-        state "aml" as aml #lightblue {
+        state "aml" as aml #88cccc {
 state "ds" as amlds #lightblue {
-state "em" as amldsem #lightgreen {
-state "environment" as amldsemenvironment #lightgreen {
-state "addpolicies" as amldsemenvironmentaddpolicies #lightgreen {
+state "em" as amldsem #88cc88 {
+state "environment" as amldsemenvironment #88cc88 {
+state "addpolicies" as amldsemenvironmentaddpolicies #88cc88 {
 }
 }
 }
@@ -27,11 +27,11 @@ state "addpolicies" as amldsemenvironmentaddpolicies #lightgreen {
 }
 
 
-        state "aml" as aml #lightblue {
+        state "aml" as aml #88cccc {
 state "ds" as amlds #lightblue {
-state "em" as amldsem #lightgreen {
-state "environment" as amldsemenvironment #lightgreen {
-state "create" as amldsemenvironmentcreate #lightgreen {
+state "em" as amldsem #88cc88 {
+state "environment" as amldsemenvironment #88cc88 {
+state "create" as amldsemenvironmentcreate #88cc88 {
 }
 }
 }
@@ -39,11 +39,11 @@ state "create" as amldsemenvironmentcreate #lightgreen {
 }
 
 
-        state "aml" as aml #lightblue {
+        state "aml" as aml #88cccc {
 state "ds" as amlds #lightblue {
-state "em" as amldsem #lightgreen {
-state "environment" as amldsemenvironment #lightgreen {
-state "destroy" as amldsemenvironmentdestroy #lightgreen {
+state "em" as amldsem #88cc88 {
+state "environment" as amldsemenvironment #88cc88 {
+state "destroy" as amldsemenvironmentdestroy #88cc88 {
 }
 }
 }
@@ -51,11 +51,11 @@ state "destroy" as amldsemenvironmentdestroy #lightgreen {
 }
 
 
-        state "aml" as aml #lightblue {
+        state "aml" as aml #88cccc {
 state "ds" as amlds #lightblue {
-state "em" as amldsem #lightgreen {
-state "environment" as amldsemenvironment #lightgreen {
-state "disable" as amldsemenvironmentdisable #lightgreen {
+state "em" as amldsem #88cc88 {
+state "environment" as amldsemenvironment #88cc88 {
+state "disable" as amldsemenvironmentdisable #88cc88 {
 }
 }
 }
@@ -63,11 +63,11 @@ state "disable" as amldsemenvironmentdisable #lightgreen {
 }
 
 
-        state "aml" as aml #lightblue {
+        state "aml" as aml #88cccc {
 state "ds" as amlds #lightblue {
-state "em" as amldsem #lightgreen {
-state "environment" as amldsemenvironment #lightgreen {
-state "enable" as amldsemenvironmentenable #lightgreen {
+state "em" as amldsem #88cc88 {
+state "environment" as amldsemenvironment #88cc88 {
+state "enable" as amldsemenvironmentenable #88cc88 {
 }
 }
 }
@@ -75,11 +75,11 @@ state "enable" as amldsemenvironmentenable #lightgreen {
 }
 
 
-        state "aml" as aml #lightblue {
+        state "aml" as aml #88cccc {
 state "ds" as amlds #lightblue {
-state "em" as amldsem #lightgreen {
-state "environment" as amldsemenvironment #lightgreen {
-state "list" as amldsemenvironmentlist #lightgreen {
+state "em" as amldsem #88cc88 {
+state "environment" as amldsemenvironment #88cc88 {
+state "list" as amldsemenvironmentlist #88cc88 {
 }
 }
 }
@@ -87,11 +87,11 @@ state "list" as amldsemenvironmentlist #lightgreen {
 }
 
 
-        state "aml" as aml #lightblue {
+        state "aml" as aml #88cccc {
 state "ds" as amlds #lightblue {
-state "em" as amldsem #lightgreen {
-state "environment" as amldsemenvironment #lightgreen {
-state "update" as amldsemenvironmentupdate #lightgreen {
+state "em" as amldsem #88cc88 {
+state "environment" as amldsemenvironment #88cc88 {
+state "update" as amldsemenvironmentupdate #88cc88 {
 }
 }
 }

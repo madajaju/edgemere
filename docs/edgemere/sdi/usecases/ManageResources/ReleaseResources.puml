@@ -5,7 +5,7 @@ actor "IT Operations"
 
 entity EventBus
 
-box Software Defined Infrastructure #lightyellow
+box Software Defined Infrastructure #cccc88
     boundary sdi #white
 end box
 

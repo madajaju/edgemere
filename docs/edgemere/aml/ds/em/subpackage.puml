@@ -1,24 +1,24 @@
 @startuml
 
 
-package "Service Orchestrator" #lightgreen {
+package "Service Orchestrator" #88cc88 {
 
 }
 
-package "Service Management Layer" #lightgreen {
+package "Service Management Layer" #88cc88 {
 
 }
 
-package "Security Aspect" #pink {
+package "Security Aspect" #cc8888 {
 
 }
 
-package "Security Profile Manager" #pink {
+package "Security Profile Manager" #cc8888 {
 
 }
 
 
-package "Environment Management" #lightgreen {
+package "Environment Management" #88cc88 {
 
     interface "Environment Management" as i {
     
@@ -43,7 +43,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Environment Management" #lightgreen {
+package "Environment Management" #88cc88 {
 
 
 }

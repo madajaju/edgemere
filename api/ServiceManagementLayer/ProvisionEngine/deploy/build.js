@@ -1,7 +1,7 @@
 
 module.exports = {
     web: {
-        dir: '..',
+        dir: '.',
         cmd: 'node web/server.js',
         file: 'web/Dockerfile',
         tag: 'sml_pe_web',
@@ -9,13 +9,4 @@ module.exports = {
 
         }
     },
-    gateway: {
-        dir: '..',
-        cmd: 'node gateway/server.js',
-        file: 'gateway/Dockerfile',
-        tag: 'sml_pe_gw',
-        env: {
-
-        }
-    }
 }

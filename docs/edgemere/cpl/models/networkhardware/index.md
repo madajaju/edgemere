@@ -2,7 +2,7 @@
 layout: default
 title: Class NetworkHardware
 permalink: class-NetworkHardware
-parent: classes
+parent: Classes
 ---
 
 # NetworkHardware

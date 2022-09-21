@@ -1,14 +1,14 @@
 @startuml
 
-node "Edge Device (Machine)" #lightgray {
-    component "Salt Minon" as sminon #lightyellow
-    component "Docker Swarm" as dockersed #lightgreen
+node "Edge Device (Machine)" #cccccc {
+    component "Salt Minon" as sminon #cc8888
+    component "Docker Swarm" as dockersed #88cc88
     collections "Device Agent" as dagent #white
-    component "Docker Node" as dockernodeed #lightgreen
+    component "Docker Node" as dockernodeed #88cc88
     agent "Data Controller" as datac #ffcc88
-    agent "Service Controller" as servicec #lightgreen
-    agent "Policy Engine" as pe #lightpink
-    agent "Telemetry Producer" as tp #lightgray
+    agent "Service Controller" as servicec #88cc88
+    agent "Policy Engine" as pe #light#cc8888
+    agent "Telemetry Producer" as tp #cccccc
 }
 dockernodeed --> datac
 dockernodeed --> servicec
@@ -23,25 +23,25 @@ servicec <-- dagent
 pe <-- dagent
 tp <-- dagent
 
-node "Aggregated Edge Device" #lightgray {
+node "Aggregated Edge Device" #cccccc {
     node "Machine0" #white {
-        component "Salt Master" as smaster2 #lightyellow
-        component "Salt Minon" as sminon2 #lightyellow
-        component "Docker Swarm" as dockersaed #lightgreen
-        agent "Service Orchestrator" as soad #lightgreen
+        component "Salt Master" as smaster2 #cc8888
+        component "Salt Minon" as sminon2 #cc8888
+        component "Docker Swarm" as dockersaed #88cc88
+        agent "Service Orchestrator" as soad #88cc88
     }
     node "Machine1" #white {
-        component "Salt Minon" as sminon21 #lightyellow
-        component "Docker Node" as dockernode21 #lightgreen
-        agent "Policy Engine" as pead #lightpink
+        component "Salt Minon" as sminon21 #cc8888
+        component "Docker Node" as dockernode21 #88cc88
+        agent "Policy Engine" as pead #light#cc8888
         agent "Data Orchestrator" as doad #ffcc88
     }
     dockernode21 ..> pead
     dockernode21 ..> doad
     node "Machinen" #white {
-        component "Salt Minon" as sminon22 #lightyellow
-        component "Docker Node" as dockernode22 #lightgreen
-        agent "Telemetry Aggregator" as tpad #lightgray
+        component "Salt Minon" as sminon22 #cc8888
+        component "Docker Node" as dockernode22 #88cc88
+        agent "Telemetry Aggregator" as tpad #cccccc
     }
     dockernode22 ..> tpad
     collections "Device Manager" as dm #white
@@ -61,8 +61,8 @@ node "Aggregated Edge Device" #lightgray {
 
 node "Data Center" {
     component "Salt Master" as smaster
-    component "Docker Swarm" as dockersdc #lightgreen
-    agent "Telemetry Consumer" as tc #lightgray
+    component "Docker Swarm" as dockersdc #88cc88
+    agent "Telemetry Consumer" as tc #cccccc
 }
 dockersdc .> tc
 smaster ..> sminon2

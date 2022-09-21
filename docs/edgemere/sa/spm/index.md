@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Security Profile Manager
+title: Package Security Profile Manager
 permalink: package--edgemere-sa-spm
-parent: Security Aspect
-grand_parent: edgemere
+parent: Package Security Aspect
+grand_parent: Package edgemere
 ---
 
 # Security Profile Manager

@@ -2,12 +2,12 @@
 
 
 
-state ServiceInstance #lightgreen {
+state ServiceInstance #88cc88 {
+
+
+
 
 }
-
-
-
 
 
 @enduml

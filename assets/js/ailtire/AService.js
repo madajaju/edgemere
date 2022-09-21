@@ -1,9 +1,10 @@
-import {AAction, AScenario, AText, AUsecase} from './index.js';
+import {AAction, AScenario, AText, AUsecase,A3DGraph, ASelectedHUD} from './index.js';
 
 export default class AService {
     constructor(config) {
         this.config = config;
     }
+
     static default = {
         fontSize: 20,
         height: 30,
@@ -15,8 +16,8 @@ export default class AService {
         let height = AService.default.height;
         let depth = AService.default.depth;
         let width = AService.default.width;
-        let radius = Math.max(Math.sqrt(width*width + height*height), Math.sqrt(height*height + depth*depth), Math.sqrt(width*width + depth*depth));
-        return {w: width, h: height, d: depth,r: radius};
+        let radius = Math.max(Math.sqrt(width * width + height * height), Math.sqrt(height * height + depth * depth), Math.sqrt(width * width + depth * depth)) / 2;
+        return {w: width, h: height, d: depth, r: radius};
     }
 
     static view3D(node, type) {
@@ -44,12 +45,17 @@ export default class AService {
             side: THREE.DoubleSide
         });
 
-        const stack = new THREE.CylinderGeometry(size.w/2, size.d, size.h,AService.default.fontSize);
+        const stack = new THREE.CylinderGeometry(size.w / 2, size.d, size.h, AService.default.fontSize);
         let obj = new THREE.Mesh(stack, material);
         obj.position.set(0, 0, 0);
 
-        let label = AText.view3D({text: node.name, color: "#ffffff", width: 80, size: 20});
+        // only show the name of the service not the complete prefix.
+        let [ename, stname, sname] = node.name.split(/\./);
+        let label = AText.view3D({text: sname, color: "#ffffff", width: 80, size: 20});
         label.position.set(0, 0, size.d);
+        obj.add(label);
+        label = AText.view3D({text: `${ename}.${stname}`, color: "#ffffff", width: 80, size: 10});
+        label.position.set(0, 15, size.d);
         obj.add(label);
 
         obj.position.set(node.x, node.y, node.z);
@@ -66,12 +72,13 @@ export default class AService {
         }
         obj.aid = node.id;
         node.box = size.r;
-        node.expandLink = `service/get?id=${node.id}`;
-        node.expandView = AService.viewDeep3D;
+        node.expandLink = node.expandLink || `deployment/get?id=${node.id}`;
+        node.expandView = AService.handle;
         node.getDetail = AService.getDetail;
 
         return obj;
     }
+
     static getDetail(node) {
         $.ajax({
             url: node.expandLink,
@@ -80,12 +87,97 @@ export default class AService {
             }
         });
     }
-    static showDetail(result) {
 
+    static showDetail(result) {
+        let records = [];
+        if (!w2ui['objlist']) {
+            $('#objlist').w2grid({name: 'objlist'});
+        }
+        w2ui['objlist'].result = result;
+        if (!w2ui['objdetail']) {
+            $('#objdetail').w2grid({
+                name: 'objdetail',
+                header: 'Details',
+                show: {header: true, columnHeaders: false},
+                columns: [
+                    {
+                        field: 'name',
+                        label: 'Name',
+                        size: '100px',
+                        style: 'background-color: #efefef; border-bottom: 1px solid white; padding-right: 5px;',
+                        attr: "align=right"
+                    },
+                    {
+                        field: 'value', label: 'Value', size: '100%', render: function (record) {
+                            return '<div>' + record.value + '</div>';
+                        }
+                    }
+                ]
+            });
+        }
+        w2ui['objlist'].onClick = function (event) {
+            let record = this.get(event.recid);
+            w2ui['objdetail'].header = `${record.name} Details`;
+            w2ui['objdetail'].show.columnHeaders = true;
+            w2ui['objdetail'].clear();
+            let drecords = [];
+            let k = 0;
+            let values = record.detail.split('|');
+            for (let i in values) {
+                let [name, value] = values[i].split('^');
+                if (!value) {
+                    value = name;
+                    name = record.name;
+                }
+                k++;
+                drecords.push({recid: k, name: name, value: value});
+            }
+            w2ui['objdetail'].add(drecords);
+            window.graph.selectNodeByID(event.recid);
+        }
+        let cols = [
+            {field: 'name', size: "20%", resizeable: true, label: "Name", sortable: true},
+            {field: 'value', size: "80%", resizeable: true, label: "Value", sortable: true},
+        ];
+        w2ui['objlist'].columns = cols;
+        let i = 0;
+        records.push({recid: i++, name: 'Name', value: result.name, detail: result.name});
+        records.push({recid: i++, name: 'Image', value: result.image, detail: result.image});
+        let idetails = getDetails(result.interface);
+        if (result.interface) {
+            records.push({
+                recid: i++,
+                name: 'Interface',
+                value: Object.keys(result.interface).length,
+                detail: idetails.join('|')
+            });
+        }
+        if (result.networks) {
+            records.push({
+                recid: i++,
+                name: 'Networks',
+                value: Object.keys(result.networks).length,
+                detail: `Network^${Object.keys(result.networks).join('|Network,')}`
+            });
+        }
+        w2ui['objlist'].records = records;
+        w2ui['objlist'].refresh();
+        ASelectedHUD.update('Service', records);
     }
 
     static viewDeep3D(obj) {
 
     }
+
+    static handle(results) {
+
+    }
 }
 
+function getDetails(objs) {
+    let items = [];
+    for (let name in objs) {
+        items.push(`${name}^${objs[name].path}:${objs[name].port}`);
+    }
+    return items;
+}

@@ -2,7 +2,7 @@
 layout: default
 title: Class Artifact
 permalink: class-Artifact
-parent: classes
+parent: Classes
 ---
 
 # Artifact

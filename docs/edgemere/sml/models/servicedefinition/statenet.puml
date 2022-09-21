@@ -2,12 +2,12 @@
 
 
 
-state ServiceDefinition #lightgreen {
+state ServiceDefinition #88cc88 {
+
+
+
 
 }
-
-
-
 
 
 @enduml

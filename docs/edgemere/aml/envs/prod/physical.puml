@@ -2,7 +2,7 @@
   interface CLI
   interface Web
   interface WebSocket
-package "Application Management Layer" #lightblue {
+package "Application Management Layer" #88cccc {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {
@@ -11,17 +11,13 @@ package "Application Management Layer" #lightblue {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as aml_container
+      file "node server.js\n" as aml_container
       REST --> aml_container
 
   
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
   
   }
   folder images #ffffff {
@@ -33,9 +29,6 @@ package "Application Management Layer" #lightblue {
   
       artifact "aml_web" as aml_web
       web_container --> aml_web
-    
-      artifact "aml_gw" as aml_gw
-      gateway_container --> aml_gw
     
   }
 }

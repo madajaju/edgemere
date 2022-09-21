@@ -1,12 +1,12 @@
 @startuml
 
 
-package "Workflow Services" #lightblue {
+package "Workflow Services" #88cccc {
 
 }
 
 
-package "Analytics Services" #lightblue {
+package "Analytics Services" #88cccc {
 
     interface "Analytics Services" as i {
     
@@ -24,7 +24,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Analytics Services" #lightblue {
+package "Analytics Services" #88cccc {
 
 
 }

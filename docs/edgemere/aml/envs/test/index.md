@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--edgemere-aml-test
-nav_exclude: true
+parent: environment-test
+grand_parent: Environments
 ---
 
-### test
+### Application Management Layer test
 
 
 #### Deployment
@@ -30,8 +31,11 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| frontend | aml_web |  |  | sibling |
-| gw | aml_gw |  |  | children,sibling |
+| aml_web | aml_web |  |  | children,siblings |
+| aml_as | aml_as |  |  | children |
+| aml_ds | aml_ds |  |  | children |
+| aml_ws | aml_ws |  |  | children |
+| aml_ams | aml_ams |  |  | children |
 
 
 #### Networks
@@ -44,9 +48,9 @@ stack in a layer of networks.
 
 | Name | Type | External Name | Ports |
 | --- | --- | --- | --- |
-| children | egress | ailtire_appname_aml_family |
-| sibling | internal |  |
-| parent | ingress | ailtire_appname_family |
+| parent | ingress | parent |
+| children | egress | children |
+| siblings | internal |  |
 
 
 The Stack is micro-segmented off and there are a set of ports that are open for the ingress networks. The following

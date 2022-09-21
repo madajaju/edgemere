@@ -6,7 +6,7 @@ Actor "Stack Developer" as StackDeveloper
 Actor "Application Developer" as ApplicationDeveloper
 
 
-rectangle "Service Management Layer" #lightgreen {
+rectangle "Service Management Layer" #88cc88 {
 usecase "ManageClouds" as ManageClouds
     ITOperations --> ManageClouds
     usecase "ManageServices" as ManageServices

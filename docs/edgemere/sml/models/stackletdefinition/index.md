@@ -2,7 +2,7 @@
 layout: default
 title: Class StackletDefinition
 permalink: class-StackletDefinition
-parent: classes
+parent: Classes
 ---
 
 # StackletDefinition

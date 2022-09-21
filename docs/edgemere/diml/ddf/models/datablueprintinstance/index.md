@@ -2,7 +2,7 @@
 layout: default
 title: Class DataBluePrintInstance
 permalink: class-DataBluePrintInstance
-parent: classes
+parent: Classes
 ---
 
 # DataBluePrintInstance

@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Telemetry Consumer
+title: Package Telemetry Consumer
 permalink: package--edgemere-cpl-tc
-parent: Common Physical Layer
-grand_parent: edgemere
+parent: Package Common Physical Layer
+grand_parent: Package edgemere
 ---
 
 # Telemetry Consumer

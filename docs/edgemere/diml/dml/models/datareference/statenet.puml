@@ -16,44 +16,22 @@ state DataReference #ffcc88 {
     state FailedProvision #ffcc88 {
     }
 
+
+
+
+Init -[#black]--> Provisioning : provision
+
+Provisioning -[#black]--> Provisioned : provisioned
+
+Provisioning -[#black]--> FailedProvision : failed
+
 }
 
-
-Init --> Provisioning : provision
-
-Provisioning --> Provisioned : provisioned
-
-Provisioning --> FailedProvision : failed
-
-
-
- state "edgemere" as edgemere #lightblue {
-state "diml" as edgemerediml #lightblue {
-state "dml" as edgemeredimldml #lightblue {
-state "do" as edgemeredimldmldo #lightblue {
-state "datainstance" as edgemeredimldmldodatainstance #lightblue {
-state "create" as edgemeredimldmldodatainstancecreate #lightblue {
-}
-}
-}
-}
-}
-}
-
- Provisioning -[#black]--> edgemeredimldmldodatainstancecreate
  
- state "edgemere" as edgemere #lightgreen {
-state "sml" as edgemeresml #lightgreen {
-state "so" as edgemeresmlso #lightgreen {
-state "servicelet" as edgemeresmlsoservicelet #lightgreen {
-state "assignData" as edgemeresmlsoserviceletassignData #lightgreen {
-}
-}
-}
-}
-}
-
- Provisioned -[#black]--> edgemeresmlsoserviceletassignData
+ Provisioning -[#black]--> Null
+ 
+ 
+ Provisioned -[#black]--> Null
  
 
 @enduml

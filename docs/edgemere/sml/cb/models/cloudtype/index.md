@@ -2,7 +2,7 @@
 layout: default
 title: Class CloudType
 permalink: class-CloudType
-parent: classes
+parent: Classes
 ---
 
 # CloudType

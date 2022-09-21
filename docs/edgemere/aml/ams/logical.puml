@@ -1,11 +1,11 @@
 @startuml
 
 
-package "Workflow Services" #lightblue {
+package "Workflow Services" #88cccc {
     }
 
 
-package "AI ML Services" #lightblue {
+package "AI ML Services" #88cccc {
 
     interface "AI ML Services" as i {
     
@@ -16,7 +16,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "AI ML Services" #lightblue {
+package "AI ML Services" #88cccc {
         class "AIModel" {
                  string attr1
                     }

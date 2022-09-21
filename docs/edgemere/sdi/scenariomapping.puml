@@ -2,53 +2,99 @@
 left to right direction
 
 
-
-state "IT Operations" as ITOperations {
-    state "Manage Resources" as ITOperationsManageResources {
-    }
-}
-state "edgemere" as edgemere #lightyellow {
-state "sdi" as edgemeresdi #lightyellow {
-state "resource" as edgemeresdiresource #lightyellow {
-state "list" as edgemeresdiresourcelist #lightyellow {
-}
-}
-}
+    package "edgemere" as edgemere {
+ component "sdi" as edgemeresdi
+ interface "checkrequest" as edgemeresdicheckrequest
+edgemeresdi -- edgemeresdicheckrequest
 }
 
-ITOperationsManageResources --> edgemeresdiresourcelist
+    
+    package "edgemere" as edgemere {
+ component "sdi" as edgemeresdi
+ interface "reserve" as edgemeresdireserve
+edgemeresdi -- edgemeresdireserve
+}
+
+    
+    package "edgemere" as edgemere {
+package "sdi" as edgemeresdi #cccc88 {
+ component "resource" as edgemeresdiresource
+ interface "get" as edgemeresdiresourceget
+edgemeresdiresource -- edgemeresdiresourceget
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sdi" as edgemeresdi #cccc88 {
+ component "resource" as edgemeresdiresource
+ interface "list" as edgemeresdiresourcelist
+edgemeresdiresource -- edgemeresdiresourcelist
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sdi" as edgemeresdi #cccc88 {
+ component "resource" as edgemeresdiresource
+ interface "release" as edgemeresdiresourcerelease
+edgemeresdiresource -- edgemeresdiresourcerelease
+}
+}
+
+    
+hexagon "request.satisfied" as requestsatisfied
+            edgemeresdi <-- requestsatisfied
+        
+hexagon "resource.ready" as resourceready
+            edgemeresdi <-- resourceready
+        
 
 
-    state "IT Operations" as ITOperations {
-        state "Manage Resources" as ITOperationsManageResources {
-            state "Get Resources" as ITOperationsManageResourcesGetResources {
-            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        rectangle "Manage Resources" as ManageResources #ffffaa {
+            ("Get Resources")/ as ITOperationsManageResourcesGetResources
         }
-    }
     
-    ITOperationsManageResourcesGetResources --> Null
+    edgemeresdiresourceget <-- ITOperationsManageResourcesGetResources
     
- 
-    state "IT Operations" as ITOperations {
-        state "Manage Resources" as ITOperationsManageResources {
-            state "List Resources" as ITOperationsManageResourcesListResources {
-            }
+        rectangle "Manage Resources" as ManageResources #ffffaa {
+            ("List Resources")/ as ITOperationsManageResourcesListResources
         }
-    }
     
-    ITOperationsManageResourcesListResources --> Null
+    edgemeresdiresourcelist <-- ITOperationsManageResourcesListResources
     
- 
-    state "IT Operations" as ITOperations {
-        state "Manage Resources" as ITOperationsManageResources {
-            state "Release Resources" as ITOperationsManageResourcesReleaseResources {
-            }
+        rectangle "Manage Resources" as ManageResources #ffffaa {
+            ("Release Resources")/ as ITOperationsManageResourcesReleaseResources
         }
-    }
     
-    ITOperationsManageResourcesReleaseResources --> Null
+    edgemeresdiresourcerelease <-- ITOperationsManageResourcesReleaseResources
     
- 
- 
-
 @enduml

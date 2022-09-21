@@ -3,49 +3,67 @@
 left to right direction
 
 
-boundary ailtire_appname_family #red
+boundary parent #black
 
 
-entity ailtire_appname_diml_family #black
+entity children #blue
 
+rectangle "diml_dml" as diml_dmlStack #ffcc88 {
+    queue diml_dmlStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
 
 
 
 package "diml" #ffcc88 {
-    queue childrennet #black [
-            <b><color:white>children</color></b>
-    ]
-    
-    childrennet -[#black]- ailtire_appname_diml_family
-    
-    queue siblingnet #blue [
-            <b><color:white>sibling</color></b>
-    ]
-    
-    queue parentnet #red [
+    queue parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#red]- ailtire_appname_family
+    parentnet -[#black]- parent
+    
+    queue childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#blue]- children
+    
+    queue siblingsnet #red [
+            <b><color:white>siblings</color></b>
+    ]
     
 
-node "frontend" as frontendService
-node "gw" as gwService
+node "web" as webService
+node "diml_cds" as diml_cdsService
+node "diml_ddf" as diml_ddfService
+node "diml_dml" as diml_dmlService
 
 
         artifact "diml_web" as diml_webimage
     
-        artifact "diml_gw" as diml_gwimage
+        artifact "diml_cds" as diml_cdsimage
+    
+        artifact "diml_ddf" as diml_ddfimage
+            collections "diml_dml" as diml_dmlimage
     
 }
 
-frontendService -[#blue]- siblingnet
+webService -[#blue]- childrennet
 
-gwService -[#black]- childrennet
+webService -[#red]- siblingsnet
 
-gwService -[#blue]- siblingnet
-frontendService .... diml_webimage
-gwService .... diml_gwimage
+diml_cdsService -[#blue]- childrennet
 
+diml_ddfService -[#blue]- childrennet
+
+diml_dmlService -[#blue]- childrennet
+webService .... diml_webimage
+diml_cdsService .... diml_cdsimage
+diml_ddfService .... diml_ddfimage
+diml_dmlService .... diml_dmlimage
+
+diml_dmlimage --> diml_dmlStack
+    
 
 @enduml

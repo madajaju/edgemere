@@ -2,7 +2,7 @@
 layout: default
 title: Class BuildLog
 permalink: class-BuildLog
-parent: classes
+parent: Classes
 ---
 
 # BuildLog

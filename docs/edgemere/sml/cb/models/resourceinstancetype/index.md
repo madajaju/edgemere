@@ -2,7 +2,7 @@
 layout: default
 title: Class ResourceInstanceType
 permalink: class-ResourceInstanceType
-parent: classes
+parent: Classes
 ---
 
 # ResourceInstanceType

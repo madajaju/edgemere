@@ -1,15 +1,5 @@
 module.exports = {
     services: {
-        gw: {
-            image: "sdi_io_gw",
-            interface: {
-                admin: { path: '/gw', port: 3000, protocol:"http"},
-            },
-            networks: {
-                children: {},
-                siblings: {}
-            }
-        },
         web: {
             image: "sdi_io_web",
             interface: {

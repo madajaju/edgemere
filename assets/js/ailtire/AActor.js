@@ -1,4 +1,4 @@
-import {AScenario, AText, AUsecase} from './index.js';
+import {AScenario, AText, AUsecase, A3DGraph, ASelectedHUD} from './index.js';
 
 export default class AActor {
     constructor(config) {
@@ -16,7 +16,7 @@ export default class AActor {
         let height = AActor.default.height;
         let width = AActor.default.width;
         let depth = AActor.default.depth;
-        let radius = Math.max(Math.sqrt(width*width + height*height), Math.sqrt(height*height + depth*depth), Math.sqrt(width*width + depth*depth));
+        let radius = Math.max(Math.sqrt(width*width + height*height), Math.sqrt(height*height + depth*depth), Math.sqrt(width*width + depth*depth))/2;
         return {w: width, h: height, d: depth, r:radius};
     }
 
@@ -143,8 +143,8 @@ export default class AActor {
         }
         group.aid = node.id;
         node.box = size.r;
-        node.expandLink = `actor/get?id=${node.id}`;
-        node.expandView = AActor.viewDeep3D;
+        node.expandLink = node.expandLink || `actor/get?id=${node.id}`;
+        node.expandView = node.expandView || AActor.handle;
         node.getDetail = AActor.getDetail;
 
         return group;
@@ -161,7 +161,7 @@ export default class AActor {
                 id: actor.shortname,
                 name: actor.name.replace(/\s/g, '\n'),
                 view: AActor.view3D,
-                expandView: AActor.viewDeep3D,
+                expandView: AActor.handle,
                 expandLink: `actor/get?id=${actor.shortname}`
             };
 
@@ -174,7 +174,7 @@ export default class AActor {
                     id: j,
                     name: uc.name.replace(/\s/g, '\n'),
                     view: AUsecase.view3D,
-                    expandView: AUsecase.viewDeep3D,
+                    expandView: AUsecase.handle,
                     expandLink: `usecase/get?id=${j}`,
                     bbox: {
                         x: {min: -200, max: 200},
@@ -206,7 +206,7 @@ export default class AActor {
             id: actor.shortname,
             name: actor.name.replace(/\s/g, '\n'),
             view: AActor.view3D,
-            expandView: AActor.viewDeep3D,
+            expandView: AActor.handle,
             expandLink: `actor/get?id=${actor.shortname}`,
             fx: 0,
             fy: 0,
@@ -221,7 +221,7 @@ export default class AActor {
                 id: scenario.uid,
                 name: scenario.name.replace(/\s/g, '\n'),
                 view: AScenario.view3D,
-                expandView: AScenario.viewDeep3D,
+                expandView: AScenario.handle,
                 expandLink: `scenario/get?id=${scenario.uid}`,
             };
             data.nodes[node.id] = node;
@@ -233,7 +233,7 @@ export default class AActor {
             let node = {
                 id: j, name: uc.name.replace(/\s/g, '\n'),
                 view: AUsecase.view3D,
-                expandView: AUsecase.viewDeep3D,
+                expandView: AUsecase.handle,
                 expandLink: `usecase/get?id=${j}`,
             }
             data.nodes[j] = node;
@@ -341,6 +341,7 @@ export default class AActor {
             });
         }
         w2ui['objlist'].records = records;
+        ASelectedHUD.update("Actor", records);
         w2ui['objlist'].refresh();
     }
     static handle(result) {

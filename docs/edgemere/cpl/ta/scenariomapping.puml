@@ -2,6 +2,96 @@
 left to right direction
 
 
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+ component "ta" as edgemerecplta
+ interface "list" as edgemerecpltalist
+edgemerecplta -- edgemerecpltalist
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+ component "ta" as edgemerecplta
+ interface "report" as edgemerecpltareport
+edgemerecplta -- edgemerecpltareport
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+ component "ta" as edgemerecplta
+ interface "setparent" as edgemerecpltasetparent
+edgemerecplta -- edgemerecpltasetparent
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+ component "ta" as edgemerecplta
+ interface "show" as edgemerecpltashow
+edgemerecplta -- edgemerecpltashow
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+package "ta" as edgemerecplta #cccccc {
+ component "stats" as edgemerecpltastats
+ interface "get" as edgemerecpltastatsget
+edgemerecpltastats -- edgemerecpltastatsget
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+package "ta" as edgemerecplta #cccccc {
+ component "stats" as edgemerecpltastats
+ interface "send" as edgemerecpltastatssend
+edgemerecpltastats -- edgemerecpltastatssend
+}
+}
+}
+
+    
+hexagon "device.stats" as devicestats
+            edgemerecplta <-- devicestats
+                edgemerecplta <-- devicestats
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @enduml

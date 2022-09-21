@@ -1,11 +1,11 @@
 @startuml
 
 
-package "Workflow Services" #lightblue {
+package "Workflow Services" #88cccc {
     }
 
 
-package "Analytics Services" #lightblue {
+package "Analytics Services" #88cccc {
 
     interface "Analytics Services" as i {
     
@@ -16,7 +16,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Analytics Services" #lightblue {
+package "Analytics Services" #88cccc {
     
 }
 

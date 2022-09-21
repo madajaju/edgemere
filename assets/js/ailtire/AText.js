@@ -7,9 +7,13 @@ export default class AText {
         retval.text = node.text;
         retval.fontSize = node.size || 30;
         retval.color = node.color || 0xFFFFFF;
-        retval.anchorX = 'center';
-        retval.anchorY = 'middle';
-        retval.textAlign = 'center';
+        retval.anchorX = node.anchorX || 'center';
+        retval.anchorY = node.anchorY || 'middle';
+        retval.textAlign = node.textAlign || 'center';
+        retval.maxWidth = node.maxWidth || 1000;
+        retval.whiteSpace = 'normal';
+        retval.overflowWrap = 'normal';
+        retval.sync();
         return retval;
     }
 }

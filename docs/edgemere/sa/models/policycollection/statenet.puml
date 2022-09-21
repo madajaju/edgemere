@@ -2,12 +2,12 @@
 
 
 
-state PolicyCollection #pink {
+state PolicyCollection #cc8888 {
+
+
+
 
 }
-
-
-
 
 
 @enduml

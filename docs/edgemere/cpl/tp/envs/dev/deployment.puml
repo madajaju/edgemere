@@ -10,7 +10,7 @@ boundary edgemere_ailtire_parent_network_family #blue
 
 
 
-package "cpl_tp" #lightgray {
+package "cpl_tp" #cccccc {
     queue parentnet #black [
             <b><color:white>parent</color></b>
     ]

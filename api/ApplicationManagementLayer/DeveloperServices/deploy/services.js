@@ -1,15 +1,5 @@
 module.exports = {
     services: {
-        gw: {
-            image: "aml_ds_gw",
-            interface: {
-                admin: { path: '/gw', port: 3000, protocol:"http"},
-            },
-            networks: {
-                children: {},
-                siblings: {}
-            }
-        },
         web: {
             image: "aml_ds_web",
             interface: {

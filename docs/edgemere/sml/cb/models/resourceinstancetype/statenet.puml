@@ -2,12 +2,12 @@
 
 
 
-state ResourceInstanceType #lightgreen {
+state ResourceInstanceType #88cc88 {
+
+
+
 
 }
-
-
-
 
 
 @enduml

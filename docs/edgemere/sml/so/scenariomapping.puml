@@ -2,72 +2,110 @@
 left to right direction
 
 
-
-state "Stack Developer" as StackDeveloper {
-    state "Manage Stacks" as StackDeveloperManageStacks {
-    }
-}
-state "edgemere" as edgemere #lightgreen {
-state "sml" as edgemeresml #lightgreen {
-state "so" as edgemeresmlso #lightgreen {
-state "stack" as edgemeresmlsostack #lightgreen {
-state "list" as edgemeresmlsostacklist #lightgreen {
-}
-}
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml {
+package "so" as edgemeresmlso #88cc88 {
+ component "servicelet" as edgemeresmlsoservicelet
+ interface "assigndata" as edgemeresmlsoserviceletassigndata
+edgemeresmlsoservicelet -- edgemeresmlsoserviceletassigndata
 }
 }
 }
 
-StackDeveloperManageStacks --> edgemeresmlsostacklist
-
-state "Application Developer" as ApplicationDeveloper {
-    state "Manage Stacks" as ApplicationDeveloperManageStacks {
-    }
-}
-state "edgemere" as edgemere #lightgreen {
-state "sml" as edgemeresml #lightgreen {
-state "so" as edgemeresmlso #lightgreen {
-state "stack" as edgemeresmlsostack #lightgreen {
-state "list" as edgemeresmlsostacklist #lightgreen {
-}
-}
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml {
+package "so" as edgemeresmlso #88cc88 {
+ component "stack" as edgemeresmlsostack
+ interface "deploy" as edgemeresmlsostackdeploy
+edgemeresmlsostack -- edgemeresmlsostackdeploy
 }
 }
 }
 
-ApplicationDeveloperManageStacks --> edgemeresmlsostacklist
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml {
+package "so" as edgemeresmlso #88cc88 {
+ component "stack" as edgemeresmlsostack
+ interface "list" as edgemeresmlsostacklist
+edgemeresmlsostack -- edgemeresmlsostacklist
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml {
+package "so" as edgemeresmlso #88cc88 {
+ component "stack" as edgemeresmlsostack
+ interface "uninstall" as edgemeresmlsostackuninstall
+edgemeresmlsostack -- edgemeresmlsostackuninstall
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml {
+package "so" as edgemeresmlso #88cc88 {
+ component "stack" as edgemeresmlsostack
+ interface "update" as edgemeresmlsostackupdate
+edgemeresmlsostack -- edgemeresmlsostackupdate
+}
+}
+}
+
+    
+hexagon "datareference.provisioned" as datareferenceprovisioned
+            edgemeresmlso <-- datareferenceprovisioned
+        
 
 
-    state "DevOps Engineer" as DevOpsEngineer {
-        state "Manage Stacks" as DevOpsEngineerManageStacks {
-            state "Deploy Stack" as DevOpsEngineerManageStacksDeployStack {
-            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Deploy Stack")/ as DevOpsEngineerManageStacksDeployStack
         }
-    }
     
-    DevOpsEngineerManageStacksDeployStack --> Null
+    edgemeresmlsostackdeploy <-- DevOpsEngineerManageStacksDeployStack
     
- 
-    state "DevOps Engineer" as DevOpsEngineer {
-        state "Manage Stacks" as DevOpsEngineerManageStacks {
-            state "Uninstall Stack" as DevOpsEngineerManageStacksUninstallStack {
-            }
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Uninstall Stack")/ as DevOpsEngineerManageStacksUninstallStack
         }
-    }
     
-    DevOpsEngineerManageStacksUninstallStack --> Null
+    edgemeresmlsostackuninstall <-- DevOpsEngineerManageStacksUninstallStack
     
- 
-    state "DevOps Engineer" as DevOpsEngineer {
-        state "Manage Stacks" as DevOpsEngineerManageStacks {
-            state "Update Stack" as DevOpsEngineerManageStacksUpdateStack {
-            }
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Update Stack")/ as DevOpsEngineerManageStacksUpdateStack
         }
-    }
     
-    DevOpsEngineerManageStacksUpdateStack --> Null
+    edgemeresmlsostackupdate <-- DevOpsEngineerManageStacksUpdateStack
     
- 
- 
+
+
+
 
 @enduml

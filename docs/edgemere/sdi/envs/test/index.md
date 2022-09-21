@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--edgemere-sdi-test
-nav_exclude: true
+parent: environment-test
+grand_parent: Environments
 ---
 
-### test
+### Software Defined Infrastructure test
 
 
 #### Deployment
@@ -30,9 +31,8 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| orchestrator | sdi_io |  |  | children,parent |
-| frontend | sdi_web |  |  | sibling |
-| gw | sdi_gw |  |  | children,sibling |
+| orchestrator | sdi_io |  |  | children,siblings |
+| web | sdi_web |  |  | children,siblings |
 
 
 #### Networks
@@ -45,9 +45,9 @@ stack in a layer of networks.
 
 | Name | Type | External Name | Ports |
 | --- | --- | --- | --- |
-| children | egress | ailtire_appname_sdi_family |
-| sibling | internal |  |
-| parent | ingress | ailtire_appname_family |
+| parent | ingress | parent |
+| children | egress | children |
+| siblings | internal |  |
 
 
 The Stack is micro-segmented off and there are a set of ports that are open for the ingress networks. The following

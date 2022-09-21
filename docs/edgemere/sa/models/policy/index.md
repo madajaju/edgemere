@@ -2,7 +2,7 @@
 layout: default
 title: Class Policy
 permalink: class-Policy
-parent: classes
+parent: Classes
 ---
 
 # Policy

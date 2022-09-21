@@ -1,15 +1,5 @@
 module.exports = {
     services: {
-        gw: {
-            image: "sa_gw",
-            interface: {
-                admin: { path: '/gw', port: 3000, protocol:"http"},
-            },
-            networks: {
-                children: {},
-                siblings: {}
-            }
-        },
         web: {
             image: "sa_web",
             interface: {

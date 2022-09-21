@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Device Agent
+title: Package Device Agent
 permalink: package--edgemere-cpl-da
-parent: Common Physical Layer
-grand_parent: edgemere
+parent: Package Common Physical Layer
+grand_parent: Package edgemere
 ---
 
 # Device Agent
@@ -105,10 +104,10 @@ can be found [here](environment--edgemere-cpl-da-dev)
 
 Services in the dev environment
 
-* datacontroller : diml_dml_dc_controller:latest
-* policyengine : sa_pe_engine:latest
-* servicecontroller : sml_sc:latest
-* telemetry_producer : cpl_tp_producer:latest
+* datacontroller : diml_dml_dc_controller
+* policyengine : sa_pe_engine
+* servicecontroller : sml_sc
+* telemetry_producer : cpl_tp_producer
 * portal : cpl_da_web
 
 
@@ -119,10 +118,10 @@ can be found [here](environment--edgemere-cpl-da-test)
 
 Services in the test environment
 
-* datacontroller : diml_dml_dc_controller:latest
-* policyengine : sa_pe_engine:latest
-* servicecontroller : sml_sc:latest
-* telemetry_producer : cpl_tp_producer:latest
+* datacontroller : diml_dml_dc_controller
+* policyengine : sa_pe_engine
+* servicecontroller : sml_sc
+* telemetry_producer : cpl_tp_producer
 * portal : cpl_da_web
 
 
@@ -133,10 +132,10 @@ can be found [here](environment--edgemere-cpl-da-prod)
 
 Services in the prod environment
 
-* datacontroller : diml_dml_dc_controller:latest
-* policyengine : sa_pe_engine:latest
-* servicecontroller : sml_sc:latest
-* telemetry_producer : cpl_tp_producer:latest
+* datacontroller : diml_dml_dc_controller
+* policyengine : sa_pe_engine
+* servicecontroller : sml_sc
+* telemetry_producer : cpl_tp_producer
 * portal : cpl_da_web
 
 

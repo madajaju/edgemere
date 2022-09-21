@@ -2,27 +2,27 @@
 
 
 
-state AggregatedDevice #lightgray {
+state AggregatedDevice #cccccc {
 
-    state Init #lightgray {
+    state Init #cccccc {
     }
 
-    state Enabled #lightgray {
+    state Enabled #cccccc {
     }
 
-    state Disabled #lightgray {
+    state Disabled #cccccc {
     }
+
+
+
+
+Init -[#black]--> Enabled : create
+
+Enabled -[#black]--> Disabled : disable
+
+Disabled -[#black]--> Enabled : enable
 
 }
-
-
-Init --> Enabled : create
-
-Enabled --> Disabled : disable
-
-Disabled --> Enabled : enable
-
-
 
 
 @enduml

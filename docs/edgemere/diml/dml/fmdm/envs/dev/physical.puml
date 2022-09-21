@@ -11,17 +11,13 @@ package "Federated Meta Data Management" #lightblue {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as diml_dml_fmdm_container
+      file "node server.js\n" as diml_dml_fmdm_container
       REST --> diml_dml_fmdm_container
 
   
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
   
   }
   folder images #ffffff {
@@ -33,9 +29,6 @@ package "Federated Meta Data Management" #lightblue {
   
       artifact "diml_dml_fmdm_web" as diml_dml_fmdm_web
       web_container --> diml_dml_fmdm_web
-    
-      artifact "diml_dml_fmdm_gw" as diml_dml_fmdm_gw
-      gateway_container --> diml_dml_fmdm_gw
     
   }
 }

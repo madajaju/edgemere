@@ -2,12 +2,12 @@
 
 
 
-state StorageResource #lightyellow {
+state StorageResource #cccc88 {
+
+
+
 
 }
-
-
-
 
 
 @enduml

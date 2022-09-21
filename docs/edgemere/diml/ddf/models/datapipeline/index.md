@@ -2,7 +2,7 @@
 layout: default
 title: Class DataPipeline
 permalink: class-DataPipeline
-parent: classes
+parent: Classes
 ---
 
 # DataPipeline

@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Data Adaptor Framework
+title: Package Data Adaptor Framework
 permalink: package--edgemere-diml-ddf-daf
-parent: Data Definition Framework
-grand_parent: Distributed Information Management Layer
+parent: Package Data Definition Framework
+grand_parent: Package Distributed Information Management Layer
 ---
 
 # Data Adaptor Framework
@@ -102,8 +101,7 @@ can be found [here](environment--edgemere-diml-ddf-daf-dev)
 
 Services in the dev environment
 
-* frontend : diml_ddf_daf_web
-* gw : diml_ddf_daf_gw
+* web : diml_ddf_daf_web
 
 
 ### test
@@ -113,8 +111,7 @@ can be found [here](environment--edgemere-diml-ddf-daf-test)
 
 Services in the test environment
 
-* frontend : diml_ddf_daf_web
-* gw : diml_ddf_daf_gw
+* web : diml_ddf_daf_web
 
 
 ### prod
@@ -124,8 +121,7 @@ can be found [here](environment--edgemere-diml-ddf-daf-prod)
 
 Services in the prod environment
 
-* frontend : diml_ddf_daf_web
-* gw : diml_ddf_daf_gw
+* web : diml_ddf_daf_web
 
 
 ## Activities and Flows

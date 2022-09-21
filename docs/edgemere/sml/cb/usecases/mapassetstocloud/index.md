@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Map Assets to Cloud
 permalink: usecase-MapAssetstoCloud
-parent: usecases
+parent: UseCases
 ---
 # Map Assets to Cloud
 

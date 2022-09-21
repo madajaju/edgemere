@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Manage Security Profiles
 permalink: usecase-ManageSecurityProfiles
-parent: usecases
+parent: UseCases
 ---
 # Manage Security Profiles
 

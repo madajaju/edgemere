@@ -2,12 +2,12 @@
 
 
 
-state MetricAttribute #lightgray {
+state MetricAttribute #cccccc {
+
+
+
 
 }
-
-
-
 
 
 @enduml

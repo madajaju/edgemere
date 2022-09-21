@@ -2,36 +2,36 @@
 left to right direction
 
 
-state "cpl" as cpl #lightgray {
-state "tc" as cpltc #lightgray {
+state "cpl" as cpl #cccccc {
+state "tc" as cpltc #cccccc {
 }
 }
 
 
-state "cpltc" as pstatename #lightgray {
+state "cpltc" as pstatename #cccccc {
     state "Custom Function" as tcfunction {
     }
 }
 
-        state "cpl" as cpl #lightgray {
-state "tc" as cpltc #lightgray {
-state "list" as cpltclist #lightgray {
+        state "cpl" as cpl #cccccc {
+state "tc" as cpltc #cccccc {
+state "list" as cpltclist #cccccc {
 }
 }
 }
 
 
-        state "cpl" as cpl #lightgray {
-state "tc" as cpltc #lightgray {
-state "report" as cpltcreport #lightgray {
+        state "cpl" as cpl #cccccc {
+state "tc" as cpltc #cccccc {
+state "report" as cpltcreport #cccccc {
 }
 }
 }
 
 
-        state "cpl" as cpl #lightgray {
-state "tc" as cpltc #lightgray {
-state "show" as cpltcshow #lightgray {
+        state "cpl" as cpl #cccccc {
+state "tc" as cpltc #cccccc {
+state "show" as cpltcshow #cccccc {
 }
 }
 }
@@ -40,9 +40,9 @@ state "show" as cpltcshow #lightgray {
 
 
 
-        state "cpl" as cpl #lightgray {
-state "Device" as cpldevice #lightgray {
-state "stats" as cpldevicestats #lightgray {
+        state "cpl" as cpl #cccccc {
+state "Device" as cpldevice #cccccc {
+state "stats" as cpldevicestats #cccccc {
 }
 }
 }

@@ -2,7 +2,7 @@
 layout: default
 title: Class StepInstance
 permalink: class-StepInstance
-parent: classes
+parent: Classes
 ---
 
 # StepInstance

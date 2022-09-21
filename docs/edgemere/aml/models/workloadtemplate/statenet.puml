@@ -2,12 +2,12 @@
 
 
 
-state WorkloadTemplate #lightblue {
+state WorkloadTemplate #88cccc {
+
+
+
 
 }
-
-
-
 
 
 @enduml

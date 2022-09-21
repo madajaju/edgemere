@@ -1,4 +1,4 @@
-import {AAction, AAttribute, AStateNet, AText, AObject} from './index.js';
+import {AAction, AAttribute, AStateNet, AText, AObject, ASelectedHUD} from './index.js';
 
 export default class AModel {
     static scolor = {
@@ -57,7 +57,7 @@ export default class AModel {
         let width = Math.max(node.name.length * AModel.default.fontSize / 2, AModel.default.width);
         let height = AModel.default.height;
         let depth = AModel.default.depth;
-        let radius = Math.max(Math.sqrt(width * width + height * height), Math.sqrt(height * height + depth * depth), Math.sqrt(width * width + depth * depth));
+        let radius = Math.max(Math.sqrt(width * width + height * height), Math.sqrt(height * height + depth * depth), Math.sqrt(width * width + depth * depth)) / 2;
         return {w: width, h: height, d: depth, r: radius};
     }
 
@@ -75,9 +75,9 @@ export default class AModel {
         let h = size.h;
         let d = size.d;
         if (node.cube) {
-            w = node.cube.w;
-            h = node.cube.h;
-            d = node.cube.d;
+            w = node.cube.x;
+            h = node.cube.y;
+            d = node.cube.z;
         }
         let opacity = node.opacity || 1;
 
@@ -127,7 +127,7 @@ export default class AModel {
         retval.add(label)
         node.box = node.box || size.r;
         node.expandLink = `model/get?id=${node.id}`;
-        node.expandView = AModel.viewDeep3D;
+        node.expandView = AModel.handle;
         node.getDetail = AModel.getDetail;
         return retval;
     }
@@ -137,12 +137,12 @@ export default class AModel {
         let size = AModel.calculateDeepBox(cls);
 
         const theta = Math.PI / 2;
-        let model3d = {w: size.w, h: size.h, d: size.d};
+        let model3d = {x: size.w, y: size.h, z: size.d};
         let bbox = {
             parent: cls.id,
-            x: {min: -model3d.w / 2 + 20, max: model3d.w / 2 - 20},
-            y: {min: -model3d.h / 2 + 20, max: model3d.h / 2 - 20},
-            z: {min: -model3d.d / 2 + 20, max: model3d.d / 2 - 20},
+            x: {min: -model3d.x / 2 + 20, max: model3d.x / 2 - 20},
+            y: {min: -model3d.y / 2 + 20, max: model3d.y / 2 - 20},
+            z: {min: -model3d.z / 2 + 20, max: model3d.z / 2 - 20},
         }
 
         data.nodes[cls.id] = {
@@ -154,21 +154,13 @@ export default class AModel {
             fx: 0,
             fy: 0,
             fz: 0,
-            box: 1, // Prevents contention with the collide algo.
+            box: 0.1, // Prevents contention with the collide force.
             view: AModel.view3D,
-            expandView: AModel.viewDeep3D,
+            expandView: AModel.handle,
             expandLink: `model/get?id=${cls.id}`
         };
 
-        let prevID = cls.id;
-        let col = 0;
-        let row = 0;
-        let arbox = {
-            parent: prevID,
-            x: {min: bbox.x.min + 70, max: bbox.x.min + 70},
-            y: {min: bbox.y.max + 80, max: bbox.y.max + 80},
-            z: {min: bbox.z.max - 60, max: bbox.z.max - 60},
-        }
+        let anodes = [];
         for (let aname in cls._associations) {
             let assoc = cls._associations[aname];
             let clsid = assoc.type;
@@ -177,13 +169,13 @@ export default class AModel {
                     id: clsid,
                     name: clsid,
                     view: AModel.view3D,
-                    expandView: AModel.viewDeep3D,
+                    expandView: AModel.handle,
                     expandLink: `model/get?id=${clsid}`,
                     rbox: {
                         parent: cls.id,
-                        x: {min: bbox.x.min - 200, max: bbox.x.min - 200},
-                        y: {min: bbox.y.min + 20, max: bbox.y.max - 20},
-                        z: {min: bbox.z.min + 40, max: bbox.z.max - 40}
+                        fx: -size.w / 2 - 20,
+                        y: {min: -size.h / 2, max: size.h / 2},
+                        z: {min: -size.d / 2, max: size.d / 2}
                     },
                     rotate: {y: -theta}
                 };
@@ -193,32 +185,11 @@ export default class AModel {
                 name: `${aname} : ${assoc.type}`,
                 view: AAttribute.view3D,
                 color: 'magenta',
-                rbox: arbox,
                 rotate: {x: -theta}
             };
+            anodes.push(data.nodes[`Assoc${clsid}`]);
             if (clsid !== cls.id) {
-                data.links.push({target: clsid, source: `Assoc${clsid}`, width: 3.0, value: 0.0, color: 'magenta'});
-            }
-            prevID = `Assoc${clsid}`;
-            row++;
-            if (row <= size.attributes.box.rows) {
-                arbox = {
-                    parent: prevID, x: {min: 0, max: 0}, // Col
-                    y: {min: 0, max: 0}, z: {min: -80, max: -80}, // Row
-                }
-
-            } else {
-                row = 0;
-                col++;
-                arbox = {
-                    parent: cls.id,
-                    x: {
-                        min: bbox.x.min + 70 + (col * size.attributes.stats.w.max),
-                        max: bbox.x.min + 70 + (col * size.attributes.stats.w.max)
-                    },
-                    y: {min: bbox.y.max + 80, max: bbox.y.max + 80},
-                    z: {min: bbox.z.max - 60, max: bbox.z.max - 60},
-                }
+                data.links.push({target: clsid, source: `Assoc${clsid}`, width: 3.0, value: 10, color: '#ff00ff'});
             }
         }
 
@@ -226,64 +197,27 @@ export default class AModel {
             let attr = cls._attributes[aname];
             let clsid = cls.id + aname
             data.nodes[clsid] = {
-                id: clsid, name: `${aname} : ${attr.type}`, view: AAttribute.view3D, rbox: arbox, rotate: {x: -theta}
+                id: clsid, name: `${aname} : ${attr.type}`, view: AAttribute.view3D, rotate: {x: -theta}, box: 1,
             };
-            prevID = clsid;
-            row++;
-            if (row < size.attributes.box.rows) {
-                arbox = {
-                    parent: prevID, x: {min: 0, max: 0}, // Col
-                    y: {min: 0, max: 0}, z: {min: -80, max: -80}, // Row
-                }
-
-            } else {
-                row = 0;
-                col++;
-                arbox = {
-                    parent: cls.id,
-                    x: {min: bbox.x.min + 70 + (col * 120), max: bbox.x.min + 70 + (col * 120)},
-                    y: {min: bbox.y.max + 80, max: bbox.y.max + 80},
-                    z: {min: bbox.z.max - 60, max: bbox.z.max - 60},
-                }
-            }
+            anodes.push(data.nodes[clsid]);
         }
 
-        prevID = cls.id;
-        col = 0;
-        row = 0;
-        arbox = {
-            parent: prevID,
-            x: {min: bbox.x.max + 40, max: bbox.x.max + 40},
-            y: {min: bbox.y.max - 40, max: bbox.y.max - 40},
-            z: {min: bbox.z.max - 60, max: bbox.z.max - 60},
-        }
+        layoutRowColumn(data.nodes[cls.id], anodes, size.attributes, "top");
+
+        let mnodes = [];
         for (let mname in cls.methods) {
             data.nodes[`${cls.id}-${mname}`] = {
                 id: `${cls.id}-${mname}`,
                 name: mname,
                 view: AAction.view3D,
-                rbox: arbox,
+                box: 1,
                 rotate: {x: -theta, z: -theta, y: theta}
             };
-            prevID = `${cls.id}-${mname}`;
-            row++;
-            if (row < size.methods.box.rows) {
-                arbox = {
-                    parent: prevID, x: {min: 0, max: 0}, // Col
-                    y: {min: -100, max: -100}, // Row
-                    z: {min: 0, max: 0},
-                }
-            } else {
-                row = 0;
-                col++;
-                arbox = {
-                    parent: cls.id,
-                    x: {min: bbox.x.max + 40, max: bbox.x.max + 40},
-                    y: {min: bbox.y.max - 40, max: bbox.y.max - 40},
-                    z: {min: bbox.z.max - 60 - (col * 150), max: bbox.z.max - 60 - (col * 150)},
-                }
-            }
+            mnodes.push(data.nodes[`${cls.id}-${mname}`]);
         }
+        layoutRowColumn(data.nodes[cls.id], mnodes, size.methods, "right");
+
+        // These nodes must be added first. Before the state net.
         if (mode === 'add') {
             window.graph.addData(data.nodes, data.links);
         } else {
@@ -291,21 +225,23 @@ export default class AModel {
         }
         // State Net it if exists.
         if (cls.statenet) {
-            let mode = {
+            let config = {
                 id: cls.id, ibox: {
                     parent: cls.id,
-                    x: {min: bbox.x.max - 5, max: bbox.x.max - 5},
-                    y: {min: bbox.y.min - 40, max: bbox.y.min - 40},
-                    z: {min: bbox.z.min + 5, max: bbox.z.max - 5}
-                }, rbox: {
+                    fx: bbox.x.max - 5,
+                    fy: bbox.y.min - 20,
+                    fz: bbox.z.max - 5,
+                },
+                rbox: {
                     parent: cls.id,
                     x: {min: bbox.x.min + 10, max: bbox.x.max - 10},
-                    y: {min: bbox.y.min - 40, max: bbox.y.min - 40},
+                    fy: bbox.y.min - 40,
                     z: {min: bbox.z.min + 5, max: bbox.z.max - 5}
                 }, rotate: {x: theta}, mode: 'add'
             };
-            AStateNet.viewDeep3D(cls.statenet, mode);
+            AStateNet.handle(cls.statenet, config);
         }
+
         window.graph.graph.cameraPosition({x: 0, y: 0, z: size.d * 2}, // new position
             {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
             3000  // ms transition duration.
@@ -808,7 +744,7 @@ export default class AModel {
 
     static editDocumentation(results) {
         let text = results.document || "Enter Details Here";
-        let setURL = selectedObject.link.replace('get', 'set');
+        let setURL = AMainWindow.selectedObject.link.replace('get', 'set');
         let fields = [{field: 'summary', type: 'textarea'}, {field: 'documentation', type: 'textarea'},];
         let editForm = getEditForm(fields, setURL);
         w2popup.open({
@@ -935,6 +871,7 @@ export default class AModel {
         records.push({recid: i++, name: 'Methods', value: methodDetails.length, detail: methodDetails.join('|')});
 
         myForm.records = records;
+        ASelectedHUD.update('Model', records);
         myForm.refresh();
         return myForm;
     }
@@ -1037,4 +974,83 @@ function getEditForm(record, setURL) {
     w2ui['editModelDoc'].record = record;
     w2ui['editModelDoc'].saveURL = setURL;
     return w2ui['editModelDoc'];
+}
+
+function layoutRowColumn(parentNode, nodes, size, direction) {
+    let prevNode = parentNode;
+    let row = 0;
+    let col = 0;
+    let bbox = {
+        x: {min: -parentNode.cube.x / 2, max: parentNode.cube.x / 2},
+        y: {min: -parentNode.cube.y / 2, max: parentNode.cube.y / 2},
+        z: {min: -parentNode.cube.z / 2, max: parentNode.cube.z / 2},
+    }
+
+
+    for (let i in nodes) {
+        let node = nodes[i];
+        // Make sure I have the right number of rows.
+        if (row >= size.box.rows) {
+            row = 0;
+            col++;
+        }
+        if (direction === 'top') {
+            let offset = {
+                w: Math.max(parentNode.cube.x / (size.box.cols + 1), size.stats.w.max) * 1.10,
+                h: Math.max(parentNode.cube.z / (size.box.rows + 1), size.stats.h.max) * 1.10
+            }
+            node.rbox = {
+                parent: prevNode.id,
+                fx: bbox.x.min + offset.w / 2 + (col * offset.w),
+                fy: bbox.y.max,
+                fz: bbox.z.max - offset.h / 2 - (row * offset.h),
+            }
+        } else if (direction === 'bottom') {
+            let offset = {
+                w: Math.max(parentNode.cube.x / (size.box.cols + 1), size.stats.w.max) * 1.10,
+                h: Math.max(parentNode.cube.z / (size.box.rows + 1), size.stats.h.max) * 1.10
+            }
+            node.rbox = {
+                parent: prevNode.id,
+                fx: bbox.x.min + offset.w / 2 + (col * offset.w),
+                fy: bbox.y.min - 30,
+                fz: bbox.z.max - offset.h / 2 - (row * offset.h),
+            }
+        } else if (direction === 'right') {
+            let offset = {
+                w: parentNode.cube.z / (size.box.cols + 1),
+                h: parentNode.cube.y / (size.box.rows + 1),
+            }
+            node.rbox = {
+                parent: prevNode.id,
+                fx: bbox.x.max,
+                fy: bbox.y.max - offset.h / 2 - (row * offset.h),
+                fz: bbox.z.max - offset.w / 2 - (col * offset.w),
+            }
+        } else if (direction === 'back') {
+            let offset = {
+                w: Math.max(parentNode.cube.x / (size.box.cols + 1), size.stats.w.max) * 1.10,
+                h: Math.max(parentNode.cube.y / (size.box.rows + 1), size.stats.h.max) * 1.10
+            }
+            node.rbox = {
+                parent: prevNode.id,
+                fx: bbox.x.max - offset.w / 2 - (col * offset.w),
+                fz: bbox.z.min,
+                fy: bbox.y.max - offset.h / 2 - (row * offset.h),
+            }
+        } else if (direction === 'front') {
+            let offset = {
+                w: Math.max(parentNode.cube.x / (size.box.cols + 1), size.stats.w.max) * 1.10,
+                h: Math.max(parentNode.cube.y / (size.box.rows + 1), size.stats.h.max) * 1.10
+            }
+            node.rbox = {
+                parent: prevNode.id,
+                fx: bbox.x.min + offset.w / 2 + (col * offset.w),
+                fz: bbox.z.max,
+                fy: bbox.y.min + offset.h / 2 + (row * offset.h),
+            }
+        }
+        row++;
+    }
+    return;
 }

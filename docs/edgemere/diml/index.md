@@ -1,8 +1,7 @@
 ---
-layout: default
-title: Distributed Information Management Layer
+title: Package Distributed Information Management Layer
 permalink: package--edgemere-diml
-parent: edgemere
+parent: Package edgemere
 has_children: true
 ---
 
@@ -179,8 +178,10 @@ can be found [here](environment--edgemere-diml-dev)
 
 Services in the dev environment
 
-* frontend : diml_web
-* gw : diml_gw
+* web : diml_web
+* diml_cds : diml_cds
+* diml_ddf : diml_ddf
+* diml_dml : diml_dml
 
 
 ### test
@@ -190,8 +191,10 @@ can be found [here](environment--edgemere-diml-test)
 
 Services in the test environment
 
-* frontend : diml_web
-* gw : diml_gw
+* web : diml_web
+* diml_cds : diml_cds
+* diml_ddf : diml_ddf
+* diml_dml : diml_dml
 
 
 ### prod
@@ -201,8 +204,10 @@ can be found [here](environment--edgemere-diml-prod)
 
 Services in the prod environment
 
-* frontend : diml_web
-* gw : diml_gw
+* web : diml_web
+* diml_cds : diml_cds
+* diml_ddf : diml_ddf
+* diml_dml : diml_dml
 
 
 ## Activities and Flows

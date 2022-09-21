@@ -1,8 +1,7 @@
 ---
-layout: default
-title: Application Management Layer
+title: Package Application Management Layer
 permalink: package--edgemere-aml
-parent: edgemere
+parent: Package edgemere
 has_children: true
 ---
 
@@ -160,8 +159,11 @@ can be found [here](environment--edgemere-aml-dev)
 
 Services in the dev environment
 
-* frontend : aml_web
-* gw : aml_gw
+* aml_web : aml_web
+* aml_as : aml_as
+* aml_ds : aml_ds
+* aml_ws : aml_ws
+* aml_ams : aml_ams
 
 
 ### test
@@ -171,8 +173,11 @@ can be found [here](environment--edgemere-aml-test)
 
 Services in the test environment
 
-* frontend : aml_web
-* gw : aml_gw
+* aml_web : aml_web
+* aml_as : aml_as
+* aml_ds : aml_ds
+* aml_ws : aml_ws
+* aml_ams : aml_ams
 
 
 ### prod
@@ -182,8 +187,11 @@ can be found [here](environment--edgemere-aml-prod)
 
 Services in the prod environment
 
-* frontend : aml_web
-* gw : aml_gw
+* aml_web : aml_web
+* aml_as : aml_as
+* aml_ds : aml_ds
+* aml_ws : aml_ws
+* aml_ams : aml_ams
 
 
 ## Activities and Flows

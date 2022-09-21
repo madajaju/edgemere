@@ -1,7 +1,7 @@
 ---
-layout: default
-title: edgemere
+title: Package edgemere
 permalink: package--edgemere
+nav_order: 4
 has_children: true
 ---
 
@@ -147,8 +147,7 @@ can be found [here](environment--edgemere-local)
 
 Services in the local environment
 
-* admin : edgemere:latest
-* pubsub : redis
+* admin : edgemere
 * web : edgemere_web
 * doc : edgemere_doc
 
@@ -160,15 +159,13 @@ can be found [here](environment--edgemere-dev)
 
 Services in the dev environment
 
-* admin : edgemere:latest
-* aml : aml:latest
-* cpl : cpl:latest
-* diml : diml:latest
-* ia : ia:latest
-* sa : sa:latest
-* sml : sml:latest
-* sdi : sdi:latest
-* pubsub : redis
+* aml : aml
+* cpl : cpl
+* diml : diml
+* ia : ia
+* sa : sa
+* sml : sml
+* sdi : sdi
 * web : edgemere_web
 * doc : edgemere_doc
 
@@ -180,15 +177,13 @@ can be found [here](environment--edgemere-test)
 
 Services in the test environment
 
-* admin : edgemere:latest
-* aml : aml:latest
-* cpl : cpl:latest
-* diml : diml:latest
-* ia : ia:latest
-* sa : sa:latest
-* sml : sml:latest
-* sdi : sdi:latest
-* pubsub : redis
+* aml : aml
+* cpl : cpl
+* diml : diml
+* ia : ia
+* sa : sa
+* sml : sml
+* sdi : sdi
 * web : edgemere_web
 * doc : edgemere_doc
 
@@ -200,15 +195,13 @@ can be found [here](environment--edgemere-prod)
 
 Services in the prod environment
 
-* admin : edgemere:latest
-* aml : aml:latest
-* cpl : cpl:latest
-* diml : diml:latest
-* ia : ia:latest
-* sa : sa:latest
-* sml : sml:latest
-* sdi : sdi:latest
-* pubsub : redis
+* aml : aml
+* cpl : cpl
+* diml : diml
+* ia : ia
+* sa : sa
+* sml : sml
+* sdi : sdi
 * web : edgemere_web
 * doc : edgemere_doc
 

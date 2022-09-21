@@ -1,9 +1,8 @@
-import {AActor, AScenario, AText, AInterface, APackage} from './index.js';
+import {AActor, AScenario, AText, AInterface, APackage, A3DGraph, ASelectedHUD} from './index.js';
 
 export default class AUsecase {
     constructor(config) {
         this.config = config;
-        console.log("AUsecase:", config);
     }
     static default = {
         fontSize: 20,
@@ -19,7 +18,7 @@ export default class AUsecase {
         let height = (nameArray.length*fontSize)/2 + 10;
         let width = maxLetters * (fontSize/2) + 20;
         let depth = AUsecase.default.depth;
-        let radius = Math.max(Math.sqrt(width*width + height*height), Math.sqrt(height*height + depth*depth), Math.sqrt(width*width + depth*depth));
+        let radius =Math.sqrt(width*width + height*height + depth*depth)/2;
         return {w: width, h: height*2, d: depth, r: radius};
     }
 
@@ -93,12 +92,23 @@ export default class AUsecase {
         const retval = new THREE.Mesh(geometry, material);
         retval.position.set(node.x, node.y, node.z);
         let label = AText.view3D({text: nameArray.join('\n'), color: "#ffffff", width: width, size: fontSize});
-        label.position.set(0, 0, size.d);
-        retval.add(label)
+        label.position.set(0, 0, size.d+1);
+        retval.add(label);
+        if (node.rotate) {
+            if (node.rotate.x) {
+                retval.applyMatrix4(new THREE.Matrix4().makeRotationX(node.rotate.x));
+            }
+            if (node.rotate.y) {
+                retval.applyMatrix4(new THREE.Matrix4().makeRotationY(node.rotate.y));
+            }
+            if (node.rotate.z) {
+                retval.applyMatrix4(new THREE.Matrix4().makeRotationZ(node.rotate.z));
+            }
+        }
         retval.aid = node.id;
         node.box = size.r;
-        node.expandLink = `usecase/get?id=${node.id}`;
-        node.expandView = AUsecase.viewDeep3D;
+        node.expandLink = node.expandLink || `usecase/get?id=${node.id}`;
+        node.expandView = node.expandView || AUsecase.handle;
         node.getDetail = AUsecase.getDetail;
         return retval;
     }
@@ -182,6 +192,98 @@ export default class AUsecase {
         });
         w2ui['objlist'].records = records;
         w2ui['objlist'].refresh();
+        ASelectedHUD.update('Usecase', records);
+    }
+    static showListDetail(result) {
+        let records = [];
+        if (!w2ui['objlist']) {
+            $('#objlist').w2grid({name: 'objlist'});
+        }
+        w2ui['objlist'].onClick = function (event) {
+            w2ui['objdetail'].clear();
+            let record = this.get(event.recid);
+            let drecords = [];
+            let k = 0;
+            let details = record.detail.split('|');
+
+            for (let i in details) {
+                k++;
+                drecords.push({recid: k, name: record.name, value: details[i]});
+            }
+            w2ui['objdetail'].add(drecords);
+            window.graph.selectNodeByID(event.recid);
+        };
+        if (!w2ui['objdetail']) {
+            $('#objdetail').w2grid({
+                name: 'objdetail',
+                header: 'Details',
+                show: {header: true, columnHeaders: false},
+                columns: [
+                    {
+                        field: 'name',
+                        label: 'Name',
+                        size: '100px',
+                        style: 'background-color: #efefef; border-bottom: 1px solid white; padding-right: 5px;',
+                        attr: "align=right"
+                    },
+                    {
+                        field: 'value', label: 'Value', size: '100%', render: function (record) {
+                            return '<div>' + record.value + '</div>';
+                        }
+                    }
+                ]
+            });
+        }
+        let cols = [
+            {field: 'name', size: "20%", resizeable: true, label: "Name", sortable: true},
+            {field: 'value', size: "80%", resizeable: true, label: "Value", sortable: true},
+        ];
+        w2ui['objlist'].columns = cols;
+
+        let i = 0;
+        let ucDetails = Object.keys(result).map(ucname => {
+            return `<span onclick="expandObject('usecase/get?id=${ucname}');">${ucname}</span>`
+        });
+        records.push({
+            recid: i++,
+            name: 'usecases',
+            value: Object.keys(result).length,
+            detail: ucDetails.join("|")
+        });
+        let actors = {};
+        for(let uname in result) {
+           let uc = result[uname];
+           for(let aname in uc.actors) {
+               actors[aname] = uc.actors[aname];
+           }
+        }
+        let actorDetails = Object.keys(actors).map(item => {
+            return `<span onclick="expandObject('actor/get?id=${item}');">${item}</span>`
+        });
+        records.push({
+            recid: i++,
+            name: 'actors',
+            value: Object.keys(actors).length,
+            detail: actorDetails.join('|')
+        });
+        let scenarios = {};
+        for(let uname in result) {
+           let uc = result[uname];
+           for(let aname in uc.scenarios) {
+               scenarios[aname] = uc.scenarios[aname];
+           }
+        }
+        let scDetails = Object.keys(scenarios).map(item => {
+            return `<span onclick="expandObject('scenario/get?id=${item}');">${item}</span>`
+        });
+        records.push({
+            recid: i++,
+            name: 'scenarios',
+            value: Object.keys(scenarios).length,
+            detail: scDetails.join('|')
+        });
+        w2ui['objlist'].records = records;
+        w2ui['objlist'].refresh();
     }
 
     static viewDeep3D(usecase, mode) {
@@ -189,7 +291,7 @@ export default class AUsecase {
 
         data.nodes[usecase.id] = {id: usecase.id, name: usecase.name, fx: 0, fy: 0, fz: 0,
             view: AUsecase.view3D,
-            expandView: AUsecase.viewDeep3D,
+            expandView: AUsecase.handle,
             expandLink: `usecase/get?id=${usecase.id}`
         };
         for (let j in usecase.scenarios) {
@@ -272,7 +374,7 @@ export default class AUsecase {
                 id: usecase.id,
                 name: usecase.name,
                 view: AUsecase.view3D,
-                expandView: AUsecase.viewDeep3D,
+                expandView: AUsecase.handle,
                 expandLink: `usecase/get?id=${usecase.id}`
             };
             data.nodes[pkgname] = {
@@ -281,7 +383,7 @@ export default class AUsecase {
                 opacity: 0.5,
                 name: usecase.package,
                 view: APackage.view3D,
-                expandView: APackage.viewDeep3D,
+                expandView: APackage.handle,
                 expandLink: `package/get?id=${pkgname}`
             }
 
@@ -289,7 +391,7 @@ export default class AUsecase {
                 let suc = usecase.extended[j];
                 data.nodes[j] = {id: j, name: suc.name,
                     view: AUsecase.view3D,
-                    expandView: AUsecase.viewDeep3D,
+                    expandView: AUsecase.handle,
                     expandLink: `usecase/get?id=${j}`,
                     color: 'gray'};
                 data.links.push({target: usecase.id, source: j, value: 0.1, width: 3, color: 'gray'});
@@ -300,7 +402,7 @@ export default class AUsecase {
                 let sucid = sucname.replace(/\s/g, '');
                 data.nodes[sucid] = {id: sucid, name: sucname,
                     view: AUsecase.view3D,
-                    expandView: AUsecase.viewDeep3D,
+                    expandView: AUsecase.handle,
                     expandLink: `usecase/get?id=${sucid}`,
                     color: 'gray'};
                 data.links.push({source: usecase.id, target: sucid, value: 0.1, width: 3, color: 'gray'});
@@ -311,7 +413,7 @@ export default class AUsecase {
                 let sucid = sucname.replace(/\s/g, '');
                 data.node[sucid] = {id: sucid, name: sucname,
                     view: AUsecase.view3D,
-                    expandView: AUsecase.viewDeep3D,
+                    expandView: AUsecase.handle,
                     expandLink: `usecase/get?id=${sucid}`,
                     color: 'gray'};
                 data.links.push({source: usecase.id, target: sucid, value: 0.1, width: 3, color: 'gray'});
@@ -320,7 +422,7 @@ export default class AUsecase {
                 let suc = usecase.included[j];
                 data.nodes[j] = {id: j, name: suc.name,
                     view: AUsecase.view3D,
-                    expandView: AUsecase.viewDeep3D,
+                    expandView: AUsecase.handle,
                     expandLink: `usecase/get?id=${j}`,
                     color: 'gray'};
                 data.links.push({source: usecase.id, target: j, value: 0.1, width: 3, color: 'gray'});
@@ -330,7 +432,7 @@ export default class AUsecase {
                 let aname = actor.replace(/\s/g, '').toLowerCase();
                 data.nodes[aname] = {id: aname, name: actor,
                     view: AActor.view3D,
-                    expandView: AActor.viewDeep3D,
+                    expandView: AActor.handle,
                     expandLink: `actor/get?id=${aname}`,
                 };
                 data.links.push({source: aname, target: usecase.id, value: 0.1, width: 3, color: 'gray'});
@@ -357,6 +459,10 @@ export default class AUsecase {
         AUsecase.viewDeep3D(result, 'new');
         AUsecase.showDetail(result);
     }
+    static handleList(result) {
+        AUsecase.viewList3D(result, 'new');
+        AUsecase.showListDetail(result);
+    }
 
     handleEvent(event, scenario) {
         if (event.includes('scenario.started')) {
@@ -368,7 +474,6 @@ export default class AUsecase {
         } else if (event.includes('step.started')) {
             w2ui['scenariolist'].set(scenario.currentstep, {"w2ui": {"style": "background-color: #bbffff"}});
             let steprec = w2ui['scenariolist'].get(scenario.currentstep);
-            console.log(steprec);
         } else if (event.includes('step.completed')) {
             w2ui['scenariolist'].set(scenario.currentstep, {"w2ui": {"style": "background-color: #bbffbb"}});
 

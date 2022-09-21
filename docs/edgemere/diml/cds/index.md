@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Common Data Service
+title: Package Common Data Service
 permalink: package--edgemere-diml-cds
-parent: Distributed Information Management Layer
-grand_parent: edgemere
+parent: Package Distributed Information Management Layer
+grand_parent: Package edgemere
 has_children: true
 ---
 
@@ -114,8 +113,7 @@ can be found [here](environment--edgemere-diml-cds-dev)
 
 Services in the dev environment
 
-* frontend : diml_cds_web
-* gw : diml_cds_gw
+* web : diml_cds_web
 
 
 ### test
@@ -125,8 +123,7 @@ can be found [here](environment--edgemere-diml-cds-test)
 
 Services in the test environment
 
-* frontend : diml_cds_web
-* gw : diml_cds_gw
+* web : diml_cds_web
 
 
 ### prod
@@ -136,8 +133,7 @@ can be found [here](environment--edgemere-diml-cds-prod)
 
 Services in the prod environment
 
-* frontend : diml_cds_web
-* gw : diml_cds_gw
+* web : diml_cds_web
 
 
 ## Activities and Flows

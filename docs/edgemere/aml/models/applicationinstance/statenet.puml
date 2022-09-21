@@ -2,45 +2,45 @@
 
 
 
-state ApplicationInstance #lightblue {
+state ApplicationInstance #88cccc {
 
-    state Init #lightblue {
+    state Init #88cccc {
     }
 
-    state Initializing #lightblue {
+    state Initializing #88cccc {
     }
 
-    state Running #lightblue {
+    state Running #88cccc {
     }
 
-    state Stopping #lightblue {
+    state Stopping #88cccc {
     }
 
-    state Stopped #lightblue {
+    state Stopped #88cccc {
     }
 
-    state Exit #lightblue {
+    state Exit #88cccc {
     }
 
-    state Failed #lightblue {
+    state Failed #88cccc {
     }
+
+
+
+
+Init -[#black]--> Initializing : create
+
+Initializing -[#black]--> Running : provisoned
+
+Running -[#black]--> Stopping : kill
+
+Stopping -[#black]--> Stopped : stopped
+
+Stopped -[#black]--> Exit : exit
+
+Stopped -[#black]--> Failed : failed
 
 }
-
-
-Init --> Initializing : create
-
-Initializing --> Running : provisoned
-
-Running --> Stopping : kill
-
-Stopping --> Stopped : stopped
-
-Stopped --> Exit : exit
-
-Stopped --> Failed : failed
-
-
 
 
 @enduml

@@ -11,17 +11,13 @@ package "Data Orchestrator" #lightblue {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as diml_dml_do_container
+      file "node server.js\n" as diml_dml_do_container
       REST --> diml_dml_do_container
 
   
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
   
   }
   folder images #ffffff {
@@ -33,9 +29,6 @@ package "Data Orchestrator" #lightblue {
   
       artifact "diml_dml_do_web" as diml_dml_do_web
       web_container --> diml_dml_do_web
-    
-      artifact "diml_dml_do_gw" as diml_dml_do_gw
-      gateway_container --> diml_dml_do_gw
     
   }
 }

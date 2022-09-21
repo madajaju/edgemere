@@ -2,7 +2,7 @@
 
 
 
-package "Telemetry Consumer" #lightgray {
+package "Telemetry Consumer" #cccccc {
 
     interface "Telemetry Consumer" as i {
             /edgemere/cpl/tc/list()
@@ -16,7 +16,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Telemetry Consumer" #lightgray {
+package "Telemetry Consumer" #cccccc {
     
 }
 

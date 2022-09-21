@@ -2,7 +2,7 @@
 layout: default
 title: Class DataStrategy
 permalink: class-DataStrategy
-parent: classes
+parent: Classes
 ---
 
 # DataStrategy

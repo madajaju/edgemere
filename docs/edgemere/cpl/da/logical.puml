@@ -2,7 +2,7 @@
 
 
 
-package "Device Agent" #lightgray {
+package "Device Agent" #cccccc {
 
     interface "Device Agent" as i {
             /edgemere/cpl/da/connect()
@@ -16,7 +16,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Device Agent" #lightgray {
+package "Device Agent" #cccccc {
     
 }
 

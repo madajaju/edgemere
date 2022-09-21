@@ -2,7 +2,7 @@
   interface CLI
   interface Web
   interface WebSocket
-package "Environment Management" #lightgreen {
+package "Environment Management" #88cc88 {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {
@@ -11,17 +11,13 @@ package "Environment Management" #lightgreen {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as sml_em_container
+      file "node server.js\n" as sml_em_container
       REST --> sml_em_container
 
   
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
-    file "gateway" as gateway_container
-    REST --> gateway_container
-    socket ---> gateway_container
   
   }
   folder images #ffffff {
@@ -33,9 +29,6 @@ package "Environment Management" #lightgreen {
   
       artifact "sml_em_web" as sml_em_web
       web_container --> sml_em_web
-    
-      artifact "sml_em_gw" as sml_em_gw
-      gateway_container --> sml_em_gw
     
   }
 }

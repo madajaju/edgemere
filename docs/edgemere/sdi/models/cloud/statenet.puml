@@ -2,12 +2,12 @@
 
 
 
-state Cloud #lightyellow {
+state Cloud #cccc88 {
+
+
+
 
 }
-
-
-
 
 
 @enduml

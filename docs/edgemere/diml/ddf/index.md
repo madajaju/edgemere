@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Data Definition Framework
+title: Package Data Definition Framework
 permalink: package--edgemere-diml-ddf
-parent: Distributed Information Management Layer
-grand_parent: edgemere
+parent: Package Distributed Information Management Layer
+grand_parent: Package edgemere
 has_children: true
 ---
 
@@ -141,8 +140,7 @@ can be found [here](environment--edgemere-diml-ddf-dev)
 
 Services in the dev environment
 
-* frontend : diml_ddf_web
-* gw : diml_ddf_gw
+* web : diml_ddf_web
 
 
 ### test
@@ -152,8 +150,7 @@ can be found [here](environment--edgemere-diml-ddf-test)
 
 Services in the test environment
 
-* frontend : diml_ddf_web
-* gw : diml_ddf_gw
+* web : diml_ddf_web
 
 
 ### prod
@@ -163,8 +160,7 @@ can be found [here](environment--edgemere-diml-ddf-prod)
 
 Services in the prod environment
 
-* frontend : diml_ddf_web
-* gw : diml_ddf_gw
+* web : diml_ddf_web
 
 
 ## Activities and Flows

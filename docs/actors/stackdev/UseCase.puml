@@ -6,19 +6,19 @@ left to right direction
 Actor "Stack Developer" as StackDeveloper
 
 
-rectangle "Environment Management" as em #lightgreen {
+rectangle "Environment Management" as em #88cc88 {
         usecase "Manage Environment" as ManageEnvironment
     StackDeveloper --> ManageEnvironment
 
 }
 
-rectangle "Service Orchestrator" as so #lightgreen {
+rectangle "Service Orchestrator" as so #88cc88 {
         usecase "Manage Stacks" as ManageStacks
     StackDeveloper --> ManageStacks
 
 }
 
-rectangle "Service Management Layer" as sml #lightgreen {
+rectangle "Service Management Layer" as sml #88cc88 {
         usecase "Manage Services" as ManageServices
     StackDeveloper --> ManageServices
 

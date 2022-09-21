@@ -16,20 +16,20 @@ state DataReservation #lightblue {
     state Rejected #lightblue {
     }
 
+
+
+
+Init -[#black]--> Created : create
+
+Init -[#black]--> Confirmed : confirm
+
+Init -[#black]--> Rejected : free
+
+Created -[#black]--> Confirmed : confirm
+
+Created -[#black]--> Rejected : free
+
 }
-
-
-Init --> Created : create
-
-Init --> Confirmed : confirm
-
-Init --> Rejected : free
-
-Created --> Confirmed : confirm
-
-Created --> Rejected : free
-
-
 
 
 @enduml

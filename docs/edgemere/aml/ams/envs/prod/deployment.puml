@@ -3,49 +3,43 @@
 left to right direction
 
 
-boundary ailtire_appname_aml_family #red
+boundary parent #black
 
 
-entity ailtire_appname_aml_ams_family #black
+entity children #blue
 
 
 
 
-package "aml_ams" #lightblue {
-    queue childrennet #black [
-            <b><color:white>children</color></b>
-    ]
-    
-    childrennet -[#black]- ailtire_appname_aml_ams_family
-    
-    queue siblingnet #blue [
-            <b><color:white>sibling</color></b>
-    ]
-    
-    queue parentnet #red [
+package "aml_ams" #88cccc {
+    queue parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#red]- ailtire_appname_aml_family
+    parentnet -[#black]- parent
+    
+    queue childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#blue]- children
+    
+    queue siblingsnet #red [
+            <b><color:white>siblings</color></b>
+    ]
     
 
-node "frontend" as frontendService
-node "gw" as gwService
+node "web" as webService
 
 
         artifact "aml_ams_web" as aml_ams_webimage
     
-        artifact "aml_ams_gw" as aml_ams_gwimage
-    
 }
 
-frontendService -[#blue]- siblingnet
+webService -[#blue]- childrennet
 
-gwService -[#black]- childrennet
-
-gwService -[#blue]- siblingnet
-frontendService .... aml_ams_webimage
-gwService .... aml_ams_gwimage
+webService -[#red]- siblingsnet
+webService .... aml_ams_webimage
 
 
 @enduml

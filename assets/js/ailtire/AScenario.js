@@ -1,4 +1,4 @@
-import {AText, APackage, AModel, AAction, AObject} from "./index.js";
+import {AMainWindow, AText, APackage, AModel, AAction, AObject,A3DGraph, ASelectedHUD} from "./index.js";
 
 const scolor = {
     started: "#00ffff",
@@ -64,7 +64,7 @@ export default class AScenario {
         let height = (nameArray.length * AAction.default.fontSize) / 2 + 10;
         let width = maxLetters * (AAction.default.fontSize / 2) + 20;
         let depth = height * 2;
-        let radius = Math.max(Math.sqrt(width * width + height * height), Math.sqrt(height * height + depth * depth), Math.sqrt(width * width + depth * depth));
+        let radius = Math.max(Math.sqrt(width * width + height * height), Math.sqrt(height * height + depth * depth), Math.sqrt(width * width + depth * depth))/2;
         return {w: width, h: height * 2, d: height * 2, r: radius};
     }
 
@@ -113,7 +113,7 @@ export default class AScenario {
         box.aid = node.id;
         node.box = size.r;
         node.expandLink = `scenario/get?id=${node.id}`;
-        node.expandView = AScenario.viewDeep3D;
+        node.expandView = AScenario.handle;
         node.getDetail = AScenario.getDetail;
         return box;
     }
@@ -206,6 +206,7 @@ export default class AScenario {
 
         w2ui['objlist'].records = records;
         w2ui['objlist'].refresh();
+        ASelectedHUD.update('Scenario', records);
     }
     static viewStep3D(node, type) {
         let opacity = node.opacity || 1;
@@ -248,9 +249,31 @@ export default class AScenario {
         data.nodes[scenario.id] = {
             id: scenario.id, name: scenario.name,
             view: AScenario.view3D,
-            expandView: AScenario.viewDeep3D,
-            expandLink: `scenario/get?id=${scenario.id}`
+            expandView: AScenario.handle,
+            expandLink: `scenario/get?id=${scenario.id}`,
+            bbox: {
+                x: {min:-600, max:600},
+                y: {min:-600, max:600},
+                z: {min:500, max:800}
+            },
         };
+/*
+        let geometry = new THREE.BoxGeometry(1000, 1000, 1000);
+        const material = new THREE.MeshPhysicalMaterial({
+            color: "#ffffff",
+            transparent: true,
+            opacity: 0.2,
+            depthTest: true,
+            depthWrite: true,
+            alphaTest: 0,
+            reflectivity: 0.2,
+            thickness: 6,
+            metalness: 0,
+            side: THREE.DoubleSide
+        });
+        const box = new THREE.Mesh(geometry, material);
+        window.graph.addObject(box);
+ */
         let rbox = {};
         let luid = scenario.id;
         for (let i in scenario.steps) {
@@ -260,10 +283,12 @@ export default class AScenario {
             data.nodes[uid] = {
                 id: uid, name: step.action.name,
                 view: AScenario.viewStep3D,
-                expandView: AScenario.viewDeep3D,
+                expandView: AScenario.handle,
                 expandLink: `scenario/get?id=${scenario.id}`,
-                rbox: rbox, box: 10
+                rbox: rbox,
+                box: 10
             };
+            data.links.push({source: scenario.id, target: uid, value: 0.1, width: 0, color: '#cccccc'});
             // Add the action for the step.
             let action = step.action;
             if (!data.nodes.hasOwnProperty(action.name)) {
@@ -290,7 +315,7 @@ export default class AScenario {
                         name: pkg.name,
                         color: pkg.color,
                         view: APackage.view3D,
-                        expandView: APackage.viewDeep3D,
+                        expandView: APackage.handle,
                         expandLink: `package/get?id=${pkg.shortname}`,
                         rbox: {
                             parent: scenario.id,
@@ -310,7 +335,7 @@ export default class AScenario {
                 if (!data.nodes.hasOwnProperty(cls)) {
                     data.nodes[cls] = {
                         id: cls, name: cls, view: AModel.view3D,
-                        expandView: AModel.viewDeep3D,
+                        expandView: AModel.handle,
                         expandLink: `model/get?id=${cls}`,
                         rbox: {
                             parent: scenario.id,
@@ -342,6 +367,7 @@ export default class AScenario {
     static handle(result) {
         AScenario.viewDeep3D(result, 'new');
         AScenario.showDetail(result);
+        AMainWindow.currentView = "scenario"
 
         // Scenario List for simulation.
         let records = [];
@@ -450,10 +476,12 @@ export default class AScenario {
             let parent = window.graph.getSelectedNode();
             // Because the event is not a scenario it is an object event.
             let object = scenario;
-            if (parent) {
-                AObject.addObject(object, parent.id);
-            } else {
-                AObject.addObject(object);
+            if(typeof object === 'object') {
+                if (parent && parent.id) {
+                    AObject.addObject(object, parent.id);
+                } else {
+                    AObject.addObject(object);
+                }
             }
         }
         w2ui['scenariolist'].refresh();

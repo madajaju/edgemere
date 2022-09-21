@@ -1,8 +1,7 @@
 ---
-layout: default
-title: Security Aspect
+title: Package Security Aspect
 permalink: package--edgemere-sa
-parent: edgemere
+parent: Package edgemere
 has_children: true
 ---
 
@@ -114,8 +113,7 @@ can be found [here](environment--edgemere-sa-dev)
 
 Services in the dev environment
 
-* frontend : sa_web
-* gw : sa_gw
+* web : sa_web
 
 
 ### test
@@ -125,8 +123,7 @@ can be found [here](environment--edgemere-sa-test)
 
 Services in the test environment
 
-* frontend : sa_web
-* gw : sa_gw
+* web : sa_web
 
 
 ### prod
@@ -136,8 +133,7 @@ can be found [here](environment--edgemere-sa-prod)
 
 Services in the prod environment
 
-* frontend : sa_web
-* gw : sa_gw
+* web : sa_web
 
 
 ## Activities and Flows

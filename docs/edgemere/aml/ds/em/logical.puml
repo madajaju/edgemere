@@ -1,29 +1,29 @@
 @startuml
 
 
-package "Service Orchestrator" #lightgreen {
+package "Service Orchestrator" #88cc88 {
     }
 
-package "Service Management Layer" #lightgreen {
+package "Service Management Layer" #88cc88 {
     
         class MultiCloud {
         }
     }
 
-package "Security Aspect" #pink {
+package "Security Aspect" #cc8888 {
     
         class PolicyCollection {
         }
     }
 
-package "Security Profile Manager" #pink {
+package "Security Profile Manager" #cc8888 {
     
         class SecurityProfile {
         }
     }
 
 
-package "Environment Management" #lightgreen {
+package "Environment Management" #88cc88 {
 
     interface "Environment Management" as i {
             /edgemere/aml/ds/em/environment/addpolicies()
@@ -41,7 +41,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Environment Management" #lightgreen {
+package "Environment Management" #88cc88 {
         class "Environment" {
                  string name
                     }

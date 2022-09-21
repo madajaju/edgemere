@@ -1,8 +1,7 @@
 ---
-layout: default
 title: Manage Assets
 permalink: usecase-ManageAssets
-parent: usecases
+parent: UseCases
 ---
 # Manage Assets
 

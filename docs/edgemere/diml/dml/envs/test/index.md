@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--edgemere-diml-dml-test
-nav_exclude: true
+parent: environment-test
+grand_parent: Environments
 ---
 
-### test
+### Data Management Layer test
 
 
 #### Deployment

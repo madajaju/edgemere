@@ -5,12 +5,12 @@ package "Developer Services" #lightblue {
 
 }
 
-package "Identity Aspect" #pink {
+package "Identity Aspect" #cc8888 {
 
 }
 
 
-package "Workflow Services" #lightblue {
+package "Workflow Services" #88cccc {
 
     interface "Workflow Services" as i {
     
@@ -28,7 +28,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Workflow Services" #lightblue {
+package "Workflow Services" #88cccc {
 
 
 }

@@ -2,12 +2,12 @@
 
 
 
-state NetworkHardware #lightgray {
+state NetworkHardware #cccccc {
+
+
+
 
 }
-
-
-
 
 
 @enduml

@@ -3,7 +3,7 @@ module.exports = {
     name: 'Environment Management',
     description: 'Environment Management is a subsystem that contains models and services for managing different' +
         ' environments. Examples of environments are local,dev,test,production.',
-    color: '#lightgreen',
+    color: '#88cc88',
     depends: [ "Service Orchestrator" ]
 };
 

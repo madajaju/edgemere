@@ -3,43 +3,51 @@
 left to right direction
 
 
-boundary ailtire_parent_network_family #red
+boundary parent #black
 
 
-entity ailtire_appname_sa_pe_family #black
+entity children #blue
 
 
 
 
-package "sa_pe" #pink {
-    queue childrennet #black [
-            <b><color:white>children</color></b>
-    ]
-    
-    childrennet -[#black]- ailtire_appname_sa_pe_family
-    
-    queue siblingnet #blue [
-            <b><color:white>sibling</color></b>
-    ]
-    
-    queue parentnet #red [
+package "sa_pe" #cc8888 {
+    queue parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#red]- ailtire_parent_network_family
+    parentnet -[#black]- parent
+    
+    queue childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+    
+    childrennet -[#blue]- children
+    
+    queue siblingsnet #red [
+            <b><color:white>siblings</color></b>
+    ]
     
 
 node "web" as webService
+node "engine" as engineService
 
 
-        artifact "sa_pe_web:latest" as sa_pe_weblatestimage
+        artifact "sa_pe_web" as sa_pe_webimage
+    
+        artifact "sa_pe_engine" as sa_pe_engineimage
     
 }
 
-webService -[#black]- childrennet
+webService -[#blue]- childrennet
 
-webService -[#red]- parentnet
-webService .... sa_pe_weblatestimage
+webService -[#red]- siblingsnet
+
+engineService -[#blue]- childrennet
+
+engineService -[#red]- siblingsnet
+webService .... sa_pe_webimage
+engineService .... sa_pe_engineimage
 
 
 @enduml

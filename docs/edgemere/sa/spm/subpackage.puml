@@ -1,16 +1,16 @@
 @startuml
 
 
-package "Security Aspect" #pink {
+package "Security Aspect" #cc8888 {
 
 }
 
-package "Identity Aspect" #pink {
+package "Identity Aspect" #cc8888 {
 
 }
 
 
-package "Security Profile Manager" #pink {
+package "Security Profile Manager" #cc8888 {
 
     interface "Security Profile Manager" as i {
     
@@ -39,7 +39,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Security Profile Manager" #pink {
+package "Security Profile Manager" #cc8888 {
 
 
 }

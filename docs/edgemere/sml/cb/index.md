@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Cloud Broker
+title: Package Cloud Broker
 permalink: package--edgemere-sml-cb
-parent: Service Management Layer
-grand_parent: edgemere
+parent: Package Service Management Layer
+grand_parent: Package edgemere
 ---
 
 # Cloud Broker
@@ -123,8 +122,7 @@ can be found [here](environment--edgemere-sml-cb-dev)
 
 Services in the dev environment
 
-* frontend : sml_cb_web
-* gw : sml_cb_gw
+* web : sml_cb_web
 
 
 ### test
@@ -134,8 +132,7 @@ can be found [here](environment--edgemere-sml-cb-test)
 
 Services in the test environment
 
-* frontend : sml_cb_web
-* gw : sml_cb_gw
+* web : sml_cb_web
 
 
 ### prod
@@ -145,8 +142,7 @@ can be found [here](environment--edgemere-sml-cb-prod)
 
 Services in the prod environment
 
-* frontend : sml_cb_web
-* gw : sml_cb_gw
+* web : sml_cb_web
 
 
 ## Activities and Flows

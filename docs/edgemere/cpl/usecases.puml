@@ -5,7 +5,7 @@ Actor "IT Operations" as ITOperations
 Actor "IT Operations" as ITOperations
 
 
-rectangle "Common Physical Layer" #lightgray {
+rectangle "Common Physical Layer" #cccccc {
 usecase "ManageDataCenter" as ManageDataCenter
     ITOperations --> ManageDataCenter
     usecase "ManageInfrastructure" as ManageInfrastructure

@@ -2,12 +2,12 @@
 
 
 
-state Workload #lightblue {
+state Workload #88cccc {
+
+
+
 
 }
-
-
-
 
 
 @enduml

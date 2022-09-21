@@ -6,7 +6,7 @@ left to right direction
 Actor "Data Scientist" as DataScientist
 
 
-rectangle "Application Management Layer" as aml #lightblue {
+rectangle "Application Management Layer" as aml #88cccc {
         usecase "Manage AI Models" as ManageAIModels
     DataScientist --> ManageAIModels
 

@@ -11,7 +11,7 @@ entity appname_s_spm_family #black
 
 
 
-package "s_spm" #pink {
+package "s_spm" #cc8888 {
     queue childrennet #black [
             <b><color:white>children</color></b>
     ]

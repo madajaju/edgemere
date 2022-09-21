@@ -2,7 +2,7 @@
 layout: default
 title: Class StackDefinition
 permalink: class-StackDefinition
-parent: classes
+parent: Classes
 ---
 
 # StackDefinition

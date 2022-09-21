@@ -1,13 +1,13 @@
 @startuml
 
 
-package "Software Defined Infrastructure" #lightyellow {
+package "Software Defined Infrastructure" #cccc88 {
     
         class Cloud {
         }
     }
 
-package "Cloud Broker" #lightgreen {
+package "Cloud Broker" #88cc88 {
     
         class ResourceMap {
         }
@@ -19,14 +19,14 @@ package "Cloud Broker" #lightgreen {
         }
     }
 
-package "Common Physical Layer" #lightgray {
+package "Common Physical Layer" #cccccc {
     
         class PhysicalProfile {
         }
     }
 
 
-package "Cloud Broker" #lightgreen {
+package "Cloud Broker" #88cc88 {
 
     interface "Cloud Broker" as i {
             /edgemere/sml/cb/billing/list()
@@ -47,7 +47,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Cloud Broker" #lightgreen {
+package "Cloud Broker" #88cc88 {
         class "CloudType" {
                  string name
                              create()

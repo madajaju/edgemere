@@ -1,8 +1,9 @@
 ---
 layout: default
-title: classes
+title: Classes
 permalink: classes
 has_children: true
+nav_order: 5
 ---
 # Classes
 

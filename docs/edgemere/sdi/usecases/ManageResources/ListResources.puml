@@ -5,17 +5,17 @@ actor "IT Operations"
 
 entity EventBus
 
-box Software Defined Infrastructure #lightyellow
+box Software Defined Infrastructure #cccc88
     boundary sdi #white
 end box
 
 
-box Common Physical Layer #lightgray
+box Common Physical Layer #cccccc
             participant device
             participant datacenter
     end box
 
-box Software Defined Infrastructure #lightyellow
+box Software Defined Infrastructure #cccc88
             participant cloud
     end box
 

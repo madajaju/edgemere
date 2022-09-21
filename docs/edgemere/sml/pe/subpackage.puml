@@ -1,12 +1,12 @@
 @startuml
 
 
-package "Software Defined Infrastructure" #lightyellow {
+package "Software Defined Infrastructure" #cccc88 {
 
 }
 
 
-package "Provision Engine" #lightgreen {
+package "Provision Engine" #88cc88 {
 
     interface "Provision Engine" as i {
     
@@ -24,7 +24,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Provision Engine" #lightgreen {
+package "Provision Engine" #88cc88 {
 
 
 }

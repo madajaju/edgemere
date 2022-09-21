@@ -4,7 +4,7 @@ left to right direction
 Actor "ITOperations" as ITOperations
 
 
-rectangle "Service Repository" #lightgreen {
+rectangle "Service Repository" #88cc88 {
 usecase "ManageAssets" as ManageAssets
     ITOperations --> ManageAssets
     }

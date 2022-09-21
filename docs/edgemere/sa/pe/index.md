@@ -1,9 +1,8 @@
 ---
-layout: default
-title: Policy Engine
+title: Package Policy Engine
 permalink: package--edgemere-sa-pe
-parent: Security Aspect
-grand_parent: edgemere
+parent: Package Security Aspect
+grand_parent: Package edgemere
 ---
 
 # Policy Engine
@@ -102,7 +101,8 @@ can be found [here](environment--edgemere-sa-pe-dev)
 
 Services in the dev environment
 
-* web : sa_pe_web:latest
+* web : sa_pe_web
+* engine : sa_pe_engine
 
 
 ### test
@@ -112,7 +112,8 @@ can be found [here](environment--edgemere-sa-pe-test)
 
 Services in the test environment
 
-* web : sa_pe_web:latest
+* web : sa_pe_web
+* engine : sa_pe_engine
 
 
 ### prod
@@ -122,7 +123,8 @@ can be found [here](environment--edgemere-sa-pe-prod)
 
 Services in the prod environment
 
-* web : sa_pe_web:latest
+* web : sa_pe_web
+* engine : sa_pe_engine
 
 
 ## Activities and Flows

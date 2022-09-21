@@ -2,10 +2,11 @@
 layout: default
 title: Environment test
 permalink: environment--edgemere-sa-spm-test
-nav_exclude: true
+parent: environment-test
+grand_parent: Environments
 ---
 
-### test
+### Security Profile Manager test
 
 
 #### Deployment

@@ -2,12 +2,12 @@
 
 
 
-state User #pink {
+state User #cc8888 {
+
+
+
 
 }
-
-
-
 
 
 @enduml

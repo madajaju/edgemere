@@ -2,25 +2,56 @@
 left to right direction
 
 
-
-state "ITOperations" as ITOperations {
-    state "Manage Assets" as ITOperationsManageAssets {
-    }
-}
-state "edgemere" as edgemere #lightgreen {
-state "sml" as edgemeresml #lightgreen {
-state "sr" as edgemeresmlsr #lightgreen {
-state "assets" as edgemeresmlsrassets #lightgreen {
-state "list" as edgemeresmlsrassetslist #lightgreen {
-}
-}
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml {
+package "sr" as edgemeresmlsr #88cc88 {
+ component "assets" as edgemeresmlsrassets
+ interface "list" as edgemeresmlsrassetslist
+edgemeresmlsrassets -- edgemeresmlsrassetslist
 }
 }
 }
 
-ITOperationsManageAssets --> edgemeresmlsrassetslist
+    
+    package "edgemere" as edgemere {
+package "sml" as edgemeresml {
+package "sr" as edgemeresmlsr #88cc88 {
+ component "data" as edgemeresmlsrdata
+ interface "govern" as edgemeresmlsrdatagovern
+edgemeresmlsrdata -- edgemeresmlsrdatagovern
+}
+}
+}
+
+    
 
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @enduml

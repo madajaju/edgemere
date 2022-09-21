@@ -1,15 +1,15 @@
 @startuml
 
 
-package "Software Defined Infrastructure" #lightyellow {
+package "Software Defined Infrastructure" #cccc88 {
 
 }
 
-package "Security Aspect" #pink {
+package "Security Aspect" #cc8888 {
 
 }
 
-package "Service Management Layer" #lightgreen {
+package "Service Management Layer" #88cc88 {
 
 }
 

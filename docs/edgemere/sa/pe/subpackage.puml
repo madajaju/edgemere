@@ -2,7 +2,7 @@
 
 
 
-package "Policy Engine" #pink {
+package "Policy Engine" #cc8888 {
 
     interface "Policy Engine" as i {
     
@@ -20,7 +20,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Policy Engine" #pink {
+package "Policy Engine" #cc8888 {
 
 
 }

@@ -2,45 +2,37 @@
 
 
 
-state Reservation #lightyellow {
+state Reservation #cccc88 {
 
-    state Init #lightyellow {
+    state Init #cccc88 {
     }
 
-    state Created #lightyellow {
+    state Created #cccc88 {
     }
 
-    state Confirmed #lightyellow {
+    state Confirmed #cccc88 {
     }
 
-    state Rejected #lightyellow {
+    state Rejected #cccc88 {
     }
 
+
+
+
+Init -[#black]--> Created : create
+
+Init -[#black]--> Confirmed : confirm
+
+Init -[#black]--> Rejected : free
+
+Created -[#black]--> Confirmed : confirm
+
+Created -[#black]--> Rejected : free
+
 }
 
-
-Init --> Created : create
-
-Init --> Confirmed : confirm
-
-Init --> Rejected : free
-
-Created --> Confirmed : confirm
-
-Created --> Rejected : free
-
-
-
- state "edgemere" as edgemere #lightyellow {
-state "sdi" as edgemeresdi #lightyellow {
-state "io" as edgemeresdiio #lightyellow {
-state "provision" as edgemeresdiioprovision #lightyellow {
-}
-}
-}
-}
-
- Confirmed -[#black]--> edgemeresdiioprovision
+ 
+ Confirmed -[#black]--> Null
  
  
  Rejected -[#black]--> Null

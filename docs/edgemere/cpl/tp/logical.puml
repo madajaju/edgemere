@@ -2,7 +2,7 @@
 
 
 
-package "Telemetry Producer" #lightgray {
+package "Telemetry Producer" #cccccc {
 
     interface "Telemetry Producer" as i {
             /edgemere/cpl/tp/setparent()
@@ -16,7 +16,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Telemetry Producer" #lightgray {
+package "Telemetry Producer" #cccccc {
     
 }
 

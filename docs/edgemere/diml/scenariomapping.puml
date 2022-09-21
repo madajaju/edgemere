@@ -2,6 +2,41 @@
 left to right direction
 
 
+    package "edgemere" as edgemere {
+ component "diml" as edgemerediml
+ interface "find" as edgemeredimlfind
+edgemerediml -- edgemeredimlfind
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @enduml

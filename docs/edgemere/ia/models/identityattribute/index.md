@@ -2,7 +2,7 @@
 layout: default
 title: Class IdentityAttribute
 permalink: class-IdentityAttribute
-parent: classes
+parent: Classes
 ---
 
 # IdentityAttribute

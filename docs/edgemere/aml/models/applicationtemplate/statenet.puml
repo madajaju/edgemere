@@ -2,12 +2,12 @@
 
 
 
-state ApplicationTemplate #lightblue {
+state ApplicationTemplate #88cccc {
+
+
+
 
 }
-
-
-
 
 
 @enduml

@@ -11,7 +11,7 @@ package "Data Controller" #lightblue {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as diml_dml_dc_container
+      file "node server.js\n" as diml_dml_dc_container
       REST --> diml_dml_dc_container
 
   

@@ -44,7 +44,10 @@ export class Graph3D {
                 return node.box || 20;
             })
             .nodeLabel(node => {
-                let label = node.description || node.name;
+                let label = node.name;
+                if (node.description) {
+                    label = `<div><h1>${node.name}</h1><p>${node.description}</p></div>`;
+                }
                 return label;
             })
             .nodeThreeObject(node => {
@@ -198,6 +201,7 @@ export class Graph3D {
                     return "gray";
                 }
             })
+            .cooldownTime(5000)
             .linkDirectionalParticleSpeed(0.006)
             .enableNodeDrag(true)
             .graphData(this.ndata)
@@ -219,9 +223,18 @@ export class Graph3D {
             .d3Force('link')
             .distance(link => link.value * 10);
         this.graph
-            .d3Force('collide', d3.forceCollide().radius((d) => {
-                return d.box || 20;
+            .d3Force('charge', d3.forceManyBody().strength((d) => {
+                return 40;
             }))
+            .d3Force('collide', Graph3D.collide()
+                .radius((d) => {
+                    if (d.box && typeof d.box === 'number') {
+                        return d.box * 2;
+                    } else {
+                        return 20;
+                    }
+                })
+            )
             .d3Force('plane', Graph3D.forceOnPlane());
 
         this.graph.numDimensions(3);
@@ -330,9 +343,9 @@ export class Graph3D {
             }
         }
         // Reset the links array if the links are not duplicated based on the options.
-        if(!this.options.linkDuplicate) {
+        if (!this.options.linkDuplicate) {
             let newLinks = [];
-            for(let i in linkmap) {
+            for (let i in linkmap) {
                 let link = this.ndata.links[linkmap[i][0]];
                 newLinks.push(link);
             }
@@ -477,82 +490,119 @@ export class Graph3D {
             nmap = {};
 
         function force(alpha) {
-            for (let i = 0, n = nodes.length, node, k = alpha * 0.1; i < n; ++i) {
-                node = nodes[i];
+            for (let i = 0, n = nodes.length, k = alpha * 0.1; i < n; ++i) {
+                let node = nodes[i];
+                if(node.fx) { node.x = node.fx; node.vx = 0; }
+                if(node.fy) { node.y = node.fy; node.vy = 0; }
+                if(node.fz) { node.z = node.fz; node.vz = 0; }
                 if (node.rbox) {
                     let parent = nodes[nmap[node.rbox.parent]];
                     if (parent) { // the Parent is found then go forward. If not then don't.
-                        if(node.rbox.fx) {
+                        // IF fx is defined on the parent then force it to the fx to lock the position.
+                        if (parent.fx != undefined) {
+                            parent.x = parent.fx;
+                            parent.vx = 0;
+                        }
+                        if (parent.fy != undefined) {
+                            parent.y = parent.fy;
+                            parent.vy = 0;
+                        }
+                        if (parent.fz != undefined) {
+                            parent.z = parent.fz;
+                            parent.vz = 0;
+                        }
+
+                        if (node.rbox.fx != undefined) {
                             node.x = parent.x + node.rbox.fx;
+                            node.fx = node.x;
                             node.vx = 0;
                         } else if (node.rbox.x) {
                             if (node.rbox.x.min === node.rbox.x.max) {
                                 let newx = parent.x + node.rbox.x.min;
-                                node.vx = (node.x - newx) / 2 * k;
+                                node.vx = 0;
+                                node.fx = newx;
                                 node.x = newx;
                             } else {
+                                // Look ahead to where it is going.
                                 let newx = node.x + node.vx;
+                                // Calculate the min and max values based on the parent location
                                 let min = parent.x + node.rbox.x.min;
                                 let max = parent.x + node.rbox.x.max;
                                 let v = node.vx;
-                                if (Math.abs(node.vx) > Math.abs(max - min)) {
-                                    v = (max - min) / 4;
-                                }
+                                // If the boundary is hit then set the value to the boundary
+                                // and set the velocity to 1/4 of the distance to the middle.
                                 if (newx < min) {
+                                    // Bounce the velocity back to the middle by 1/4.
+                                    let v = Math.abs(max - min) / 2 / 4;
                                     node.x = min;
-                                    node.vx = -v * k;
+                                    node.vx = v * k;
                                 } else if (newx > max) {
+                                    // Bounce the velocity back to the middle by 1/4.
+                                    let v = Math.abs(max - min) / 2 / 4;
                                     node.x = max;
                                     node.vx = -v * k;
                                 }
                             }
                         }
-                        if(node.rbox.fx) {
-                            node.y = parent.x + node.rbox.fy;
+                        if (node.rbox.fy != undefined) {
+                            node.y = parent.y + node.rbox.fy;
+                            node.fy = node.y;
                             node.vy = 0;
                         } else if (node.rbox.y) {
-                            let newy = node.y + node.vy;
-                            let min = parent.y + node.rbox.y.min;
-                            let max = parent.y + node.rbox.y.max;
-                            let v = node.vy;
                             if (node.rbox.y.min === node.rbox.y.max) {
                                 let newy = parent.y + node.rbox.y.min;
-                                node.vy = (node.y - newy) / 2;
+                                node.vy = 0;
                                 node.y = newy;
+                                node.fy = newy;
                             } else {
-                                if (Math.abs(node.vy) > Math.abs(max - min)) {
-                                    v = (max - min) / 4;
-                                }
+                                // Look ahead to where it is going.
+                                let newy = node.y + node.vy;
+                                // Calculate the min and max values based on the parent location
+                                let min = parent.y + node.rbox.y.min;
+                                let max = parent.y + node.rbox.y.max;
+                                let v = node.vy;
+                                // If the boundary is hit then set the value to the boundary
+                                // and set the velocity to 1/4 of the distance to the middle.
                                 if (newy < min) {
+                                    // Bounce the velocity back to the middle by 1/4.
+                                    let v = Math.abs(max - min) / 2 / 4;
                                     node.y = min;
-                                    node.vy = -v * k;
+                                    node.vy = v * k;
                                 } else if (newy > max) {
+                                    // Bounce the velocity back to the middle by 1/4.
+                                    let v = Math.abs(max - min) / 2 / 4;
                                     node.y = max;
                                     node.vy = -v * k;
                                 }
                             }
                         }
-                        if(node.rbox.fz) {
+                        if (node.rbox.fz != undefined) {
                             node.z = parent.z + node.rbox.fz;
+                            node.fz = node.z;
                             node.vz = 0;
                         } else if (node.rbox.z) {
                             if (node.rbox.z.min === node.rbox.z.max) {
                                 let newz = parent.z + node.rbox.z.min;
-                                node.vz = (node.z - newz) / 2 * k;
+                                node.vz = 0;
                                 node.z = newz;
+                                node.fz = newz;
                             } else {
                                 let newz = node.z + node.vz;
+                                // Calculate the min and max values based on the parent location
                                 let min = parent.z + node.rbox.z.min;
                                 let max = parent.z + node.rbox.z.max;
                                 let v = node.vz;
-                                if (Math.abs(node.vz) > Math.abs(max - min)) {
-                                    v = (max - min) / 2;
-                                }
+                                // If the boundary is hit then set the value to the boundary
+                                // and set the velocity to 1/4 of the distance to the middle.
                                 if (newz < min) {
+                                    // Bounce the velocity back to the middle by 1/4.
+                                    let v = Math.abs(max - min) / 2 / 4;
                                     node.z = min;
-                                    node.vz = -v * k;
+                                    node.vz = v * k;
                                 } else if (newz > max) {
-                                    node.z = max
+                                    // Bounce the velocity back to the middle by 1/4.
+                                    let v = Math.abs(max - min) / 2 / 4;
+                                    node.z = max;
                                     node.vz = -v * k;
                                 }
                             }
@@ -619,6 +669,167 @@ export class Graph3D {
 
         force.nodes = function (_) {
             return arguments.length ? ((nodes = _), force) : nodes;
+        };
+
+        return force;
+    }
+
+    static collide(radius) {
+        let nodes,
+            groups,
+            nDim,
+            radii,
+            random,
+            strength = 1,
+            iterations = 1;
+
+        function constant(_) {
+            return () => _;
+        }
+
+        function jiggle(random) {
+            return (random() - 0.5) * 1e-6;
+        }
+
+        function x$2(d) {
+            return d.x + d.vx;
+        }
+
+        function y$2(d) {
+            return d.y + d.vy;
+        }
+
+        function z$2(d) {
+            return d.z + d.vz;
+        }
+
+        if (typeof radius !== "function") radius = constant(radius == null ? 1 : +radius);
+
+        function force() {
+            let i, n = nodes.length,
+                tree,
+                node,
+                xi,
+                yi,
+                zi,
+                ri,
+                ri2;
+
+            for (var k = 0; k < iterations; ++k) {
+                for (let g in groups) {
+                    let group = groups[g];
+                    radii = group.radii;
+                    tree = d3.octree(group.nodes, x$2, y$2, z$2).visitAfter(prepare);
+
+                    for (i = 0; i < group.nodes.length; ++i) {
+                        node = group.nodes[i];
+                        ri = radii[node.index];
+                        ri2 = ri * ri;
+                        xi = node.x + node.vx;
+                        yi = node.y + node.vy;
+                        zi = node.z + node.vz;
+                        tree.visit(apply);
+                    }
+                }
+            }
+
+            function apply(treeNode, arg1, arg2, arg3, arg4, arg5, arg6) {
+                var args = [arg1, arg2, arg3, arg4, arg5, arg6];
+                var x0 = args[0],
+                    y0 = args[1],
+                    z0 = args[2],
+                    x1 = args[nDim],
+                    y1 = args[nDim + 1],
+                    z1 = args[nDim + 2];
+
+                var data = treeNode.data, rj = treeNode.r, r = ri + rj;
+                if (data) {
+                    if (data.index > node.index) {
+                        // x,y,z is the distance between the two nodes.
+                        let x = xi - data.x - data.vx;
+                        let y = yi - data.y - data.vy;
+                        let z = zi - data.z - data.vz;
+                        let l = x * x + y * y + z * z;
+                        // Distance between the two nodes.
+                        if (l < r * r) {
+                            if (x === 0) x = jiggle(random), l += x * x;
+                            if (y === 0) y = jiggle(random), l += y * y;
+                            if (z === 0) z = jiggle(random), l += z * z;
+                            l = (r - (l = Math.sqrt(l))) / l * strength;
+
+                            node.vx += (x *= l) * (r = (rj *= rj) / (ri2 + rj));
+                            node.vy += (y *= l) * r;
+                            node.vz += (z *= l) * r;
+
+                            data.vx -= x * (r = 1 - r);
+                            data.vy -= y * r;
+                            data.vz -= z * r;
+
+                        }
+                    }
+                    return;
+                }
+                return x0 > xi + r || x1 < xi - r
+                    || (nDim > 1 && (y0 > yi + r || y1 < yi - r))
+                    || (nDim > 2 && (z0 > zi + r || z1 < zi - r));
+            }
+        }
+
+        function prepare(treeNode) {
+            if (treeNode.data) return treeNode.r = radii[treeNode.data.index];
+            for (var i = treeNode.r = 0; i < Math.pow(2, nDim); ++i) {
+                if (treeNode[i] && treeNode[i].r > treeNode.r) {
+                    treeNode.r = treeNode[i].r;
+                }
+            }
+        }
+
+        function initialize() {
+            if (!nodes) return;
+            groups = {};
+            // Segment the nodes into groups and calcuate the radius for all.
+            for (let i in nodes) {
+                let node = nodes[i];
+                if (node.universe) {
+                    if (!groups.hasOwnProperty(node.universe)) {
+                        groups[node.universe] = {radii: [], nodes: []};
+                    }
+                    groups[node.universe].nodes.push(node);
+                } else {
+                    if (!groups.hasOwnProperty("NONE")) {
+                        groups.NONE = {radii: [], nodes: []};
+                    }
+                    groups.NONE.nodes.push(node);
+                }
+            }
+
+            for (let g in groups) {
+                let group = groups[g];
+                let n = group.nodes.length;
+                for (let i = 0; i < group.nodes.length; ++i) {
+                    let node = group.nodes[i]
+                    group.radii[node.index] = +radius(node, i, group.nodes);
+                }
+            }
+        }
+
+        force.initialize = function (_nodes, ...args) {
+            nodes = _nodes;
+            random = args.find(arg => typeof arg === 'function') || Math.random;
+            nDim = args.find(arg => [1, 2, 3].includes(arg)) || 2;
+            initialize();
+        };
+
+        force.iterations = function (_) {
+            return arguments.length ? (iterations = +_, force) : iterations;
+        };
+
+        force.strength = function (_) {
+            return arguments.length ? (strength = +_, force) : strength;
+        };
+
+        force.radius = function (_) {
+            return arguments.length ? (radius = typeof _ === "function" ? _ : constant(+_), initialize(), force) : radius;
         };
 
         return force;

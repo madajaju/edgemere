@@ -3,7 +3,7 @@
 left to right direction
 
 
-rectangle "Device Agent" #lightgray {
+rectangle "Device Agent" #cccccc {
 }
 
 

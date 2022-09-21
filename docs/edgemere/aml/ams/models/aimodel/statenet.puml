@@ -2,12 +2,12 @@
 
 
 
-state AIModel #lightblue {
+state AIModel #88cccc {
+
+
+
 
 }
-
-
-
 
 
 @enduml

@@ -5,7 +5,7 @@ actor "IT Operations"
 
 entity EventBus
 
-box Cloud Broker #lightgreen
+box Cloud Broker #88cc88
     boundary cb #white
 end box
 

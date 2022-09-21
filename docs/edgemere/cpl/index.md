@@ -1,8 +1,7 @@
 ---
-layout: default
-title: Common Physical Layer
+title: Package Common Physical Layer
 permalink: package--edgemere-cpl
-parent: edgemere
+parent: Package edgemere
 has_children: true
 ---
 
@@ -197,10 +196,10 @@ can be found [here](environment--edgemere-cpl-dev)
 
 Services in the dev environment
 
-* web : cpl_web:latest
-* deviceagent : cpl_da:latest
-* devicemanager : cpl_dm:latest
-* telemetry : cpl_tc:latest
+* web : aml_web
+* deviceagent : cpl_da
+* devicemanager : cpl_dm
+* telemetry : cpl_tc
 
 
 ### test
@@ -210,10 +209,10 @@ can be found [here](environment--edgemere-cpl-test)
 
 Services in the test environment
 
-* web : cpl_web:latest
-* deviceagent : cpl_da:latest
-* devicemanager : cpl_dm:latest
-* telemetry : cpl_tc:latest
+* web : aml_web
+* deviceagent : cpl_da
+* devicemanager : cpl_dm
+* telemetry : cpl_tc
 
 
 ### prod
@@ -223,10 +222,10 @@ can be found [here](environment--edgemere-cpl-prod)
 
 Services in the prod environment
 
-* web : cpl_web:latest
-* deviceagent : cpl_da:latest
-* devicemanager : cpl_dm:latest
-* telemetry : cpl_tc:latest
+* web : aml_web
+* deviceagent : cpl_da
+* devicemanager : cpl_dm
+* telemetry : cpl_tc
 
 
 ## Activities and Flows

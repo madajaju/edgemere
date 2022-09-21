@@ -2,7 +2,7 @@
 
 
 
-package "Telemetry Aggregator" #lightgray {
+package "Telemetry Aggregator" #cccccc {
 
     interface "Telemetry Aggregator" as i {
             ^device.stats
@@ -27,7 +27,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Telemetry Aggregator" #lightgray {
+package "Telemetry Aggregator" #cccccc {
 
 
 }
