@@ -5,6 +5,7 @@
 package "edgemere" #lavender {
 
     interface "edgemere" as i {
+            /edgemere/admin/status()
     
     }
 }

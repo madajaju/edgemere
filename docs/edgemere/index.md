@@ -74,6 +74,7 @@ users interact with the system.
 
 ![Scenario Mappings Diagram](./scenariomapping.png)
 
+* [ edgemere admin status](#action--edgemere-admin-status)
 
 
 ## Logical Artifacts
@@ -224,5 +225,21 @@ cases and scenarios of the subsystem.
 The edgemere subsystem has a well defined interface. This interface can be accessed using a
 command line interface (CLI), REST interface, and Web user interface. This interface is how all other
 subsystems and actors can access the system.
+
+### Action  edgemere admin status
+
+
+
+* REST - /edgemere/admin/status?
+* bin -  edgemere admin status 
+* js - .edgemere.admin.status({  })
+
+#### Description
+Status of the edgemere installation
+
+#### Parameters
+
+No parameters
+
 
 

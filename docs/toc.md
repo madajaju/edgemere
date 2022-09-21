@@ -4,7 +4,7 @@ title: TOC
 permalink: toc
 nav_order: 8
 ---
-Version 0.3.6 
+Version 0.4.0 
 
 ## edgemere Overview
 * [edgemere](./edgemere/index.md)

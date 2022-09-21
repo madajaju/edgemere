@@ -2,6 +2,13 @@
 left to right direction
 
 
+    package "edgemere" as edgemere lavender {
+ component "admin" as edgemereadmin
+ interface "status" as edgemereadminstatus
+edgemereadmin -- edgemereadminstatus
+}
+
+    
 
 
 

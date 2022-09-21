@@ -9,6 +9,12 @@ state "edgemere" as pstatename #lavender {
     }
 }
 
+        state "admin" as admin #lavender {
+state "status" as adminstatus #lavender {
+}
+}
+
+
 
 
 
