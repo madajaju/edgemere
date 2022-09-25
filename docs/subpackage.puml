@@ -2,7 +2,7 @@
 
 
 
-package "edgemere" #lavender {
+package "edgemere" #ccaaff {
 
     interface "edgemere" as i {
     
@@ -21,7 +21,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "edgemere" #lavender {
+package "edgemere" #ccaaff {
 
 
 rectangle "Application Management Layer" #white {

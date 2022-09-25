@@ -7,7 +7,7 @@ node "Edge Device (Machine)" #cccccc {
     component "Docker Node" as dockernodeed #88cc88
     agent "Data Controller" as datac #ffcc88
     agent "Service Controller" as servicec #88cc88
-    agent "Policy Engine" as pe #light#cc8888
+    agent "Policy Engine" as pe #cc8888
     agent "Telemetry Producer" as tp #cccccc
 }
 dockernodeed --> datac
@@ -33,7 +33,7 @@ node "Aggregated Edge Device" #cccccc {
     node "Machine1" #white {
         component "Salt Minon" as sminon21 #cc8888
         component "Docker Node" as dockernode21 #88cc88
-        agent "Policy Engine" as pead #light#cc8888
+        agent "Policy Engine" as pead #cc8888
         agent "Data Orchestrator" as doad #ffcc88
     }
     dockernode21 ..> pead

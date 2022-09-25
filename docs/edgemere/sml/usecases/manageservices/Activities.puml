@@ -13,6 +13,10 @@ ApplicationDeveloper --> ManageServices
 
 
 
+usecase "BuildService" as BuildService #lightgrey
+
+ManageServices --> BuildService
+
 
 
 

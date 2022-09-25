@@ -108,6 +108,7 @@ users interact with the system.
 ![Scenario Mappings Diagram](./scenariomapping.png)
 
 * [ edgemere sml cloud list](#action--edgemere-sml-cloud-list)
+* [ edgemere sml data create](#action--edgemere-sml-data-create)
 * [ edgemere sml data govern](#action--edgemere-sml-data-govern)
 * [ edgemere sml data source name](#action--edgemere-sml-data-source-name)
 * [ edgemere sml environmenet addpolicies](#action--edgemere-sml-environmenet-addpolicies)
@@ -299,6 +300,25 @@ subsystems and actors can access the system.
 * REST - /edgemere/sml/cloud/list?attr1=string
 * bin -  edgemere sml cloud list --attr1 string
 * js - .edgemere.sml.cloud.list({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  edgemere sml data create
+
+
+
+* REST - /edgemere/sml/data/create?attr1=string
+* bin -  edgemere sml data create --attr1 string
+* js - .edgemere.sml.data.create({ attr1:string })
 
 #### Description
 Description of the action

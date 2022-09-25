@@ -13,6 +13,10 @@ ApplicationDeveloper --> ManageApplications
 
 
 
+usecase "BuildApplication" as BuildApplication #lightgrey
+
+ManageApplications --> BuildApplication
+
 usecase "CreateApplication" as CreateApplication #lightgrey
 
 ManageApplications --> CreateApplication

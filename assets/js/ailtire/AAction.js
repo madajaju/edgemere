@@ -41,7 +41,7 @@ export default class AAction {
         console.log(result);
     }
     static view3D(node, type) {
-        let opacity = node.opacity || 1;
+        let opacity = node.opacity || 0.50;
         let fontSize = node.fontSize || AAction.default.fontSize;
         let color = node.color || "#0000aa";
         if (type === 'Selected') {

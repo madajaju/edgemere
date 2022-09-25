@@ -1,0 +1,39 @@
+@startuml
+partition "Application Management Layer" #88cccc {
+(*) --> "Build Application"
+}
+partition "Application Management Layer" #88cccc {
+"Build Application" --> if "Stacks Need Build" then
+}
+partition "Service Management Layer" #88cc88 {
+else
+--> [true] "Build Stack"
+}
+partition "Service Management Layer" #88cc88 {
+else
+--> [false] "Store Artifact"
+}
+partition "Service Management Layer" #88cc88 {
+"Build Stack" --> if "Services Need Build" then
+}
+partition "Service Management Layer" #88cc88 {
+else
+--> [true] "Build Service"
+}
+partition "Service Management Layer" #88cc88 {
+else
+--> [false] "Store Artifact"
+}
+partition "Service Management Layer" #88cc88 {
+"Build Service" --> if "Services Need Build" then
+}
+partition "Service Management Layer" #88cc88 {
+else
+--> [true] "Build Service"
+}
+partition "Service Management Layer" #88cc88 {
+else
+--> [false] "Store Artifact"
+}
+
+@enduml

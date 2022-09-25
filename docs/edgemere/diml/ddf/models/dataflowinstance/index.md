@@ -13,7 +13,7 @@ This is an instance of the data flow when a blue print is instantiated.
 
 ## Attributes
 
-* name:string - Name of the Data Flow Instance
+* name:string - Name of the Data AWorkFlow Instance
 
 
 ## Associations
@@ -39,7 +39,7 @@ This is an instance of the data flow when a blue print is instantiated.
 
 ## Methods
 
-* [create() - Create a Data Flow Instance](#action-create)
+* [create() - Create a Data AWorkFlow Instance](#action-create)
 
 
 <h2>Method Details</h2>
@@ -53,7 +53,7 @@ This is an instance of the data flow when a blue print is instantiated.
 * js - dataflowinstance.create({ name:string,sinks:json,sources:json })
 
 #### Description
-Create a Data Flow Instance
+Create a Data AWorkFlow Instance
 
 #### Parameters
 

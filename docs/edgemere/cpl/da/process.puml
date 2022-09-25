@@ -49,9 +49,9 @@ state "started" as smlservicestarted #88cc88 {
 }
 
         
-    state "da" as da #lavender {
-state "service" as daservice #lavender {
-state "register" as daserviceregister #lavender {
+    state "da" as da #ccaaff {
+state "service" as daservice #ccaaff {
+state "register" as daserviceregister #ccaaff {
 }
 }
 }

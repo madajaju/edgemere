@@ -7,7 +7,7 @@ parent: Classes
 
 # DataFlowTemplate
 
-Data Flow Template is how a Blue Print refrences a Data Flow with late binding of sources and sinks when data sources are added to a blueprint.
+Data AWorkFlow Template is how a Blue Print refrences a Data AWorkFlow with late binding of sources and sinks when data sources are added to a blueprint.
 
 ![Logical Diagram](./logical.png)
 
@@ -38,7 +38,7 @@ Data Flow Template is how a Blue Print refrences a Data Flow with late binding o
 
 ## Methods
 
-* [create() - Create a Data Flow Template](#action-create)
+* [create() - Create a Data AWorkFlow Template](#action-create)
 
 
 <h2>Method Details</h2>
@@ -52,7 +52,7 @@ Data Flow Template is how a Blue Print refrences a Data Flow with late binding o
 * js - dataflowtemplate.create({ name:string,sinks:json,sources:json })
 
 #### Description
-Create a Data Flow Template
+Create a Data AWorkFlow Template
 
 #### Parameters
 

@@ -23,9 +23,15 @@ import AComponent from "./AComponent.js";
 import AEventHUD from "./HUD/AEventHUD.js";
 import ASelectedHUD from "./HUD/ASelectedHUD.js";
 import AMainWindow from "./AMainWindow.js";
+import AActivity from "./AActivity.js";
+import AWorkFlow from "./AWorkFlow.js";
+import AFlowCondition from "./AFlowCondition.js";
+import ASwimlane from "./ASwimlane.js";
 
 // without default
 export {
+    AWorkFlow,
+    AFlowCondition,
     AAction,
     AComponent,
     AModel,
@@ -50,5 +56,7 @@ export {
     A3DGraph,
     AEventHUD,
     ASelectedHUD,
-    AMainWindow
+    AMainWindow,
+    AActivity,
+    ASwimlane
 }

@@ -45,9 +45,9 @@ state "started" as cpldmagentstarted #cccccc {
 }
 
         
-    state "dm" as dm #lavender {
-state "agent" as dmagent #lavender {
-state "register" as dmagentregister #lavender {
+    state "dm" as dm #ccaaff {
+state "agent" as dmagent #ccaaff {
+state "register" as dmagentregister #ccaaff {
 }
 }
 }
@@ -57,9 +57,9 @@ state "register" as dmagentregister #lavender {
 
 
     
-    state "dm" as dm #lavender {
-state "agent" as dmagent #lavender {
-state "register" as dmagentregister #lavender {
+    state "dm" as dm #ccaaff {
+state "agent" as dmagent #ccaaff {
+state "register" as dmagentregister #ccaaff {
 }
 }
 }

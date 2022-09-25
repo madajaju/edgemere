@@ -35,6 +35,7 @@ package "Service Management Layer" #88cc88 {
     interface "Service Management Layer" as i {
     
             /edgemere/sml/cloud/list()
+            /edgemere/sml/data/create()
             /edgemere/sml/data/govern()
             /edgemere/sml/data/source/name()
             /edgemere/sml/environmenet/addpolicies()

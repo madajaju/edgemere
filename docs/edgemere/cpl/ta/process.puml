@@ -75,15 +75,15 @@ state "stats" as cpldevicestats #cccccc {
 }
 
         
-    state "ta" as ta #lavender {
-state "report" as tareport #lavender {
+    state "ta" as ta #ccaaff {
+state "report" as tareport #ccaaff {
 }
 }
 
     cpldevicestats ---> tareport
   
-    state "tc" as tc #lavender {
-state "report" as tcreport #lavender {
+    state "tc" as tc #ccaaff {
+state "report" as tcreport #ccaaff {
 }
 }
 

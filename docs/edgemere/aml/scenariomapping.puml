@@ -103,6 +103,15 @@ edgemereamlapplication -- edgemereamlapplicationupdate
     
     package "edgemere" as edgemere {
 package "aml" as edgemereaml #88cccc {
+ component "data" as edgemereamldata
+ interface "create" as edgemereamldatacreate
+edgemereamldata -- edgemereamldatacreate
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
  component "workload" as edgemereamlworkload
  interface "create" as edgemereamlworkloadcreate
 edgemereamlworkload -- edgemereamlworkloadcreate
@@ -219,6 +228,12 @@ edgemereamlworkload -- edgemereamlworkloadupdate
     
 
         rectangle "Manage Applications" as ManageApplications #ffffaa {
+            ("Build Application")/ as ActorManageApplicationsBuildApplication
+        }
+    
+    edgemereamldatacreate <-- ActorManageApplicationsBuildApplication
+    
+        rectangle "Manage Applications" as ManageApplications #ffffaa {
             ("Create Application")/ as ApplicationDeveloperManageApplicationsCreateApplication
         }
     
@@ -317,6 +332,18 @@ edgemereamlworkload -- edgemereamlworkloadupdate
 
 
 
+        rectangle "Manage Meta Data" as ManageMetaData #ffffaa {
+            ("Capture Meta Data")/ as DataEngineerManageMetaDataCaptureMetaData
+        }
+    
+    edgemereamldatacreate <-- DataEngineerManageMetaDataCaptureMetaData
+    
+        rectangle "Manage Meta Data" as ManageMetaData #ffffaa {
+            ("Capture Meta Data")/ as DataStewardManageMetaDataCaptureMetaData
+        }
+    
+    edgemereamldatacreate <-- DataStewardManageMetaDataCaptureMetaData
+    
 
 
 
@@ -331,8 +358,68 @@ edgemereamlworkload -- edgemereamlworkloadupdate
 
 
 
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Build Stack")/ as ActorManageStacksBuildStack
+        }
+    
+    edgemereamldatacreate <-- ActorManageStacksBuildStack
+    
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Create Application Stack")/ as ActorManageStacksCreateApplicationStack
+        }
+    
+    edgemereamldatacreate <-- ActorManageStacksCreateApplicationStack
+    
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Create Service Stack")/ as ActorManageStacksCreateServiceStack
+        }
+    
+    edgemereamldatacreate <-- ActorManageStacksCreateServiceStack
+    
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Modify Application Stack")/ as ActorManageStacksModifyApplicationStack
+        }
+    
+    edgemereamldatacreate <-- ActorManageStacksModifyApplicationStack
+    
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Modify Service Stack")/ as ActorManageStacksModifyServiceStack
+        }
+    
+    edgemereamldatacreate <-- ActorManageStacksModifyServiceStack
+    
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Test Application Stack")/ as ActorManageStacksTestApplicationStack
+        }
+    
+    edgemereamldatacreate <-- ActorManageStacksTestApplicationStack
+    
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Test Service Stack")/ as ActorManageStacksTestServiceStack
+        }
+    
+    edgemereamldatacreate <-- ActorManageStacksTestServiceStack
+    
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Version Application Stack")/ as ActorManageStacksVersionApplicationStack
+        }
+    
+    edgemereamldatacreate <-- ActorManageStacksVersionApplicationStack
+    
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Version Service Stack")/ as ActorManageStacksVersionServiceStack
+        }
+    
+    edgemereamldatacreate <-- ActorManageStacksVersionServiceStack
+    
 
 
 
+        rectangle "Manage Services" as ManageServices #ffffaa {
+            ("Build Service")/ as ActorManageServicesBuildService
+        }
+    
+    edgemereamldatacreate <-- ActorManageServicesBuildService
+    
 
 @enduml

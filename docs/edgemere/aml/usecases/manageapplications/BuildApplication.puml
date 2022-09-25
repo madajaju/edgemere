@@ -1,0 +1,30 @@
+@startuml
+
+actor "Actor"
+
+
+entity EventBus
+
+box Application Management Layer #88cccc
+    boundary aml #white
+end box
+
+
+box Software Defined Infrastructure #cccc88
+            participant storageresource
+    end box
+
+
+"Actor" -> aml: Build Application
+
+    aml -> "storageresource": list (name: hello,file: ./templates/world.yml)
+
+    "storageresource" --/ EventBus: data.list
+
+    aml -> "storageresource": list (name: hello,file: ./templates/world.yml)
+
+    "storageresource" --/ EventBus: data.list
+
+
+
+@enduml

@@ -6,7 +6,7 @@ class DataFlowInstance {
         attributes: {
             name: {
                 type: 'string',
-                description: 'Name of the Data Flow Instance',
+                description: 'Name of the Data AWorkFlow Instance',
             }
         },
         associations: {

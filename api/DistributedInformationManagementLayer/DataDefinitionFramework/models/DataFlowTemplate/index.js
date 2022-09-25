@@ -2,7 +2,7 @@
 class DataFlowTemplate {
     static definition = {
         name: 'DataFlowTemplate',
-        description: 'Data Flow Template is how a Blue Print refrences a Data Flow with ' +
+        description: 'Data AWorkFlow Template is how a Blue Print refrences a Data AWorkFlow with ' +
             'late binding of sources and sinks when data sources are added to a blueprint.',
         attributes: {
             name: {

@@ -1,0 +1,29 @@
+#!/user/bin/env node
+const bent = require('bent');
+const program = require('commander');
+const YAML = require('yamljs');
+const fs = require('fs');
+global.ailtire = { config: require('C:\\Users\\dwpulsip\\IdeaProjects\\edgemere\\bin\\lib/../../.ailtire.js') };
+program.description('Disable Device and all of its hardware')
+	.option('--name <string>', 'Name of the device')
+	.option('--id <string>', 'ID of the device');
+program.parse(process.argv);
+let url = global.ailtire.config.host;
+let args = {};
+let params = '/cpl/device/disable?';
+params += 'mode=json';
+let options = program.opts();
+
+if(options['name']) { args['name'] = options['name']; }
+if(options['id']) { args['id'] = options['id']; }
+
+        console.log("URL:", url);
+        console.log("Args:", args);
+const post = bent(url, 'POST', 'json', 200);
+(async () => {
+    const response = await post(params, args);
+    console.log("Response:", response);
+})().catch(e => {
+    // Deal with the fact the chain failed
+    console.error("Response Error:", e);
+});

@@ -7,7 +7,7 @@ parent: Classes
 
 # DataFlow
 
-Flow of Data through its transformation
+AWorkFlow of Data through its transformation
 
 ![Logical Diagram](./logical.png)
 
@@ -40,7 +40,7 @@ Flow of Data through its transformation
 
 ## Methods
 
-* [create() - Create a Data Flow](#action-create)
+* [create() - Create a Data AWorkFlow](#action-create)
 
 
 <h2>Method Details</h2>
@@ -54,7 +54,7 @@ Flow of Data through its transformation
 * js - dataflow.create({ name:string,file:YAML })
 
 #### Description
-Create a Data Flow
+Create a Data AWorkFlow
 
 #### Parameters
 

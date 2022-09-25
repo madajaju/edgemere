@@ -26,11 +26,28 @@ DevOps Engineers and Application Developers need the ability to manage applicati
 
 ## Detail Scenarios
 
+* [BuildApplication](#scenario-BuildApplication)
 * [CreateApplication](#scenario-CreateApplication)
 * [DeployApplication](#scenario-DeployApplication)
 * [DestroyApplication](#scenario-DestroyApplication)
 * [MonitorApplication](#scenario-MonitorApplication)
 * [UpdateApplication](#scenario-UpdateApplication)
+
+
+
+### Scenario Build Application
+
+Build Application is the description
+
+![Scenario BuildApplication](./BuildApplication.png)
+
+#### Steps
+1. [data list --name hello --file ./templates/world.yml](#action-data-list)
+1. [data list --name hello --file ./templates/world.yml](#action-data-list)
+
+#### Actors
+
+* [Actor](actor-actor)
 
 
 

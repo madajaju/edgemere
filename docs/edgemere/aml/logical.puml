@@ -49,6 +49,7 @@ package "Application Management Layer" #88cccc {
             /edgemere/aml/application/list()
             /edgemere/aml/application/monitor()
             /edgemere/aml/application/update()
+            /edgemere/aml/data/create()
             /edgemere/aml/workload/create()
             /edgemere/aml/workload/deploy()
             /edgemere/aml/workload/destroy()

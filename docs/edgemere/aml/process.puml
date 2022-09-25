@@ -100,6 +100,14 @@ state "update" as amlapplicationupdate #88cccc {
 
 
         state "aml" as aml #88cccc {
+state "data" as amldata #88cccc {
+state "create" as amldatacreate #88cccc {
+}
+}
+}
+
+
+        state "aml" as aml #88cccc {
 state "workload" as amlworkload #88cccc {
 state "create" as amlworkloadcreate #88cccc {
 }

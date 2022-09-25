@@ -1,0 +1,30 @@
+@startuml
+
+actor "Actor"
+
+
+entity EventBus
+
+box Service Orchestrator #88cc88
+    boundary so #white
+end box
+
+
+box Software Defined Infrastructure #cccc88
+            participant storageresource
+    end box
+
+
+"Actor" -> so: Modify Application Stack
+
+    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
+
+    "storageresource" --/ EventBus: data.list
+
+    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
+
+    "storageresource" --/ EventBus: data.list
+
+
+
+@enduml

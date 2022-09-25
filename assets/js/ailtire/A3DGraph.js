@@ -12,7 +12,10 @@ import {
     AImage,
     AComponent,
     ASelectedHUD,
-    AEventHUD
+    AEventHUD,
+    AWorkFlow,
+    AFlowCondition,
+    AActivity
 } from './index.js';
 
 export default class A3DGraph {
@@ -147,7 +150,7 @@ export default class A3DGraph {
         };
         data.nodes[nodelc.id] = nodelc;
 
-
+        /* Process View */
         let nodep = {
             id: "ProcessView",
             name: "Process View",
@@ -161,6 +164,30 @@ export default class A3DGraph {
             cube: {x: 400, y: 400, z: 100}
         };
         data.nodes[nodep.id] = nodep;
+        data.nodes['workflow'] = {
+            id: "workflow",
+            name: "Workflow Process",
+            fx: 400,
+            fy: -400,
+            fz: 50,
+            view: AWorkFlow.view3D
+        }
+        data.nodes['flowcond'] = {
+            id: "flowcond",
+            name: "Conditional",
+            fx: 400,
+            fy: -250,
+            fz: 50,
+            view: AFlowCondition.view3D
+        }
+        data.nodes['activity'] = {
+            id: "activity",
+            name: "Activity",
+            fx: 250,
+            fy: -400,
+            fz: 50,
+            view: AActivity.view3D
+        }
         /* Implementation View */
         let nodei = {
             id: "ImplementationView",
@@ -275,7 +302,15 @@ export default class A3DGraph {
     }
 
     static processView() {
-
+        $.ajax({
+            url: 'workflow/list',
+            success: (results) => {
+                AWorkFlow.handleList(results);
+            },
+            error: function (req, text, err) {
+                console.log(text);
+            }
+        })
     }
 
     static deploymentView() {

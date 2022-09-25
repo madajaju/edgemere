@@ -2,7 +2,7 @@
 left to right direction
 
 
-    package "edgemere" as edgemere lavender {
+    package "edgemere" as edgemere #ccaaff {
  component "admin" as edgemereadmin
  interface "status" as edgemereadminstatus
 edgemereadmin -- edgemereadminstatus

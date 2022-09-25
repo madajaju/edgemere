@@ -2,7 +2,7 @@
 
 
 
-package "edgemere" #lavender {
+package "edgemere" #ccaaff {
 
     interface "edgemere" as i {
             /edgemere/admin/status()
@@ -14,7 +14,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "edgemere" #lavender {
+package "edgemere" #ccaaff {
     
 }
 

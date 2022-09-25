@@ -41,7 +41,7 @@ module.exports = {
                 let df = inputs.file.dataflows[i];
                 let dataflow = DataFlow.find(df.type);
                 if(!dataflow) {
-                    console.error("Could not find Data Flow:", i);
+                    console.error("Could not find Data AWorkFlow:", i);
                 }
                 let name = obj.name + '-' + i;
                 let sources = [];

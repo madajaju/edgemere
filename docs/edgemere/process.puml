@@ -4,13 +4,13 @@ left to right direction
 
 
 
-state "edgemere" as pstatename #lavender {
+state "edgemere" as pstatename #ccaaff {
     state "Custom Function" as edgemerefunction {
     }
 }
 
-        state "admin" as admin #lavender {
-state "status" as adminstatus #lavender {
+        state "admin" as admin #ccaaff {
+state "status" as adminstatus #ccaaff {
 }
 }
 

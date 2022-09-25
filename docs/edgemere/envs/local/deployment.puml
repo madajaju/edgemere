@@ -8,7 +8,7 @@ boundary parent #black
 
 entity children #blue
 
-rectangle "edgemere" as edgemereStack #lavender {
+rectangle "edgemere" as edgemereStack #ccaaff {
     queue edgemereStacksnet #blue [
         <b><color:white>parent</color></b>
     ]
@@ -16,7 +16,7 @@ rectangle "edgemere" as edgemereStack #lavender {
 
 
 
-package "edgemere" #lavender {
+package "edgemere" #ccaaff {
     queue parentnet #black [
             <b><color:white>parent</color></b>
     ]

@@ -46,7 +46,7 @@ rectangle "sdi" as sdiStack #cccc88 {
 
 
 
-package "edgemere" #lavender {
+package "edgemere" #ccaaff {
     queue parentnet #black [
             <b><color:white>parent</color></b>
     ]

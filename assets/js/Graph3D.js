@@ -226,6 +226,9 @@ export class Graph3D {
             .d3Force('charge', d3.forceManyBody().strength((d) => {
                 return 40;
             }))
+            .d3Force("center", d3.forceCenter().strength( (d) => {
+                if(d.rbox) { return 0;} else { return 1; }
+            }))
             .d3Force('collide', Graph3D.collide()
                 .radius((d) => {
                     if (d.box && typeof d.box === 'number') {
@@ -239,6 +242,15 @@ export class Graph3D {
 
         this.graph.numDimensions(3);
         window.graph = this;
+        /*
+        const light1 = new THREE.PointLight(0xffffff, 0.2);
+        light1.position.set(-1000,1000,2000);
+        window.graph.graph.scene().add(light1);
+        const light2 = new THREE.PointLight(0xffffff, 0.2);
+        light2.position.set(1000,500,2000);
+        window.graph.graph.scene().add(light2);
+
+         */
         window.graph.graph.onEngineStop(() => window.graph.graph.zoomToFit(400));
     };
 

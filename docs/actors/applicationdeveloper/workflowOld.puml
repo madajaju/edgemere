@@ -1,0 +1,60 @@
+@startuml
+
+partition "Application Developer" {
+    (*) ..> "Write Code" <<scenario>> #ffaaff
+}
+partition "edgemere" #aaffaa {
+"Write Code" ---> ===F1===
+===F1=== --> "Create Application Stack"
+}
+partition "edgemere" {
+===F1=== --> "Create Service Stack"
+}
+partition "edgemere" {
+"Create Application Stack" -->  "Modify Application Stack"
+}
+partition "edgemere" {
+"Modify Application Stack" -->  "Version Application Stack"
+}
+partition "edgemere" {
+"Create Service Stack" -->  "Modify Service Stack"
+}
+partition "edgemere" {
+"Modify Service Stack" -->  "Test Service Stack"
+}
+partition "edgemere" {
+"Test Service Stack" --> if "Service Test Results" then
+}
+
+partition "edgemere" {
+else
+--> [passed] "Version Service Stack"
+}
+partition "Application Developer" {
+else
+--> [failed] "Edit Code"
+}
+partition "edgemere" {
+"Edit Code"--> "Modify Service Stack"
+endif
+}
+partition "edgemere" {
+"Version Service Stack"--> ===F2===
+}
+partition "edgemere" {
+"Version Application Stack"--> ===F2===
+}
+partition "Application Manager" #aaffff {
+===F2=== --> "Test Application Stack"
+}
+partition "Application Manager" {
+"Test Application Stack" --> "Create an Application"
+}
+partition "Application Manager" {
+"Create an Application"--> "Launch an Application in an Environment"
+}
+partition "Application Manager" {
+"Launch an Application in an Environment"--> "Kill Application and Services"
+}
+
+@enduml

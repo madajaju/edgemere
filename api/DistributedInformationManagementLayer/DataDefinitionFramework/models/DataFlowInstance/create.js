@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     friendlyName: 'create',
-    description: 'Create a Data Flow Instance',
+    description: 'Create a Data AWorkFlow Instance',
     static: true, // True is for Class methods. False is for object based.
     inputs: {
         name: {

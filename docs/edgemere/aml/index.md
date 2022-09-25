@@ -79,6 +79,7 @@ users interact with the system.
 * [ edgemere aml application list](#action--edgemere-aml-application-list)
 * [ edgemere aml application monitor](#action--edgemere-aml-application-monitor)
 * [ edgemere aml application update](#action--edgemere-aml-application-update)
+* [ edgemere aml data create](#action--edgemere-aml-data-create)
 * [ edgemere aml workload create](#action--edgemere-aml-workload-create)
 * [ edgemere aml workload deploy](#action--edgemere-aml-workload-deploy)
 * [ edgemere aml workload destroy](#action--edgemere-aml-workload-destroy)
@@ -428,6 +429,25 @@ Description of the action
 * REST - /edgemere/aml/application/update?attr1=string
 * bin -  edgemere aml application update --attr1 string
 * js - .edgemere.aml.application.update({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  edgemere aml data create
+
+
+
+* REST - /edgemere/aml/data/create?attr1=string
+* bin -  edgemere aml data create --attr1 string
+* js - .edgemere.aml.data.create({ attr1:string })
 
 #### Description
 Description of the action
