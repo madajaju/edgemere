@@ -53,15 +53,15 @@ Model o--> "1" Servicelet : parent
     
         StackDefinition   *--> "n" Model : "data"
     
-    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
-    }
-    
-        StackletDefinition   o--> "n" Model : "data"
-    
     rectangle "Stacklet" as Stacklet #lightgreen {
     }
     
         Stacklet   *--> "n" Model : "data"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "n" Model : "data"
     
 
 @enduml

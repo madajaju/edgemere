@@ -38,8 +38,8 @@ DataReference is used to abstract data requirements for Applications, Stacks and
 | data | n | Servicelet | false | true | Data References to the data in the Stacklet |
 | data | n | Stack | false | true | Data for the stack |
 | data | n | StackDefinition | false | true | Data for the stack |
-| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
 | data | n | Stacklet | false | true | Data References to the data in the Stacklet |
+| data | n | StackletDefinition | false | false | Data References to the data in the Stacklet |
 
 
 

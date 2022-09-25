@@ -54,6 +54,11 @@ Model o--> "1" AggregatedDevice : parent
     
         Device   o--> "1" Model : "parent"
     
+    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
+    }
+    
+        AggregatedDevice   o--> "1" Model : "parent"
+    
     rectangle "DataCenter" as DataCenter #lightgreen {
     }
     
@@ -68,11 +73,6 @@ Model o--> "1" AggregatedDevice : parent
     }
     
         Request   o--> "n" Model : "aggregates"
-    
-    rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
-    }
-    
-        AggregatedDevice   o--> "1" Model : "parent"
     
 
 @enduml

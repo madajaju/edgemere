@@ -37,11 +37,6 @@ Model o--> "n" Resource : resources
     
         Device   *--> "n" Model : "hardware"
     
-    rectangle "Resource" as Resource #lightgreen {
-    }
-    
-        Resource   o--> "n" Model : "hardware"
-    
     rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
     }
     
@@ -61,6 +56,11 @@ Model o--> "n" Resource : resources
     }
     
         NetworkResource   o--> "n" Model : "hardware"
+    
+    rectangle "Resource" as Resource #lightgreen {
+    }
+    
+        Resource   o--> "n" Model : "hardware"
     
     rectangle "StorageResource" as StorageResource #lightgreen {
     }

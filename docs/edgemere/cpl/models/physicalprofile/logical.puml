@@ -59,26 +59,6 @@ Model o--> "1" PhysicalProfile : parent
     
         PhysicalProfile   o--> "1" Model : "parent"
     
-    rectangle "DataCenter" as DataCenter #lightgreen {
-    }
-    
-        DataCenter   o--> "1" Model : "profile"
-    
-    rectangle "Hardware" as Hardware #lightgreen {
-    }
-    
-        Hardware   o--> "1" Model : "profile"
-    
-    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
-    }
-    
-        ResourceInstanceType   *--> "1" Model : "profile"
-    
-    rectangle "Resource" as Resource #lightgreen {
-    }
-    
-        Resource   *--> "1" Model : "profile"
-    
     rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
     }
     
@@ -89,6 +69,16 @@ Model o--> "1" PhysicalProfile : parent
     
         ComputeHardware   o--> "1" Model : "profile"
     
+    rectangle "DataCenter" as DataCenter #lightgreen {
+    }
+    
+        DataCenter   o--> "1" Model : "profile"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "1" Model : "profile"
+    
     rectangle "NetworkHardware" as NetworkHardware #lightgreen {
     }
     
@@ -98,6 +88,11 @@ Model o--> "1" PhysicalProfile : parent
     }
     
         StorageHardware   o--> "1" Model : "profile"
+    
+    rectangle "ResourceInstanceType" as ResourceInstanceType #lightgreen {
+    }
+    
+        ResourceInstanceType   *--> "1" Model : "profile"
     
     rectangle "AcceleratorResource" as AcceleratorResource #lightgreen {
     }
@@ -113,6 +108,11 @@ Model o--> "1" PhysicalProfile : parent
     }
     
         NetworkResource   *--> "1" Model : "profile"
+    
+    rectangle "Resource" as Resource #lightgreen {
+    }
+    
+        Resource   *--> "1" Model : "profile"
     
     rectangle "StorageResource" as StorageResource #lightgreen {
     }

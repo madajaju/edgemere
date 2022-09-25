@@ -43,31 +43,6 @@ Model o--> "1" Cloud : cloud
 
 
 
-    rectangle "Hardware" as Hardware #lightgreen {
-    }
-    
-        Hardware   o--> "n" Model : "resources"
-    
-    rectangle "Servicelet" as Servicelet #lightgreen {
-    }
-    
-        Servicelet   o--> "n" Model : "resources"
-    
-    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
-    }
-    
-        ServiceInstance   o--> "n" Model : "resources"
-    
-    rectangle "Cloud" as Cloud #lightgreen {
-    }
-    
-        Cloud   *--> "n" Model : "resources"
-    
-    rectangle "Request" as Request #lightgreen {
-    }
-    
-        Request   *--> "n" Model : "resources"
-    
     rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
     }
     
@@ -77,6 +52,11 @@ Model o--> "1" Cloud : cloud
     }
     
         ComputeHardware   o--> "n" Model : "resources"
+    
+    rectangle "Hardware" as Hardware #lightgreen {
+    }
+    
+        Hardware   o--> "n" Model : "resources"
     
     rectangle "NetworkHardware" as NetworkHardware #lightgreen {
     }
@@ -88,15 +68,35 @@ Model o--> "1" Cloud : cloud
     
         StorageHardware   o--> "n" Model : "resources"
     
-    rectangle "StackInstance" as StackInstance #lightgreen {
+    rectangle "Servicelet" as Servicelet #lightgreen {
     }
     
-        StackInstance   o--> "n" Model : "resources"
+        Servicelet   o--> "n" Model : "resources"
     
     rectangle "Stacklet" as Stacklet #lightgreen {
     }
     
         Stacklet   o--> "n" Model : "resources"
+    
+    rectangle "ServiceInstance" as ServiceInstance #lightgreen {
+    }
+    
+        ServiceInstance   o--> "n" Model : "resources"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "n" Model : "resources"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   *--> "n" Model : "resources"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   *--> "n" Model : "resources"
     
 
 @enduml

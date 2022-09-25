@@ -38,12 +38,12 @@ This represents a cloud in the ecosystem. This can be public or private onprem o
 | clouds | n | CloudType | false | false |  |
 | cloud | 1 | Image | false | false |  |
 | clouds | n | MultiCloud | false | false |  |
-| cloud | 1 | Request | false | false |  |
-| cloud | 1 | Reservation | false | false |  |
-| cloud | 1 | Resource | false | false |  |
 | cloud | 1 | AcceleratorResource | false | false |  |
 | cloud | 1 | ComputeResource | false | false |  |
 | cloud | 1 | NetworkResource | false | false |  |
+| cloud | 1 | Request | false | false |  |
+| cloud | 1 | Reservation | false | false |  |
+| cloud | 1 | Resource | false | false |  |
 | cloud | 1 | StorageResource | false | false |  |
 
 

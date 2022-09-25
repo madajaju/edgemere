@@ -36,10 +36,10 @@ This is a construct that has other devices under it
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
 | parent | 1 | Device | false | false |  |
+| parent | 1 | AggregatedDevice | false | false |  |
 | adevices | n | DataCenter | false | true |  |
 | adevices | n | Cloud | false | false |  |
 | aggregates | n | Request | false | false |  |
-| parent | 1 | AggregatedDevice | false | false |  |
 
 
 

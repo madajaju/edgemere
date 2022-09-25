@@ -34,12 +34,12 @@ This is an instance of a service running on resources. The Instance is allocated
 | --- | --- | --- | --- | --- | --- |
 | owner | 1 | RunScript |  |  |  |
 | instances | n | Servicelet | false | false | ServiceInstance for the servicelet |
-| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
-| instances | n | Resource | false | false |  |
 | instances | n | Stacklet | false | false | ServiceInstance for the servicelet |
+| services | n | StackInstance | true | true | Instances of the Services running in the Stack |
 | instances | n | AcceleratorResource | false | false |  |
 | instances | n | ComputeResource | false | false |  |
 | instances | n | NetworkResource | false | false |  |
+| instances | n | Resource | false | false |  |
 | instances | n | StorageResource | false | false |  |
 
 

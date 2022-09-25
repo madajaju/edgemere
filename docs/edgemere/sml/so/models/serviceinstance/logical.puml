@@ -53,20 +53,15 @@ Model *--> "n" RunScript : runScripts
     
         Servicelet   o--> "n" Model : "instances"
     
-    rectangle "StackInstance" as StackInstance #lightgreen {
-    }
-    
-        StackInstance   *--> "n" Model : "services"
-    
-    rectangle "Resource" as Resource #lightgreen {
-    }
-    
-        Resource   o--> "n" Model : "instances"
-    
     rectangle "Stacklet" as Stacklet #lightgreen {
     }
     
         Stacklet   o--> "n" Model : "instances"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   *--> "n" Model : "services"
     
     rectangle "AcceleratorResource" as AcceleratorResource #lightgreen {
     }
@@ -82,6 +77,11 @@ Model *--> "n" RunScript : runScripts
     }
     
         NetworkResource   o--> "n" Model : "instances"
+    
+    rectangle "Resource" as Resource #lightgreen {
+    }
+    
+        Resource   o--> "n" Model : "instances"
     
     rectangle "StorageResource" as StorageResource #lightgreen {
     }

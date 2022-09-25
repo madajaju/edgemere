@@ -35,15 +35,15 @@ Representation of a device in a datacenter
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
 | devices | n | AggregatedDevice | false | true |  |
+| device | 1 | AcceleratorHardware | false | false |  |
+| device | 1 | ComputeHardware | false | false |  |
 | devices | n | DataCenter | false | true |  |
 | device | 1 | Hardware | false | false |  |
+| device | 1 | NetworkHardware | false | false |  |
+| device | 1 | StorageHardware | false | false |  |
 | devices | n | Cloud | false | false |  |
 | devices | n | Request | false | false |  |
 | device | 1 | Reservation | false | false |  |
-| device | 1 | AcceleratorHardware | false | false |  |
-| device | 1 | ComputeHardware | false | false |  |
-| device | 1 | NetworkHardware | false | false |  |
-| device | 1 | StorageHardware | false | false |  |
 
 
 

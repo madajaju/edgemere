@@ -47,6 +47,16 @@ Model o--> "1" AggregatedDevice : parent
     
         AggregatedDevice   *--> "n" Model : "devices"
     
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
+    }
+    
+        AcceleratorHardware   o--> "1" Model : "device"
+    
+    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
+    }
+    
+        ComputeHardware   o--> "1" Model : "device"
+    
     rectangle "DataCenter" as DataCenter #lightgreen {
     }
     
@@ -56,6 +66,16 @@ Model o--> "1" AggregatedDevice : parent
     }
     
         Hardware   o--> "1" Model : "device"
+    
+    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
+    }
+    
+        NetworkHardware   o--> "1" Model : "device"
+    
+    rectangle "StorageHardware" as StorageHardware #lightgreen {
+    }
+    
+        StorageHardware   o--> "1" Model : "device"
     
     rectangle "Cloud" as Cloud #lightgreen {
     }
@@ -71,26 +91,6 @@ Model o--> "1" AggregatedDevice : parent
     }
     
         Reservation   o--> "1" Model : "device"
-    
-    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
-    }
-    
-        AcceleratorHardware   o--> "1" Model : "device"
-    
-    rectangle "ComputeHardware" as ComputeHardware #lightgreen {
-    }
-    
-        ComputeHardware   o--> "1" Model : "device"
-    
-    rectangle "NetworkHardware" as NetworkHardware #lightgreen {
-    }
-    
-        NetworkHardware   o--> "1" Model : "device"
-    
-    rectangle "StorageHardware" as StorageHardware #lightgreen {
-    }
-    
-        StorageHardware   o--> "1" Model : "device"
     
 
 @enduml

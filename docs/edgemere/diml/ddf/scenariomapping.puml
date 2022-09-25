@@ -172,6 +172,12 @@ edgemeredimlddfmetadata -- edgemeredimlddfmetadatalist
 
 
 
+        rectangle "Manage Applications" as ManageApplications #ffffaa {
+            ("Build Application")/ as ActorManageApplicationsBuildApplication
+        }
+    
+    edgemeredimlddfdatacreate <-- ActorManageApplicationsBuildApplication
+    
 
 
 
@@ -255,8 +261,68 @@ edgemeredimlddfmetadata -- edgemeredimlddfmetadatalist
 
 
 
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Build Stack")/ as ActorManageStacksBuildStack
+        }
+    
+    edgemeredimlddfdatacreate <-- ActorManageStacksBuildStack
+    
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Create Application Stack")/ as ActorManageStacksCreateApplicationStack
+        }
+    
+    edgemeredimlddfdatacreate <-- ActorManageStacksCreateApplicationStack
+    
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Create Service Stack")/ as ActorManageStacksCreateServiceStack
+        }
+    
+    edgemeredimlddfdatacreate <-- ActorManageStacksCreateServiceStack
+    
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Modify Application Stack")/ as ActorManageStacksModifyApplicationStack
+        }
+    
+    edgemeredimlddfdatacreate <-- ActorManageStacksModifyApplicationStack
+    
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Modify Service Stack")/ as ActorManageStacksModifyServiceStack
+        }
+    
+    edgemeredimlddfdatacreate <-- ActorManageStacksModifyServiceStack
+    
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Test Application Stack")/ as ActorManageStacksTestApplicationStack
+        }
+    
+    edgemeredimlddfdatacreate <-- ActorManageStacksTestApplicationStack
+    
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Test Service Stack")/ as ActorManageStacksTestServiceStack
+        }
+    
+    edgemeredimlddfdatacreate <-- ActorManageStacksTestServiceStack
+    
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Version Application Stack")/ as ActorManageStacksVersionApplicationStack
+        }
+    
+    edgemeredimlddfdatacreate <-- ActorManageStacksVersionApplicationStack
+    
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Version Service Stack")/ as ActorManageStacksVersionServiceStack
+        }
+    
+    edgemeredimlddfdatacreate <-- ActorManageStacksVersionServiceStack
+    
 
 
 
+        rectangle "Manage Services" as ManageServices #ffffaa {
+            ("Build Service")/ as ActorManageServicesBuildService
+        }
+    
+    edgemeredimlddfdatacreate <-- ActorManageServicesBuildService
+    
 
 @enduml

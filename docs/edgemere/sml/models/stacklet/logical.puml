@@ -78,15 +78,15 @@ Model *--> "n" DataReference : data
     
         StackDefinition   *--> "n" Model : "stacklets"
     
-    rectangle "StackInstance" as StackInstance #lightgreen {
-    }
-    
-        StackInstance   o--> "1" Model : "stacklet"
-    
     rectangle "Stacklet" as Stacklet #lightgreen {
     }
     
         Stacklet   o--> "1" Model : "parent"
+    
+    rectangle "StackInstance" as StackInstance #lightgreen {
+    }
+    
+        StackInstance   o--> "1" Model : "stacklet"
     
 
 @enduml

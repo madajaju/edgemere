@@ -43,10 +43,10 @@ A Stack is an aggregation of services in one context. The Stack can have any num
 | --- | --- | --- | --- | --- | --- |
 | stacks | n | Application | true | true |  |
 | stack | 1 | Service | false | false | Parent Stack of the service |
+| stack | 1 | Stack | false | false | Parent Stack of the service |
 | stack | 1 | Stacklet | false | false | Parent Stack for the Stacklet |
 | stack | 1 | StackletDefinition | false | false | Stack for the Stacklet |
 | stack | 1 | StackInstance | false | false | Stack of the Stack Instance |
-| stack | 1 | Stack | false | false | Parent Stack of the service |
 
 
 

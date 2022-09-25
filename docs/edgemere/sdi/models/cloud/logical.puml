@@ -68,21 +68,6 @@ Model *--> "n" Request : requests
     
         MultiCloud   o--> "n" Model : "clouds"
     
-    rectangle "Request" as Request #lightgreen {
-    }
-    
-        Request   o--> "1" Model : "cloud"
-    
-    rectangle "Reservation" as Reservation #lightgreen {
-    }
-    
-        Reservation   o--> "1" Model : "cloud"
-    
-    rectangle "Resource" as Resource #lightgreen {
-    }
-    
-        Resource   o--> "1" Model : "cloud"
-    
     rectangle "AcceleratorResource" as AcceleratorResource #lightgreen {
     }
     
@@ -97,6 +82,21 @@ Model *--> "n" Request : requests
     }
     
         NetworkResource   o--> "1" Model : "cloud"
+    
+    rectangle "Request" as Request #lightgreen {
+    }
+    
+        Request   o--> "1" Model : "cloud"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "cloud"
+    
+    rectangle "Resource" as Resource #lightgreen {
+    }
+    
+        Resource   o--> "1" Model : "cloud"
     
     rectangle "StorageResource" as StorageResource #lightgreen {
     }

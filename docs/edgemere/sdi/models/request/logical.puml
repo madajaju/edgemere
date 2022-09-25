@@ -58,25 +58,15 @@ Model o--> "n" AggregatedDevice : aggregates
 
 
 
-    rectangle "Cloud" as Cloud #lightgreen {
-    }
-    
-        Cloud   *--> "n" Model : "requests"
-    
-    rectangle "Reservation" as Reservation #lightgreen {
-    }
-    
-        Reservation   o--> "1" Model : "request"
-    
-    rectangle "Resource" as Resource #lightgreen {
-    }
-    
-        Resource   o--> "1" Model : "request"
-    
     rectangle "AcceleratorResource" as AcceleratorResource #lightgreen {
     }
     
         AcceleratorResource   o--> "1" Model : "request"
+    
+    rectangle "Cloud" as Cloud #lightgreen {
+    }
+    
+        Cloud   *--> "n" Model : "requests"
     
     rectangle "ComputeResource" as ComputeResource #lightgreen {
     }
@@ -87,6 +77,16 @@ Model o--> "n" AggregatedDevice : aggregates
     }
     
         NetworkResource   o--> "1" Model : "request"
+    
+    rectangle "Reservation" as Reservation #lightgreen {
+    }
+    
+        Reservation   o--> "1" Model : "request"
+    
+    rectangle "Resource" as Resource #lightgreen {
+    }
+    
+        Resource   o--> "1" Model : "request"
     
     rectangle "StorageResource" as StorageResource #lightgreen {
     }

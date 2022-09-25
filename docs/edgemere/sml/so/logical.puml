@@ -59,6 +59,7 @@ package "Application Management Layer" #88cccc {
 package "Service Orchestrator" #88cc88 {
 
     interface "Service Orchestrator" as i {
+            /edgemere/sml/so/data/create()
             /edgemere/sml/so/servicelet/assigndata()
             /edgemere/sml/so/stack/deploy()
             /edgemere/sml/so/stack/list()

@@ -32,11 +32,11 @@ This represents physical hardware in a device
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
 | hardware | n | Device | false | true |  |
-| hardware | n | Resource | false | false |  |
 | hardware | n | AggregatedDevice | false | true |  |
 | hardware | n | AcceleratorResource | false | false |  |
 | hardware | n | ComputeResource | false | false |  |
 | hardware | n | NetworkResource | false | false |  |
+| hardware | n | Resource | false | false |  |
 | hardware | n | StorageResource | false | false |  |
 
 

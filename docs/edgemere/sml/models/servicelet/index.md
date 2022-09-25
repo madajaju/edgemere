@@ -38,11 +38,11 @@ Servicelet is the combination of a Service with the environment. This gives the 
 | --- | --- | --- | --- | --- | --- |
 | parent | 1 | DataReference | false | false |  |
 | servicelets | n | Service | true | true | Servicelets of the service (Environment) |
+| servicelets | n | Stack | true | true | Servicelets of the service (Environment) |
 | servicelets | n | Stacklet | true | true | Service with environment for the Stacklet |
 | servicelets | n | StackletDefinition | true | true | Service with environment for the Stacklet |
 | servicelet | 1 | ServiceInstance | false | false | Service and environment combined together that defines the service instance |
 | servicelet | 1 | StackInstance | false | false | Service and environment combined together that defines the service instance |
-| servicelets | n | Stack | true | true | Servicelets of the service (Environment) |
 
 
 

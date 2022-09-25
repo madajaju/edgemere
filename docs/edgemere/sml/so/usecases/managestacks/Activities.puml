@@ -13,9 +13,37 @@ ApplicationDeveloper --> ManageStacks
 
 
 
+usecase "BuildStack" as BuildStack #lightgrey
+
+ManageStacks --> BuildStack
+
+usecase "CreateApplicationStack" as CreateApplicationStack #lightgrey
+
+ManageStacks --> CreateApplicationStack
+
+usecase "CreateServiceStack" as CreateServiceStack #lightgrey
+
+ManageStacks --> CreateServiceStack
+
 usecase "DeployStack" as DeployStack #lightgrey
 
 ManageStacks --> DeployStack
+
+usecase "ModifyApplicationStack" as ModifyApplicationStack #lightgrey
+
+ManageStacks --> ModifyApplicationStack
+
+usecase "ModifyServiceStack" as ModifyServiceStack #lightgrey
+
+ManageStacks --> ModifyServiceStack
+
+usecase "TestApplicationStack" as TestApplicationStack #lightgrey
+
+ManageStacks --> TestApplicationStack
+
+usecase "TestServiceStack" as TestServiceStack #lightgrey
+
+ManageStacks --> TestServiceStack
 
 usecase "UninstallStack" as UninstallStack #lightgrey
 
@@ -24,6 +52,14 @@ ManageStacks --> UninstallStack
 usecase "UpdateStack" as UpdateStack #lightgrey
 
 ManageStacks --> UpdateStack
+
+usecase "VersionApplicationStack" as VersionApplicationStack #lightgrey
+
+ManageStacks --> VersionApplicationStack
+
+usecase "VersionServiceStack" as VersionServiceStack #lightgrey
+
+ManageStacks --> VersionServiceStack
 
 
 

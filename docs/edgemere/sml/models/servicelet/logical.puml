@@ -59,6 +59,11 @@ Model *--> "n" DataReference : data
     
         Service   *--> "n" Model : "servicelets"
     
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   *--> "n" Model : "servicelets"
+    
     rectangle "Stacklet" as Stacklet #lightgreen {
     }
     
@@ -78,11 +83,6 @@ Model *--> "n" DataReference : data
     }
     
         StackInstance   o--> "1" Model : "servicelet"
-    
-    rectangle "Stack" as Stack #lightgreen {
-    }
-    
-        Stack   *--> "n" Model : "servicelets"
     
 
 @enduml

@@ -36,15 +36,15 @@ Model o--> "1" SecurityProfile : profile
     
         Servicelet   o--> "1" Model : "env"
     
-    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
-    }
-    
-        StackletDefinition   o--> "1" Model : "env"
-    
     rectangle "Stacklet" as Stacklet #lightgreen {
     }
     
         Stacklet   o--> "1" Model : "env"
+    
+    rectangle "StackletDefinition" as StackletDefinition #lightgreen {
+    }
+    
+        StackletDefinition   o--> "1" Model : "env"
     
 
 @enduml

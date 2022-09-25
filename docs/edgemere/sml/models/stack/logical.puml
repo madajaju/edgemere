@@ -89,6 +89,11 @@ Model o--> "1" Service : parent
     
         Service   o--> "1" Model : "stack"
     
+    rectangle "Stack" as Stack #lightgreen {
+    }
+    
+        Stack   o--> "1" Model : "stack"
+    
     rectangle "Stacklet" as Stacklet #lightgreen {
     }
     
@@ -103,11 +108,6 @@ Model o--> "1" Service : parent
     }
     
         StackInstance   o--> "1" Model : "stack"
-    
-    rectangle "Stack" as Stack #lightgreen {
-    }
-    
-        Stack   o--> "1" Model : "stack"
     
 
 @enduml

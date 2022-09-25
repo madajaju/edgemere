@@ -37,12 +37,12 @@ This represents a request being made for a resource in the cloud. This is only t
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| requests | n | Cloud | false | true |  |
-| request | 1 | Reservation | false | false |  |
-| request | 1 | Resource | false | false |  |
 | request | 1 | AcceleratorResource | false | false |  |
+| requests | n | Cloud | false | true |  |
 | request | 1 | ComputeResource | false | false |  |
 | request | 1 | NetworkResource | false | false |  |
+| request | 1 | Reservation | false | false |  |
+| request | 1 | Resource | false | false |  |
 | request | 1 | StorageResource | false | false |  |
 
 

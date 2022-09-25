@@ -38,8 +38,8 @@ system path, etc
 | data | n | DataSource | true | true |  |
 | data | n | DataInstance | false | false |  |
 | data | 1 | DataReservation | false | false |  |
-| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
 | data | 1 | LineageMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
+| data | 1 | MetaData |  |  | This is a DataInstance Class that the meta-data is tied |
 | data | 1 | SourceMetaData |  |  | This is a DataInstance Class that the meta-data is tied |
 
 

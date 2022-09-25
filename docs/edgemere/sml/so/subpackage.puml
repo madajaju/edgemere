@@ -39,6 +39,7 @@ package "Service Orchestrator" #88cc88 {
     interface "Service Orchestrator" as i {
             ^datareference.provisioned
     
+            /edgemere/sml/so/data/create()
             /edgemere/sml/so/servicelet/assigndata()
             /edgemere/sml/so/stack/deploy()
             /edgemere/sml/so/stack/list()

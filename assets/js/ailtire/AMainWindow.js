@@ -13,6 +13,9 @@ import {
     AEventHUD,
     ASelectedHUD,
 } from './index.js';
+
+import AWorkFlow from './AWorkFlow.js';
+
 import {Graph3D} from '../Graph3D.js';
 
 export default class AMainWindow {
@@ -57,6 +60,7 @@ export default class AMainWindow {
         environment: AEnvironment.handle,
         component: AComponent.handle,
         image: AImage.handle,
+        workflow: AWorkFlow.handle,
     }
 
     static initialize(pconfig) {
@@ -255,7 +259,6 @@ export default class AMainWindow {
                     },
                     {id: 'deployments', text: 'Deployment View', group: true, expanded: true, nodes: []},
                     {id: 'process', text: 'Process View', group: true, expanded: true, nodes: []},
-                    {id: 'pulsar', text: 'Pulsar Topics', group: true, expanded: true, nodes: []},
                 ],
                 onExpand: (event) => {
                     if (event.object.id === 'logical') {
@@ -366,6 +369,7 @@ export default class AMainWindow {
         AEnvironment.showList('sidebar', 'deployments');
         AComponent.showList('sidebar', 'libraries');
         AImage.showList('sidebar', 'images');
+        AWorkFlow.showList( 'sidebar', 'process');
     }
 
     static setupEventWatcher(config) {

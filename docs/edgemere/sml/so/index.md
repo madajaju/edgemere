@@ -40,6 +40,7 @@ users interact with the system.
 
 ![Scenario Mappings Diagram](./scenariomapping.png)
 
+* [ edgemere sml so data create](#action--edgemere-sml-so-data-create)
 * [ edgemere sml so servicelet assigndata](#action--edgemere-sml-so-servicelet-assigndata)
 * [ edgemere sml so stack deploy](#action--edgemere-sml-so-stack-deploy)
 * [ edgemere sml so stack list](#action--edgemere-sml-so-stack-list)
@@ -168,6 +169,25 @@ these events.
 The Service Orchestrator subsystem has a well defined interface. This interface can be accessed using a
 command line interface (CLI), REST interface, and Web user interface. This interface is how all other
 subsystems and actors can access the system.
+
+### Action  edgemere sml so data create
+
+
+
+* REST - /edgemere/sml/so/data/create?attr1=string
+* bin -  edgemere sml so data create --attr1 string
+* js - .edgemere.sml.so.data.create({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
 
 ### Action  edgemere sml so servicelet assigndata
 

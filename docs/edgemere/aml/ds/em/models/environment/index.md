@@ -32,8 +32,8 @@ An environment represents a group of clouds, and policies that service are deplo
 | --- | --- | --- | --- | --- | --- |
 | environment | 1 | Stage | false | false |  |
 | env | 1 | Servicelet | false | false | Environment for the Servicelet |
-| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
 | env | 1 | Stacklet | false | false | Environment for the Servicelet |
+| env | 1 | StackletDefinition | false | false | Environment for the Stacklet |
 
 
 

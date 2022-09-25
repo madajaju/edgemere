@@ -4,7 +4,7 @@ title: TOC
 permalink: toc
 nav_order: 8
 ---
-Version 0.4.0 
+Version 0.4.1 
 
 ## edgemere Overview
 * [edgemere](./edgemere/index.md)
@@ -12,6 +12,7 @@ Version 0.4.0
 ## Use Case View
 ### Actors
 * [All Actors](actors)
+* [Actor](actor-actor)
 * [ApplicationDeveloper](actor-applicationdeveloper)
 * [ChiefDataOfficer](actor-cdo)
 * [DataAnalyst](actor-analyst)
@@ -36,6 +37,7 @@ Version 0.4.0
   * [Destroy AI Model](usecase-ManageAIModels#DestroyAIModel)
   * [Update AI Model](usecase-ManageAIModels#UpdateAIModel)
 * [Manage Applications](usecase-ManageApplications)
+  * [Build Application](usecase-ManageApplications#BuildApplication)
   * [Create Application](usecase-ManageApplications#CreateApplication)
   * [Deploy Application](usecase-ManageApplications#DeployApplication)
   * [Destroy Application](usecase-ManageApplications#DestroyApplication)
@@ -106,10 +108,20 @@ Version 0.4.0
   * [Remove Security Profile](usecase-ManageSecurityProfiles#RemoveSecurityProfile)
   * [Test Security Profile](usecase-ManageSecurityProfiles#TestSecurityProfile)
 * [Manage Services](usecase-ManageServices)
+  * [Build Service](usecase-ManageServices#BuildService)
 * [Manage Stacks](usecase-ManageStacks)
+  * [Build Stack](usecase-ManageStacks#BuildStack)
+  * [Create Application Stack](usecase-ManageStacks#CreateApplicationStack)
+  * [Create Service Stack](usecase-ManageStacks#CreateServiceStack)
   * [Deploy Stack](usecase-ManageStacks#DeployStack)
+  * [Modify Application Stack](usecase-ManageStacks#ModifyApplicationStack)
+  * [Modify Service Stack](usecase-ManageStacks#ModifyServiceStack)
+  * [Test Application Stack](usecase-ManageStacks#TestApplicationStack)
+  * [Test Service Stack](usecase-ManageStacks#TestServiceStack)
   * [Uninstall Stack](usecase-ManageStacks#UninstallStack)
   * [Update Stack](usecase-ManageStacks#UpdateStack)
+  * [Version Application Stack](usecase-ManageStacks#VersionApplicationStack)
+  * [Version Service Stack](usecase-ManageStacks#VersionServiceStack)
 * [Manage Workloads](usecase-ManageWorkloads)
   * [Create Workload](usecase-ManageWorkloads#CreateWorkload)
   * [Deploy Workload](usecase-ManageWorkloads#DeployWorkload)

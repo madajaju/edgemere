@@ -60,15 +60,15 @@ Model *--> "n" SourceMetaData : connection
     
         DataReservation   o--> "1" Model : "data"
     
-    rectangle "MetaData" as MetaData #lightgreen {
-    }
-    
-        MetaData   o--> "1" Model : "data"
-    
     rectangle "LineageMetaData" as LineageMetaData #lightgreen {
     }
     
         LineageMetaData   o--> "1" Model : "data"
+    
+    rectangle "MetaData" as MetaData #lightgreen {
+    }
+    
+        MetaData   o--> "1" Model : "data"
     
     rectangle "SourceMetaData" as SourceMetaData #lightgreen {
     }

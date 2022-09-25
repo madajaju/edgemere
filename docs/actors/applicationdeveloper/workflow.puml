@@ -2,6 +2,8 @@
 
 |Application Developer|
 start
+repeat
+:Write code;>
 |#lavender|edgemere|
 fork
 :Create Application Stack;
@@ -9,11 +11,17 @@ fork
 :Version Application Stack;
 fork again
 :Create Service Stack;
+repeat
 :Modify Service Stack;
+:Test Service Stack;
+repeat while(Test Results?) is (failed)
 :Version Service Stack;
 fork end
 |#lightblue|Application Manager|
 :Test Application Stack;
+backward:Check Out Code;
+backward:Merge Branch;
+repeat while(Test Results?) is (Failed)
 :Create an Application;
 :Launch an Application in an environment;
 :Kill Application and Services;
