@@ -19,6 +19,6 @@
   "dependencies": {
     "ailtire": "latest",
     "mocha": "^10.0.0",
-    "systeminformation": "latest"
+    "systeminformation": "5.21.7"
   }
 }
