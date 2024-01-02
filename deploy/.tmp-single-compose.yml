@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  edgemere:
+    image: edgemere:latest
+    ports:
+      - '80:3000'
+      - '443:443'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - AILTIRE_PARENT_NETWORK=edgemere_top
+      - AILTIRE_STACKNAME={{.Service.Name}}-{{.Task.Slot}}
+      - AILTIRE_APPNAME=edgemere
+    networks:
+      children:
+        aliases:
+          - admin
+networks:
+  children:
+    driver: overlay
+    attachable: true
+    name: edgemere_top

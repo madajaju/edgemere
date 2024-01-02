@@ -1,0 +1,28 @@
+@startuml
+
+
+usecase "Manage Physical Infrastructure" as ManagePhysicalInfrastructure #yellow
+
+Actor "IT Operations" as ITOperations
+
+ITOperations --> ManagePhysicalInfrastructure
+
+
+
+
+
+
+
+usecase "ManageDataCenter" as ManageDataCenter #lightyellow
+
+ManagePhysicalInfrastructure --> ManageDataCenter : extends
+
+usecase "ManageInfrastructure" as ManageInfrastructure #lightyellow
+
+ManagePhysicalInfrastructure --> ManageInfrastructure : extends
+
+
+
+
+
+@enduml

@@ -12,5 +12,11 @@ rectangle "Common Data Service" as cds #ffcc88 {
 
 }
 
+rectangle "edgemere" as edgemere #ccaaff {
+        usecase "Provide Business Information" as ProvideBusinessInformation
+    DataAnalyst --> ProvideBusinessInformation
+
+}
+
 
 @enduml

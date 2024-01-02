@@ -5,7 +5,7 @@ actor "DataEngineer" as dataengineer
 
 actor "DataScientist" as datascientist
 
-actor "ChiefDataOfficer" as cdo
+actor "ChiefDataOfficer" as chiefdataofficer
 
 
 
@@ -38,7 +38,7 @@ datascientist -> "Data Definition Framework": Manage Meta Data
 "Data Definition Framework" -> bin: metadata list
 bin -> REST: metadata/list
 
-cdo -> "Data Definition Framework": Manage Data Procedures
+chiefdataofficer -> "Data Definition Framework": Manage Data Procedures
 "Data Definition Framework" -> bin: dataprocedure list
 bin -> REST: dataprocedure/list
 

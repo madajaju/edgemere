@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package AI ML Services
 permalink: package--edgemere-aml-ams
 parent: Package Application Management Layer

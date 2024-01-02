@@ -23,9 +23,9 @@ rectangle "Common Physical Layer" as cpl #cccccc {
 rectangle "Cloud Broker" as cb #88cc88 {
         usecase "Find Resources" as FindResources
     ITOperations --> FindResources
-    usecase "ManageBilling" as ManageBilling
+    usecase "Manage Billing" as ManageBilling
     ITOperations --> ManageBilling
-    usecase "ManageCostModel" as ManageCostModel
+    usecase "Manage Cost Model" as ManageCostModel
     ITOperations --> ManageCostModel
     usecase "Manage Multi Cloud" as ManageMultiCloud
     ITOperations --> ManageMultiCloud
@@ -51,6 +51,16 @@ rectangle "Service Management Layer" as sml #88cc88 {
 rectangle "Software Defined Infrastructure" as sdi #cccc88 {
         usecase "Manage Resources" as ManageResources
     ITOperations --> ManageResources
+
+}
+
+rectangle "edgemere" as edgemere #ccaaff {
+        usecase "Control Virtual Infrastructure" as ControlVirtualInfrastructure
+    ITOperations --> ControlVirtualInfrastructure
+    usecase "Coordinate Services" as CoordinateServices
+    ITOperations --> CoordinateServices
+    usecase "Manage Physical Infrastructure" as ManagePhysicalInfrastructure
+    ITOperations --> ManagePhysicalInfrastructure
 
 }
 

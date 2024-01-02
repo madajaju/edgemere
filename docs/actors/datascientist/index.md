@@ -18,6 +18,7 @@ Responsible for the architecture and development of data analytic models and sol
 * [Manage Data Blue Prints](usecase-ManageDataBluePrints)
 * [Manage Meta Data](usecase-ManageMetaData)
 * [Manage Data Instances](usecase-ManageDataInstances)
+* [Provide Business Information](usecase-ProvideBusinessInformation)
 
 
 ![Use Case Diagram](./UseCase.png)
@@ -32,4 +33,4 @@ TBD
 * [ edgemere diml ddf datablueprint list](action--edgemere-diml-ddf-datablueprint-list) - Manage Data Blue Prints is the description
 * [ edgemere diml ddf metadata list](action--edgemere-diml-ddf-metadata-list) - Manage Meta Data is the description
 * [ edgemere diml dml do datainstance list](action--edgemere-diml-dml-do-datainstance-list) - Manage Data Instances is the description
-
+* [ edgemere data govern](action--edgemere-data-govern) - Provide Business Information is the description

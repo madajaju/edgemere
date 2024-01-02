@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Software Defined Infrastructure
 permalink: package--edgemere-sdi
 parent: Package edgemere

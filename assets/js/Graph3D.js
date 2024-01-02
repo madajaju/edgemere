@@ -46,7 +46,8 @@ export class Graph3D {
             .nodeLabel(node => {
                 let label = node.name;
                 if (node.description) {
-                    label = `<div><h1>${node.name}</h1><p>${node.description}</p></div>`;
+                    label = `<div style="background-color: rgba(0,0, 0, 0.7); padding: 5px; color: #ffffff;">` +
+                        `<h2>${node.name}</h2><p>${node.description.replace(/\n/g, "<br/>")}</p></div>`;
                 }
                 return label;
             })
@@ -87,11 +88,11 @@ export class Graph3D {
                 return 0;
             })
             .linkWidth(link => {
-                let width = link.width || 2;
+                let width = link.width || 1;
                 if (this.selected.links.target.has(link)) {
-                    return width * 2;
+                    return (width + 1) * 2;
                 } else if (this.selected.links.source.has(link)) {
-                    return width * 2;
+                    return (width + 1) * 2;
                 }
                 return width;
             })
@@ -167,12 +168,13 @@ export class Graph3D {
                 }
             })
             .linkDirectionalParticles(link => {
+                let width = link.width || 1;
                 if (this.selected.links.target.has(link)) {
-                    return 5;
+                    return (width + 1) * 4;
                 } else if (this.selected.links.source.has(link)) {
-                    return 5;
+                    return (width + 1) * 4;
                 }
-                return 2;
+                return width * 2;
             })
             .linkDirectionalParticleColor(link => {
                 if (this.selected.links.target.has(link)) {
@@ -188,9 +190,9 @@ export class Graph3D {
             .linkDirectionalParticleWidth(link => {
                 let width = link.width || 2;
                 if (this.selected.links.target.has(link)) {
-                    return width * 4;
+                    return (width + 1) * 4;
                 } else if (this.selected.links.source.has(link)) {
-                    return width * 4;
+                    return (width + 1) * 4;
                 }
                 return width * 2;
             })
@@ -199,6 +201,11 @@ export class Graph3D {
                     return link.color;
                 } else {
                     return "gray";
+                }
+                if (this.selected.links.target.has(link)) {
+                    return "#ffaaaa";
+                } else if (this.selected.links.source.has(link)) {
+                    return "#ffffaa";
                 }
             })
             .cooldownTime(5000)
@@ -226,8 +233,12 @@ export class Graph3D {
             .d3Force('charge', d3.forceManyBody().strength((d) => {
                 return 40;
             }))
-            .d3Force("center", d3.forceCenter().strength( (d) => {
-                if(d.rbox) { return 0;} else { return 1; }
+            .d3Force("center", d3.forceCenter().strength((d) => {
+                if (d.rbox) {
+                    return 0;
+                } else {
+                    return 1;
+                }
             }))
             .d3Force('collide', Graph3D.collide()
                 .radius((d) => {
@@ -411,18 +422,29 @@ export class Graph3D {
             .linkDirectionalParticles(this.graph.linkDirectionalParticles());
     };
 
-    selectNodeByID(id) {
+    selectNodeByID(id, graphOnly) {
         if (this.data.nodes.hasOwnProperty(id)) {
             let node = this.data.nodes[id]
-            this.selectNode(this.data.nodes[id]);
-            // Aim at node from outside it
-            const distance = 300;
-            const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z);
-            this.graph.cameraPosition(
-                {x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio}, // new position
-                node, // lookAt ({ x, y, z })
-                3000  // ms transition duration.
-            );
+            if(!graphOnly) {
+                this.selectNode(this.data.nodes[id]);
+            }
+            if(node) {
+                // Aim at node from outside it
+                const box = node.box || 35;
+                const distRatio = 10 * box;
+                // Get the Bounding Box
+                if(!node.orientation) {
+                    node.orientation = { x:0,y:0,z:1};
+                }
+                this.graph.cameraPosition( {
+                        x: node.x + (distRatio*node.orientation.x),
+                        y: node.y + (distRatio*node.orientation.y),
+                        z: node.z + (distRatio*node.orientation.z)
+                    }, // new position
+                    node, // lookAt ({ x, y, z })
+                    3000  // ms transition duration.
+                );
+            }
         }
     };
 
@@ -504,9 +526,18 @@ export class Graph3D {
         function force(alpha) {
             for (let i = 0, n = nodes.length, k = alpha * 0.1; i < n; ++i) {
                 let node = nodes[i];
-                if(node.fx) { node.x = node.fx; node.vx = 0; }
-                if(node.fy) { node.y = node.fy; node.vy = 0; }
-                if(node.fz) { node.z = node.fz; node.vz = 0; }
+                if (node.fx) {
+                    node.x = node.fx;
+                    node.vx = 0;
+                }
+                if (node.fy) {
+                    node.y = node.fy;
+                    node.vy = 0;
+                }
+                if (node.fz) {
+                    node.z = node.fz;
+                    node.vz = 0;
+                }
                 if (node.rbox) {
                     let parent = nodes[nmap[node.rbox.parent]];
                     if (parent) { // the Parent is found then go forward. If not then don't.
@@ -845,6 +876,31 @@ export class Graph3D {
         };
 
         return force;
+    }
+
+    showSelectedOnly() {
+        let selectedNodes = this.selected.nodes;
+        let selectedLinks = this.selected.links;
+        // this.clearObjects()
+        let nodes = {};
+        nodes[selectedNodes.primary.id] = selectedNodes.primary;
+        for(let si in selectedNodes.source) {
+            nodes[si] = selectedNodes.source[si];
+        }
+        for(let ti in selectedNodes.target) {
+            nodes[ti] = selectedNodes.target[ti];
+        }
+        let links = [];
+        selectedLinks.source.forEach((link) => {
+                links.push(link);
+        });
+        selectedLinks.target.forEach((link) => {
+                links.push(link);
+        });
+        this.data.nodes = nodes;
+        this.data.links = links;
+        this.normalizeData(); // Creates the ndata. Normalizedd Data
+        this.graph.graphData(this.ndata);
     }
 
 }

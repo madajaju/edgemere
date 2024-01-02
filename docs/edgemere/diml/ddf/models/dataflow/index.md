@@ -39,7 +39,6 @@ AWorkFlow of Data through its transformation
 
 
 ## Methods
-
 * [create() - Create a Data AWorkFlow](#action-create)
 
 

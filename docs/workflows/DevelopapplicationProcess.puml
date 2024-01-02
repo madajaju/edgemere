@@ -1,0 +1,26 @@
+@startuml
+partition "Application Management Layer" #88cccc {
+(*) --> "Create Application"
+}
+partition "Application Developer" #ffffcc {
+"Create Application" --> "Write Code"
+}
+partition "Application Management Layer" #88cccc {
+"Write Code" --> "Check In Code"
+}
+partition "Edgemere" #dddddd {
+"Check In Code" --> "Application Build Process"
+}
+partition "Edgemere" #dddddd {
+"Application Build Process" --> if "Build Test Pass" then
+}
+partition "Application Management Layer" #88cccc {
+else
+--> [true] "Deploy Application"
+}
+partition "Application Developer" #ffffcc {
+else
+--> [false] "Write Code"
+}
+
+@enduml

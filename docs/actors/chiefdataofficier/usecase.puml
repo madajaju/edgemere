@@ -1,0 +1,16 @@
+@startuml
+
+left to right direction
+
+
+Actor "ChiefDataOfficier" as ChiefDataOfficier
+
+
+rectangle "edgemere" as edgemere #ccaaff {
+        usecase "Provide Business Information" as ProvideBusinessInformation
+    ChiefDataOfficier --> ProvideBusinessInformation
+
+}
+
+
+@enduml

@@ -23,6 +23,10 @@ ManageResources --> ReleaseResources
 
 
 
+usecase "Control Virtual Infrastructure" as ControlVirtualInfrastructure #lightyellow
+
+ManageResources <-- ControlVirtualInfrastructure : extends
+
 
 
 

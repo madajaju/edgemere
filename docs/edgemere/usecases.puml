@@ -1,10 +1,47 @@
 @startuml
 
 left to right direction
+Actor "ITOperations" as ITOperations
+Actor "StackDeveloper" as StackDeveloper
+Actor "ITOperations" as ITOperations
+Actor "DevOpsEngineer" as DevOpsEngineer
+Actor "SecurityOperator" as SecurityOperator
+Actor "ITOperations" as ITOperations
+Actor "ApplicationDeveloper" as ApplicationDeveloper
+Actor "DevOpsEngineer" as DevOpsEngineer
+Actor "DataAnalyst" as DataAnalyst
+Actor "DataEngineer" as DataEngineer
+Actor "DataScientist" as DataScientist
+Actor "DataSteward" as DataSteward
+Actor "ChiefDataOfficier" as ChiefDataOfficier
+Actor "SecurityEngineer" as SecurityEngineer
+Actor "SecurityOperator" as SecurityOperator
 
 
 rectangle "edgemere" #ccaaff {
-}
+usecase "ControlVirtualInfrastructure" as ControlVirtualInfrastructure
+    ITOperations --> ControlVirtualInfrastructure
+    usecase "CoordinateServices" as CoordinateServices
+    StackDeveloper --> CoordinateServices
+    ITOperations --> CoordinateServices
+    DevOpsEngineer --> CoordinateServices
+    usecase "GovernIdentities" as GovernIdentities
+    SecurityOperator --> GovernIdentities
+    usecase "ManagePhysicalInfrastructure" as ManagePhysicalInfrastructure
+    ITOperations --> ManagePhysicalInfrastructure
+    usecase "OrganizeSolutions" as OrganizeSolutions
+    ApplicationDeveloper --> OrganizeSolutions
+    DevOpsEngineer --> OrganizeSolutions
+    usecase "ProvideBusinessInformation" as ProvideBusinessInformation
+    DataAnalyst --> ProvideBusinessInformation
+    DataEngineer --> ProvideBusinessInformation
+    DataScientist --> ProvideBusinessInformation
+    DataSteward --> ProvideBusinessInformation
+    ChiefDataOfficier --> ProvideBusinessInformation
+    usecase "SecureAssets" as SecureAssets
+    SecurityEngineer --> SecureAssets
+    SecurityOperator --> SecureAssets
+    }
 
 
 @enduml

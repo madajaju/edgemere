@@ -18,6 +18,10 @@ Manage Stacks allows the stack developer to create, update, and delete stacks.
 
 
 
+## Extends Use Cases
+
+* [Control Virtual Infrastructure](usecase-ControlVirtualInfrastructure)
+
 
 
 
@@ -53,7 +57,7 @@ Build Stack is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [DevOps Engineer](actor-devops)
 
 
 
@@ -69,7 +73,8 @@ Create Application Stack is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [Application Developer](actor-applicationdeveloper)
+* [Stack Developer](actor-stackdev)
 
 
 
@@ -85,7 +90,7 @@ Create Service Stack is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [Stack Developer](actor-stackdev)
 
 
 
@@ -116,7 +121,8 @@ Modify Application Stack is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [Stack Developer](actor-stackdev)
+* [Application Developer](actor-applicationdeveloper)
 
 
 
@@ -132,7 +138,7 @@ Modify Service Stack is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [Stack Developer](actor-stackdev)
 
 
 
@@ -148,7 +154,8 @@ Test Application Stack is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [Stack Developer](actor-stackdev)
+* [Application Developer](actor-applicationdeveloper)
 
 
 
@@ -164,7 +171,7 @@ Test Service Stack is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [Stack Developer](actor-stackdev)
 
 
 
@@ -210,7 +217,7 @@ Version Application Stack is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [Application Developer](actor-applicationdeveloper)
 
 
 
@@ -226,7 +233,7 @@ Version Service Stack is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [Stack Developer](actor-stackdev)
 
 
 

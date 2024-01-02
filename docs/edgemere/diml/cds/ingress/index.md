@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Ingress Services
 permalink: package--edgemere-diml-cds-ingress
 parent: Package Common Data Service

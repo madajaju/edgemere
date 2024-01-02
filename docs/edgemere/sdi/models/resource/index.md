@@ -67,9 +67,7 @@ The following diagram is the state net for this class.
 
 
 ## Methods
-
 * [factory() - Create a Resource based on the hardware to resource table](#action-factory)
-
 * [provision() - Provision the Resource](#action-provision)
 
 

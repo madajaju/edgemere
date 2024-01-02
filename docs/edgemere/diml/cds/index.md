@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Common Data Service
 permalink: package--edgemere-diml-cds
 parent: Package Distributed Information Management Layer

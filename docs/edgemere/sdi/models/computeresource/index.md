@@ -36,9 +36,7 @@ Logical Resource of Compute CPUs that are provisioned
 
 
 ## Methods
-
 * [factory() - Create a Resource based on the hardware to resource table](#action-factory)
-
 * [provision() - Provision the Resource](#action-provision)
 
 

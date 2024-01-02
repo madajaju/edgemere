@@ -12,6 +12,7 @@ Responsible for the governance of data in their organization. They implement pol
 
 ## Use Cases
 
+* [Provide Business Information](usecase-ProvideBusinessInformation)
 
 
 ![Use Case Diagram](./UseCase.png)
@@ -20,4 +21,4 @@ Responsible for the governance of data in their organization. They implement pol
 TBD
 
 ## Command Line Interface
-
+* [ edgemere data govern](action--edgemere-data-govern) - Provide Business Information is the description

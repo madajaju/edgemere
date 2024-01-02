@@ -18,6 +18,10 @@ Application Developers need the ability to connect applications together through
 
 
 
+## Extends Use Cases
+
+* [OrganizeSolutions](usecase-OrganizeSolutions)
+
 
 
 

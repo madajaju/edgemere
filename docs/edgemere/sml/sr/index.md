@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Service Repository
 permalink: package--edgemere-sml-sr
 parent: Package Service Management Layer

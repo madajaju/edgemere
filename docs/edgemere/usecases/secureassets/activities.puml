@@ -1,0 +1,32 @@
+@startuml
+
+
+usecase "Secure Assets" as SecureAssets #yellow
+
+Actor "SecurityEngineer" as SecurityEngineer
+
+SecurityEngineer --> SecureAssets
+
+Actor "Security Operator" as SecurityOperator
+
+SecurityOperator --> SecureAssets
+
+
+
+
+
+
+
+usecase "ApplySecurityProfiles" as ApplySecurityProfiles #lightyellow
+
+SecureAssets --> ApplySecurityProfiles : extends
+
+usecase "ManageSecurityProfiles" as ManageSecurityProfiles #lightyellow
+
+SecureAssets --> ManageSecurityProfiles : extends
+
+
+
+
+
+@enduml

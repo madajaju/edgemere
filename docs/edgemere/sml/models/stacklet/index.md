@@ -51,9 +51,7 @@ This is a combination of the stack with a specific environment. This allows for 
 
 
 ## Methods
-
 * [create() - Create a Stack](#action-create)
-
 * [deploy() - Deploy a Stack](#action-deploy)
 
 

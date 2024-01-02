@@ -10,11 +10,11 @@ itops -> "Cloud Broker": Find Resources
 "Cloud Broker" -> bin: resources find
 bin -> REST: resources/find
 
-itops -> "Cloud Broker": ManageBilling
+itops -> "Cloud Broker": Manage Billing
 "Cloud Broker" -> bin: billing list
 bin -> REST: billing/list
 
-itops -> "Cloud Broker": ManageCostModel
+itops -> "Cloud Broker": Manage Cost Model
 "Cloud Broker" -> bin: ResourceInstanceType list
 bin -> REST: ResourceInstanceType/list
 

@@ -38,7 +38,6 @@ This is an instance of the data flow when a blue print is instantiated.
 
 
 ## Methods
-
 * [create() - Create a Data AWorkFlow Instance](#action-create)
 
 

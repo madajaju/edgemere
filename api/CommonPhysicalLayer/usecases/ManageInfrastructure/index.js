@@ -11,5 +11,6 @@ module.exports = {
     actors: {
         'IT Operations': 'uses'
     },
+    extends: ["ManagePhysicalInfrastructure"]
 };
 

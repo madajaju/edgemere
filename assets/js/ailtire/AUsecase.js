@@ -1,9 +1,10 @@
-import {AActor, AScenario, AText, AInterface, APackage, A3DGraph, ASelectedHUD} from './index.js';
+import {AActor, AScenario, AText, AInterface, APackage, ASelectedHUD} from './index.js';
 
 export default class AUsecase {
     constructor(config) {
         this.config = config;
     }
+
     static default = {
         fontSize: 20,
         height: 50,
@@ -13,13 +14,17 @@ export default class AUsecase {
 
     static calculateBox(node) {
         let fontSize = node.fontSize || AUsecase.default.fontSize;
-        let nameArray = node.name.split(/\s/).map(item => {return item.length;});
-        let maxLetters = nameArray.reduce(function(a, b) { return Math.max(a, b); }, -Infinity);
-        let height = (nameArray.length*fontSize)/2 + 10;
-        let width = maxLetters * (fontSize/2) + 20;
+        let nameArray = node.name.split(/\s/).map(item => {
+            return item.length;
+        });
+        let maxLetters = nameArray.reduce(function (a, b) {
+            return Math.max(a, b);
+        }, -Infinity);
+        let height = (nameArray.length * fontSize) / 2 + 10;
+        let width = maxLetters * (fontSize / 2) + 20;
         let depth = AUsecase.default.depth;
-        let radius =Math.sqrt(width*width + height*height + depth*depth)/2;
-        return {w: width, h: height*2, d: depth, r: radius};
+        let radius = Math.sqrt(width * width + height * height + depth * depth) / 2;
+        return {w: width, h: height * 2, d: depth, r: radius};
     }
 
     static showList(panel, parent) {
@@ -58,6 +63,7 @@ export default class AUsecase {
             }
         });
     }
+
     static view3D(node, type) {
         let opacity = node.opacity || 0.5;
         let fontSize = node.fontSize || AUsecase.default.fontSize;
@@ -92,7 +98,7 @@ export default class AUsecase {
         const retval = new THREE.Mesh(geometry, material);
         retval.position.set(node.x, node.y, node.z);
         let label = AText.view3D({text: nameArray.join('\n'), color: "#ffffff", width: width, size: fontSize});
-        label.position.set(0, 0, size.d+1);
+        label.position.set(0, 0, size.d + 1);
         retval.add(label);
         if (node.rotate) {
             if (node.rotate.x) {
@@ -121,6 +127,7 @@ export default class AUsecase {
             }
         });
     }
+
     static showDetail(result) {
         let records = [];
         if (!w2ui['objlist']) {
@@ -194,6 +201,7 @@ export default class AUsecase {
         w2ui['objlist'].refresh();
         ASelectedHUD.update('Usecase', records);
     }
+
     static showListDetail(result) {
         let records = [];
         if (!w2ui['objlist']) {
@@ -251,11 +259,11 @@ export default class AUsecase {
             detail: ucDetails.join("|")
         });
         let actors = {};
-        for(let uname in result) {
-           let uc = result[uname];
-           for(let aname in uc.actors) {
-               actors[aname] = uc.actors[aname];
-           }
+        for (let uname in result) {
+            let uc = result[uname];
+            for (let aname in uc.actors) {
+                actors[aname] = uc.actors[aname];
+            }
         }
         let actorDetails = Object.keys(actors).map(item => {
             return `<span onclick="expandObject('actor/get?id=${item}');">${item}</span>`
@@ -267,11 +275,11 @@ export default class AUsecase {
             detail: actorDetails.join('|')
         });
         let scenarios = {};
-        for(let uname in result) {
-           let uc = result[uname];
-           for(let aname in uc.scenarios) {
-               scenarios[aname] = uc.scenarios[aname];
-           }
+        for (let uname in result) {
+            let uc = result[uname];
+            for (let aname in uc.scenarios) {
+                scenarios[aname] = uc.scenarios[aname];
+            }
         }
         let scDetails = Object.keys(scenarios).map(item => {
             return `<span onclick="expandObject('scenario/get?id=${item}');">${item}</span>`
@@ -289,7 +297,8 @@ export default class AUsecase {
     static viewDeep3D(usecase, mode) {
         let data = {nodes: {}, links: []};
 
-        data.nodes[usecase.id] = {id: usecase.id, name: usecase.name, fx: 0, fy: 0, fz: 0,
+        data.nodes[usecase.id] = {
+            id: usecase.id, name: usecase.name, fx: 0, fy: 0, fz: 0,
             view: AUsecase.view3D,
             expandView: AUsecase.handle,
             expandLink: `usecase/get?id=${usecase.id}`
@@ -297,51 +306,69 @@ export default class AUsecase {
         for (let j in usecase.scenarios) {
             let scenario = usecase.scenarios[j];
             let id = scenario.uid;
-            data.nodes[id] = {id: id, name: scenario.name,
+            data.nodes[id] = {
+                id: id, name: scenario.name,
                 view: AScenario.view3D,
+                rbox: {parent: usecase.id, z: {max: -200, min: -3000}}
             };
             for (let actor in scenario.actors) {
                 let aname = actor.replace(/\s/g, '').toLowerCase();
                 data.links.push({source: aname, target: id, value: 0.3, width: 2});
             }
-            data.links.push({target: usecase.id, source: id, value: 0.1, width: 3, color: 'gray'});
+            data.links.push({source: usecase.id, target: id, value: 0.1, width: 3, color: 'gray'});
         }
 
         for (let j in usecase.extended) {
             let suc = usecase.extended[j];
-            data.nodes[j] = {id: j, name: suc.name, view: AUsecase.view3D,
-                color: 'gray'};
-            data.links.push({target: usecase.id, source: j, value: 0.1, width: 3, color: 'gray'});
+            data.nodes[j] = {
+                id: j, name: suc.name, view: AUsecase.view3D,
+                color: '#aaaaaa',
+                rbox: {parent: usecase.id, z: {max: 400, min: -200}}
+            };
+            data.links.push({source: usecase.id, target: j, value: 0.1, width: 3, color: 'gray'});
         }
 
         for (let j in usecase.extends) {
             let sucname = usecase.extends[j];
             let sucid = sucname.replace(/\s/g, '');
-            data.nodes[sucid] = {id: sucid, name: sucname,
+            data.nodes[sucid] = {
+                id: sucid, name: sucname,
                 view: AUsecase.view3D,
-                color: 'gray'};
-            data.links.push({source: usecase.id, target: sucid, value: 0.1, width: 3, color: 'gray'});
+                color: '#aaaaff',
+                rbox: {parent: usecase.id, z: {max: 400, min: -200}}
+            };
+            data.links.push({target: usecase.id, source: sucid, value: 0.1, width: 3, color: 'gray'});
         }
 
         for (let j in usecase.includes) {
             let sucname = usecase.includes[j];
             let sucid = sucname.replace(/\s/g, '');
-            data.node[sucid] = {id: sucid, name: sucname,
+            data.node[sucid] = {
+                id: sucid, name: sucname,
                 view: AUsecase.view3D,
-                color: 'gray'};
+                color: '#aaffff',
+                rbox: {parent: usecase.id, z: {max: 400, min: -200}}
+            };
             data.links.push({source: usecase.id, target: sucid, value: 0.1, width: 3, color: 'gray'});
         }
         for (let j in usecase.included) {
             let suc = usecase.included[j];
-            data.nodes[j] = {id: j, name: suc.name,
+            data.nodes[j] = {
+                id: j, name: suc.name,
                 view: AUsecase.view3D,
-                color: 'gray'};
+                color: '#aaffaa',
+                rbox: {parent: usecase.id, z: {max: 400, min: -200}}
+            };
             data.links.push({source: usecase.id, target: j, value: 0.1, width: 3, color: 'gray'});
         }
 
         for (let actor in usecase.actors) {
             let aname = actor.replace(/\s/g, '').toLowerCase();
-            data.nodes[aname] = {id: aname, name: actor, view: AActor.view3D};
+            data.nodes[aname] = {
+                id: aname, name: actor, view: AActor.view3D,
+                rbox: {parent: usecase.id, z: {max: 3000, min: 400}}
+            };
+            data.links.push({source: aname, target: usecase.id, value: 1, width: 3, color: '#ffffff'});
         }
 
         if (mode === 'add') {
@@ -360,98 +387,161 @@ export default class AUsecase {
         window.graph.showLinks();
         window.graph.toolbar.setToolBar([]);
     }
+    static _viewListPackageMap(objs, mode, pkgs) {
+        if(!pkgs) {
+            pkgs = {};
+        }
+        for (let ucname in objs) {
+            let uc = objs[ucname];
+            let pname = uc.package.replace(/\s/g, '');
+            if (!pkgs.hasOwnProperty(pname)) {
+                pkgs[pname] = {name: uc.package, usecases: {}, interfaces: {}};
+            }
+            let mname = uc.method.replace(/\s/g, '');
+            pkgs[pname].usecases[ucname] = uc;
+            pkgs[pname].interfaces[mname] = {name: uc.method};
+            if(mode === "exploded") {
+                AUsecase._viewListPackageMap(uc.extended, mode, pkgs);
+                AUsecase._viewListPackageMap(uc.included, mode, pkgs);
+            }
+        }
+        return pkgs;
+    }
+    static viewList3D(objs, mode, data) {
+        if (!data) {
+            data = {nodes: {}, links: [], offset: {x: 0, y: 0, z: 0}};
+        }
+        if (mode === "new") {
+            window.graph.clearObjects();
+        }
+        // Run through the use cases to find out how many are in a package to size the packages.
+        if(mode !== "exploding") {
+            let pkgs = AUsecase._viewListPackageMap(objs, mode);
 
-    static viewList3D(objs) {
-        let data = {nodes: {}, links: []};
-
-        window.graph.clearObjects();
+            for (let pname in pkgs) {
+                let box = APackage.calculateGroupBox(pkgs[pname].usecases, AUsecase.calculateBox);
+                let topBox = APackage.calculateGroupBox(pkgs[pname].interfaces, AInterface.calculateBox);
+                data.nodes[pname] = {
+                    id: pname,
+                    cube: {x: box.box.w * 2, y: box.box.h * 2, z: topBox.box.h * 2},
+                    fz: 0,
+                    opacity: 0.5,
+                    name: pkgs[pname].name,
+                    view: APackage.view3D,
+                    expandView: APackage.handle,
+                    expandLink: `package/get?id=${pname}`
+                };
+            }
+        }
         for (let ucname in objs) {
             let usecase = objs[ucname];
             usecase.id = ucname;
 
-            let pkgname = usecase.package.replace(/\s/g,'');
-            data.nodes[usecase.id] = {
-                id: usecase.id,
-                name: usecase.name,
-                view: AUsecase.view3D,
-                expandView: AUsecase.handle,
-                expandLink: `usecase/get?id=${usecase.id}`
+            let pkgname = usecase.package.replace(/\s/g, '');
+            let pkgnode = data.nodes[pkgname];
+            if (!data.nodes.hasOwnProperty(usecase.id)) {
+                data.nodes[usecase.id] = {
+                    id: usecase.id,
+                    name: usecase.name,
+                    view: AUsecase.view3D,
+                    expandView: AUsecase.handle,
+                    expandLink: `usecase/get?id=${usecase.id}`
+                };
+            }
+            data.nodes[usecase.id].rbox = {
+                parent: pkgname,
+                fz: (pkgnode.cube.z / 2) + 10,
+                x: {min: -pkgnode.cube.x / 2, max: pkgnode.cube.x / 2},
+                y: {min: -pkgnode.cube.y / 2, max: pkgnode.cube.y / 2}
             };
-            data.nodes[pkgname] = {
-                id: pkgname,
-                cube: { x: 300, y: 300, z: 300 },
-                opacity: 0.5,
-                name: usecase.package,
-                view: APackage.view3D,
-                expandView: APackage.handle,
-                expandLink: `package/get?id=${pkgname}`
-            }
+            if (mode === "exploded" || mode === "exploding") {
+                for (let j in usecase.extended) {
+                    let suc = usecase.extended[j];
+                    suc.id = j;
+                    data.nodes[suc.id] = {
+                        id: suc.id,
+                        name: suc.name,
+                        view: AUsecase.view3D,
+                        expandView: AUsecase.handle,
+                        expandLink: `usecase/get?id=${j}`,
+                        color: '#aaaaaa'
+                    };
+                    // Get the actor and the package and method. by making this recursive
+                    let item = {};
+                    item[j] = suc;
+                    AUsecase.viewList3D(item, "exploding", data);
+                    data.links.push({target: usecase.id, source: suc.id, value: 1, width: 3, color: '#aaaaaa'});
+                }
 
-            for (let j in usecase.extended) {
-                let suc = usecase.extended[j];
-                data.nodes[j] = {id: j, name: suc.name,
-                    view: AUsecase.view3D,
-                    expandView: AUsecase.handle,
-                    expandLink: `usecase/get?id=${j}`,
-                    color: 'gray'};
-                data.links.push({target: usecase.id, source: j, value: 0.1, width: 3, color: 'gray'});
-            }
-
-            for (let j in usecase.extends) {
-                let sucname = usecase.extends[j];
-                let sucid = sucname.replace(/\s/g, '');
-                data.nodes[sucid] = {id: sucid, name: sucname,
-                    view: AUsecase.view3D,
-                    expandView: AUsecase.handle,
-                    expandLink: `usecase/get?id=${sucid}`,
-                    color: 'gray'};
-                data.links.push({source: usecase.id, target: sucid, value: 0.1, width: 3, color: 'gray'});
-            }
-
-            for (let j in usecase.includes) {
-                let sucname = usecase.includes[j];
-                let sucid = sucname.replace(/\s/g, '');
-                data.node[sucid] = {id: sucid, name: sucname,
-                    view: AUsecase.view3D,
-                    expandView: AUsecase.handle,
-                    expandLink: `usecase/get?id=${sucid}`,
-                    color: 'gray'};
-                data.links.push({source: usecase.id, target: sucid, value: 0.1, width: 3, color: 'gray'});
-            }
-            for (let j in usecase.included) {
-                let suc = usecase.included[j];
-                data.nodes[j] = {id: j, name: suc.name,
-                    view: AUsecase.view3D,
-                    expandView: AUsecase.handle,
-                    expandLink: `usecase/get?id=${j}`,
-                    color: 'gray'};
-                data.links.push({source: usecase.id, target: j, value: 0.1, width: 3, color: 'gray'});
+                for (let j in usecase.included) {
+                    let suc = usecase.included[j];
+                    suc.id = j;
+                    data.nodes[suc.id] = {
+                        id: suc.id,
+                        name: suc.name,
+                        view: AUsecase.view3D,
+                        expandView: AUsecase.handle,
+                        expandLink: `usecase/get?id=${j}`,
+                        color: '#88dddd'
+                    };
+                    let item = {};
+                    item[j] = suc;
+                    AUsecase.viewList3D(item, "exploding", data);
+                    data.links.push({source: usecase.id, target: suc.id, value: 1, width: 3, color: '#88dddd'});
+                }
             }
 
             for (let actor in usecase.actors) {
                 let aname = actor.replace(/\s/g, '').toLowerCase();
-                data.nodes[aname] = {id: aname, name: actor,
+                data.nodes[aname] = {
+                    id: aname, name: actor,
                     view: AActor.view3D,
                     expandView: AActor.handle,
                     expandLink: `actor/get?id=${aname}`,
+                    rbox: {parent: pkgname, x: {min: -3000, max: -pkgnode.cube.x}, fz: 0}
                 };
                 data.links.push({source: aname, target: usecase.id, value: 0.1, width: 3, color: 'gray'});
             }
-            data.nodes[pkgname+usecase.method] = {
-                id: pkgname+usecase.method,
-                name: usecase.method.replace(/\//,'\n'),
+            data.nodes[pkgname + usecase.method] = {
+                id: pkgname + usecase.method,
+                name: usecase.method.replace(/\//, '\n'),
                 view: AInterface.view3D,
                 rbox: {
                     parent: pkgname,
-                    x: {min: -150, max: 150},
-                    y: {min: 160, max: 160},
-                    z: {min: -150, max: 150},
+                    x: {min: -pkgnode.cube.x / 2 - 10, max: pkgnode.cube.x / 2 - 10},
+                    y: {min: pkgnode.cube.x / 2 + 10, max: pkgnode.cube.x / 2 + 10},
+                    z: {min: -pkgnode.cube.x / 2 - 10, max: pkgnode.cube.x / 2 - 10},
                 }
             }
-            data.links.push({source: usecase.id, target: pkgname+usecase.method, value: 0.5, width: 3, color: 'gray'});
+            data.links.push({
+                source: usecase.id,
+                target: pkgname + usecase.method,
+                value: 0.01,
+                width: 3,
+                color: 'gray'
+            });
         }
-
-        window.graph.setData(data.nodes, data.links);
+        if (mode === "new") {
+            window.graph.setData(data.nodes, data.links);
+        } else {
+            window.graph.addData(data.nodes, data.links);
+        }
+        window.graph.toolbar.setToolBar([
+            {
+                type: 'button', id: 'fit', text: 'Show All', img: 'w2ui-icon-zoom',
+                onClick: (event) => {
+                    window.graph.graph.zoomToFit(1000);
+                }
+            },
+            {
+                type: 'button', id: 'explode', text: 'Explode', img: 'w2ui-icon-search', onClick: (event) => {
+                    AUsecase.viewList3D(objs, "exploded");
+                    setTimeout(() => {
+                        window.graph.graph.zoomToFit(1000)
+                    }, 1500);
+                }
+            }
+        ]);
         window.graph.showLinks();
     }
 
@@ -459,6 +549,7 @@ export default class AUsecase {
         AUsecase.viewDeep3D(result, 'new');
         AUsecase.showDetail(result);
     }
+
     static handleList(result) {
         AUsecase.viewList3D(result, 'new');
         AUsecase.showListDetail(result);

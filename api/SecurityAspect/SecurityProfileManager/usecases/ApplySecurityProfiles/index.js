@@ -11,6 +11,7 @@ module.exports = {
     actors: {
         'SecurityOperator': 'uses'
     },
+    extends: ["Secure Assets"]
     // Shows dependency
     // includes: ["UseCase Name"],
     // Show Aggreation from a super use case

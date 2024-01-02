@@ -17,6 +17,10 @@ Manage Multi Cloud allows actors to create multi-clouds by adding clouds. Manage
 
 
 
+## Extends Use Cases
+
+* [Control Virtual Infrastructure](usecase-ControlVirtualInfrastructure)
+
 
 
 
@@ -61,11 +65,11 @@ IT Operations adds,removes,enables and disables policies to a multicloud
 
 
 
-### Scenario Manage Policies for Multi Cloud
+### Scenario Remove Cloud From Multi Cloud
 
 IT Operations removes or adds policies from Multi Cloud
 
-![Scenario ManagePoliciesforMultiCloud](./ManagePoliciesforMultiCloud.png)
+![Scenario RemoveCloudFromMultiCloud](./RemoveCloudFromMultiCloud.png)
 
 #### Steps
 1. To Be Defined

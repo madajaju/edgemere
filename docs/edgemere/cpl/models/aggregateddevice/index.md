@@ -59,21 +59,13 @@ The following diagram is the state net for this class.
 
 
 ## Methods
-
 * [addDevices() - Add Devices to the Aggregated Device](#action-addDevices)
-
 * [disable() - Disable Device and its hardware](#action-disable)
-
 * [enable() - Enable Device to be used.](#action-enable)
-
 * [reserve() - Reserve a resource](#action-reserve)
-
 * [addToHardware() - Create a Device](#action-addToHardware)
-
 * [create() - Create a Device](#action-create)
-
 * [getReservations() - Get reservation from the requirements](#action-getReservations)
-
 * [provision() - Provision Hardware to meet the requirements](#action-provision)
 
 

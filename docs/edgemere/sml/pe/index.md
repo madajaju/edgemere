@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Provision Engine
 permalink: package--edgemere-sml-pe
 parent: Package Service Management Layer

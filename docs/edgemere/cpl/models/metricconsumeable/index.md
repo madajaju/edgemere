@@ -28,25 +28,15 @@ No associations
 
 
 ## Methods
-
 * [create() - Create Composite Metric](#action-create)
-
 * [valueToString() - Change to string Metric Consumeable](#action-valueToString)
-
 * [consume() - Consume value from a metric](#action-consume)
-
 * [copy() - Copy Metric](#action-copy)
-
 * [factory() - Create a metric based on the metrictype table](#action-factory)
-
 * [greaterThanEq() - Test greater than or equal to the value passed in](#action-greaterThanEq)
-
 * [lessThanEq() - Test less than or equal to the value passed in](#action-lessThanEq)
-
 * [minus() - Add value to a metric](#action-minus)
-
 * [plus() - Add value to a metric](#action-plus)
-
 * [set() - Add value to a metric](#action-set)
 
 

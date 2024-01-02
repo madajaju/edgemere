@@ -35,6 +35,10 @@ ManageWorkloads --> UpdateWorkload
 
 
 
+usecase "OrganizeSolutions" as OrganizeSolutions #lightyellow
+
+ManageWorkloads <-- OrganizeSolutions : extends
+
 
 
 

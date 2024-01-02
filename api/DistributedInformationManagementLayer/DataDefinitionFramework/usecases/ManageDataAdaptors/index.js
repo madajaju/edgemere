@@ -12,5 +12,6 @@ module.exports = {
         'Data Engineer': 'uses',
         'Data Scientist': 'uses'
     },
+    extends: [ "Provide Business Information"]
 };
 

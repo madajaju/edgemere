@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package edgemere
 permalink: package--edgemere
 nav_order: 4
@@ -53,6 +54,13 @@ process changes shows how the foundation can be built upon to achieve the long t
 The following are the use cases of the edgemere subsystem. Each use case has primary and secondary scenarios
 that are elaborated in the use case descriptions.
 
+* [Control Virtual Infrastructure](usecase-ControlVirtualInfrastructure)
+* [Coordinate Services](usecase-CoordinateServices)
+* [Govern Identities](usecase-GovernIdentities)
+* [Manage Physical Infrastructure](usecase-ManagePhysicalInfrastructure)
+* [Organize Solutions](usecase-OrganizeSolutions)
+* [Provide Business Information](usecase-ProvideBusinessInformation)
+* [Secure Assets](usecase-SecureAssets)
 
 
 ![UseCase Diagram](./usecases.png)
@@ -62,6 +70,17 @@ that are elaborated in the use case descriptions.
 The following are the actors of the edgemere subsystem. This can include people, other subsystems
 inside the solution and even external subsystems.
 
+* [ITOperations](actor-itops)
+* [StackDeveloper](actor-stackdev)
+* [DevOpsEngineer](actor-devops)
+* [SecurityOperator](actor-securityoperator)
+* [ApplicationDeveloper](actor-applicationdeveloper)
+* [DataAnalyst](actor-analyst)
+* [DataEngineer](actor-dataengineer)
+* [DataScientist](actor-datascientist)
+* [DataSteward](actor-datasteward)
+* [ChiefDataOfficier](actor-chiefdataofficier)
+* [SecurityEngineer](actor-securityengineer)
 
 
 ![User Interaction](./userinteraction.png)
@@ -148,7 +167,6 @@ can be found [here](environment--edgemere-local)
 
 Services in the local environment
 
-* admin : edgemere
 * web : edgemere_web
 * doc : edgemere_doc
 

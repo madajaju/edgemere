@@ -27,6 +27,10 @@ ManageDataAdaptors --> UpdateDataAdaptor
 
 
 
+usecase "Provide Business Information" as ProvideBusinessInformation #lightyellow
+
+ManageDataAdaptors <-- ProvideBusinessInformation : extends
+
 
 
 

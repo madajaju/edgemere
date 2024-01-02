@@ -13,5 +13,6 @@ module.exports = {
         'DevOps Engineer': 'uses',
         'Application Developer': 'uses'
     },
+    extends: ["OrganizeSolutions"]
 };
 

@@ -36,5 +36,11 @@ rectangle "Data Management Layer" as dml #ffcc88 {
 
 }
 
+rectangle "edgemere" as edgemere #ccaaff {
+        usecase "Provide Business Information" as ProvideBusinessInformation
+    DataEngineer --> ProvideBusinessInformation
+
+}
+
 
 @enduml

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Data Adaptor Framework
 permalink: package--edgemere-diml-ddf-daf
 parent: Package Data Definition Framework

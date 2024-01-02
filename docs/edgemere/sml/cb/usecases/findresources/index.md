@@ -17,6 +17,10 @@ Find Resources that have been allocated in the multi-cloud ecosystem. This shoul
 
 
 
+## Extends Use Cases
+
+* [Control Virtual Infrastructure](usecase-ControlVirtualInfrastructure)
+
 
 
 

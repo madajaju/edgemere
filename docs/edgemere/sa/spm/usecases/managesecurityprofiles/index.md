@@ -17,6 +17,10 @@ Manage Security Profiles allows the security engineer to create, updated, and de
 
 
 
+## Extends Use Cases
+
+* [Secure Assets](usecase-SecureAssets)
+
 
 
 

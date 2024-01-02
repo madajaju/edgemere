@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Data Controller
 permalink: package--edgemere-diml-dml-dc
 parent: Package Data Management Layer

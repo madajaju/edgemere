@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Insite Services
 permalink: package--edgemere-diml-cds-insite
 parent: Package Common Data Service

@@ -1,21 +1,10 @@
 module.exports = {
     services: {
-        admin: {
-            type: "stack",
-            image: "edgemere",
-            volumes: [
-                "/var/run/docker.sock:/var/run/docker.sock"
-            ],
-            interface: {
-                admin: { path: '/admin', port: 3000, protocol:"http"},
-            },
-            policies: { },
-            environment: { },
-        },
         web: {
             image: "edgemere_web",
             interface: {
-                web: {path:'/web', port: 3000 },
+                "/web": { path: '/web', port: 3000, protocol:"http"},
+                "/web/socket.io": { path: '/web/socket.io', port: 3000, protocol:"http"},
             },
             networks: {
                 children: {},
@@ -25,7 +14,7 @@ module.exports = {
         doc: {
             image: "edgemere_doc",
             interface: {
-                web: {path:'/doc', port: 8088 },
+                "/docs": { path: '/docs/', port: 4000, protocol:"http"},
             },
             networks: {
                 siblings: {},

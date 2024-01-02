@@ -53,19 +53,12 @@ A Stack is an aggregation of services in one context. The Stack can have any num
 
 
 ## Methods
-
 * [create() - Create a Stack](#action-create)
-
 * [createlet() - Create a Stack](#action-createlet)
-
 * [debug() - Debug a Stack](#action-debug)
-
 * [deploy() - Deploy a Stack](#action-deploy)
-
 * [get() - Get a Stack](#action-get)
-
 * [show() - Show a Stack](#action-show)
-
 * [update() - Update a Stack](#action-update)
 
 

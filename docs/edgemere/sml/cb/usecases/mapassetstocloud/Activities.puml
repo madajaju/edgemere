@@ -11,6 +11,10 @@ ITOperations --> MapAssetstoCloud
 
 
 
+usecase "Control Virtual Infrastructure" as ControlVirtualInfrastructure #lightyellow
+
+MapAssetstoCloud <-- ControlVirtualInfrastructure : extends
+
 
 
 

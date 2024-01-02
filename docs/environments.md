@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Environments
-permalink: Environments
+permalink: environments
 has_children: true
 nav_order: 6
 ---
@@ -9,12 +9,7 @@ nav_order: 6
 
 The following are the operational environments of the system utilized in all phases of development and production.
 
-
 * [dev](environment-dev)
-
 * [test](environment-test)
-
 * [prod](environment-prod)
-
 * [local](environment-local)
-

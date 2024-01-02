@@ -11,6 +11,10 @@ ITOperations --> FindResources
 
 
 
+usecase "Control Virtual Infrastructure" as ControlVirtualInfrastructure #lightyellow
+
+FindResources <-- ControlVirtualInfrastructure : extends
+
 
 
 

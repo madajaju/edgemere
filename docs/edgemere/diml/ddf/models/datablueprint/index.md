@@ -42,9 +42,7 @@ Data Blue Print allows a Data Scientist to describe how to manage data
 
 
 ## Methods
-
 * [create() - Create a Data Blue Print](#action-create)
-
 * [deploy() - Deploy a Data Blue Print with sources](#action-deploy)
 
 

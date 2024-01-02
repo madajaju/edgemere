@@ -11,6 +11,10 @@ ITOperations --> MapServicestoResources
 
 
 
+usecase "Coordinate Services" as CoordinateServices #lightyellow
+
+MapServicestoResources <-- CoordinateServices : extends
+
 
 
 

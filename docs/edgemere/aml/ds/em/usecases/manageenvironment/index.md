@@ -18,6 +18,10 @@ Manage Environment allows the actors (IT Operations and Stack Developer) to crea
 
 
 
+## Extends Use Cases
+
+* [Control Virtual Infrastructure](usecase-ControlVirtualInfrastructure)
+
 
 
 

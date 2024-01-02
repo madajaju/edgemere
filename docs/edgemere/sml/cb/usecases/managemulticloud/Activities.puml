@@ -23,6 +23,10 @@ ManageMultiCloud --> RemoveCloudfromMultiCloud
 
 
 
+usecase "Control Virtual Infrastructure" as ControlVirtualInfrastructure #lightyellow
+
+ManageMultiCloud <-- ControlVirtualInfrastructure : extends
+
 
 
 

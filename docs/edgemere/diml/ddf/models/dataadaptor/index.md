@@ -40,7 +40,6 @@ The Data Adaptor is the mechanism that is a proxy to the data in the physical fo
 
 
 ## Methods
-
 * [create() - Create a Data Adaptor](#action-create)
 
 

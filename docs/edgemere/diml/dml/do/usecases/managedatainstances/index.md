@@ -18,6 +18,10 @@ Manage Data Instances is the description
 
 
 
+## Extends Use Cases
+
+* [Provide Business Information](usecase-ProvideBusinessInformation)
+
 
 
 

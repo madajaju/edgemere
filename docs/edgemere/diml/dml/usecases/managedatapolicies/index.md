@@ -11,11 +11,15 @@ Manage Data Policies is the description
 
 ## Actors
 
-* [Chief Data Officer](actor-cdo)
+* [Chief Data Officer](actor-chiefdataofficer)
 
 
 
 
+
+## Extends Use Cases
+
+* [Provide Business Information](usecase-ProvideBusinessInformation)
 
 
 

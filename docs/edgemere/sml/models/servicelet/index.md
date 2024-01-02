@@ -49,9 +49,7 @@ Servicelet is the combination of a Service with the environment. This gives the 
 
 
 ## Methods
-
 * [create() - Create a Stack](#action-create)
-
 * [deploy() - Deploy a Servicelet](#action-deploy)
 
 

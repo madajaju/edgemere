@@ -12,9 +12,9 @@ Version 0.4.1
 ## Use Case View
 ### Actors
 * [All Actors](actors)
-* [Actor](actor-actor)
 * [ApplicationDeveloper](actor-applicationdeveloper)
-* [ChiefDataOfficer](actor-cdo)
+* [ChiefDataOfficer](actor-chiefdataofficer)
+* [ChiefDataOfficier](actor-chiefdataofficier)
 * [DataAnalyst](actor-analyst)
 * [DataEngineer](actor-dataengineer)
 * [DataScientist](actor-datascientist)
@@ -30,7 +30,10 @@ Version 0.4.1
 * [Apply Security Profiles](usecase-ApplySecurityProfiles)
   * [Attach Profile](usecase-ApplySecurityProfiles#AttachProfile)
   * [Deploy Security Profile](usecase-ApplySecurityProfiles#DeploySecurityProfile)
+* [Control Virtual Infrastructure](usecase-ControlVirtualInfrastructure)
+* [Coordinate Services](usecase-CoordinateServices)
 * [Find Resources](usecase-FindResources)
+* [Govern Identities](usecase-GovernIdentities)
 * [Manage AI Models](usecase-ManageAIModels)
   * [Create AI Model](usecase-ManageAIModels#CreateAIModel)
   * [Deploy AI Model](usecase-ManageAIModels#DeployAIModel)
@@ -44,9 +47,9 @@ Version 0.4.1
   * [Monitor Application](usecase-ManageApplications#MonitorApplication)
   * [Update Application](usecase-ManageApplications#UpdateApplication)
 * [Manage Assets](usecase-ManageAssets)
-* [ManageBilling](usecase-ManageBilling)
+* [Manage Billing](usecase-ManageBilling)
 * [Manage Clouds](usecase-ManageClouds)
-* [ManageCostModel](usecase-ManageCostModel)
+* [Manage Cost Model](usecase-ManageCostModel)
 * [Manage Data](usecase-ManageData)
   * [Destroy Data](usecase-ManageData#DestroyData)
   * [Egress Data](usecase-ManageData#EgressData)
@@ -95,7 +98,8 @@ Version 0.4.1
 * [Manage Multi Cloud](usecase-ManageMultiCloud)
   * [Add Cloud to Multi Cloud](usecase-ManageMultiCloud#AddCloudtoMultiCloud)
   * [Manage Policies for Multi Cloud](usecase-ManageMultiCloud#ManagePoliciesforMultiCloud)
-  * [Manage Policies for Multi Cloud](usecase-ManageMultiCloud#RemoveCloudfromMultiCloud)
+  * [Remove Cloud From Multi Cloud](usecase-ManageMultiCloud#RemoveCloudfromMultiCloud)
+* [Manage Physical Infrastructure](usecase-ManagePhysicalInfrastructure)
 * [Manage Resources](usecase-ManageResources)
   * [Get Resources](usecase-ManageResources#GetResources)
   * [List Resources](usecase-ManageResources#ListResources)
@@ -130,6 +134,9 @@ Version 0.4.1
   * [Update Workload](usecase-ManageWorkloads#UpdateWorkload)
 * [Map Assets to Cloud](usecase-MapAssetstoCloud)
 * [Map Services to Resources](usecase-MapServicestoResources)
+* [Organize Solutions](usecase-OrganizeSolutions)
+* [Provide Business Information](usecase-ProvideBusinessInformation)
+* [Secure Assets](usecase-SecureAssets)
 
 ## Logical View
 
@@ -370,13 +377,15 @@ the container images for the deployment of the solution.
 
 * [sdi_io_web](image-sdi_io_web)
 
+* [edgemere_start](image-edgemere_start)
+
 * [edgemere_web](image-edgemere_web)
 
 * [edgemere_doc](image-edgemere_doc)
 
 * [node:alpine](image-node:alpine)
 
-* [madajaju/node_plantuml](image-madajaju/node_plantuml)
+* [jekyll/jekyll](image-jekyll/jekyll)
 
 ## Deployment View
 

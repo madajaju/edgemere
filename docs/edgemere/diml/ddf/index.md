@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Data Definition Framework
 permalink: package--edgemere-diml-ddf
 parent: Package Distributed Information Management Layer
@@ -33,7 +34,7 @@ inside the solution and even external subsystems.
 
 * [DataEngineer](actor-dataengineer)
 * [DataScientist](actor-datascientist)
-* [ChiefDataOfficer](actor-cdo)
+* [ChiefDataOfficer](actor-chiefdataofficer)
 
 
 ![User Interaction](./userinteraction.png)

@@ -17,6 +17,10 @@ Apply Security Profiles is the description
 
 
 
+## Extends Use Cases
+
+* [Secure Assets](usecase-SecureAssets)
+
 
 
 

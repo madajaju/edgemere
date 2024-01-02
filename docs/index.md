@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Overview
 nav_order: 1
 ---
@@ -57,31 +58,19 @@ identifying the actors/users of the system and building out how the actor uses t
 goals are? and How they use the system? This list is not an exhaustive list of all actors of the system but are the
 primary actors.
 
-
-* [Actor](actor-actor) - Long description
-  
 * [ApplicationDeveloper](actor-applicationdeveloper) - The Application Developer work in coordination with DevOps to manage services, applications and workloads through the development pipeline.
-  
-* [ChiefDataOfficer](actor-cdo) - Responsible for setting strategy and governance of data in the organization.
-  
+* [ChiefDataOfficer](actor-chiefdataofficer) - Long description
+* [ChiefDataOfficier](actor-chiefdataofficier) - Long description
 * [DataAnalyst](actor-analyst) - Uses Data solutions produced by the Data Scientist and Data Engineer to provide business value to the organization.
-  
 * [DataEngineer](actor-dataengineer) - Responsible for operationalization of data pipeline and the automation and deployment of data solutions. They work closely with the Data Scientist to deliver solutions to data analyst.
-  
 * [DataScientist](actor-datascientist) - Responsible for the architecture and development of data analytic models and solutions. They work closely with the Data engineer to deliver solutions to the Data Analyst.
-  
 * [DataSteward](actor-datasteward) - Responsible for the governance of data in their organization. They implement policies established by the CDO.
-  
 * [DevOpsEngineer](actor-devops) - Responsible for the management of the automation of the delivery of applications and solutions in the organization.
-  
 * [ITOperations](actor-itops) - Responsible for the management of the infrastructure.
-  
 * [SecurityEngineer](actor-securityengineer) - Long description
-  
 * [SecurityOperator](actor-securityoperator) - Long description
-  
 * [StackDeveloper](actor-stackdev) - Responsible for developing reusable micro-services and application stacks in the organization.
-  
+
 
 These actors are found in most organizations and there are several organizational structures that can be employed. The
 key is to identify the people or organization that fits the different actors in the systems. The following is an example
@@ -89,7 +78,13 @@ of a centralized organizational structure of the actors of the system.
 
 ## UseCases
 
-
+* [Control Virtual Infrastructure](usecase-ControlVirtualInfrastructure) - Control Virtual Infrastructure is the description
+* [Coordinate Services](usecase-CoordinateServices) - Coordinate Services is the description
+* [Govern Identities](usecase-GovernIdentities) - Govern Identities is the description
+* [Manage Physical Infrastructure](usecase-ManagePhysicalInfrastructure) - Manage Physical Infrastructure is the description
+* [Organize Solutions](usecase-OrganizeSolutions) - Organize Solutions is the description
+* [Provide Business Information](usecase-ProvideBusinessInformation) - Provide Business Information is the description
+* [Secure Assets](usecase-SecureAssets) - Secure Assets is the description
 
 ![UseCase](./usecases.png)
 
@@ -97,28 +92,20 @@ of a centralized organizational structure of the actors of the system.
 
 The Data Model for the  edgemere shows how the different objects and classes of object interact and their
 structure.
-
 * [Application Management Layer](package--edgemere-aml) -
 Application Management Layer is responsible for managing applications and workflows and the development, test, deployment, and updates of those applications and workloads.
-  
 * [Common Physical Layer](package--edgemere-cpl) -
 Common Physical Layer is a package that contains...
-  
 * [Distributed Information Management Layer](package--edgemere-diml) -
 Distributed Information Management Layer is a package that contains...
-  
 * [Identity Aspect](package--edgemere-ia) -
 Identity Aspect is a package that contains...
-  
 * [Security Aspect](package--edgemere-sa) -
 Security Aspect contains security tools and subsystems that are used throughout the architecture.
-  
 * [Service Management Layer](package--edgemere-sml) -
 Service Management Layer is a subsystem that manages services, stacks, environments, and multi-clouds.
-  
 * [Software Defined Infrastructure](package--edgemere-sdi) -
 Software Defined Infrastructure(SDI) contains the abstractions for private and public clouds. The SDI layer is a common standard interface for all cloud resources both virutal, container, and bare metal.
-  
 
 ![Logical Diagram](./subpackage.png)
 
@@ -133,15 +120,10 @@ The solution can be deployed on different environments. The standard environment
 test, and prod. These environments fit into the typical devops pipelines that exist in the industry. Additional
 deployment environments can be added to fit the needs of the user.
 
-
 * [local](environment--edgemere-local)
-  
 * [dev](environment--edgemere-dev)
-  
 * [test](environment--edgemere-test)
-  
 * [prod](environment--edgemere-prod)
-  
 
 ### Physical Architecture
 
@@ -152,12 +134,7 @@ system. Each subsystem in the architecture uses an aggregated service/stack patt
 services based on the workloads, capacity and business rules established for the solution. See each subsystem for more
 information on the individual stacks and their services.
 
-
 * [local](environment--edgemere-local)
-  
 * [dev](environment--edgemere-dev)
-  
 * [test](environment--edgemere-test)
-  
 * [prod](environment--edgemere-prod)
-  

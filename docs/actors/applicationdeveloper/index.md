@@ -33,6 +33,7 @@ This is a typical workflow of an application developer in edgemere.
 * [Manage Data Instances](usecase-ManageDataInstances)
 * [Manage Stacks](usecase-ManageStacks)
 * [Manage Services](usecase-ManageServices)
+* [Organize Solutions](usecase-OrganizeSolutions)
 
 
 ![Use Case Diagram](./UseCase.png)
@@ -47,4 +48,4 @@ TBD
 * [ edgemere diml dml do datainstance list](action--edgemere-diml-dml-do-datainstance-list) - Manage Data Instances is the description
 * [ edgemere sml so stack list](action--edgemere-sml-so-stack-list) - Manage Stacks allows the stack developer to create, update, and delete stacks.
 * [ edgemere sml service list](action--edgemere-sml-service-list) - Manage Services is the description
-
+* [ edgemere data govern](action--edgemere-data-govern) - Organize Solutions is the description

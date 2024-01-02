@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Cloud Broker
 permalink: package--edgemere-sml-cb
 parent: Package Service Management Layer
@@ -17,8 +18,8 @@ The following are the use cases of the Cloud Broker subsystem. Each use case has
 that are elaborated in the use case descriptions.
 
 * [Find Resources](usecase-FindResources)
-* [ManageBilling](usecase-ManageBilling)
-* [ManageCostModel](usecase-ManageCostModel)
+* [Manage Billing](usecase-ManageBilling)
+* [Manage Cost Model](usecase-ManageCostModel)
 * [Manage Multi Cloud](usecase-ManageMultiCloud)
 * [Map Assets to Cloud](usecase-MapAssetstoCloud)
 * [Map Services to Resources](usecase-MapServicestoResources)

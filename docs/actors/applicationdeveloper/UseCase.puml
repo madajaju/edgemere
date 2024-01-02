@@ -34,5 +34,11 @@ rectangle "Service Management Layer" as sml #88cc88 {
 
 }
 
+rectangle "edgemere" as edgemere #ccaaff {
+        usecase "Organize Solutions" as OrganizeSolutions
+    ApplicationDeveloper --> OrganizeSolutions
+
+}
+
 
 @enduml

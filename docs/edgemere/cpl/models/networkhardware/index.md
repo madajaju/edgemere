@@ -32,15 +32,10 @@ This represents network hardware
 
 
 ## Methods
-
 * [addStats() - Add Stats to the Hardware](#action-addStats)
-
 * [create() - Create Hardware](#action-create)
-
 * [disable() - Disable Device and its hardware](#action-disable)
-
 * [enable() - Enable Device to be used.](#action-enable)
-
 * [factory() - Create Hardware based on properties](#action-factory)
 
 

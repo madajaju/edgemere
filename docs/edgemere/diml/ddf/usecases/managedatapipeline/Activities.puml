@@ -11,6 +11,10 @@ DataEngineer --> ManageDataPipeline
 
 
 
+usecase "Provide Business Information" as ProvideBusinessInformation #lightyellow
+
+ManageDataPipeline <-- ProvideBusinessInformation : extends
+
 
 
 

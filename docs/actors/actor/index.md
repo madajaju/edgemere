@@ -20,4 +20,3 @@ Long description
 TBD
 
 ## Command Line Interface
-

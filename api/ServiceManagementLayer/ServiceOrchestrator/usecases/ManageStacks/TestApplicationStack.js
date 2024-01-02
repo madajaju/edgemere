@@ -3,7 +3,8 @@ module.exports = {
     description: 'Test Application Stack is the description',
     method: "data/create",
     actors: {
-        'Actor': 'uses',
+        'StackDeveloper': 'uses',
+        'ApplicationDeveloper': 'uses',
     },
     steps: [
         { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},

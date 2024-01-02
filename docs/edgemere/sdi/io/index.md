@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Infrastructure Orchestrator
 permalink: package--edgemere-sdi-io
 parent: Package Software Defined Infrastructure

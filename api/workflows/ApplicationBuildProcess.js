@@ -15,7 +15,7 @@ module.exports = {
             },
         },
         "Build Application": {
-            description: "Build Application",
+            description: "Build the application and all of its dependencies",
             package: 'Application Management Layer', // This could be an actor or package.
             next: {
                 "Build Stack": {
@@ -33,7 +33,7 @@ module.exports = {
             },
         },
         "Build Stack": {
-            description: "Build Stack",
+            description: "Build a stack of services and all of its dependencies",
             package: 'Service Management Layer',
             next: {
                 "Build Service": {
@@ -51,7 +51,7 @@ module.exports = {
             },
         },
         "Build Service": {
-            description: "Build Service",
+            description: "Build a micro-services as a container image.",
             package: 'Service Management Layer',
             next: {
                 "Build Service": {

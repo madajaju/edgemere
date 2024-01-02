@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Service Orchestrator
 permalink: package--edgemere-sml-so
 parent: Package Service Management Layer

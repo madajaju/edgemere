@@ -11,6 +11,10 @@ ITOperations --> ManageAssets
 
 
 
+usecase "Control Virtual Infrastructure" as ControlVirtualInfrastructure #lightyellow
+
+ManageAssets <-- ControlVirtualInfrastructure : extends
+
 
 
 

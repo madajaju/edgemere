@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Pipeline Manager
 permalink: package--edgemere-aml-ds-pm
 parent: Package Developer Services

@@ -101,11 +101,13 @@ the container images for the deployment of the solution.
 
 * [sdi_io_web](image-sdi_io_web)
 
+* [edgemere_start](image-edgemere_start)
+
 * [edgemere_web](image-edgemere_web)
 
 * [edgemere_doc](image-edgemere_doc)
 
 * [node:alpine](image-node--alpine)
 
-* [madajaju/node_plantuml](image-madajaju/node_plantuml)
+* [jekyll/jekyll](image-jekyll/jekyll)
 

@@ -40,27 +40,16 @@ Composite type of Metric. This is for metrics that are a group of metrics
 
 
 ## Methods
-
 * [consume() - Substract metric to the current value up to zero](#action-consume)
-
 * [copy() - Copy Metric](#action-copy)
-
 * [create() - Create Composite Metric](#action-create)
-
 * [findDeep() - Find Metric with name](#action-findDeep)
-
 * [findMatchDeep() - Find Metric with name](#action-findMatchDeep)
-
 * [lessThanEq() - Test less than or equal to the value passed in](#action-lessThanEq)
-
 * [minus() - Substract metric to the current value](#action-minus)
-
 * [plus() - Add metric to the current value](#action-plus)
-
 * [set() - Set metric to the current value](#action-set)
-
 * [factory() - Create a metric based on the metrictype table](#action-factory)
-
 * [greaterThanEq() - Test greater than or equal to the value passed in](#action-greaterThanEq)
 
 

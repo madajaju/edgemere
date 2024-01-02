@@ -34,5 +34,11 @@ rectangle "Data Orchestrator" as do #lightblue {
 
 }
 
+rectangle "edgemere" as edgemere #ccaaff {
+        usecase "Provide Business Information" as ProvideBusinessInformation
+    DataScientist --> ProvideBusinessInformation
+
+}
+
 
 @enduml

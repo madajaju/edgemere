@@ -63,19 +63,12 @@ The following diagram is the state net for this class.
 
 
 ## Methods
-
 * [addToHardware() - Create a Device](#action-addToHardware)
-
 * [create() - Create a Device](#action-create)
-
 * [disable() - Disable Device and its hardware](#action-disable)
-
 * [enable() - Enable Device to be used.](#action-enable)
-
 * [getReservations() - Get reservation from the requirements](#action-getReservations)
-
 * [provision() - Provision Hardware to meet the requirements](#action-provision)
-
 * [reserve() - Reserve a resource](#action-reserve)
 
 

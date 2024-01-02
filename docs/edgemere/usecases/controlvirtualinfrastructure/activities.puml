@@ -1,0 +1,56 @@
+@startuml
+
+
+usecase "Control Virtual Infrastructure" as ControlVirtualInfrastructure #yellow
+
+Actor "IT Operations" as ITOperations
+
+ITOperations --> ControlVirtualInfrastructure
+
+
+
+
+
+
+
+usecase "ManageEnvironment" as ManageEnvironment #lightyellow
+
+ControlVirtualInfrastructure --> ManageEnvironment : extends
+
+usecase "FindResources" as FindResources #lightyellow
+
+ControlVirtualInfrastructure --> FindResources : extends
+
+usecase "ManageBilling" as ManageBilling #lightyellow
+
+ControlVirtualInfrastructure --> ManageBilling : extends
+
+usecase "ManageCostModel" as ManageCostModel #lightyellow
+
+ControlVirtualInfrastructure --> ManageCostModel : extends
+
+usecase "ManageMultiCloud" as ManageMultiCloud #lightyellow
+
+ControlVirtualInfrastructure --> ManageMultiCloud : extends
+
+usecase "MapAssetstoCloud" as MapAssetstoCloud #lightyellow
+
+ControlVirtualInfrastructure --> MapAssetstoCloud : extends
+
+usecase "ManageStacks" as ManageStacks #lightyellow
+
+ControlVirtualInfrastructure --> ManageStacks : extends
+
+usecase "ManageAssets" as ManageAssets #lightyellow
+
+ControlVirtualInfrastructure --> ManageAssets : extends
+
+usecase "ManageResources" as ManageResources #lightyellow
+
+ControlVirtualInfrastructure --> ManageResources : extends
+
+
+
+
+
+@enduml

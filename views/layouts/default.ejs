@@ -3,16 +3,16 @@
 
 <%
 let hostURL = global.ailtire.config.host;
+/*
 if (global.ailtire.config.listenPort) {
     hostURL += ':' + global.ailtire.config.listenPort;
 }
+ */
 %>
 <head>
-    <title>Sentient Agent Bundle Resources</title>
+    <title>Edgemere</title>
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
     <link rel="stylesheet/less" type="text/css" href="styles/importer.less"/>
-    <!-- <scripy src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>-->
-
     <base href="http://<%= hostURL %><%= global.ailtire.config.urlPrefix %>/">
     <script type="module" src="js/ckeditor.js"></script>
     <script src="js/jquery.js"></script>

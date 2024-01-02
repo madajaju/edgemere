@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Environment prod
 permalink: environment-prod
 parent: Environments

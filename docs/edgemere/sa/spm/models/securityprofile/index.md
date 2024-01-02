@@ -38,19 +38,12 @@ A SecurityProfile allows security experts to develop a common profile that can b
 
 
 ## Methods
-
 * [attach() - Attach a security profile to a identity in the system.](#action-attach)
-
 * [deploy() - Deploy a security profile.](#action-deploy)
-
 * [destroy() - Destroy a security profile.](#action-destroy)
-
 * [disable() - Disable a security profile.](#action-disable)
-
 * [enable() - Enable a security profile.](#action-enable)
-
 * [status() - Return the status of the security profile, including state, policies and enforced identities.](#action-status)
-
 * [test() - Test a security profile against conflicts with policies contained in the profile and against other profiles.](#action-test)
 
 

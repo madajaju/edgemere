@@ -18,6 +18,10 @@ Manage Services is the description
 
 
 
+## Extends Use Cases
+
+* [CoordinateServices](usecase-CoordinateServices)
+
 
 
 
@@ -42,7 +46,7 @@ Build Service is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [Stack Developer](actor-stackdev)
 
 
 

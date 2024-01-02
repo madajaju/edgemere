@@ -11,9 +11,13 @@ package "edgemere" #ccaaff {
   binName --> REST
 
   folder deploy #ffffff {
-      file "node server.js\ndocker-compose.yml" as edgemere_container
+      file "node server.js\n" as edgemere_container
       REST --> edgemere_container
 
+  
+    file "single" as single_container
+    REST --> single_container
+    socket ---> single_container
   
     file "web" as web_container
     REST --> web_container
@@ -31,6 +35,9 @@ package "edgemere" #ccaaff {
     edgemere_container --> edgemereimage
 
   
+      artifact "edgemere_start" as edgemere_start
+      single_container --> edgemere_start
+    
       artifact "edgemere_web" as edgemere_web
       web_container --> edgemere_web
     

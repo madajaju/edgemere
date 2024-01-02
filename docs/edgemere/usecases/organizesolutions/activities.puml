@@ -1,0 +1,36 @@
+@startuml
+
+
+usecase "Organize Solutions" as OrganizeSolutions #yellow
+
+Actor "Application Developer" as ApplicationDeveloper
+
+ApplicationDeveloper --> OrganizeSolutions
+
+Actor "DevOps Engineer" as DevOpsEngineer
+
+DevOpsEngineer --> OrganizeSolutions
+
+
+
+
+
+
+
+usecase "ManageAIModels" as ManageAIModels #lightyellow
+
+OrganizeSolutions --> ManageAIModels : extends
+
+usecase "ManageApplications" as ManageApplications #lightyellow
+
+OrganizeSolutions --> ManageApplications : extends
+
+usecase "ManageWorkloads" as ManageWorkloads #lightyellow
+
+OrganizeSolutions --> ManageWorkloads : extends
+
+
+
+
+
+@enduml

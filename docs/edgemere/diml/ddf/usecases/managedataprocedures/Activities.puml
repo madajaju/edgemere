@@ -15,6 +15,10 @@ ChiefDataOfficer --> ManageDataProcedures
 
 
 
+usecase "Provide Business Information" as ProvideBusinessInformation #lightyellow
+
+ManageDataProcedures <-- ProvideBusinessInformation : extends
+
 
 
 

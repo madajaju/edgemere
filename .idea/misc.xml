@@ -22,4 +22,7 @@
       <column id="fixVersion" position="13" width="-1" />
     </columns>
   </component>
+  <component name="TaskProjectConfiguration">
+    <server type="YouTrack" url="https://yolydev.youtrack.cloud" />
+  </component>
 </project>

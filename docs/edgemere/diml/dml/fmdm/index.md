@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Federated Meta Data Management
 permalink: package--edgemere-diml-dml-fmdm
 parent: Package Data Management Layer

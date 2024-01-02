@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Device Agent
 permalink: package--edgemere-cpl-da
 parent: Package Common Physical Layer

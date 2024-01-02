@@ -11,5 +11,6 @@ module.exports = {
     actors: {
         'Data Engineer': 'uses'
     },
+    extends: [ "Provide Business Information"]
 };
 

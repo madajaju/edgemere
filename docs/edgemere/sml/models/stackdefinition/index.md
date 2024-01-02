@@ -42,7 +42,6 @@ A Stack is an aggregation of services in one context. The Stack can have any num
 
 
 ## Methods
-
 * [create() - Create a Stack](#action-create)
 
 

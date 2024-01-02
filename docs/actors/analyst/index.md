@@ -13,6 +13,7 @@ The data analyst uses data to build insight based on the data scientist models. 
 ## Use Cases
 
 * [Manage Data](usecase-ManageData)
+* [Provide Business Information](usecase-ProvideBusinessInformation)
 
 
 ![Use Case Diagram](./UseCase.png)
@@ -22,4 +23,4 @@ TBD
 
 ## Command Line Interface
 * [ edgemere diml cds data list](action--edgemere-diml-cds-data-list) - Manage Data is the description
-
+* [ edgemere data govern](action--edgemere-data-govern) - Provide Business Information is the description

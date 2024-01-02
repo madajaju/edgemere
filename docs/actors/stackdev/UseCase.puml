@@ -24,5 +24,11 @@ rectangle "Service Management Layer" as sml #88cc88 {
 
 }
 
+rectangle "edgemere" as edgemere #ccaaff {
+        usecase "Coordinate Services" as CoordinateServices
+    StackDeveloper --> CoordinateServices
+
+}
+
 
 @enduml

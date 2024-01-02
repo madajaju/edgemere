@@ -5,18 +5,19 @@ if(!fs.existsSync('./node_modules')) {
    return;
 }
 const server = require('ailtire');
-let host = process.env.AITIRE_HOST || 'localhost'
-let port = process.env.AITIRE_PORT || 3000
+let host = process.env.AILTIRE_HOST || 'localhost'
+let port = process.env.AILTIRE_PORT || 3000
 let urlPrefix = process.env.AITIRE_BASEURL || '/web'
 
 
 server.listen( {
     baseDir: '.',
     prefix: 'edgemere',
-    routes: {
-    },
     host: host,
     urlPrefix: urlPrefix,
-    listenPort: port
+    listenPort: port,
+    internalURL: `${host}:${port}${urlPrefix}`,
+    routes: {
+    },
 });
 

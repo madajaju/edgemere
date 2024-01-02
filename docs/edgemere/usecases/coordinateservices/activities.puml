@@ -1,0 +1,40 @@
+@startuml
+
+
+usecase "Coordinate Services" as CoordinateServices #yellow
+
+Actor "Stack Developer" as StackDeveloper
+
+StackDeveloper --> CoordinateServices
+
+Actor "IT Operations" as ITOperations
+
+ITOperations --> CoordinateServices
+
+Actor "DevOps Engineer" as DevOpsEngineer
+
+DevOpsEngineer --> CoordinateServices
+
+
+
+
+
+
+
+usecase "MapServicestoResources" as MapServicestoResources #lightyellow
+
+CoordinateServices --> MapServicestoResources : extends
+
+usecase "ManageClouds" as ManageClouds #lightyellow
+
+CoordinateServices --> ManageClouds : extends
+
+usecase "ManageServices" as ManageServices #lightyellow
+
+CoordinateServices --> ManageServices : extends
+
+
+
+
+
+@enduml

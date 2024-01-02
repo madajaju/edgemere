@@ -39,6 +39,10 @@ ManageApplications --> UpdateApplication
 
 
 
+usecase "OrganizeSolutions" as OrganizeSolutions #lightyellow
+
+ManageApplications <-- OrganizeSolutions : extends
+
 
 
 

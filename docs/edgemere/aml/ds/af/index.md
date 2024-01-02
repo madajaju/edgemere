@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Automation Framework
 permalink: package--edgemere-aml-ds-af
 parent: Package Developer Services

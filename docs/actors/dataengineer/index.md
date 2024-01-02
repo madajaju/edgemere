@@ -19,6 +19,7 @@ Responsible for operationalization of data pipeline and the automation and deplo
 * [Manage Data Pipeline](usecase-ManageDataPipeline)
 * [Manage Data Procedures](usecase-ManageDataProcedures)
 * [Manage Data Sources](usecase-ManageDataSources)
+* [Provide Business Information](usecase-ProvideBusinessInformation)
 
 
 ![Use Case Diagram](./UseCase.png)
@@ -34,4 +35,4 @@ TBD
 * [ edgemere diml ddf datapipeline list](action--edgemere-diml-ddf-datapipeline-list) - Manage Data Pipeline is the description
 * [ edgemere diml ddf dataprocedure list](action--edgemere-diml-ddf-dataprocedure-list) - Manage Data Procedures is the description
 * [ edgemere diml dml datasource list](action--edgemere-diml-dml-datasource-list) - Manage Data Sources allows the Data Engineer to register data sources to the system.
-
+* [ edgemere data govern](action--edgemere-data-govern) - Provide Business Information is the description

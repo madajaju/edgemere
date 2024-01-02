@@ -1,6 +1,91 @@
 @startuml
 
-rectangle "TBD"
+
+actor "ITOperations" as itops
+
+actor "StackDeveloper" as stackdev
+
+actor "DevOpsEngineer" as devops
+
+actor "SecurityOperator" as securityoperator
+
+actor "ApplicationDeveloper" as applicationdeveloper
+
+actor "DataAnalyst" as analyst
+
+actor "DataEngineer" as dataengineer
+
+actor "DataScientist" as datascientist
+
+actor "DataSteward" as datasteward
+
+actor "ChiefDataOfficier" as chiefdataofficier
+
+actor "SecurityEngineer" as securityengineer
+
+
+
+
+itops -> "edgemere": Control Virtual Infrastructure
+"edgemere" -> bin: resource list
+bin -> REST: resource/list
+
+itops -> "edgemere": Coordinate Services
+"edgemere" -> bin: service list
+bin -> REST: service/list
+
+itops -> "edgemere": Manage Physical Infrastructure
+"edgemere" -> bin: device list
+bin -> REST: device/list
+
+stackdev -> "edgemere": Coordinate Services
+"edgemere" -> bin: service list
+bin -> REST: service/list
+
+devops -> "edgemere": Coordinate Services
+"edgemere" -> bin: service list
+bin -> REST: service/list
+
+devops -> "edgemere": Organize Solutions
+"edgemere" -> bin: data govern
+bin -> REST: data/govern
+
+securityoperator -> "edgemere": Govern Identities
+"edgemere" -> bin: identity list
+bin -> REST: identity/list
+
+securityoperator -> "edgemere": Secure Assets
+"edgemere" -> bin: data govern
+bin -> REST: data/govern
+
+applicationdeveloper -> "edgemere": Organize Solutions
+"edgemere" -> bin: data govern
+bin -> REST: data/govern
+
+analyst -> "edgemere": Provide Business Information
+"edgemere" -> bin: data govern
+bin -> REST: data/govern
+
+dataengineer -> "edgemere": Provide Business Information
+"edgemere" -> bin: data govern
+bin -> REST: data/govern
+
+datascientist -> "edgemere": Provide Business Information
+"edgemere" -> bin: data govern
+bin -> REST: data/govern
+
+datasteward -> "edgemere": Provide Business Information
+"edgemere" -> bin: data govern
+bin -> REST: data/govern
+
+chiefdataofficier -> "edgemere": Provide Business Information
+"edgemere" -> bin: data govern
+bin -> REST: data/govern
+
+securityengineer -> "edgemere": Secure Assets
+"edgemere" -> bin: data govern
+bin -> REST: data/govern
+
 
 
 @enduml

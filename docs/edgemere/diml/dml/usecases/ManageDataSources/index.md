@@ -17,6 +17,10 @@ Manage Data Sources allows the Data Engineer to register data sources to the sys
 
 
 
+## Extends Use Cases
+
+* [Provide Business Information](usecase-ProvideBusinessInformation)
+
 
 
 

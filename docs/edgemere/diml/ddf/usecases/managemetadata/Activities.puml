@@ -19,6 +19,10 @@ ManageMetaData --> ManageDataCatalog
 
 
 
+usecase "Provide Business Information" as ProvideBusinessInformation #lightyellow
+
+ManageMetaData <-- ProvideBusinessInformation : extends
+
 
 
 

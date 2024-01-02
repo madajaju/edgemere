@@ -1,0 +1,80 @@
+@startuml
+
+
+usecase "Provide Business Information" as ProvideBusinessInformation #yellow
+
+Actor "Data Analyst" as DataAnalyst
+
+DataAnalyst --> ProvideBusinessInformation
+
+Actor "DataEngineer" as DataEngineer
+
+DataEngineer --> ProvideBusinessInformation
+
+Actor "Data Scientist" as DataScientist
+
+DataScientist --> ProvideBusinessInformation
+
+Actor "Data Steward" as DataSteward
+
+DataSteward --> ProvideBusinessInformation
+
+Actor "ChiefDataOfficier" as ChiefDataOfficier
+
+ChiefDataOfficier --> ProvideBusinessInformation
+
+
+
+
+
+
+
+usecase "ManageData" as ManageData #lightyellow
+
+ProvideBusinessInformation --> ManageData : extends
+
+usecase "ManageDataAdaptors" as ManageDataAdaptors #lightyellow
+
+ProvideBusinessInformation --> ManageDataAdaptors : extends
+
+usecase "ManageDataBluePrints" as ManageDataBluePrints #lightyellow
+
+ProvideBusinessInformation --> ManageDataBluePrints : extends
+
+usecase "ManageDataPipeline" as ManageDataPipeline #lightyellow
+
+ProvideBusinessInformation --> ManageDataPipeline : extends
+
+usecase "ManageDataProcedures" as ManageDataProcedures #lightyellow
+
+ProvideBusinessInformation --> ManageDataProcedures : extends
+
+usecase "ManageMetaData" as ManageMetaData #lightyellow
+
+ProvideBusinessInformation --> ManageMetaData : extends
+
+usecase "ManageDataInstances" as ManageDataInstances #lightyellow
+
+ProvideBusinessInformation --> ManageDataInstances : extends
+
+usecase "ManageDataGovernance" as ManageDataGovernance #lightyellow
+
+ProvideBusinessInformation --> ManageDataGovernance : extends
+
+usecase "ManageDataPolicies" as ManageDataPolicies #lightyellow
+
+ProvideBusinessInformation --> ManageDataPolicies : extends
+
+usecase "ManageDataSources" as ManageDataSources #lightyellow
+
+ProvideBusinessInformation --> ManageDataSources : extends
+
+usecase "ManageDataStrategy" as ManageDataStrategy #lightyellow
+
+ProvideBusinessInformation --> ManageDataStrategy : extends
+
+
+
+
+
+@enduml

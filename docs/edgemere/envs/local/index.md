@@ -31,7 +31,6 @@ the subsystem's logic.
 
 | Name | Image | Mapping | Ports | Network |
 | --- | --- | --- | --- | --- |
-| admin | edgemere |  |  | children |
 | web | edgemere_web |  |  | children,siblings |
 | doc | edgemere_doc |  |  | siblings |
 

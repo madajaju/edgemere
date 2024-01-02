@@ -16,14 +16,17 @@ Responsible for the management of the infrastructure.
 * [Manage Data Center](usecase-ManageDataCenter)
 * [Manage Infrastructure](usecase-ManageInfrastructure)
 * [Find Resources](usecase-FindResources)
-* [ManageBilling](usecase-ManageBilling)
-* [ManageCostModel](usecase-ManageCostModel)
+* [Manage Billing](usecase-ManageBilling)
+* [Manage Cost Model](usecase-ManageCostModel)
 * [Manage Multi Cloud](usecase-ManageMultiCloud)
 * [Map Assets to Cloud](usecase-MapAssetstoCloud)
 * [Map Services to Resources](usecase-MapServicestoResources)
 * [Manage Assets](usecase-ManageAssets)
 * [Manage Clouds](usecase-ManageClouds)
 * [Manage Resources](usecase-ManageResources)
+* [Control Virtual Infrastructure](usecase-ControlVirtualInfrastructure)
+* [Coordinate Services](usecase-CoordinateServices)
+* [Manage Physical Infrastructure](usecase-ManagePhysicalInfrastructure)
 
 
 ![Use Case Diagram](./UseCase.png)
@@ -44,4 +47,6 @@ TBD
 * [ edgemere sml sr assets list](action--edgemere-sml-sr-assets-list) - Manage Assets is the description
 * [ edgemere sml Cloud list](action--edgemere-sml-Cloud-list) - Manage Clouds is the description
 * [ edgemere sdi resource list](action--edgemere-sdi-resource-list) - Manage Resources includes creating resources, listing and planning for resources.
-
+* [ edgemere resource list](action--edgemere-resource-list) - Control Virtual Infrastructure is the description
+* [ edgemere service list](action--edgemere-service-list) - Coordinate Services is the description
+* [ edgemere device list](action--edgemere-device-list) - Manage Physical Infrastructure is the description

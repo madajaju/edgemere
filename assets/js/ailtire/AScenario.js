@@ -210,7 +210,7 @@ export default class AScenario {
     }
     static viewStep3D(node, type) {
         let opacity = node.opacity || 1;
-        let color = node.color || "#997755";
+        let color = node.color || "#aa8844";
         if (type === 'Selected') {
             color = "yellow";
         } else if (type === 'Targeted') {
@@ -218,7 +218,8 @@ export default class AScenario {
         } else if (type === 'Sourced') {
             color = "green";
         }
-        let geometry = new THREE.BoxGeometry(150, 20, 5);
+        let w = Math.max(150, node.name.length * AScenario.default.fontSize/2);
+        let geometry = new THREE.BoxGeometry(w, 20, 5);
         const material = new THREE.MeshPhysicalMaterial({
             color: color,
             transparent: true,
@@ -235,73 +236,74 @@ export default class AScenario {
         let label = AText.view3D({text: node.name, color: "#ffffff", width: 200, size: 14});
         label.position.set(0, 0, 5);
         box.add(label);
-
-        box.position.set(node.x, node.y, node.z);
+        if(node.x !== undefined) {
+            box.position.set(node.x, node.y, node.z);
+        }
         box.aid = node.id;
-        node.box = 75
+        node.box = 0;
         node.expandLink = `scenario/get?id=${node.id}`;
         return box;
     }
 
-    static viewDeep3D(scenario, mode) {
+    static viewDeep3D(scenario, mode, parent) {
         let data = {nodes: {}, links: []};
-        window.graph.clearObjects();
-        data.nodes[scenario.id] = {
-            id: scenario.id, name: scenario.name,
-            view: AScenario.view3D,
-            expandView: AScenario.handle,
-            expandLink: `scenario/get?id=${scenario.id}`,
-            bbox: {
-                x: {min:-600, max:600},
-                y: {min:-600, max:600},
-                z: {min:500, max:800}
-            },
-        };
-/*
-        let geometry = new THREE.BoxGeometry(1000, 1000, 1000);
-        const material = new THREE.MeshPhysicalMaterial({
-            color: "#ffffff",
-            transparent: true,
-            opacity: 0.2,
-            depthTest: true,
-            depthWrite: true,
-            alphaTest: 0,
-            reflectivity: 0.2,
-            thickness: 6,
-            metalness: 0,
-            side: THREE.DoubleSide
-        });
-        const box = new THREE.Mesh(geometry, material);
-        window.graph.addObject(box);
- */
+        if(mode === "add" && parent) {
+            data.nodes[scenario.id] = {
+                id: scenario.id, name: scenario.name,
+                view: AScenario.view3D,
+                expandView: AScenario.handle,
+                expandLink: `scenario/get?id=${scenario.id}`,
+                rbox: {
+                    parent: parent.id,
+                    fz: -600,
+                }
+            };
+            data.links.push({target: scenario.id, source: parent.id, width: 1, value: 40, color: "#aaffff"})
+        } else {
+            data.nodes[scenario.id] = {
+                id: scenario.id, name: scenario.name,
+                view: AScenario.view3D,
+                expandView: AScenario.handle,
+                expandLink: `scenario/get?id=${scenario.id}`,
+                fx: 0,
+                fy: 0,
+                fz: 0,
+            };
+        }
         let rbox = {};
+        let sbox = AScenario.calculateBox(data.nodes[scenario.id]);
+        let yoffset = sbox.h;
         let luid = scenario.id;
         for (let i in scenario.steps) {
             let step = scenario.steps[i];
             let uid = `${scenario.id}-${i}`;
-            rbox = {parent: luid, x: {min: 0, max: 0}, z: {min: 0, max: 0}, y: {min: -30, max: -30}};
+            rbox = {parent: luid, fx: 0, fy: -yoffset, fz: 0};
+            let description = ""
+            for(let pname in step.parameters) {
+                description += `--${pname} ${step.parameters[pname]}\n`;
+            }
             data.nodes[uid] = {
                 id: uid, name: step.action.name,
+                description: description,
                 view: AScenario.viewStep3D,
                 expandView: AScenario.handle,
                 expandLink: `scenario/get?id=${scenario.id}`,
                 rbox: rbox,
                 box: 10
             };
-            data.links.push({source: scenario.id, target: uid, value: 0.1, width: 0, color: '#cccccc'});
+            yoffset = 30;
             // Add the action for the step.
             let action = step.action;
             if (!data.nodes.hasOwnProperty(action.name)) {
-
                 data.nodes[action.name] = {
-                    id: action.name, name: action.name.replace(/\//, '\n'), view: AAction.view3D,
+                    id: action.name,
+                    name: action.name.replace(/\//, '\n'),
+                    view: AAction.view3D,
                     w: 80, h: 30,
                     fontSize: 12,
                     rbox: {
                         parent: uid,
-                        x: {min: -150, max: 150},
-                        y: {min: -150, max: 150},
-                        z: {min: -150, max: -150}
+                        fz: -150
                     }
                 };
             }
@@ -321,7 +323,7 @@ export default class AScenario {
                             parent: scenario.id,
                             x: {min: -300, max: 300},
                             y: {min: -300, max: 300},
-                            z: {min: -450, max: -450}
+                            fz: -450
                         }
                     };
                 }
@@ -341,7 +343,7 @@ export default class AScenario {
                             parent: scenario.id,
                             x: {min: -300, max: 300},
                             y: {min: -300, max: 300},
-                            z: {min: -300, max: -300}
+                            fz: -300,
                         }
                     };
                     data.links.push({source: cls, target: pkg.shortname, value: 0.1});
@@ -355,13 +357,14 @@ export default class AScenario {
             window.graph.addData(data.nodes, data.links);
         } else {
             window.graph.setData(data.nodes, data.links);
+            window.graph.graph.cameraPosition(
+                {x: 200, y: 50, z: 1000}, // new position
+                {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                3000  // ms transition duration.
+            );
         }
         window.graph.showLinks();
-        window.graph.graph.cameraPosition(
-            {x: 200, y: 50, z: 1000}, // new position
-            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-            3000  // ms transition duration.
-        );
+        return data.nodes[scenario.id];
     }
 
     static handle(result) {

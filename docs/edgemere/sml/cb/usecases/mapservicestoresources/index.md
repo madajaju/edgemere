@@ -17,6 +17,10 @@ Map Services to Resources allows the system and actors to map service level agre
 
 
 
+## Extends Use Cases
+
+* [Coordinate Services](usecase-CoordinateServices)
+
 
 
 

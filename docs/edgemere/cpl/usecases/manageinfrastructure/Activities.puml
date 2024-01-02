@@ -31,6 +31,10 @@ ManageInfrastructure --> UpdateDevice
 
 
 
+usecase "ManagePhysicalInfrastructure" as ManagePhysicalInfrastructure #lightyellow
+
+ManageInfrastructure <-- ManagePhysicalInfrastructure : extends
+
 
 
 

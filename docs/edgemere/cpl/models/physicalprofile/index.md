@@ -53,17 +53,11 @@ The Physical Profile contains the capabilities, availability, reserves andmetric
 
 
 ## Methods
-
 * [combine() - Combine Physical Profile](#action-combine)
-
 * [consume() - Consume the requirements, part or all of the requirements](#action-consume)
-
 * [create() - Create Physical Profile](#action-create)
-
 * [propagate() - Propagate Physical Profile](#action-propagate)
-
 * [satisfies() - Satisfies the requirements, part or all of the requirements](#action-satisfies)
-
 * [stats() - get the Stats for the physical profile](#action-stats)
 
 

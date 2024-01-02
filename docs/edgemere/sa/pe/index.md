@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Policy Engine
 permalink: package--edgemere-sa-pe
 parent: Package Security Aspect

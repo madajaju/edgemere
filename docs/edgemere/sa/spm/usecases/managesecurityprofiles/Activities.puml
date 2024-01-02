@@ -35,6 +35,10 @@ ManageSecurityProfiles --> TestSecurityProfile
 
 
 
+usecase "Secure Assets" as SecureAssets #lightyellow
+
+ManageSecurityProfiles <-- SecureAssets : extends
+
 
 
 

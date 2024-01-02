@@ -63,6 +63,10 @@ ManageStacks --> VersionServiceStack
 
 
 
+usecase "Control Virtual Infrastructure" as ControlVirtualInfrastructure #lightyellow
+
+ManageStacks <-- ControlVirtualInfrastructure : extends
+
 
 
 

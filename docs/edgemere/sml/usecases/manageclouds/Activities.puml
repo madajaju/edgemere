@@ -11,6 +11,10 @@ ITOperations --> ManageClouds
 
 
 
+usecase "Coordinate Services" as CoordinateServices #lightyellow
+
+ManageClouds <-- CoordinateServices : extends
+
 
 
 

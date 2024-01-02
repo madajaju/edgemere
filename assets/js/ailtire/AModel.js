@@ -185,7 +185,8 @@ export default class AModel {
                 name: `${aname} : ${assoc.type}`,
                 view: AAttribute.view3D,
                 color: 'magenta',
-                rotate: {x: -theta}
+                rotate: {x: -theta},
+                orientation: {x: 0, y: 1, z: 0}
             };
             anodes.push(data.nodes[`Assoc${clsid}`]);
             if (clsid !== cls.id) {
@@ -198,6 +199,7 @@ export default class AModel {
             let clsid = cls.id + aname
             data.nodes[clsid] = {
                 id: clsid, name: `${aname} : ${attr.type}`, view: AAttribute.view3D, rotate: {x: -theta}, box: 1,
+                orientation: {x: 0, y: 1, z: 0}
             };
             anodes.push(data.nodes[clsid]);
         }
@@ -211,7 +213,8 @@ export default class AModel {
                 name: mname,
                 view: AAction.view3D,
                 box: 1,
-                rotate: {x: -theta, z: -theta, y: theta}
+                rotate: {x: -theta, z: -theta, y: theta},
+                orientation: {x: 1, y: 0, z: 0}
             };
             mnodes.push(data.nodes[`${cls.id}-${mname}`]);
         }
@@ -517,16 +520,28 @@ export default class AModel {
             let values = record.detail.split('|');
             for (let i in values) {
 
-                let [name, value] = values[i].split('^');
-                if (!value) {
+                let [id, name, value] = values[i].split('^');
+                if (!name) {
                     value = name;
                     name = record.name;
                 }
                 k++;
-                drecords.push({recid: k, name: name, value: value});
+                drecords.push({recid: k, name: name, value: value, id:id});
             }
             w2ui['objdetail'].add(drecords);
             window.graph.selectNodeByID(event.recid);
+        };
+        w2ui['objdetail'].onClick = (event) => {
+            let records = w2ui['objdetail'].records;
+            let record = undefined;
+            for(let i in records)  {
+                let rec = records[i];
+                if(`${rec.recid}` === `${event.recid}`) {
+                    record = records[i];
+                    break;
+                }
+            }
+            window.graph.selectNodeByID(record.id, true);
         };
 
         retForm.refresh();
@@ -863,11 +878,11 @@ export default class AModel {
         records.push({recid: i++, name: 'Description', value: results.description, detail: results.description});
         records.push({recid: i++, name: 'Package', value: results.package, detail: results.package});
 
-        let attDetails = getAttributeDetails(results._attributes);
+        let attDetails = getAttributeDetails(results, results._attributes);
         records.push({recid: i++, name: 'Attributes', value: attDetails.length, detail: attDetails.join('|')});
-        let assocDetails = getAssocDetails(results._associations);
+        let assocDetails = getAssocDetails(results, results._associations);
         records.push({recid: i++, name: 'Associations', value: assocDetails.length, detail: assocDetails.join('|')});
-        let methodDetails = getMethodDetails(results.methods);
+        let methodDetails = getMethodDetails(results, results.methods);
         records.push({recid: i++, name: 'Methods', value: methodDetails.length, detail: methodDetails.join('|')});
 
         myForm.records = records;
@@ -902,38 +917,41 @@ export default class AModel {
 
 }
 
-function getAttributeDetails(attributes) {
+function getAttributeDetails(cls, attributes) {
     let items = [];
     let i = 0;
     for (let j in attributes) {
         let item = attributes[j];
         i++;
         let name = `${j} : ${item.type}`;
-        items.push(`${name}^${item.description}`);
+        let id = cls.id + j
+        items.push(`${id}^${name}^${item.description}`);
     }
     return items;
 }
 
-function getMethodDetails(methods) {
+function getMethodDetails(cls, methods) {
     let items = [];
     let i = 0;
     for (let j in methods) {
         let item = methods[j];
         i++;
         let name = `${j}`;
-        items.push(`${name}^${item.description}`);
+        let id =`${cls.id}-${j}`;
+        items.push(`${id}^${name}^${item.description}`);
     }
     return items;
 }
 
-function getAssocDetails(assocs) {
+function getAssocDetails(cls, assocs) {
     let items = [];
     let i = 0;
     for (let j in assocs) {
         let item = assocs[j];
         i++;
         let name = `${j}:${item.type}`;
-        items.push(`${name}^[${item.cardinality}] - ${item.description}`);
+        let id = `Assoc${item.type}`;
+        items.push(`${id}^${name}^[${item.cardinality}] - ${item.description}`);
     }
     return items;
 }

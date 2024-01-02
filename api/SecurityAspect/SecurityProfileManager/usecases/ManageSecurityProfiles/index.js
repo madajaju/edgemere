@@ -13,5 +13,6 @@ module.exports = {
     actors: {
         'SecurityEngineer': 'uses'
     },
+    extends: ["Secure Assets"]
 };
 

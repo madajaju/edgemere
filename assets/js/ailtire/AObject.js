@@ -1,4 +1,4 @@
-import {AText, A3DGraph, ASelectedHUD} from './index.js';
+import {AText, A3DGraph, ASelectedHUD, AMainWindow} from './index.js';
 
 export default class AObject {
     static scolor = {
@@ -66,50 +66,52 @@ export default class AObject {
     }
 
     static addObject(obj, creator) {
-        // Add the object to the list
-        let ritem = {recid: obj._attributes.id};
-        for (let i in obj.definition.attributes) {
-            if (obj._attributes.hasOwnProperty(i)) {
-                ritem[i] = obj._attributes[i];
-                ritem[i + 'detail'] = obj._attributes[i];
-            }
-        }
-        for (let i in obj.definition.associations) {
-            if (obj._associations.hasOwnProperty(i)) {
-                let assocValue = obj._associations[i];
-                let assoc = obj.definition.associations[i];
-                if (assoc.cardinality === 1) {
-                    ritem[i] = assocValue._attributes.name;
-                    ritem[i + 'detail'] = `<span onclick="expandObject('${assocValue.type}?id=${assocValue._attributes.id}');">${assocValue._attributes.name}</spana>`;
-                } else {
-                    ritem[i] = assocValue.length;
-                    let values = [];
-                    for (let j in assocValue) {
-                        let aValue = assocValue[j];
-                        values.push(`<span onclick="expandObject('${aValue.type}?id=${aValue._attributes.id}');">${aValue._attributes.name}</spana>`);
-                    }
-                    ritem[i + 'detail'] = values.join('|');
+        if (!creator) {
+            // Add the object to the list Only if the creator is not set. This prevents junk from being added to the
+            // detail list.
+            let ritem = {recid: obj._attributes.id};
+            for (let i in obj.definition.attributes) {
+                if (obj._attributes.hasOwnProperty(i)) {
+                    ritem[i] = obj._attributes[i];
+                    ritem[i + 'detail'] = obj._attributes[i];
                 }
             }
+            for (let i in obj.definition.associations) {
+                if (obj._associations.hasOwnProperty(i)) {
+                    let assocValue = obj._associations[i];
+                    let assoc = obj.definition.associations[i];
+                    if (assoc.cardinality === 1) {
+                        ritem[i] = assocValue._attributes.name;
+                        ritem[i + 'detail'] = `<span onclick="expandObject('${assocValue.type}?id=${assocValue._attributes.id}');">${assocValue._attributes.name}</spana>`;
+                    } else {
+                        ritem[i] = assocValue.length;
+                        let values = [];
+                        for (let j in assocValue) {
+                            let aValue = assocValue[j];
+                            values.push(`<span onclick="expandObject('${aValue.type}?id=${aValue._attributes.id}');">${aValue._attributes.name}</spana>`);
+                        }
+                        ritem[i + 'detail'] = values.join('|');
+                    }
+                }
+            }
+            w2ui['objlist'].add([ritem]);
         }
-        w2ui['objlist'].add([ritem]);
         // Add the object to the graph
         let data = {nodes: {}, links: []};
         data.nodes[obj._attributes.id] = {
             id: obj._attributes.id,
             name: obj._attributes.name,
             group: obj.definition.name,
-            universe: "Created",
             level: obj.definition.package.shortname,
             view: obj.definition.name + '3D'
         }
         if (creator) {
-            data.links.push({target: obj._attributes.id, source: creator, value: 50, width: 0.5, color: "lightgreen"});
+            data.links.push({target: obj._attributes.id, source: creator, value: 100, width: 0.001, color: "#aaffff"});
         }
         // Now add the nodes of the associations
         // Go through the cols and get the associations
 
-        addRelationshipObjects(data, obj.definition,obj._associations, data.nodes[obj._attributes.id]);
+        addRelationshipObjects(data, obj.definition, obj._associations, data.nodes[obj._attributes.id]);
         // If there is a creator and there is not an rbox then add an rbox to the creator.
         if (creator) {
             let rbox = {
@@ -122,7 +124,6 @@ export default class AObject {
             for (let i in data.nodes) {
                 if (!data.nodes[i].rbox) {
                     data.nodes[i].rbox = rbox;
-                    data.universe = "Created";
                 }
             }
         }
@@ -145,7 +146,9 @@ export default class AObject {
         retForm.onClick = function (event) {
             // The detail is loaded in the showDetail which is called after the node is selected in the graph.
             // this happens in the callback function for selecting a node.
+            let record = this.get(event.recid);
             window.graph.selectNodeByID(event.recid);
+            AMainWindow.selectedObject = record;
         };
 
         retForm.refresh();
@@ -173,16 +176,16 @@ export default class AObject {
         myForm.records = records;
         // Create new records that show the number of each state.
         let jmap = {};
-        for(let i in records) {
+        for (let i in records) {
             let rec = records[i];
-            if(!jmap.hasOwnProperty(rec.state)) {
+            if (!jmap.hasOwnProperty(rec.state)) {
                 jmap[rec.state] = {name: rec.state, value: 0};
             }
             jmap[rec.state].value++;
         }
-        let jrecords = [{name:'Total', value: records.length}]
-        for(let name in jmap) {
-            jrecords.push({name:name, value:jmap[name].value});
+        let jrecords = [{name: 'Total', value: records.length}]
+        for (let name in jmap) {
+            jrecords.push({name: name, value: jmap[name].value});
         }
         ASelectedHUD.update(results.name + 's', jrecords);
         myForm.refresh();
@@ -341,6 +344,33 @@ export default class AObject {
             window.graph.setData(data.nodes, data.links);
         }
     }
+
+    static editObject(obj) {
+        if (AMainWindow.objectEditors.hasOwnProperty(obj._type)) {
+            let editForm = AMainWindow.objectEditors[obj._type](obj);
+            w2popup.open({
+                height: 850,
+                width: 850,
+                title: `Edit ${obj._type}`,
+                body: '<div id="editObjectDialog" style="width: 100%; height: 100%;"></div>',
+                showMax: true,
+                onToggle: function (event) {
+                    $(w2ui.editModelDialog.box).hide();
+                    event.onComplete = function () {
+                        $(w2ui.editObjectDialog.box).show();
+                        w2ui.editObjectDialog.resize();
+                    }
+                },
+                onOpen: function (event) {
+                    event.onComplete = function () {
+                        // specifying an onOpen handler instead is equivalent to specifying an onBeforeOpen handler,
+                        // which would make this code execute too early and hence not deliver.
+                        $('#editObjectDialog').w2render(editForm);
+                    }
+                }
+            });
+        }
+    }
 }
 
 function expandObjectOnGraph(link) {
@@ -350,11 +380,11 @@ function expandObjectOnGraph(link) {
     });
 }
 
-function addRelationshipObjects(data, definition, associations,parent) {
+function addRelationshipObjects(data, definition, associations, parent) {
     for (let i in associations) {
         if (associations.hasOwnProperty(i)) {
             let aobj = associations[i];
-            if(!definition.associations.hasOwnProperty(i)) {
+            if (!definition.associations.hasOwnProperty(i)) {
                 console.log("i:", i);
             } else {
                 let assoc = definition.associations[i];

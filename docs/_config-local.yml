@@ -1,0 +1,21 @@
+remote_theme: just-the-docs/just-the-docs
+title: edgemere Architecture v0.4.1
+description: Edgemere is a conceptual architecture targeted to multi-hybrid cloud and edge computing strategies including data,application, service, and infrastructure management. With the growth of IoT devices management of these elements from edge to data center is important to the success of the solution.
+google_analytics: G-SDCPXLJ9YG
+
+theme: just-the-docs
+host: 0.0.0.0
+baseurl: /docs
+permalink: :path/
+
+plugins:
+  - jekyll-coffeescript
+  - jekyll-default-layout
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+  - jekyll-relative-links
+  - github-pages

@@ -37,7 +37,6 @@ Data AWorkFlow Template is how a Blue Print refrences a Data AWorkFlow with late
 
 
 ## Methods
-
 * [create() - Create a Data AWorkFlow Template](#action-create)
 
 

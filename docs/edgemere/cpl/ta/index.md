@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Telemetry Aggregator
 permalink: package--edgemere-cpl-ta
 parent: Package Common Physical Layer

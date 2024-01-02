@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Service Controller
 permalink: package--edgemere-sml-sc
 parent: Package Service Management Layer

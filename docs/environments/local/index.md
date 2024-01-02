@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Environment local
 permalink: environment-local
 parent: Environments

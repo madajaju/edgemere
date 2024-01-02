@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Data Management Layer
 permalink: package--edgemere-diml-dml
 parent: Package Distributed Information Management Layer
@@ -30,7 +31,7 @@ that are elaborated in the use case descriptions.
 The following are the actors of the Data Management Layer subsystem. This can include people, other subsystems
 inside the solution and even external subsystems.
 
-* [ChiefDataOfficer](actor-cdo)
+* [ChiefDataOfficer](actor-chiefdataofficer)
 * [DataEngineer](actor-dataengineer)
 
 

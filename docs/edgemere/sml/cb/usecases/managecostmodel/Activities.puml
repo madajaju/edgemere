@@ -1,7 +1,7 @@
 @startuml
 
 
-usecase "ManageCostModel" as ManageCostModel #yellow
+usecase "Manage Cost Model" as ManageCostModel #yellow
 
 Actor "IT Operations" as ITOperations
 
@@ -10,6 +10,10 @@ ITOperations --> ManageCostModel
 
 
 
+
+usecase "Control Virtual Infrastructure" as ControlVirtualInfrastructure #lightyellow
+
+ManageCostModel <-- ControlVirtualInfrastructure : extends
 
 
 

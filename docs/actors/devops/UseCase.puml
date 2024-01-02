@@ -16,5 +16,13 @@ rectangle "Application Management Layer" as aml #88cccc {
 
 }
 
+rectangle "edgemere" as edgemere #ccaaff {
+        usecase "Coordinate Services" as CoordinateServices
+    DevOpsEngineer --> CoordinateServices
+    usecase "Organize Solutions" as OrganizeSolutions
+    DevOpsEngineer --> OrganizeSolutions
+
+}
+
 
 @enduml

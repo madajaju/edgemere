@@ -36,9 +36,7 @@ Logical Resource of Network that are provisioned
 
 
 ## Methods
-
 * [factory() - Create a Resource based on the hardware to resource table](#action-factory)
-
 * [provision() - Provision the Resource](#action-provision)
 
 

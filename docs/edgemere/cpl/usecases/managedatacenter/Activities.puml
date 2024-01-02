@@ -31,6 +31,10 @@ ManageDataCenter --> UpdateDataCenter
 
 
 
+usecase "Manage Physical Infrastructure" as ManagePhysicalInfrastructure #lightyellow
+
+ManageDataCenter <-- ManagePhysicalInfrastructure : extends
+
 
 
 

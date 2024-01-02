@@ -16,5 +16,6 @@ module.exports = {
         'ApplicationDeveloper': 'uses',
         'DataEngineer': 'uses',
     },
+    extends: ["OrganizeSolutions"]
 };
 

@@ -8,11 +8,6 @@ boundary parent #black
 
 entity children #blue
 
-rectangle "edgemere" as edgemereStack #ccaaff {
-    queue edgemereStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
-}
 
 
 
@@ -34,32 +29,23 @@ package "edgemere" #ccaaff {
     ]
     
 
-node "admin" as adminService
 node "web" as webService
 node "doc" as docService
 
-        collections "edgemere" as edgemereimage
-    
+
         artifact "edgemere_web" as edgemere_webimage
     
         artifact "edgemere_doc" as edgemere_docimage
     
 }
 
-adminService -[#blue]- childrennet
-
 webService -[#blue]- childrennet
 
 webService -[#red]- siblingsnet
 
 docService -[#red]- siblingsnet
-adminService .... edgemereimage
 webService .... edgemere_webimage
 docService .... edgemere_docimage
 
-edgemereimage --> edgemereStack
-    
-edgemereStacksnet --[#black]-- parent
-    
 
 @enduml

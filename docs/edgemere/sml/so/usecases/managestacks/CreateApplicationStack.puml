@@ -1,6 +1,8 @@
 @startuml
 
-actor "Actor"
+actor "ApplicationDeveloper"
+
+actor "StackDeveloper"
 
 
 entity EventBus
@@ -15,7 +17,18 @@ box Software Defined Infrastructure #cccc88
     end box
 
 
-"Actor" -> so: Create Application Stack
+"ApplicationDeveloper" -> so: Create Application Stack
+
+    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
+
+    "storageresource" --/ EventBus: data.list
+
+    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
+
+    "storageresource" --/ EventBus: data.list
+
+
+"StackDeveloper" -> so: Create Application Stack
 
     so -> "storageresource": list (name: hello,file: ./templates/world.yml)
 

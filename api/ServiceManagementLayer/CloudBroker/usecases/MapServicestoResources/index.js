@@ -14,5 +14,6 @@ module.exports = {
     actors: {
         'IT Operations': 'uses'
     },
+    extends: ["Coordinate Services"]
 };
 

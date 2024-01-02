@@ -1,4 +1,4 @@
-import {AUsecase, AModel, AText, AInterface, AHandler,A3DGraph, ASelectedHUD} from './index.js';
+import {AUsecase, AModel, AText, AInterface, AHandler, A3DGraph, ASelectedHUD} from './index.js';
 
 export default class APackage {
     constructor(config) {
@@ -29,7 +29,7 @@ export default class APackage {
         let width = node.name.length * fontSize / 2;
         let height = APackage.default.height;
         let depth = APackage.default.depth;
-        let radius = Math.max(Math.sqrt(width * width + height * height), Math.sqrt(height * height + depth * depth), Math.sqrt(width * width + depth * depth))/2;
+        let radius = Math.max(Math.sqrt(width * width + height * height), Math.sqrt(height * height + depth * depth), Math.sqrt(width * width + depth * depth)) / 2;
         return {w: width, h: height, d: depth, r: radius};
     }
 
@@ -67,10 +67,10 @@ export default class APackage {
             width: shape.x,
             size: fontSize
         });
-        let labelhieght = node.name.split(/\s/).length*fontSize;
-        label.position.set(0, (shape.y/2)-labelhieght, shape.z / 2 + 4);
+        let labelhieght = node.name.split(/\s/).length * fontSize;
+        label.position.set(0, (shape.y / 2) - labelhieght, shape.z / 2 + 4);
         box.add(label);
-        if(node.x && node.y && node.z) {
+        if (node.x && node.y && node.z) {
             box.position.set(node.x, node.y, node.z);
         }
         if (node.rotate) {
@@ -132,6 +132,7 @@ export default class APackage {
                 name: name,
                 description: pkg.interface[iname].description,
                 view: AInterface.view3D,
+                orientation: {x:0,y:2, z:0}
             };
             data.nodes[iname] = node;
             inodes.push(node);
@@ -145,7 +146,8 @@ export default class APackage {
                 id: hname,
                 name: handler.name,
                 description: pkg.handlers[hname].description,
-                view: AHandler.view3D
+                view: AHandler.view3D,
+                orientation: {x:1,y:0, z:0}
             };
 
             data.nodes[hname] = node;
@@ -171,6 +173,7 @@ export default class APackage {
                 fontSize: 15,
                 view: AUsecase.view3D,
                 rotate: {x: theta},
+                orientation: {x:0,y:-1, z:0}
             }
             data.nodes[uname] = node;
             ucnodes.push(node);
@@ -198,6 +201,7 @@ export default class APackage {
                 },
                 rotate: {y: 2 * theta},
                 view: AModel.view3D,
+                orientation: {x:0,y:0, z:-1}
             }
             data.nodes[cname] = node;
             cnodes.push(node);
@@ -213,6 +217,7 @@ export default class APackage {
                 rotate: {y: -theta},
                 color: spkg.color,
                 view: APackage.view3D,
+                orientation: {x:-1,y:0, z:0}
             }
             data.nodes[pname] = node;
             spnodes.push(node);
@@ -228,16 +233,17 @@ export default class APackage {
                 description: spkg.description,
                 rbox: {
                     parent: pkg.shortname,
-                    y: {min: bbox.y.max, max: bbox.y.max*2},
+                    y: {min: bbox.y.max, max: bbox.y.max * 2},
                     z: bbox.z,
                     fx: bbox.x.min - 150,
                 },
                 color: spkg.color,
                 rotate: {y: -theta},
                 view: APackage.view3D,
+                orientation: {x:-1,y:0, z:0}
             }
             data.nodes[pname] = node;
-            data.links.push({ source: pkg.shortname, target: pname, color: '#ffffbb', value: 1.0, width: 2 });
+            data.links.push({source: pkg.shortname, target: pname, color: '#ffffbb', value: 1.0, width: 2});
         }
         if (mode === 'add') {
             window.graph.addData(data.nodes, data.links);
@@ -256,85 +262,67 @@ export default class APackage {
             {
                 type: 'button', id: 'classes', text: 'Classes', img: 'w2ui-icon-search',
                 onClick: (event) => {
-                    let distance = Math.sqrt((size.w / 2) ** 2 + (size.h / 2) ** 2) * 2;
+                    let distance = Math.sqrt((size.w ) ** 2 + (size.h) ** 2) * 2;
                     window.graph.graph.cameraPosition(
                         {x: 0, y: -0, z: -distance}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
                         1000
                     );
-                    setTimeout(() => {
-                        window.graph.graph.zoomToFit(1000)
-                    }, 500);
                 }
             },
             {
                 type: 'button', id: 'subpackage', text: 'Sub Packages', img: 'w2ui-icon-search',
                 onClick: (event) => {
-                    let distance = Math.sqrt((size.w / 2) ** 2 + (size.d / 2) ** 2) * 2;
+                    let distance = Math.sqrt((size.w) ** 2 + (size.d ) ** 2) * 2;
                     window.graph.graph.cameraPosition(
                         {x: 0, y: -distance, z: 0}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
                         1000
                     );
-                    setTimeout(() => {
-                        window.graph.graph.zoomToFit(1000)
-                    }, 500);
                 }
             },
             {
                 type: 'button', id: 'interface', text: 'Interface', img: 'w2ui-icon-search',
                 onClick: (event) => {
-                    let distance = Math.sqrt((size.w / 2) ** 2 + (size.d / 2) ** 2) * 2;
+                    let distance = Math.sqrt((size.w) ** 2 + (size.d ) ** 2) * 2;
                     window.graph.graph.cameraPosition(
                         {x: 0, y: distance, z: 0}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
                         1000
                     );
-                    setTimeout(() => {
-                        window.graph.graph.zoomToFit(1000)
-                    }, 500);
                 }
             },
             {
                 type: 'button', id: 'handlers', text: 'Handlers', img: 'w2ui-icon-search',
                 onClick: (event) => {
-                    let distance = Math.sqrt((size.h / 2) ** 2 + (size.d / 2) ** 2) * 2;
+                    let distance = Math.sqrt((size.h ) ** 2 + (size.d) ** 2) * 2;
                     window.graph.graph.cameraPosition(
                         {x: distance, y: 0, z: 0}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
                         1000
                     );
-                    setTimeout(() => {
-                        window.graph.graph.zoomToFit(1000)
-                    }, 500);
                 }
             },
             {
                 type: 'button', id: 'usecases', text: 'UseCases', img: 'w2ui-icon-search',
                 onClick: (event) => {
-                    let distance = Math.sqrt((size.w / 2) ** 2 + (size.h / 2) ** 2) * 2;
+                    let distance = Math.sqrt((size.w ) ** 2 + (size.h ) ** 2) * 2;
                     window.graph.graph.cameraPosition(
                         {x: 0, y: -distance, z: 0}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
                         1000
                     );
-                    setTimeout(() => {
-                        window.graph.graph.zoomToFit(1000)
-                    }, 500);
                 }
             },
             {
                 type: 'button', id: 'dependents', text: 'Dependents', img: 'w2ui-icon-search',
                 onClick: (event) => {
-                    let distance = Math.sqrt((size.d / 2) ** 2 + (size.h / 2) ** 2) * 2;
+                    let distance = Math.sqrt((size.d ) ** 2 + (size.h ) ** 2) * 2;
                     window.graph.graph.cameraPosition(
                         {x: -distance, y: 0, z: 0}, // new position
                         {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
                         1000
                     );
-                    setTimeout(() => {
-                        window.graph.graph.zoomToFit(1000)
-                    }, 500);
                 }
             },
         ]);
@@ -344,6 +332,7 @@ export default class APackage {
         APackage.viewDeep3D(result, 'new');
         APackage.showDetail(result);
     }
+
     static handleList(result) {
         APackage.viewDeep3D(result, 'new');
         APackage.showListDetail(result);
@@ -399,7 +388,7 @@ export default class APackage {
 
         const radius = Math.max(Math.sqrt(wnum ** 2 + hnum ** 2), Math.sqrt(hnum ** 2 + dnum ** 2), Math.sqrt(wnum ** 2 + dnum ** 2));
         return {
-            w: wnum*1.10, h: hnum*1.10, d: dnum*1.10, r: radius,
+            w: wnum * 1.10, h: hnum * 1.10, d: dnum * 1.10, r: radius,
             interface: ibox,
             handlers: hbox,
             usecases: ubox,
@@ -408,6 +397,7 @@ export default class APackage {
             depends: dbox
         }
     }
+
     static getDetail(node) {
         $.ajax({
             url: node.expandLink,
@@ -416,6 +406,7 @@ export default class APackage {
             }
         });
     }
+
     static showDetail(result) {
         let records = [];
         let cols = [
@@ -429,15 +420,25 @@ export default class APackage {
         records.push({recid: i++, name: 'Description', value: result.description, detail: result.description});
         records.push({recid: i++, name: 'Color', value: result.color, detail: result.color});
         records.push({recid: i++, name: 'Prefix', value: result.prefix, detail: result.prefix});
-        let classdetails = getDetails(result.classes);
+        let classdetails = getDetails(result.classes, (name, obj) => {
+            return name;
+        });
         records.push({recid: i++, name: 'Classes', value: classdetails.length, detail: classdetails.join('|')});
-        let spkgs = getDetails(result.subpackages);
+        let spkgs = getDetails(result.subpackages, (name, obj) => {
+            return name;
+        });
         records.push({recid: i++, name: 'Sub Packages', value: spkgs.length, detail: spkgs.join('|')});
-        let interfaces = getDetails(result.interface);
+        let interfaces = getDetails(result.interface, (name, obj) => {
+            return name;
+        });
         records.push({recid: i++, name: 'Interfaces', value: interfaces.length, detail: interfaces.join('|')});
-        let handlers = getDetails(result.handlers);
+        let handlers = getDetails(result.handlers, (name, obj) => {
+            return name;
+        });
         records.push({recid: i++, name: 'Handlers', value: handlers.length, detail: handlers.join('|')});
-        let usecases = getDetails(result.usecases);
+        let usecases = getDetails(result.usecases, (name, obj) => {
+            return name;
+        });
         records.push({recid: i++, name: 'Use Cases', value: usecases.length, detail: usecases.join('|')});
 
         w2ui['objlist'].records = records;
@@ -453,20 +454,34 @@ export default class APackage {
             let k = 0;
             let values = record.detail.split('|');
             for (let i in values) {
-                let [name, value] = values[i].split('^');
-                if (!value) {
+                let [id, name, value] = values[i].split('^');
+                if (!name) {
                     value = name;
                     name = record.name;
                 }
                 k++;
-                drecords.push({recid: k, name: name, value: value});
+                drecords.push({recid: k, id: id, name: name, value: value});
+
             }
+            w2ui['objdetail'].onClick = (event) => {
+                let records = w2ui['objdetail'].records;
+                let record = undefined;
+                for (let i in records) {
+                    let rec = records[i];
+                    if (`${rec.recid}` === `${event.recid}`) {
+                        record = records[i];
+                        break;
+                    }
+                }
+                window.graph.selectNodeByID(record.id, true);
+            };
             w2ui['objdetail'].add(drecords);
             window.graph.selectNodeByID(event.recid);
         }
         ASelectedHUD.update('Package', records);
         w2ui['objlist'].refresh();
     }
+
     static showListDetail(result) {
         let records = [];
         let cols = [
@@ -519,14 +534,18 @@ export default class APackage {
     }
 }
 
-function getDetails(objs) {
+function getDetails(objs, idfn) {
     let items = [];
     let inum = 0;
     for (let j in objs) {
         let item = objs[j];
         inum++;
         let name = item.name || j;
-        items.push(`<span onclick="expandObject('${item.link}');">${name}</span>^${item.description}`);
+        let id = name;
+        if (idfn) {
+            id = idfn(j, item)
+        }
+        items.push(`${id}^${name}^${item.description}`);
     }
     return items;
 }
@@ -551,36 +570,36 @@ function layoutRowColumn(parentNode, nodes, size, direction) {
         }
         if (direction === 'top') {
             let offset = {
-                w: Math.max(parentNode.cube.x/(size.box.cols+1), size.stats.w.max)*1.10,
-                h: Math.max(parentNode.cube.z/(size.box.rows+1), size.stats.h.max)*1.10
+                w: Math.max(parentNode.cube.x / (size.box.cols + 1), size.stats.w.max) * 1.10,
+                h: Math.max(parentNode.cube.z / (size.box.rows + 1), size.stats.h.max) * 1.10
             }
             node.rbox = {
                 parent: prevNode.id,
-                fx: bbox.x.min + offset.w/2 + (col * offset.w),
+                fx: bbox.x.min + offset.w / 2 + (col * offset.w),
                 fy: bbox.y.max,
-                fz: bbox.z.max - offset.h/2 - (row * offset.h),
+                fz: bbox.z.max - offset.h / 2 - (row * offset.h),
             }
         } else if (direction === 'bottom') {
             let offset = {
-                w: Math.max(parentNode.cube.x/(size.box.cols+1), size.stats.w.max)*1.10,
-                h: Math.max(parentNode.cube.z/(size.box.rows+1), size.stats.h.max)*1.10
+                w: Math.max(parentNode.cube.x / (size.box.cols + 1), size.stats.w.max) * 1.10,
+                h: Math.max(parentNode.cube.z / (size.box.rows + 1), size.stats.h.max) * 1.10
             }
             node.rbox = {
                 parent: prevNode.id,
-                fx: bbox.x.min + offset.w/2 + (col * offset.w),
+                fx: bbox.x.min + offset.w / 2 + (col * offset.w),
                 fy: bbox.y.min - 30,
-                fz: bbox.z.max - offset.h/2 - (row * offset.h),
+                fz: bbox.z.max - offset.h / 2 - (row * offset.h),
             }
         } else if (direction === 'right') {
             let offset = {
-                w: parentNode.cube.z/(size.box.cols+1),
-                h: parentNode.cube.y/(size.box.rows+1),
+                w: parentNode.cube.z / (size.box.cols + 1),
+                h: parentNode.cube.y / (size.box.rows + 1),
             }
             node.rbox = {
                 parent: prevNode.id,
                 fx: bbox.x.max,
-                fy: bbox.y.max - offset.h/2 - (row * offset.h),
-                fz: bbox.z.max - offset.w/2 - (col * offset.w),
+                fy: bbox.y.max - offset.h / 2 - (row * offset.h),
+                fz: bbox.z.max - offset.w / 2 - (col * offset.w),
             }
         } else if (direction === 'left') {
             let offset = {
@@ -595,25 +614,25 @@ function layoutRowColumn(parentNode, nodes, size, direction) {
             }
         } else if (direction === 'back') {
             let offset = {
-                w: Math.max(parentNode.cube.x/(size.box.cols+1), size.stats.w.max)*1.10,
-                h: Math.max(parentNode.cube.y/(size.box.rows+1), size.stats.h.max)*1.10
+                w: Math.max(parentNode.cube.x / (size.box.cols + 1), size.stats.w.max) * 1.10,
+                h: Math.max(parentNode.cube.y / (size.box.rows + 1), size.stats.h.max) * 1.10
             }
             node.rbox = {
                 parent: prevNode.id,
-                fx:  bbox.x.max - offset.w/2 - (col * offset.w),
-                fz:  bbox.z.min,
-                fy: bbox.y.max - offset.h/2 - (row * offset.h),
+                fx: bbox.x.max - offset.w / 2 - (col * offset.w),
+                fz: bbox.z.min,
+                fy: bbox.y.max - offset.h / 2 - (row * offset.h),
             }
         } else if (direction === 'front') {
             let offset = {
-                w: Math.max(parentNode.cube.x/(size.box.cols+1), size.stats.w.max)*1.10,
-                h: Math.max(parentNode.cube.y/(size.box.rows+1), size.stats.h.max)*1.10
+                w: Math.max(parentNode.cube.x / (size.box.cols + 1), size.stats.w.max) * 1.10,
+                h: Math.max(parentNode.cube.y / (size.box.rows + 1), size.stats.h.max) * 1.10
             }
             node.rbox = {
                 parent: prevNode.id,
-                fx: bbox.x.min + offset.w/2 + (col * offset.w),
-                fz:  bbox.z.max,
-                fy: bbox.y.min + offset.h/2 + (row * offset.h),
+                fx: bbox.x.min + offset.w / 2 + (col * offset.w),
+                fz: bbox.z.max,
+                fy: bbox.y.min + offset.h / 2 + (row * offset.h),
             }
         }
         row++;

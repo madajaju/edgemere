@@ -11,7 +11,7 @@ program.description('Add items to the object')
 program.parse(process.argv);
 let url = global.ailtire.config.host;
 let args = {};
-let params = '/aggregateddevice/adddevices?';
+let params = '/datacenter/adddevices?';
 params += 'mode=json';
 let options = program.opts();
 

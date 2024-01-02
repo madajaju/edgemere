@@ -51,9 +51,7 @@ This represents a cloud in the ecosystem. This can be public or private onprem o
 
 
 ## Methods
-
 * [create() - Create the Cloud](#action-create)
-
 * [reserve() - Reserve a resource](#action-reserve)
 
 

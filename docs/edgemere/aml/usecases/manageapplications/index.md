@@ -18,6 +18,10 @@ DevOps Engineers and Application Developers need the ability to manage applicati
 
 
 
+## Extends Use Cases
+
+* [OrganizeSolutions](usecase-OrganizeSolutions)
+
 
 
 
@@ -47,7 +51,7 @@ Build Application is the description
 
 #### Actors
 
-* [Actor](actor-actor)
+* [DevOps Engineer](actor-devops)
 
 
 

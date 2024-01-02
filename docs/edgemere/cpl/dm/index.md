@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Device Manager
 permalink: package--edgemere-cpl-dm
 parent: Package Common Physical Layer

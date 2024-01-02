@@ -17,6 +17,10 @@ Manage Assets is the description
 
 
 
+## Extends Use Cases
+
+* [Control Virtual Infrastructure](usecase-ControlVirtualInfrastructure)
+
 
 
 

@@ -5,7 +5,7 @@
  */
 
 module.exports = {
-    name: 'ManageBilling',
+    name: 'Manage Billing',
     description: 'ManageBilling allows the IT Operations Manager to establish periodic billing for the usage' +
         ' of the resources allocated for the services deployed into the cloud. The accounting and billing should' +
         ' be accessible for users and groups of users.',
@@ -13,5 +13,6 @@ module.exports = {
     actors: {
         'ITOperations': 'uses'
     },
+    extends: [ "Control Virtual Infrastructure"]
 };
 

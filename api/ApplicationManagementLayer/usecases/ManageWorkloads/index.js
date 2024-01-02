@@ -14,5 +14,6 @@ module.exports = {
         'Application Developer': 'uses',
         'DevOps Engineer': 'uses',
     },
+    extends: ["OrganizeSolutions"]
 };
 

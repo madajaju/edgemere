@@ -58,7 +58,6 @@ The following diagram is the state net for this class.
 
 
 ## Methods
-
 * [create() - Create a Data Source](#action-create)
 
 

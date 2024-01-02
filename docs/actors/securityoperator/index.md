@@ -13,6 +13,8 @@ Long description
 ## Use Cases
 
 * [Apply Security Profiles](usecase-ApplySecurityProfiles)
+* [Govern Identities](usecase-GovernIdentities)
+* [Secure Assets](usecase-SecureAssets)
 
 
 ![Use Case Diagram](./UseCase.png)
@@ -22,4 +24,5 @@ TBD
 
 ## Command Line Interface
 * [ edgemere sa spm data govern](action--edgemere-sa-spm-data-govern) - Apply Security Profiles is the description
-
+* [ edgemere identity list](action--edgemere-identity-list) - Govern Identities is the description
+* [ edgemere data govern](action--edgemere-data-govern) - Secure Assets is the description

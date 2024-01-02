@@ -12,5 +12,6 @@ module.exports = {
     actors: {
         'IT Operations': 'uses'
     },
+    extends: [ "Control Virtual Infrastructure"]
 };
 

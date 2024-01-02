@@ -12,5 +12,6 @@ module.exports = {
         'Stack Developer': 'uses',
         'Application Developer': 'uses'
     },
+    extends: [ "Control Virtual Infrastructure"]
 };
 

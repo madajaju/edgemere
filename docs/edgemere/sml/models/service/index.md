@@ -49,9 +49,7 @@ A Service is an orchestratable element that represents a container or vm running
 
 
 ## Methods
-
 * [create() - Create a Service](#action-create)
-
 * [createlet() - Create a Stack](#action-createlet)
 
 

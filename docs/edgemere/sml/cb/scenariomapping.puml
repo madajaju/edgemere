@@ -148,11 +148,18 @@ edgemeresmlcbservice -- edgemeresmlcbservicemapresources
     edgemeresmlcbmulticloudaddpolicies <-- ITOperationsManageMultiCloudManagePoliciesforMultiCloud
     
         rectangle "Manage Multi Cloud" as ManageMultiCloud #ffffaa {
-            ("Manage Policies for Multi Cloud")/ as ITOperationsManageMultiCloudRemoveCloudfromMultiCloud
+            ("Remove Cloud From Multi Cloud")/ as ITOperationsManageMultiCloudRemoveCloudfromMultiCloud
         }
     
     edgemeresmlcbmulticloudremovepolicies <-- ITOperationsManageMultiCloudRemoveCloudfromMultiCloud
     
+
+
+
+
+
+
+
 
 
 

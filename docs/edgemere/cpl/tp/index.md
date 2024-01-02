@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Telemetry Producer
 permalink: package--edgemere-cpl-tp
 parent: Package Common Physical Layer

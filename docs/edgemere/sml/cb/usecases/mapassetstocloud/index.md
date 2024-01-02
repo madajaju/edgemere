@@ -17,6 +17,10 @@ Map Assets to Cloud allows IT Operations to map assets to resource instance type
 
 
 
+## Extends Use Cases
+
+* [Control Virtual Infrastructure](usecase-ControlVirtualInfrastructure)
+
 
 
 

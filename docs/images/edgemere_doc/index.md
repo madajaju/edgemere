@@ -6,7 +6,7 @@ parent: Images
 ---
 # edgemere_doc
 
-* Base image:  [madajaju/node_plantuml](image-madajaju/node_plantuml)
+* Base image:  [jekyll/jekyll](image-jekyll/jekyll)
 
 * Parent Package: [edgemere](package--edgemere)
 

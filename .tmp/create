@@ -5,17 +5,19 @@ const YAML = require('yamljs');
 const fs = require('fs');
 global.ailtire = { config: require('C:\\Users\\dwpulsip\\IdeaProjects\\edgemere\\bin\\lib/../../.ailtire.js') };
 program.description('create entity')
-	.option('--name <string>', 'name of the device')
-	.option('--file <YAML>', 'file with the definition');
+	.option('--name <string>', 'Name of the cloud')
+	.option('--file <YAML>', 'file with the definition')
+	.option('--type <string>', 'Type of cloud');
 program.parse(process.argv);
 let url = global.ailtire.config.host;
 let args = {};
-let params = '/aggregateddevice/create?';
+let params = '/cloud/create?';
 params += 'mode=json';
 let options = program.opts();
 
 if(options['name']) { args['name'] = options['name']; }
 if(options['file']) { args['file'] = YAML.load(options['file']); }
+if(options['type']) { args['type'] = options['type']; }
 
         console.log("URL:", url);
         console.log("Args:", args);

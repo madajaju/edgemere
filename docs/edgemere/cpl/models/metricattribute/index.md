@@ -28,23 +28,14 @@ No associations
 
 
 ## Methods
-
 * [consume() - Consume attribute metric to the current value](#action-consume)
-
 * [copy() - Copy Metric](#action-copy)
-
 * [lessThanEq() - Test less than or equal to the value passed in](#action-lessThanEq)
-
 * [minus() - Add attribute metric to the current value](#action-minus)
-
 * [plus() - Add attribute metric to the current value](#action-plus)
-
 * [valueToString() - Change to string Metric Consumeable](#action-valueToString)
-
 * [factory() - Create a metric based on the metrictype table](#action-factory)
-
 * [greaterThanEq() - Test greater than or equal to the value passed in](#action-greaterThanEq)
-
 * [set() - Add value to a metric](#action-set)
 
 

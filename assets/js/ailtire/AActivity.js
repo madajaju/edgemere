@@ -202,7 +202,8 @@ export default class AActivity {
             {field: 'name', size: "20%", resizeable: true, label: "Name", sortable: true},
             {field: 'value', size: "80%", resizeable: true, label: "Value", sortable: true},
         ];
-        w2ui['objlist'].columns = cols;
+        w2ui['objdetail'].clear();
+        w2ui['objdetail'].columns = cols;
         let i = 0;
         records.push({recid: i++, name: 'name', value: result.object.name, detail: result.object.name});
         records.push({
@@ -245,32 +246,11 @@ export default class AActivity {
             records.push({recid: i++, name: "Next", value: aname, detail: details.join('|')});
         }
 
-        w2ui['objlist'].records = records;
+        w2ui['objdetail'].records = records;
         // Clear the detail list
-        w2ui['objdetail'].clear();
 
-        w2ui['objlist'].onClick = function (event) {
-            let record = this.get(event.recid);
-            w2ui['objdetail'].header = `${record.name} Details`;
-            w2ui['objdetail'].show.columnHeaders = true;
-            w2ui['objdetail'].clear();
-            let drecords = [];
-            let k = 0;
-            let values = record.detail.split('|');
-            for (let i in values) {
-                let [name, value] = values[i].split('^');
-                if (!value) {
-                    value = name;
-                    name = record.name;
-                }
-                k++;
-                drecords.push({recid: k, name: name, value: value});
-            }
-            w2ui['objdetail'].add(drecords);
-            window.graph.selectNodeByID(event.recid);
-        }
         ASelectedHUD.update('Activity', records);
-        w2ui['objlist'].refresh();
+        w2ui['objdetail'].refresh();
     }
 
     static viewDeep3D(obj) {

@@ -39,6 +39,10 @@ ManageEnvironment --> UpdateEnvironment
 
 
 
+usecase "Control Virtual Infrastructure" as ControlVirtualInfrastructure #lightyellow
+
+ManageEnvironment <-- ControlVirtualInfrastructure : extends
+
 
 
 

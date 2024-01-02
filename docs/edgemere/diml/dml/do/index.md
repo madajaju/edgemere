@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Data Orchestrator
 permalink: package--edgemere-diml-dml-do
 parent: Package Data Management Layer

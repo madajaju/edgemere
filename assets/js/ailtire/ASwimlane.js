@@ -10,7 +10,7 @@ export default class ASwimlane {
         fontSize: 16,
         height: 200,
         width: 1000,
-        depth: 200,
+        depth: 100,
     }
 
     static calculateBox(node) {

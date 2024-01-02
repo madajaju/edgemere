@@ -18,6 +18,10 @@ Manage Data Adaptors is the description
 
 
 
+## Extends Use Cases
+
+* [Provide Business Information](usecase-ProvideBusinessInformation)
+
 
 
 

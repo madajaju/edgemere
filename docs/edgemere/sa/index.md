@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Security Aspect
 permalink: package--edgemere-sa
 parent: Package edgemere

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Data Flow
 permalink: package--edgemere-diml-ddf-df
 parent: Package Data Definition Framework

@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Application Management Layer
 permalink: package--edgemere-aml
 parent: Package edgemere

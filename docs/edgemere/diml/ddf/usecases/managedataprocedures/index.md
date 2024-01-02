@@ -12,11 +12,15 @@ Manage Data Procedures is the description
 ## Actors
 
 * [DataEngineer](actor-dataengineer)
-* [Chief Data Officer](actor-cdo)
+* [Chief Data Officer](actor-chiefdataofficer)
 
 
 
 
+
+## Extends Use Cases
+
+* [Provide Business Information](usecase-ProvideBusinessInformation)
 
 
 

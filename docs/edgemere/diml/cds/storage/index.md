@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Storage Services
 permalink: package--edgemere-diml-cds-storage
 parent: Package Common Data Service

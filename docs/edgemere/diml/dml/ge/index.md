@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Governance Engine
 permalink: package--edgemere-diml-dml-ge
 parent: Package Data Management Layer

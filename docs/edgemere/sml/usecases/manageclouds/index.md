@@ -17,6 +17,10 @@ Manage Clouds is the description
 
 
 
+## Extends Use Cases
+
+* [Coordinate Services](usecase-CoordinateServices)
+
 
 
 

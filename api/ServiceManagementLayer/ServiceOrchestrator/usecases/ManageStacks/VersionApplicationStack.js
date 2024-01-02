@@ -3,7 +3,7 @@ module.exports = {
     description: 'Version Application Stack is the description',
     method: "data/create",
     actors: {
-        'Actor': 'uses',
+        'ApplicationDeveloper': 'uses',
     },
     steps: [
         { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},

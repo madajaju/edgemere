@@ -17,6 +17,10 @@ Manage Infrastructure is the description
 
 
 
+## Extends Use Cases
+
+* [ManagePhysicalInfrastructure](usecase-ManagePhysicalInfrastructure)
+
 
 
 

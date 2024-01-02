@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Blue Print Management
 permalink: package--edgemere-diml-ddf-bpm
 parent: Package Data Definition Framework

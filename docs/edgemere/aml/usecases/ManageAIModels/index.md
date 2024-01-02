@@ -20,6 +20,10 @@ Data Scientist manages AI models and ties them to and application and data set. 
 
 
 
+## Extends Use Cases
+
+* [OrganizeSolutions](usecase-OrganizeSolutions)
+
 
 
 

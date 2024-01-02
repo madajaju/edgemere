@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Environment Management
 permalink: package--edgemere-aml-ds-em
 parent: Package Developer Services

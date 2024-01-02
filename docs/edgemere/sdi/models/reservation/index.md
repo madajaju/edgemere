@@ -52,11 +52,8 @@ The following diagram is the state net for this class.
 
 
 ## Methods
-
 * [confirm() - Confirm the Reservation](#action-confirm)
-
 * [create() - Create the Reservation](#action-create)
-
 * [free() - Confirm the Reservation](#action-free)
 
 

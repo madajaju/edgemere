@@ -1,6 +1,6 @@
 @startuml
 
-actor "Actor"
+actor "DevOpsEngineer"
 
 
 entity EventBus
@@ -15,7 +15,7 @@ box Software Defined Infrastructure #cccc88
     end box
 
 
-"Actor" -> aml: Build Application
+"DevOpsEngineer" -> aml: Build Application
 
     aml -> "storageresource": list (name: hello,file: ./templates/world.yml)
 

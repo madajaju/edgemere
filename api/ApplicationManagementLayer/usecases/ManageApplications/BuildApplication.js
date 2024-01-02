@@ -3,7 +3,7 @@ module.exports = {
     description: 'Build Application is the description',
     method: "data/create",
     actors: {
-        'Actor': 'uses',
+        'DevOpsEngineer': 'uses',
     },
     steps: [
         { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},

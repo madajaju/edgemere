@@ -1,0 +1,20 @@
+@startuml
+
+
+usecase "Govern Identities" as GovernIdentities #yellow
+
+Actor "Security Operator" as SecurityOperator
+
+SecurityOperator --> GovernIdentities
+
+
+
+
+
+
+
+
+
+
+
+@enduml

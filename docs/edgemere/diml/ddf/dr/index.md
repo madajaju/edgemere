@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Data Repository
 permalink: package--edgemere-diml-ddf-dr
 parent: Package Data Definition Framework

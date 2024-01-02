@@ -38,7 +38,6 @@ Each Cloud has a specific type of cloud it is tied to. The type of cloud helps w
 
 
 ## Methods
-
 * [create() - Create a Cloud Type](#action-create)
 
 

@@ -67,15 +67,10 @@ The following diagram is the state net for this class.
 
 
 ## Methods
-
 * [confirm() - Description of the method](#action-confirm)
-
 * [evaluated() - The Request is evaluated](#action-evaluated)
-
 * [failed() - Request Failed](#action-failed)
-
 * [fulfill() - Fulfill the request, the state of the request is moved to needed](#action-fulfill)
-
 * [satisfied() - The Request is staisfied](#action-satisfied)
 
 

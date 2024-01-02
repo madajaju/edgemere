@@ -17,6 +17,10 @@ Manage Resources includes creating resources, listing and planning for resources
 
 
 
+## Extends Use Cases
+
+* [Control Virtual Infrastructure](usecase-ControlVirtualInfrastructure)
+
 
 
 

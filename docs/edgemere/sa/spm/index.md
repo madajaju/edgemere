@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Security Profile Manager
 permalink: package--edgemere-sa-spm
 parent: Package Security Aspect

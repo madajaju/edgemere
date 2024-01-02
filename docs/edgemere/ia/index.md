@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Package Identity Aspect
 permalink: package--edgemere-ia
 parent: Package edgemere

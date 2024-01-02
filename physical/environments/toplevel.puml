@@ -1,0 +1,22 @@
+@startuml
+
+frame local {
+    database "shared"
+    node "example1" <<small>> {
+        database "/dev/sda"
+        folder "/mnt/shared" as e1s
+    }
+    node "example2" <<small>> {
+        database "/dev/sda" as s2
+        folder "/mnt/shared" as e2s
+    }
+    node "example3" <<large>> {
+        database "/dev/sda" as s3
+        folder "/mnt/shared" as e3s
+    }
+
+   shared .. e1s
+   shared .. e2s
+   shared .. e3s
+}
+@enduml

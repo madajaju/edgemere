@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Environment test
 permalink: environment-test
 parent: Environments

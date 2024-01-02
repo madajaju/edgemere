@@ -17,6 +17,10 @@ IT Operations manages data centers by creating, deleting, enabling and disabling
 
 
 
+## Extends Use Cases
+
+* [Manage Physical Infrastructure](usecase-ManagePhysicalInfrastructure)
+
 
 
 

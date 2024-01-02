@@ -12,5 +12,11 @@ rectangle "Security Profile Manager" as spm #cc8888 {
 
 }
 
+rectangle "edgemere" as edgemere #ccaaff {
+        usecase "Secure Assets" as SecureAssets
+    SecurityEngineer --> SecureAssets
+
+}
+
 
 @enduml

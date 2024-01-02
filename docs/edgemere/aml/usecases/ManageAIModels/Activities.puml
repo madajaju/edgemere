@@ -39,6 +39,10 @@ ManageAIModels --> UpdateAIModel
 
 
 
+usecase "OrganizeSolutions" as OrganizeSolutions #lightyellow
+
+ManageAIModels <-- OrganizeSolutions : extends
+
 
 
 
