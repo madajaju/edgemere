@@ -1,0 +1,57 @@
+@startuml
+
+' Define Classes
+class Asset {
+  - id: int
+  - name: string
+  - type: string
+  - status: string
+  + startMonitoring()
+  + stopMonitoring()
+  + control()
+}
+
+class Sensor {
+  - id: int
+  - type: string
+  - reading: float
+  + getReading()
+}
+
+class CommunicationPathway {
+  - id: int
+  - type: string
+  - protocol: string
+  + transmitData(data: string)
+}
+
+class PLC {
+  - id: int
+  - name: string
+  - type: string
+  + communicateWithAsset()
+}
+
+class Location {
+- name: string
+- lat: number
+- long: number
+- alt: number
+- address: string
+- notes: string
+}
+
+Asset "1" *--> "0..n" Sensor
+Asset "1" *-> "0..n" CommunicationPathway
+Location "1" *-> "n" Asset
+
+CommunicationPathway <|-- PLC
+
+class Device {
+
+}
+
+CommunicationPathway . Device
+
+
+@enduml
