@@ -15,7 +15,7 @@ nav_order: 3
   * [Toogle Switch](usecase-ChangePhysicalWorld#toggleSwitch)
 * [Commission Physical Asset](usecase-CommissionPhysicalAsset)
 * [Connect Physical Asset to a Device](usecase-ConnectPhysicalAssettoaDevice)
-  * [Asset-Digital Device Connectivity](usecase-ConnectPhysicalAssettoaDevice#Asset-DigitalDeviceConnectivity)
+  * [Asset Digital Device Connectivity](usecase-ConnectPhysicalAssettoaDevice#AssetDigitalDeviceConnectivity)
 * [Control Virtual Infrastructure](usecase-ControlVirtualInfrastructure)
 * [Coordinate Services](usecase-CoordinateServices)
 * [Decommission Physical Asset](usecase-DecommissionPhysicalAsset)

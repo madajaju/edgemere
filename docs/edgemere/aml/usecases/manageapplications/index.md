@@ -7,7 +7,7 @@ parent: UseCases
 
 DevOps Engineers and Application Developers need the ability to manage applications across multiple environments, clouds, and types of infrastructure.
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 

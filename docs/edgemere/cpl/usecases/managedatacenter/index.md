@@ -7,7 +7,7 @@ parent: UseCases
 
 IT Operations manages data centers by creating, deleting, enabling and disabling devicesand aggregated devices
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 

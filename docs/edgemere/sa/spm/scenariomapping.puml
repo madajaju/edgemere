@@ -149,10 +149,10 @@ edgemeresaspmsecurityprofile -- edgemeresaspmsecurityprofiletest
 
 
         rectangle "Connect Physical Asset to a Device" as ConnectPhysicalAssettoaDevice #ffffaa {
-            ("Asset-Digital Device Connectivity")/ as ActorConnectPhysicalAssettoaDeviceAsset-DigitalDeviceConnectivity
+            ("Asset Digital Device Connectivity")/ as ActorConnectPhysicalAssettoaDeviceAssetDigitalDeviceConnectivity
         }
     
-    edgemeresaspmdatacreate <-- ActorConnectPhysicalAssettoaDeviceAsset-DigitalDeviceConnectivity
+    edgemeresaspmdatacreate <-- ActorConnectPhysicalAssettoaDeviceAssetDigitalDeviceConnectivity
     
 
 

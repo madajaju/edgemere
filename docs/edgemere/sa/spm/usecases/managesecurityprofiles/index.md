@@ -7,7 +7,7 @@ parent: UseCases
 
 Manage Security Profiles allows the security engineer to create, updated, and destroy security profiles in the system. Security profiles are attached to identity elements in the system and enforce security policies contained in the profiles.
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 

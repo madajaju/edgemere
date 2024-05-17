@@ -97,10 +97,10 @@ hexagon "datareference.provisioned" as datareferenceprovisioned
 
 
         rectangle "Connect Physical Asset to a Device" as ConnectPhysicalAssettoaDevice #ffffaa {
-            ("Asset-Digital Device Connectivity")/ as ActorConnectPhysicalAssettoaDeviceAsset-DigitalDeviceConnectivity
+            ("Asset Digital Device Connectivity")/ as ActorConnectPhysicalAssettoaDeviceAssetDigitalDeviceConnectivity
         }
     
-    edgemeresmlsodatacreate <-- ActorConnectPhysicalAssettoaDeviceAsset-DigitalDeviceConnectivity
+    edgemeresmlsodatacreate <-- ActorConnectPhysicalAssettoaDeviceAssetDigitalDeviceConnectivity
     
 
 

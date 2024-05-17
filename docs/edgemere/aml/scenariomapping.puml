@@ -340,10 +340,10 @@ edgemereamlworkload -- edgemereamlworkloadupdate
 
 
         rectangle "Connect Physical Asset to a Device" as ConnectPhysicalAssettoaDevice #ffffaa {
-            ("Asset-Digital Device Connectivity")/ as ActorConnectPhysicalAssettoaDeviceAsset-DigitalDeviceConnectivity
+            ("Asset Digital Device Connectivity")/ as ActorConnectPhysicalAssettoaDeviceAssetDigitalDeviceConnectivity
         }
     
-    edgemereamldatacreate <-- ActorConnectPhysicalAssettoaDeviceAsset-DigitalDeviceConnectivity
+    edgemereamldatacreate <-- ActorConnectPhysicalAssettoaDeviceAssetDigitalDeviceConnectivity
     
 
 

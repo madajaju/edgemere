@@ -7,7 +7,7 @@ parent: UseCases
 
 Manage Data Pipeline is the description
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 

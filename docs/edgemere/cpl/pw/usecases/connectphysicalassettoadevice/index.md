@@ -7,7 +7,7 @@ parent: UseCases
 
 Connect Physical Asset to a Device is the description
 
-![Activities Diagram](./activities.png)
+![Activities Diagram](./Activities.png)
 
 ## Actors
 
@@ -25,15 +25,15 @@ Connect Physical Asset to a Device is the description
 
 ## Detail Scenarios
 
-* [Asset-DigitalDeviceConnectivity](#scenario-Asset-DigitalDeviceConnectivity)
+* [AssetDigitalDeviceConnectivity](#scenario-AssetDigitalDeviceConnectivity)
 
 
 
-### Scenario Asset-Digital Device Connectivity
+### Scenario Asset Digital Device Connectivity
 
-Asset-Digital Device Connectivity is the description
+Asset Digital Device Connectivity is the description
 
-![Scenario Asset-DigitalDeviceConnectivity](./Asset-DigitalDeviceConnectivity.png)
+![Scenario AssetDigitalDeviceConnectivity](./AssetDigitalDeviceConnectivity.png)
 #### Criteria
 
 * Given - A physical asset needs to be connected to a digital device

@@ -11,13 +11,13 @@ Actor --> ConnectPhysicalAssettoaDevice
 
 
 
-json Asset-DigitalDeviceConnectivity #lightyellow {
+json AssetDigitalDeviceConnectivity #lightyellow {
     "Given": "A physical asset needs to be connected to a digital device",
     "When": "The user attempts to connect the physical asset to the digital device",
     "Then": "The physical asset should show as connected on the digital device"
 }
 
-ConnectPhysicalAssettoaDevice <|-- Asset-DigitalDeviceConnectivity
+ConnectPhysicalAssettoaDevice <|-- AssetDigitalDeviceConnectivity
 
 
 
