@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Manage Data Instances" as ManageDataInstances #yellow
 
 Actor "Data Scientist" as DataScientist
@@ -13,17 +15,29 @@ ApplicationDeveloper --> ManageDataInstances
 
 
 
-usecase "CreateDataInstance" as CreateDataInstance #lightgrey
+json CreateDataInstance #lightyellow {
+    "Given": "An Application Developer wants to create a new data instance",
+    "When": "The Application Developer uses the &#39;datainstance/create&#39; method",
+    "Then": "A new data instance should be created and returned"
+}
 
-ManageDataInstances --> CreateDataInstance
+ManageDataInstances <|-- CreateDataInstance
 
-usecase "FindDataInstance" as FindDataInstance #lightgrey
+json FindDataInstance #lightyellow {
+    "Given": "DataEngineer has access to datainstance/find method",
+    "When": "DataEngineer uses the method to find a specific data instance",
+    "Then": "The specific data instance is retrieved and displayed to the DataEngineer"
+}
 
-ManageDataInstances --> FindDataInstance
+ManageDataInstances <|-- FindDataInstance
 
-usecase "RemoveDataInstance" as RemoveDataInstance #lightgrey
+json RemoveDataInstance #lightyellow {
+    "Given": "A DataEngineer has a specific data instance to remove",
+    "When": "The DataEngineer invokes the &#39;datainstance/destroy&#39; method",
+    "Then": "The specified data instance is removed from the system"
+}
 
-ManageDataInstances --> RemoveDataInstance
+ManageDataInstances <|-- RemoveDataInstance
 
 
 

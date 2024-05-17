@@ -2,11 +2,11 @@
   interface CLI
   interface Web
   interface WebSocket
-package "Data Flow" #lightblue {
+node "Data Flow" #lightblue {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {
-    component " edgemere diml ddf df" as binName
+    card " edgemere diml ddf df" as binName
   }
   binName --> REST
 
@@ -14,11 +14,11 @@ package "Data Flow" #lightblue {
       file "node server.js\n" as diml_ddf_df_container
       REST --> diml_ddf_df_container
 
-  
+
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
+
   }
   folder images #ffffff {
     collections "diml_ddf_df" as diml_ddf_dfimage
@@ -26,10 +26,10 @@ package "Data Flow" #lightblue {
     diml_ddf_dfimage <|-- ailtireswarm
     diml_ddf_df_container --> diml_ddf_dfimage
 
-  
+
       artifact "diml_ddf_df_web" as diml_ddf_df_web
       web_container --> diml_ddf_df_web
-    
+
   }
 }
 CLI " edgemere diml ddf df" -- binName

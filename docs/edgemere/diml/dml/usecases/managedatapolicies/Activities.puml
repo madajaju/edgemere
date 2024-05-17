@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Manage Data Policies" as ManageDataPolicies #yellow
 
 Actor "Chief Data Officer" as ChiefDataOfficer

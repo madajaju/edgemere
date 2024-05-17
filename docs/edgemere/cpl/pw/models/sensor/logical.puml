@@ -1,0 +1,25 @@
+@startuml
+
+class "Sensor" as Model {
+ string name
+ string reading
+
+ getReading()
+ 
+}
+
+rectangle "Asset" as Asset #lightblue {
+}
+
+Model o--> "1" Asset : asset
+
+
+
+
+    rectangle "PhysicalAsset" as PhysicalAsset #lightgreen {
+    }
+    
+        PhysicalAsset   *--> "n" Model : "sensor"
+    
+
+@enduml

@@ -1,10 +1,1 @@
-module.exports = {
-    name: 'Update Application',
-    description: 'Update Application is the description',
-    method: "application/update",
-    actors: {
-        'Application Developer': 'uses',
-        'DevOps Engineer': 'uses',
-    },
-};
-
+module.exports = {"name":"Update Application","description":"Update Application is the description","method":"application/update","actors":{"Application Developer":"uses","DevOps Engineer":"uses"},"uid":"ManageApplications.UpdateApplication","given":"an Application Developer or DevOps Engineer uses the application/update method","when":"they want to update the application","then":"the application should be updated properly"};

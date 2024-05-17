@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Manage Resources" as ManageResources #yellow
 
 Actor "IT Operations" as ITOperations
@@ -9,17 +11,29 @@ ITOperations --> ManageResources
 
 
 
-usecase "GetResources" as GetResources #lightgrey
+json GetResources #lightyellow {
+    "Given": "A cloud with set of resources and specific requirements are provided",
+    "When": "A request for resources based on specific requirements is made",
+    "Then": "The required resources are returned"
+}
 
-ManageResources --> GetResources
+ManageResources <|-- GetResources
 
-usecase "ListResources" as ListResources #lightgrey
+json ListResources #lightyellow {
+    "Given": "IT Operations has access to list resources and their utilization numbers",
+    "When": "a device is created with specific parameters and datacenter is created and disabled",
+    "Then": "The IT operations should be able to list these resources and their utilization numbers"
+}
 
-ManageResources --> ListResources
+ManageResources <|-- ListResources
 
-usecase "ReleaseResources" as ReleaseResources #lightgrey
+json ReleaseResources #lightyellow {
+    "Given": "IT operations has requested resources using a specific name",
+    "When": "The resources are no longer needed",
+    "Then": "The resources allocated under the specific name are released"
+}
 
-ManageResources --> ReleaseResources
+ManageResources <|-- ReleaseResources
 
 
 

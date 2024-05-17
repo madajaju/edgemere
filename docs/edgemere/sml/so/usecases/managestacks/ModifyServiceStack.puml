@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "StackDeveloper"
 
 
@@ -14,17 +15,24 @@ box Software Defined Infrastructure #cccc88
             participant storageresource
     end box
 
+group Given [A stack developer uses the &#39;Modify Service Stack&#39;]
 
-"StackDeveloper" -> so: Modify Service Stack
-
-    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
-
-    "storageresource" --/ EventBus: data.list
+"StackDeveloper" --/ so: The developer selects data by name &#39;hello&#39; from &#39;./templates/world.yml&#39;
+"so" -> so: Modify Service Stack
 
     so -> "storageresource": list (name: hello,file: ./templates/world.yml)
 
     "storageresource" --/ EventBus: data.list
 
+    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
 
+    "storageresource" --/ EventBus: data.list
+
+
+
+"StackDeveloper" /-- so: The system should list the data from &#39;./templates/world.yml&#39;
+
+
+end
 
 @enduml

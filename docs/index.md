@@ -58,6 +58,7 @@ identifying the actors/users of the system and building out how the actor uses t
 goals are? and How they use the system? This list is not an exhaustive list of all actors of the system but are the
 primary actors.
 
+* [Actor](actor-actor) - Long description
 * [ApplicationDeveloper](actor-applicationdeveloper) - The Application Developer work in coordination with DevOps to manage services, applications and workloads through the development pipeline.
 * [ChiefDataOfficer](actor-chiefdataofficer) - Long description
 * [ChiefDataOfficier](actor-chiefdataofficier) - Long description

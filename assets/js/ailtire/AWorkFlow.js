@@ -1,11 +1,37 @@
-import {AText, AActivity, ASwimlane, AFlowCondition, AScenario, AUsecase} from './index.js';
+/*
+ * Copyright 2023 Intel Corporation.
+ * This software and the related documents are Intel copyrighted materials, and your use of them is governed by
+ * the express license under which they were provided to you (License). Unless the License provides otherwise,
+ * you may not use, modify, copy, publish, distribute, disclose or transmit this software or the related documents
+ * without  Intel's prior written permission. This software and the related documents are provided as is, with no
+ * express or implied warranties, other than those that are expressly stated in the License.
+ *
+ */
+
+import {AMainWindow, AText, AActivity, AActivityRun, ASwimlane, AFlowCondition, AScenario, AUsecase, AObject} from './index.js';
+
+const scolor = {
+    started: "#00ffff",
+    created: "#00ffff",
+    inprogress: "#00aaff",
+    blocked: "#ffbb44",
+    completed: "#aaffaa",
+    failed: "#ffaaaa",
+    error: "#ffaaaa",
+    enabled: "#00ff00",
+    disable: "#aaaaaa",
+    rejected: "#ff0000",
+    accepted: "#00aaaa",
+    update: "#00aaaa",
+    needed: "#ffbb44",
+    selected: "#00ff00",
+    evaluated: "#ffff00",
+};
 
 export default class AWorkFlow {
-
     constructor(config) {
         this.config = config;
     }
-
     static default = {
         fontSize: 15,
         height: 40,
@@ -107,14 +133,33 @@ export default class AWorkFlow {
         });
     }
 
-    static handle(results, config) {
-        if (!config) {
+    static handle(results, event, config) {
+        if (!config || !config.mode) {
             config = {mode: "new"}
         }
+        // The name is the same as the id on workflows.
+        // It needs to be set.
+        results.id = results.name;
         AWorkFlow.viewDeep3D(results, config);
         AWorkFlow.showDetail(results);
+        AMainWindow.currentView = "workflow";
+        AWorkFlow._simulationForm(results);
+
         window.graph.toolbar.setToolBar([
             {
+                type: 'button', id: 'runs', text: 'Show Run', img: 'w2ui-icon-zoom',
+                onClick: (event) => {
+                    window.graph.graph.cameraPosition({
+                            x: 1000,
+                            y: 0,
+                            z: -500,
+                        }, // new position
+                        { x: 0, y:0, z:-500 },
+                        1000  // ms transition duration.
+                    );
+                    window.graph.graph.zoomToFit(1000);
+                }
+            },            {
                 type: 'button', id: 'fit', text: 'Show All', img: 'w2ui-icon-zoom',
                 onClick: (event) => {
                     window.graph.graph.zoomToFit(1000);
@@ -127,12 +172,164 @@ export default class AWorkFlow {
             }
         ]);
     }
+    static handleEvent(event, workflow,message) {
+            let [eventB, eventS] = event.split('.');
+            let color = scolor[eventS];
+            if(eventB === "workflow") {
+                w2ui['WorkflowSimulation'].header = workflow.name + " " + eventS;
+                window.graph.setNodeAndFocus(workflow.name, {color: color});
+            } else if(eventB === "activity") {
+                AActivityRun.handleEvent(eventS, workflow, message);
+            }
+            /*if (eventB === "scenario") {
+                let scenario = workflow;
+                let selectedNode = window.graph.getSelectedNode();
+                if (eventS === "started") {
+                    AScenario.viewDeep3D(scenario, "add", selectedNode);
+                } else {
+                    window.graph.setNode(scenario.id, {color: scolor[eventS]});
+                }
+            } else if (eventB === "step") {
+                let scenario = workflow;
+                window.graph.setNode(scenario.id + '-' + scenario.currentstep, {color: scolor[eventS]});
+            } else {
+                let object = workflow;
+                if(typeof object === 'object') {
+                    let selectedNode = window.graph.getSelectedNode();
+                    AObject.addObject(object, selectedNode);
+                }
+            }
+            */
+
+            w2ui['WorkflowSimulation'].refresh();
+        }
+        static _simulationForm(results) {
+            // Scenario List for simulation.
+            let records = [];
+            if (!w2ui['WorkflowSimulation']) {
+                $('#simulationWindow').w2grid({
+                    name: 'WorkflowSimulation',
+                    show: {header: false, columnHeaders: false, toolbar: true},
+                    columns: [
+                        {
+                            field: 'type',
+                            caption: 'Type',
+                            size: '2%',
+                            attr: "align=right",
+                            sortable: true
+                        },
+                        {
+                            field: 'name',
+                            caption: 'Activity',
+                            size: '20%',
+                            attr: "align=right",
+                            sortable: true
+                        },
+                        {
+                            field: 'id',
+                            caption: 'ID',
+                            size: '8%',
+                            attr: "align=left",
+                        },
+                        {
+                            field: 'inputs',
+                            caption: 'Inputs',
+                            size: '35%',
+                            attr: "align=left",
+                        },
+                        {
+                            field: 'outputs',
+                            caption: 'Outputs',
+                            size: '35%',
+                            attr: "align=left",
+                        },
+                    ],
+                    onClick: function (event) {
+                        let workflow = w2ui['WorkflowSimulation'].workflow;
+                        let instance = w2ui['WorkflowSimulation'].workflowInstance;
+                        // Select the Activity if the Activity Run
+                        if(event.column === 1) {
+                            let records = w2ui['WorkflowSimulation'].records;
+                            for(let i in records) {
+                                let record = records[i];
+                                if(record.recid === event.recid) {
+                                    window.graph.selectNodeByID(record.name.replaceAll(/\s/g, ''));
+                                    break;
+                                }
+                            }
+                        } else {
+                            AActivityRun.selectNode(event.recid);
+                        }
+                        $.ajax({
+                            url: `workflow/instance?id=${workflow.id}`,
+                            success: (result) => {
+                                // Popup with the stdout and stderr
+                                if(!instance) { // Get the last one run
+                                    instance = result.length-1;
+                                }
+                                let text = result[instance].activities[event.recid];
+                                AWorkFlow.popup(text);
+                            }
+                        })
+                    },
+                    toolbar: {
+                        items: [
+                            {id: 'launch', type: 'button', caption: 'Launch Workflow', icon: 'w2ui-icon-plus'},
+                            {type: 'break'},
+                            {
+                                id: 'workflowname',
+                                type: 'html',
+                                html: '<span style="background-color: #004488; color: white;padding:5px;">Not Selected</span>'
+                            }
+                        ],
+                        onClick: function (event) {
+                            if (event.target === 'launch') {
+                                let workflow = w2ui['WorkflowSimulation'].workflow;
+                                // If there aren't any inputs then launch it.
+                                if(!workflow.activities.Init.inputs) {
+                                    $.ajax({
+                                        url: `workflow/launch?id=${workflow.id}`,
+                                        success: function (result) {
+                                            w2ui['WorkflowSimulation'].workflowInstance = result.id;
+                                            // Clear out the WorkflowSimulation
+                                            w2ui['WorkflowSimulation'].clear();
+                                            // Clear out the previous run by removing the nodes from the graph
+                                            AActivityRun.clear();
+                                        }
+                                    });
+                                } else {
+                                    // create a simple dialog with the inputs and the onClick should call the scenario
+                                    // With the parametersEdit
+                                    AWorkFlow.inputPopup(workflow, workflow.activities.Init);
+                                    // Clear out the WorkflowSimulation
+                                    w2ui['WorkflowSimulation'].clear();
+                                    AActivityRun.clear();
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+            let i = 0;
+            for (let aname in results.activities) {
+                i++;
+                let parameters = results.activities[aname].inputs;
+                let params = [];
+                for (let j in parameters) {
+                    params.push(`${j}: ${parameters[j].type}`);
+                }
+                records.push({recid: aname.replaceAll(/\s/g,''), name: aname, id: "", type: results.activities[aname].type , inputs: params.join(',')});
+            }
+            w2ui['WorkflowSimulation'].workflow = results;
+            w2ui['WorkflowSimulation'].records = records;
+            w2ui['WorkflowSimulation_toolbar'].set('workflowname', {html: `<span style="background-color: #2391dd; padding:5px;">${results.name}</span>`});
+            w2ui['WorkflowSimulation'].refresh();
+    }
 
     static handleList(result) {
         AWorkFlow.viewList3D(result, 'new');
         AWorkFlow.showListDetail(result);
     }
-
     static viewList3D(result) {
         let data = {nodes: {}, links: []};
 
@@ -228,7 +425,10 @@ export default class AWorkFlow {
         w2ui['objlist'].columns = cols;
         let i = 0;
         for (let wname in result) {
-            let details = `name^${result[wname].name}|description^${result[wname].description}|activities^${Object.keys(result[wname].activities).length}`;
+            let details = `name^${result[wname].name}|description^${result[wname].description}`;
+            if(result[wname].activities) {
+                details += `|activities^${Object.keys(result[wname].activities).length}`;
+            }
             records.push({recid: wname, name: result[wname].pkg, value: wname, detail: details});
         }
 
@@ -307,7 +507,7 @@ export default class AWorkFlow {
             data.nodes[aid] = {
                 id: aid,
                 name: aname,
-                description: activity.description,
+                detail: activity.description,
                 view: AActivity.view3D,
                 object: activity,
                 rbox: {
@@ -400,12 +600,12 @@ export default class AWorkFlow {
             if(parent) {
                 data.nodes[sname].rbox = {
                     parent: parent.id,
-                    fx: 0,
+                    fx: -maxSize.w/2,
                     fy: yoffset,
                     fz: -600,
                 };
             } else {
-                data.nodes[sname].fx = 0;
+                data.nodes[sname].fx = -maxSize.w/2;
                 data.nodes[sname].fy = yoffset;
                 data.nodes[sname].fz = 0;
             }
@@ -452,6 +652,14 @@ export default class AWorkFlow {
             }
             yoffset -= maxSize.h + 10;
         }
+        window.graph.graph.cameraPosition({
+                x: -maxSize.w/2,
+                y: -maxSize.h/2,
+                z: 1000
+            }, // new position
+            { x: -maxSize.w/2, y: -maxSize.h/2, z: 0 },
+            1000  // ms transition duration.
+        );
         if (opts.mode === 'new') {
             window.graph.setData(data.nodes, data.links);
         } else {
@@ -465,7 +673,7 @@ export default class AWorkFlow {
                 let aid = idprefix + aname.replace(/\s/g, '');
                 if (activity.type === "scenario") {
                     $.ajax({
-                        url: `scenario/get?id=${activity.obj.uid}`,
+                        url: `scenario/get?id=${activity.obj.id}`,
                         success: (results) => {
                             AScenario.viewDeep3D(results, "add", data.nodes[aid]);
                         }
@@ -489,6 +697,124 @@ export default class AWorkFlow {
             window.graph.addData({}, links);
             window.graph.showLinks();
         }
+    }
+    static inputForm(workflow, activity) {
+        let fields = [];
+        let record = {};
+        let inputs = activity.inputs;
+        for(let name in inputs) {
+            let input = inputs[name];
+            let ivalue = inputs[name];
+            if(input.type === 'date') {
+                fields.push({
+                    field: name,
+                    type: 'date',
+                    required: input.required,
+                    html: {label: name}
+                });
+            }
+            else if(input.type === "boolean") {
+                fields.push({
+                    field: name,
+                    type: 'checkbox',
+                    required: input.required,
+                    html: {label: name}
+                });
+            }
+            else if(input.size) {
+                fields.push({
+                    field: name,
+                    type: 'textarea',
+                    required: input.required,
+                    html: {label: name, attr: `size="${input.size}" style="width:300px; height:${(input.size/80)*12}px"`}
+                });
+            } else {
+                fields.push({
+                    field: name,
+                    type: 'text',
+                    required: input.required,
+                    html: {label: name, attr: `size="50" style="width:300px"`}
+                });
+            }
+
+            if(typeof ivalue !== "object") {
+                record[name] = ivalue;
+            } else {
+                record[name] = "";
+            }
+        }
+        $().w2form({
+            name: 'WorkflowInput',
+            style: 'border: 0px; background-color: transparent;',
+            fields: fields,
+            actions: {
+                Save: {
+                    caption: "Launch", style: "background: #aaffaa",
+                    onClick(event) {
+                        w2popup.close();
+                        let parameters = w2ui['WorkflowInput'].record;
+                        let parameterArray = [];
+                        let data = {};
+                        /* for(let pname in parameters) {
+                            parameterArray.push(`${pname}=${parameters[pname]}`);
+                        }
+                        */
+                        for(let pname in parameters) {
+                            data[pname] = parameters[pname];
+                        }
+                        $.ajax({
+                            url: `workflow/launch?id=${workflow.id}`,
+                            type: "POST",
+                            data: JSON.stringify(data),
+                            contentType: "application/json",
+                            success: function (result) {
+                                window.graph.graph.cameraPosition({
+                                        x: 1500,
+                                        y: 0,
+                                        z: -500,
+                                    }, // new position
+                                    { x: 0, y:0, z:-500 },
+                                    3000  // ms transition duration.
+                                );
+                            }
+                        });
+                    }
+                },
+                custom: {
+                    caption: "Close", style: 'background: pink;',
+                    onClick(event) {
+                        w2popup.close();
+                    }
+                }
+            }
+        });
+        return w2ui['WorkflowInput'];
+    }
+    static inputPopup(workflow, activity) {
+        let myForm = AWorkFlow.inputForm(workflow, activity);
+
+        $().w2popup('open', {
+            title: 'Workflow Inputs',
+            body: '<div id="WorkflowPopup" style="width: 100%; height: 100%;"></div>',
+            style: 'padding: 15px 0px 0px 0px',
+            width: 700,
+            height: 700,
+            showMax: true,
+            onToggle: function (event) {
+                $(w2ui.editModelDialog.box).hide();
+                event.onComplete = function () {
+                    $(w2ui.workflowInput.box).show();
+                    w2ui.workflowInput.resize();
+                }
+            },
+            onOpen: function (event) {
+                event.onComplete = function () {
+                    // specifying an onOpen handler instead is equivalent to specifying an onBeforeOpen handler,
+                    // which would make this code execute too early and hence not deliver.
+                    $('#WorkflowPopup').w2render(myForm.name);
+                }
+            }
+        });
     }
 }
 

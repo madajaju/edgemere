@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "Data Engineer"
 
 
@@ -15,8 +16,10 @@ box Data Definition Framework #ffcc88
             participant datasource
     end box
 
+group Given [Data source &#39;myDataVolume1&#39; is registered in the system using adaptor &#39;filesystem1&#39;]
 
-"Data Engineer" -> dml: Deregister Data Source
+"Data Engineer" --/ dml: Data engineer uses &#39;datasource/list&#39; method to deregister &#39;myDataVolume1&#39;
+"dml" -> dml: Deregister Data Source
 
     dml -> "dataadaptor": create (name: filesystem1,file: ./templates/dataadaptor-filesystem.yaml)
 
@@ -27,5 +30,10 @@ box Data Definition Framework #ffcc88
     "datasource" --/ EventBus: datasource.create
 
 
+
+"Data Engineer" /-- dml: All BluePrints, DataFlows, and associated data become unavailable but metadata remains
+
+
+end
 
 @enduml

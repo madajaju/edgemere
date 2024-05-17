@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Create Application',
-    description: 'Create Application is the description',
-    method: "application/create",
-    actors: {
-        'Application Developer': 'uses',
-    },
-};
-
+module.exports = {"name":"Create Application","description":"Create Application is the description","method":"application/create","actors":{"Application Developer":"uses"},"uid":"ManageApplications.CreateApplication","given":"Application Developer wants to create a new application","when":"Application Developer uses 'application/create' method","then":"New application is created and managed under 'ManageApplications.CreateApplication'"};

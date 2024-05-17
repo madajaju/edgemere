@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "DataEngineer"
 
 
@@ -15,8 +16,10 @@ box Data Definition Framework #ffcc88
             participant datasource
     end box
 
+group Given [A system to monitor data sources]
 
-"DataEngineer" -> dml: Register Data Source
+"DataEngineer" --/ dml: A data source is registered to the system
+"dml" -> dml: Register Data Source
 
     dml -> "dataadaptor": create (name: filesystem1,file: ./templates/dataadaptor-filesystem.yaml)
 
@@ -39,5 +42,10 @@ box Data Definition Framework #ffcc88
     "datasource" --/ EventBus: datasource.create
 
 
+
+"DataEngineer" /-- dml: Data generated at the data source can now be processed by DataBluePrints
+
+
+end
 
 @enduml

@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+node "Distributed Information Management Layer" #ffcc88 {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    card " edgemere diml" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as diml_container
+      REST --> diml_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "diml" as dimlimage
+    artifact "ailtire:swarm" as ailtireswarm
+    dimlimage <|-- ailtireswarm
+    diml_container --> dimlimage
+
+  
+      artifact "diml_web" as diml_web
+      web_container --> diml_web
+    
+  }
+}
+CLI " edgemere diml" -- binName
+Web "/edgemere/diml" - REST
+WebSocket ".edgemere.diml" -- socket
+
+@enduml

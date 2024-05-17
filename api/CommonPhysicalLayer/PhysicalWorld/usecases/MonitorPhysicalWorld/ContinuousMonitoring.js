@@ -1,13 +1,1 @@
-module.exports = {
-    name: 'Continuous Monitoring',
-    description: 'Continuous Monitoring is the description',
-    method: "data/create",
-    actors: {
-        'Actor': 'uses',
-    },
-    steps: [
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-    ]
-};
-
+module.exports = {"name":"Continuous Monitoring","description":"Continuous Monitoring is the description","method":"data/create","actors":{"Actor":"uses"},"steps":[{"action":"data/list","parameters":{"name":"hello","file":"./templates/world.yml"}},{"action":"data/list","parameters":{"name":"hello","file":"./templates/world.yml"}}],"uid":"MonitorPhysicalWorld.ContinuousMonitoring","given":"A system is set for continuous monitoring","when":"A user uses data/create method","then":"The system should list data from specified file"};

@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Manage Data" as ManageData #yellow
 
 Actor "Data Scientist" as DataScientist
@@ -17,21 +19,37 @@ DataEngineer --> ManageData
 
 
 
-usecase "DestroyData" as DestroyData #lightgrey
+json DestroyData #lightyellow {
+    "Given": "Data Steward has access to the data source",
+    "When": "Data Steward uses method to destroy data",
+    "Then": "The data from the particular source should be destroyed"
+}
 
-ManageData --> DestroyData
+ManageData <|-- DestroyData
 
-usecase "EgressData" as EgressData #lightgrey
+json EgressData #lightyellow {
+    "Given": "A data steward uses the system",
+    "When": "Data Steward selects &#39;data/source/name&#39;",
+    "Then": "Egress Data is displayed to the Data Steward"
+}
 
-ManageData --> EgressData
+ManageData <|-- EgressData
 
-usecase "IngestData" as IngestData #lightgrey
+json IngestData #lightyellow {
+    "Given": "A data steward uses data source",
+    "When": "Data is ingested from named source",
+    "Then": "Data should be managed in the ingest process"
+}
 
-ManageData --> IngestData
+ManageData <|-- IngestData
 
-usecase "MoveData" as MoveData #lightgrey
+json MoveData #lightyellow {
+    "Given": "A Data Steward needs to move specific data",
+    "When": "they use the &#39;data/move&#39; method",
+    "Then": "the specified data should be successfully moved"
+}
 
-ManageData --> MoveData
+ManageData <|-- MoveData
 
 
 

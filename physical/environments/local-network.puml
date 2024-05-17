@@ -1,0 +1,31 @@
+@startuml
+
+nwdiag {
+internet [ shape = cloud];
+    internet -- internetrouter
+    network appnetwork {
+        internetrouter
+        address = "10.0.1.x/24"
+        host1 [address = 10.0.1.1 description = <&cog*4>\nhost1 ]
+        host2
+        host3
+        host4
+    }
+    network datanetwork {
+        address = "10.0.2.x/24"
+        host1
+        host2
+        host3
+        host4
+    }
+
+    network adminNetwork {
+        address = "10.0.0.x/24"
+        host1
+        host2
+        host3
+        host4
+        adminConsole [address=10.0.0.100 description= <&terminal*4>\nadmin]
+    }
+}
+@enduml

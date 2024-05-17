@@ -3,7 +3,7 @@
 left to right direction
 
 
-queue external #black [
+hexagon external #black [
     <b><color:white>external</color></b>
 ]
     
@@ -14,24 +14,33 @@ interface 3001
 
 
 
+node "cpl_ta" #cccccc {
 
-package "cpl_ta" #cccccc {
-
-node "consumer" as consumerService
-node "aggregator" as aggregatorService
-node "producer" as producerService
+    portin "3001" as cpl_taPort3001 #blue
+    cpl_taPort3001 -- external
 
 
-        artifact "cpl_tc_web:latest" as cpl_tc_weblatestimage
-    
-        artifact "cpl_ta_web:latest" as cpl_ta_weblatestimage
-    
-        artifact "cpl_tp_producer:latest" as cpl_tp_producerlatestimage
+
+node "consumer" as consumerService #white {
+
+
+    artifact "cpl_tc_web:latest" as cpl_tc_weblatestimage
     
 }
-consumerService .... cpl_tc_weblatestimage
-aggregatorService .... cpl_ta_weblatestimage
-producerService .... cpl_tp_producerlatestimage
+node "aggregator" as aggregatorService #white {
+
+
+    artifact "cpl_ta_web:latest" as cpl_ta_weblatestimage
+    
+}
+node "producer" as producerService #white {
+
+
+    artifact "cpl_tp_producer:latest" as cpl_tp_producerlatestimage
+    
+}
+
+}
 
 
 @enduml

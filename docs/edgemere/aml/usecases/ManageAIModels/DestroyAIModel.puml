@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "DataEngineer"
 
 actor "ApplicationDeveloper"
@@ -12,12 +13,22 @@ box Application Management Layer #88cccc
 end box
 
 
+group Given [A Data Engineer or Application Developer uses an AI model]
 
-"DataEngineer" -> aml: Destroy AI Model
+"DataEngineer" --/ aml: They decide to destroy the AI model
+"aml" -> aml: Destroy AI Model
 
 
-"ApplicationDeveloper" -> aml: Destroy AI Model
+"ApplicationDeveloper" --/ aml: They decide to destroy the AI model
+"aml" -> aml: Destroy AI Model
 
 
+
+"DataEngineer" /-- aml: The AI model is no longer available
+
+"ApplicationDeveloper" /-- aml: The AI model is no longer available
+
+
+end
 
 @enduml

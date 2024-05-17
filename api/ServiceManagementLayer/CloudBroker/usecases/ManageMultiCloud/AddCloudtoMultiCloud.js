@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Add Cloud to Multi Cloud',
-    description: 'It Operations adds clouds to the multicloud',
-    method: "multicloud/addclouds",
-    actors: {
-        'IT Operations': 'uses',
-    },
-};
-
+module.exports = {"name":"Add Cloud to Multi Cloud","description":"It Operations adds clouds to the multicloud","method":"multicloud/addclouds","actors":{"IT Operations":"uses"},"uid":"ManageMultiCloud.AddCloudtoMultiCloud","given":"IT Operations is using a multi cloud system","when":"IT Operations adds a new cloud to the system","then":"The new cloud is integrated into the multi cloud system"};

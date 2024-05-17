@@ -1,13 +1,1 @@
-module.exports = {
-    name: 'Create AI Model',
-    description: 'Create AI Model is the description',
-    method: "aimodel/create",
-    actors: {
-        'Application Developer': 'uses',
-        'Data Scientist': 'uses',
-    },
-    steps: [
-        {action:'aimodel/create', parameters: {name: 'name1' } }
-    ]
-}
-
+module.exports = {"name":"Create AI Model","description":"Create AI Model is the description","method":"aimodel/create","actors":{"Application Developer":"uses","Data Scientist":"uses"},"steps":[{"action":"aimodel/create","parameters":{"name":"name1"}}],"uid":"ManageAIModels.CreateAIModel","given":"An application developer or data scientist wants to create an AI model","when":"They use the 'aimodel/create' method and provide 'name1' as the name parameter","then":"The AI model with the provided name is created successfully"};

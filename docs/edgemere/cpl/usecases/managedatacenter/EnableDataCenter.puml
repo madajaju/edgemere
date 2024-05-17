@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "IT Operations"
 
 
@@ -15,8 +16,10 @@ box Common Physical Layer #cccccc
             participant datacenter
     end box
 
+group Given [A disabled data center exists]
 
-"IT Operations" -> cpl: Enable Data Center
+"IT Operations" --/ cpl: IT Operations enable the data center
+"cpl" -> cpl: Enable Data Center
 
     cpl -> "device": create (name: host1,file: ./templates/device.yaml)
 
@@ -43,5 +46,10 @@ box Common Physical Layer #cccccc
     "datacenter" --/ EventBus: datacenter.enable
 
 
+
+"IT Operations" /-- cpl: The data center becomes enabled
+
+
+end
 
 @enduml

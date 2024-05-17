@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+node "Data Definition Framework" #ffcc88 {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    card " edgemere diml ddf" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as diml_dff_container
+      REST --> diml_dff_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "diml_dff" as diml_dffimage
+    artifact "ailtire:swarm" as ailtireswarm
+    diml_dffimage <|-- ailtireswarm
+    diml_dff_container --> diml_dffimage
+
+  
+      artifact "diml_ddf_web" as diml_ddf_web
+      web_container --> diml_ddf_web
+    
+  }
+}
+CLI " edgemere diml ddf" -- binName
+Web "/edgemere/diml/ddf" - REST
+WebSocket ".edgemere.diml.ddf" -- socket
+
+@enduml

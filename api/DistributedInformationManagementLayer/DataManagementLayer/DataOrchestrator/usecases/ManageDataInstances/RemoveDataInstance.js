@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Remove Data Instance',
-    description: 'Remove Data Instance is the description',
-    method: "datainstance/destroy",
-    actors: {
-        'DataEngineer': 'uses',
-    },
-};
-
+module.exports = {"name":"Remove Data Instance","description":"Remove Data Instance is the description","method":"datainstance/destroy","actors":{"DataEngineer":"uses"},"uid":"ManageDataInstances.RemoveDataInstance","given":"A DataEngineer has a specific data instance to remove","when":"The DataEngineer invokes the 'datainstance/destroy' method","then":"The specified data instance is removed from the system"};

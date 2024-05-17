@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "IT Operations"
 
 
@@ -10,9 +11,16 @@ box Cloud Broker #88cc88
 end box
 
 
+group Given [IT Operations needs to manage policies for Multicloud]
 
-"IT Operations" -> cb: Manage Policies for Multi Cloud
+"IT Operations" --/ cb: IT Operations adds, removes, enables or disables policies
+"cb" -> cb: Manage Policies for Multi Cloud
 
 
+
+"IT Operations" /-- cb: The multicloud systems should update based on the changes
+
+
+end
 
 @enduml

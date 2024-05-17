@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Provide Business Information" as ProvideBusinessInformation #yellow
 
 Actor "Data Analyst" as DataAnalyst

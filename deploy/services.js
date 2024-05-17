@@ -76,8 +76,26 @@ module.exports = {
                 web: {path:'/web', port: 3000 },
             },
             networks: {
-                children: {},
+                parent: {},
                 siblings: {}
+            },
+            deploy: {
+                replicas: 2,
+                mode: "replicated", // or global (Global means one per node)
+                placement: {
+                    constraints: [ "node.role==manager", "engine.labels.operatingsystem==ubuntu", "host==host1" ],
+                    resources: {
+                        limits: { cpus: 0.50, memory: "500M" },
+                        reservations: { cpus: 0.25, memory: "200M" }
+                    },
+                    preferences: {
+                        spread: "node.labels.zone"
+                    }
+                },
+                max_replicas_per_node: 1,
+                update_config: {},
+                restart_policy: {},
+                endpoint_mode: "vip",
             }
         },
         doc: {

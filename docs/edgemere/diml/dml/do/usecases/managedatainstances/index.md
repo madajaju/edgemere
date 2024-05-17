@@ -41,6 +41,11 @@ Manage Data Instances is the description
 Create Data Instance is the description
 
 ![Scenario CreateDataInstance](./CreateDataInstance.png)
+#### Criteria
+
+* Given - An Application Developer wants to create a new data instance
+* When - The Application Developer uses the &#39;datainstance/create&#39; method
+* Then - An Application Developer wants to create a new data instance
 
 #### Steps
 1. To Be Defined
@@ -56,6 +61,11 @@ Create Data Instance is the description
 Find Data Instance is the description
 
 ![Scenario FindDataInstance](./FindDataInstance.png)
+#### Criteria
+
+* Given - DataEngineer has access to datainstance/find method
+* When - DataEngineer uses the method to find a specific data instance
+* Then - DataEngineer has access to datainstance/find method
 
 #### Steps
 1. To Be Defined
@@ -71,6 +81,11 @@ Find Data Instance is the description
 Remove Data Instance is the description
 
 ![Scenario RemoveDataInstance](./RemoveDataInstance.png)
+#### Criteria
+
+* Given - A DataEngineer has a specific data instance to remove
+* When - The DataEngineer invokes the &#39;datainstance/destroy&#39; method
+* Then - A DataEngineer has a specific data instance to remove
 
 #### Steps
 1. To Be Defined

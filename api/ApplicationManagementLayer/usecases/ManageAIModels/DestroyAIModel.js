@@ -1,10 +1,1 @@
-module.exports = {
-    name: 'Destroy AI Model',
-    description: 'Destroy AI Model is the description',
-    method: "aimodel/destroy",
-    actors: {
-        'DataEngineer': 'uses',
-        'ApplicationDeveloper': 'uses',
-    },
-};
-
+module.exports = {"name":"Destroy AI Model","description":"Destroy AI Model is the description","method":"aimodel/destroy","actors":{"DataEngineer":"uses","ApplicationDeveloper":"uses"},"uid":"ManageAIModels.DestroyAIModel","given":"A Data Engineer or Application Developer uses an AI model","when":"They decide to destroy the AI model","then":"The AI model is no longer available"};

@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "DevOps Engineer"
 
 
@@ -10,9 +11,16 @@ box Service Orchestrator #88cc88
 end box
 
 
+group Given [The DevOps Engineer uses the deployed stack]
 
-"DevOps Engineer" -> so: Update Stack
+"DevOps Engineer" --/ so: Policy changes, updates to stack or service definitions, or environmental changes occur
+"so" -> so: Update Stack
 
 
+
+"DevOps Engineer" /-- so: The stack is updated using the &#39;stack/update&#39; method
+
+
+end
 
 @enduml

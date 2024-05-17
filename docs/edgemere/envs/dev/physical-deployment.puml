@@ -1,0 +1,149 @@
+@startuml
+
+left to right direction
+
+
+
+
+
+
+
+frame datacenter1 {
+
+    node "<&transfer*4>\nadminSwitch" as adminSwitch <<network/switch>> {
+    hexagon adminNetwork #blue
+    }
+
+    node "<&transfer*4>\ndataSwitch" as dataSwitch <<network/switch>> {
+    hexagon dataNetwork #red
+    }
+
+    node "<&transfer*4>\nappSwitch" as appSwitch <<network/switch>> {
+    hexagon dev_appNetwork #orange
+    }
+
+    node "<&move*4>\ninternetRouter" as internetRouter <<network/router>> {
+    
+    }
+
+    node "<&monitor*4>\nexample1" as example1 <<compute/small>> {
+    portin " " as example1adminNetwork #blue
+portin " " as example1dataNetwork #red
+portin " " as example1dev_appNetwork #orange
+folder "/mnt/shared" as example1mntshared
+    }
+
+    node "<&monitor*4>\nexample2" as example2 <<compute/small>> {
+    portin " " as example2adminNetwork #blue
+portin " " as example2dataNetwork #red
+portin " " as example2dev_appNetwork #orange
+folder "/mnt/shared" as example2mntshared
+    }
+
+    node "<&monitor*4>\nexample3" as example3 <<compute/xlarge>> {
+    portin " " as example3adminNetwork #blue
+portin " " as example3dataNetwork #red
+portin " " as example3dev_appNetwork #orange
+folder "/mnt/shared" as example3mntshared
+    }
+
+    node "<&monitor*4>\nexample4" as example4 <<compute/xlarge>> {
+    portin " " as example4adminNetwork #blue
+portin " " as example4dataNetwork #red
+portin " " as example4dev_appNetwork #orange
+folder "/mnt/shared" as example4mntshared
+    }
+
+
+    database share1 <<>> {
+    
+    }
+
+    database share2 <<>> {
+    
+    }
+
+
+}
+
+frame devCloud {
+
+    node "<&transfer*4>\ncloudSwitch" as cloudSwitch <<network/switch>> {
+    hexagon dev_appNetwork #orange
+hexagon internet #black
+    }
+
+    node "<&monitor*4>\ncloudCompute1" as cloudCompute1 <<compute/medium>> {
+    portin " " as cloudCompute1dev_appNetwork #orange
+folder "/mnt/shared" as cloudCompute1mntshared
+database localdiska as cloudCompute1diska
+folder "/mnt/shared" as cloudCompute1mntshared
+    }
+
+    node "<&monitor*4>\ncloudCompute2" as cloudCompute2 <<compute/medium>> {
+    portin " " as cloudCompute2dev_appNetwork #orange
+folder "/mnt/local" as cloudCompute2mntlocal
+database localdiska as cloudCompute2diska
+folder "undefined" as cloudCompute2mount
+    }
+
+    node "<&monitor*4>\ncloudCompute3" as cloudCompute3 <<compute/medium>> {
+    portin " " as cloudCompute3dev_appNetwork #orange
+folder "/mnt/local" as cloudCompute3mntlocal
+database localdiska as cloudCompute3diska
+folder "/mnt/shared" as cloudCompute3mntshared
+    }
+
+
+    database cloudshare <<>> {
+    
+    }
+
+
+}
+
+
+
+
+
+
+
+
+dev_appNetwork -- internetRouter
+internet -- internetRouter
+
+adminNetwork -[hidden]- example1adminNetwork
+dataNetwork -[hidden]- example1dataNetwork
+dev_appNetwork -[hidden]- example1dev_appNetwork
+example1mntshared ---- share1
+
+adminNetwork -[hidden]- example2adminNetwork
+dataNetwork -[hidden]- example2dataNetwork
+dev_appNetwork -[hidden]- example2dev_appNetwork
+example2mntshared ---- share1
+
+adminNetwork -[hidden]- example3adminNetwork
+dataNetwork -[hidden]- example3dataNetwork
+dev_appNetwork -[hidden]- example3dev_appNetwork
+example3mntshared ---- share2
+
+adminNetwork -[hidden]- example4adminNetwork
+dataNetwork -[hidden]- example4dataNetwork
+dev_appNetwork -[hidden]- example4dev_appNetwork
+example4mntshared ---- share2
+
+
+
+dev_appNetwork -[hidden]- cloudCompute1dev_appNetwork
+cloudCompute1diska -- cloudCompute1mntshared
+cloudCompute1mntshared ---- cloudshare
+
+dev_appNetwork -[hidden]- cloudCompute2dev_appNetwork
+cloudCompute2diska -- cloudCompute2mntlocal
+cloudCompute2mount ---- cloudshare
+
+dev_appNetwork -[hidden]- cloudCompute3dev_appNetwork
+cloudCompute3diska -- cloudCompute3mntlocal
+cloudCompute3mntshared ---- cloudshare
+
+@enduml

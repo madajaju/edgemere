@@ -40,6 +40,11 @@ Manage Resources includes creating resources, listing and planning for resources
 Get Resources based on a set of requirements, this could be one resource or a set of resources. Requires a cloud and requirements to be specified. A name for the resources can be requested.
 
 ![Scenario GetResources](./GetResources.png)
+#### Criteria
+
+* Given - A cloud with set of resources and specific requirements are provided
+* When - A request for resources based on specific requirements is made
+* Then - A cloud with set of resources and specific requirements are provided
 
 #### Steps
 1. [device create --name hostgr1 --file ./templates/device.yaml](#action-device-create)
@@ -69,6 +74,11 @@ Get Resources based on a set of requirements, this could be one resource or a se
 List Resources and their utilization numbers. This is used for capacity planning.
 
 ![Scenario ListResources](./ListResources.png)
+#### Criteria
+
+* Given - IT Operations has access to list resources and their utilization numbers
+* When - a device is created with specific parameters and datacenter is created and disabled
+* Then - IT Operations has access to list resources and their utilization numbers
 
 #### Steps
 1. [device create --name hostlr1 --file ./templates/device.yaml](#action-device-create)
@@ -98,6 +108,11 @@ List Resources and their utilization numbers. This is used for capacity planning
 Release Resources based on the name given when the Resources are requested
 
 ![Scenario ReleaseResources](./ReleaseResources.png)
+#### Criteria
+
+* Given - IT operations has requested resources using a specific name
+* When - The resources are no longer needed
+* Then - IT operations has requested resources using a specific name
 
 #### Steps
 1. To Be Defined

@@ -6,8 +6,6 @@ parent: Images
 ---
 # edgemere_web
 
-* Base image:  [node:alpine](image-node:alpine)
-
 * Parent Package: [edgemere](package--edgemere)
 
 

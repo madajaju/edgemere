@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "SecurityEngineer"
 
 
@@ -17,8 +18,10 @@ box Software Defined Infrastructure #cccc88
 box Security Profile Manager #cc8888
     end box
 
+group Given [Security engineer created security profile and identity]
 
-"SecurityEngineer" -> spm: Attach Profile
+"SecurityEngineer" --/ spm: Security profile is deployed and attached to the identity
+"spm" -> spm: Attach Profile
 
     spm -> "storageresource": create (name: secProfile1,file: ./templates/secprofile.yml)
 
@@ -37,5 +40,10 @@ box Security Profile Manager #cc8888
     "securityprofile" --/ EventBus: securityprofile.attach
 
 
+
+"SecurityEngineer" /-- spm: Security profile is successfully attached to the identity
+
+
+end
 
 @enduml

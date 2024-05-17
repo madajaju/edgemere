@@ -2,11 +2,11 @@
   interface CLI
   interface Web
   interface WebSocket
-package "Governance Engine" #lightblue {
+node "Governance Engine" #lightblue {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {
-    component " edgemere diml dml ge" as binName
+    card " edgemere diml dml ge" as binName
   }
   binName --> REST
 
@@ -14,11 +14,11 @@ package "Governance Engine" #lightblue {
       file "node server.js\n" as diml_dml_ge_container
       REST --> diml_dml_ge_container
 
-  
+
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
+
   }
   folder images #ffffff {
     collections "diml_dml_ge" as diml_dml_geimage
@@ -26,10 +26,10 @@ package "Governance Engine" #lightblue {
     diml_dml_geimage <|-- ailtireswarm
     diml_dml_ge_container --> diml_dml_geimage
 
-  
+
       artifact "diml_dml_ge_web" as diml_dml_ge_web
       web_container --> diml_dml_ge_web
-    
+
   }
 }
 CLI " edgemere diml dml ge" -- binName

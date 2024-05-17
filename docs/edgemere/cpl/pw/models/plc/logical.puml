@@ -1,0 +1,28 @@
+@startuml
+
+class "PLC" as Model {
+ string name
+ string kind
+ string protocol
+
+ communicateWithAsset()
+ transmitData()
+ 
+}
+
+rectangle "PhysicalAsset" as PhysicalAsset #lightblue {
+}
+
+Model o--> "1" PhysicalAsset : asset
+
+
+rectangle "Device" as Device #lightblue {
+}
+
+Model o--> "1" Device : device
+
+
+
+
+
+@enduml

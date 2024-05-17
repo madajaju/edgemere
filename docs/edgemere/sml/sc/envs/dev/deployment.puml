@@ -3,43 +3,45 @@
 left to right direction
 
 
-boundary parent #black
-
-
-entity children #blue
 
 
 
 
-package "sml_sc" #88cc88 {
-    queue parentnet #black [
+
+node "sml_sc" #88cc88 {
+
+
+    hexagon parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#black]- parent
+    portin " " as parentnetPortIn #black
+    parentnetPortIn -[#black]- parentnet
     
-    queue childrennet #blue [
+    hexagon childrennet #blue [
             <b><color:white>children</color></b>
     ]
     
-    childrennet -[#blue]- children
+    portout " " as childrennetPortOut #blue
+    childrennet -[#blue]- childrennetPortOut
     
-    queue siblingsnet #red [
+    hexagon siblingsnet #red [
             <b><color:white>siblings</color></b>
     ]
     
 
-node "gw" as gwService
+node "gw" as gwService #white {
+    portOut " " as gwServicechildrennet #blue
+   gwServicechildrennet -[#blue]- childrennet
+       portOut " " as gwServicesiblingsnet #red
+   gwServicesiblingsnet -[#red]- siblingsnet
+   
 
-
-        artifact "sml_sc_controller" as sml_sc_controllerimage
+    artifact "sml_sc_controller" as sml_sc_controllerimage
     
 }
 
-gwService -[#blue]- childrennet
-
-gwService -[#red]- siblingsnet
-gwService .... sml_sc_controllerimage
+}
 
 
 @enduml

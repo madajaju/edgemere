@@ -6,16 +6,16 @@ package "Common Physical Layer" #cccccc {
         class PhysicalProfile {
         }
     
-        class Hardware {
+        class Device {
         }
     
         class DataCenter {
         }
     
-        class AggregatedDevice {
+        class Hardware {
         }
     
-        class Device {
+        class AggregatedDevice {
         }
     
         class Metric {
@@ -57,24 +57,21 @@ REST ()-- i
 Web ()-- i
 
 package "Common Physical Layer" #cccccc {
-        class "Device" {
+        class "AcceleratorHardware" {
                  string name
                  string ename
-                 string hostname
-                 string type
-                             addToHardware()
+                             addStats()
                      create()
                      disable()
                      enable()
-                     getReservations()
-                     provision()
-                     reserve()
+                     factory()
             }
-                Device o--> "1" PhysicalProfile : profile
-                        Device *--> "n" Hardware : hardware
-                        Device o--> "1" DataCenter : datacenter
-                        Device o--> "1" AggregatedDevice : parent
+                AcceleratorHardware o--> "1" PhysicalProfile : profile
+                        AcceleratorHardware o--> "1" Device : device
+                        AcceleratorHardware o--> "n" Resource : resources
             
+    
+        Hardware <|-- AcceleratorHardware
     
     class "AggregatedDevice" {
                  string name
@@ -98,6 +95,69 @@ package "Common Physical Layer" #cccccc {
             
     
         Device <|-- AggregatedDevice
+    
+    class "ComputeHardware" {
+                 string name
+                 string ename
+                             addStats()
+                     create()
+                     disable()
+                     enable()
+                     factory()
+            }
+                ComputeHardware o--> "1" PhysicalProfile : profile
+                        ComputeHardware o--> "1" Device : device
+                        ComputeHardware o--> "n" Resource : resources
+            
+    
+        Hardware <|-- ComputeHardware
+    
+    class "DataCenter" {
+                 string name
+                             addAdevices()
+                     addDevices()
+                     create()
+                     disable()
+                     enable()
+                     reserve()
+            }
+                DataCenter o--> "1" PhysicalProfile : profile
+                        DataCenter *--> "n" Device : devices
+                        DataCenter *--> "n" AggregatedDevice : adevices
+            
+    
+    class "Device" {
+                 string name
+                 string ename
+                 string hostname
+                 string type
+                             addToHardware()
+                     create()
+                     disable()
+                     enable()
+                     getReservations()
+                     provision()
+                     reserve()
+            }
+                Device o--> "1" PhysicalProfile : profile
+                        Device *--> "n" Hardware : hardware
+                        Device o--> "1" DataCenter : datacenter
+                        Device o--> "1" AggregatedDevice : parent
+            
+    
+    class "Hardware" {
+                 string name
+                 string ename
+                             addStats()
+                     create()
+                     disable()
+                     enable()
+                     factory()
+            }
+                Hardware o--> "1" PhysicalProfile : profile
+                        Hardware o--> "1" Device : device
+                        Hardware o--> "n" Resource : resources
+            
     
     class "Metric" {
                  string name
@@ -168,52 +228,6 @@ package "Common Physical Layer" #cccccc {
     
         Metric <|-- MetricConsumeable
     
-    class "PhysicalProfile" {
-                 string name
-                             combine()
-                     consume()
-                     create()
-                     propagate()
-                     satisfies()
-                     stats()
-            }
-                PhysicalProfile *--> "1" MetricComposite : capabilities
-                        PhysicalProfile *--> "1" MetricComposite : available
-                        PhysicalProfile *--> "1" MetricComposite : reserved
-                        PhysicalProfile *--> "1" MetricComposite : metrics
-                        PhysicalProfile o--> "1" PhysicalProfile : parent
-            
-    
-    class "Hardware" {
-                 string name
-                 string ename
-                             addStats()
-                     create()
-                     disable()
-                     enable()
-                     factory()
-            }
-                Hardware o--> "1" PhysicalProfile : profile
-                        Hardware o--> "1" Device : device
-                        Hardware o--> "n" Resource : resources
-            
-    
-    class "ComputeHardware" {
-                 string name
-                 string ename
-                             addStats()
-                     create()
-                     disable()
-                     enable()
-                     factory()
-            }
-                ComputeHardware o--> "1" PhysicalProfile : profile
-                        ComputeHardware o--> "1" Device : device
-                        ComputeHardware o--> "n" Resource : resources
-            
-    
-        Hardware <|-- ComputeHardware
-    
     class "NetworkHardware" {
                  string name
                  string ename
@@ -230,6 +244,22 @@ package "Common Physical Layer" #cccccc {
     
         Hardware <|-- NetworkHardware
     
+    class "PhysicalProfile" {
+                 string name
+                             combine()
+                     consume()
+                     create()
+                     propagate()
+                     satisfies()
+                     stats()
+            }
+                PhysicalProfile *--> "1" MetricComposite : capabilities
+                        PhysicalProfile *--> "1" MetricComposite : available
+                        PhysicalProfile *--> "1" MetricComposite : reserved
+                        PhysicalProfile *--> "1" MetricComposite : metrics
+                        PhysicalProfile o--> "1" PhysicalProfile : parent
+            
+    
     class "StorageHardware" {
                  string name
                  string ename
@@ -245,22 +275,6 @@ package "Common Physical Layer" #cccccc {
             
     
         Hardware <|-- StorageHardware
-    
-    class "AcceleratorHardware" {
-                 string name
-                 string ename
-                             addStats()
-                     create()
-                     disable()
-                     enable()
-                     factory()
-            }
-                AcceleratorHardware o--> "1" PhysicalProfile : profile
-                        AcceleratorHardware o--> "1" Device : device
-                        AcceleratorHardware o--> "n" Resource : resources
-            
-    
-        Hardware <|-- AcceleratorHardware
     
 
 }

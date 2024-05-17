@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "StackDeveloper"
 
 
@@ -14,17 +15,24 @@ box Software Defined Infrastructure #cccc88
             participant storageresource
     end box
 
+group Given [StackDeveloper uses Build Service]
 
-"StackDeveloper" -> sml: Build Service
-
-    sml -> "storageresource": list (name: hello,file: ./templates/world.yml)
-
-    "storageresource" --/ EventBus: data.list
+"StackDeveloper" --/ sml: data/create method is invoked with name &#39;hello&#39; and file &#39;./templates/world.yml&#39;
+"sml" -> sml: Build Service
 
     sml -> "storageresource": list (name: hello,file: ./templates/world.yml)
 
     "storageresource" --/ EventBus: data.list
 
+    sml -> "storageresource": list (name: hello,file: ./templates/world.yml)
 
+    "storageresource" --/ EventBus: data.list
+
+
+
+"StackDeveloper" /-- sml: data/list response should provide the same name &#39;hello&#39; and file &#39;./templates/world.yml&#39;
+
+
+end
 
 @enduml

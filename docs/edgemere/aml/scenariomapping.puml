@@ -325,6 +325,39 @@ edgemereamlworkload -- edgemereamlworkloadupdate
     edgemereamlworkloadupdate <-- DevOpsEngineerManageWorkloadsUpdateWorkload
     
 
+        rectangle "Change Physical World" as ChangePhysicalWorld #ffffaa {
+            ("Adjust Temperature")/ as ActorChangePhysicalWorldAdjustTemperature
+        }
+    
+    edgemereamldatacreate <-- ActorChangePhysicalWorldAdjustTemperature
+    
+        rectangle "Change Physical World" as ChangePhysicalWorld #ffffaa {
+            ("Toogle Switch")/ as ActorChangePhysicalWorldtoggleSwitch
+        }
+    
+    edgemereamldatacreate <-- ActorChangePhysicalWorldtoggleSwitch
+    
+
+
+        rectangle "Connect Physical Asset to a Device" as ConnectPhysicalAssettoaDevice #ffffaa {
+            ("Asset-Digital Device Connectivity")/ as ActorConnectPhysicalAssettoaDeviceAsset-DigitalDeviceConnectivity
+        }
+    
+    edgemereamldatacreate <-- ActorConnectPhysicalAssettoaDeviceAsset-DigitalDeviceConnectivity
+    
+
+
+
+        rectangle "Monitor Physical World" as MonitorPhysicalWorld #ffffaa {
+            ("Continuous Monitoring")/ as ActorMonitorPhysicalWorldContinuousMonitoring
+        }
+    
+    edgemereamldatacreate <-- ActorMonitorPhysicalWorldContinuousMonitoring
+    
+
+
+
+
 
 
 

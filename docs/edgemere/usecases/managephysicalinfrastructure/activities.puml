@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Manage Physical Infrastructure" as ManagePhysicalInfrastructure #yellow
 
 Actor "IT Operations" as ITOperations

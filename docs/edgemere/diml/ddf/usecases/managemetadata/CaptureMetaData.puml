@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "DataEngineer"
 
 actor "DataSteward"
@@ -22,43 +23,10 @@ box Data Definition Framework #ffcc88
 box Distributed Information Management Layer #ffcc88
     end box
 
+group Given [Data Engineer and Data Steward are using data create method]
 
-"DataEngineer" -> ddf: Capture Meta Data
-
-    ddf -> "dataadaptor": create (name: filesystem,file: ./templates/dataadaptor-filesystem.yaml)
-
-    "dataadaptor" --/ EventBus: dataadaptor.create
-
-    ddf -> "dataflow": create (name: filesystembasic,file: ./templates/dataflow-filesystembasic.yaml)
-
-    "dataflow" --/ EventBus: dataflow.create
-
-    ddf -> "datablueprint": create (name: filesystemBluePrint1,file: ./templates/datablueprint-filesystem.yaml)
-
-    "datablueprint" --/ EventBus: datablueprint.create
-
-    ddf -> "datasource": create (name: myFileSystem1,file: ./templates/datasource.yaml)
-
-    "datasource" --/ EventBus: datasource.create
-
-    ddf -> "datasource": create (name: myFileSystem2,file: ./templates/datasource.yaml)
-
-    "datasource" --/ EventBus: datasource.create
-
-    ddf -> "data definition framework": deploy (name: myBP1,blueprint: filesystemBluePrint1,sources: mySource=myFileSystem1)
-
-    "data definition framework" --/ EventBus: datablueprint.deploy
-
-    ddf -> "data definition framework": simulate (name: myFileSystem1,file: ./templates/datasource-simulation.yaml)
-
-    "data definition framework" --/ EventBus: datasource.simulate
-
-    ddf -> "distributed information management layer": find (query: owner:darren)
-
-    "distributed information management layer" --/ EventBus: diml.find
-
-
-"DataSteward" -> ddf: Capture Meta Data
+"DataEngineer" --/ ddf: Data blueprint and sources are created and deployed for simulation
+"ddf" -> ddf: Capture Meta Data
 
     ddf -> "dataadaptor": create (name: filesystem,file: ./templates/dataadaptor-filesystem.yaml)
 
@@ -93,5 +61,48 @@ box Distributed Information Management Layer #ffcc88
     "distributed information management layer" --/ EventBus: diml.find
 
 
+"DataSteward" --/ ddf: Data blueprint and sources are created and deployed for simulation
+"ddf" -> ddf: Capture Meta Data
+
+    ddf -> "dataadaptor": create (name: filesystem,file: ./templates/dataadaptor-filesystem.yaml)
+
+    "dataadaptor" --/ EventBus: dataadaptor.create
+
+    ddf -> "dataflow": create (name: filesystembasic,file: ./templates/dataflow-filesystembasic.yaml)
+
+    "dataflow" --/ EventBus: dataflow.create
+
+    ddf -> "datablueprint": create (name: filesystemBluePrint1,file: ./templates/datablueprint-filesystem.yaml)
+
+    "datablueprint" --/ EventBus: datablueprint.create
+
+    ddf -> "datasource": create (name: myFileSystem1,file: ./templates/datasource.yaml)
+
+    "datasource" --/ EventBus: datasource.create
+
+    ddf -> "datasource": create (name: myFileSystem2,file: ./templates/datasource.yaml)
+
+    "datasource" --/ EventBus: datasource.create
+
+    ddf -> "data definition framework": deploy (name: myBP1,blueprint: filesystemBluePrint1,sources: mySource=myFileSystem1)
+
+    "data definition framework" --/ EventBus: datablueprint.deploy
+
+    ddf -> "data definition framework": simulate (name: myFileSystem1,file: ./templates/datasource-simulation.yaml)
+
+    "data definition framework" --/ EventBus: datasource.simulate
+
+    ddf -> "distributed information management layer": find (query: owner:darren)
+
+    "distributed information management layer" --/ EventBus: diml.find
+
+
+
+"DataEngineer" /-- ddf: Specific owner&#39;s data can be searched and found
+
+"DataSteward" /-- ddf: Specific owner&#39;s data can be searched and found
+
+
+end
 
 @enduml

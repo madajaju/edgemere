@@ -1,0 +1,46 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+node "Policy Engine" #cc8888 {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    card " edgemere sa pe" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as sa_pe_container
+      REST --> sa_pe_container
+
+  
+    file "engine" as engine_container
+    REST --> engine_container
+    socket ---> engine_container
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "sa_pe" as sa_peimage
+    artifact "ailtire:swarm" as ailtireswarm
+    sa_peimage <|-- ailtireswarm
+    sa_pe_container --> sa_peimage
+
+  
+      artifact "sa_pe_engine" as sa_pe_engine
+      engine_container --> sa_pe_engine
+    
+      artifact "sa_pe_web" as sa_pe_web
+      web_container --> sa_pe_web
+    
+  }
+}
+CLI " edgemere sa pe" -- binName
+Web "/edgemere/sa/pe" - REST
+WebSocket ".edgemere.sa.pe" -- socket
+
+@enduml

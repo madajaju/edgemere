@@ -39,6 +39,11 @@ Manage Services is the description
 Build Service is the description
 
 ![Scenario BuildService](./BuildService.png)
+#### Criteria
+
+* Given - StackDeveloper uses Build Service
+* When - data/create method is invoked with name &#39;hello&#39; and file &#39;./templates/world.yml&#39;
+* Then - StackDeveloper uses Build Service
 
 #### Steps
 1. [data list --name hello --file ./templates/world.yml](#action-data-list)

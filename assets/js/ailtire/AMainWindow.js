@@ -1,3 +1,13 @@
+/*
+ * Copyright 2023 Intel Corporation.
+ * This software and the related documents are Intel copyrighted materials, and your use of them is governed by
+ * the express license under which they were provided to you (License). Unless the License provides otherwise,
+ * you may not use, modify, copy, publish, distribute, disclose or transmit this software or the related documents
+ * without  Intel's prior written permission. This software and the related documents are provided as is, with no
+ * express or implied warranties, other than those that are expressly stated in the License.
+ *
+ */
+
 import {
     APackage,
     AScenario,
@@ -5,15 +15,18 @@ import {
     AActor,
     AModel,
     AStack,
-    AEnvironment,
     AObject,
     AComponent,
     AImage,
     A3DGraph,
     AEventHUD,
     ASelectedHUD,
+    AUserActivity,
+    AEnvironment,
 } from './index.js';
 
+import ALocation from './ALocation.js';
+import ADevice from './ADevice.js';
 import AWorkFlow from './AWorkFlow.js';
 
 import {Graph3D} from '../Graph3D.js';
@@ -23,10 +36,13 @@ export default class AMainWindow {
     static currentView = undefined;
     static previewWindow = undefined;
     static scolor = {
-        started: "#aaffff",
-        create: "#aaffff",
+        started: "#00ffff",
+        created: "#00ffff",
+        inprogress: "#00aaff",
+        blocked: "#ffbb44",
         completed: "#aaffaa",
         failed: "#ffaaaa",
+        error: "#ffaaaa",
         enabled: "#aaffaa",
         disable: "#aaaaaa",
         rejected: "#ffaaaa",
@@ -35,6 +51,8 @@ export default class AMainWindow {
         needed: "#ffbb44",
         selected: "#aaffaa",
         evaluated: "#ffffaa",
+        moved: "#00ff00",
+        nocontact: "#ff0000"
     };
 
     static config = {
@@ -47,7 +65,7 @@ export default class AMainWindow {
         graphDiv: "#modelGraph",
         graph3D: {
             div: "#modelGraph",
-            color: "#330044"
+            color: "#220033"
         }
     };
     static handlers = {
@@ -61,6 +79,10 @@ export default class AMainWindow {
         component: AComponent.handle,
         image: AImage.handle,
         workflow: AWorkFlow.handle,
+        device: ADevice.handle,
+        location: ALocation.handle,
+        deployment: AEnvironment.handleList,
+        physical: AEnvironment.handlePhysicalList
     }
 
     static initialize(pconfig) {
@@ -149,6 +171,7 @@ export default class AMainWindow {
                             items: [
                                 {type: 'button', id: 'editItem', text: 'Documentation', style: 'color: black;'},
                                 {type: 'button', id: 'errorItem', text: 'View Model Errors', style: 'color: black;'},
+                                {type: 'button', id: 'userActivity', text: 'User Activities', style: 'color: black;'},
                             ],
                             onClick: function (event) {
                                 AMainWindow.processTopMenu(event);
@@ -246,26 +269,21 @@ export default class AMainWindow {
                 img: null,
                 nodes: [
                     {
-                        id: 'usecaseview', text: 'UseCase View', group: true, expanded: true, nodes: [
-                            {id: 'actors', text: 'Actors', img: 'icon-folder', expanded: true, nodes: []},
-                            {id: 'usecases', text: 'Use Cases', img: 'icon-folder', expanded: true, nodes: []},
+                        id: 'usecaseview', text: 'UseCase View', group: true, expanded: false, nodes: [
+                            {id: 'actors', text: 'Actors', img: 'icon-folder', expanded: false, nodes: []},
+                            {id: 'usecases', text: 'Use Cases', img: 'icon-folder', expanded: false, nodes: []},
                         ]
                     },
-                    {id: 'logical', text: 'Logical View', group: true, expanded: true, nodes: []},
-                    {
-                        id: 'implementation', text: 'Implementation View', group: true, expanded: true, nodes: [
-                            {
-                                id: 'libraries',
-                                text: 'External Libraries',
-                                img: 'icon-folder',
-                                expanded: true,
-                                nodes: []
-                            },
-                            {id: 'images', text: 'Images', img: 'icon-folder', expanded: true, nodes: []},
-                        ]
-                    },
-                    {id: 'deployments', text: 'Deployment View', group: true, expanded: true, nodes: []},
-                    {id: 'process', text: 'Process View', group: true, expanded: true, nodes: []},
+                    {id: 'logical', text: 'Logical View', group: true, expanded: false, nodes: []},
+                    {id: 'implementation', text: 'Implementation View', group: true, expanded: true, nodes: [
+                        {id: 'libraries', text: 'External Libraries', img: 'icon-folder', expanded: true, nodes: [] },
+                        {id: 'images', text: 'Images', img: 'icon-folder', expanded: false, nodes: []},
+                    ]},
+                    {id: 'deployment', text: "Deployment View", group: true, expanded: true, nodes: [
+                        {id: 'environments', text: 'Logical Environments', img: 'icon-folder', expanded: false, nodes: []},
+                        {id: 'locations', text: 'Physical Environments', img: 'icon-folder', expanded: false, nodes: []},
+                    ]},
+                    {id: 'process', text: 'Process View', group: true, expanded: false, nodes: []},
                 ],
                 onExpand: (event) => {
                     if (event.object.id === 'logical') {
@@ -281,13 +299,16 @@ export default class AMainWindow {
                         })
                     } else if (event.object.id === 'usecases') {
                         A3DGraph.usecaseView();
-                    } else if (event.object.id === 'deployments') {
+                    } else if (event.object.id === 'locations') {
+                        A3DGraph.physicalView();
+                    } else if (event.object.id === 'environments') {
                         A3DGraph.deploymentView();
                     } else if (event.object.id === 'implementation') {
                         A3DGraph.implementationView();
                     } else if (event.object.id === 'process') {
                         A3DGraph.processView();
                     }
+
                 },
                 onCollapse: (event) => {
                     if (event.object.id === 'logical') {
@@ -312,7 +333,9 @@ export default class AMainWindow {
                         })
                     } else if (event.object.id === 'usecases') {
                         A3DGraph.usecaseView();
-                    } else if (event.object.id === 'deployments') {
+                    } else if (event.object.id === 'physical') {
+                        A3DGraph.physicalView()
+                    } else if (event.object.id === 'environments') {
                         A3DGraph.deploymentView();
                     } else if (event.object.id === 'implementation') {
                         A3DGraph.implementationView();
@@ -329,12 +352,14 @@ export default class AMainWindow {
                         $.ajax({
                             url: event.object.link,
                             success: (results) => {
-                                AMainWindow.handlers[event.object.view](results);
+                                AMainWindow.handlers[event.object.view](results, event.object);
                             },
                             error: (req, text, err) => {
                                 console.log(text);
                             }
                         });
+                    } else {
+                        AMainWindow.handlers[event.object.view](event.object.data);
                     }
                 }
             },
@@ -351,7 +376,7 @@ export default class AMainWindow {
         w2ui.layout.content('right', $().w2sidebar(config.rightbar));
         w2ui.layout.content('main', `<div style="position: relative; height: 200px;"> <div id="objlist" style="position: absolute; left: 0px; width: 49.9%; height: 200px;">Object List Select item to see</div> <div id="objdetail" style="position: absolute; right: 0px; width: 49.9%; height: 200px;">Select Object to view details</div> </div>`);
         w2ui.layout.content('preview', `<div className="modelGraph" id="DrawingArea" style="position: absolute; left: 0px;">3D Graph view</div>`);
-        w2ui.layout.content('bottom', `<div id="scenariolist" style="position: absolute; left: 0px; width: 49.9%; height: 200px;"></div>Scenario List Select Use Case and Then a Scenario<div id="eventlist" style="position: absolute; right: 0px; width: 49.9%; height: 200px;">Events in the System</div>`);
+        w2ui.layout.content('bottom', `<div id="simulationWindow" style="position: absolute; left: 0px; width: 49.9%; height: 200px;"></div>Simulation Window<br>Select Workflow or Scenario<div id="eventlist" style="position: absolute; right: 0px; width: 49.9%; height: 200px;">Events in the System</div>`);
         w2ui.layout.on("resize", (event) => {
             if (!AMainWindow.previewWindow) {
                 for (let i in w2ui.layout.panels) {
@@ -375,7 +400,7 @@ export default class AMainWindow {
         AActor.showList('sidebar', 'actors');
         AUsecase.showList('sidebar', 'usecases');
         APackage.showList('sidebar', 'logical');
-        AEnvironment.showList('sidebar', 'deployments');
+        AEnvironment.showList('sidebar', 'environments', 'locations');
         AComponent.showList('sidebar', 'libraries');
         AImage.showList('sidebar', 'images');
         AWorkFlow.showList( 'sidebar', 'process');
@@ -386,28 +411,33 @@ export default class AMainWindow {
             {path: window.location.pathname + '/socket.io'}
         );
         socket.onAny((event, msg) => {
-            AMainWindow.showEvent(event);
-            if (event.includes('.create')) {
-                let [eventClass, methodClass] = event.split('.');
+            AMainWindow.showEvent(event, msg);
+            let [eventClass, methodClass] = event.split('.');
+            if (methodClass === "create") {
                 let rec = w2ui['rightbar'].get(eventClass);
                 w2ui['rightbar'].set(eventClass, {count: rec.count + 1});
                 w2ui['rightbar'].select(eventClass);
+            } else if(event.includes('ship.')) {
+                // Add the ship to the list on the left.
+                w2ui['sidebar'].add('ships', {id: msg.MMSI, text:msg.VesselName, view: 'ship', data: msg} );
             }
             if (AMainWindow.currentView) {
-                let [model, view] = AMainWindow.currentView.split('/');
-                model = model.toLowerCase();
-                let obj = msg;
-                if (msg.obj) {
-                    obj = msg.obj;
-                }
-                if (AMainWindow.currentView.includes('scenario')) {
-                    AScenario.handleEvent(event, obj);
-                } else if (event.includes(model)) {
-                    // Add the node to the list and to the graph.
-                    if (obj) {
-                        AObject.addObject(obj);
+                    let [model, view] = AMainWindow.currentView.split('/');
+                    model = model.toLowerCase();
+                    let obj = msg;
+                    if (msg.obj) {
+                        obj = msg.obj;
                     }
-                }
+                    if (AMainWindow.currentView.includes('workflow')) {
+                        AWorkFlow.handleEvent(event, obj, msg.message);
+                    } else if (AMainWindow.currentView.includes('scenario')) {
+                        AScenario.handleEvent(event, obj);
+                    } else if (event.includes(model)) {
+                        // Add the node to the list and to the graph.
+                        if (obj) {
+                            AObject.addObject(obj);
+                        }
+                    }
             }
         });
     }
@@ -446,7 +476,7 @@ export default class AMainWindow {
                         }
                     });
                 } else {
-                    node.expandView(node);
+                    node.expandView(node.data);
                 }
             }
         });
@@ -499,10 +529,10 @@ export default class AMainWindow {
             name: 'eventlist',
             show: {header: false, columnHeaders: true},
             columns: [
-                {field: 'object', caption: 'Object', size: '33%', attr: "align=right", sortable: true},
-                {field: 'count', caption: 'Count', size: '33%', attr: "align=right", sortable: true},
+                {field: 'object', caption: 'Object', size: '10%', attr: "align=right", sortable: true},
+                {field: 'count', caption: 'Count', size: '10%', attr: "align=right", sortable: true},
                 {
-                    field: 'events', caption: 'Event', size: '33%', render: function (record) {
+                    field: 'events', caption: 'Event', size: '30%', render: function (record) {
                         let retval = "";
 
                         for (let i in record.events) {
@@ -512,17 +542,18 @@ export default class AMainWindow {
                         }
                         return retval;
                     }
-                }
+                },
+                {field: 'message', caption: 'Message', size: '50%', attr: "align=left", sortable: false},
             ]
         });
     }
 
-    static showEvent(event) {
+    static showEvent(event,msg) {
         if (w2ui['eventlist']) {
             let [object, ename] = event.split(/\./);
             let rec = w2ui['eventlist'].get(object);
             if (!rec) {
-                rec = {recid: object, object: object, count: 0, events: {}};
+                rec = {recid: object, object: object, count: 0, events: {}, message: msg};
                 w2ui['eventlist'].add(rec);
             }
             if (ename) {
@@ -532,6 +563,7 @@ export default class AMainWindow {
                 rec.events[ename]++;
             }
             rec.count++;
+            rec.message = msg.message;
             w2ui['eventlist'].set(object, rec);
             w2ui['eventlist'].select(object);
             AEventHUD.updateHUD(rec);
@@ -591,7 +623,7 @@ export default class AMainWindow {
                 }
             });
         } else if (event.target === 'editItem') {
-            if(AMainWindow.selectedObject.link) {
+            if (AMainWindow.selectedObject.link) {
                 $.ajax({
                     url: AMainWindow.selectedObject.link + '&doc=true',
                     success: function (results) {
@@ -602,8 +634,14 @@ export default class AMainWindow {
             } else {
                 let sobj = AMainWindow.selectedObject.results;
                 AObject.editObject(sobj);
-
             }
+        } else if(event.target === 'userActivity') {
+            $.ajax({
+                url: './useractivity/list',
+                success: function (results) {
+                    AUserActivity.showListDialog(results);
+                }
+            });
         }
     }
 
@@ -637,21 +675,21 @@ export default class AMainWindow {
                     result.objectView = results.object;
                     break;
             }
-        }
-        $().w2grid({
-            name: "ErrorList",
-            columns: [
-                {field: 'type', size: "20%", resizable: true, caption: 'Type', sortable: true},
-                {field: 'message', size: "20%", resizable: true, caption: 'Message', sortable: true},
-                {field: 'objectView', size: "20%", resizable: true, caption: 'Object', sortable: true},
-                {field: 'dataView', size: "20%", resizable: true, caption: 'Data', sortable: true},
-                {field: 'lookup', size: "20%", resizable: true, caption: 'Lookup', sortable: true}
-            ],
-            show: {
-                header: true,
-                columnHeaders: true,
-            },
-            records: results
+    }
+    $().w2grid({
+        name: "ErrorList",
+        columns: [
+            {field: 'type', size: "20%", resizable: true, caption: 'Type', sortable: true},
+            {field: 'message', size: "20%", resizable: true, caption: 'Message', sortable: true},
+            {field: 'objectView', size: "20%", resizable: true, caption: 'Object', sortable: true},
+            {field: 'dataView', size: "20%", resizable: true, caption: 'Data', sortable: true},
+            {field: 'lookup', size: "20%", resizable: true, caption: 'Lookup', sortable: true}
+        ],
+        show: {
+            header: true,
+            columnHeaders: true,
+        },
+        records: results
         });
     }
 }

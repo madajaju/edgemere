@@ -7,20 +7,24 @@ left to right direction
 
 
 
-
-package "cpl_tp" #cccccc {
-
-node "producer" as producerService
-node "tester" as testerService
+node "cpl_tp" #cccccc {
 
 
-        artifact "cpl_tp_producer:latest" as cpl_tp_producerlatestimage
-    
-        artifact "cpl_tp_tester:latest" as cpl_tp_testerlatestimage
+
+node "producer" as producerService #white {
+
+
+    artifact "cpl_tp_producer:latest" as cpl_tp_producerlatestimage
     
 }
-producerService .... cpl_tp_producerlatestimage
-testerService .... cpl_tp_testerlatestimage
+node "tester" as testerService #white {
+
+
+    artifact "cpl_tp_tester:latest" as cpl_tp_testerlatestimage
+    
+}
+
+}
 
 
 @enduml

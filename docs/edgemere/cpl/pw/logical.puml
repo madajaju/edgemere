@@ -1,0 +1,96 @@
+@startuml
+
+
+package "PhysicalWorld" #lightblue {
+    
+        class PhysicalAsset {
+        }
+    
+        class Location {
+        }
+    
+        class Sensor {
+        }
+    
+        class CommunicationPathway {
+        }
+    }
+
+package "Common Physical Layer" #cccccc {
+    
+        class Device {
+        }
+    }
+
+
+package "PhysicalWorld" #lightblue {
+
+    interface "PhysicalWorld" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "PhysicalWorld" #lightblue {
+        class "CommunicationPathway" {
+                 string kind
+                 string protocol
+                             transmitData()
+            }
+                CommunicationPathway o--> "1" PhysicalAsset : asset
+                        CommunicationPathway o--> "1" Device : device
+            
+    
+    class "Location" {
+                 string name
+                 number lat
+                 number long
+                 number alt
+                 string address
+                 string notes
+                    }
+                Location *--> "n" Asset : assets
+            
+    
+    class "PhysicalAsset" {
+                 string name
+                 string assetType
+                             control()
+                     startMonitoring()
+                     stopMonitoring()
+            }
+                PhysicalAsset o--> "1" Location : location
+                        PhysicalAsset *--> "n" Sensor : sensor
+                        PhysicalAsset o--> "n" CommunicationPathway : pathway
+            
+    
+    class "PLC" {
+                 string name
+                 string kind
+                 string protocol
+                             communicateWithAsset()
+                     transmitData()
+            }
+                PLC o--> "1" PhysicalAsset : asset
+                        PLC o--> "1" Device : device
+            
+    
+        CommunicationPathway <|-- PLC
+    
+    class "Sensor" {
+                 string name
+                 string reading
+                             getReading()
+            }
+                Sensor o--> "1" Asset : asset
+            
+    
+
+}
+
+
+
+@enduml

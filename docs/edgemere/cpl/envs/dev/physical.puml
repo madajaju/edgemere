@@ -2,11 +2,11 @@
   interface CLI
   interface Web
   interface WebSocket
-package "Common Physical Layer" #cccccc {
+node "Common Physical Layer" #cccccc {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {
-    component " edgemere cpl" as binName
+    card " edgemere cpl" as binName
   }
   binName --> REST
 
@@ -14,11 +14,11 @@ package "Common Physical Layer" #cccccc {
       file "node server.js\n" as cpl_container
       REST --> cpl_container
 
-  
+
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
+
   }
   folder images #ffffff {
     collections "cpl" as cplimage
@@ -26,10 +26,10 @@ package "Common Physical Layer" #cccccc {
     cplimage <|-- ailtireswarm
     cpl_container --> cplimage
 
-  
+
       artifact "cpl_web" as cpl_web
       web_container --> cpl_web
-    
+
   }
 }
 CLI " edgemere cpl" -- binName

@@ -2,6 +2,8 @@
 
 left to right direction
 
+Actor "Actor" as Actor
+
 Actor "Application Developer" as ApplicationDeveloper
 
 Actor "Chief Data Officer" as ChiefDataOfficer
@@ -28,28 +30,68 @@ Actor "Stack Developer" as StackDeveloper
 
 
 
+rectangle "Common Physical Layer" as cpl  #cccccc {
+        usecase "Change Physical World" as ChangePhysicalWorld
+    
+        Actor ---> ChangePhysicalWorld
+        
+    usecase "Commission Physical Asset" as CommissionPhysicalAsset
+    
+        Actor ---> CommissionPhysicalAsset
+        
+    usecase "Connect Physical Asset to a Device" as ConnectPhysicalAssettoaDevice
+    
+        Actor ---> ConnectPhysicalAssettoaDevice
+        
+    usecase "Decommission Physical Asset" as DecommissionPhysicalAsset
+    
+        Actor ---> DecommissionPhysicalAsset
+        
+    usecase "Manage Physical Assets" as ManagePhysicalAssets
+    
+        Actor ---> ManagePhysicalAssets
+        
+    usecase "Monitor Physical World" as MonitorPhysicalWorld
+    
+        Actor ---> MonitorPhysicalWorld
+        
+    usecase "Replace Physical Asset" as ReplacePhysicalAsset
+    
+        Actor ---> ReplacePhysicalAsset
+        
+    usecase "Secure Data from Physical Asset" as SecureDatafromPhysicalAsset
+    
+        Actor ---> SecureDatafromPhysicalAsset
+        
+    usecase "Secure Physical Asset" as SecurePhysicalAsset
+    
+        Actor ---> SecurePhysicalAsset
+        
+
+}
+
 rectangle "Application Management Layer" as aml  #88cccc {
         usecase "Manage AI Models" as ManageAIModels
     
-        DataScientist ---> ManageAIModels
+        DataScientist --> ManageAIModels
         
-        DevOpsEngineer ---> ManageAIModels
+        DevOpsEngineer --> ManageAIModels
         
-        ApplicationDeveloper ---> ManageAIModels
+        ApplicationDeveloper --> ManageAIModels
         
-        DataEngineer ---> ManageAIModels
+        DataEngineer --> ManageAIModels
         
     usecase "Manage Applications" as ManageApplications
     
-        DevOpsEngineer ---> ManageApplications
+        DevOpsEngineer --> ManageApplications
         
-        ApplicationDeveloper ---> ManageApplications
+        ApplicationDeveloper --> ManageApplications
         
     usecase "Manage Workloads" as ManageWorkloads
     
-        ApplicationDeveloper ---> ManageWorkloads
+        ApplicationDeveloper --> ManageWorkloads
         
-        DevOpsEngineer ---> ManageWorkloads
+        DevOpsEngineer --> ManageWorkloads
         
 
 }
@@ -57,9 +99,9 @@ rectangle "Application Management Layer" as aml  #88cccc {
 rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
         usecase "Manage Data Instances" as ManageDataInstances
     
-        DataScientist --> ManageDataInstances
+        DataScientist ---> ManageDataInstances
         
-        ApplicationDeveloper --> ManageDataInstances
+        ApplicationDeveloper ---> ManageDataInstances
         
 
 }
@@ -67,9 +109,9 @@ rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
 rectangle "Service Management Layer" as sml  #88cc88 {
         usecase "Manage Stacks" as ManageStacks
     
-        StackDeveloper ---> ManageStacks
+        StackDeveloper --> ManageStacks
         
-        ApplicationDeveloper ---> ManageStacks
+        ApplicationDeveloper --> ManageStacks
         
 
 }
@@ -77,13 +119,13 @@ rectangle "Service Management Layer" as sml  #88cc88 {
 rectangle "Service Management Layer" as sml  #88cc88 {
         usecase "Manage Services" as ManageServices
     
-        StackDeveloper --> ManageServices
+        StackDeveloper ---> ManageServices
         
-        ApplicationDeveloper --> ManageServices
+        ApplicationDeveloper ---> ManageServices
         
     usecase "Manage Clouds" as ManageClouds
     
-        ITOperations --> ManageClouds
+        ITOperations ---> ManageClouds
         
 
 }
@@ -91,47 +133,47 @@ rectangle "Service Management Layer" as sml  #88cc88 {
 rectangle "edgemere" as edgemere  #ccaaff {
         usecase "Organize Solutions" as OrganizeSolutions
     
-        ApplicationDeveloper ---> OrganizeSolutions
+        ApplicationDeveloper --> OrganizeSolutions
         
-        DevOpsEngineer ---> OrganizeSolutions
+        DevOpsEngineer --> OrganizeSolutions
         
     usecase "Provide Business Information" as ProvideBusinessInformation
     
-        DataAnalyst ---> ProvideBusinessInformation
+        DataAnalyst --> ProvideBusinessInformation
         
-        DataEngineer ---> ProvideBusinessInformation
+        DataEngineer --> ProvideBusinessInformation
         
-        DataScientist ---> ProvideBusinessInformation
+        DataScientist --> ProvideBusinessInformation
         
-        DataSteward ---> ProvideBusinessInformation
+        DataSteward --> ProvideBusinessInformation
         
-        ChiefDataOfficier ---> ProvideBusinessInformation
+        ChiefDataOfficier --> ProvideBusinessInformation
         
     usecase "Coordinate Services" as CoordinateServices
     
-        StackDeveloper ---> CoordinateServices
+        StackDeveloper --> CoordinateServices
         
-        ITOperations ---> CoordinateServices
+        ITOperations --> CoordinateServices
         
-        DevOpsEngineer ---> CoordinateServices
+        DevOpsEngineer --> CoordinateServices
         
     usecase "Control Virtual Infrastructure" as ControlVirtualInfrastructure
     
-        ITOperations ---> ControlVirtualInfrastructure
+        ITOperations --> ControlVirtualInfrastructure
         
     usecase "Manage Physical Infrastructure" as ManagePhysicalInfrastructure
     
-        ITOperations ---> ManagePhysicalInfrastructure
+        ITOperations --> ManagePhysicalInfrastructure
         
     usecase "Secure Assets" as SecureAssets
     
-        SecurityEngineer ---> SecureAssets
+        SecurityEngineer --> SecureAssets
         
-        SecurityOperator ---> SecureAssets
+        SecurityOperator --> SecureAssets
         
     usecase "Govern Identities" as GovernIdentities
     
-        SecurityOperator ---> GovernIdentities
+        SecurityOperator --> GovernIdentities
         
 
 }
@@ -139,29 +181,29 @@ rectangle "edgemere" as edgemere  #ccaaff {
 rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
         usecase "Manage Data Procedures" as ManageDataProcedures
     
-        DataEngineer --> ManageDataProcedures
+        DataEngineer ---> ManageDataProcedures
         
-        ChiefDataOfficer --> ManageDataProcedures
+        ChiefDataOfficer ---> ManageDataProcedures
         
     usecase "Manage Data Adaptors" as ManageDataAdaptors
     
-        DataEngineer --> ManageDataAdaptors
+        DataEngineer ---> ManageDataAdaptors
         
-        DataScientist --> ManageDataAdaptors
+        DataScientist ---> ManageDataAdaptors
         
     usecase "Manage Data Blue Prints" as ManageDataBluePrints
     
-        DataEngineer --> ManageDataBluePrints
+        DataEngineer ---> ManageDataBluePrints
         
-        DataScientist --> ManageDataBluePrints
+        DataScientist ---> ManageDataBluePrints
         
     usecase "Manage Data Pipeline" as ManageDataPipeline
     
-        DataEngineer --> ManageDataPipeline
+        DataEngineer ---> ManageDataPipeline
         
     usecase "Manage Meta Data" as ManageMetaData
     
-        DataScientist --> ManageMetaData
+        DataScientist ---> ManageMetaData
         
 
 }
@@ -169,19 +211,19 @@ rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
 rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
         usecase "Manage Data Governance" as ManageDataGovernance
     
-        ChiefDataOfficer ---> ManageDataGovernance
+        ChiefDataOfficer --> ManageDataGovernance
         
     usecase "Manage Data Policies" as ManageDataPolicies
     
-        ChiefDataOfficer ---> ManageDataPolicies
+        ChiefDataOfficer --> ManageDataPolicies
         
     usecase "Manage Data Strategy" as ManageDataStrategy
     
-        ChiefDataOfficer ---> ManageDataStrategy
+        ChiefDataOfficer --> ManageDataStrategy
         
     usecase "Manage Data Sources" as ManageDataSources
     
-        DataEngineer ---> ManageDataSources
+        DataEngineer --> ManageDataSources
         
 
 }
@@ -189,11 +231,11 @@ rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
 rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
         usecase "Manage Data" as ManageData
     
-        DataScientist --> ManageData
+        DataScientist ---> ManageData
         
-        DataAnalyst --> ManageData
+        DataAnalyst ---> ManageData
         
-        DataEngineer --> ManageData
+        DataEngineer ---> ManageData
         
 
 }
@@ -201,9 +243,9 @@ rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
 rectangle "Application Management Layer" as aml  #88cccc {
         usecase "Manage Environment" as ManageEnvironment
     
-        ITOperations ---> ManageEnvironment
+        ITOperations --> ManageEnvironment
         
-        StackDeveloper ---> ManageEnvironment
+        StackDeveloper --> ManageEnvironment
         
 
 }
@@ -211,11 +253,11 @@ rectangle "Application Management Layer" as aml  #88cccc {
 rectangle "Common Physical Layer" as cpl  #cccccc {
         usecase "Manage Data Center" as ManageDataCenter
     
-        ITOperations --> ManageDataCenter
+        ITOperations ---> ManageDataCenter
         
     usecase "Manage Infrastructure" as ManageInfrastructure
     
-        ITOperations --> ManageInfrastructure
+        ITOperations ---> ManageInfrastructure
         
 
 }
@@ -223,27 +265,27 @@ rectangle "Common Physical Layer" as cpl  #cccccc {
 rectangle "Service Management Layer" as sml  #88cc88 {
         usecase "Find Resources" as FindResources
     
-        ITOperations ---> FindResources
+        ITOperations --> FindResources
         
     usecase "Manage Billing" as ManageBilling
     
-        ITOperations ---> ManageBilling
+        ITOperations --> ManageBilling
         
     usecase "Manage Cost Model" as ManageCostModel
     
-        ITOperations ---> ManageCostModel
+        ITOperations --> ManageCostModel
         
     usecase "Manage Multi Cloud" as ManageMultiCloud
     
-        ITOperations ---> ManageMultiCloud
+        ITOperations --> ManageMultiCloud
         
     usecase "Map Assets to Cloud" as MapAssetstoCloud
     
-        ITOperations ---> MapAssetstoCloud
+        ITOperations --> MapAssetstoCloud
         
     usecase "Map Services to Resources" as MapServicestoResources
     
-        ITOperations ---> MapServicestoResources
+        ITOperations --> MapServicestoResources
         
 
 }
@@ -251,7 +293,7 @@ rectangle "Service Management Layer" as sml  #88cc88 {
 rectangle "Service Management Layer" as sml  #88cc88 {
         usecase "Manage Assets" as ManageAssets
     
-        ITOperations --> ManageAssets
+        ITOperations ---> ManageAssets
         
 
 }
@@ -259,7 +301,7 @@ rectangle "Service Management Layer" as sml  #88cc88 {
 rectangle "Software Defined Infrastructure" as sdi  #cccc88 {
         usecase "Manage Resources" as ManageResources
     
-        ITOperations ---> ManageResources
+        ITOperations --> ManageResources
         
 
 }
@@ -267,11 +309,11 @@ rectangle "Software Defined Infrastructure" as sdi  #cccc88 {
 rectangle "Security Aspect" as sa  #cc8888 {
         usecase "Manage Security Profiles" as ManageSecurityProfiles
     
-        SecurityEngineer --> ManageSecurityProfiles
+        SecurityEngineer ---> ManageSecurityProfiles
         
     usecase "Apply Security Profiles" as ApplySecurityProfiles
     
-        SecurityOperator --> ApplySecurityProfiles
+        SecurityOperator ---> ApplySecurityProfiles
         
 
 }

@@ -1,0 +1,45 @@
+@startuml
+
+left to right direction
+
+
+
+
+
+
+
+node "c_p" #lightblue {
+
+
+    hexagon parentnet #black [
+            <b><color:white>parent</color></b>
+    ]
+    
+    portin " " as parentnetPortIn #black
+    parentnetPortIn -[#black]- parentnet
+    
+    hexagon childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+    
+    portout " " as childrennetPortOut #blue
+    childrennet -[#blue]- childrennetPortOut
+    
+    hexagon siblingsnet #red [
+            <b><color:white>siblings</color></b>
+    ]
+    
+
+node "web" as webService #white {
+    portOut " " as webServicesiblingsnet #red
+   webServicesiblingsnet -[#red]- siblingsnet
+   
+
+    artifact "c_p_web" as c_p_webimage
+    
+}
+
+}
+
+
+@enduml

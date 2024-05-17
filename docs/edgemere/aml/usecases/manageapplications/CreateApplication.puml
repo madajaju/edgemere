@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "Application Developer"
 
 
@@ -10,9 +11,16 @@ box Application Management Layer #88cccc
 end box
 
 
+group Given [Application Developer wants to create a new application]
 
-"Application Developer" -> aml: Create Application
+"Application Developer" --/ aml: Application Developer uses &#39;application/create&#39; method
+"aml" -> aml: Create Application
 
 
+
+"Application Developer" /-- aml: New application is created and managed under &#39;ManageApplications.CreateApplication&#39;
+
+
+end
 
 @enduml

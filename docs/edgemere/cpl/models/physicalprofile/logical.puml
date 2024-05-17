@@ -44,25 +44,15 @@ Model o--> "1" PhysicalProfile : parent
 
 
 
-    rectangle "Device" as Device #lightgreen {
+    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
     }
     
-        Device   o--> "1" Model : "profile"
+        AcceleratorHardware   o--> "1" Model : "profile"
     
     rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
     }
     
         AggregatedDevice   o--> "1" Model : "profile"
-    
-    rectangle "PhysicalProfile" as PhysicalProfile #lightgreen {
-    }
-    
-        PhysicalProfile   o--> "1" Model : "parent"
-    
-    rectangle "AcceleratorHardware" as AcceleratorHardware #lightgreen {
-    }
-    
-        AcceleratorHardware   o--> "1" Model : "profile"
     
     rectangle "ComputeHardware" as ComputeHardware #lightgreen {
     }
@@ -74,6 +64,11 @@ Model o--> "1" PhysicalProfile : parent
     
         DataCenter   o--> "1" Model : "profile"
     
+    rectangle "Device" as Device #lightgreen {
+    }
+    
+        Device   o--> "1" Model : "profile"
+    
     rectangle "Hardware" as Hardware #lightgreen {
     }
     
@@ -83,6 +78,11 @@ Model o--> "1" PhysicalProfile : parent
     }
     
         NetworkHardware   o--> "1" Model : "profile"
+    
+    rectangle "PhysicalProfile" as PhysicalProfile #lightgreen {
+    }
+    
+        PhysicalProfile   o--> "1" Model : "parent"
     
     rectangle "StorageHardware" as StorageHardware #lightgreen {
     }

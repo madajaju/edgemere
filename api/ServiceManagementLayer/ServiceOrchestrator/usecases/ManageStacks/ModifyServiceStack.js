@@ -1,13 +1,1 @@
-module.exports = {
-    name: 'Modify Service Stack',
-    description: 'Modify Service Stack is the description',
-    method: "data/create",
-    actors: {
-        'StackDeveloper': 'uses',
-    },
-    steps: [
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-    ]
-};
-
+module.exports = {"name":"Modify Service Stack","description":"Modify Service Stack is the description","method":"data/create","actors":{"StackDeveloper":"uses"},"steps":[{"action":"data/list","parameters":{"name":"hello","file":"./templates/world.yml"}},{"action":"data/list","parameters":{"name":"hello","file":"./templates/world.yml"}}],"uid":"ManageStacks.ModifyServiceStack","given":"A stack developer uses the 'Modify Service Stack'","when":"The developer selects data by name 'hello' from './templates/world.yml'","then":"The system should list the data from './templates/world.yml'"};

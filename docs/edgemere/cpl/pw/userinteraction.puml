@@ -1,0 +1,47 @@
+@startuml
+
+
+actor "Actor" as actor
+
+
+
+
+actor -> "PhysicalWorld": Change Physical World
+"PhysicalWorld" -> bin: data govern
+bin -> REST: data/govern
+
+actor -> "PhysicalWorld": Commission Physical Asset
+"PhysicalWorld" -> bin: data govern
+bin -> REST: data/govern
+
+actor -> "PhysicalWorld": Connect Physical Asset to a Device
+"PhysicalWorld" -> bin: data govern
+bin -> REST: data/govern
+
+actor -> "PhysicalWorld": Decommission Physical Asset
+"PhysicalWorld" -> bin: data govern
+bin -> REST: data/govern
+
+actor -> "PhysicalWorld": Manage Physical Assets
+"PhysicalWorld" -> bin: data govern
+bin -> REST: data/govern
+
+actor -> "PhysicalWorld": Monitor Physical World
+"PhysicalWorld" -> bin: data govern
+bin -> REST: data/govern
+
+actor -> "PhysicalWorld": Replace Physical Asset
+"PhysicalWorld" -> bin: data govern
+bin -> REST: data/govern
+
+actor -> "PhysicalWorld": Secure Data from Physical Asset
+"PhysicalWorld" -> bin: data govern
+bin -> REST: data/govern
+
+actor -> "PhysicalWorld": Secure Physical Asset
+"PhysicalWorld" -> bin: data govern
+bin -> REST: data/govern
+
+
+
+@enduml

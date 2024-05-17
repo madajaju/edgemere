@@ -19,7 +19,10 @@ module.exports = {
 
     exits: {
         success: {},
-        json: {},
+        json: (obj) => {
+            let jdr = datareq.toJSON;
+            return {resultes: jdr};
+        },
         notFound: {
             description: 'No item with the specified ID was found in the database.',
         }
@@ -34,10 +37,7 @@ module.exports = {
             // Create a Data Request
             let datareq = new DataRequest({name:"external",query:inputs.query});
             datareq.fulfill();
-            let jdr = datareq.toJSON;
-            env.res.json({results: jdr});
-            env.res.end(datareq.id);
-            // Return the data request.
+            return datareq;
         } else if (inputs.file) {
 
         }

@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Manage Security Profiles" as ManageSecurityProfiles #yellow
 
 Actor "SecurityEngineer" as SecurityEngineer
@@ -9,29 +11,53 @@ SecurityEngineer --> ManageSecurityProfiles
 
 
 
-usecase "CreateSecurityProfile" as CreateSecurityProfile #lightgrey
+json CreateSecurityProfile #lightyellow {
+    "Given": "A SecurityEngineer with a secoprofile yaml file",
+    "When": "The SecurityEngineer decides to create a new security profile named &#39;secProfile1&#39;",
+    "Then": "The system should successfully create and store the new security profile as specified in the yaml file"
+}
 
-ManageSecurityProfiles --> CreateSecurityProfile
+ManageSecurityProfiles <|-- CreateSecurityProfile
 
-usecase "DisableSecurityProfile" as DisableSecurityProfile #lightgrey
+json DisableSecurityProfile #lightyellow {
+    "Given": "A Security Profile named &#39;secProfileDSP&#39; has been created",
+    "When": "The SecurityEngineer uses &#39;securityprofile/disable&#39; method for &#39;secProfileDSP&#39;",
+    "Then": "The policies enforcing the identity are removed immediately and all affected identities are re-evaluated"
+}
 
-ManageSecurityProfiles --> DisableSecurityProfile
+ManageSecurityProfiles <|-- DisableSecurityProfile
 
-usecase "EnableSecurityProfile" as EnableSecurityProfile #lightgrey
+json EnableSecurityProfile #lightyellow {
+    "Given": "A Security Profile has been created and disabled",
+    "When": "Security Engineer enables the Security Profile",
+    "Then": "All attached identities in the system should re-evaluate the policies"
+}
 
-ManageSecurityProfiles --> EnableSecurityProfile
+ManageSecurityProfiles <|-- EnableSecurityProfile
 
-usecase "MonitorSecurityProfile" as MonitorSecurityProfile #lightgrey
+json MonitorSecurityProfile #lightyellow {
+    "Given": "Security engineer has access to the security profile",
+    "When": "Security engineer monitors the status of the security profile",
+    "Then": "Security engineer can see how many identities are enforced by the profile and how many polices are being used"
+}
 
-ManageSecurityProfiles --> MonitorSecurityProfile
+ManageSecurityProfiles <|-- MonitorSecurityProfile
 
-usecase "RemoveSecurityProfile" as RemoveSecurityProfile #lightgrey
+json RemoveSecurityProfile #lightyellow {
+    "Given": "A security profile is attached to multiple identities",
+    "When": "Security Engineer uses securityprofile/destroy method",
+    "Then": "All identities should be re-evaluated"
+}
 
-ManageSecurityProfiles --> RemoveSecurityProfile
+ManageSecurityProfiles <|-- RemoveSecurityProfile
 
-usecase "TestSecurityProfile" as TestSecurityProfile #lightgrey
+json TestSecurityProfile #lightyellow {
+    "Given": "Three security profiles are created with conflicting policies",
+    "When": "A &#39;test&#39; is performed on one of the security profiles",
+    "Then": "The system identifies the conflicts within the security profile"
+}
 
-ManageSecurityProfiles --> TestSecurityProfile
+ManageSecurityProfiles <|-- TestSecurityProfile
 
 
 

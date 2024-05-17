@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Coordinate Services" as CoordinateServices #yellow
 
 Actor "Stack Developer" as StackDeveloper

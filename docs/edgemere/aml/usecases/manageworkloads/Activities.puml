@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Manage Workloads" as ManageWorkloads #yellow
 
 Actor "Application Developer" as ApplicationDeveloper
@@ -13,25 +15,45 @@ DevOpsEngineer --> ManageWorkloads
 
 
 
-usecase "CreateWorkload" as CreateWorkload #lightgrey
+json CreateWorkload #lightyellow {
+    "Given": "An application developer is using the system",
+    "When": "The developer uses the &#39;workload/create&#39; method",
+    "Then": "A new workload is successfully created in the system"
+}
 
-ManageWorkloads --> CreateWorkload
+ManageWorkloads <|-- CreateWorkload
 
-usecase "DeployWorkload" as DeployWorkload #lightgrey
+json DeployWorkload #lightyellow {
+    "Given": "An application developed and ready to be deployed",
+    "When": "The Application Developer hands over the application to DevOps Engineer",
+    "Then": "The DevOps Engineer uses the &#39;workload/deploy&#39; method to deploy the workload"
+}
 
-ManageWorkloads --> DeployWorkload
+ManageWorkloads <|-- DeployWorkload
 
-usecase "DestroyWorkload" as DestroyWorkload #lightgrey
+json DestroyWorkload #lightyellow {
+    "Given": "DevOps Engineer has access to workload/destroy method",
+    "When": "DevOps Engineer uses workload/destroy method",
+    "Then": "The workload should be destroyed"
+}
 
-ManageWorkloads --> DestroyWorkload
+ManageWorkloads <|-- DestroyWorkload
 
-usecase "MonitorWorkload" as MonitorWorkload #lightgrey
+json MonitorWorkload #lightyellow {
+    "Given": "The system has workload to be monitored",
+    "When": "Application Developer or DevOps Engineer uses the system",
+    "Then": "The system shows the current workload status"
+}
 
-ManageWorkloads --> MonitorWorkload
+ManageWorkloads <|-- MonitorWorkload
 
-usecase "UpdateWorkload" as UpdateWorkload #lightgrey
+json UpdateWorkload #lightyellow {
+    "Given": "Application Developer or DevOps Engineer is using the system",
+    "When": "They try to update the workload",
+    "Then": "The system updates the workload as per their request"
+}
 
-ManageWorkloads --> UpdateWorkload
+ManageWorkloads <|-- UpdateWorkload
 
 
 

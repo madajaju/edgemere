@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Manage Policies for Multi Cloud',
-    description: 'IT Operations adds,removes,enables and disables policies to a multicloud',
-    method: "multicloud/addpolicies",
-    actors: {
-        'IT Operations': 'uses',
-    },
-};
-
+module.exports = {"name":"Manage Policies for Multi Cloud","description":"IT Operations adds,removes,enables and disables policies to a multicloud","method":"multicloud/addpolicies","actors":{"IT Operations":"uses"},"uid":"ManageMultiCloud.ManagePoliciesforMultiCloud","given":"IT Operations needs to manage policies for Multicloud","when":"IT Operations adds, removes, enables or disables policies","then":"The multicloud systems should update based on the changes"};

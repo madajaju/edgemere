@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Enable Environment',
-    description: 'IT Operations has the ability to enable an environment to manage services',
-    method: "environment/enable",
-    actors: {
-        'IT Operations': 'uses',
-    },
-};
-
+module.exports = {"name":"Enable Environment","description":"IT Operations has the ability to enable an environment to manage services","method":"environment/enable","actors":{"IT Operations":"uses"},"uid":"ManageEnvironment.EnableEnvironment","given":"IT Operations has the ability to manage services","when":"IT Operations enables an environment","then":"The environment should be ready to manage services"};

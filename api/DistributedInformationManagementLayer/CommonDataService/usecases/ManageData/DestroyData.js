@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Destroy Data',
-    description: 'Destroy Data is the description',
-    method: "data/source/name",
-    actors: {
-        'Data Steward': 'uses',
-    },
-};
-
+module.exports = {"name":"Destroy Data","description":"Destroy Data is the description","method":"data/source/name","actors":{"Data Steward":"uses"},"uid":"ManageData.DestroyData","given":"Data Steward has access to the data source","when":"Data Steward uses method to destroy data","then":"The data from the particular source should be destroyed"};

@@ -180,6 +180,39 @@ edgemeredimlddfmetadata -- edgemeredimlddfmetadatalist
     
 
 
+        rectangle "Change Physical World" as ChangePhysicalWorld #ffffaa {
+            ("Adjust Temperature")/ as ActorChangePhysicalWorldAdjustTemperature
+        }
+    
+    edgemeredimlddfdatacreate <-- ActorChangePhysicalWorldAdjustTemperature
+    
+        rectangle "Change Physical World" as ChangePhysicalWorld #ffffaa {
+            ("Toogle Switch")/ as ActorChangePhysicalWorldtoggleSwitch
+        }
+    
+    edgemeredimlddfdatacreate <-- ActorChangePhysicalWorldtoggleSwitch
+    
+
+
+        rectangle "Connect Physical Asset to a Device" as ConnectPhysicalAssettoaDevice #ffffaa {
+            ("Asset-Digital Device Connectivity")/ as ActorConnectPhysicalAssettoaDeviceAsset-DigitalDeviceConnectivity
+        }
+    
+    edgemeredimlddfdatacreate <-- ActorConnectPhysicalAssettoaDeviceAsset-DigitalDeviceConnectivity
+    
+
+
+
+        rectangle "Monitor Physical World" as MonitorPhysicalWorld #ffffaa {
+            ("Continuous Monitoring")/ as ActorMonitorPhysicalWorldContinuousMonitoring
+        }
+    
+    edgemeredimlddfdatacreate <-- ActorMonitorPhysicalWorldContinuousMonitoring
+    
+
+
+
+
 
 
         rectangle "Manage Data" as ManageData #ffffaa {

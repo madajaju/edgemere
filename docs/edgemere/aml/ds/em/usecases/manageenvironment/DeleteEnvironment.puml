@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "IT Operations"
 
 
@@ -10,9 +11,16 @@ box Environment Management #88cc88
 end box
 
 
+group Given [IT Operations has access to an environment with running services]
 
-"IT Operations" -> em: Delete Environment
+"IT Operations" --/ em: IT Operations uses the environment/destroy method
+"em" -> em: Delete Environment
 
 
+
+"IT Operations" /-- em: The environment is deleted and all services in the environment are suspended
+
+
+end
 
 @enduml

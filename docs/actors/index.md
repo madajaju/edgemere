@@ -20,6 +20,7 @@ is an example of a centralized organizational structure of the actors of the sys
 
 # Actors
 
+* [Actor](actor-actor) - Long description
 * [Application Developer](actor-applicationdeveloper) - The Application Developer work in coordination with DevOps to manage services, applications and workloads through the development pipeline.
 * [Chief Data Officer](actor-chiefdataofficer) - Long description
 * [ChiefDataOfficier](actor-chiefdataofficier) - Long description

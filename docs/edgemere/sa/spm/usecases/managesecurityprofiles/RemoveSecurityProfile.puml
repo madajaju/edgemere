@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "SecurityEngineer"
 
 
@@ -17,8 +18,10 @@ box Software Defined Infrastructure #cccc88
 box Security Profile Manager #cc8888
     end box
 
+group Given [A security profile is attached to multiple identities]
 
-"SecurityEngineer" -> spm: Remove Security Profile
+"SecurityEngineer" --/ spm: Security Engineer uses securityprofile/destroy method
+"spm" -> spm: Remove Security Profile
 
     spm -> "storageresource": create (name: secProfileRSP,file: ./templates/secprofile.yml)
 
@@ -29,5 +32,10 @@ box Security Profile Manager #cc8888
     "securityprofile" --/ EventBus: securityprofile.destroy
 
 
+
+"SecurityEngineer" /-- spm: All identities should be re-evaluated
+
+
+end
 
 @enduml

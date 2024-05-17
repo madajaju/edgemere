@@ -135,6 +135,15 @@ edgemeresmlcbservice -- edgemeresmlcbservicemapresources
 
 
 
+
+
+
+
+
+
+
+
+
         rectangle "Manage Multi Cloud" as ManageMultiCloud #ffffaa {
             ("Add Cloud to Multi Cloud")/ as ITOperationsManageMultiCloudAddCloudtoMultiCloud
         }

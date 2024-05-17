@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "StackDeveloper"
 
 actor "ApplicationDeveloper"
@@ -16,19 +17,10 @@ box Software Defined Infrastructure #cccc88
             participant storageresource
     end box
 
+group Given [A stack developer with access to current application stack]
 
-"StackDeveloper" -> so: Modify Application Stack
-
-    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
-
-    "storageresource" --/ EventBus: data.list
-
-    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
-
-    "storageresource" --/ EventBus: data.list
-
-
-"ApplicationDeveloper" -> so: Modify Application Stack
+"StackDeveloper" --/ so: The developer modifies the application stack
+"so" -> so: Modify Application Stack
 
     so -> "storageresource": list (name: hello,file: ./templates/world.yml)
 
@@ -39,5 +31,24 @@ box Software Defined Infrastructure #cccc88
     "storageresource" --/ EventBus: data.list
 
 
+"ApplicationDeveloper" --/ so: The developer modifies the application stack
+"so" -> so: Modify Application Stack
+
+    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
+
+    "storageresource" --/ EventBus: data.list
+
+    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
+
+    "storageresource" --/ EventBus: data.list
+
+
+
+"StackDeveloper" /-- so: The parameters of the application stack will be updated
+
+"ApplicationDeveloper" /-- so: The parameters of the application stack will be updated
+
+
+end
 
 @enduml

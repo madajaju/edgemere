@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "IT Operations"
 
 
@@ -16,8 +17,10 @@ box Common Physical Layer #cccccc
             participant datacenter
     end box
 
+group Given [IT operations are updating data center characteristics]
 
-"IT Operations" -> cpl: Update Data Center
+"IT Operations" --/ cpl: a new device is created and added to an aggregated device and then to a data center
+"cpl" -> cpl: Update Data Center
 
     cpl -> "device": create (name: host1,file: ./templates/device.yaml)
 
@@ -60,5 +63,10 @@ box Common Physical Layer #cccccc
     "datacenter" --/ EventBus: datacenter.adddevices
 
 
+
+"IT Operations" /-- cpl: the characteristics of the data center are updated
+
+
+end
 
 @enduml

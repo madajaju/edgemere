@@ -79,6 +79,15 @@ hexagon "resource.ready" as resourceready
 
 
 
+
+
+
+
+
+
+
+
+
         rectangle "Manage Resources" as ManageResources #ffffaa {
             ("Get Resources")/ as ITOperationsManageResourcesGetResources
         }

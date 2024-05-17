@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Egress Data',
-    description: 'Egress Data is the description',
-    method: "data/source/name",
-    actors: {
-        'Data Steward': 'uses',
-    },
-};
-
+module.exports = {"name":"Egress Data","description":"Egress Data is the description","method":"data/source/name","actors":{"Data Steward":"uses"},"uid":"ManageData.EgressData","given":"A data steward uses the system","when":"Data Steward selects 'data/source/name'","then":"Egress Data is displayed to the Data Steward"};

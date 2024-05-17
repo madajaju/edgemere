@@ -19,7 +19,7 @@ module.exports = {
 
     exits: {
         success: {},
-        json: {},
+        json: (obj) => { return obj; },
         notFound: {
             description: 'No item with the specified ID was found in the database.',
         }
@@ -28,7 +28,7 @@ module.exports = {
     fn: function (inputs, env) {
         // inputs contains the obj for the this method.
         let dataSource = DataSource.find(inputs.name);
-        inputs.file = env.req.body.file;
+        // inputs.file = env.req.body.file;
         for (let name in inputs.file) {
             let datumDef = inputs.file[name];
             let datum = new Data({name: name, access: name});
@@ -50,6 +50,6 @@ module.exports = {
                 }
             }
         }
-        env.res.end("Done");
+        return {message: "Done"};
     }
 };

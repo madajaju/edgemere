@@ -3,133 +3,152 @@
 left to right direction
 
 
-boundary parent #black
 
 
-entity children #blue
-
-rectangle "aml" as amlStack #88cccc {
-    queue amlStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "aml" as amlStack #88cccc {
+    portin "parent" as amlStackPortIn #blue
 }
-rectangle "cpl" as cplStack #cccccc {
-    queue cplStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "cpl" as cplStack #cccccc {
+    portin "parent" as cplStackPortIn #blue
 }
-rectangle "diml" as dimlStack #ffcc88 {
-    queue dimlStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "diml" as dimlStack #ffcc88 {
+    portin "parent" as dimlStackPortIn #blue
 }
-rectangle "ia" as iaStack #cc8888 {
-    queue iaStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "ia" as iaStack #cc8888 {
+    portin "parent" as iaStackPortIn #blue
 }
-rectangle "sa" as saStack #cc8888 {
-    queue saStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "sa" as saStack #cc8888 {
+    portin "parent" as saStackPortIn #blue
 }
-rectangle "sml" as smlStack #88cc88 {
-    queue smlStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "sml" as smlStack #88cc88 {
+    portin "parent" as smlStackPortIn #blue
 }
-rectangle "sdi" as sdiStack #cccc88 {
-    queue sdiStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "sdi" as sdiStack #cccc88 {
+    portin "parent" as sdiStackPortIn #blue
 }
 
 
 
-package "edgemere" #ccaaff {
-    queue parentnet #black [
+node "edgemere" #ccaaff {
+
+
+    hexagon parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#black]- parent
+    portin " " as parentnetPortIn #black
+    parentnetPortIn -[#black]- parentnet
     
-    queue childrennet #blue [
+    hexagon childrennet #blue [
             <b><color:white>children</color></b>
     ]
     
-    childrennet -[#blue]- children
+    portout " " as childrennetPortOut #blue
+    childrennet -[#blue]- childrennetPortOut
     
-    queue siblingsnet #red [
+    hexagon siblingsnet #red [
             <b><color:white>siblings</color></b>
     ]
     
 
-node "aml" as amlService
-node "cpl" as cplService
-node "diml" as dimlService
-node "ia" as iaService
-node "sa" as saService
-node "sml" as smlService
-node "sdi" as sdiService
-node "web" as webService
-node "doc" as docService
+node "aml" as amlService #white {
+    portOut " " as amlServicechildrennet #blue
+   amlServicechildrennet -[#blue]- childrennet
+   
+    collections "aml" as amlimage
+    
+}
+node "cpl" as cplService #white {
+    portOut " " as cplServicechildrennet #blue
+   cplServicechildrennet -[#blue]- childrennet
+   
+    collections "cpl" as cplimage
+    
+}
+node "diml" as dimlService #white {
+    portOut " " as dimlServicechildrennet #blue
+   dimlServicechildrennet -[#blue]- childrennet
+   
+    collections "diml" as dimlimage
+    
+}
+node "ia" as iaService #white {
+    portOut " " as iaServicechildrennet #blue
+   iaServicechildrennet -[#blue]- childrennet
+   
+    collections "ia" as iaimage
+    
+}
+node "sa" as saService #white {
+    portOut " " as saServicechildrennet #blue
+   saServicechildrennet -[#blue]- childrennet
+   
+    collections "sa" as saimage
+    
+}
+node "sml" as smlService #white {
+    portOut " " as smlServicechildrennet #blue
+   smlServicechildrennet -[#blue]- childrennet
+   
+    collections "sml" as smlimage
+    
+}
+node "sdi" as sdiService #white {
+    portOut " " as sdiServicechildrennet #blue
+   sdiServicechildrennet -[#blue]- childrennet
+   
+    collections "sdi" as sdiimage
+    
+}
+node "web" as webService #white {
 
-        collections "aml" as amlimage
-            collections "cpl" as cplimage
-            collections "diml" as dimlimage
-            collections "ia" as iaimage
-            collections "sa" as saimage
-            collections "sml" as smlimage
-            collections "sdi" as sdiimage
+    portIn " " as webServiceparentnet #black
+    parentnet -[#black]- webServiceparentnet
+        portOut " " as webServicesiblingsnet #red
+   webServicesiblingsnet -[#red]- siblingsnet
+   
+
+    artifact "edgemere_web" as edgemere_webimage
     
-        artifact "edgemere_web" as edgemere_webimage
-    
-        artifact "edgemere_doc" as edgemere_docimage
+}
+node "doc" as docService #white {
+    portOut " " as docServicesiblingsnet #red
+   docServicesiblingsnet -[#red]- siblingsnet
+   
+
+    artifact "edgemere_doc" as edgemere_docimage
     
 }
 
-amlService -[#blue]- childrennet
-
-cplService -[#blue]- childrennet
-
-dimlService -[#blue]- childrennet
-
-iaService -[#blue]- childrennet
-
-saService -[#blue]- childrennet
-
-smlService -[#blue]- childrennet
-
-sdiService -[#blue]- childrennet
-
-webService -[#blue]- childrennet
-
-webService -[#red]- siblingsnet
-
-docService -[#red]- siblingsnet
-amlService .... amlimage
-cplService .... cplimage
-dimlService .... dimlimage
-iaService .... iaimage
-saService .... saimage
-smlService .... smlimage
-sdiService .... sdiimage
-webService .... edgemere_webimage
-docService .... edgemere_docimage
+}
 
 amlimage --> amlStack
     
+    childrennetPortOut -[#blue]- amlStackPortIn
+    
 cplimage --> cplStack
+    
+    childrennetPortOut -[#blue]- cplStackPortIn
     
 dimlimage --> dimlStack
     
+    childrennetPortOut -[#blue]- dimlStackPortIn
+    
 iaimage --> iaStack
+    
+    childrennetPortOut -[#blue]- iaStackPortIn
     
 saimage --> saStack
     
+    childrennetPortOut -[#blue]- saStackPortIn
+    
 smlimage --> smlStack
     
+    childrennetPortOut -[#blue]- smlStackPortIn
+    
 sdiimage --> sdiStack
+    
+    childrennetPortOut -[#blue]- sdiStackPortIn
     
 
 @enduml

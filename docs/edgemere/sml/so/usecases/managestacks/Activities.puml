@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Manage Stacks" as ManageStacks #yellow
 
 Actor "Stack Developer" as StackDeveloper
@@ -13,53 +15,101 @@ ApplicationDeveloper --> ManageStacks
 
 
 
-usecase "BuildStack" as BuildStack #lightgrey
+json BuildStack #lightyellow {
+    "Given": "A DevOps Engineer has access to data/create",
+    "When": "",
+    "Then": "A stack is built using the provided file"
+}
 
-ManageStacks --> BuildStack
+ManageStacks <|-- BuildStack
 
-usecase "CreateApplicationStack" as CreateApplicationStack #lightgrey
+json CreateApplicationStack #lightyellow {
+    "Given": "The application and stack developers have access to ./templates/world.yml",
+    "When": "ApplicationDeveloper and StackDeveloper use data/list method",
+    "Then": "The &#39;hello&#39; application stack is created"
+}
 
-ManageStacks --> CreateApplicationStack
+ManageStacks <|-- CreateApplicationStack
 
-usecase "CreateServiceStack" as CreateServiceStack #lightgrey
+json CreateServiceStack #lightyellow {
+    "Given": "StackDeveloper uses a specific file",
+    "When": "file &#39;./templates/world.yml&#39; is selected",
+    "Then": "data list with &#39;hello&#39; name is created"
+}
 
-ManageStacks --> CreateServiceStack
+ManageStacks <|-- CreateServiceStack
 
-usecase "DeployStack" as DeployStack #lightgrey
+json DeployStack #lightyellow {
+    "Given": "A DevOps engineer can deploy a stack to an environment with parameters",
+    "When": "Policies are attached to the stack during deployment",
+    "Then": "Service Orchestrator creates a landscape request to match the stack requirements"
+}
 
-ManageStacks --> DeployStack
+ManageStacks <|-- DeployStack
 
-usecase "ModifyApplicationStack" as ModifyApplicationStack #lightgrey
+json ModifyApplicationStack #lightyellow {
+    "Given": "A stack developer with access to current application stack",
+    "When": "The developer modifies the application stack",
+    "Then": "The parameters of the application stack will be updated"
+}
 
-ManageStacks --> ModifyApplicationStack
+ManageStacks <|-- ModifyApplicationStack
 
-usecase "ModifyServiceStack" as ModifyServiceStack #lightgrey
+json ModifyServiceStack #lightyellow {
+    "Given": "A stack developer uses the &#39;Modify Service Stack&#39;",
+    "When": "The developer selects data by name &#39;hello&#39; from &#39;./templates/world.yml&#39;",
+    "Then": "The system should list the data from &#39;./templates/world.yml&#39;"
+}
 
-ManageStacks --> ModifyServiceStack
+ManageStacks <|-- ModifyServiceStack
 
-usecase "TestApplicationStack" as TestApplicationStack #lightgrey
+json TestApplicationStack #lightyellow {
+    "Given": "The Test Application Stack is the description",
+    "When": "StackDeveloper and ApplicationDeveloper uses",
+    "Then": "data/list in ./templates/world.yml is called twice with parameters &#39;hello&#39;"
+}
 
-ManageStacks --> TestApplicationStack
+ManageStacks <|-- TestApplicationStack
 
-usecase "TestServiceStack" as TestServiceStack #lightgrey
+json TestServiceStack #lightyellow {
+    "Given": "Test Service Stack with StackDeveloper in use",
+    "When": "StackDeveloper runs data/list commands with specified parameters",
+    "Then": "ManageStacks.TestServiceStack gets updated"
+}
 
-ManageStacks --> TestServiceStack
+ManageStacks <|-- TestServiceStack
 
-usecase "UninstallStack" as UninstallStack #lightgrey
+json UninstallStack #lightyellow {
+    "Given": "A DevOps Engineer has a running stack with services",
+    "When": "The Engineer decides to shut down the stack",
+    "Then": "The stack and all of its services are uninstalled"
+}
 
-ManageStacks --> UninstallStack
+ManageStacks <|-- UninstallStack
 
-usecase "UpdateStack" as UpdateStack #lightgrey
+json UpdateStack #lightyellow {
+    "Given": "The DevOps Engineer uses the deployed stack",
+    "When": "Policy changes, updates to stack or service definitions, or environmental changes occur",
+    "Then": "The stack is updated using the &#39;stack/update&#39; method"
+}
 
-ManageStacks --> UpdateStack
+ManageStacks <|-- UpdateStack
 
-usecase "VersionApplicationStack" as VersionApplicationStack #lightgrey
+json VersionApplicationStack #lightyellow {
+    "Given": "Application Developer has access to the version application stack",
+    "When": "The developer issues the &#39;data/create&#39; command",
+    "Then": "The new version of application stack should be created"
+}
 
-ManageStacks --> VersionApplicationStack
+ManageStacks <|-- VersionApplicationStack
 
-usecase "VersionServiceStack" as VersionServiceStack #lightgrey
+json VersionServiceStack #lightyellow {
+    "Given": "A StackDeveloper uses Version Service Stack",
+    "When": "Developer performs &#39;data/create&#39; with name &#39;hello&#39; and file &#39;./templates/world.yml&#39;",
+    "Then": "The &#39;data/list&#39; action is performed for the same name and file"
+}
 
-ManageStacks --> VersionServiceStack
+ManageStacks <|-- VersionServiceStack
 
 
 

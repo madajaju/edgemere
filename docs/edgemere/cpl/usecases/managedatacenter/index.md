@@ -42,6 +42,11 @@ IT Operations manages data centers by creating, deleting, enabling and disabling
 IT Operator creates data centers and allows them to add devices and aggregated devices
 
 ![Scenario CreateDataCenter](./CreateDataCenter.png)
+#### Criteria
+
+* Given - IT Operator has access to the system.
+* When - Operator creates a data center, devices, and aggregated devices
+* Then - IT Operator has access to the system.
 
 #### Steps
 1. [device create --name host1 --file ./templates/device.yaml](#action-device-create)
@@ -70,6 +75,11 @@ IT Operator creates data centers and allows them to add devices and aggregated d
 IT Operations can disable a data center that will disable all of the devices in the data center. This can be used to test business continuity, move data center devices or decomission a data center.
 
 ![Scenario DisableDataCenter](./DisableDataCenter.png)
+#### Criteria
+
+* Given - IT Operations has created data center with host devices
+* When - IT Operations executes data center disable command
+* Then - IT Operations has created data center with host devices
 
 #### Steps
 1. [device create --name host1 --file ./templates/device.yaml](#action-device-create)
@@ -89,6 +99,11 @@ IT Operations can disable a data center that will disable all of the devices in 
 IT Operations can enable a data center that has been disabled
 
 ![Scenario EnableDataCenter](./EnableDataCenter.png)
+#### Criteria
+
+* Given - A disabled data center exists
+* When - IT Operations enable the data center
+* Then - A disabled data center exists
 
 #### Steps
 1. [device create --name host1 --file ./templates/device.yaml](#action-device-create)
@@ -109,6 +124,11 @@ IT Operations can enable a data center that has been disabled
 IT Operations can remove a Data Center and all of its devices and aggregated devices
 
 ![Scenario RemoveDataCenter](./RemoveDataCenter.png)
+#### Criteria
+
+* Given - IT operations has created several devices and a data center
+* When - IT operations initiates the process to remove a data center
+* Then - IT operations has created several devices and a data center
 
 #### Steps
 1. [device create --name host1 --file ./templates/device.yaml](#action-device-create)
@@ -134,6 +154,11 @@ IT Operations can remove a Data Center and all of its devices and aggregated dev
 IT Operations updates data center characteristics
 
 ![Scenario UpdateDataCenter](./UpdateDataCenter.png)
+#### Criteria
+
+* Given - IT operations are updating data center characteristics
+* When - a new device is created and added to an aggregated device and then to a data center
+* Then - IT operations are updating data center characteristics
 
 #### Steps
 1. [device create --name host1 --file ./templates/device.yaml](#action-device-create)

@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Manage Environment" as ManageEnvironment #yellow
 
 Actor "IT Operations" as ITOperations
@@ -13,29 +15,53 @@ StackDeveloper --> ManageEnvironment
 
 
 
-usecase "CreateEnvironment" as CreateEnvironment #lightgrey
+json CreateEnvironment #lightyellow {
+    "Given": "IT Operations has access to create an environment",
+    "When": "IT Operations creates an environment and assigns a Multi Cloud ",
+    "Then": "The environment should be successfully created with the assigned Multi Cloud"
+}
 
-ManageEnvironment --> CreateEnvironment
+ManageEnvironment <|-- CreateEnvironment
 
-usecase "DeleteEnvironment" as DeleteEnvironment #lightgrey
+json DeleteEnvironment #lightyellow {
+    "Given": "IT Operations has access to an environment with running services",
+    "When": "IT Operations uses the environment/destroy method",
+    "Then": "The environment is deleted and all services in the environment are suspended"
+}
 
-ManageEnvironment --> DeleteEnvironment
+ManageEnvironment <|-- DeleteEnvironment
 
-usecase "DisableEnvironment" as DisableEnvironment #lightgrey
+json DisableEnvironment #lightyellow {
+    "Given": "IT Operations has access to manage environments",
+    "When": "IT Operations executes the &#39;environment/disable&#39; command",
+    "Then": "Services are suspended and cannot launch in the disabled environment"
+}
 
-ManageEnvironment --> DisableEnvironment
+ManageEnvironment <|-- DisableEnvironment
 
-usecase "EnableEnvironment" as EnableEnvironment #lightgrey
+json EnableEnvironment #lightyellow {
+    "Given": "IT Operations has the ability to manage services",
+    "When": "IT Operations enables an environment",
+    "Then": "The environment should be ready to manage services"
+}
 
-ManageEnvironment --> EnableEnvironment
+ManageEnvironment <|-- EnableEnvironment
 
-usecase "ManagePoliciesinEnvironment" as ManagePoliciesinEnvironment #lightgrey
+json ManagePoliciesinEnvironment #lightyellow {
+    "Given": "IT Operations is able to modify environment polices",
+    "When": "IT Operations adds or removes policies from the environment",
+    "Then": "The environment policies are updated accordingly"
+}
 
-ManageEnvironment --> ManagePoliciesinEnvironment
+ManageEnvironment <|-- ManagePoliciesinEnvironment
 
-usecase "UpdateEnvironment" as UpdateEnvironment #lightgrey
+json UpdateEnvironment #lightyellow {
+    "Given": "IT Operations has access to the environment settings",
+    "When": "IT Operations wants to update the attributes of the environment",
+    "Then": "The changes made by IT Operations should be reflected in the environment attributes"
+}
 
-ManageEnvironment --> UpdateEnvironment
+ManageEnvironment <|-- UpdateEnvironment
 
 
 

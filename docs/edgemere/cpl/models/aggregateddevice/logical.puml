@@ -49,11 +49,6 @@ Model o--> "1" AggregatedDevice : parent
 
 
 
-    rectangle "Device" as Device #lightgreen {
-    }
-    
-        Device   o--> "1" Model : "parent"
-    
     rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
     }
     
@@ -63,6 +58,11 @@ Model o--> "1" AggregatedDevice : parent
     }
     
         DataCenter   *--> "n" Model : "adevices"
+    
+    rectangle "Device" as Device #lightgreen {
+    }
+    
+        Device   o--> "1" Model : "parent"
     
     rectangle "Cloud" as Cloud #lightgreen {
     }

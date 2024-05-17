@@ -3,117 +3,131 @@
 left to right direction
 
 
-boundary parent #black
 
 
-entity children #blue
-
-rectangle "sml_cb" as sml_cbStack #88cc88 {
-    queue sml_cbStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "sml_cb" as sml_cbStack #88cc88 {
+    portin "parent" as sml_cbStackPortIn #blue
 }
-rectangle "sml_em" as sml_emStack #88cc88 {
-    queue sml_emStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "sml_em" as sml_emStack #88cc88 {
+    portin "parent" as sml_emStackPortIn #blue
 }
-rectangle "sml_pe" as sml_peStack #88cc88 {
-    queue sml_peStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "sml_pe" as sml_peStack #88cc88 {
+    portin "parent" as sml_peStackPortIn #blue
 }
-rectangle "sml_sc" as sml_scStack #88cc88 {
-    queue sml_scStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "sml_sc" as sml_scStack #88cc88 {
+    portin "parent" as sml_scStackPortIn #blue
 }
-rectangle "sml_so" as sml_soStack #88cc88 {
-    queue sml_soStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "sml_so" as sml_soStack #88cc88 {
+    portin "parent" as sml_soStackPortIn #blue
 }
-rectangle "sml_sr" as sml_srStack #88cc88 {
-    queue sml_srStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "sml_sr" as sml_srStack #88cc88 {
+    portin "parent" as sml_srStackPortIn #blue
 }
 
 
 
-package "sml" #88cc88 {
-    queue parentnet #black [
+node "sml" #88cc88 {
+
+
+    hexagon parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#black]- parent
+    portin " " as parentnetPortIn #black
+    parentnetPortIn -[#black]- parentnet
     
-    queue childrennet #blue [
+    hexagon childrennet #blue [
             <b><color:white>children</color></b>
     ]
     
-    childrennet -[#blue]- children
+    portout " " as childrennetPortOut #blue
+    childrennet -[#blue]- childrennetPortOut
     
-    queue siblingsnet #red [
+    hexagon siblingsnet #red [
             <b><color:white>siblings</color></b>
     ]
     
 
-node "broker" as brokerService
-node "envmangaer" as envmangaerService
-node "provision" as provisionService
-node "controller" as controllerService
-node "orchestrator" as orchestratorService
-node "repo" as repoService
-node "web" as webService
-
-        collections "sml_cb" as sml_cbimage
-            collections "sml_em" as sml_emimage
-            collections "sml_pe" as sml_peimage
-            collections "sml_sc" as sml_scimage
-            collections "sml_so" as sml_soimage
-            collections "sml_sr" as sml_srimage
+node "broker" as brokerService #white {
+    portOut " " as brokerServicechildrennet #blue
+   brokerServicechildrennet -[#blue]- childrennet
+   
+    collections "sml_cb" as sml_cbimage
     
-        artifact "sml_web" as sml_webimage
+}
+node "envmangaer" as envmangaerService #white {
+    portOut " " as envmangaerServicechildrennet #blue
+   envmangaerServicechildrennet -[#blue]- childrennet
+   
+    collections "sml_em" as sml_emimage
+    
+}
+node "provision" as provisionService #white {
+    portOut " " as provisionServicechildrennet #blue
+   provisionServicechildrennet -[#blue]- childrennet
+   
+    collections "sml_pe" as sml_peimage
+    
+}
+node "controller" as controllerService #white {
+    portOut " " as controllerServicechildrennet #blue
+   controllerServicechildrennet -[#blue]- childrennet
+   
+    collections "sml_sc" as sml_scimage
+    
+}
+node "orchestrator" as orchestratorService #white {
+    portOut " " as orchestratorServicechildrennet #blue
+   orchestratorServicechildrennet -[#blue]- childrennet
+   
+    collections "sml_so" as sml_soimage
+    
+}
+node "repo" as repoService #white {
+    portOut " " as repoServicechildrennet #blue
+   repoServicechildrennet -[#blue]- childrennet
+   
+    collections "sml_sr" as sml_srimage
+    
+}
+node "web" as webService #white {
+    portOut " " as webServicechildrennet #blue
+   webServicechildrennet -[#blue]- childrennet
+       portOut " " as webServicesiblingsnet #red
+   webServicesiblingsnet -[#red]- siblingsnet
+   
+
+    artifact "sml_web" as sml_webimage
     
 }
 
-brokerService -[#blue]- childrennet
-
-envmangaerService -[#blue]- childrennet
-
-provisionService -[#blue]- childrennet
-
-controllerService -[#blue]- childrennet
-
-orchestratorService -[#blue]- childrennet
-
-repoService -[#blue]- childrennet
-
-webService -[#blue]- childrennet
-
-webService -[#red]- siblingsnet
-brokerService .... sml_cbimage
-envmangaerService .... sml_emimage
-provisionService .... sml_peimage
-controllerService .... sml_scimage
-orchestratorService .... sml_soimage
-repoService .... sml_srimage
-webService .... sml_webimage
+}
 
 sml_cbimage --> sml_cbStack
     
+    childrennetPortOut -[#blue]- sml_cbStackPortIn
+    
 sml_emimage --> sml_emStack
     
-sml_emStacksnet --[#black]-- parent
+        sml_emStacksnet --[#black]-- parent
+    
+    childrennetPortOut -[#blue]- sml_emStackPortIn
     
 sml_peimage --> sml_peStack
     
+    childrennetPortOut -[#blue]- sml_peStackPortIn
+    
 sml_scimage --> sml_scStack
+    
+    childrennetPortOut -[#blue]- sml_scStackPortIn
     
 sml_soimage --> sml_soStack
     
+    childrennetPortOut -[#blue]- sml_soStackPortIn
+    
 sml_srimage --> sml_srStack
+    
+    childrennetPortOut -[#blue]- sml_srStackPortIn
     
 
 @enduml

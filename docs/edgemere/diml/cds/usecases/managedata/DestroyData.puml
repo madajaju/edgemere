@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "Data Steward"
 
 
@@ -10,9 +11,16 @@ box Common Data Service #ffcc88
 end box
 
 
+group Given [Data Steward has access to the data source]
 
-"Data Steward" -> cds: Destroy Data
+"Data Steward" --/ cds: Data Steward uses method to destroy data
+"cds" -> cds: Destroy Data
 
 
+
+"Data Steward" /-- cds: The data from the particular source should be destroyed
+
+
+end
 
 @enduml

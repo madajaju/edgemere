@@ -6,5 +6,27 @@ left to right direction
 Actor "Actor" as Actor
 
 
+rectangle "PhysicalWorld" as pw #lightblue {
+        usecase "Change Physical World" as ChangePhysicalWorld
+    Actor --> ChangePhysicalWorld
+    usecase "Commission Physical Asset" as CommissionPhysicalAsset
+    Actor --> CommissionPhysicalAsset
+    usecase "Connect Physical Asset to a Device" as ConnectPhysicalAssettoaDevice
+    Actor --> ConnectPhysicalAssettoaDevice
+    usecase "Decommission Physical Asset" as DecommissionPhysicalAsset
+    Actor --> DecommissionPhysicalAsset
+    usecase "Manage Physical Assets" as ManagePhysicalAssets
+    Actor --> ManagePhysicalAssets
+    usecase "Monitor Physical World" as MonitorPhysicalWorld
+    Actor --> MonitorPhysicalWorld
+    usecase "Replace Physical Asset" as ReplacePhysicalAsset
+    Actor --> ReplacePhysicalAsset
+    usecase "Secure Data from Physical Asset" as SecureDatafromPhysicalAsset
+    Actor --> SecureDatafromPhysicalAsset
+    usecase "Secure Physical Asset" as SecurePhysicalAsset
+    Actor --> SecurePhysicalAsset
+
+}
+
 
 @enduml

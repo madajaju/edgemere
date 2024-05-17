@@ -3,89 +3,99 @@
 left to right direction
 
 
-boundary parent #black
 
 
-entity children #blue
-
-rectangle "diml_dml_do" as diml_dml_doStack #lightblue {
-    queue diml_dml_doStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "diml_dml_do" as diml_dml_doStack #lightblue {
+    portin "parent" as diml_dml_doStackPortIn #blue
 }
-rectangle "sa_pe" as sa_peStack #cc8888 {
-    queue sa_peStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "sa_pe" as sa_peStack #cc8888 {
+    portin "parent" as sa_peStackPortIn #blue
 }
-rectangle "sml_so" as sml_soStack #88cc88 {
-    queue sml_soStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "sml_so" as sml_soStack #88cc88 {
+    portin "parent" as sml_soStackPortIn #blue
 }
-rectangle "cpl_ta" as cpl_taStack #cccccc {
-    queue cpl_taStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "cpl_ta" as cpl_taStack #cccccc {
+    portin "parent" as cpl_taStackPortIn #blue
 }
 
 
 
-package "cpl_dm" #cccccc {
-    queue parentnet #black [
+node "cpl_dm" #cccccc {
+
+
+    hexagon parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#black]- parent
+    portin " " as parentnetPortIn #black
+    parentnetPortIn -[#black]- parentnet
     
-    queue childrennet #blue [
+    hexagon childrennet #blue [
             <b><color:white>children</color></b>
     ]
     
-    childrennet -[#blue]- children
+    portout " " as childrennetPortOut #blue
+    childrennet -[#blue]- childrennetPortOut
     
-    queue siblingsnet #red [
+    hexagon siblingsnet #red [
             <b><color:white>siblings</color></b>
     ]
     
 
-node "data_orchestrator" as data_orchestratorService
-node "policy_engine" as policy_engineService
-node "service_orchestrator" as service_orchestratorService
-node "telemetry_aggregator" as telemetry_aggregatorService
-node "portal" as portalService
-
-        collections "diml_dml_do" as diml_dml_doimage
-            collections "sa_pe" as sa_peimage
-            collections "sml_so" as sml_soimage
-            collections "cpl_ta" as cpl_taimage
+node "data_orchestrator" as data_orchestratorService #white {
+    portOut " " as data_orchestratorServicesiblingsnet #red
+   data_orchestratorServicesiblingsnet -[#red]- siblingsnet
+   
+    collections "diml_dml_do" as diml_dml_doimage
     
-        artifact "cpl_dm_web" as cpl_dm_webimage
+}
+node "policy_engine" as policy_engineService #white {
+    portOut " " as policy_engineServicesiblingsnet #red
+   policy_engineServicesiblingsnet -[#red]- siblingsnet
+   
+    collections "sa_pe" as sa_peimage
+    
+}
+node "service_orchestrator" as service_orchestratorService #white {
+    portOut " " as service_orchestratorServicesiblingsnet #red
+   service_orchestratorServicesiblingsnet -[#red]- siblingsnet
+   
+    collections "sml_so" as sml_soimage
+    
+}
+node "telemetry_aggregator" as telemetry_aggregatorService #white {
+    portOut " " as telemetry_aggregatorServicesiblingsnet #red
+   telemetry_aggregatorServicesiblingsnet -[#red]- siblingsnet
+   
+    collections "cpl_ta" as cpl_taimage
+    
+}
+node "portal" as portalService #white {
+    portOut " " as portalServicesiblingsnet #red
+   portalServicesiblingsnet -[#red]- siblingsnet
+   
+
+    artifact "cpl_dm_web" as cpl_dm_webimage
     
 }
 
-data_orchestratorService -[#red]- siblingsnet
-
-policy_engineService -[#red]- siblingsnet
-
-service_orchestratorService -[#red]- siblingsnet
-
-telemetry_aggregatorService -[#red]- siblingsnet
-
-portalService -[#red]- siblingsnet
-data_orchestratorService .... diml_dml_doimage
-policy_engineService .... sa_peimage
-service_orchestratorService .... sml_soimage
-telemetry_aggregatorService .... cpl_taimage
-portalService .... cpl_dm_webimage
+}
 
 diml_dml_doimage --> diml_dml_doStack
     
+    childrennetPortOut -[#blue]- diml_dml_doStackPortIn
+    
 sa_peimage --> sa_peStack
+    
+    childrennetPortOut -[#blue]- sa_peStackPortIn
     
 sml_soimage --> sml_soStack
     
+    childrennetPortOut -[#blue]- sml_soStackPortIn
+    
 cpl_taimage --> cpl_taStack
+    
+    childrennetPortOut -[#blue]- cpl_taStackPortIn
     
 
 @enduml

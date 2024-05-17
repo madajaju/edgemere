@@ -1,13 +1,1 @@
-module.exports = {
-    name: 'Test Service Stack',
-    description: 'Test Service Stack is the description',
-    method: "data/create",
-    actors: {
-        'StackDeveloper': 'uses',
-    },
-    steps: [
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-    ]
-};
-
+module.exports = {"name":"Test Service Stack","description":"Test Service Stack is the description","method":"data/create","actors":{"StackDeveloper":"uses"},"steps":[{"action":"data/list","parameters":{"name":"hello","file":"./templates/world.yml"}},{"action":"data/list","parameters":{"name":"hello","file":"./templates/world.yml"}}],"uid":"ManageStacks.TestServiceStack","given":"Test Service Stack with StackDeveloper in use","when":"StackDeveloper runs data/list commands with specified parameters","then":"ManageStacks.TestServiceStack gets updated"};

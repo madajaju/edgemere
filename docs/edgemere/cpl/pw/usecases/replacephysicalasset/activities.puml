@@ -1,0 +1,22 @@
+@startuml
+
+
+left to right direction
+
+usecase "Replace Physical Asset" as ReplacePhysicalAsset #yellow
+
+Actor "Actor" as Actor
+
+Actor --> ReplacePhysicalAsset
+
+
+
+
+
+
+
+
+
+
+
+@enduml

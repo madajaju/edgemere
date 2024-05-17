@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "IT Operations"
 
 
@@ -15,8 +16,10 @@ box Common Physical Layer #cccccc
             participant aggregateddevice
     end box
 
+group Given [IT operations uses data/source]
 
-"IT Operations" -> cpl: Manage Aggregated Devices
+"IT Operations" --/ cpl: devices are created using template device.yaml
+"cpl" -> cpl: Manage Aggregated Devices
 
     cpl -> "device": create (name: hostmad1,file: ./templates/device.yaml)
 
@@ -39,5 +42,10 @@ box Common Physical Layer #cccccc
     "aggregateddevice" --/ EventBus: aggregateddevice.adddevices
 
 
+
+"IT Operations" /-- cpl: aggregated device with added devices is created
+
+
+end
 
 @enduml

@@ -39,6 +39,11 @@ Manage Data Blue Prints is the description
 Create Blue Print is the description
 
 ![Scenario CreateBluePrint](./CreateBluePrint.png)
+#### Criteria
+
+* Given - Data Scientist uses datablueprint/create method
+* When - Data adaptors, dataflow, datablueprint, and datasources are created
+* Then - Data Scientist uses datablueprint/create method
 
 #### Steps
 1. [dataadaptor create --name filesystem --file ./templates/dataadaptor-filesystem.yaml](#action-dataadaptor-create)

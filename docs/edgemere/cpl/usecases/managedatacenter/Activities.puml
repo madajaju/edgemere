@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Manage Data Center" as ManageDataCenter #yellow
 
 Actor "IT Operations" as ITOperations
@@ -9,25 +11,45 @@ ITOperations --> ManageDataCenter
 
 
 
-usecase "CreateDataCenter" as CreateDataCenter #lightgrey
+json CreateDataCenter #lightyellow {
+    "Given": "IT Operator has access to the system.",
+    "When": "Operator creates a data center, devices, and aggregated devices",
+    "Then": "Data center and devices are created, added and embedded successfully"
+}
 
-ManageDataCenter --> CreateDataCenter
+ManageDataCenter <|-- CreateDataCenter
 
-usecase "DisableDataCenter" as DisableDataCenter #lightgrey
+json DisableDataCenter #lightyellow {
+    "Given": "IT Operations has created data center with host devices",
+    "When": "IT Operations executes data center disable command",
+    "Then": "All devices in the data center are disabled"
+}
 
-ManageDataCenter --> DisableDataCenter
+ManageDataCenter <|-- DisableDataCenter
 
-usecase "EnableDataCenter" as EnableDataCenter #lightgrey
+json EnableDataCenter #lightyellow {
+    "Given": "A disabled data center exists",
+    "When": "IT Operations enable the data center",
+    "Then": "The data center becomes enabled"
+}
 
-ManageDataCenter --> EnableDataCenter
+ManageDataCenter <|-- EnableDataCenter
 
-usecase "RemoveDataCenter" as RemoveDataCenter #lightgrey
+json RemoveDataCenter #lightyellow {
+    "Given": "IT operations has created several devices and a data center",
+    "When": "IT operations initiates the process to remove a data center",
+    "Then": "All devices and aggregated devices in the data center are removed"
+}
 
-ManageDataCenter --> RemoveDataCenter
+ManageDataCenter <|-- RemoveDataCenter
 
-usecase "UpdateDataCenter" as UpdateDataCenter #lightgrey
+json UpdateDataCenter #lightyellow {
+    "Given": "IT operations are updating data center characteristics",
+    "When": "a new device is created and added to an aggregated device and then to a data center",
+    "Then": "the characteristics of the data center are updated"
+}
 
-ManageDataCenter --> UpdateDataCenter
+ManageDataCenter <|-- UpdateDataCenter
 
 
 

@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "IT Operations"
 
 
@@ -10,9 +11,16 @@ box Cloud Broker #88cc88
 end box
 
 
+group Given [IT Operations is using a multi cloud system]
 
-"IT Operations" -> cb: Add Cloud to Multi Cloud
+"IT Operations" --/ cb: IT Operations adds a new cloud to the system
+"cb" -> cb: Add Cloud to Multi Cloud
 
 
+
+"IT Operations" /-- cb: The new cloud is integrated into the multi cloud system
+
+
+end
 
 @enduml

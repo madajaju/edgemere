@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "Application Developer"
 
 actor "DevOps Engineer"
@@ -12,12 +13,22 @@ box Application Management Layer #88cccc
 end box
 
 
+group Given [Application Developer or DevOps Engineer is using the system]
 
-"Application Developer" -> aml: Update Workload
+"Application Developer" --/ aml: They try to update the workload
+"aml" -> aml: Update Workload
 
 
-"DevOps Engineer" -> aml: Update Workload
+"DevOps Engineer" --/ aml: They try to update the workload
+"aml" -> aml: Update Workload
 
 
+
+"Application Developer" /-- aml: The system updates the workload as per their request
+
+"DevOps Engineer" /-- aml: The system updates the workload as per their request
+
+
+end
 
 @enduml

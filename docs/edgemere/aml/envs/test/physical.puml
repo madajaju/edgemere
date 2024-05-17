@@ -2,11 +2,11 @@
   interface CLI
   interface Web
   interface WebSocket
-package "Application Management Layer" #88cccc {
+node "Application Management Layer" #88cccc {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {
-    component " edgemere aml" as binName
+    card " edgemere aml" as binName
   }
   binName --> REST
 
@@ -14,11 +14,11 @@ package "Application Management Layer" #88cccc {
       file "node server.js\n" as aml_container
       REST --> aml_container
 
-  
+
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
+
   }
   folder images #ffffff {
     collections "aml" as amlimage
@@ -26,10 +26,10 @@ package "Application Management Layer" #88cccc {
     amlimage <|-- ailtireswarm
     aml_container --> amlimage
 
-  
+
       artifact "aml_web" as aml_web
       web_container --> aml_web
-    
+
   }
 }
 CLI " edgemere aml" -- binName

@@ -32,15 +32,15 @@ Model o--> "n" Resource : resources
 
 
 
-    rectangle "Device" as Device #lightgreen {
-    }
-    
-        Device   *--> "n" Model : "hardware"
-    
     rectangle "AggregatedDevice" as AggregatedDevice #lightgreen {
     }
     
         AggregatedDevice   *--> "n" Model : "hardware"
+    
+    rectangle "Device" as Device #lightgreen {
+    }
+    
+        Device   *--> "n" Model : "hardware"
     
     rectangle "AcceleratorResource" as AcceleratorResource #lightgreen {
     }

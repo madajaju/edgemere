@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+node "Cyber" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    card " edgemere cpl c" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as c_c_container
+      REST --> c_c_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "c_c" as c_cimage
+    artifact "ailtire:swarm" as ailtireswarm
+    c_cimage <|-- ailtireswarm
+    c_c_container --> c_cimage
+
+  
+      artifact "c_c_web" as c_c_web
+      web_container --> c_c_web
+    
+  }
+}
+CLI " edgemere cpl c" -- binName
+Web "/edgemere/cpl/c" - REST
+WebSocket ".edgemere.cpl.c" -- socket
+
+@enduml

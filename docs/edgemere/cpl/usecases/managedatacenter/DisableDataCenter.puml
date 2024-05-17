@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "IT Operations"
 
 
@@ -15,8 +16,10 @@ box Common Physical Layer #cccccc
             participant datacenter
     end box
 
+group Given [IT Operations has created data center with host devices]
 
-"IT Operations" -> cpl: Disable Data Center
+"IT Operations" --/ cpl: IT Operations executes data center disable command
+"cpl" -> cpl: Disable Data Center
 
     cpl -> "device": create (name: host1,file: ./templates/device.yaml)
 
@@ -39,5 +42,10 @@ box Common Physical Layer #cccccc
     "datacenter" --/ EventBus: datacenter.disable
 
 
+
+"IT Operations" /-- cpl: All devices in the data center are disabled
+
+
+end
 
 @enduml

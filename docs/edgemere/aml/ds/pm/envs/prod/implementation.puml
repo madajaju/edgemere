@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+node "Pipeline Manager" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    card " edgemere aml ds pm" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as a_d_pm_container
+      REST --> a_d_pm_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "a_d_pm" as a_d_pmimage
+    artifact "ailtire:swarm" as ailtireswarm
+    a_d_pmimage <|-- ailtireswarm
+    a_d_pm_container --> a_d_pmimage
+
+  
+      artifact "a_d_pm_web" as a_d_pm_web
+      web_container --> a_d_pm_web
+    
+  }
+}
+CLI " edgemere aml ds pm" -- binName
+Web "/edgemere/aml/ds/pm" - REST
+WebSocket ".edgemere.aml.ds.pm" -- socket
+
+@enduml

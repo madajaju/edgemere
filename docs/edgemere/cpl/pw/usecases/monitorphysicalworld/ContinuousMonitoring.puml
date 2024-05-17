@@ -1,0 +1,38 @@
+@startuml
+
+
+actor "Actor"
+
+
+entity EventBus
+
+box PhysicalWorld #lightblue
+    boundary pw #white
+end box
+
+
+box Software Defined Infrastructure #cccc88
+            participant storageresource
+    end box
+
+group Given [A system is set for continuous monitoring]
+
+"Actor" --/ pw: A user uses data/create method
+"pw" -> pw: Continuous Monitoring
+
+    pw -> "storageresource": list (name: hello,file: ./templates/world.yml)
+
+    "storageresource" --/ EventBus: data.list
+
+    pw -> "storageresource": list (name: hello,file: ./templates/world.yml)
+
+    "storageresource" --/ EventBus: data.list
+
+
+
+"Actor" /-- pw: The system should list data from specified file
+
+
+end
+
+@enduml

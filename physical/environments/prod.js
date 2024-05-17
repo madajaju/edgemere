@@ -1,11 +1,60 @@
-module.expoerts = {
+module.exports = {
     name: 'prod',
     description: 'This is the production environment',
     color: '#44aa44',
-    networks: {
-        adminNetwork: {},
-        dataNetwork: {},
-        appNetwork: {}
+    locations: {
+        datacenter1: {
+            type: "location/datacenter",
+            address: "Folsom, CA",
+            contact: "",
+            default: true
+        }
+    },
+    network: {
+        devices: {
+            adminSwitch: {
+                type: "network/switch",  // switch, gateway, router, hub, firewall, accesspoint
+                networks: [ "adminNetwork" ],
+                location: "datacenter1"
+            },
+            dataSwitch: {
+                type: "network/switch",
+                model: "Arista 7010X",
+                speed:  "100G", // 100 GigaBit
+                ports: 48,
+                location: "datacenter1",
+                networks: [ "dataNetwork"]
+            },
+            appSwitch: {
+                type: "network/switch",
+                model: "Arista 7010X",
+                speed:  "100G", // 100 GigaBit
+                ports: 48,
+                location: "datacenter1",
+                networks: [ "appNetwork"]
+            },
+            internetRouter: {
+                type: "network/router",
+                location: "datacenter1",
+                networks: [ "appNetwork", "internet"]
+            }
+        },
+        networks: {
+            internet: {
+                gateway: "172.25.192.1",
+                mask: "255.255.255.0",
+                ipaddr: "172.25.192.124"
+            },
+            adminNetwork: {
+                network: "10.0.0.0/24"
+            },
+            dataNetwork: {
+                network: "10.0.1.0/24"
+            },
+            appNetwork: {
+                network: "10.0.2.0/24"
+            }
+        }
     },
     compute: {
         example1: {
@@ -17,7 +66,7 @@ module.expoerts = {
             },
             disks: {
                 diska: {
-                    type: "share1",
+                    volume: "share1",
                     mount: "/mnt/shared"
                 }
             }
@@ -31,7 +80,7 @@ module.expoerts = {
             },
             disks: {
                 diska: {
-                    type: share1,
+                    volume: "share1",
                     mount: "/mnt/shared"
                 }
             }
@@ -45,7 +94,7 @@ module.expoerts = {
             },
             disks: {
                 diska: {
-                    type: share2,
+                    volume: "share2",
                     mount: "/mnt/shared"
                 }
             }
@@ -59,7 +108,7 @@ module.expoerts = {
             },
             disks: {
                 diska: {
-                    type: share2,
+                    volume: "share2",
                     mount: "/mnt/shared"
                 }
             }

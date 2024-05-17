@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "SecurityEngineer"
 
 
@@ -17,8 +18,10 @@ box Software Defined Infrastructure #cccc88
 box Security Profile Manager #cc8888
     end box
 
+group Given [Three security profiles are created with conflicting policies]
 
-"SecurityEngineer" -> spm: Test Security Profile
+"SecurityEngineer" --/ spm: A &#39;test&#39; is performed on one of the security profiles
+"spm" -> spm: Test Security Profile
 
     spm -> "storageresource": create (name: secProfileTSP1,file: ./templates/secprofile.yml)
 
@@ -37,5 +40,10 @@ box Security Profile Manager #cc8888
     "securityprofile" --/ EventBus: securityprofile.test
 
 
+
+"SecurityEngineer" /-- spm: The system identifies the conflicts within the security profile
+
+
+end
 
 @enduml

@@ -42,6 +42,11 @@ Manage Infrastructure is the description
 Add Device is the description
 
 ![Scenario AddDevice](./AddDevice.png)
+#### Criteria
+
+* Given - IT Operations uses data/source
+* When - device/create is actioned with parameters: name - hostad1, file - ./templates/device.yaml
+* Then - IT Operations uses data/source
 
 #### Steps
 1. [device create --name hostad1 --file ./templates/device.yaml](#action-device-create)
@@ -60,6 +65,11 @@ Add Device is the description
 Manage Aggregated Devices is the description
 
 ![Scenario ManageAggregatedDevices](./ManageAggregatedDevices.png)
+#### Criteria
+
+* Given - IT operations uses data/source
+* When - devices are created using template device.yaml
+* Then - IT operations uses data/source
 
 #### Steps
 1. [device create --name hostmad1 --file ./templates/device.yaml](#action-device-create)
@@ -79,6 +89,11 @@ Manage Aggregated Devices is the description
 Manage Data Center is the description
 
 ![Scenario ManageDataCenter](./ManageDataCenter.png)
+#### Criteria
+
+* Given - IT Operations uses a method for managing data sources
+* When - various actions are executed to create and modify devices in the data center
+* Then - IT Operations uses a method for managing data sources
 
 #### Steps
 1. [device create --name hostmdc1 --file ./templates/device.yaml](#action-device-create)
@@ -107,6 +122,11 @@ Manage Data Center is the description
 Remove Device is the description
 
 ![Scenario RemoveDevice](./RemoveDevice.png)
+#### Criteria
+
+* Given - IT Operations has access to the device management system
+* When - A device needs to be removed from the system
+* Then - IT Operations has access to the device management system
 
 #### Steps
 1. To Be Defined
@@ -122,6 +142,11 @@ Remove Device is the description
 Update Device is the description
 
 ![Scenario UpdateDevice](./UpdateDevice.png)
+#### Criteria
+
+* Given - IT Operations has access to the device database
+* When - The IT operations attempts to update a device
+* Then - IT Operations has access to the device database
 
 #### Steps
 1. To Be Defined

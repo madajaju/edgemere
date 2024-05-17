@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+node "Security Profile Manager" #cc8888 {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    card " edgemere sa spm" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as s_spm_container
+      REST --> s_spm_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "s_spm" as s_spmimage
+    artifact "ailtire:swarm" as ailtireswarm
+    s_spmimage <|-- ailtireswarm
+    s_spm_container --> s_spmimage
+
+  
+      artifact "s_spm_web" as s_spm_web
+      web_container --> s_spm_web
+    
+  }
+}
+CLI " edgemere sa spm" -- binName
+Web "/edgemere/sa/spm" - REST
+WebSocket ".edgemere.sa.spm" -- socket
+
+@enduml

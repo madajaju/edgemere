@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+node "Service Management Layer" #88cc88 {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    card " edgemere sml" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as sml_container
+      REST --> sml_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "sml" as smlimage
+    artifact "ailtire:swarm" as ailtireswarm
+    smlimage <|-- ailtireswarm
+    sml_container --> smlimage
+
+  
+      artifact "sml_web" as sml_web
+      web_container --> sml_web
+    
+  }
+}
+CLI " edgemere sml" -- binName
+Web "/edgemere/sml" - REST
+WebSocket ".edgemere.sml" -- socket
+
+@enduml

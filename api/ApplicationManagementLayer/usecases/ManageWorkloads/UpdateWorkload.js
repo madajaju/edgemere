@@ -1,10 +1,1 @@
-module.exports = {
-    name: 'Update Workload',
-    description: 'Update Workload is the description',
-    method: "workload/update",
-    actors: {
-        'Application Developer': 'uses',
-        'DevOps Engineer': 'uses',
-    },
-};
-
+module.exports = {"name":"Update Workload","description":"Update Workload is the description","method":"workload/update","actors":{"Application Developer":"uses","DevOps Engineer":"uses"},"uid":"ManageWorkloads.UpdateWorkload","given":"Application Developer or DevOps Engineer is using the system","when":"They try to update the workload","then":"The system updates the workload as per their request"};

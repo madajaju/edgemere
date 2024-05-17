@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+node "Cloud Broker" #88cc88 {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    card " edgemere sml cb" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as sml_cb_container
+      REST --> sml_cb_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "sml_cb" as sml_cbimage
+    artifact "ailtire:swarm" as ailtireswarm
+    sml_cbimage <|-- ailtireswarm
+    sml_cb_container --> sml_cbimage
+
+  
+      artifact "sml_cb_web" as sml_cb_web
+      web_container --> sml_cb_web
+    
+  }
+}
+CLI " edgemere sml cb" -- binName
+Web "/edgemere/sml/cb" - REST
+WebSocket ".edgemere.sml.cb" -- socket
+
+@enduml

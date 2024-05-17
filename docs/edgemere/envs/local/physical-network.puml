@@ -1,0 +1,33 @@
+@startuml
+
+
+nwdiag {
+    network internet {
+    
+        homeRouter [ description= <&move*4>\nhomeRouter]
+        oneDrive [ description= <&hard-drive*4>\noneDrive]
+        gitHub [ description= <&hard-drive*4>\ngitHub]
+    
+   }
+    network adminNetwork {
+        address = "10.0.0.0/24"
+    
+        adminSwitch [ description= <&transfer*4>\nadminSwitch]
+        homeRouter [ description= <&move*4>\nhomeRouter]
+        renderService [ description= <&monitor*4>\nrenderService]
+        laptop [ description= <&monitor*4>\nlaptop]
+        adminConsole [ description= <&monitor*4>\nadminConsole]
+    
+   }
+    network homeNetwork {
+        address = "192.168.12.0/16"
+    
+        homeRouter [ description= <&move*4>\nhomeRouter]
+        homeSwitch [ description= <&transfer*4>\nhomeSwitch]
+        renderService [ description= <&monitor*4>\nrenderService]
+        laptop [ description= <&monitor*4>\nlaptop]
+    
+   }
+
+}
+@enduml

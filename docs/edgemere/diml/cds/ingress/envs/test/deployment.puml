@@ -3,49 +3,53 @@
 left to right direction
 
 
-boundary ailtire_appname_diml_cds_family #red
-
-
-entity ailtire_appname_diml_cds_ingress_family #black
 
 
 
 
-package "ingress" #lightblue {
-    queue childrennet #black [
+
+node "ingress" #lightblue {
+
+
+    hexagon childrennet #black [
             <b><color:white>children</color></b>
     ]
     
-    childrennet -[#black]- ailtire_appname_diml_cds_ingress_family
+    portout " " as childrennetPortOut #black
+    childrennet -[#black]- childrennetPortOut
     
-    queue siblingnet #blue [
+    hexagon siblingnet #blue [
             <b><color:white>sibling</color></b>
     ]
     
-    queue parentnet #red [
+    hexagon parentnet #red [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#red]- ailtire_appname_diml_cds_family
+    portin " " as parentnetPortIn #red
+    parentnetPortIn -[#red]- parentnet
     
 
-node "frontend" as frontendService
-node "gw" as gwService
+node "frontend" as frontendService #white {
+    portOut " " as frontendServicesiblingnet #blue
+   frontendServicesiblingnet -[#blue]- siblingnet
+   
 
-
-        artifact "diml_cds_ingress_web" as diml_cds_ingress_webimage
+    artifact "diml_cds_ingress_web" as diml_cds_ingress_webimage
     
-        artifact "diml_cds_ingress_gw" as diml_cds_ingress_gwimage
+}
+node "gw" as gwService #white {
+    portOut " " as gwServicechildrennet #black
+   gwServicechildrennet -[#black]- childrennet
+       portOut " " as gwServicesiblingnet #blue
+   gwServicesiblingnet -[#blue]- siblingnet
+   
+
+    artifact "diml_cds_ingress_gw" as diml_cds_ingress_gwimage
     
 }
 
-frontendService -[#blue]- siblingnet
-
-gwService -[#black]- childrennet
-
-gwService -[#blue]- siblingnet
-frontendService .... diml_cds_ingress_webimage
-gwService .... diml_cds_ingress_gwimage
+}
 
 
 @enduml

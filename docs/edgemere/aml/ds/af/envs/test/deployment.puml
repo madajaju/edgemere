@@ -3,57 +3,64 @@
 left to right direction
 
 
-boundary appname_a_d_family #red
-
-
-entity appname_a_d_af_family #black
 
 
 
 
-package "a_d_af" #lightblue {
-    queue childrennet #black [
+
+node "a_d_af" #lightblue {
+
+
+    hexagon childrennet #black [
             <b><color:white>children</color></b>
     ]
     
-    childrennet -[#black]- appname_a_d_af_family
+    portout " " as childrennetPortOut #black
+    childrennet -[#black]- childrennetPortOut
     
-    queue siblingnet #blue [
+    hexagon siblingnet #blue [
             <b><color:white>sibling</color></b>
     ]
     
-    queue parentnet #red [
+    hexagon parentnet #red [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#red]- appname_a_d_family
+    portin " " as parentnetPortIn #red
+    parentnetPortIn -[#red]- parentnet
     
 
-node "child" as childService
-node "frontend" as frontendService
-node "gw" as gwService
-
-
-        artifact "child_image:latest" as child_imagelatestimage
+node "child" as childService #white {
+    portOut " " as childServicechildrennet #black
+   childServicechildrennet -[#black]- childrennet
+   
+    portIn " " as childServiceparentnet #red
+    parentnet -[#red]- childServiceparentnet
     
-        artifact "a_d_af_web" as a_d_af_webimage
+
+    artifact "child_image:latest" as child_imagelatestimage
     
-        artifact "a_d_af_gw" as a_d_af_gwimage
+}
+node "frontend" as frontendService #white {
+    portOut " " as frontendServicesiblingnet #blue
+   frontendServicesiblingnet -[#blue]- siblingnet
+   
+
+    artifact "a_d_af_web" as a_d_af_webimage
+    
+}
+node "gw" as gwService #white {
+    portOut " " as gwServicechildrennet #black
+   gwServicechildrennet -[#black]- childrennet
+       portOut " " as gwServicesiblingnet #blue
+   gwServicesiblingnet -[#blue]- siblingnet
+   
+
+    artifact "a_d_af_gw" as a_d_af_gwimage
     
 }
 
-childService -[#black]- childrennet
-
-childService -[#red]- parentnet
-
-frontendService -[#blue]- siblingnet
-
-gwService -[#black]- childrennet
-
-gwService -[#blue]- siblingnet
-childService .... child_imagelatestimage
-frontendService .... a_d_af_webimage
-gwService .... a_d_af_gwimage
+}
 
 
 @enduml

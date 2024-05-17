@@ -19,15 +19,16 @@ module.exports = {
             required: true
         }
     },
-    exits: {},
+    exits: {
+        json: (obj) => {
+            return {request: obj.toJSON};
+        }
+    },
     fn: function (inputs, env) {
         // TODO: look at the polciies for provisioning resources on devices.
-        inputs = env.req.body;
-        let resources;
         let cloud = Cloud.find(inputs.cloud);
         if (!cloud) {
-            env.res.json({error: "Could not find cloud:" + inputs.cloud});
-            return;
+            return {error: "Could not find cloud:" + inputs.cloud};
         }
 
         // Create a request for the requirements.
@@ -35,7 +36,7 @@ module.exports = {
         cloud.addToRequests(request);
         request.requirements = Metric.factory({name: "", value: inputs.requirements});
         cloud.reserve({request: request});
-        env.res.send({request: request.toJSON});
+        return request;
     }
 
 };

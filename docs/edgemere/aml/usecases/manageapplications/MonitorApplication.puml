@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "DevOps Engineer"
 
 actor "Application Developer"
@@ -12,12 +13,22 @@ box Application Management Layer #88cccc
 end box
 
 
+group Given [DevOps Engineer and Application Developer have access to the Monitor Application]
 
-"DevOps Engineer" -> aml: Monitor Application
+"DevOps Engineer" --/ aml: They use the Monitor Application
+"aml" -> aml: Monitor Application
 
 
-"Application Developer" -> aml: Monitor Application
+"Application Developer" --/ aml: They use the Monitor Application
+"aml" -> aml: Monitor Application
 
 
+
+"DevOps Engineer" /-- aml: They should be able to manage and monitor applications
+
+"Application Developer" /-- aml: They should be able to manage and monitor applications
+
+
+end
 
 @enduml

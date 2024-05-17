@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "SecurityEngineer"
 
 
@@ -17,8 +18,10 @@ box Software Defined Infrastructure #cccc88
 box Security Profile Manager #cc8888
     end box
 
+group Given [Security engineer has access to the security profile]
 
-"SecurityEngineer" -> spm: Monitor Security Profile
+"SecurityEngineer" --/ spm: Security engineer monitors the status of the security profile
+"spm" -> spm: Monitor Security Profile
 
     spm -> "storageresource": create (name: secProfileMSP,file: ./templates/secprofile.yml)
 
@@ -29,5 +32,10 @@ box Security Profile Manager #cc8888
     "securityprofile" --/ EventBus: securityprofile.status
 
 
+
+"SecurityEngineer" /-- spm: Security engineer can see how many identities are enforced by the profile and how many polices are being used
+
+
+end
 
 @enduml

@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Create Data Instance',
-    description: 'Create Data Instance is the description',
-    method: "datainstance/create",
-    actors: {
-        'Application Developer': 'uses',
-    },
-};
-
+module.exports = {"name":"Create Data Instance","description":"Create Data Instance is the description","method":"datainstance/create","actors":{"Application Developer":"uses"},"uid":"ManageDataInstances.CreateDataInstance","given":"An Application Developer wants to create a new data instance","when":"The Application Developer uses the 'datainstance/create' method","then":"A new data instance should be created and returned"};

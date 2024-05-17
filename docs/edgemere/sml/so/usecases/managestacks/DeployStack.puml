@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "DevOps Engineer"
 
 
@@ -10,9 +11,16 @@ box Service Orchestrator #88cc88
 end box
 
 
+group Given [A DevOps engineer can deploy a stack to an environment with parameters]
 
-"DevOps Engineer" -> so: Deploy Stack
+"DevOps Engineer" --/ so: Policies are attached to the stack during deployment
+"so" -> so: Deploy Stack
 
 
+
+"DevOps Engineer" /-- so: Service Orchestrator creates a landscape request to match the stack requirements
+
+
+end
 
 @enduml

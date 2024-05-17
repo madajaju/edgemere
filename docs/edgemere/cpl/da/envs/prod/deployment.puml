@@ -3,71 +3,81 @@
 left to right direction
 
 
-boundary parent #black
 
 
-entity children #blue
-
-rectangle "sml_sc" as sml_scStack #88cc88 {
-    queue sml_scStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "sml_sc" as sml_scStack #88cc88 {
+    portin "parent" as sml_scStackPortIn #blue
 }
 
 
 
-package "cpl_da" #cccccc {
-    queue parentnet #black [
+node "cpl_da" #cccccc {
+
+
+    hexagon parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#black]- parent
+    portin " " as parentnetPortIn #black
+    parentnetPortIn -[#black]- parentnet
     
-    queue childrennet #blue [
+    hexagon childrennet #blue [
             <b><color:white>children</color></b>
     ]
     
-    childrennet -[#blue]- children
+    portout " " as childrennetPortOut #blue
+    childrennet -[#blue]- childrennetPortOut
     
-    queue siblingsnet #red [
+    hexagon siblingsnet #red [
             <b><color:white>siblings</color></b>
     ]
     
 
-node "datacontroller" as datacontrollerService
-node "policyengine" as policyengineService
-node "servicecontroller" as servicecontrollerService
-node "telemetry_producer" as telemetry_producerService
-node "portal" as portalService
+node "datacontroller" as datacontrollerService #white {
+    portOut " " as datacontrollerServicesiblingsnet #red
+   datacontrollerServicesiblingsnet -[#red]- siblingsnet
+   
 
+    artifact "diml_dml_dc_controller" as diml_dml_dc_controllerimage
+    
+}
+node "policyengine" as policyengineService #white {
+    portOut " " as policyengineServicesiblingsnet #red
+   policyengineServicesiblingsnet -[#red]- siblingsnet
+   
 
-        artifact "diml_dml_dc_controller" as diml_dml_dc_controllerimage
+    artifact "sa_pe_engine" as sa_pe_engineimage
     
-        artifact "sa_pe_engine" as sa_pe_engineimage
-            collections "sml_sc" as sml_scimage
+}
+node "servicecontroller" as servicecontrollerService #white {
+    portOut " " as servicecontrollerServicesiblingsnet #red
+   servicecontrollerServicesiblingsnet -[#red]- siblingsnet
+   
+    collections "sml_sc" as sml_scimage
     
-        artifact "cpl_tp_producer" as cpl_tp_producerimage
+}
+node "telemetry_producer" as telemetry_producerService #white {
+    portOut " " as telemetry_producerServicesiblingsnet #red
+   telemetry_producerServicesiblingsnet -[#red]- siblingsnet
+   
+
+    artifact "cpl_tp_producer" as cpl_tp_producerimage
     
-        artifact "cpl_da_web" as cpl_da_webimage
+}
+node "portal" as portalService #white {
+    portOut " " as portalServicesiblingsnet #red
+   portalServicesiblingsnet -[#red]- siblingsnet
+   
+
+    artifact "cpl_da_web" as cpl_da_webimage
     
 }
 
-datacontrollerService -[#red]- siblingsnet
-
-policyengineService -[#red]- siblingsnet
-
-servicecontrollerService -[#red]- siblingsnet
-
-telemetry_producerService -[#red]- siblingsnet
-
-portalService -[#red]- siblingsnet
-datacontrollerService .... diml_dml_dc_controllerimage
-policyengineService .... sa_pe_engineimage
-servicecontrollerService .... sml_scimage
-telemetry_producerService .... cpl_tp_producerimage
-portalService .... cpl_da_webimage
+}
 
 sml_scimage --> sml_scStack
+    
+    childrennetPortOut -[#blue]- sml_scStackPortIn
     
 
 @enduml

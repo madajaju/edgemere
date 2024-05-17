@@ -1,0 +1,22 @@
+@startuml
+
+
+left to right direction
+
+usecase "Secure Physical Asset" as SecurePhysicalAsset #yellow
+
+Actor "Actor" as Actor
+
+Actor --> SecurePhysicalAsset
+
+
+
+
+
+
+
+
+
+
+
+@enduml

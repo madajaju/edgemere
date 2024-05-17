@@ -1,0 +1,43 @@
+@startuml
+
+
+nwdiag {
+    network internet {
+    
+        internetRouter [ description= <&move*4>\ninternetRouter]
+    
+   }
+    network adminNetwork {
+        address = "10.0.0.0/24"
+    
+        adminSwitch [ description= <&transfer*4>\nadminSwitch]
+        example1 [ description= <&monitor*4>\nexample1]
+        example2 [ description= <&monitor*4>\nexample2]
+        example3 [ description= <&monitor*4>\nexample3]
+        example4 [ description= <&monitor*4>\nexample4]
+    
+   }
+    network dataNetwork {
+        address = "10.0.1.0/24"
+    
+        dataSwitch [ description= <&transfer*4>\ndataSwitch]
+        example1 [ description= <&monitor*4>\nexample1]
+        example2 [ description= <&monitor*4>\nexample2]
+        example3 [ description= <&monitor*4>\nexample3]
+        example4 [ description= <&monitor*4>\nexample4]
+    
+   }
+    network appNetwork {
+        address = "10.0.2.0/24"
+    
+        appSwitch [ description= <&transfer*4>\nappSwitch]
+        internetRouter [ description= <&move*4>\ninternetRouter]
+        example1 [ description= <&monitor*4>\nexample1]
+        example2 [ description= <&monitor*4>\nexample2]
+        example3 [ description= <&monitor*4>\nexample3]
+        example4 [ description= <&monitor*4>\nexample4]
+    
+   }
+
+}
+@enduml

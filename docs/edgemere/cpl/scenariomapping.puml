@@ -127,6 +127,15 @@ hexagon "resource.provisioning" as resourceprovisioning
 
 
 
+
+
+
+
+
+
+
+
+
         rectangle "Manage Data Center" as ManageDataCenter #ffffaa {
             ("Create Data Center")/ as ITOperationsManageDataCenterCreateDataCenter
         }

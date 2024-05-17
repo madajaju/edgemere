@@ -16,7 +16,9 @@ module.exports = {
         }
     },
 
-    exits: {},
+    exits: {
+        json: (obj) => { return obj;}
+    },
 
     fn: function (inputs, env) {
         let obj = Device.find(inputs.name);
@@ -24,6 +26,6 @@ module.exports = {
             obj = Device.find(inputs.id);
         }
         obj.disable();
-        env.res.send({device:obj.toJSON});
+        return {device: obj.toJSON};
     }
 };

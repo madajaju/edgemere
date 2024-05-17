@@ -1,3 +1,13 @@
+/*
+ * Copyright 2023 Intel Corporation.
+ * This software and the related documents are Intel copyrighted materials, and your use of them is governed by
+ * the express license under which they were provided to you (License). Unless the License provides otherwise,
+ * you may not use, modify, copy, publish, distribute, disclose or transmit this software or the related documents
+ * without  Intel's prior written permission. This software and the related documents are provided as is, with no
+ * express or implied warranties, other than those that are expressly stated in the License.
+ *
+ */
+
 import {AText} from "./ailtire/index.js";
 
 export class Graph3D {
@@ -269,7 +279,6 @@ export class Graph3D {
         this.objects[obj.aid] = obj;
         this.graph.scene().add(obj);
     }
-
     addLink(link) {
         if (link.id) {
             this.links[link.id] = link;
@@ -390,7 +399,17 @@ export class Graph3D {
         this.normalizeData(); // Creates the ndata. Normalizedd Data
         this.graph.graphData(this.ndata);
     };
-
+    // Add the data if it exists then update the data node.
+    updateData(pNodes, pLinks) {
+        for (let i in pNodes) {
+            this.data.nodes[i] = pNodes[i];
+        }
+        for (let i in pLinks) {
+            this.data.links.push(pLinks[i]);
+        }
+        this.normalizeData();
+        this.graph.graphData(this.ndata);
+    };
     addData(pNodes, pLinks) {
         for (let i in pNodes) {
             if (!this.data.nodes.hasOwnProperty(i)) {
@@ -413,8 +432,8 @@ export class Graph3D {
             if (this.options.selectCallback) {
                 this.options.selectCallback(node);
             }
-            this.selectRelNodes(node, "source");
-            this.selectRelNodes(node, "target");
+            this.selectRelNodes(node, "source", 1);
+            this.selectRelNodes(node, "target", 1);
         }
         this.graph
             .nodeThreeObject(this.graph.nodeThreeObject())
@@ -449,6 +468,7 @@ export class Graph3D {
     };
 
 
+
     unSelectNodes() {
         if (this.selected.nodes.primary) {
             let element = document.getElementById(this.selected.nodes.primary.id);
@@ -469,7 +489,7 @@ export class Graph3D {
         }
     };
 
-    selectRelNodes(node, direction) {
+    selectRelNodes(node, direction, levels) {
         let bdir = "target";
         if (direction === "target") {
             bdir = "source";
@@ -489,16 +509,24 @@ export class Graph3D {
                 this.selected.links[bdir].add(link);
                 if (this.data.nodes.hasOwnProperty(link[direction].id)) {
                     let nnode = this.data.nodes[link[direction].id];
-                    this.selected.nodes[bdir][nnode.id] = nnode;
-                    this.selectRelNodes(nnode, direction);
+                    if(nnode.hasOwnProperty('parentNode')) {
+                        this.selected.nodes[bdir][nnode.parentNode.id] = nnode;
+                        this.selectRelNodes(nnode.parentNode, direction, levels);
+                        this.selectRelNodes(nnode, bdir, levels);
+                        this.selectRelNodes(nnode, direction, levels);
+                        this.selected.nodes[bdir][nnode.id] = nnode;
+                    } else {
+                        this.selected.nodes[bdir][nnode.id] = nnode;
+                        this.selectRelNodes(nnode, direction, levels);
+                    }
                 }
             }
         }
-    }
+    };
 
     getSelectedNode() {
         return this.selected.nodes.primary;
-    }
+    };
 
     setNode(nodeid, opts) {
         let node = this.data.nodes[nodeid];
@@ -508,6 +536,32 @@ export class Graph3D {
             }
         }
         this.selectNode(this.data.nodes[nodeid]);
+    };
+
+    setNodeAndFocus(nodeid, opts) {
+        let node = this.data.nodes[nodeid];
+        if (node) {
+            for (let name in opts) {
+                node[name] = opts[name];
+            }
+        }
+        if(node) {
+            // Aim at node from outside it
+            const box = node.box || 35;
+            const distRatio = 10 * box;
+            // Get the Bounding Box
+            if(!node.orientation) {
+                node.orientation = { x:0,y:0,z:1};
+            }
+            this.graph.cameraPosition( {
+                    x: node.x + (distRatio*node.orientation.x),
+                    y: node.y + (distRatio*node.orientation.y),
+                    z: node.z + (distRatio*node.orientation.z)
+                }, // new position
+                node, // lookAt ({ x, y, z })
+                500  // ms transition duration.
+            );
+        }
     }
 
     static forceOnPlane() {
@@ -899,7 +953,7 @@ export class Graph3D {
         });
         this.data.nodes = nodes;
         this.data.links = links;
-        this.normalizeData(); // Creates the ndata. Normalizedd Data
+        this.normalizeData(); // Creates the ndata. Normalized Data
         this.graph.graphData(this.ndata);
     }
 

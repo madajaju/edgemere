@@ -1,3 +1,4 @@
+
 import {
     AObject,
     AText,
@@ -9,6 +10,7 @@ import {
     AStack,
     AService,
     AEnvironment,
+    ALocation,
     AImage,
     AComponent,
     ASelectedHUD,
@@ -319,6 +321,19 @@ export default class A3DGraph {
             url: 'env/list',
             success: (results) => {
                 AEnvironment.handleList(results);
+            },
+            error: function (req, text, err) {
+                console.log(text);
+            }
+        })
+    }
+    
+    static physicalView() {
+        //  window.graph.toolbar.setToolBar();
+        $.ajax({
+            url: 'physical/list',
+            success: (results) => {
+                ALocation.handleList(results);
             },
             error: function (req, text, err) {
                 console.log(text);

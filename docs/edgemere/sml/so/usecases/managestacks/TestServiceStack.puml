@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "StackDeveloper"
 
 
@@ -14,17 +15,24 @@ box Software Defined Infrastructure #cccc88
             participant storageresource
     end box
 
+group Given [Test Service Stack with StackDeveloper in use]
 
-"StackDeveloper" -> so: Test Service Stack
-
-    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
-
-    "storageresource" --/ EventBus: data.list
+"StackDeveloper" --/ so: StackDeveloper runs data/list commands with specified parameters
+"so" -> so: Test Service Stack
 
     so -> "storageresource": list (name: hello,file: ./templates/world.yml)
 
     "storageresource" --/ EventBus: data.list
 
+    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
 
+    "storageresource" --/ EventBus: data.list
+
+
+
+"StackDeveloper" /-- so: ManageStacks.TestServiceStack gets updated
+
+
+end
 
 @enduml

@@ -1,10 +1,1 @@
-module.exports = {
-    name: 'Deploy Workload',
-    description: 'Deploy Workload is the description',
-    method: "workload/deploy",
-    actors: {
-        'Application Developer': 'uses',
-        'DevOps Engineer': 'uses',
-    },
-};
-
+module.exports = {"name":"Deploy Workload","description":"Deploy Workload is the description","method":"workload/deploy","actors":{"Application Developer":"uses","DevOps Engineer":"uses"},"uid":"ManageWorkloads.DeployWorkload","given":"An application developed and ready to be deployed","when":"The Application Developer hands over the application to DevOps Engineer","then":"The DevOps Engineer uses the 'workload/deploy' method to deploy the workload"};

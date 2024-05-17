@@ -2,11 +2,11 @@
   interface CLI
   interface Web
   interface WebSocket
-package "Service Repository" #88cc88 {
+node "Service Repository" #88cc88 {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {
-    component " edgemere sml sr" as binName
+    card " edgemere sml sr" as binName
   }
   binName --> REST
 
@@ -14,11 +14,11 @@ package "Service Repository" #88cc88 {
       file "node server.js\n" as sml_sr_container
       REST --> sml_sr_container
 
-  
+
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
+
   }
   folder images #ffffff {
     collections "sml_sr" as sml_srimage
@@ -26,10 +26,10 @@ package "Service Repository" #88cc88 {
     sml_srimage <|-- ailtireswarm
     sml_sr_container --> sml_srimage
 
-  
+
       artifact "sml_sr_web" as sml_sr_web
       web_container --> sml_sr_web
-    
+
   }
 }
 CLI " edgemere sml sr" -- binName

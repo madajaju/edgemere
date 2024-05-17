@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Secure Assets" as SecureAssets #yellow
 
 Actor "SecurityEngineer" as SecurityEngineer

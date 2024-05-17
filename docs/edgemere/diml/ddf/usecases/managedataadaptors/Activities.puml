@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Manage Data Adaptors" as ManageDataAdaptors #yellow
 
 Actor "DataEngineer" as DataEngineer
@@ -13,17 +15,29 @@ DataScientist --> ManageDataAdaptors
 
 
 
-usecase "AttachDataBluePrint" as AttachDataBluePrint #lightgrey
+json AttachDataBluePrint #lightyellow {
+    "Given": "A Data Scientist is using the blueprint/attach method",
+    "When": "They attach a data blueprint",
+    "Then": "The system should manage data adaptors accordingly"
+}
 
-ManageDataAdaptors --> AttachDataBluePrint
+ManageDataAdaptors <|-- AttachDataBluePrint
 
-usecase "CreateDataAdaptor" as CreateDataAdaptor #lightgrey
+json CreateDataAdaptor #lightyellow {
+    "Given": "A data engineer wants to create a new data adaptor",
+    "When": "The data engineer uses the &#39;dataadaptor/create&#39; method",
+    "Then": "A new data adaptor is created for use"
+}
 
-ManageDataAdaptors --> CreateDataAdaptor
+ManageDataAdaptors <|-- CreateDataAdaptor
 
-usecase "UpdateDataAdaptor" as UpdateDataAdaptor #lightgrey
+json UpdateDataAdaptor #lightyellow {
+    "Given": "A data engineer wants to update a specific data adaptor",
+    "When": "The data engineer uses the &#39;dataadaptor/update&#39; method",
+    "Then": "The specified data adaptor should be updated"
+}
 
-ManageDataAdaptors --> UpdateDataAdaptor
+ManageDataAdaptors <|-- UpdateDataAdaptor
 
 
 

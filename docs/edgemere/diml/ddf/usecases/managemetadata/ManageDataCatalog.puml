@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "DataScientist"
 
 
@@ -10,9 +11,16 @@ box Data Definition Framework #ffcc88
 end box
 
 
+group Given [A data scientist wants to manage the data catalog]
 
-"DataScientist" -> ddf: Manage Data Catalog
+"DataScientist" --/ ddf: The data scientist uses the &#39;datacatalog/list&#39; method
+"ddf" -> ddf: Manage Data Catalog
 
 
+
+"DataScientist" /-- ddf: The data scientist should be able to manage the data catalog
+
+
+end
 
 @enduml

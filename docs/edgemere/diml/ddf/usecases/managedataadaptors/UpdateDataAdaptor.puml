@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "DataEngineer"
 
 
@@ -10,9 +11,16 @@ box Data Definition Framework #ffcc88
 end box
 
 
+group Given [A data engineer wants to update a specific data adaptor]
 
-"DataEngineer" -> ddf: Update Data Adaptor
+"DataEngineer" --/ ddf: The data engineer uses the &#39;dataadaptor/update&#39; method
+"ddf" -> ddf: Update Data Adaptor
 
 
+
+"DataEngineer" /-- ddf: The specified data adaptor should be updated
+
+
+end
 
 @enduml

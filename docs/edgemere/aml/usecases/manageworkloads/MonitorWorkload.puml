@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "Application Developer"
 
 actor "DevOps Engineer"
@@ -12,12 +13,22 @@ box Application Management Layer #88cccc
 end box
 
 
+group Given [The system has workload to be monitored]
 
-"Application Developer" -> aml: Monitor Workload
+"Application Developer" --/ aml: Application Developer or DevOps Engineer uses the system
+"aml" -> aml: Monitor Workload
 
 
-"DevOps Engineer" -> aml: Monitor Workload
+"DevOps Engineer" --/ aml: Application Developer or DevOps Engineer uses the system
+"aml" -> aml: Monitor Workload
 
 
+
+"Application Developer" /-- aml: The system shows the current workload status
+
+"DevOps Engineer" /-- aml: The system shows the current workload status
+
+
+end
 
 @enduml

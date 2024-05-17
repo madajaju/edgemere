@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Remove Device',
-    description: 'Remove Device is the description',
-    method: "data/source",
-    actors: {
-        'IT Operations': 'uses',
-    },
-};
-
+module.exports = {"name":"Remove Device","description":"Remove Device is the description","method":"data/source","actors":{"IT Operations":"uses"},"uid":"ManageInfrastructure.RemoveDevice","given":"IT Operations has access to the device management system","when":"A device needs to be removed from the system","then":"The device is successfully deleted from the system"};

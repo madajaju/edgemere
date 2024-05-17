@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "Application Developer"
 
 actor "DevOps Engineer"
@@ -12,12 +13,22 @@ box Application Management Layer #88cccc
 end box
 
 
+group Given [An application developed and ready to be deployed]
 
-"Application Developer" -> aml: Deploy Workload
+"Application Developer" --/ aml: The Application Developer hands over the application to DevOps Engineer
+"aml" -> aml: Deploy Workload
 
 
-"DevOps Engineer" -> aml: Deploy Workload
+"DevOps Engineer" --/ aml: The Application Developer hands over the application to DevOps Engineer
+"aml" -> aml: Deploy Workload
 
 
+
+"Application Developer" /-- aml: The DevOps Engineer uses the &#39;workload/deploy&#39; method to deploy the workload
+
+"DevOps Engineer" /-- aml: The DevOps Engineer uses the &#39;workload/deploy&#39; method to deploy the workload
+
+
+end
 
 @enduml

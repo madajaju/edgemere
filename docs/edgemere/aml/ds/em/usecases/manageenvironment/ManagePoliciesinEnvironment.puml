@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "IT Operations"
 
 
@@ -10,9 +11,16 @@ box Environment Management #88cc88
 end box
 
 
+group Given [IT Operations is able to modify environment polices]
 
-"IT Operations" -> em: Manage Policies in Environment
+"IT Operations" --/ em: IT Operations adds or removes policies from the environment
+"em" -> em: Manage Policies in Environment
 
 
+
+"IT Operations" /-- em: The environment policies are updated accordingly
+
+
+end
 
 @enduml

@@ -1,0 +1,101 @@
+@startuml
+
+left to right direction
+
+
+
+hexagon internet
+
+
+
+
+
+frame datacenter1 {
+
+    node "<&transfer*4>\nadminSwitch" as adminSwitch <<network/switch>> {
+    hexagon adminNetwork #blue
+    }
+
+    node "<&transfer*4>\ndataSwitch" as dataSwitch <<network/switch>> {
+    hexagon dataNetwork #red
+    }
+
+    node "<&transfer*4>\nappSwitch" as appSwitch <<network/switch>> {
+    hexagon appNetwork #orange
+    }
+
+    node "<&move*4>\ninternetRouter" as internetRouter <<network/router>> {
+    
+    }
+
+    node "<&monitor*4>\nexample1" as example1 <<small>> {
+    portin " " as example1adminNetwork #blue
+portin " " as example1dataNetwork #red
+portin " " as example1appNetwork #orange
+folder "/mnt/shared" as example1mntshared
+    }
+
+    node "<&monitor*4>\nexample2" as example2 <<small>> {
+    portin " " as example2adminNetwork #blue
+portin " " as example2dataNetwork #red
+portin " " as example2appNetwork #orange
+folder "/mnt/shared" as example2mntshared
+    }
+
+    node "<&monitor*4>\nexample3" as example3 <<xlarge>> {
+    portin " " as example3adminNetwork #blue
+portin " " as example3dataNetwork #red
+portin " " as example3appNetwork #orange
+folder "/mnt/shared" as example3mntshared
+    }
+
+    node "<&monitor*4>\nexample4" as example4 <<xlarge>> {
+    portin " " as example4adminNetwork #blue
+portin " " as example4dataNetwork #red
+portin " " as example4appNetwork #orange
+folder "/mnt/shared" as example4mntshared
+    }
+
+
+    database share1 <<>> {
+    
+    }
+
+    database share2 <<>> {
+    
+    }
+
+
+}
+
+
+
+
+
+
+
+
+appNetwork -- internetRouter
+internet -- internetRouter
+
+adminNetwork -[hidden]- example1adminNetwork
+dataNetwork -[hidden]- example1dataNetwork
+appNetwork -[hidden]- example1appNetwork
+example1mntshared ---- share1
+
+adminNetwork -[hidden]- example2adminNetwork
+dataNetwork -[hidden]- example2dataNetwork
+appNetwork -[hidden]- example2appNetwork
+example2mntshared ---- share1
+
+adminNetwork -[hidden]- example3adminNetwork
+dataNetwork -[hidden]- example3dataNetwork
+appNetwork -[hidden]- example3appNetwork
+example3mntshared ---- share2
+
+adminNetwork -[hidden]- example4adminNetwork
+dataNetwork -[hidden]- example4dataNetwork
+appNetwork -[hidden]- example4appNetwork
+example4mntshared ---- share2
+
+@enduml

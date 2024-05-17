@@ -1,0 +1,44 @@
+@startuml
+
+class "PhysicalAsset" as Model {
+ string name
+ string assetType
+
+ control()
+ startMonitoring()
+ stopMonitoring()
+ 
+}
+
+rectangle "Location" as Location #lightblue {
+}
+
+Model o--> "1" Location : location
+
+
+rectangle "Sensor" as Sensor #lightblue {
+}
+
+Model *--> "n" Sensor : sensor
+
+
+rectangle "CommunicationPathway" as CommunicationPathway #lightblue {
+}
+
+Model o--> "n" CommunicationPathway : pathway
+
+
+
+
+    rectangle "CommunicationPathway" as CommunicationPathway #lightgreen {
+    }
+    
+        CommunicationPathway   o--> "1" Model : "asset"
+    
+    rectangle "PLC" as PLC #lightgreen {
+    }
+    
+        PLC   o--> "1" Model : "asset"
+    
+
+@enduml

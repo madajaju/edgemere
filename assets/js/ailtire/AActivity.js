@@ -1,3 +1,13 @@
+/*
+ * Copyright 2023 Intel Corporation.
+ * This software and the related documents are Intel copyrighted materials, and your use of them is governed by
+ * the express license under which they were provided to you (License). Unless the License provides otherwise,
+ * you may not use, modify, copy, publish, distribute, disclose or transmit this software or the related documents
+ * without  Intel's prior written permission. This software and the related documents are provided as is, with no
+ * express or implied warranties, other than those that are expressly stated in the License.
+ *
+ */
+
 import {AText, AWorkFlow, ASelectedHUD, AScenario, AUsecase} from './index.js';
 
 export default class AActivity {
@@ -25,11 +35,66 @@ export default class AActivity {
         let width = maxLetters * (AActivity.default.fontSize / 1.5);
         let depth = AActivity.default.depth;
         let radius = Math.max(Math.sqrt(width * width + height * height), Math.sqrt(height * height + depth * depth), Math.sqrt(width * width + depth * depth)) / 2;
+
+        // Now calculate hieght for the inputs and outputs.
+        if(node.object) {
+            let inputLength = 0;
+            let outputLength = 0;
+            if(node.object.inputs) {
+                inputLength = Object.keys(node.object?.inputs).length || 0;
+            }
+            if(node.object.outputs) {
+                outputLength = Object.keys(node.object.outputs).length || 0;
+            }
+            let iolength = Math.max(inputLength, outputLength);
+            let ioHeight = iolength * AActivity.default.fontSize * 2; // The font height should be half the size of the normal font. See above.
+            height = Math.max(ioHeight * 1.2, height);
+        }
         return {w: width, h: height, d: depth, r: radius};
     }
+    static viewIO3D(name, object) {
+        let node = {
+            name: name,
+            description: object.description
+        }
+        let height = AActivity.default.fontSize /  1.5; // 1/3 the normal font size
+        let width = node.name.length * (AActivity.default.fontSize / 4.5); // half the normal font size
 
+
+        let shape = new THREE.BoxGeometry(width, height, AActivity.default.fontSize / 3);
+
+        let opacity = 1;
+        let color = node.color || "#006699";
+        const material = new THREE.MeshPhysicalMaterial({
+            color: color,
+            transparent: true,
+            opacity: opacity,
+            depthTest: true,
+            depthWrite: true,
+            alphaTest: 0,
+            reflectivity: 0.2,
+            thickness: 6,
+            metalness: 0,
+            side: THREE.DoubleSide
+        });
+        let group = new THREE.Mesh(shape, material);
+        let labelText = node.name;
+        let label = AText.view3D({
+            text: labelText,
+            color: "#ffffff",
+            width: node.width,
+            size: AActivity.default.fontSize /3
+        });
+        label.position.set(0, 0, (AActivity.default.fontSize/6)* 1.1 );
+        label.applyMatrix4(new THREE.Matrix4().makeScale(1, 1, 1));
+        group.add(label);
+        group.width = width;
+        group.height = height;
+        return group;
+    }
     static view3D(node, type) {
         let size = AActivity.calculateBox(node);
+        // This is the rounded cube
         let width = size.w;
         let height = size.h
         let halfWidth = width / 2;
@@ -47,6 +112,7 @@ export default class AActivity {
         shape.absarc(halfWidth - radius * 2, halfHeight - radius * 2, eps, Math.PI / 2, 0, true);
         shape.absarc(halfWidth - radius * 2, -halfHeight + eps, eps, 0, -Math.PI / 2, true);
 
+        // This is the rounded cube
         let geometry = new THREE.ExtrudeBufferGeometry(shape, {
             depth: depth,
             bevelEnabled: true,
@@ -56,7 +122,7 @@ export default class AActivity {
             bevelThickness: radius0,
             curveSegments: smoothness
         });
-
+        node.description = node.detail;
         let opacity = node.opacity || 0.50;
         let color = node.color || "#66ffaa";
         if (type === 'Selected') {
@@ -91,10 +157,39 @@ export default class AActivity {
         group.add(label);
 
         // Add the specific type of Activity
+
+        if(node.object && node.object.inputs) {
+            let yoffset = AActivity.default.fontSize * 1.5;
+            let inputs = []
+            for (let iname in node.object.inputs) {
+                inputs.push(`${iname}: ${node.object.inputs[iname].type} - ${node.object.inputs[iname].description}`);
+
+                let ioNode = AActivity.viewIO3D(iname, node.object.inputs[iname]);
+                ioNode.position.set(-(size.w/2 + ioNode.width/2 - AActivity.default.fontSize * 0.5) , size.h / 2 - yoffset, size.d * 1.2);
+                group.add(ioNode);
+                yoffset += AActivity.default.fontSize;
+            }
+            node.description = node.description + "\n<b>Inputs:</b>\n  - " + inputs.join('\n  - ');
+        }
+        if(node.object && node.object.outputs) {
+            let outputs = []
+            let yoffset = AActivity.default.fontSize * 1.5;
+            for (let iname in node.object.outputs) {
+                outputs.push(`${iname}: ${node.object.outputs[iname].type} - ${node.object.outputs[iname].description}`);
+
+                let ioNode = AActivity.viewIO3D(iname, node.object.outputs[iname]);
+                ioNode.position.set((size.w/2 + ioNode.width/2 - AActivity.default.fontSize * 0.5), size.h / 2 - yoffset, size.d * 1.2);
+                group.add(ioNode);
+                yoffset += AActivity.default.fontSize;
+            }
+            node.description = node.description + "\n<b>Outputs:</b>\n  - " + outputs.join('\n  - ');
+        }
+
         let subNode = {
             name: node.name,
-            description: node.description
+            description: node.description,
         }
+
         node.expandLink = `nolink`;
         node.getDetail = AActivity.getDetail;
         if (node.object) {
@@ -139,7 +234,8 @@ export default class AActivity {
                 item.position.set((size.w / 2), size.h / 2, size.d + 1);
                 group.add(item);
             }
-            if(!node.object.next) {
+            // Terminal Node
+            if(!node.object.next || Object.keys(node.object.next).length === 0) {
                 const materialSphere = new THREE.MeshPhysicalMaterial({
                     color: "#bbbbbb",
                     transparent: true,

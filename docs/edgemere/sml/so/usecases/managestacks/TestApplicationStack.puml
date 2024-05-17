@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "StackDeveloper"
 
 actor "ApplicationDeveloper"
@@ -16,19 +17,10 @@ box Software Defined Infrastructure #cccc88
             participant storageresource
     end box
 
+group Given [The Test Application Stack is the description]
 
-"StackDeveloper" -> so: Test Application Stack
-
-    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
-
-    "storageresource" --/ EventBus: data.list
-
-    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
-
-    "storageresource" --/ EventBus: data.list
-
-
-"ApplicationDeveloper" -> so: Test Application Stack
+"StackDeveloper" --/ so: StackDeveloper and ApplicationDeveloper uses
+"so" -> so: Test Application Stack
 
     so -> "storageresource": list (name: hello,file: ./templates/world.yml)
 
@@ -39,5 +31,24 @@ box Software Defined Infrastructure #cccc88
     "storageresource" --/ EventBus: data.list
 
 
+"ApplicationDeveloper" --/ so: StackDeveloper and ApplicationDeveloper uses
+"so" -> so: Test Application Stack
+
+    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
+
+    "storageresource" --/ EventBus: data.list
+
+    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
+
+    "storageresource" --/ EventBus: data.list
+
+
+
+"StackDeveloper" /-- so: data/list in ./templates/world.yml is called twice with parameters &#39;hello&#39;
+
+"ApplicationDeveloper" /-- so: data/list in ./templates/world.yml is called twice with parameters &#39;hello&#39;
+
+
+end
 
 @enduml

@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "IT Operations"
 
 
@@ -16,8 +17,10 @@ box Common Physical Layer #cccccc
             participant datacenter
     end box
 
+group Given [IT operations has created several devices and a data center]
 
-"IT Operations" -> cpl: Remove Data Center
+"IT Operations" --/ cpl: IT operations initiates the process to remove a data center
+"cpl" -> cpl: Remove Data Center
 
     cpl -> "device": create (name: host1,file: ./templates/device.yaml)
 
@@ -64,5 +67,10 @@ box Common Physical Layer #cccccc
     "cpl" --/ EventBus: datacenter.destroy
 
 
+
+"IT Operations" /-- cpl: All devices and aggregated devices in the data center are removed
+
+
+end
 
 @enduml

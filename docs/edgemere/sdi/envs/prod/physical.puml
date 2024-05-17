@@ -2,11 +2,11 @@
   interface CLI
   interface Web
   interface WebSocket
-package "Software Defined Infrastructure" #cccc88 {
+node "Software Defined Infrastructure" #cccc88 {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {
-    component " edgemere sdi" as binName
+    card " edgemere sdi" as binName
   }
   binName --> REST
 
@@ -14,11 +14,11 @@ package "Software Defined Infrastructure" #cccc88 {
       file "node server.js\n" as sdi_container
       REST --> sdi_container
 
-  
+
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
+
   }
   folder images #ffffff {
     collections "sdi" as sdiimage
@@ -26,10 +26,10 @@ package "Software Defined Infrastructure" #cccc88 {
     sdiimage <|-- ailtireswarm
     sdi_container --> sdiimage
 
-  
+
       artifact "sdi_web" as sdi_web
       web_container --> sdi_web
-    
+
   }
 }
 CLI " edgemere sdi" -- binName

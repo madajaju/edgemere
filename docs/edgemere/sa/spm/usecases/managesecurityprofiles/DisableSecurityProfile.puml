@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "SecurityEngineer"
 
 
@@ -17,8 +18,10 @@ box Software Defined Infrastructure #cccc88
 box Security Profile Manager #cc8888
     end box
 
+group Given [A Security Profile named &#39;secProfileDSP&#39; has been created]
 
-"SecurityEngineer" -> spm: Disable Security Profile
+"SecurityEngineer" --/ spm: The SecurityEngineer uses &#39;securityprofile/disable&#39; method for &#39;secProfileDSP&#39;
+"spm" -> spm: Disable Security Profile
 
     spm -> "storageresource": create (name: secProfileDSP,file: ./templates/secprofile.yml)
 
@@ -29,5 +32,10 @@ box Security Profile Manager #cc8888
     "securityprofile" --/ EventBus: securityprofile.disable
 
 
+
+"SecurityEngineer" /-- spm: The policies enforcing the identity are removed immediately and all affected identities are re-evaluated
+
+
+end
 
 @enduml

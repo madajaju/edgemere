@@ -38,7 +38,7 @@ the subsystem's logic.
 | sa | sa |  |  | children |
 | sml | sml |  |  | children |
 | sdi | sdi |  |  | children |
-| web | edgemere_web |  |  | children,siblings |
+| web | edgemere_web |  |  | parent,siblings |
 | doc | edgemere_doc |  |  | siblings |
 
 

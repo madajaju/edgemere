@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Release Resources',
-    description: 'Release Resources based on the name given when the Resources are requested',
-    method: "resource/release",
-    actors: {
-        'IT Operations': 'uses',
-    },
-};
-
+module.exports = {"name":"Release Resources","description":"Release Resources based on the name given when the Resources are requested","method":"resource/release","actors":{"IT Operations":"uses"},"uid":"ManageResources.ReleaseResources","given":"IT operations has requested resources using a specific name","when":"The resources are no longer needed","then":"The resources allocated under the specific name are released"};

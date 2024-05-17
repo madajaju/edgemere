@@ -2,11 +2,11 @@
   interface CLI
   interface Web
   interface WebSocket
-package "Storage Services" #lightblue {
+node "Storage Services" #lightblue {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {
-    component " edgemere diml cds storage" as binName
+    card " edgemere diml cds storage" as binName
   }
   binName --> REST
 
@@ -14,11 +14,11 @@ package "Storage Services" #lightblue {
       file "node server.js\ndocker-compose.yml" as storage_container
       REST --> storage_container
 
-  
+
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
+
   }
   folder images #ffffff {
     collections "storage" as storageimage
@@ -26,10 +26,10 @@ package "Storage Services" #lightblue {
     storageimage <|-- ailtireswarm
     storage_container --> storageimage
 
-  
+
       artifact "diml_cds_storage_web" as diml_cds_storage_web
       web_container --> diml_cds_storage_web
-    
+
   }
 }
 CLI " edgemere diml cds storage" -- binName

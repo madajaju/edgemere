@@ -20,6 +20,7 @@
   "dependencies": {
     "ailtire": "latest",
     "mocha": "^10.0.0",
+    "openai": "^4.47.1",
     "systeminformation": "latest"
   }
 }

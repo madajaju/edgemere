@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "IT Operations"
 
 
@@ -10,9 +11,16 @@ box Environment Management #88cc88
 end box
 
 
+group Given [IT Operations has access to manage environments]
 
-"IT Operations" -> em: Disable Environment
+"IT Operations" --/ em: IT Operations executes the &#39;environment/disable&#39; command
+"em" -> em: Disable Environment
 
 
+
+"IT Operations" /-- em: Services are suspended and cannot launch in the disabled environment
+
+
+end
 
 @enduml

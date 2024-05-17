@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "IT Operations"
 
 
@@ -10,9 +11,16 @@ box Common Physical Layer #cccccc
 end box
 
 
+group Given [IT Operations has access to the device management system]
 
-"IT Operations" -> cpl: Remove Device
+"IT Operations" --/ cpl: A device needs to be removed from the system
+"cpl" -> cpl: Remove Device
 
 
+
+"IT Operations" /-- cpl: The device is successfully deleted from the system
+
+
+end
 
 @enduml

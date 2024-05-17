@@ -1,0 +1,30 @@
+@startuml
+
+
+left to right direction
+
+usecase "Monitor Physical World" as MonitorPhysicalWorld #yellow
+
+Actor "Actor" as Actor
+
+Actor --> MonitorPhysicalWorld
+
+
+
+json ContinuousMonitoring #lightyellow {
+    "Given": "A system is set for continuous monitoring",
+    "When": "A user uses data/create method",
+    "Then": "The system should list data from specified file"
+}
+
+MonitorPhysicalWorld <|-- ContinuousMonitoring
+
+
+
+
+
+
+
+
+
+@enduml

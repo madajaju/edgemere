@@ -1,10 +1,1 @@
-module.exports = {
-    name: 'Monitor Application',
-    description: 'Monitor Application is the description',
-    method: "application/monitor",
-    actors: {
-        'DevOps Engineer': 'uses',
-        'Application Developer': 'uses'
-    },
-};
-
+module.exports = {"name":"Monitor Application","description":"Monitor Application is the description","method":"application/monitor","actors":{"DevOps Engineer":"uses","Application Developer":"uses"},"uid":"ManageApplications.MonitorApplication","given":"DevOps Engineer and Application Developer have access to the Monitor Application","when":"They use the Monitor Application","then":"They should be able to manage and monitor applications"};

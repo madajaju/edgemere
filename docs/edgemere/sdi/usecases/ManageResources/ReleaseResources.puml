@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "IT Operations"
 
 
@@ -10,9 +11,16 @@ box Software Defined Infrastructure #cccc88
 end box
 
 
+group Given [IT operations has requested resources using a specific name]
 
-"IT Operations" -> sdi: Release Resources
+"IT Operations" --/ sdi: The resources are no longer needed
+"sdi" -> sdi: Release Resources
 
 
+
+"IT Operations" /-- sdi: The resources allocated under the specific name are released
+
+
+end
 
 @enduml

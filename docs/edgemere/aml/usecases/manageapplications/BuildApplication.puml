@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "DevOpsEngineer"
 
 
@@ -14,17 +15,24 @@ box Software Defined Infrastructure #cccc88
             participant storageresource
     end box
 
+group Given [DevOpsEngineer has access to the application source code]
 
-"DevOpsEngineer" -> aml: Build Application
-
-    aml -> "storageresource": list (name: hello,file: ./templates/world.yml)
-
-    "storageresource" --/ EventBus: data.list
+"DevOpsEngineer" --/ aml: DevOpsEngineer initiates the build process
+"aml" -> aml: Build Application
 
     aml -> "storageresource": list (name: hello,file: ./templates/world.yml)
 
     "storageresource" --/ EventBus: data.list
 
+    aml -> "storageresource": list (name: hello,file: ./templates/world.yml)
 
+    "storageresource" --/ EventBus: data.list
+
+
+
+"DevOpsEngineer" /-- aml: The application should be built successfully
+
+
+end
 
 @enduml

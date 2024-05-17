@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "SecurityEngineer"
 
 
@@ -17,8 +18,10 @@ box Software Defined Infrastructure #cccc88
 box Security Profile Manager #cc8888
     end box
 
+group Given [A security profile has been created]
 
-"SecurityEngineer" -> spm: Deploy Security Profile
+"SecurityEngineer" --/ spm: The Security Engineer deploys the security profile
+"spm" -> spm: Deploy Security Profile
 
     spm -> "storageresource": create (name: secProfile1,file: ./templates/secprofile.yml)
 
@@ -29,5 +32,10 @@ box Security Profile Manager #cc8888
     "securityprofile" --/ EventBus: securityprofile.deploy
 
 
+
+"SecurityEngineer" /-- spm: The system&#39;s identity has the new security profile applied
+
+
+end
 
 @enduml

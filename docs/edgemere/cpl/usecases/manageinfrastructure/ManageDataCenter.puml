@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "IT Operations"
 
 
@@ -16,8 +17,10 @@ box Common Physical Layer #cccccc
             participant datacenter
     end box
 
+group Given [IT Operations uses a method for managing data sources]
 
-"IT Operations" -> cpl: Manage Data Center
+"IT Operations" --/ cpl: various actions are executed to create and modify devices in the data center
+"cpl" -> cpl: Manage Data Center
 
     cpl -> "device": create (name: hostmdc1,file: ./templates/device.yaml)
 
@@ -76,5 +79,10 @@ box Common Physical Layer #cccccc
     "datacenter" --/ EventBus: datacenter.enable
 
 
+
+"IT Operations" /-- cpl: the devices and data center are successfully created and modified according to the parameters given in the actions
+
+
+end
 
 @enduml

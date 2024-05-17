@@ -1,13 +1,1 @@
-module.exports = {
-    name: 'Build Application',
-    description: 'Build Application is the description',
-    method: "data/create",
-    actors: {
-        'DevOpsEngineer': 'uses',
-    },
-    steps: [
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-    ]
-};
-
+module.exports = {"name":"Build Application","description":"Build Application is the description","method":"data/create","actors":{"DevOpsEngineer":"uses"},"steps":[{"action":"data/list","parameters":{"name":"hello","file":"./templates/world.yml"}},{"action":"data/list","parameters":{"name":"hello","file":"./templates/world.yml"}}],"uid":"ManageApplications.BuildApplication","given":"DevOpsEngineer has access to the application source code","when":"DevOpsEngineer initiates the build process","then":"The application should be built successfully"};

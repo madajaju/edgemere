@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Find Data Instance',
-    description: 'Find Data Instance is the description',
-    method: "datainstance/find",
-    actors: {
-        'DataEngineer': 'uses',
-    },
-};
-
+module.exports = {"name":"Find Data Instance","description":"Find Data Instance is the description","method":"datainstance/find","actors":{"DataEngineer":"uses"},"uid":"ManageDataInstances.FindDataInstance","given":"DataEngineer has access to datainstance/find method","when":"DataEngineer uses the method to find a specific data instance","then":"The specific data instance is retrieved and displayed to the DataEngineer"};

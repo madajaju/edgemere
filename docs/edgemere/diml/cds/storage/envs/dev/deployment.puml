@@ -3,41 +3,43 @@
 left to right direction
 
 
-boundary ailtire_appname_diml_cds_family #red
-
-
-entity ailtire_appname_diml_cds_storage_family #black
 
 
 
 
-package "storage" #lightblue {
-    queue childrennet #black [
+
+node "storage" #lightblue {
+
+
+    hexagon childrennet #black [
             <b><color:white>children</color></b>
     ]
     
-    childrennet -[#black]- ailtire_appname_diml_cds_storage_family
+    portout " " as childrennetPortOut #black
+    childrennet -[#black]- childrennetPortOut
     
-    queue siblingnet #blue [
+    hexagon siblingnet #blue [
             <b><color:white>sibling</color></b>
     ]
     
-    queue parentnet #red [
+    hexagon parentnet #red [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#red]- ailtire_appname_diml_cds_family
+    portin " " as parentnetPortIn #red
+    parentnetPortIn -[#red]- parentnet
     
 
-node "frontend" as frontendService
+node "frontend" as frontendService #white {
+    portOut " " as frontendServicesiblingnet #blue
+   frontendServicesiblingnet -[#blue]- siblingnet
+   
 
-
-        artifact "diml_cds_storage_web" as diml_cds_storage_webimage
+    artifact "diml_cds_storage_web" as diml_cds_storage_webimage
     
 }
 
-frontendService -[#blue]- siblingnet
-frontendService .... diml_cds_storage_webimage
+}
 
 
 @enduml

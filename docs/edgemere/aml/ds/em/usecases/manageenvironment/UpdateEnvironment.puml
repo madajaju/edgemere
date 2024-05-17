@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "IT Operations"
 
 
@@ -10,9 +11,16 @@ box Environment Management #88cc88
 end box
 
 
+group Given [IT Operations has access to the environment settings]
 
-"IT Operations" -> em: Update Environment
+"IT Operations" --/ em: IT Operations wants to update the attributes of the environment
+"em" -> em: Update Environment
 
 
+
+"IT Operations" /-- em: The changes made by IT Operations should be reflected in the environment attributes
+
+
+end
 
 @enduml

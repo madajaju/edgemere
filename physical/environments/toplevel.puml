@@ -19,4 +19,25 @@ frame local {
    shared .. e2s
    shared .. e3s
 }
+
+frame prod {
+    cloud AWS
+    database "sharedp1"
+    node "examplep1" <<small>> {
+        database "/dev/sda" as c1
+        folder "/mnt/shared" as c1s
+    }
+    node "examplep2" <<small>> {
+        database "/dev/sda" as c2
+        folder "/mnt/shared" as c2s
+    }
+    node "examplep3" <<large>> {
+        database "/dev/sda" as c3
+        folder "/mnt/shared" as c3s
+    }
+
+   sharedp1 .. c1s
+   sharedp1 .. c2s
+   sharedp1 .. c3s
+}
 @enduml

@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Create Workload',
-    description: 'Create Workload is the description',
-    method: "workload/create",
-    actors: {
-        'Application Developer': 'uses',
-    },
-};
-
+module.exports = {"name":"Create Workload","description":"Create Workload is the description","method":"workload/create","actors":{"Application Developer":"uses"},"uid":"ManageWorkloads.CreateWorkload","given":"An application developer is using the system","when":"The developer uses the 'workload/create' method","then":"A new workload is successfully created in the system"};

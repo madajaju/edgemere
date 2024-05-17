@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Manage Services" as ManageServices #yellow
 
 Actor "Stack Developer" as StackDeveloper
@@ -13,9 +15,13 @@ ApplicationDeveloper --> ManageServices
 
 
 
-usecase "BuildService" as BuildService #lightgrey
+json BuildService #lightyellow {
+    "Given": "StackDeveloper uses Build Service",
+    "When": "data/create method is invoked with name &#39;hello&#39; and file &#39;./templates/world.yml&#39;",
+    "Then": "data/list response should provide the same name &#39;hello&#39; and file &#39;./templates/world.yml&#39;"
+}
 
-ManageServices --> BuildService
+ManageServices <|-- BuildService
 
 
 

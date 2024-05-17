@@ -1,6 +1,17 @@
+/*
+ * Copyright 2023 Intel Corporation.
+ * This software and the related documents are Intel copyrighted materials, and your use of them is governed by
+ * the express license under which they were provided to you (License). Unless the License provides otherwise,
+ * you may not use, modify, copy, publish, distribute, disclose or transmit this software or the related documents
+ * without  Intel's prior written permission. This software and the related documents are provided as is, with no
+ * express or implied warranties, other than those that are expressly stated in the License.
+ *
+ */
+
 import {AText, A3DGraph, ASelectedHUD, AMainWindow} from './index.js';
 
 export default class AObject {
+    static _ships = {};
     static scolor = {
         started: "#aaffff",
         create: "#aaffff",
@@ -66,7 +77,7 @@ export default class AObject {
     }
 
     static addObject(obj, creator) {
-        if (!creator) {
+        if (obj._attributes && !creator) {
             // Add the object to the list Only if the creator is not set. This prevents junk from being added to the
             // detail list.
             let ritem = {recid: obj._attributes.id};
@@ -95,39 +106,85 @@ export default class AObject {
                 }
             }
             w2ui['objlist'].add([ritem]);
-        }
-        // Add the object to the graph
-        let data = {nodes: {}, links: []};
-        data.nodes[obj._attributes.id] = {
-            id: obj._attributes.id,
-            name: obj._attributes.name,
-            group: obj.definition.name,
-            level: obj.definition.package.shortname,
-            view: obj.definition.name + '3D'
-        }
-        if (creator) {
-            data.links.push({target: obj._attributes.id, source: creator, value: 100, width: 0.001, color: "#aaffff"});
-        }
-        // Now add the nodes of the associations
-        // Go through the cols and get the associations
-
-        addRelationshipObjects(data, obj.definition, obj._associations, data.nodes[obj._attributes.id]);
-        // If there is a creator and there is not an rbox then add an rbox to the creator.
-        if (creator) {
-            let rbox = {
-                parent: creator,
-                x: {min: -2000, max: 2000},
-                z: {min: -2000, max: -700},
-                y: {min: -2000, max: 2000}
+        } else if (obj._attributes) {
+            // Add the object to the graph
+            let data = {nodes: {}, links: []};
+            data.nodes[obj._attributes.id] = {
+                id: obj._attributes.id,
+                name: obj._attributes.name,
+                group: obj.definition.name,
+                level: obj.definition.package.shortname,
+                view: obj.definition.name + '3D'
             }
+            if (creator) {
+                data.links.push({
+                    target: obj._attributes.id,
+                    source: creator,
+                    value: 100,
+                    width: 0.001,
+                    color: "#aaffff"
+                });
+            }
+            // Now add the nodes of the associations
+            // Go through the cols and get the associations
 
-            for (let i in data.nodes) {
-                if (!data.nodes[i].rbox) {
-                    data.nodes[i].rbox = rbox;
+            addRelationshipObjects(data, obj.definition, obj._associations, data.nodes[obj._attributes.id]);
+            // If there is a creator and there is not an rbox then add an rbox to the creator.
+            if (creator) {
+                let rbox = {
+                    parent: creator,
+                    x: {min: -2000, max: 2000},
+                    z: {min: -2000, max: -700},
+                    y: {min: -2000, max: 2000}
+                }
+
+                for (let i in data.nodes) {
+                    if (!data.nodes[i].rbox) {
+                        data.nodes[i].rbox = rbox;
+                    }
                 }
             }
+            window.graph.addData(data.nodes, data.links);
+        } else {
+            return;
+            console.log("Event:", obj);
+            if (!AObject._ships.hasOwnProperty(obj.MMSI)) {
+                let obj3D = _getShip3D(obj);
+                AObject._ships[obj.MMSI] = obj;
+                let ship = AObject._ships[obj.MMSI];
+                ship.object3D = obj3D;
+                ship.z = 0;
+                ship.x = obj.location.LAT * 10;
+                ship.y = obj.location.LONG * 10;
+                _setShipPosition(ship);
+                window.graph.addObject(ship.object3D);
+                window.graph.addObject(ship.arrowObj);
+            } else {
+                /*
+                AObject._ships[obj.MMSI] = {
+                    name: obj.VesselName,
+                    description: `${obj.VesselName}\nSOG: ${obj.location.SOG}\nCOG: ${obj.location.COG}\nLAT: ${obj.location.LAT}\nLONG: ${obj.location.LONG}`,
+                    id: obj.MMSI,
+                    fx: obj.location.LAT*10,
+                    fy: obj.location.LONG*10,
+                    fz: 100,
+                    group: "Ship"
+                };
+                window.graph.addData(AObject._ships, []);
+                // let objID = "#" + node.view + type;
+                 */
+                let ship = AObject._ships[obj.MMSI];
+                let obj3D = ship.object3D;
+                let point1 = {x: ship.x, y: ship.y, z: ship.z};
+                ship.z++;
+                ship.x = obj.location.LAT * 10;
+                ship.y = obj.location.LONG * 10;
+                let point2 = {x: ship.x, y: ship.y, z: ship.z};
+                let lineObj = _getLine(point1, point2, "#cccccc");
+                window.graph.addObject(lineObj);
+                _setShipPosition(ship);
+            }
         }
-        window.graph.addData(data.nodes, data.links);
     }
 
     static createList(results) {
@@ -443,4 +500,104 @@ function addRelationshipObjects(data, definition, associations, parent) {
             }
         }
     }
+}
+
+const _getLine = (point1, point2, color) => {
+    const mat = new THREE.LineBasicMaterial({color: color});
+    const points = [];
+    points.push(new THREE.Vector3(point1.x, point1.y, point1.z));
+    points.push(new THREE.Vector3(point2.x, point2.y, point2.z));
+
+    const geo = new THREE.BufferGeometry().setFromPoints(points);
+    const ret = new THREE.Line(geo, mat);
+    return ret;
+}
+const _shipColor = {
+    21: "#ffffaa",
+    22: "#ffffaa",
+    30: "#ff8844",
+    31: "#ffffaa",
+    32: "#ffffaa",
+    35: "#4488ff",
+    36: "#44ff88",
+    52: "#ffffaa",
+    60: "#44ff88",
+    61: "#44ff88",
+    62: "#44ff88",
+    63: "#44ff88",
+    64: "#44ff88",
+    65: "#44ff88",
+    66: "#44ff88",
+    67: "#44ff88",
+    68: "#44ff88",
+    69: "#44ff88",
+    70: "#ffffaa",
+    71: "#ffffaa",
+    72: "#ffffaa",
+    73: "#ffffaa",
+    74: "#ffffaa",
+    75: "#ffffaa",
+    76: "#ffffaa",
+    77: "#ffffaa",
+    78: "#ffffaa",
+    79: "#ffffaa",
+    80: "#ffaa88",
+    81: "#ffaa88",
+    82: "#ffaa88",
+    83: "#ffaa88",
+    84: "#ffaa88",
+    85: "#ffaa88",
+    86: "#ffaa88",
+    87: "#ffaa88",
+    88: "#ffaa88",
+    89: "#ffaa88"
+}
+
+const _getShip3D = (ship) => {
+    let color = "#ffffff";
+    if (_shipColor.hasOwnProperty(ship.VesselType)) {
+        color = _shipColor[ship.VesselType];
+    }
+    const geo = new THREE.ConeGeometry(ship.Width / 5, ship.Length / 10, 3, 1);
+    const material = new THREE.MeshPhysicalMaterial({
+        color: color,
+        transparent: true,
+        opacity: 0.75,
+        depthTest: true,
+        depthWrite: true,
+        alphaTest: 0,
+        reflectivity: 0.2,
+        thickness: 6,
+        metalness: 0,
+        side: THREE.DoubleSide
+    });
+    const obj3D = new THREE.Mesh(geo, material);
+    const arrow = new THREE.ConeGeometry(1, (ship.Length / 10) + 4, 20, 1);
+    const matArrow = new THREE.MeshPhysicalMaterial({
+        color: "#00ff00",
+        transparent: true,
+        opacity: 1,
+        depthTest: true,
+        depthWrite: true,
+        alphaTest: 0,
+        reflectivity: 0.2,
+        thickness: 6,
+        metalness: 0,
+        side: THREE.DoubleSide
+    });
+    const arrowObj = new THREE.Mesh(arrow, matArrow);
+   // obj3D.rotation.x = Math.PI / 2;
+    obj3D.rotation.z = (ship.location.Heading * (2 * Math.PI / 360));
+    // arrowObj.rotation.x = Math.PI / 2;
+    arrowObj.rotation.z = (ship.location.COG * (2 * Math.PI / 360));
+    ship.arrowObj = arrowObj;
+    ship.object3D = obj3D;
+    return obj3D;
+}
+
+const _setShipPosition = (ship) => {
+    ship.object3D.position.set(ship.x, ship.y, ship.z);
+    ship.object3D.rotation.z = ship.location.Heading * (2 * Math.PI / 360);
+    ship.arrowObj.position.set(ship.x, ship.y, ship.z);
+    ship.arrowObj.rotation.z = (ship.location.COG * (2 * Math.PI / 360));
 }

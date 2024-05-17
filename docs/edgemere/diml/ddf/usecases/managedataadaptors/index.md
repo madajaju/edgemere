@@ -41,6 +41,11 @@ Manage Data Adaptors is the description
 Attach Data Blue Print is the description
 
 ![Scenario AttachDataBluePrint](./AttachDataBluePrint.png)
+#### Criteria
+
+* Given - A Data Scientist is using the blueprint/attach method
+* When - They attach a data blueprint
+* Then - A Data Scientist is using the blueprint/attach method
 
 #### Steps
 1. To Be Defined
@@ -56,6 +61,11 @@ Attach Data Blue Print is the description
 Create Data Adaptor is the description
 
 ![Scenario CreateDataAdaptor](./CreateDataAdaptor.png)
+#### Criteria
+
+* Given - A data engineer wants to create a new data adaptor
+* When - The data engineer uses the &#39;dataadaptor/create&#39; method
+* Then - A data engineer wants to create a new data adaptor
 
 #### Steps
 1. To Be Defined
@@ -71,6 +81,11 @@ Create Data Adaptor is the description
 Update Data Adaptor is the description
 
 ![Scenario UpdateDataAdaptor](./UpdateDataAdaptor.png)
+#### Criteria
+
+* Given - A data engineer wants to update a specific data adaptor
+* When - The data engineer uses the &#39;dataadaptor/update&#39; method
+* Then - A data engineer wants to update a specific data adaptor
 
 #### Steps
 1. To Be Defined

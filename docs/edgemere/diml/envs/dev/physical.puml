@@ -2,11 +2,11 @@
   interface CLI
   interface Web
   interface WebSocket
-package "Distributed Information Management Layer" #ffcc88 {
+node "Distributed Information Management Layer" #ffcc88 {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {
-    component " edgemere diml" as binName
+    card " edgemere diml" as binName
   }
   binName --> REST
 
@@ -14,11 +14,11 @@ package "Distributed Information Management Layer" #ffcc88 {
       file "node server.js\ndocker-compose.yml" as diml_container
       REST --> diml_container
 
-  
+
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
+
   }
   folder images #ffffff {
     collections "diml" as dimlimage
@@ -26,10 +26,10 @@ package "Distributed Information Management Layer" #ffcc88 {
     dimlimage <|-- ailtireswarm
     diml_container --> dimlimage
 
-  
+
       artifact "diml_web" as diml_web
       web_container --> diml_web
-    
+
   }
 }
 CLI " edgemere diml" -- binName

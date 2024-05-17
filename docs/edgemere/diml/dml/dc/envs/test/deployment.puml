@@ -3,43 +3,45 @@
 left to right direction
 
 
-boundary parent #black
-
-
-entity children #blue
 
 
 
 
-package "diml_dml_dc" #lightblue {
-    queue parentnet #black [
+
+node "diml_dml_dc" #lightblue {
+
+
+    hexagon parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#black]- parent
+    portin " " as parentnetPortIn #black
+    parentnetPortIn -[#black]- parentnet
     
-    queue childrennet #blue [
+    hexagon childrennet #blue [
             <b><color:white>children</color></b>
     ]
     
-    childrennet -[#blue]- children
+    portout " " as childrennetPortOut #blue
+    childrennet -[#blue]- childrennetPortOut
     
-    queue siblingsnet #red [
+    hexagon siblingsnet #red [
             <b><color:white>siblings</color></b>
     ]
     
 
-node "controller" as controllerService
+node "controller" as controllerService #white {
+    portOut " " as controllerServicechildrennet #blue
+   controllerServicechildrennet -[#blue]- childrennet
+       portOut " " as controllerServicesiblingsnet #red
+   controllerServicesiblingsnet -[#red]- siblingsnet
+   
 
-
-        artifact "diml_dml_dc_controller" as diml_dml_dc_controllerimage
+    artifact "diml_dml_dc_controller" as diml_dml_dc_controllerimage
     
 }
 
-controllerService -[#blue]- childrennet
-
-controllerService -[#red]- siblingsnet
-controllerService .... diml_dml_dc_controllerimage
+}
 
 
 @enduml

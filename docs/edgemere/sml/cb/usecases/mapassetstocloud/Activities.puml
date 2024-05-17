@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Map Assets to Cloud" as MapAssetstoCloud #yellow
 
 Actor "IT Operations" as ITOperations

@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "StackDeveloper"
 
 
@@ -14,17 +15,24 @@ box Software Defined Infrastructure #cccc88
             participant storageresource
     end box
 
+group Given [StackDeveloper uses a specific file]
 
-"StackDeveloper" -> so: Create Service Stack
-
-    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
-
-    "storageresource" --/ EventBus: data.list
+"StackDeveloper" --/ so: file &#39;./templates/world.yml&#39; is selected
+"so" -> so: Create Service Stack
 
     so -> "storageresource": list (name: hello,file: ./templates/world.yml)
 
     "storageresource" --/ EventBus: data.list
 
+    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
 
+    "storageresource" --/ EventBus: data.list
+
+
+
+"StackDeveloper" /-- so: data list with &#39;hello&#39; name is created
+
+
+end
 
 @enduml

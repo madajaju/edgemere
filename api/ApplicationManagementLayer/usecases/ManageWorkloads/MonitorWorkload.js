@@ -1,10 +1,1 @@
-module.exports = {
-    name: 'Monitor Workload',
-    description: 'Monitor Workload is the description',
-    method: "workload/monitor",
-    actors: {
-        'Application Developer': 'uses',
-        'DevOps Engineer': 'uses',
-    },
-};
-
+module.exports = {"name":"Monitor Workload","description":"Monitor Workload is the description","method":"workload/monitor","actors":{"Application Developer":"uses","DevOps Engineer":"uses"},"uid":"ManageWorkloads.MonitorWorkload","given":"The system has workload to be monitored","when":"Application Developer or DevOps Engineer uses the system","then":"The system shows the current workload status"};

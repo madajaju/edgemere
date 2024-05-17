@@ -2,11 +2,11 @@
   interface CLI
   interface Web
   interface WebSocket
-package "Identity Aspect" #cc8888 {
+node "Identity Aspect" #cc8888 {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {
-    component " edgemere ia" as binName
+    card " edgemere ia" as binName
   }
   binName --> REST
 
@@ -14,11 +14,11 @@ package "Identity Aspect" #cc8888 {
       file "node server.js\n" as ia_container
       REST --> ia_container
 
-  
+
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
+
   }
   folder images #ffffff {
     collections "ia" as iaimage
@@ -26,10 +26,10 @@ package "Identity Aspect" #cc8888 {
     iaimage <|-- ailtireswarm
     ia_container --> iaimage
 
-  
+
       artifact "ia_web" as ia_web
       web_container --> ia_web
-    
+
   }
 }
 CLI " edgemere ia" -- binName

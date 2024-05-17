@@ -1,14 +1,1 @@
-module.exports = {
-    name: 'Create Application Stack',
-    description: 'Create Application Stack is the description',
-    method: "data/create",
-    actors: {
-        'ApplicationDeveloper': 'uses',
-        'StackDeveloper': 'uses',
-    },
-    steps: [
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-    ]
-};
-
+module.exports = {"name":"Create Application Stack","description":"Create Application Stack is the description","method":"data/create","actors":{"ApplicationDeveloper":"uses","StackDeveloper":"uses"},"steps":[{"action":"data/list","parameters":{"name":"hello","file":"./templates/world.yml"}},{"action":"data/list","parameters":{"name":"hello","file":"./templates/world.yml"}}],"uid":"ManageStacks.CreateApplicationStack","given":"The application and stack developers have access to ./templates/world.yml","when":"ApplicationDeveloper and StackDeveloper use data/list method","then":"The 'hello' application stack is created"};

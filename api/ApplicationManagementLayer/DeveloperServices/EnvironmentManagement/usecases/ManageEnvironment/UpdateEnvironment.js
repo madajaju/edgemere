@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Update Environment',
-    description: 'IT Operations updates attributes of the environment',
-    method: "environment/update",
-    actors: {
-        'IT Operations': 'uses',
-    },
-};
-
+module.exports = {"name":"Update Environment","description":"IT Operations updates attributes of the environment","method":"environment/update","actors":{"IT Operations":"uses"},"uid":"ManageEnvironment.UpdateEnvironment","given":"IT Operations has access to the environment settings","when":"IT Operations wants to update the attributes of the environment","then":"The changes made by IT Operations should be reflected in the environment attributes"};

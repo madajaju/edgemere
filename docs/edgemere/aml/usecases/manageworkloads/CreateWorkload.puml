@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "Application Developer"
 
 
@@ -10,9 +11,16 @@ box Application Management Layer #88cccc
 end box
 
 
+group Given [An application developer is using the system]
 
-"Application Developer" -> aml: Create Workload
+"Application Developer" --/ aml: The developer uses the &#39;workload/create&#39; method
+"aml" -> aml: Create Workload
 
 
+
+"Application Developer" /-- aml: A new workload is successfully created in the system
+
+
+end
 
 @enduml

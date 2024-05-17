@@ -3,38 +3,42 @@
 left to right direction
 
 
-boundary ailtire_parent_network_family #black
-boundary edgemere_ailtire_parent_network_family #blue
 
 
 
 
+node "cpl_tp" #cccccc {
 
-package "cpl_tp" #cccccc {
-    queue parentnet #black [
+
+    hexagon parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#black]- ailtire_parent_network_family
+    portin " " as parentnetPortIn #black
+    parentnetPortIn -[#black]- parentnet
     
-    queue telemetrynet #blue [
+    hexagon telemetrynet #blue [
             <b><color:white>telemetry</color></b>
     ]
     
-    telemetrynet -[#blue]- edgemere_ailtire_parent_network_family
+    portin " " as telemetrynetPortIn #blue
+    telemetrynetPortIn -[#blue]- telemetrynet
     
 
-node "producer" as producerService
+node "producer" as producerService #white {
 
+    portIn " " as producerServiceparentnet #black
+    parentnet -[#black]- producerServiceparentnet
+    
+    portIn " " as producerServicetelemetrynet #blue
+    telemetrynet -[#blue]- producerServicetelemetrynet
+    
 
-        artifact "cpl_tp_producer:latest" as cpl_tp_producerlatestimage
+    artifact "cpl_tp_producer:latest" as cpl_tp_producerlatestimage
     
 }
 
-producerService -[#black]- parentnet
-
-producerService -[#blue]- telemetrynet
-producerService .... cpl_tp_producerlatestimage
+}
 
 
 @enduml

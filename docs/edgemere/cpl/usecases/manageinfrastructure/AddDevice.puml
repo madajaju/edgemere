@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "IT Operations"
 
 
@@ -14,8 +15,10 @@ box Common Physical Layer #cccccc
             participant device
     end box
 
+group Given [IT Operations uses data/source]
 
-"IT Operations" -> cpl: Add Device
+"IT Operations" --/ cpl: device/create is actioned with parameters: name - hostad1, file - ./templates/device.yaml
+"cpl" -> cpl: Add Device
 
     cpl -> "device": create (name: hostad1,file: ./templates/device.yaml)
 
@@ -34,5 +37,10 @@ box Common Physical Layer #cccccc
     "common physical layer" --/ EventBus: device.disable
 
 
+
+"IT Operations" /-- cpl: devices get disabled and enabled through cpl/device/disable and cpl/device/enable commands respectively
+
+
+end
 
 @enduml

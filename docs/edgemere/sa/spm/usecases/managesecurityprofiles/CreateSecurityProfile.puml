@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "SecurityEngineer"
 
 
@@ -14,13 +15,20 @@ box Software Defined Infrastructure #cccc88
             participant storageresource
     end box
 
+group Given [A SecurityEngineer with a secoprofile yaml file]
 
-"SecurityEngineer" -> spm: Create Security Profile
+"SecurityEngineer" --/ spm: The SecurityEngineer decides to create a new security profile named &#39;secProfile1&#39;
+"spm" -> spm: Create Security Profile
 
     spm -> "storageresource": create (name: secProfile1,file: ./templates/secprofile.yml)
 
     "storageresource" --/ EventBus: securityprofile.create
 
 
+
+"SecurityEngineer" /-- spm: The system should successfully create and store the new security profile as specified in the yaml file
+
+
+end
 
 @enduml

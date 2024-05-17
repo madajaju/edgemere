@@ -1,0 +1,22 @@
+@startuml
+
+
+left to right direction
+
+usecase "Commission Physical Asset" as CommissionPhysicalAsset #yellow
+
+Actor "Actor" as Actor
+
+Actor --> CommissionPhysicalAsset
+
+
+
+
+
+
+
+
+
+
+
+@enduml

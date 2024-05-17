@@ -1,14 +1,1 @@
-module.exports = {
-    name: 'Modify Application Stack',
-    description: 'Modify Application Stack is the description',
-    method: "data/create",
-    actors: {
-        'StackDeveloper': 'uses',
-        'ApplicationDeveloper': 'uses',
-    },
-    steps: [
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-    ]
-};
-
+module.exports = {"name":"Modify Application Stack","description":"Modify Application Stack is the description","method":"data/create","actors":{"StackDeveloper":"uses","ApplicationDeveloper":"uses"},"steps":[{"action":"data/list","parameters":{"name":"hello","file":"./templates/world.yml"}},{"action":"data/list","parameters":{"name":"hello","file":"./templates/world.yml"}}],"uid":"ManageStacks.ModifyApplicationStack","given":"A stack developer with access to current application stack","when":"The developer modifies the application stack","then":"The parameters of the application stack will be updated"};

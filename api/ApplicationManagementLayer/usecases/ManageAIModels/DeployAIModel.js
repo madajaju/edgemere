@@ -1,11 +1,1 @@
-module.exports = {
-    name: 'Deploy AI Model',
-    description: 'Deploy AI Model is the description',
-    method: "aimodel/deploy",
-    actors: {
-        'DevOpsEngineer': 'uses',
-        'ApplicationDeveloper': 'uses',
-        'DataEngineer': 'uses',
-    },
-};
-
+module.exports = {"name":"Deploy AI Model","description":"Deploy AI Model is the description","method":"aimodel/deploy","actors":{"DevOpsEngineer":"uses","ApplicationDeveloper":"uses","DataEngineer":"uses"},"uid":"ManageAIModels.DeployAIModel","given":"The AI model is trained and ready to be deployed","when":"The DevOps, Application Developer or Data Engineer triggers the deployment process","then":"The AI Model is successfully deployed and is ready to be used"};

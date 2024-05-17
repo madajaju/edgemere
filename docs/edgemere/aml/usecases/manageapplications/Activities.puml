@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Manage Applications" as ManageApplications #yellow
 
 Actor "DevOps Engineer" as DevOpsEngineer
@@ -13,29 +15,53 @@ ApplicationDeveloper --> ManageApplications
 
 
 
-usecase "BuildApplication" as BuildApplication #lightgrey
+json BuildApplication #lightyellow {
+    "Given": "DevOpsEngineer has access to the application source code",
+    "When": "DevOpsEngineer initiates the build process",
+    "Then": "The application should be built successfully"
+}
 
-ManageApplications --> BuildApplication
+ManageApplications <|-- BuildApplication
 
-usecase "CreateApplication" as CreateApplication #lightgrey
+json CreateApplication #lightyellow {
+    "Given": "Application Developer wants to create a new application",
+    "When": "Application Developer uses &#39;application/create&#39; method",
+    "Then": "New application is created and managed under &#39;ManageApplications.CreateApplication&#39;"
+}
 
-ManageApplications --> CreateApplication
+ManageApplications <|-- CreateApplication
 
-usecase "DeployApplication" as DeployApplication #lightgrey
+json DeployApplication #lightyellow {
+    "Given": "DevOps Engineer has access to deploy application",
+    "When": "DevOps Engineer uses the application/deploy method",
+    "Then": "Application should be successfully deployed"
+}
 
-ManageApplications --> DeployApplication
+ManageApplications <|-- DeployApplication
 
-usecase "DestroyApplication" as DestroyApplication #lightgrey
+json DestroyApplication #lightyellow {
+    "Given": "A DevOps Engineer has access to the application/destroy method",
+    "When": "The DevOps Engineer uses the application/destroy method",
+    "Then": "The specified application is destroyed"
+}
 
-ManageApplications --> DestroyApplication
+ManageApplications <|-- DestroyApplication
 
-usecase "MonitorApplication" as MonitorApplication #lightgrey
+json MonitorApplication #lightyellow {
+    "Given": "DevOps Engineer and Application Developer have access to the Monitor Application",
+    "When": "They use the Monitor Application",
+    "Then": "They should be able to manage and monitor applications"
+}
 
-ManageApplications --> MonitorApplication
+ManageApplications <|-- MonitorApplication
 
-usecase "UpdateApplication" as UpdateApplication #lightgrey
+json UpdateApplication #lightyellow {
+    "Given": "an Application Developer or DevOps Engineer uses the application/update method",
+    "When": "they want to update the application",
+    "Then": "the application should be updated properly"
+}
 
-ManageApplications --> UpdateApplication
+ManageApplications <|-- UpdateApplication
 
 
 

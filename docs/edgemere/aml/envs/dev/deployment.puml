@@ -3,91 +3,101 @@
 left to right direction
 
 
-boundary parent #black
 
 
-entity children #blue
-
-rectangle "aml_as" as aml_asStack #88cccc {
-    queue aml_asStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "aml_as" as aml_asStack #88cccc {
+    portin "parent" as aml_asStackPortIn #blue
 }
-rectangle "aml_ds" as aml_dsStack #lightblue {
-    queue aml_dsStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "aml_ds" as aml_dsStack #lightblue {
+    portin "parent" as aml_dsStackPortIn #blue
 }
-rectangle "aml_ws" as aml_wsStack #88cccc {
-    queue aml_wsStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "aml_ws" as aml_wsStack #88cccc {
+    portin "parent" as aml_wsStackPortIn #blue
 }
-rectangle "aml_ams" as aml_amsStack #88cccc {
-    queue aml_amsStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "aml_ams" as aml_amsStack #88cccc {
+    portin "parent" as aml_amsStackPortIn #blue
 }
 
 
 
-package "aml" #88cccc {
-    queue parentnet #black [
+node "aml" #88cccc {
+
+
+    hexagon parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#black]- parent
+    portin " " as parentnetPortIn #black
+    parentnetPortIn -[#black]- parentnet
     
-    queue childrennet #blue [
+    hexagon childrennet #blue [
             <b><color:white>children</color></b>
     ]
     
-    childrennet -[#blue]- children
+    portout " " as childrennetPortOut #blue
+    childrennet -[#blue]- childrennetPortOut
     
-    queue siblingsnet #red [
+    hexagon siblingsnet #red [
             <b><color:white>siblings</color></b>
     ]
     
 
-node "aml_web" as aml_webService
-node "aml_as" as aml_asService
-node "aml_ds" as aml_dsService
-node "aml_ws" as aml_wsService
-node "aml_ams" as aml_amsService
+node "aml_web" as aml_webService #white {
+    portOut " " as aml_webServicechildrennet #blue
+   aml_webServicechildrennet -[#blue]- childrennet
+       portOut " " as aml_webServicesiblingsnet #red
+   aml_webServicesiblingsnet -[#red]- siblingsnet
+   
 
-
-        artifact "aml_web" as aml_webimage
-            collections "aml_as" as aml_asimage
-            collections "aml_ds" as aml_dsimage
-            collections "aml_ws" as aml_wsimage
-            collections "aml_ams" as aml_amsimage
+    artifact "aml_web" as aml_webimage
+    
+}
+node "aml_as" as aml_asService #white {
+    portOut " " as aml_asServicechildrennet #blue
+   aml_asServicechildrennet -[#blue]- childrennet
+   
+    collections "aml_as" as aml_asimage
+    
+}
+node "aml_ds" as aml_dsService #white {
+    portOut " " as aml_dsServicechildrennet #blue
+   aml_dsServicechildrennet -[#blue]- childrennet
+   
+    collections "aml_ds" as aml_dsimage
+    
+}
+node "aml_ws" as aml_wsService #white {
+    portOut " " as aml_wsServicechildrennet #blue
+   aml_wsServicechildrennet -[#blue]- childrennet
+   
+    collections "aml_ws" as aml_wsimage
+    
+}
+node "aml_ams" as aml_amsService #white {
+    portOut " " as aml_amsServicechildrennet #blue
+   aml_amsServicechildrennet -[#blue]- childrennet
+   
+    collections "aml_ams" as aml_amsimage
     
 }
 
-aml_webService -[#blue]- childrennet
-
-aml_webService -[#red]- siblingsnet
-
-aml_asService -[#blue]- childrennet
-
-aml_dsService -[#blue]- childrennet
-
-aml_wsService -[#blue]- childrennet
-
-aml_amsService -[#blue]- childrennet
-aml_webService .... aml_webimage
-aml_asService .... aml_asimage
-aml_dsService .... aml_dsimage
-aml_wsService .... aml_wsimage
-aml_amsService .... aml_amsimage
+}
 
 aml_asimage --> aml_asStack
     
+    childrennetPortOut -[#blue]- aml_asStackPortIn
+    
 aml_dsimage --> aml_dsStack
+    
+    childrennetPortOut -[#blue]- aml_dsStackPortIn
     
 aml_wsimage --> aml_wsStack
     
+    childrennetPortOut -[#blue]- aml_wsStackPortIn
+    
 aml_amsimage --> aml_amsStack
+    
+    childrennetPortOut -[#blue]- aml_amsStackPortIn
     
 
 @enduml

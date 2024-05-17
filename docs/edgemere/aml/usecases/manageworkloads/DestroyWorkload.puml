@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "DevOps Engineer"
 
 
@@ -10,9 +11,16 @@ box Application Management Layer #88cccc
 end box
 
 
+group Given [DevOps Engineer has access to workload/destroy method]
 
-"DevOps Engineer" -> aml: Destroy Workload
+"DevOps Engineer" --/ aml: DevOps Engineer uses workload/destroy method
+"aml" -> aml: Destroy Workload
 
 
+
+"DevOps Engineer" /-- aml: The workload should be destroyed
+
+
+end
 
 @enduml

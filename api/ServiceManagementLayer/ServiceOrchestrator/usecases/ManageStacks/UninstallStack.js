@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Uninstall Stack',
-    description: 'Uninstall Stack shuts down the stack and all of its services.',
-    method: "stack/uninstall",
-    actors: {
-        'DevOps Engineer': 'uses',
-    },
-};
-
+module.exports = {"name":"Uninstall Stack","description":"Uninstall Stack shuts down the stack and all of its services.","method":"stack/uninstall","actors":{"DevOps Engineer":"uses"},"uid":"ManageStacks.UninstallStack","given":"A DevOps Engineer has a running stack with services","when":"The Engineer decides to shut down the stack","then":"The stack and all of its services are uninstalled"};

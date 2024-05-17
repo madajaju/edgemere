@@ -3,57 +3,64 @@
 left to right direction
 
 
-boundary appname_s_family #red
-
-
-entity appname_s_spm_family #black
 
 
 
 
-package "s_spm" #cc8888 {
-    queue childrennet #black [
+
+node "s_spm" #cc8888 {
+
+
+    hexagon childrennet #black [
             <b><color:white>children</color></b>
     ]
     
-    childrennet -[#black]- appname_s_spm_family
+    portout " " as childrennetPortOut #black
+    childrennet -[#black]- childrennetPortOut
     
-    queue siblingnet #blue [
+    hexagon siblingnet #blue [
             <b><color:white>sibling</color></b>
     ]
     
-    queue parentnet #red [
+    hexagon parentnet #red [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#red]- appname_s_family
+    portin " " as parentnetPortIn #red
+    parentnetPortIn -[#red]- parentnet
     
 
-node "child" as childService
-node "frontend" as frontendService
-node "gw" as gwService
-
-
-        artifact "child_image:latest" as child_imagelatestimage
+node "child" as childService #white {
+    portOut " " as childServicechildrennet #black
+   childServicechildrennet -[#black]- childrennet
+   
+    portIn " " as childServiceparentnet #red
+    parentnet -[#red]- childServiceparentnet
     
-        artifact "s_spm_web" as s_spm_webimage
+
+    artifact "child_image:latest" as child_imagelatestimage
     
-        artifact "s_spm_gw" as s_spm_gwimage
+}
+node "frontend" as frontendService #white {
+    portOut " " as frontendServicesiblingnet #blue
+   frontendServicesiblingnet -[#blue]- siblingnet
+   
+
+    artifact "s_spm_web" as s_spm_webimage
+    
+}
+node "gw" as gwService #white {
+    portOut " " as gwServicechildrennet #black
+   gwServicechildrennet -[#black]- childrennet
+       portOut " " as gwServicesiblingnet #blue
+   gwServicesiblingnet -[#blue]- siblingnet
+   
+
+    artifact "s_spm_gw" as s_spm_gwimage
     
 }
 
-childService -[#black]- childrennet
-
-childService -[#red]- parentnet
-
-frontendService -[#blue]- siblingnet
-
-gwService -[#black]- childrennet
-
-gwService -[#blue]- siblingnet
-childService .... child_imagelatestimage
-frontendService .... s_spm_webimage
-gwService .... s_spm_gwimage
+}
 
 
 @enduml

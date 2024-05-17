@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "Application Developer"
 
 
@@ -10,9 +11,16 @@ box Data Orchestrator #lightblue
 end box
 
 
+group Given [An Application Developer wants to create a new data instance]
 
-"Application Developer" -> do: Create Data Instance
+"Application Developer" --/ do: The Application Developer uses the &#39;datainstance/create&#39; method
+"do" -> do: Create Data Instance
 
 
+
+"Application Developer" /-- do: A new data instance should be created and returned
+
+
+end
 
 @enduml

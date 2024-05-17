@@ -1,0 +1,28 @@
+@startuml
+
+
+
+state DataCenter #cccccc {
+
+    state Init #cccccc {
+    }
+
+    state Enabled #cccccc {
+    }
+
+    state Disabled #cccccc {
+    }
+
+
+
+
+Init -[#black]--> Enabled : create
+
+Enabled -[#black]--> Disabled : disable
+
+Disabled -[#black]--> Enabled : enable
+
+}
+
+
+@enduml

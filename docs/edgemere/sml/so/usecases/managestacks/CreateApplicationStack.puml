@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "ApplicationDeveloper"
 
 actor "StackDeveloper"
@@ -16,19 +17,10 @@ box Software Defined Infrastructure #cccc88
             participant storageresource
     end box
 
+group Given [The application and stack developers have access to ./templates/world.yml]
 
-"ApplicationDeveloper" -> so: Create Application Stack
-
-    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
-
-    "storageresource" --/ EventBus: data.list
-
-    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
-
-    "storageresource" --/ EventBus: data.list
-
-
-"StackDeveloper" -> so: Create Application Stack
+"ApplicationDeveloper" --/ so: ApplicationDeveloper and StackDeveloper use data/list method
+"so" -> so: Create Application Stack
 
     so -> "storageresource": list (name: hello,file: ./templates/world.yml)
 
@@ -39,5 +31,24 @@ box Software Defined Infrastructure #cccc88
     "storageresource" --/ EventBus: data.list
 
 
+"StackDeveloper" --/ so: ApplicationDeveloper and StackDeveloper use data/list method
+"so" -> so: Create Application Stack
+
+    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
+
+    "storageresource" --/ EventBus: data.list
+
+    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
+
+    "storageresource" --/ EventBus: data.list
+
+
+
+"ApplicationDeveloper" /-- so: The &#39;hello&#39; application stack is created
+
+"StackDeveloper" /-- so: The &#39;hello&#39; application stack is created
+
+
+end
 
 @enduml

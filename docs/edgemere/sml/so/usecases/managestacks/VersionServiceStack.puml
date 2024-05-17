@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "StackDeveloper"
 
 
@@ -14,17 +15,24 @@ box Software Defined Infrastructure #cccc88
             participant storageresource
     end box
 
+group Given [A StackDeveloper uses Version Service Stack]
 
-"StackDeveloper" -> so: Version Service Stack
-
-    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
-
-    "storageresource" --/ EventBus: data.list
+"StackDeveloper" --/ so: Developer performs &#39;data/create&#39; with name &#39;hello&#39; and file &#39;./templates/world.yml&#39;
+"so" -> so: Version Service Stack
 
     so -> "storageresource": list (name: hello,file: ./templates/world.yml)
 
     "storageresource" --/ EventBus: data.list
 
+    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
 
+    "storageresource" --/ EventBus: data.list
+
+
+
+"StackDeveloper" /-- so: The &#39;data/list&#39; action is performed for the same name and file
+
+
+end
 
 @enduml

@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "DevOps Engineer"
 
 
@@ -10,9 +11,16 @@ box Application Management Layer #88cccc
 end box
 
 
+group Given [DevOps Engineer has access to deploy application]
 
-"DevOps Engineer" -> aml: Deploy Application
+"DevOps Engineer" --/ aml: DevOps Engineer uses the application/deploy method
+"aml" -> aml: Deploy Application
 
 
+
+"DevOps Engineer" /-- aml: Application should be successfully deployed
+
+
+end
 
 @enduml

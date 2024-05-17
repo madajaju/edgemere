@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "IT Operations"
 
 
@@ -10,9 +11,16 @@ box Common Physical Layer #cccccc
 end box
 
 
+group Given [IT Operations has access to the device database]
 
-"IT Operations" -> cpl: Update Device
+"IT Operations" --/ cpl: The IT operations attempts to update a device
+"cpl" -> cpl: Update Device
 
 
+
+"IT Operations" /-- cpl: The device should be successfully updated in the database
+
+
+end
 
 @enduml

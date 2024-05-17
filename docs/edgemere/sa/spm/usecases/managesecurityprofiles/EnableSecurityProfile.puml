@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "SecurityEngineer"
 
 
@@ -17,8 +18,10 @@ box Software Defined Infrastructure #cccc88
 box Security Profile Manager #cc8888
     end box
 
+group Given [A Security Profile has been created and disabled]
 
-"SecurityEngineer" -> spm: Enable Security Profile
+"SecurityEngineer" --/ spm: Security Engineer enables the Security Profile
+"spm" -> spm: Enable Security Profile
 
     spm -> "storageresource": create (name: secProfileESP,file: ./templates/secprofile.yml)
 
@@ -33,5 +36,10 @@ box Security Profile Manager #cc8888
     "securityprofile" --/ EventBus: securityprofile.enable
 
 
+
+"SecurityEngineer" /-- spm: All attached identities in the system should re-evaluate the policies
+
+
+end
 
 @enduml

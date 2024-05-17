@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+
+
+state "cpl" as cpl #cccccc {
+state "c" as cplc #lightblue {
+}
+}
+
+
+state "cplc" as pstatename #lightblue {
+    state "Custom Function" as cfunction {
+    }
+}
+
+
+
+
+
+@enduml

@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+node "Federated Meta Data Management" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    card " edgemere diml dml fmdm" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as diml_dml_fmdm_container
+      REST --> diml_dml_fmdm_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "diml_dml_fmdm" as diml_dml_fmdmimage
+    artifact "ailtire:swarm" as ailtireswarm
+    diml_dml_fmdmimage <|-- ailtireswarm
+    diml_dml_fmdm_container --> diml_dml_fmdmimage
+
+  
+      artifact "diml_dml_fmdm_web" as diml_dml_fmdm_web
+      web_container --> diml_dml_fmdm_web
+    
+  }
+}
+CLI " edgemere diml dml fmdm" -- binName
+Web "/edgemere/diml/dml/fmdm" - REST
+WebSocket ".edgemere.diml.dml.fmdm" -- socket
+
+@enduml

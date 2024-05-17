@@ -40,6 +40,11 @@ Manage Multi Cloud allows actors to create multi-clouds by adding clouds. Manage
 It Operations adds clouds to the multicloud
 
 ![Scenario AddCloudtoMultiCloud](./AddCloudtoMultiCloud.png)
+#### Criteria
+
+* Given - IT Operations is using a multi cloud system
+* When - IT Operations adds a new cloud to the system
+* Then - IT Operations is using a multi cloud system
 
 #### Steps
 1. To Be Defined
@@ -55,6 +60,11 @@ It Operations adds clouds to the multicloud
 IT Operations adds,removes,enables and disables policies to a multicloud
 
 ![Scenario ManagePoliciesforMultiCloud](./ManagePoliciesforMultiCloud.png)
+#### Criteria
+
+* Given - IT Operations needs to manage policies for Multicloud
+* When - IT Operations adds, removes, enables or disables policies
+* Then - IT Operations needs to manage policies for Multicloud
 
 #### Steps
 1. To Be Defined
@@ -70,6 +80,11 @@ IT Operations adds,removes,enables and disables policies to a multicloud
 IT Operations removes or adds policies from Multi Cloud
 
 ![Scenario RemoveCloudFromMultiCloud](./RemoveCloudFromMultiCloud.png)
+#### Criteria
+
+* Given - IT Operations are enabled to use Multi Cloud
+* When - A cloud policy needs to be removed
+* Then - IT Operations are enabled to use Multi Cloud
 
 #### Steps
 1. To Be Defined

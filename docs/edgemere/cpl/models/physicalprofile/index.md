@@ -32,14 +32,14 @@ The Physical Profile contains the capabilities, availability, reserves andmetric
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| profile | 1 | Device | true |  |  |
-| profile | 1 | AggregatedDevice | true |  |  |
-| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
 | profile | 1 | AcceleratorHardware | true |  |  |
+| profile | 1 | AggregatedDevice | true |  |  |
 | profile | 1 | ComputeHardware | true |  |  |
 | profile | 1 | DataCenter | true |  |  |
+| profile | 1 | Device | true |  |  |
 | profile | 1 | Hardware | true |  |  |
 | profile | 1 | NetworkHardware | true |  |  |
+| parent | 1 | PhysicalProfile |  | false | Parent of the profile for propagation |
 | profile | 1 | StorageHardware | true |  |  |
 | profile | 1 | ResourceInstanceType | true | true |  |
 | profile | 1 | AcceleratorResource | true | true |  |

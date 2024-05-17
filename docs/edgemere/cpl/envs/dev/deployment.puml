@@ -3,95 +3,106 @@
 left to right direction
 
 
-boundary parent #blue
 
 
-entity _telemetry_family #black
 
-entity children #red
-
-rectangle "cpl_da" as cpl_daStack #cccccc {
-    queue cpl_daStacksnet #red [
-        <b><color:white>parent</color></b>
-    ]
+node "cpl_da" as cpl_daStack #cccccc {
+    portin "parent" as cpl_daStackPortIn #red
 }
-rectangle "cpl_dm" as cpl_dmStack #cccccc {
-    queue cpl_dmStacksnet #red [
-        <b><color:white>parent</color></b>
-    ]
+node "cpl_dm" as cpl_dmStack #cccccc {
+    portin "parent" as cpl_dmStackPortIn #red
 }
-rectangle "cpl_tc" as cpl_tcStack #cccccc {
-    queue cpl_tcStacksnet #red [
-        <b><color:white>parent</color></b>
-    ]
+node "cpl_tc" as cpl_tcStack #cccccc {
+    portin "parent" as cpl_tcStackPortIn #red
 }
 
 
 
-package "cpl" #cccccc {
-    queue telemetrynet #black [
+node "cpl" #cccccc {
+
+
+    hexagon telemetrynet #black [
             <b><color:white>telemetry</color></b>
     ]
     
-    telemetrynet -[#black]- _telemetry_family
+    portout " " as telemetrynetPortOut #black
+    telemetrynet -[#black]- telemetrynetPortOut
     
-    queue parentnet #blue [
+    hexagon parentnet #blue [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#blue]- parent
+    portin " " as parentnetPortIn #blue
+    parentnetPortIn -[#blue]- parentnet
     
-    queue childrennet #red [
+    hexagon childrennet #red [
             <b><color:white>children</color></b>
     ]
     
-    childrennet -[#red]- children
+    portout " " as childrennetPortOut #red
+    childrennet -[#red]- childrennetPortOut
     
-    queue siblingsnet #orange [
+    hexagon siblingsnet #orange [
             <b><color:white>siblings</color></b>
     ]
     
 
-node "web" as webService
-node "deviceagent" as deviceagentService
-node "devicemanager" as devicemanagerService
-node "telemetry" as telemetryService
+node "web" as webService #white {
+    portOut " " as webServicechildrennet #red
+   webServicechildrennet -[#red]- childrennet
+       portOut " " as webServicesiblingsnet #orange
+   webServicesiblingsnet -[#orange]- siblingsnet
+   
 
-
-        artifact "aml_web" as aml_webimage
-            collections "cpl_da" as cpl_daimage
-            collections "cpl_dm" as cpl_dmimage
-            collections "cpl_tc" as cpl_tcimage
+    artifact "aml_web" as aml_webimage
+    
+}
+node "deviceagent" as deviceagentService #white {
+    portOut " " as deviceagentServicechildrennet #red
+   deviceagentServicechildrennet -[#red]- childrennet
+   
+    portIn " " as deviceagentServiceparentnet #blue
+    parentnet -[#blue]- deviceagentServiceparentnet
+    
+    collections "cpl_da" as cpl_daimage
+    
+}
+node "devicemanager" as devicemanagerService #white {
+    portOut " " as devicemanagerServicechildrennet #red
+   devicemanagerServicechildrennet -[#red]- childrennet
+   
+    portIn " " as devicemanagerServiceparentnet #blue
+    parentnet -[#blue]- devicemanagerServiceparentnet
+    
+    collections "cpl_dm" as cpl_dmimage
+    
+}
+node "telemetry" as telemetryService #white {
+    portOut " " as telemetryServicechildrennet #red
+   telemetryServicechildrennet -[#red]- childrennet
+   
+    portIn " " as telemetryServiceparentnet #blue
+    parentnet -[#blue]- telemetryServiceparentnet
+        portOut " " as telemetryServicetelemetrynet #black
+   telemetryServicetelemetrynet -[#black]- telemetrynet
+   
+    collections "cpl_tc" as cpl_tcimage
     
 }
 
-webService -[#red]- childrennet
-
-webService -[#orange]- siblingsnet
-
-deviceagentService -[#red]- childrennet
-
-deviceagentService -[#blue]- parentnet
-
-devicemanagerService -[#red]- childrennet
-
-devicemanagerService -[#blue]- parentnet
-
-telemetryService -[#red]- childrennet
-
-telemetryService -[#blue]- parentnet
-
-telemetryService -[#black]- telemetrynet
-webService .... aml_webimage
-deviceagentService .... cpl_daimage
-devicemanagerService .... cpl_dmimage
-telemetryService .... cpl_tcimage
+}
 
 cpl_daimage --> cpl_daStack
     
+    childrennetPortOut -[#red]- cpl_daStackPortIn
+    
 cpl_dmimage --> cpl_dmStack
     
+    childrennetPortOut -[#red]- cpl_dmStackPortIn
+    
 cpl_tcimage --> cpl_tcStack
+    
+    childrennetPortOut -[#red]- cpl_tcStackPortIn
     
 
 @enduml

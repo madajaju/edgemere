@@ -1,0 +1,38 @@
+@startuml
+
+
+left to right direction
+
+usecase "Change Physical World" as ChangePhysicalWorld #yellow
+
+Actor "Actor" as Actor
+
+Actor --> ChangePhysicalWorld
+
+
+
+json AdjustTemperature #lightyellow {
+    "Given": "Tempature control asset",
+    "When": "Monitoring system is activated",
+    "Then": "Continuous data stream is received"
+}
+
+ChangePhysicalWorld <|-- AdjustTemperature
+
+json toggleSwitch #lightyellow {
+    "Given": "Switch control asset",
+    "When": "Switch state needs changing",
+    "Then": "Control command is sent"
+}
+
+ChangePhysicalWorld <|-- toggleSwitch
+
+
+
+
+
+
+
+
+
+@enduml

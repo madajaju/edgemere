@@ -1,21 +1,78 @@
 module.exports = {
-    num_cpus: 4,
-    memory: "8192M",
-    disk: {
-        size: "200G",
-        label: "disk0",
-        mount: "/mnt/sda"
+    memory: {
+        dim0: {
+            capacity: "64G",
+            speed: 4800
+        },
+        dim1: {
+            capacity: "64G",
+            speed: 4800
+        },
+        dim2: {
+            capacity: "64G",
+            speed: 4800
+        },
+        dim3: {
+            capacity: "64G",
+            speed: 4800
+        },
+        dim4: {
+            capacity: "64G",
+            speed: 4800
+        },
+        dim5: {
+            capacity: "64G",
+            speed: 4800
+        },
+        dim6: {
+            capacity: "64G",
+            speed: 4800
+        },
+        dim7: {
+            capacity: "64G",
+            speed: 4800
+        },
     },
-    network_interface: {
-        admin: {
-            speed: "1G"
+    disks: {
+        disk0: {
+            volume: "local",
+            size: "800G",
+            mount: "/mnt/sda"
         },
-        app: {
-            speed: "100G"
+        disk1: {
+            volume: "local",
+            size: "800G",
+            mount: "/mnt/sdb"
         },
-        data: {
-            speed: "100G"
+    },
+    networks: {
+        interfaces: {
+            admin: {
+                speed: "1G"
+            },
+            app: {
+                speed: "25G"
+            },
+            data: {
+                speed: "25G"
+            }
         }
+    },
+    processors: {
+        cpu1: {
+            type: "cpu",
+            speed: "2.8G",
+            cores: 24,
+            power: 205,
+            model: "Intel Xeon"
+        },
+        cpu2: {
+            type: "cpu",
+            speed: "2.8G",
+            cores: 24,
+            power: 205,
+            model: "Intel Xeon"
+        },
     },
     os: "ubuntu"
 }

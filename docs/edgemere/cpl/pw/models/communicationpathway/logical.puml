@@ -1,0 +1,31 @@
+@startuml
+
+class "CommunicationPathway" as Model {
+ string kind
+ string protocol
+
+ transmitData()
+ 
+}
+
+rectangle "PhysicalAsset" as PhysicalAsset #lightblue {
+}
+
+Model o--> "1" PhysicalAsset : asset
+
+
+rectangle "Device" as Device #lightblue {
+}
+
+Model o--> "1" Device : device
+
+
+
+
+    rectangle "PhysicalAsset" as PhysicalAsset #lightgreen {
+    }
+    
+        PhysicalAsset   o--> "n" Model : "pathway"
+    
+
+@enduml

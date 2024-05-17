@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Manage Data Sources" as ManageDataSources #yellow
 
 Actor "DataEngineer" as DataEngineer
@@ -9,13 +11,21 @@ DataEngineer --> ManageDataSources
 
 
 
-usecase "DeregisterDataSource" as DeregisterDataSource #lightgrey
+json DeregisterDataSource #lightyellow {
+    "Given": "Data source &#39;myDataVolume1&#39; is registered in the system using adaptor &#39;filesystem1&#39;",
+    "When": "Data engineer uses &#39;datasource/list&#39; method to deregister &#39;myDataVolume1&#39;",
+    "Then": "All BluePrints, DataFlows, and associated data become unavailable but metadata remains"
+}
 
-ManageDataSources --> DeregisterDataSource
+ManageDataSources <|-- DeregisterDataSource
 
-usecase "RegisterDataSource" as RegisterDataSource #lightgrey
+json RegisterDataSource #lightyellow {
+    "Given": "A system to monitor data sources",
+    "When": "A data source is registered to the system",
+    "Then": "Data generated at the data source can now be processed by DataBluePrints"
+}
 
-ManageDataSources --> RegisterDataSource
+ManageDataSources <|-- RegisterDataSource
 
 
 

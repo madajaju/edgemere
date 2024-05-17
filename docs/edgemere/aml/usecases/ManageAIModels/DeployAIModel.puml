@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "DevOpsEngineer"
 
 actor "ApplicationDeveloper"
@@ -14,15 +15,28 @@ box Application Management Layer #88cccc
 end box
 
 
+group Given [The AI model is trained and ready to be deployed]
 
-"DevOpsEngineer" -> aml: Deploy AI Model
-
-
-"ApplicationDeveloper" -> aml: Deploy AI Model
-
-
-"DataEngineer" -> aml: Deploy AI Model
+"DevOpsEngineer" --/ aml: The DevOps, Application Developer or Data Engineer triggers the deployment process
+"aml" -> aml: Deploy AI Model
 
 
+"ApplicationDeveloper" --/ aml: The DevOps, Application Developer or Data Engineer triggers the deployment process
+"aml" -> aml: Deploy AI Model
+
+
+"DataEngineer" --/ aml: The DevOps, Application Developer or Data Engineer triggers the deployment process
+"aml" -> aml: Deploy AI Model
+
+
+
+"DevOpsEngineer" /-- aml: The AI Model is successfully deployed and is ready to be used
+
+"ApplicationDeveloper" /-- aml: The AI Model is successfully deployed and is ready to be used
+
+"DataEngineer" /-- aml: The AI Model is successfully deployed and is ready to be used
+
+
+end
 
 @enduml

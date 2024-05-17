@@ -3,43 +3,45 @@
 left to right direction
 
 
-boundary parent #black
-
-
-entity children #blue
 
 
 
 
-package "diml_dff" #ffcc88 {
-    queue parentnet #black [
+
+node "diml_dff" #ffcc88 {
+
+
+    hexagon parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#black]- parent
+    portin " " as parentnetPortIn #black
+    parentnetPortIn -[#black]- parentnet
     
-    queue childrennet #blue [
+    hexagon childrennet #blue [
             <b><color:white>children</color></b>
     ]
     
-    childrennet -[#blue]- children
+    portout " " as childrennetPortOut #blue
+    childrennet -[#blue]- childrennetPortOut
     
-    queue siblingsnet #red [
+    hexagon siblingsnet #red [
             <b><color:white>siblings</color></b>
     ]
     
 
-node "web" as webService
+node "web" as webService #white {
+    portOut " " as webServicechildrennet #blue
+   webServicechildrennet -[#blue]- childrennet
+       portOut " " as webServicesiblingsnet #red
+   webServicesiblingsnet -[#red]- siblingsnet
+   
 
-
-        artifact "diml_ddf_web" as diml_ddf_webimage
+    artifact "diml_ddf_web" as diml_ddf_webimage
     
 }
 
-webService -[#blue]- childrennet
-
-webService -[#red]- siblingsnet
-webService .... diml_ddf_webimage
+}
 
 
 @enduml

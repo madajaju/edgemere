@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "IT Operations"
 
 
@@ -19,8 +20,10 @@ box Software Defined Infrastructure #cccc88
             participant cloud
     end box
 
+group Given [A cloud with set of resources and specific requirements are provided]
 
-"IT Operations" -> sdi: Get Resources
+"IT Operations" --/ sdi: A request for resources based on specific requirements is made
+"sdi" -> sdi: Get Resources
 
     sdi -> "device": create (name: hostgr1,file: ./templates/device.yaml)
 
@@ -83,5 +86,10 @@ box Software Defined Infrastructure #cccc88
     "software defined infrastructure" --/ EventBus: resource.get
 
 
+
+"IT Operations" /-- sdi: The required resources are returned
+
+
+end
 
 @enduml

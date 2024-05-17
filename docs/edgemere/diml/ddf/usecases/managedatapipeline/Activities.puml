@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Manage Data Pipeline" as ManageDataPipeline #yellow
 
 Actor "DataEngineer" as DataEngineer

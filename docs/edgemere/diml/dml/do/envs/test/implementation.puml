@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+node "Data Orchestrator" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    card " edgemere diml dml do" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as diml_dml_do_container
+      REST --> diml_dml_do_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "diml_dml_do" as diml_dml_doimage
+    artifact "ailtire:swarm" as ailtireswarm
+    diml_dml_doimage <|-- ailtireswarm
+    diml_dml_do_container --> diml_dml_doimage
+
+  
+      artifact "diml_dml_do_web" as diml_dml_do_web
+      web_container --> diml_dml_do_web
+    
+  }
+}
+CLI " edgemere diml dml do" -- binName
+Web "/edgemere/diml/dml/do" - REST
+WebSocket ".edgemere.diml.dml.do" -- socket
+
+@enduml

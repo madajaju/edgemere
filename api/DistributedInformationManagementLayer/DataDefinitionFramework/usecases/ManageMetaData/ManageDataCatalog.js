@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Manage Data Catalog',
-    description: 'Manage Data Catalog is the description',
-    method: "datacatalog/list",
-    actors: {
-        'DataScientist': 'uses',
-    },
-};
-
+module.exports = {"name":"Manage Data Catalog","description":"Manage Data Catalog is the description","method":"datacatalog/list","actors":{"DataScientist":"uses"},"uid":"ManageMetaData.ManageDataCatalog","given":"A data scientist wants to manage the data catalog","when":"The data scientist uses the 'datacatalog/list' method","then":"The data scientist should be able to manage the data catalog"};

@@ -74,6 +74,54 @@ optimized IT operations. This flexibility allows clouds (logical devices) to ada
 changes can include everything from cyber threats, physical disasters, partial connectivity of edge devices, or even  
 someone tripping over a network connection in the data center.
 
+
+## Physical Asset Management
+
+In the realm of physical asset management, understanding the intrinsic value and functionality of assets is paramount. Whether it's machinery, infrastructure, or equipment, assets form the backbone of any operational setup. Here's a detailed exploration of the key concepts and considerations in this domain:
+
+### Importance of Assets
+
+Assets are the lifeblood of an organization, representing tangible resources critical for its operations. Identifying the most crucial assets is fundamental, as they underpin productivity, efficiency, and overall success. Moreover, integrating people into the infrastructure involves recognizing how individuals interact with these assets. This integration ensures that human resources are optimally utilized and aligned with asset management strategies.
+
+### Digitization of Assets
+
+Digitizing the enterprise involves transitioning from traditional, physical processes to digital solutions. This transformation enables seamless integration of physical assets into digital frameworks, facilitating better monitoring, management, and analysis. By bridging the gap between the physical and digital worlds, organizations can unlock new opportunities for efficiency and innovation.
+
+### Characteristics of Assets
+
+- **Sensors**: Assets are equipped with sensors that capture real-world data. These sensors convert physical phenomena into analog signals, which are subsequently digitized for processing and analysis.
+
+- **Communication Pathway**: Establishing a communication pathway is crucial for transmitting data from sensors to digital systems. Whether through wired or wireless connections, this pathway ensures that asset data can be accessed and utilized effectively.
+
+- **Control of the Physical World**: Some assets manipulate the physical world through mechanisms that change position, temperature, electrical current, magnetism, or any other physical characteristic. These assets play a vital role in various industries and processes.
+
+### Types of Assets
+
+1. **No Sensors and No Communication Pathway**: Some assets, like railway switches or compressors, may lack built-in sensors or communication capabilities. In such cases, adding a communication gateway and appropriate sensors is necessary to enable data collection and connectivity.
+
+2. **Sensors with No Communication Pathway**: Assets may have internal sensors that gather data but lack external connectivity. To leverage this data for analysis and decision-making, establishing a communication pathway becomes essential.
+
+3. **Sensor with Communication Pathway**: Ideally, assets should be equipped with both sensors and a communication pathway, allowing real-time data transmission to digital systems for analysis and action.
+
+### PLC (Programmable Logic Controller)
+
+PLCs serve as the bridge between physical assets and digital devices. These controllers facilitate communication, data exchange, and control functions, enabling seamless integration of assets into digital networks.
+
+### Use Cases
+
+- **Monitoring**: Assets can be used to monitor physical processes, conditions, and performance metrics in real-time.
+
+- **Control**: They can also exert control over physical processes, enabling automation and optimization of operations.
+
+- **Connectivity**: Establishing connectivity between physical assets and digital devices enables data exchange, remote monitoring, and control.
+
+- **Management**: Efficient management of physical assets involves tasks such as maintenance, repair, and lifecycle planning.
+
+- **Security**: Securing both the physical assets themselves and the data they generate is critical to prevent unauthorized access, tampering, or data breaches.
+
+By leveraging the capabilities of physical assets and integrating them into digital ecosystems, organizations can enhance operational efficiency, improve decision-making, and unlock new opportunities for innovation and growth.
+
+
 ## Use Cases
 
 The following are the use cases of the Common Physical Layer subsystem. Each use case has primary and secondary scenarios
@@ -130,8 +178,10 @@ and their structure.
 The Common Physical Layer subsystem has sub packages as well. These subsystems are logical components to better
 organize the architecture and make it easier to analyze, understand, design, and implement.
 
+* [Cyber](package--edgemere-cpl-c)
 * [Device Agent](package--edgemere-cpl-da)
 * [Device Manager](package--edgemere-cpl-dm)
+* [PhysicalWorld](package--edgemere-cpl-pw)
 * [Telemetry Aggregator](package--edgemere-cpl-ta)
 * [Telemetry Consumer](package--edgemere-cpl-tc)
 * [Telemetry Producer](package--edgemere-cpl-tp)
@@ -143,18 +193,19 @@ organize the architecture and make it easier to analyze, understand, design, and
 
 The following are the classes in the data model of the Common Physical Layer subsystem.
 
-* [Device](class-Device)
+* [AcceleratorHardware](class-AcceleratorHardware)
 * [AggregatedDevice](class-AggregatedDevice)
+* [ComputeHardware](class-ComputeHardware)
+* [DataCenter](class-DataCenter)
+* [Device](class-Device)
+* [Hardware](class-Hardware)
 * [Metric](class-Metric)
 * [MetricAttribute](class-MetricAttribute)
 * [MetricComposite](class-MetricComposite)
 * [MetricConsumeable](class-MetricConsumeable)
-* [PhysicalProfile](class-PhysicalProfile)
-* [Hardware](class-Hardware)
-* [ComputeHardware](class-ComputeHardware)
 * [NetworkHardware](class-NetworkHardware)
+* [PhysicalProfile](class-PhysicalProfile)
 * [StorageHardware](class-StorageHardware)
-* [AcceleratorHardware](class-AcceleratorHardware)
 
 
 
@@ -252,12 +303,24 @@ these events.
 
 | Event | Description | Emitter |
 |-------|-------------|---------|
-| device.create |  When an object of type Device is created. | Device
-| device.destroy |  When an object of type Device is destroyed. | Device
-| device.updated |  When an object of type Device has an attribute or association updated. | Device
+| acceleratorhardware.create |  When an object of type AcceleratorHardware is created. | AcceleratorHardware
+| acceleratorhardware.destroy |  When an object of type AcceleratorHardware is destroyed. | AcceleratorHardware
+| acceleratorhardware.updated |  When an object of type AcceleratorHardware has an attribute or association updated. | AcceleratorHardware
 | aggregateddevice.create |  When an object of type AggregatedDevice is created. | AggregatedDevice
 | aggregateddevice.destroy |  When an object of type AggregatedDevice is destroyed. | AggregatedDevice
 | aggregateddevice.updated |  When an object of type AggregatedDevice has an attribute or association updated. | AggregatedDevice
+| computehardware.create |  When an object of type ComputeHardware is created. | ComputeHardware
+| computehardware.destroy |  When an object of type ComputeHardware is destroyed. | ComputeHardware
+| computehardware.updated |  When an object of type ComputeHardware has an attribute or association updated. | ComputeHardware
+| datacenter.create |  When an object of type DataCenter is created. | DataCenter
+| datacenter.destroy |  When an object of type DataCenter is destroyed. | DataCenter
+| datacenter.updated |  When an object of type DataCenter has an attribute or association updated. | DataCenter
+| device.create |  When an object of type Device is created. | Device
+| device.destroy |  When an object of type Device is destroyed. | Device
+| device.updated |  When an object of type Device has an attribute or association updated. | Device
+| hardware.create |  When an object of type Hardware is created. | Hardware
+| hardware.destroy |  When an object of type Hardware is destroyed. | Hardware
+| hardware.updated |  When an object of type Hardware has an attribute or association updated. | Hardware
 | metric.create |  When an object of type Metric is created. | Metric
 | metric.destroy |  When an object of type Metric is destroyed. | Metric
 | metric.updated |  When an object of type Metric has an attribute or association updated. | Metric
@@ -270,24 +333,15 @@ these events.
 | metricconsumeable.create |  When an object of type MetricConsumeable is created. | MetricConsumeable
 | metricconsumeable.destroy |  When an object of type MetricConsumeable is destroyed. | MetricConsumeable
 | metricconsumeable.updated |  When an object of type MetricConsumeable has an attribute or association updated. | MetricConsumeable
-| physicalprofile.create |  When an object of type PhysicalProfile is created. | PhysicalProfile
-| physicalprofile.destroy |  When an object of type PhysicalProfile is destroyed. | PhysicalProfile
-| physicalprofile.updated |  When an object of type PhysicalProfile has an attribute or association updated. | PhysicalProfile
-| hardware.create |  When an object of type Hardware is created. | Hardware
-| hardware.destroy |  When an object of type Hardware is destroyed. | Hardware
-| hardware.updated |  When an object of type Hardware has an attribute or association updated. | Hardware
-| computehardware.create |  When an object of type ComputeHardware is created. | ComputeHardware
-| computehardware.destroy |  When an object of type ComputeHardware is destroyed. | ComputeHardware
-| computehardware.updated |  When an object of type ComputeHardware has an attribute or association updated. | ComputeHardware
 | networkhardware.create |  When an object of type NetworkHardware is created. | NetworkHardware
 | networkhardware.destroy |  When an object of type NetworkHardware is destroyed. | NetworkHardware
 | networkhardware.updated |  When an object of type NetworkHardware has an attribute or association updated. | NetworkHardware
+| physicalprofile.create |  When an object of type PhysicalProfile is created. | PhysicalProfile
+| physicalprofile.destroy |  When an object of type PhysicalProfile is destroyed. | PhysicalProfile
+| physicalprofile.updated |  When an object of type PhysicalProfile has an attribute or association updated. | PhysicalProfile
 | storagehardware.create |  When an object of type StorageHardware is created. | StorageHardware
 | storagehardware.destroy |  When an object of type StorageHardware is destroyed. | StorageHardware
 | storagehardware.updated |  When an object of type StorageHardware has an attribute or association updated. | StorageHardware
-| acceleratorhardware.create |  When an object of type AcceleratorHardware is created. | AcceleratorHardware
-| acceleratorhardware.destroy |  When an object of type AcceleratorHardware is destroyed. | AcceleratorHardware
-| acceleratorhardware.updated |  When an object of type AcceleratorHardware has an attribute or association updated. | AcceleratorHardware
 
 
 

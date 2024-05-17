@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Organize Solutions" as OrganizeSolutions #yellow
 
 Actor "Application Developer" as ApplicationDeveloper

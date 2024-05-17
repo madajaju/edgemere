@@ -1,4 +1,4 @@
-import {AMainWindow, AText, APackage, AModel, AAction, AObject,A3DGraph, ASelectedHUD} from "./index.js";
+import {AMainWindow, AText, APackage, AModel, AAction, AObject, ASelectedHUD} from "./index.js";
 
 const scolor = {
     started: "#00ffff",
@@ -28,6 +28,32 @@ export default class AScenario {
         depth: 20,
     }
 
+    static inputPopup(scenario) {
+        let myForm = AScenario.inputForm(scenario);
+
+        $().w2popup('open', {
+            title: 'Scenario Inputs',
+            body: '<div id="ScenarioPopup" style="width: 100%; height: 100%;"></div>',
+            style: 'padding: 15px 0px 0px 0px',
+            width: 500,
+            height: 300,
+            showMax: true,
+            onToggle: function (event) {
+                $(w2ui.editModelDialog.box).hide();
+                event.onComplete = function () {
+                    $(w2ui.editModelDialog.box).show();
+                    w2ui.editModelDialog.resize();
+                }
+            },
+            onOpen: function (event) {
+                event.onComplete = function () {
+                    // specifying an onOpen handler instead is equivalent to specifying an onBeforeOpen handler,
+                    // which would make this code execute too early and hence not deliver.
+                    $('#ScenarioPopup').w2render(myForm.name);
+                }
+            }
+        });
+    }
     static popup(record) {
         let myForm = AScenario.stdioForm(record);
 
@@ -176,6 +202,9 @@ export default class AScenario {
         records.push({recid: i++, name: 'name', value: result.name, detail: result.name});
         records.push({recid: i++, name: 'description', value: result.description, detail: result.description});
         records.push({recid: i++, name: 'method', value: result.method, detail: result.method});
+        records.push({recid: i++, name: 'given', value: result.given, detail: result.given});
+        records.push({recid: i++, name: 'when', value: result.when, detail: result.when});
+        records.push({recid: i++, name: 'then', value: result.then, detail: result.then});
 
         let actorDetails = Object.keys(result.actors).map(actor => {
             return `${actor}, <span onclick="expandObject('actor/get?id=${actor}');">${actor}</span>`
@@ -375,7 +404,7 @@ export default class AScenario {
         // Scenario List for simulation.
         let records = [];
         if (!w2ui['scenariolist']) {
-            $('#scenariolist').w2grid({
+            $('#simulationWindow').w2grid({
                 name: 'scenariolist',
                 show: {header: false, columnHeaders: false, toolbar: true},
                 columns: [
@@ -429,12 +458,20 @@ export default class AScenario {
                     onClick: function (event) {
                         if (event.target === 'launch') {
                             let scenario = w2ui['scenariolist'].scenario;
-                            $.ajax({
-                                url: `scenario/launch?id=${scenario.id}`,
-                                success: function (result) {
-                                    w2ui['scenariolist'].scenarioinstance = result.id;
-                                }
-                            });
+                            // If there aren't any inputs then launch it.
+                            if(!scenario.inputs) {
+                                $.ajax({
+                                    url: `scenario/launch?id=${scenario.id}`,
+                                    success: function (result) {
+                                        w2ui['scenariolist'].scenarioinstance = result.id;
+                                    }
+                                });
+                            } else {
+                                // create a simple dialog with the inputs and the onClick should call the scenario
+                                // With the parametersEdit
+                                AScenario.inputPopup(scenario);
+
+                            }
                         }
                     }
                 }
@@ -489,7 +526,46 @@ export default class AScenario {
         }
         w2ui['scenariolist'].refresh();
     }
+    static inputForm(scenario) {
+        let fields = [];
+        for(let iname in scenario.inputs) {
+            fields.push({
+                field: iname, type: "text",
+            });
+        }
+        $().w2form({
+            name: 'ScenarioInput',
+            style: 'border: 0px; background-color: transparent;',
+            fields: fields,
+            actions: {
+                Save: {
+                    caption: "Launch", style: "background: #aaffaa",
+                    onClick(event) {
+                        w2popup.close();
+                        let parameters = w2ui['ScenarioInput'].record;
+                        let parameterArray = [];
+                        for(let pname in parameters) {
+                            parameterArray.push(`${pname}=${parameters[pname]}`);
+                        }
 
+                        $.ajax({
+                            url: `scenario/launch?id=${scenario.id}&${parameterArray.join("&")}`,
+                            success: function (result) {
+                                w2ui['scenariolist'].scenarioinstance = result.id;
+                            }
+                        });
+                    }
+                },
+                custom: {
+                    caption: "Close", style: 'background: pink;',
+                    onClick(event) {
+                        w2popup.close();
+                    }
+                }
+            }
+        });
+        return w2ui['ScenarioInput'];
+    }
     static stdioForm(record) {
         if (!w2ui['ScenarioStdio']) {
             let fields = [

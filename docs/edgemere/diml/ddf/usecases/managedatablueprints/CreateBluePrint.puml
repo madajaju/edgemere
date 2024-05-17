@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "DataScientist"
 
 
@@ -17,8 +18,10 @@ box Data Definition Framework #ffcc88
             participant datasource
     end box
 
+group Given [Data Scientist uses datablueprint/create method]
 
-"DataScientist" -> ddf: Create Blue Print
+"DataScientist" --/ ddf: Data adaptors, dataflow, datablueprint, and datasources are created
+"ddf" -> ddf: Create Blue Print
 
     ddf -> "dataadaptor": create (name: filesystem,file: ./templates/dataadaptor-filesystem.yaml)
 
@@ -49,5 +52,10 @@ box Data Definition Framework #ffcc88
     "data definition framework" --/ EventBus: datablueprint.deploy
 
 
+
+"DataScientist" /-- ddf: Datablueprint deploy action is used with specific parameters.
+
+
+end
 
 @enduml

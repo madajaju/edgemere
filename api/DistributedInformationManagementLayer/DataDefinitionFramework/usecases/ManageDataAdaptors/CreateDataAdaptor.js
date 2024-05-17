@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Create Data Adaptor',
-    description: 'Create Data Adaptor is the description',
-    method: "dataadaptor/create",
-    actors: {
-        'Data Engineer': 'uses',
-    },
-};
-
+module.exports = {"name":"Create Data Adaptor","description":"Create Data Adaptor is the description","method":"dataadaptor/create","actors":{"Data Engineer":"uses"},"uid":"ManageDataAdaptors.CreateDataAdaptor","given":"A data engineer wants to create a new data adaptor","when":"The data engineer uses the 'dataadaptor/create' method","then":"A new data adaptor is created for use"};

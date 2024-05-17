@@ -2,11 +2,11 @@
   interface CLI
   interface Web
   interface WebSocket
-package "Developer Services" #lightblue {
+node "Developer Services" #lightblue {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {
-    component " edgemere aml ds" as binName
+    card " edgemere aml ds" as binName
   }
   binName --> REST
 
@@ -14,11 +14,11 @@ package "Developer Services" #lightblue {
       file "node server.js\n" as aml_ds_container
       REST --> aml_ds_container
 
-  
+
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
+
   }
   folder images #ffffff {
     collections "aml_ds" as aml_dsimage
@@ -26,10 +26,10 @@ package "Developer Services" #lightblue {
     aml_dsimage <|-- ailtireswarm
     aml_ds_container --> aml_dsimage
 
-  
+
       artifact "aml_ds_web" as aml_ds_web
       web_container --> aml_ds_web
-    
+
   }
 }
 CLI " edgemere aml ds" -- binName

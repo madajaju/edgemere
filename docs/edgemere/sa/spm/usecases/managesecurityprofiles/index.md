@@ -43,6 +43,11 @@ Manage Security Profiles allows the security engineer to create, updated, and de
 Create Security Profile from a secoprofile yaml file.
 
 ![Scenario CreateSecurityProfile](./CreateSecurityProfile.png)
+#### Criteria
+
+* Given - A SecurityEngineer with a secoprofile yaml file
+* When - The SecurityEngineer decides to create a new security profile named &#39;secProfile1&#39;
+* Then - A SecurityEngineer with a secoprofile yaml file
 
 #### Steps
 1. [securityprofile create --name secProfile1 --file ./templates/secprofile.yml](#action-securityprofile-create)
@@ -58,6 +63,11 @@ Create Security Profile from a secoprofile yaml file.
 Disable Security Profile that has been created. This should remove the policies enforcing the identity immediately. All identities effected should be re-evaluated.
 
 ![Scenario DisableSecurityProfile](./DisableSecurityProfile.png)
+#### Criteria
+
+* Given - A Security Profile named &#39;secProfileDSP&#39; has been created
+* When - The SecurityEngineer uses &#39;securityprofile/disable&#39; method for &#39;secProfileDSP&#39;
+* Then - A Security Profile named &#39;secProfileDSP&#39; has been created
 
 #### Steps
 1. [securityprofile create --name secProfileDSP --file ./templates/secprofile.yml](#action-securityprofile-create)
@@ -74,6 +84,11 @@ Disable Security Profile that has been created. This should remove the policies 
 Enable Security Profile should force a re-evaluation of the policies on all of the attached identities in the system.
 
 ![Scenario EnableSecurityProfile](./EnableSecurityProfile.png)
+#### Criteria
+
+* Given - A Security Profile has been created and disabled
+* When - Security Engineer enables the Security Profile
+* Then - A Security Profile has been created and disabled
 
 #### Steps
 1. [securityprofile create --name secProfileESP --file ./templates/secprofile.yml](#action-securityprofile-create)
@@ -91,6 +106,11 @@ Enable Security Profile should force a re-evaluation of the policies on all of t
 Monitor Security Profile allows the security engineer to monitor the status of the security profile. Including how many identities are enforced by the profile and how many polices are being used.
 
 ![Scenario MonitorSecurityProfile](./MonitorSecurityProfile.png)
+#### Criteria
+
+* Given - Security engineer has access to the security profile
+* When - Security engineer monitors the status of the security profile
+* Then - Security engineer has access to the security profile
 
 #### Steps
 1. [securityprofile create --name secProfileMSP --file ./templates/secprofile.yml](#action-securityprofile-create)
@@ -107,6 +127,11 @@ Monitor Security Profile allows the security engineer to monitor the status of t
 Remove Security Profile that is attached to multiple identities. All identities should be re-evaluated when a profile is destroyed.
 
 ![Scenario RemoveSecurityProfile](./RemoveSecurityProfile.png)
+#### Criteria
+
+* Given - A security profile is attached to multiple identities
+* When - Security Engineer uses securityprofile/destroy method
+* Then - A security profile is attached to multiple identities
 
 #### Steps
 1. [securityprofile create --name secProfileRSP --file ./templates/secprofile.yml](#action-securityprofile-create)
@@ -123,6 +148,11 @@ Remove Security Profile that is attached to multiple identities. All identities 
 Test Security Profile if the profile has conflicting policies and if the profile conflicts with other profiles in the system and when it is attached.
 
 ![Scenario TestSecurityProfile](./TestSecurityProfile.png)
+#### Criteria
+
+* Given - Three security profiles are created with conflicting policies
+* When - A &#39;test&#39; is performed on one of the security profiles
+* Then - Three security profiles are created with conflicting policies
 
 #### Steps
 1. [securityprofile create --name secProfileTSP1 --file ./templates/secprofile.yml](#action-securityprofile-create)

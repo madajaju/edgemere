@@ -1,15 +1,1 @@
-module.exports = {
-    name: 'Add Device',
-    description: 'Add Device is the description',
-    method: "data/source",
-    actors: {
-        'IT Operations': 'uses',
-    },
-    steps: [
-        {action: 'device/create', parameters: {name: 'hostad1', file: './templates/device.yaml'}},
-        {action: 'cpl/device/disable', parameters: {name: 'hostad1'}},
-        {action: 'cpl/device/enable', parameters: {name: 'hostad1'}},
-        {action: 'cpl/device/disable', parameters: {name: 'hostad1'}},
-    ]
-};
-
+module.exports = {"name":"Add Device","description":"Add Device is the description","method":"data/source","actors":{"IT Operations":"uses"},"steps":[{"action":"device/create","parameters":{"name":"hostad1","file":"./templates/device.yaml"}},{"action":"cpl/device/disable","parameters":{"name":"hostad1"}},{"action":"cpl/device/enable","parameters":{"name":"hostad1"}},{"action":"cpl/device/disable","parameters":{"name":"hostad1"}}],"uid":"ManageInfrastructure.AddDevice","given":"IT Operations uses data/source","when":"device/create is actioned with parameters: name - hostad1, file - ./templates/device.yaml","then":"devices get disabled and enabled through cpl/device/disable and cpl/device/enable commands respectively"};

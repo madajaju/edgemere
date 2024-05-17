@@ -1,13 +1,1 @@
-module.exports = {
-    name: 'Build Service',
-    description: 'Build Service is the description',
-    method: "data/create",
-    actors: {
-        'StackDeveloper': 'uses',
-    },
-    steps: [
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-    ]
-};
-
+module.exports = {"name":"Build Service","description":"Build Service is the description","method":"data/create","actors":{"StackDeveloper":"uses"},"steps":[{"action":"data/list","parameters":{"name":"hello","file":"./templates/world.yml"}},{"action":"data/list","parameters":{"name":"hello","file":"./templates/world.yml"}}],"uid":"ManageServices.BuildService","given":"StackDeveloper uses Build Service","when":"data/create method is invoked with name 'hello' and file './templates/world.yml'","then":"data/list response should provide the same name 'hello' and file './templates/world.yml'"};

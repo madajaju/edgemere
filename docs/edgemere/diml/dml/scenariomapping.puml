@@ -66,6 +66,15 @@ edgemeredimldmldatastrategy -- edgemeredimldmldatastrategylist
 
 
 
+
+
+
+
+
+
+
+
+
         rectangle "Manage Data" as ManageData #ffffaa {
             ("Destroy Data")/ as DataStewardManageDataDestroyData
         }

@@ -1,18 +1,1 @@
-module.exports = {
-    name: 'Create Blue Print',
-    description: 'Create Blue Print is the description',
-    method: "datablueprint/create",
-    actors: {
-        'DataScientist': 'uses',
-    },
-    steps: [
-        { action: 'dataadaptor/create', parameters: { name: 'filesystem', file: './templates/dataadaptor-filesystem.yaml'}},
-        { action: 'dataflow create', parameters: { name: 'filesystembasic', file: './templates/dataflow-filesystembasic.yaml'}},
-        { action: 'datablueprint create', parameters: { name: 'filesystemBluePrint1', file: './templates/datablueprint-filesystem.yaml'}},
-        { action: 'datasource create', parameters: { name: 'myFileSystem1', file: './templates/datasource.yaml'}},
-        { action: 'datasource create', parameters: { name: 'myFileSystem2', file: './templates/datasource.yaml'}},
-        { action: 'diml ddf datablueprint deploy', parameters: { name: 'myBP1', blueprint: 'filesystemBluePrint1', sources: "mySource=myFileSystem1"}},
-        { action: 'diml ddf datablueprint deploy', parameters: { name: 'myBP2', blueprint: 'filesystemBluePrint1', sources: "mySource=myFileSystem2"}}
-    ]
-};
-
+module.exports = {"name":"Create Blue Print","description":"Create Blue Print is the description","method":"datablueprint/create","actors":{"DataScientist":"uses"},"steps":[{"action":"dataadaptor/create","parameters":{"name":"filesystem","file":"./templates/dataadaptor-filesystem.yaml"}},{"action":"dataflow create","parameters":{"name":"filesystembasic","file":"./templates/dataflow-filesystembasic.yaml"}},{"action":"datablueprint create","parameters":{"name":"filesystemBluePrint1","file":"./templates/datablueprint-filesystem.yaml"}},{"action":"datasource create","parameters":{"name":"myFileSystem1","file":"./templates/datasource.yaml"}},{"action":"datasource create","parameters":{"name":"myFileSystem2","file":"./templates/datasource.yaml"}},{"action":"diml ddf datablueprint deploy","parameters":{"name":"myBP1","blueprint":"filesystemBluePrint1","sources":"mySource=myFileSystem1"}},{"action":"diml ddf datablueprint deploy","parameters":{"name":"myBP2","blueprint":"filesystemBluePrint1","sources":"mySource=myFileSystem2"}}],"uid":"ManageDataBluePrints.CreateBluePrint","given":"Data Scientist uses datablueprint/create method","when":"Data adaptors, dataflow, datablueprint, and datasources are created","then":"Datablueprint deploy action is used with specific parameters."};

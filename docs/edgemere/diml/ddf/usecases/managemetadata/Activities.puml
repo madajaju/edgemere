@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Manage Meta Data" as ManageMetaData #yellow
 
 Actor "Data Scientist" as DataScientist
@@ -9,13 +11,21 @@ DataScientist --> ManageMetaData
 
 
 
-usecase "CaptureMetaData" as CaptureMetaData #lightgrey
+json CaptureMetaData #lightyellow {
+    "Given": "Data Engineer and Data Steward are using data create method",
+    "When": "Data blueprint and sources are created and deployed for simulation",
+    "Then": "Specific owner&#39;s data can be searched and found"
+}
 
-ManageMetaData --> CaptureMetaData
+ManageMetaData <|-- CaptureMetaData
 
-usecase "ManageDataCatalog" as ManageDataCatalog #lightgrey
+json ManageDataCatalog #lightyellow {
+    "Given": "A data scientist wants to manage the data catalog",
+    "When": "The data scientist uses the &#39;datacatalog/list&#39; method",
+    "Then": "The data scientist should be able to manage the data catalog"
+}
 
-ManageMetaData --> ManageDataCatalog
+ManageMetaData <|-- ManageDataCatalog
 
 
 

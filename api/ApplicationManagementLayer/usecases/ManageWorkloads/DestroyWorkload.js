@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Destroy Workload',
-    description: 'Destroy Workload is the description',
-    method: "workload/destroy",
-    actors: {
-        'DevOps Engineer': 'uses',
-    },
-};
-
+module.exports = {"name":"Destroy Workload","description":"Destroy Workload is the description","method":"workload/destroy","actors":{"DevOps Engineer":"uses"},"uid":"ManageWorkloads.DestroyWorkload","given":"DevOps Engineer has access to workload/destroy method","when":"DevOps Engineer uses workload/destroy method","then":"The workload should be destroyed"};

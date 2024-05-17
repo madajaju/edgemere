@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "Data Engineer"
 
 
@@ -10,9 +11,16 @@ box Data Definition Framework #ffcc88
 end box
 
 
+group Given [A data engineer wants to create a new data adaptor]
 
-"Data Engineer" -> ddf: Create Data Adaptor
+"Data Engineer" --/ ddf: The data engineer uses the &#39;dataadaptor/create&#39; method
+"ddf" -> ddf: Create Data Adaptor
 
 
+
+"Data Engineer" /-- ddf: A new data adaptor is created for use
+
+
+end
 
 @enduml

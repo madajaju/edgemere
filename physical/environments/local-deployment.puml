@@ -1,0 +1,72 @@
+@startuml
+
+left to right direction
+
+hexagon internet
+
+frame datacenter1 {
+    node adminSwitch <<switch>> {
+        hexagon adminNetwork #lightblue
+    }
+    node dataSwitch  <<switch>> {
+        hexagon dataNetwork #orange
+    }
+    node appSwitch <<switch>> {
+        hexagon appNetwork #green
+    }
+    node internetRouter <<router>>
+
+    node adminConsole <<small>> {
+        port "admin" as adminConsoleadminNetwork #lightblue
+    }
+    node host1 <<medium>> {
+        port "admin" as host1adminNetwork #lightblue
+        port "app" as host1appNetwork #green
+        port "data" as host1dataNetwork #orange
+        folder "/mnt/shared" as host1diska
+    }
+    node host2 <<large>> {
+        port "admin" as host2adminNetwork #lightblue
+        port "app" as host2appNetwork #green
+        port "data" as host2dataNetwork #orange
+        folder "/mnt/shared" as host2diska
+    }
+    node host3 <<xlarge>> {
+        port "admin" as host3adminNetwork #lightblue
+        port "app" as host3appNetwork #green
+        port "data" as host3dataNetwork #orange
+        folder "/mnt/shared" as host3diska
+    }
+    node host4 <<xlarge>> {
+        port "admin" as host4adminNetwork #lightblue
+        port "app" as host4appNetwork #green
+        port "data" as host4dataNetwork #orange
+        folder "/mnt/shared" as  host4diska
+    }
+
+    database share1
+    database share2
+
+    host1diska -- share1
+    host2diska -- share1
+    host3diska -- share2
+    host4diska -- share2
+    internet -- internetRouter
+    internetRouter -- appNetwork
+    adminNetwork -[hidden]- host1adminNetwork
+    adminNetwork -[hidden]- host2adminNetwork
+    adminNetwork -[hidden]- host3adminNetwork
+    adminNetwork -[hidden]- host4adminNetwork
+    adminNetwork -[hidden]- adminConsoleadminNetwork
+
+    appNetwork -[hidden]- host1appNetwork
+    appNetwork -[hidden]- host2appNetwork
+    appNetwork -[hidden]- host3appNetwork
+    appNetwork -[hidden]- host4appNetwork
+    appNetwork -[hidden]- host1appNetwork
+
+    dataNetwork -[hidden]- host2dataNetwork
+    dataNetwork -[hidden]- host3dataNetwork
+    dataNetwork -[hidden]- host4dataNetwork
+}
+@enduml

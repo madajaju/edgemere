@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+node "Ingress Services" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    card " edgemere diml cds ingress" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\ndocker-compose.yml" as ingress_container
+      REST --> ingress_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "ingress" as ingressimage
+    artifact "ailtire:swarm" as ailtireswarm
+    ingressimage <|-- ailtireswarm
+    ingress_container --> ingressimage
+
+  
+      artifact "diml_cds_ingress_web" as diml_cds_ingress_web
+      web_container --> diml_cds_ingress_web
+    
+  }
+}
+CLI " edgemere diml cds ingress" -- binName
+Web "/edgemere/diml/cds/ingress" - REST
+WebSocket ".edgemere.diml.cds.ingress" -- socket
+
+@enduml

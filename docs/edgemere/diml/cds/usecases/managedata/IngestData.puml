@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "Data Steward"
 
 
@@ -10,9 +11,16 @@ box Common Data Service #ffcc88
 end box
 
 
+group Given [A data steward uses data source]
 
-"Data Steward" -> cds: Ingest Data
+"Data Steward" --/ cds: Data is ingested from named source
+"cds" -> cds: Ingest Data
 
 
+
+"Data Steward" /-- cds: Data should be managed in the ingest process
+
+
+end
 
 @enduml

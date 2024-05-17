@@ -2,11 +2,11 @@
   interface CLI
   interface Web
   interface WebSocket
-package "Blue Print Management" #lightblue {
+node "Blue Print Management" #lightblue {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {
-    component " edgemere diml ddf bpm" as binName
+    card " edgemere diml ddf bpm" as binName
   }
   binName --> REST
 
@@ -14,11 +14,11 @@ package "Blue Print Management" #lightblue {
       file "node server.js\n" as diml_ddf_bpm_container
       REST --> diml_ddf_bpm_container
 
-  
+
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
+
   }
   folder images #ffffff {
     collections "diml_ddf_bpm" as diml_ddf_bpmimage
@@ -26,10 +26,10 @@ package "Blue Print Management" #lightblue {
     diml_ddf_bpmimage <|-- ailtireswarm
     diml_ddf_bpm_container --> diml_ddf_bpmimage
 
-  
+
       artifact "diml_ddf_bpm_web" as diml_ddf_bpm_web
       web_container --> diml_ddf_bpm_web
-    
+
   }
 }
 CLI " edgemere diml ddf bpm" -- binName

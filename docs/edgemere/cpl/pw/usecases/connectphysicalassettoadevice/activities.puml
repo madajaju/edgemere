@@ -1,0 +1,30 @@
+@startuml
+
+
+left to right direction
+
+usecase "Connect Physical Asset to a Device" as ConnectPhysicalAssettoaDevice #yellow
+
+Actor "Actor" as Actor
+
+Actor --> ConnectPhysicalAssettoaDevice
+
+
+
+json Asset-DigitalDeviceConnectivity #lightyellow {
+    "Given": "A physical asset needs to be connected to a digital device",
+    "When": "The user attempts to connect the physical asset to the digital device",
+    "Then": "The physical asset should show as connected on the digital device"
+}
+
+ConnectPhysicalAssettoaDevice <|-- Asset-DigitalDeviceConnectivity
+
+
+
+
+
+
+
+
+
+@enduml

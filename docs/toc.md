@@ -12,6 +12,7 @@ Version 0.4.1
 ## Use Case View
 ### Actors
 * [All Actors](actors)
+* [Actor](actor-actor)
 * [ApplicationDeveloper](actor-applicationdeveloper)
 * [ChiefDataOfficer](actor-chiefdataofficer)
 * [ChiefDataOfficier](actor-chiefdataofficier)
@@ -30,8 +31,15 @@ Version 0.4.1
 * [Apply Security Profiles](usecase-ApplySecurityProfiles)
   * [Attach Profile](usecase-ApplySecurityProfiles#AttachProfile)
   * [Deploy Security Profile](usecase-ApplySecurityProfiles#DeploySecurityProfile)
+* [Change Physical World](usecase-ChangePhysicalWorld)
+  * [Adjust Temperature](usecase-ChangePhysicalWorld#AdjustTemperature)
+  * [Toogle Switch](usecase-ChangePhysicalWorld#toggleSwitch)
+* [Commission Physical Asset](usecase-CommissionPhysicalAsset)
+* [Connect Physical Asset to a Device](usecase-ConnectPhysicalAssettoaDevice)
+  * [Asset-Digital Device Connectivity](usecase-ConnectPhysicalAssettoaDevice#Asset-DigitalDeviceConnectivity)
 * [Control Virtual Infrastructure](usecase-ControlVirtualInfrastructure)
 * [Coordinate Services](usecase-CoordinateServices)
+* [Decommission Physical Asset](usecase-DecommissionPhysicalAsset)
 * [Find Resources](usecase-FindResources)
 * [Govern Identities](usecase-GovernIdentities)
 * [Manage AI Models](usecase-ManageAIModels)
@@ -99,6 +107,7 @@ Version 0.4.1
   * [Add Cloud to Multi Cloud](usecase-ManageMultiCloud#AddCloudtoMultiCloud)
   * [Manage Policies for Multi Cloud](usecase-ManageMultiCloud#ManagePoliciesforMultiCloud)
   * [Remove Cloud From Multi Cloud](usecase-ManageMultiCloud#RemoveCloudfromMultiCloud)
+* [Manage Physical Assets](usecase-ManagePhysicalAssets)
 * [Manage Physical Infrastructure](usecase-ManagePhysicalInfrastructure)
 * [Manage Resources](usecase-ManageResources)
   * [Get Resources](usecase-ManageResources#GetResources)
@@ -134,9 +143,14 @@ Version 0.4.1
   * [Update Workload](usecase-ManageWorkloads#UpdateWorkload)
 * [Map Assets to Cloud](usecase-MapAssetstoCloud)
 * [Map Services to Resources](usecase-MapServicestoResources)
+* [Monitor Physical World](usecase-MonitorPhysicalWorld)
+  * [Continuous Monitoring](usecase-MonitorPhysicalWorld#ContinuousMonitoring)
 * [Organize Solutions](usecase-OrganizeSolutions)
 * [Provide Business Information](usecase-ProvideBusinessInformation)
+* [Replace Physical Asset](usecase-ReplacePhysicalAsset)
 * [Secure Assets](usecase-SecureAssets)
+* [Secure Data from Physical Asset](usecase-SecureDatafromPhysicalAsset)
+* [Secure Physical Asset](usecase-SecurePhysicalAsset)
 
 ## Logical View
 
@@ -150,8 +164,10 @@ Version 0.4.1
     * [Pipeline Manager](package--edgemere-aml-ds-pm)
   * [Workflow Services](package--edgemere-aml-ws)
 * [Common Physical Layer](package--edgemere-cpl)
+  * [Cyber](package--edgemere-cpl-c)
   * [Device Agent](package--edgemere-cpl-da)
   * [Device Manager](package--edgemere-cpl-dm)
+  * [PhysicalWorld](package--edgemere-cpl-pw)
   * [Telemetry Aggregator](package--edgemere-cpl-ta)
   * [Telemetry Consumer](package--edgemere-cpl-tc)
   * [Telemetry Producer](package--edgemere-cpl-tp)
@@ -201,6 +217,7 @@ Version 0.4.1
 * [BuildLog](class-BuildLog)
 * [Cloud](class-Cloud)
 * [CloudType](class-CloudType)
+* [CommunicationPathway](class-CommunicationPathway)
 * [ComputeHardware](class-ComputeHardware)
 * [ComputeResource](class-ComputeResource)
 * [Data](class-Data)
@@ -231,6 +248,7 @@ Version 0.4.1
 * [Image](class-Image)
 * [LedgerEntry](class-LedgerEntry)
 * [LineageMetaData](class-LineageMetaData)
+* [Location](class-Location)
 * [MetaData](class-MetaData)
 * [Metric](class-Metric)
 * [MetricAttribute](class-MetricAttribute)
@@ -239,6 +257,8 @@ Version 0.4.1
 * [MultiCloud](class-MultiCloud)
 * [NetworkHardware](class-NetworkHardware)
 * [NetworkResource](class-NetworkResource)
+* [PLC](class-PLC)
+* [PhysicalAsset](class-PhysicalAsset)
 * [PhysicalProfile](class-PhysicalProfile)
 * [Pipeline](class-Pipeline)
 * [Policy](class-Policy)
@@ -251,6 +271,7 @@ Version 0.4.1
 * [ResourceMap](class-ResourceMap)
 * [RunScript](class-RunScript)
 * [SecurityProfile](class-SecurityProfile)
+* [Sensor](class-Sensor)
 * [Service](class-Service)
 * [ServiceDefinition](class-ServiceDefinition)
 * [ServiceInstance](class-ServiceInstance)
@@ -303,11 +324,15 @@ the container images for the deployment of the solution.
 
 * [aml_ws_web](image-aml_ws_web)
 
+* [c_c_web](image-c_c_web)
+
 * [cpl_web](image-cpl_web)
 
 * [cpl_da_web](image-cpl_da_web)
 
 * [cpl_dm_web](image-cpl_dm_web)
+
+* [c_p_web](image-c_p_web)
 
 * [cpl_ta_web](image-cpl_ta_web)
 
@@ -377,8 +402,6 @@ the container images for the deployment of the solution.
 
 * [sdi_io_web](image-sdi_io_web)
 
-* [edgemere_start](image-edgemere_start)
-
 * [edgemere_web](image-edgemere_web)
 
 * [edgemere_doc](image-edgemere_doc)
@@ -409,9 +432,11 @@ the container images for the deployment of the solution.
 * sml_em - [dev](environment-dev-sml_em), [test](environment-test-sml_em), [prod](environment-prod-sml_em)
 * a_d_pm - [dev](environment-dev-a_d_pm), [test](environment-test-a_d_pm), [prod](environment-prod-a_d_pm)
 * aml_ws - [dev](environment-dev-aml_ws), [test](environment-test-aml_ws), [prod](environment-prod-aml_ws)
+* c_c - [dev](environment-dev-c_c), [test](environment-test-c_c), [prod](environment-prod-c_c), [local](environment-local-c_c)
 * cpl - [dev](environment-dev-cpl), [test](environment-test-cpl), [prod](environment-prod-cpl)
 * cpl_da - [dev](environment-dev-cpl_da), [test](environment-test-cpl_da), [prod](environment-prod-cpl_da)
 * cpl_dm - [dev](environment-dev-cpl_dm), [test](environment-test-cpl_dm), [prod](environment-prod-cpl_dm)
+* c_p - [dev](environment-dev-c_p), [test](environment-test-c_p), [prod](environment-prod-c_p), [local](environment-local-c_p)
 * cpl_ta - [dev](environment-dev-cpl_ta), [test](environment-test-cpl_ta), [prod](environment-prod-cpl_ta)
 * cpl_tc - [dev](environment-dev-cpl_tc), [test](environment-test-cpl_tc), [prod](environment-prod-cpl_tc)
 * cpl_tp - [dev](environment-dev-cpl_tp), [test](environment-test-cpl_tp), [prod](environment-prod-cpl_tp)

@@ -47,10 +47,16 @@ WebSocket -left- i: events >
 package "Common Physical Layer" #cccccc {
 
 
+rectangle "Cyber" #white {
+}
+
 rectangle "Device Agent" #white {
 }
 
 rectangle "Device Manager" #white {
+}
+
+rectangle "PhysicalWorld" #white {
 }
 
 rectangle "Telemetry Aggregator" #white {

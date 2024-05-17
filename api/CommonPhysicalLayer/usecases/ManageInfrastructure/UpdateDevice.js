@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Update Device',
-    description: 'Update Device is the description',
-    method: "data/source",
-    actors: {
-        'IT Operations': 'uses',
-    },
-};
-
+module.exports = {"name":"Update Device","description":"Update Device is the description","method":"data/source","actors":{"IT Operations":"uses"},"uid":"ManageInfrastructure.UpdateDevice","given":"IT Operations has access to the device database","when":"The IT operations attempts to update a device","then":"The device should be successfully updated in the database"};

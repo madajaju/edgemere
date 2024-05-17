@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+node "Blue Print Management" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    card " edgemere diml ddf bpm" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as diml_ddf_bpm_container
+      REST --> diml_ddf_bpm_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "diml_ddf_bpm" as diml_ddf_bpmimage
+    artifact "ailtire:swarm" as ailtireswarm
+    diml_ddf_bpmimage <|-- ailtireswarm
+    diml_ddf_bpm_container --> diml_ddf_bpmimage
+
+  
+      artifact "diml_ddf_bpm_web" as diml_ddf_bpm_web
+      web_container --> diml_ddf_bpm_web
+    
+  }
+}
+CLI " edgemere diml ddf bpm" -- binName
+Web "/edgemere/diml/ddf/bpm" - REST
+WebSocket ".edgemere.diml.ddf.bpm" -- socket
+
+@enduml

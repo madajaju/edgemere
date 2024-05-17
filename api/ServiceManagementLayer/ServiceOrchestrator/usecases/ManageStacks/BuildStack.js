@@ -1,13 +1,1 @@
-module.exports = {
-    name: 'Build Stack',
-    description: 'Build Stack is the description',
-    method: "data/create",
-    actors: {
-        'DevOpsEngineer': 'uses',
-    },
-    steps: [
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-    ]
-};
-
+module.exports = {"name":"Build Stack","description":"Build Stack is the description","method":"data/create","actors":{"DevOpsEngineer":"uses"},"steps":[{"action":"data/list","parameters":{"name":"hello","file":"./templates/world.yml"}},{"action":"data/list","parameters":{"name":"hello","file":"./templates/world.yml"}}],"uid":"ManageStacks.BuildStack","given":"A DevOps Engineer has access to data/create","then":"A stack is built using the provided file"};

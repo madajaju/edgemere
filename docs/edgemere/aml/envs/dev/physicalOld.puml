@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+node "Application Management Layer" #88cccc {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    card " edgemere aml" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as aml_container
+      REST --> aml_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "aml" as amlimage
+    artifact "ailtire:swarm" as ailtireswarm
+    amlimage <|-- ailtireswarm
+    aml_container --> amlimage
+
+  
+      artifact "aml_web" as aml_web
+      web_container --> aml_web
+    
+  }
+}
+CLI " edgemere aml" -- binName
+Web "/edgemere/aml" - REST
+WebSocket ".edgemere.aml" -- socket
+
+@enduml

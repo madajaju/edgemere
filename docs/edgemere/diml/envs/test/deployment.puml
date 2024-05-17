@@ -3,67 +3,75 @@
 left to right direction
 
 
-boundary parent #black
 
 
-entity children #blue
-
-rectangle "diml_dml" as diml_dmlStack #ffcc88 {
-    queue diml_dmlStacksnet #blue [
-        <b><color:white>parent</color></b>
-    ]
+node "diml_dml" as diml_dmlStack #ffcc88 {
+    portin "parent" as diml_dmlStackPortIn #blue
 }
 
 
 
-package "diml" #ffcc88 {
-    queue parentnet #black [
+node "diml" #ffcc88 {
+
+
+    hexagon parentnet #black [
             <b><color:white>parent</color></b>
     ]
     
-    parentnet -[#black]- parent
+    portin " " as parentnetPortIn #black
+    parentnetPortIn -[#black]- parentnet
     
-    queue childrennet #blue [
+    hexagon childrennet #blue [
             <b><color:white>children</color></b>
     ]
     
-    childrennet -[#blue]- children
+    portout " " as childrennetPortOut #blue
+    childrennet -[#blue]- childrennetPortOut
     
-    queue siblingsnet #red [
+    hexagon siblingsnet #red [
             <b><color:white>siblings</color></b>
     ]
     
 
-node "web" as webService
-node "diml_cds" as diml_cdsService
-node "diml_ddf" as diml_ddfService
-node "diml_dml" as diml_dmlService
+node "web" as webService #white {
+    portOut " " as webServicechildrennet #blue
+   webServicechildrennet -[#blue]- childrennet
+       portOut " " as webServicesiblingsnet #red
+   webServicesiblingsnet -[#red]- siblingsnet
+   
 
+    artifact "diml_web" as diml_webimage
+    
+}
+node "diml_cds" as diml_cdsService #white {
+    portOut " " as diml_cdsServicechildrennet #blue
+   diml_cdsServicechildrennet -[#blue]- childrennet
+   
 
-        artifact "diml_web" as diml_webimage
+    artifact "diml_cds" as diml_cdsimage
     
-        artifact "diml_cds" as diml_cdsimage
+}
+node "diml_ddf" as diml_ddfService #white {
+    portOut " " as diml_ddfServicechildrennet #blue
+   diml_ddfServicechildrennet -[#blue]- childrennet
+   
+
+    artifact "diml_ddf" as diml_ddfimage
     
-        artifact "diml_ddf" as diml_ddfimage
-            collections "diml_dml" as diml_dmlimage
+}
+node "diml_dml" as diml_dmlService #white {
+    portOut " " as diml_dmlServicechildrennet #blue
+   diml_dmlServicechildrennet -[#blue]- childrennet
+   
+    collections "diml_dml" as diml_dmlimage
     
 }
 
-webService -[#blue]- childrennet
-
-webService -[#red]- siblingsnet
-
-diml_cdsService -[#blue]- childrennet
-
-diml_ddfService -[#blue]- childrennet
-
-diml_dmlService -[#blue]- childrennet
-webService .... diml_webimage
-diml_cdsService .... diml_cdsimage
-diml_ddfService .... diml_ddfimage
-diml_dmlService .... diml_dmlimage
+}
 
 diml_dmlimage --> diml_dmlStack
+    
+    childrennetPortOut -[#blue]- diml_dmlStackPortIn
     
 
 @enduml

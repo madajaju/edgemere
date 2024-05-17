@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "DataEngineer"
 
 
@@ -10,9 +11,16 @@ box Data Orchestrator #lightblue
 end box
 
 
+group Given [DataEngineer has access to datainstance/find method]
 
-"DataEngineer" -> do: Find Data Instance
+"DataEngineer" --/ do: DataEngineer uses the method to find a specific data instance
+"do" -> do: Find Data Instance
 
 
+
+"DataEngineer" /-- do: The specific data instance is retrieved and displayed to the DataEngineer
+
+
+end
 
 @enduml

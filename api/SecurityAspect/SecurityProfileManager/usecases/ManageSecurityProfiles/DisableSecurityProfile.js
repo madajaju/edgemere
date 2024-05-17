@@ -1,14 +1,1 @@
-module.exports = {
-    name: 'Disable Security Profile',
-    description: 'Disable Security Profile that has been created. This should remove the policies enforcing the' +
-        ' identity immediately. All identities effected should be re-evaluated.',
-    method: "securityprofile/disable",
-    actors: {
-        'SecurityEngineer': 'uses',
-    },
-    steps: [
-        { action: 'securityprofile/create', parameters: {name:'secProfileDSP', file:'./templates/secprofile.yml'}},
-        { action: 'securityprofile/disable', parameters: {name:'secProfileDSP'}}
-    ],
-};
-
+module.exports = {"name":"Disable Security Profile","description":"Disable Security Profile that has been created. This should remove the policies enforcing the identity immediately. All identities effected should be re-evaluated.","method":"securityprofile/disable","actors":{"SecurityEngineer":"uses"},"steps":[{"action":"securityprofile/create","parameters":{"name":"secProfileDSP","file":"./templates/secprofile.yml"}},{"action":"securityprofile/disable","parameters":{"name":"secProfileDSP"}}],"uid":"ManageSecurityProfiles.DisableSecurityProfile","given":"A Security Profile named 'secProfileDSP' has been created","when":"The SecurityEngineer uses 'securityprofile/disable' method for 'secProfileDSP'","then":"The policies enforcing the identity are removed immediately and all affected identities are re-evaluated"};

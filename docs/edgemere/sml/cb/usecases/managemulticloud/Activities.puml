@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Manage Multi Cloud" as ManageMultiCloud #yellow
 
 Actor "IT Operations" as ITOperations
@@ -9,17 +11,29 @@ ITOperations --> ManageMultiCloud
 
 
 
-usecase "AddCloudtoMultiCloud" as AddCloudtoMultiCloud #lightgrey
+json AddCloudtoMultiCloud #lightyellow {
+    "Given": "IT Operations is using a multi cloud system",
+    "When": "IT Operations adds a new cloud to the system",
+    "Then": "The new cloud is integrated into the multi cloud system"
+}
 
-ManageMultiCloud --> AddCloudtoMultiCloud
+ManageMultiCloud <|-- AddCloudtoMultiCloud
 
-usecase "ManagePoliciesforMultiCloud" as ManagePoliciesforMultiCloud #lightgrey
+json ManagePoliciesforMultiCloud #lightyellow {
+    "Given": "IT Operations needs to manage policies for Multicloud",
+    "When": "IT Operations adds, removes, enables or disables policies",
+    "Then": "The multicloud systems should update based on the changes"
+}
 
-ManageMultiCloud --> ManagePoliciesforMultiCloud
+ManageMultiCloud <|-- ManagePoliciesforMultiCloud
 
-usecase "RemoveCloudfromMultiCloud" as RemoveCloudfromMultiCloud #lightgrey
+json RemoveCloudfromMultiCloud #lightyellow {
+    "Given": "IT Operations are enabled to use Multi Cloud",
+    "When": "A cloud policy needs to be removed",
+    "Then": "IT operations remove the policy from Multi Cloud"
+}
 
-ManageMultiCloud --> RemoveCloudfromMultiCloud
+ManageMultiCloud <|-- RemoveCloudfromMultiCloud
 
 
 

@@ -1,12 +1,1 @@
-module.exports = {
-    name: 'Create Security Profile',
-    description: 'Create Security Profile from a secoprofile yaml file.',
-    method: "securityprofile/create",
-    actors: {
-        'SecurityEngineer': 'uses',
-    },
-    steps: [
-        { action: 'securityprofile/create', parameters: {name:'secProfile1', file:'./templates/secprofile.yml'}},
-    ],
-};
-
+module.exports = {"name":"Create Security Profile","description":"Create Security Profile from a secoprofile yaml file.","method":"securityprofile/create","actors":{"SecurityEngineer":"uses"},"steps":[{"action":"securityprofile/create","parameters":{"name":"secProfile1","file":"./templates/secprofile.yml"}}],"uid":"ManageSecurityProfiles.CreateSecurityProfile","given":"A SecurityEngineer with a secoprofile yaml file","when":"The SecurityEngineer decides to create a new security profile named 'secProfile1'","then":"The system should successfully create and store the new security profile as specified in the yaml file"};

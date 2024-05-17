@@ -1,0 +1,22 @@
+@startuml
+
+
+left to right direction
+
+usecase "Manage Physical Assets" as ManagePhysicalAssets #yellow
+
+Actor "Actor" as Actor
+
+Actor --> ManagePhysicalAssets
+
+
+
+
+
+
+
+
+
+
+
+@enduml

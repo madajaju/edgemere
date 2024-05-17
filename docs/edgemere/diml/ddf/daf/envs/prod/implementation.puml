@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+node "Data Adaptor Framework" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    card " edgemere diml ddf daf" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as diml_ddf_daf_container
+      REST --> diml_ddf_daf_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "diml_ddf_daf" as diml_ddf_dafimage
+    artifact "ailtire:swarm" as ailtireswarm
+    diml_ddf_dafimage <|-- ailtireswarm
+    diml_ddf_daf_container --> diml_ddf_dafimage
+
+  
+      artifact "diml_ddf_daf_web" as diml_ddf_daf_web
+      web_container --> diml_ddf_daf_web
+    
+  }
+}
+CLI " edgemere diml ddf daf" -- binName
+Web "/edgemere/diml/ddf/daf" - REST
+WebSocket ".edgemere.diml.ddf.daf" -- socket
+
+@enduml

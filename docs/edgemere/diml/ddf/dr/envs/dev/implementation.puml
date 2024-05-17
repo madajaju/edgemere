@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+node "Data Repository" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    card " edgemere diml ddf dr" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as diml_ddf_dr_container
+      REST --> diml_ddf_dr_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "diml_ddf_dr" as diml_ddf_drimage
+    artifact "ailtire:swarm" as ailtireswarm
+    diml_ddf_drimage <|-- ailtireswarm
+    diml_ddf_dr_container --> diml_ddf_drimage
+
+  
+      artifact "diml_ddf_dr_web" as diml_ddf_dr_web
+      web_container --> diml_ddf_dr_web
+    
+  }
+}
+CLI " edgemere diml ddf dr" -- binName
+Web "/edgemere/diml/ddf/dr" - REST
+WebSocket ".edgemere.diml.ddf.dr" -- socket
+
+@enduml

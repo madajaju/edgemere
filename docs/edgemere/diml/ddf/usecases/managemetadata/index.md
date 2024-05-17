@@ -39,6 +39,11 @@ Manage Meta Data is the description
 Capture Meta Data is the description
 
 ![Scenario CaptureMetaData](./CaptureMetaData.png)
+#### Criteria
+
+* Given - Data Engineer and Data Steward are using data create method
+* When - Data blueprint and sources are created and deployed for simulation
+* Then - Data Engineer and Data Steward are using data create method
 
 #### Steps
 1. [dataadaptor create --name filesystem --file ./templates/dataadaptor-filesystem.yaml](#action-dataadaptor-create)
@@ -62,6 +67,11 @@ Capture Meta Data is the description
 Manage Data Catalog is the description
 
 ![Scenario ManageDataCatalog](./ManageDataCatalog.png)
+#### Criteria
+
+* Given - A data scientist wants to manage the data catalog
+* When - The data scientist uses the &#39;datacatalog/list&#39; method
+* Then - A data scientist wants to manage the data catalog
 
 #### Steps
 1. To Be Defined

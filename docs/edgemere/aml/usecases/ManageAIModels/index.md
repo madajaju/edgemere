@@ -44,6 +44,11 @@ Data Scientist manages AI models and ties them to and application and data set. 
 Create AI Model is the description
 
 ![Scenario CreateAIModel](./CreateAIModel.png)
+#### Criteria
+
+* Given - An application developer or data scientist wants to create an AI model
+* When - They use the &#39;aimodel/create&#39; method and provide &#39;name1&#39; as the name parameter
+* Then - An application developer or data scientist wants to create an AI model
 
 #### Steps
 1. [aimodel create --name name1](#action-aimodel-create)
@@ -60,6 +65,11 @@ Create AI Model is the description
 Deploy AI Model is the description
 
 ![Scenario DeployAIModel](./DeployAIModel.png)
+#### Criteria
+
+* Given - The AI model is trained and ready to be deployed
+* When - The DevOps, Application Developer or Data Engineer triggers the deployment process
+* Then - The AI model is trained and ready to be deployed
 
 #### Steps
 1. To Be Defined
@@ -77,6 +87,11 @@ Deploy AI Model is the description
 Destroy AI Model is the description
 
 ![Scenario DestroyAIModel](./DestroyAIModel.png)
+#### Criteria
+
+* Given - A Data Engineer or Application Developer uses an AI model
+* When - They decide to destroy the AI model
+* Then - A Data Engineer or Application Developer uses an AI model
 
 #### Steps
 1. To Be Defined
@@ -93,6 +108,11 @@ Destroy AI Model is the description
 Update AI Model is the description
 
 ![Scenario UpdateAIModel](./UpdateAIModel.png)
+#### Criteria
+
+* Given - A Data Engineer, DevOps Engineer, or Application Developer uses the AI model
+* When - The AI model needs an update
+* Then - A Data Engineer, DevOps Engineer, or Application Developer uses the AI model
 
 #### Steps
 1. To Be Defined

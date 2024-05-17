@@ -2,6 +2,9 @@ module.exports = {
     name: 'Create Data Center',
     description: 'IT Operator creates data centers and allows them to add devices and aggregated devices',
     method: 'datacenter/create',
+    given: "IT Operator has access to the system.",
+    when: "Operator creates a data center, devices, and aggregated devices",
+    then: "Data center and devices are created, added and embedded successfully",
     actors: {
         'IT Operations': 'uses',
     },

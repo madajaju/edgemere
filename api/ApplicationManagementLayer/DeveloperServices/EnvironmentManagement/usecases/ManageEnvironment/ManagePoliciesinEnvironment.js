@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Manage Policies in Environment',
-    description: 'IT Operations adds and removes policies from the environment',
-    method: "environment/addpolicies",
-    actors: {
-        'IT Operations': 'uses',
-    },
-};
-
+module.exports = {"name":"Manage Policies in Environment","description":"IT Operations adds and removes policies from the environment","method":"environment/addpolicies","actors":{"IT Operations":"uses"},"uid":"ManageEnvironment.ManagePoliciesinEnvironment","given":"IT Operations is able to modify environment polices","when":"IT Operations adds or removes policies from the environment","then":"The environment policies are updated accordingly"};

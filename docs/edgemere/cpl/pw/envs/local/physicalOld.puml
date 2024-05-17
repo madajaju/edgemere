@@ -1,0 +1,39 @@
+@startuml
+  interface CLI
+  interface Web
+  interface WebSocket
+node "PhysicalWorld" #lightblue {
+  component express as REST
+  component socket.io as socket
+  folder bin #ffffff {
+    card " edgemere cpl pw" as binName
+  }
+  binName --> REST
+
+  folder deploy #ffffff {
+      file "node server.js\n" as c_p_container
+      REST --> c_p_container
+
+  
+    file "web" as web_container
+    REST --> web_container
+    socket ---> web_container
+  
+  }
+  folder images #ffffff {
+    collections "c_p" as c_pimage
+    artifact "ailtire:swarm" as ailtireswarm
+    c_pimage <|-- ailtireswarm
+    c_p_container --> c_pimage
+
+  
+      artifact "c_p_web" as c_p_web
+      web_container --> c_p_web
+    
+  }
+}
+CLI " edgemere cpl pw" -- binName
+Web "/edgemere/cpl/pw" - REST
+WebSocket ".edgemere.cpl.pw" -- socket
+
+@enduml

@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Deploy Application',
-    description: 'Deploy Application is the description',
-    method: "application/deploy",
-    actors: {
-        'DevOps Engineer': 'uses',
-    },
-};
-
+module.exports = {"name":"Deploy Application","description":"Deploy Application is the description","method":"application/deploy","actors":{"DevOps Engineer":"uses"},"uid":"ManageApplications.DeployApplication","given":"DevOps Engineer has access to deploy application","when":"DevOps Engineer uses the application/deploy method","then":"Application should be successfully deployed"};

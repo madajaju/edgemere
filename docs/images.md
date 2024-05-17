@@ -27,11 +27,15 @@ the container images for the deployment of the solution.
 
 * [aml_ws_web](image-aml_ws_web)
 
+* [c_c_web](image-c_c_web)
+
 * [cpl_web](image-cpl_web)
 
 * [cpl_da_web](image-cpl_da_web)
 
 * [cpl_dm_web](image-cpl_dm_web)
+
+* [c_p_web](image-c_p_web)
 
 * [cpl_ta_web](image-cpl_ta_web)
 
@@ -100,8 +104,6 @@ the container images for the deployment of the solution.
 * [sdi_web](image-sdi_web)
 
 * [sdi_io_web](image-sdi_io_web)
-
-* [edgemere_start](image-edgemere_start)
 
 * [edgemere_web](image-edgemere_web)
 

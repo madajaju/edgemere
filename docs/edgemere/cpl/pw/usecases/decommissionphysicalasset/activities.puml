@@ -1,0 +1,22 @@
+@startuml
+
+
+left to right direction
+
+usecase "Decommission Physical Asset" as DecommissionPhysicalAsset #yellow
+
+Actor "Actor" as Actor
+
+Actor --> DecommissionPhysicalAsset
+
+
+
+
+
+
+
+
+
+
+
+@enduml

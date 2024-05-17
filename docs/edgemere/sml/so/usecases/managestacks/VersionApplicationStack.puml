@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "ApplicationDeveloper"
 
 
@@ -14,17 +15,24 @@ box Software Defined Infrastructure #cccc88
             participant storageresource
     end box
 
+group Given [Application Developer has access to the version application stack]
 
-"ApplicationDeveloper" -> so: Version Application Stack
-
-    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
-
-    "storageresource" --/ EventBus: data.list
+"ApplicationDeveloper" --/ so: The developer issues the &#39;data/create&#39; command
+"so" -> so: Version Application Stack
 
     so -> "storageresource": list (name: hello,file: ./templates/world.yml)
 
     "storageresource" --/ EventBus: data.list
 
+    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
 
+    "storageresource" --/ EventBus: data.list
+
+
+
+"ApplicationDeveloper" /-- so: The new version of application stack should be created
+
+
+end
 
 @enduml

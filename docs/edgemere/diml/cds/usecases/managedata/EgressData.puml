@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "Data Steward"
 
 
@@ -10,9 +11,16 @@ box Common Data Service #ffcc88
 end box
 
 
+group Given [A data steward uses the system]
 
-"Data Steward" -> cds: Egress Data
+"Data Steward" --/ cds: Data Steward selects &#39;data/source/name&#39;
+"cds" -> cds: Egress Data
 
 
+
+"Data Steward" /-- cds: Egress Data is displayed to the Data Steward
+
+
+end
 
 @enduml

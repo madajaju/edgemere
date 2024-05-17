@@ -2,75 +2,132 @@ module.exports = {
     name: 'local',
     description: 'This is the local environment used by developers. Used for all of the developers',
     color: '#aa44aa',
-    networks: {
-        adminNetwork: {},
-        dataNetwork: {},
-        appNetwork: {}
+    locations: {
+        homeOffice: {
+            type: "location/homeOffice",
+            contact: "",
+            default: true
+        },
+        datacenter1: {
+            type: "location/datacenter",
+            contact: "",
+            default: true
+        },
+        gitHub: {
+            type: "location/cloud",
+            contact: "gitHub",
+        },
+        azure: {
+            type: "location/cloud",
+            contact: "azure"
+        }
+    },
+    network: {
+        devices: {
+            adminSwitch: {
+                type: "network/switch",  // switch, gateway, router, hub, firewall, accesspoint
+                networks: [ "adminNetwork" ],
+                location: "datacenter1"
+            },
+            homeRouter: {
+                type: "network/router",
+                speed:  "1G", // 100 GigaBit
+                location: "homeOffice",
+                networks: [ "homeNetwork", "adminNetwork", "internet"]
+            },
+            homeSwitch: {
+                type: "network/switch",
+                speed:  "1G", // 100 GigaBit
+                ports: 48,
+                location: "homeOffice",
+                networks: [ "homeNetwork"]
+            },
+        },
+        networks: {
+            internet: {
+                gateway: "172.25.12.1",
+                mask: "255.255.255.0",
+                ipaddr: "172.25.12.143",
+            },
+            adminNetwork: {
+                network: "10.0.0.0/24"
+            },
+            homeNetwork: {
+                network: "192.168.12.0/16",
+            },
+        }
     },
     compute: {
-        example1: {
-            type: "small",
+        renderService: {
+            type: "compute/medium",
+            location: "homeOffice",
             networks: {
-                adminNetwork: {},
-                dataNetwork: {},
-                appNetwork: {},
+                adminNetwork: {
+                    interface: "admin",
+                },
+                homeNetwork: {
+                    interface: "app",
+                },
             },
             disks: {
-                diska: {
-                    type: "share1",
+                oneDrive: {
+                    volume: "oneDrive",
                     mount: "/mnt/shared"
+                },
+                gitHub: {
+                    volume: "gitHub",
+                    mount: "/work"
                 }
             }
         },
-        example2: {
-            type: "small",
+        laptop: {
+            type: "compute/small",
+            location: "homeOffice",
             networks: {
-                adminNetwork: {},
-                dataNetwork: {},
-                appNetwork: {},
+                adminNetwork: {
+                    interface: "admin"
+                },
+                homeNetwork: {
+                    interface: "app"
+                }
             },
             disks: {
-                diska: {
-                    type: share1,
+                oneDrive: {
+                    volume: "oneDrive",
                     mount: "/mnt/shared"
+                },
+                gitHub: {
+                    volume: "gitHub",
+                    mount: "/work"
                 }
             }
         },
-        example3: {
-            type: "xlarge",
+        adminConsole: {
+            type: "compute/xsmall",
+            location: "datacenter1",
             networks: {
-                adminNetwork: {},
-                dataNetwork: {},
-                appNetwork: {},
+                adminNetwork: {
+                    interface: "admin"
+                },
             },
-            disks: {
-                diska: {
-                    type: share2,
-                    mount: "/mnt/shared"
-                }
-            }
-        },
-        example4: {
-            type: "xlarge",
-            networks: {
-                adminNetwork: {},
-                dataNetwork: {},
-                appNetwork: {},
-            },
-            disks: {
-                diska: {
-                    type: share2,
-                    mount: "/mnt/shared"
-                }
-            }
         }
     },
     storage: {
-        share1: {
-            size: "1T"
+        oneDrive: {
+            type: "storage/cloud",
+            location: "azure",
+            size: "10T",
+            networks: {
+                internet: {}
+            }
         },
-        share2: {
-            size: "1T"
+        gitHub: {
+            type: "storage/cloud",
+            location: "gitHub",
+            size: "1T",
+            networks: {
+                internet: {}
+            }
         }
     }
 }

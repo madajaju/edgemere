@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "DataEngineer"
 
 actor "DevOpsEngineer"
@@ -14,15 +15,28 @@ box Application Management Layer #88cccc
 end box
 
 
+group Given [A Data Engineer, DevOps Engineer, or Application Developer uses the AI model]
 
-"DataEngineer" -> aml: Update AI Model
-
-
-"DevOpsEngineer" -> aml: Update AI Model
-
-
-"ApplicationDeveloper" -> aml: Update AI Model
+"DataEngineer" --/ aml: The AI model needs an update
+"aml" -> aml: Update AI Model
 
 
+"DevOpsEngineer" --/ aml: The AI model needs an update
+"aml" -> aml: Update AI Model
+
+
+"ApplicationDeveloper" --/ aml: The AI model needs an update
+"aml" -> aml: Update AI Model
+
+
+
+"DataEngineer" /-- aml: The AI model gets updated through the &#39;aimodel/update&#39; method
+
+"DevOpsEngineer" /-- aml: The AI model gets updated through the &#39;aimodel/update&#39; method
+
+"ApplicationDeveloper" /-- aml: The AI model gets updated through the &#39;aimodel/update&#39; method
+
+
+end
 
 @enduml

@@ -1,0 +1,96 @@
+@startuml
+
+left to right direction
+
+
+
+hexagon internet
+
+
+
+
+
+frame homeOffice {
+
+    node "<&move*4>\nhomeRouter" as homeRouter <<network/router>> {
+    
+    }
+
+    node "<&transfer*4>\nhomeSwitch" as homeSwitch <<network/switch>> {
+    hexagon homeNetwork #red
+    }
+
+    node "<&monitor*4>\nrenderService" as renderService <<compute/medium>> {
+    portin " " as renderServiceadminNetwork #blue
+portin " " as renderServicehomeNetwork #red
+folder "/mnt/shared" as renderServicemntshared
+folder "/work" as renderServicework
+    }
+
+    node "<&monitor*4>\nlaptop" as laptop <<compute/small>> {
+    portin " " as laptopadminNetwork #blue
+portin " " as laptophomeNetwork #red
+folder "/mnt/shared" as laptopmntshared
+folder "/work" as laptopwork
+    }
+
+
+
+}
+
+frame datacenter1 {
+
+    node "<&transfer*4>\nadminSwitch" as adminSwitch <<network/switch>> {
+    hexagon adminNetwork #blue
+    }
+
+    node "<&monitor*4>\nadminConsole" as adminConsole <<compute/xsmall>> {
+    portin " " as adminConsoleadminNetwork #blue
+    }
+
+
+
+}
+
+frame gitHub {
+
+
+    database gitHub <<storage/cloud>> {
+    portin " " as gitHubinternet #black
+    }
+
+
+}
+
+frame azure {
+
+
+    database oneDrive <<storage/cloud>> {
+    portin " " as oneDriveinternet #black
+    }
+
+
+}
+
+
+homeNetwork -- homeRouter
+adminNetwork -- homeRouter
+internet -- homeRouter
+
+
+
+adminNetwork -[hidden]- renderServiceadminNetwork
+homeNetwork -[hidden]- renderServicehomeNetwork
+renderServicemntshared ---- oneDrive
+renderServicework ---- gitHub
+
+adminNetwork -[hidden]- laptopadminNetwork
+homeNetwork -[hidden]- laptophomeNetwork
+laptopmntshared ---- oneDrive
+laptopwork ---- gitHub
+
+
+
+adminNetwork -[hidden]- adminConsoleadminNetwork
+
+@enduml

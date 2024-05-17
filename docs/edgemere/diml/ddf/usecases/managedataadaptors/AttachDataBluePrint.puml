@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "Data Scientist"
 
 
@@ -10,9 +11,16 @@ box Data Definition Framework #ffcc88
 end box
 
 
+group Given [A Data Scientist is using the blueprint/attach method]
 
-"Data Scientist" -> ddf: Attach Data Blue Print
+"Data Scientist" --/ ddf: They attach a data blueprint
+"ddf" -> ddf: Attach Data Blue Print
 
 
+
+"Data Scientist" /-- ddf: The system should manage data adaptors accordingly
+
+
+end
 
 @enduml

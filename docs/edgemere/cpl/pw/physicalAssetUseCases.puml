@@ -1,0 +1,45 @@
+@startuml
+
+' Define Use Cases
+usecase "Monitor Physical World" as Monitor
+usecase "Change Physical World" as Change
+usecase "Connect Physical Asset to a Device" as Connect
+usecase "Manage Physical Assets" as Manage
+usecase "Replace Physical Asset" as Replace
+usecase "Commission Physical Asset" as Commission
+usecase "Decommission Physical Asset" as Decommission
+usecase "Secure Physical Asset" as Secure
+usecase "Secure Data from Physical Asset" as SecureData
+
+' Define Scenarios as JSON artifacts
+JSON "Continuous Monitoring" as ContinuousMonitoring <<scenario>> {
+  "Given": "Asset is operational",
+  "When": "Monitoring system is activated",
+  "Then": "Continuous data stream is received"
+}
+
+JSON "Adjust Temperature" as AdjustTemperature <<scenario>> {
+  "Given": "Temperature control asset",
+  "When": "Temperature needs adjustment",
+  "Then": "Control command is sent"
+}
+
+JSON "Turn on/off Switch" as TurnOnOffSwitch <<scenario>> {
+  "Given": "Switch control asset",
+  "When": "Switch state needs changing",
+  "Then": "Control command is sent"
+}
+
+JSON "Asset-Digital Device Connectivity" as AssetDigitalDeviceConnectivity <<scenario>> {
+  "Given": "Asset with communication pathway",
+  "When": "Connected to digital device",
+  "Then": "Data exchange is established"
+}
+
+' Connect Scenarios to Use Cases with <<realizes>> stereotype
+Monitor --> ContinuousMonitoring : <<realizes>>
+Change --> AdjustTemperature : <<realizes>>
+Change --> TurnOnOffSwitch : <<realizes>>
+Connect --> AssetDigitalDeviceConnectivity : <<realizes>>
+
+@enduml

@@ -29,20 +29,16 @@ module.exports = {
 
     exits: {
         success: {},
-        json: {},
-        notFound: {
-            description: 'No item with the specified ID was found in the database.',
-        }
+        json: (obj) => { return obj; },
     },
 
     fn: function (inputs, env) {
         // inputs contains the obj for the this method.
         let name = inputs.name;
-        inputs.file = env.req.body.file;
+        // inputs.file = env.req.body.file;
         let blueprint = DataBluePrint.find(inputs.blueprint);
         if (!blueprint) {
-            env.res.end("Blueprint not found:" + inputs.blueprint);
-            return;
+            return {message: "Blueprint not found: " + inputs.blueprint};
         }
         let retval = new DataBluePrintInstance({name: name, blueprint: blueprint});
         if (inputs.hasOwnProperty('file') && inputs.file) {
@@ -62,8 +58,7 @@ module.exports = {
                         let adaptor = DataAdaptor.find(source.adaptor);
                         if (!adaptor) {
                             console.error("Could not find the Data Adaptor: " + source.adaptor);
-                            env.res.end("Could not find the Data Adaptor:" + source.adaptor);
-                            return;
+                            return {message: "Could not find the Data Adaptor:" + source.adaptor};
                         }
                         dataSource = new DataSource({adaptor: adaptor, name: i, parameters: source.parameters});
                     }
@@ -116,7 +111,6 @@ module.exports = {
             retval.addToFlows(iflow);
         }
         let jretval = retval.toJSON;
-        env.res.json(jretval);
         return jretval;
     }
 };

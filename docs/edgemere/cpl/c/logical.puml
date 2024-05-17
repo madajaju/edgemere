@@ -1,0 +1,22 @@
+@startuml
+
+
+
+package "Cyber" #lightblue {
+
+    interface "Cyber" as i {
+    
+    }
+}
+
+CLI ()-- i
+REST ()-- i
+Web ()-- i
+
+package "Cyber" #lightblue {
+    
+}
+
+
+
+@enduml

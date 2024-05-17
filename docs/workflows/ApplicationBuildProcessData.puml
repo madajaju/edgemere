@@ -1,0 +1,26 @@
+@startuml
+
+state "Init" as S1 #ffffcc
+
+state "Build Application" as S2 #88cccc
+
+state "Build Stack" as S3 #88cc88
+
+state "Build Service" as S4 #88cc88
+
+state "Store Artifact" as S5 #88cc88
+S1 --> S2
+state C2 <<choice>>
+S2 --> C2
+            C2 --> S3 : Stacks Need Build\n[true]
+C2 --> S5 : Stacks Need Build\n[false]
+state C3 <<choice>>
+S3 --> C3
+            C3 --> S4 : Services Need Build\n[true]
+C3 --> S5 : Services Need Build\n[false]
+state C4 <<choice>>
+S4 --> C4
+            C4 --> S4 : Services Need Build\n[true]
+C4 --> S5 : Services Need Build\n[false]
+
+@enduml

@@ -31,8 +31,8 @@ This represents physical hardware in a device
 
 | Name | Cardinality | Class | Composition | Owner | Description |
 | --- | --- | --- | --- | --- | --- |
-| hardware | n | Device | false | true |  |
 | hardware | n | AggregatedDevice | false | true |  |
+| hardware | n | Device | false | true |  |
 | hardware | n | AcceleratorResource | false | false |  |
 | hardware | n | ComputeResource | false | false |  |
 | hardware | n | NetworkResource | false | false |  |

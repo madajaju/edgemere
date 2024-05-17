@@ -1,13 +1,1 @@
-module.exports = {
-    name: 'Version Application Stack',
-    description: 'Version Application Stack is the description',
-    method: "data/create",
-    actors: {
-        'ApplicationDeveloper': 'uses',
-    },
-    steps: [
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-    ]
-};
-
+module.exports = {"name":"Version Application Stack","description":"Version Application Stack is the description","method":"data/create","actors":{"ApplicationDeveloper":"uses"},"steps":[{"action":"data/list","parameters":{"name":"hello","file":"./templates/world.yml"}},{"action":"data/list","parameters":{"name":"hello","file":"./templates/world.yml"}}],"uid":"ManageStacks.VersionApplicationStack","given":"Application Developer has access to the version application stack","when":"The developer issues the 'data/create' command","then":"The new version of application stack should be created"};

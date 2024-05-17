@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Manage Data Blue Prints" as ManageDataBluePrints #yellow
 
 Actor "DataEngineer" as DataEngineer
@@ -13,9 +15,13 @@ DataScientist --> ManageDataBluePrints
 
 
 
-usecase "CreateBluePrint" as CreateBluePrint #lightgrey
+json CreateBluePrint #lightyellow {
+    "Given": "Data Scientist uses datablueprint/create method",
+    "When": "Data adaptors, dataflow, datablueprint, and datasources are created",
+    "Then": "Datablueprint deploy action is used with specific parameters."
+}
 
-ManageDataBluePrints --> CreateBluePrint
+ManageDataBluePrints <|-- CreateBluePrint
 
 
 

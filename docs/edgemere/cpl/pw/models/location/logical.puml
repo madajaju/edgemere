@@ -1,0 +1,28 @@
+@startuml
+
+class "Location" as Model {
+ string name
+ number lat
+ number long
+ number alt
+ string address
+ string notes
+
+ 
+}
+
+rectangle "Asset" as Asset #lightblue {
+}
+
+Model *--> "n" Asset : assets
+
+
+
+
+    rectangle "PhysicalAsset" as PhysicalAsset #lightgreen {
+    }
+    
+        PhysicalAsset   o--> "1" Model : "location"
+    
+
+@enduml

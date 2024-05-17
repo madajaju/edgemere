@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "IT Operations"
 
 
@@ -10,9 +11,16 @@ box Cloud Broker #88cc88
 end box
 
 
+group Given [IT Operations are enabled to use Multi Cloud]
 
-"IT Operations" -> cb: Remove Cloud From Multi Cloud
+"IT Operations" --/ cb: A cloud policy needs to be removed
+"cb" -> cb: Remove Cloud From Multi Cloud
 
 
+
+"IT Operations" /-- cb: IT operations remove the policy from Multi Cloud
+
+
+end
 
 @enduml

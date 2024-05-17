@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Manage AI Models" as ManageAIModels #yellow
 
 Actor "Data Scientist" as DataScientist
@@ -21,21 +23,37 @@ DataEngineer --> ManageAIModels
 
 
 
-usecase "CreateAIModel" as CreateAIModel #lightgrey
+json CreateAIModel #lightyellow {
+    "Given": "An application developer or data scientist wants to create an AI model",
+    "When": "They use the &#39;aimodel/create&#39; method and provide &#39;name1&#39; as the name parameter",
+    "Then": "The AI model with the provided name is created successfully"
+}
 
-ManageAIModels --> CreateAIModel
+ManageAIModels <|-- CreateAIModel
 
-usecase "DeployAIModel" as DeployAIModel #lightgrey
+json DeployAIModel #lightyellow {
+    "Given": "The AI model is trained and ready to be deployed",
+    "When": "The DevOps, Application Developer or Data Engineer triggers the deployment process",
+    "Then": "The AI Model is successfully deployed and is ready to be used"
+}
 
-ManageAIModels --> DeployAIModel
+ManageAIModels <|-- DeployAIModel
 
-usecase "DestroyAIModel" as DestroyAIModel #lightgrey
+json DestroyAIModel #lightyellow {
+    "Given": "A Data Engineer or Application Developer uses an AI model",
+    "When": "They decide to destroy the AI model",
+    "Then": "The AI model is no longer available"
+}
 
-ManageAIModels --> DestroyAIModel
+ManageAIModels <|-- DestroyAIModel
 
-usecase "UpdateAIModel" as UpdateAIModel #lightgrey
+json UpdateAIModel #lightyellow {
+    "Given": "A Data Engineer, DevOps Engineer, or Application Developer uses the AI model",
+    "When": "The AI model needs an update",
+    "Then": "The AI model gets updated through the &#39;aimodel/update&#39; method"
+}
 
-ManageAIModels --> UpdateAIModel
+ManageAIModels <|-- UpdateAIModel
 
 
 

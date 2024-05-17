@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "Application Developer"
 
 actor "Data Scientist"
@@ -16,20 +17,30 @@ box Software Defined Infrastructure #cccc88
             participant storageresource
     end box
 
+group Given [An application developer or data scientist wants to create an AI model]
 
-"Application Developer" -> aml: Create AI Model
-
-    aml -> "storageresource": create (name: name1)
-
-    "storageresource" --/ EventBus: aimodel.create
-
-
-"Data Scientist" -> aml: Create AI Model
+"Application Developer" --/ aml: They use the &#39;aimodel/create&#39; method and provide &#39;name1&#39; as the name parameter
+"aml" -> aml: Create AI Model
 
     aml -> "storageresource": create (name: name1)
 
     "storageresource" --/ EventBus: aimodel.create
 
 
+"Data Scientist" --/ aml: They use the &#39;aimodel/create&#39; method and provide &#39;name1&#39; as the name parameter
+"aml" -> aml: Create AI Model
+
+    aml -> "storageresource": create (name: name1)
+
+    "storageresource" --/ EventBus: aimodel.create
+
+
+
+"Application Developer" /-- aml: The AI model with the provided name is created successfully
+
+"Data Scientist" /-- aml: The AI model with the provided name is created successfully
+
+
+end
 
 @enduml

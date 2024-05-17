@@ -1,6 +1,8 @@
 @startuml
 
 
+left to right direction
+
 usecase "Apply Security Profiles" as ApplySecurityProfiles #yellow
 
 Actor "Security Operator" as SecurityOperator
@@ -9,13 +11,21 @@ SecurityOperator --> ApplySecurityProfiles
 
 
 
-usecase "AttachProfile" as AttachProfile #lightgrey
+json AttachProfile #lightyellow {
+    "Given": "Security engineer created security profile and identity",
+    "When": "Security profile is deployed and attached to the identity",
+    "Then": "Security profile is successfully attached to the identity"
+}
 
-ApplySecurityProfiles --> AttachProfile
+ApplySecurityProfiles <|-- AttachProfile
 
-usecase "DeploySecurityProfile" as DeploySecurityProfile #lightgrey
+json DeploySecurityProfile #lightyellow {
+    "Given": "A security profile has been created",
+    "When": "The Security Engineer deploys the security profile",
+    "Then": "The system&#39;s identity has the new security profile applied"
+}
 
-ApplySecurityProfiles --> DeploySecurityProfile
+ApplySecurityProfiles <|-- DeploySecurityProfile
 
 
 

@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "DevOps Engineer"
 
 
@@ -10,9 +11,16 @@ box Service Orchestrator #88cc88
 end box
 
 
+group Given [A DevOps Engineer has a running stack with services]
 
-"DevOps Engineer" -> so: Uninstall Stack
+"DevOps Engineer" --/ so: The Engineer decides to shut down the stack
+"so" -> so: Uninstall Stack
 
 
+
+"DevOps Engineer" /-- so: The stack and all of its services are uninstalled
+
+
+end
 
 @enduml

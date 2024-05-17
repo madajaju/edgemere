@@ -39,6 +39,11 @@ Apply Security Profiles is the description
 Attach Profile is the description
 
 ![Scenario AttachProfile](./AttachProfile.png)
+#### Criteria
+
+* Given - Security engineer created security profile and identity
+* When - Security profile is deployed and attached to the identity
+* Then - Security engineer created security profile and identity
 
 #### Steps
 1. [securityprofile create --name secProfile1 --file ./templates/secprofile.yml](#action-securityprofile-create)
@@ -57,6 +62,11 @@ Attach Profile is the description
 Deploy a Security Profile against an identity in the system.
 
 ![Scenario DeploySecurityProfile](./DeploySecurityProfile.png)
+#### Criteria
+
+* Given - A security profile has been created
+* When - The Security Engineer deploys the security profile
+* Then - A security profile has been created
 
 #### Steps
 1. [securityprofile create --name secProfile1 --file ./templates/secprofile.yml](#action-securityprofile-create)

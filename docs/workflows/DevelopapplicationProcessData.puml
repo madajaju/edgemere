@@ -1,0 +1,23 @@
+@startuml
+
+state "Init" as S1 #ffffcc
+
+state "Create Application" as S2 #88cccc
+
+state "Write Code" as S3 #ffffcc
+
+state "Check In Code" as S4 #88cccc
+
+state "Application Build Process" as S5 #dddddd
+
+state "Deploy Application" as S6 #88cccc
+S1 --> S2
+S2 --> S3
+S3 --> S4
+S4 --> S5
+state C5 <<choice>>
+S5 --> C5
+            C5 --> S6 : Build Test Pass\n[true]
+C5 --> S3 : Build Test Pass\n[false]
+
+@enduml

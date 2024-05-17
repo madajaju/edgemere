@@ -1,0 +1,149 @@
+@startuml
+
+left to right direction
+
+node "aml" as amlStack #88cccc {
+    portin " " as amlStackin #blue
+    hexagon amlStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+rectangle "cpl" as cplStack #cccccc {
+    hexagon cplStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+rectangle "diml" as dimlStack #ffcc88 {
+    hexagon dimlStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+rectangle "ia" as iaStack #cc8888 {
+    hexagon iaStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+rectangle "sa" as saStack #cc8888 {
+    hexagon saStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+rectangle "sml" as smlStack #88cc88 {
+portin " " as smlStackPortin #blue
+    hexagon smlStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+rectangle "sdi" as sdiStack #cccc88 {
+    portin " " as sdiStackparent #blue
+    hexagon sdiStacksnet #blue [
+        <b><color:white>parent</color></b>
+    ]
+}
+
+
+
+node "edgemere" #ccaaff {
+    portin "parent" as edgemereparent #black
+    hexagon parentnet #black [
+            <b><color:white>parent</color></b>
+    ]
+    edgemereparent -[#black]- parentnet
+
+    hexagon childrennet #blue [
+            <b><color:white>children</color></b>
+    ]
+
+        hexagon siblingsnet #red [
+                <b><color:white>siblings</color></b>
+        ]
+
+
+    node "aml" as amlService #white {
+        portin " " as amlServicechildrennet #blue
+        portout " " as amlServiceout #blue
+        collections "aml" as amlimage
+    }
+    node "cpl" as cplService #white {
+        portin " " as cplServicechildrennet #blue
+    }
+    node "diml" as dimlService #white {
+        portin " " as dimlServicechildrennet #blue
+    }
+    node "ia" as iaService #white {
+        portin " " as iaServicechildrennet #blue
+   }
+    node "sa" as saService #white {
+        portin " " as saServicechildrennet #blue
+    }
+    node "sml" as smlService #white {
+        portin "3000" as smlServicechildrennet #blue
+        portout " " as smlServiceOut #blue
+        collections "sml" as smlimage
+    }
+    node "sdi" as sdiService #white {
+        portin " " as sdiServicechildrennet #blue
+    }
+    node "web" as webService #white {
+        portin " " as webServicechildrennet #blue
+        portin "3000" as webServicesiblingnet #red
+        artifact "edgemere_web" as edgemere_webimage
+    }
+    node "doc" as docService #white {
+        portin "8088" as docServicesiblingnet #red
+        artifact "edgemere_doc" as edgemere_docimage
+    }
+
+                collections "cpl" as cplimage
+                collections "diml" as dimlimage
+                collections "ia" as iaimage
+                collections "sa" as saimage
+                collections "sdi" as sdiimage
+
+
+
+    }
+
+childrennet -[#blue]- amlServicechildrennet
+
+childrennet -[#blue]- cplServicechildrennet
+
+childrennet -[#blue]- dimlServicechildrennet
+
+childrennet -[#blue]- iaServicechildrennet
+
+childrennet -[#blue]- saServicechildrennet
+
+childrennet -[#blue]- smlServicechildrennet
+
+childrennet -[#blue]- sdiServicechildrennet
+
+childrennet -[#blue]- webServicechildrennet
+
+siblingsnet -[#red]- webServicesiblingnet
+
+siblingsnet -[#red]- docServicesiblingnet
+cplService .... cplimage
+dimlService .... dimlimage
+iaService .... iaimage
+saService .... saimage
+sdiService .... sdiimage
+
+
+cplimage --> cplStack
+
+dimlimage --> dimlStack
+
+iaimage --> iaStack
+
+saimage --> saStack
+
+smlServiceOut -[#blue]- smlStackPortin
+
+sdiimage --> sdiStack
+
+amlServiceout -[#blue]- amlStackin
+
+edgemere -up[hidden]- amlStack
+
+@enduml

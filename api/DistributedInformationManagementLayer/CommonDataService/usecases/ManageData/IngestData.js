@@ -1,9 +1,1 @@
-module.exports = {
-    name: 'Ingest Data',
-    description: 'Ingest Data is the description',
-    method: "data/source/name",
-    actors: {
-        'Data Steward': 'uses',
-    },
-};
-
+module.exports = {"name":"Ingest Data","description":"Ingest Data is the description","method":"data/source/name","actors":{"Data Steward":"uses"},"uid":"ManageData.IngestData","given":"A data steward uses data source","when":"Data is ingested from named source","then":"Data should be managed in the ingest process"};

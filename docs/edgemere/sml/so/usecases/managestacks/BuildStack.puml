@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "DevOpsEngineer"
 
 
@@ -14,17 +15,24 @@ box Software Defined Infrastructure #cccc88
             participant storageresource
     end box
 
+group Given [A DevOps Engineer has access to data/create]
 
-"DevOpsEngineer" -> so: Build Stack
-
-    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
-
-    "storageresource" --/ EventBus: data.list
+"DevOpsEngineer" --/ so: 
+"so" -> so: Build Stack
 
     so -> "storageresource": list (name: hello,file: ./templates/world.yml)
 
     "storageresource" --/ EventBus: data.list
 
+    so -> "storageresource": list (name: hello,file: ./templates/world.yml)
 
+    "storageresource" --/ EventBus: data.list
+
+
+
+"DevOpsEngineer" /-- so: A stack is built using the provided file
+
+
+end
 
 @enduml

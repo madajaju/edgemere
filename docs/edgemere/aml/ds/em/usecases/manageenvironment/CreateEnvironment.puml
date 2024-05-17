@@ -1,5 +1,6 @@
 @startuml
 
+
 actor "IT Operations"
 
 
@@ -10,9 +11,16 @@ box Environment Management #88cc88
 end box
 
 
+group Given [IT Operations has access to create an environment]
 
-"IT Operations" -> em: Create Environment
+"IT Operations" --/ em: IT Operations creates an environment and assigns a Multi Cloud 
+"em" -> em: Create Environment
 
 
+
+"IT Operations" /-- em: The environment should be successfully created with the assigned Multi Cloud
+
+
+end
 
 @enduml

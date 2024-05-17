@@ -2,11 +2,11 @@
   interface CLI
   interface Web
   interface WebSocket
-package "Ingress Services" #lightblue {
+node "Ingress Services" #lightblue {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {
-    component " edgemere diml cds ingress" as binName
+    card " edgemere diml cds ingress" as binName
   }
   binName --> REST
 
@@ -14,11 +14,11 @@ package "Ingress Services" #lightblue {
       file "node server.js\ndocker-compose.yml" as ingress_container
       REST --> ingress_container
 
-  
+
     file "web" as web_container
     REST --> web_container
     socket ---> web_container
-  
+
   }
   folder images #ffffff {
     collections "ingress" as ingressimage
@@ -26,10 +26,10 @@ package "Ingress Services" #lightblue {
     ingressimage <|-- ailtireswarm
     ingress_container --> ingressimage
 
-  
+
       artifact "diml_cds_ingress_web" as diml_cds_ingress_web
       web_container --> diml_cds_ingress_web
-    
+
   }
 }
 CLI " edgemere diml cds ingress" -- binName
