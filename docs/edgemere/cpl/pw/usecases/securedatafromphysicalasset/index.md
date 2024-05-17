@@ -7,7 +7,7 @@ parent: UseCases
 
 Secure Data from Physical Asset is the description
 
-![Activities Diagram](./Activities.png)
+![Activities Diagram](./activities.png)
 
 ## Actors
 

@@ -7,7 +7,7 @@ parent: UseCases
 
 Govern Identities is the description
 
-![Activities Diagram](./Activities.png)
+![Activities Diagram](./activities.png)
 
 ## Actors
 

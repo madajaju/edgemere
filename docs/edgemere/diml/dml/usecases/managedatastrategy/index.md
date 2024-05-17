@@ -7,7 +7,7 @@ parent: UseCases
 
 Manage Data Strategy is the description
 
-![Activities Diagram](./Activities.png)
+![Activities Diagram](./activities.png)
 
 ## Actors
 

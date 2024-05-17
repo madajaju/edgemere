@@ -7,7 +7,7 @@ parent: UseCases
 
 Replace Physical Asset is the description
 
-![Activities Diagram](./Activities.png)
+![Activities Diagram](./activities.png)
 
 ## Actors
 

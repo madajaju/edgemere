@@ -7,7 +7,7 @@ parent: UseCases
 
 Connect Physical Asset to a Device is the description
 
-![Activities Diagram](./Activities.png)
+![Activities Diagram](./activities.png)
 
 ## Actors
 

@@ -7,7 +7,7 @@ parent: UseCases
 
 Manage Data Sources allows the Data Engineer to register data sources to the system.
 
-![Activities Diagram](./Activities.png)
+![Activities Diagram](./activities.png)
 
 ## Actors
 

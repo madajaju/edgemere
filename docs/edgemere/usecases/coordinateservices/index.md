@@ -7,7 +7,7 @@ parent: UseCases
 
 Coordinate Services is the description
 
-![Activities Diagram](./Activities.png)
+![Activities Diagram](./activities.png)
 
 ## Actors
 

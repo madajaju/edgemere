@@ -7,7 +7,7 @@ parent: UseCases
 
 Manage Resources includes creating resources, listing and planning for resources.
 
-![Activities Diagram](./Activities.png)
+![Activities Diagram](./activities.png)
 
 ## Actors
 

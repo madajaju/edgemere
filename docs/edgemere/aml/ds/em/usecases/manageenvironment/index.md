@@ -7,7 +7,7 @@ parent: UseCases
 
 Manage Environment allows the actors (IT Operations and Stack Developer) to create environments, and establish policies for services running in the environment.
 
-![Activities Diagram](./Activities.png)
+![Activities Diagram](./activities.png)
 
 ## Actors
 

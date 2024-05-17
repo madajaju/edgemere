@@ -7,7 +7,7 @@ parent: UseCases
 
 Manage Stacks allows the stack developer to create, update, and delete stacks.
 
-![Activities Diagram](./Activities.png)
+![Activities Diagram](./activities.png)
 
 ## Actors
 

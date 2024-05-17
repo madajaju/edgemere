@@ -7,7 +7,7 @@ parent: UseCases
 
 Manage Meta Data is the description
 
-![Activities Diagram](./Activities.png)
+![Activities Diagram](./activities.png)
 
 ## Actors
 

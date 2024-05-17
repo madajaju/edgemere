@@ -7,7 +7,7 @@ parent: UseCases
 
 Apply Security Profiles is the description
 
-![Activities Diagram](./Activities.png)
+![Activities Diagram](./activities.png)
 
 ## Actors
 
