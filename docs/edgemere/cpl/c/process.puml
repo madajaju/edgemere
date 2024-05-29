@@ -3,12 +3,12 @@ left to right direction
 
 
 state "cpl" as cpl #cccccc {
-state "c" as cplc #lightblue {
+state "c" as cplc #aaffff {
 }
 }
 
 
-state "cplc" as pstatename #lightblue {
+state "cplc" as pstatename #aaffff {
     state "Custom Function" as cfunction {
     }
 }

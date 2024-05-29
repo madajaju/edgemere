@@ -38,44 +38,9 @@ async function fixScenarios(config) {
         for (let sname in scenarios) {
             let scenario = scenarios[sname];
             console.log("Working on Scenario:", scenario.name);
-            let json = JSON.stringify(scenario);
             if (!scenario.given) {
-                // Generate Given, When, Then
-                let response = await _askAI(json);
-                console.log("AI Response:", response);
-                let resObj = JSON.parse(response);
-                if(typeof resObj === 'Array') {
-                    resObj = resObj[0];
-                }
-                scenario.given = resObj.given;
-                scenario.when = resObj.when;
-                scenario.then = resObj.then;
-                // Update the scenario
-                AScenario.save(usecase,scenario);
+                AScenario.generateGivenWhenThen(usecase,scenario);
             }
         }
     }
-}
-
-async function _askAI(prompt) {
-    AEvent.emit('genai.started', {message: prompt});
-    const completion = await global.openai.chat.completions.create({
-        model: "gpt-4",
-        messages: [
-            {
-                role: 'system',
-                content: 'Using the Given,When,Then scenario paradigm createa given, when, then statement for the' +
-                    ' following scenario description. Limit each given,when and then statement to less than 80' +
-                    ' characters. There should be one response. The results should be in json format, with the' +
-                    ' given, when and then at the top level of the json. json keys should be in all lowercase.'
-            },
-            {
-                role: 'user',
-                content: prompt,
-                name: 'guth',
-            }
-        ]
-    });
-    AEvent.emit('genai.completed', {message: prompt});
-    return completion.choices[0].message.content;
 }

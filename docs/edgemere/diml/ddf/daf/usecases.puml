@@ -3,7 +3,7 @@
 left to right direction
 
 
-rectangle "Data Adaptor Framework" #lightblue {
+rectangle "Data Adaptor Framework" ##aaffff {
 }
 
 

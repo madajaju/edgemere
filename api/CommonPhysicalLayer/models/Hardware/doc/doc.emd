@@ -1,0 +1,13 @@
+# Hardware Class Overview
+
+The `Hardware` class is a fundamental part of the Common Physical Layer (CPL), providing the necessary abstractions for management across diverse hardware configurations in a device ecosystem. These devices may range from those inside a data center to those in the cloud or edge devices.
+
+The `Hardware` class notably represents physical hardware present in a device, with the ability to create and manipulate the hardware using methods such as `create`, `destroy`, `update`, `addTo`, `removeFrom`, `addStats`, `disable`, `enable`, and `factory`. 
+
+The purpose of the `Hardware` class is to provide a way to manage highly variable hardware configurations by incorporating attributes such as the name and extended name of the hardware. As physical hardware differs significantly across devices, this class offers a standard approach to manage different capabilities and uniquely classify them based on their properties.
+
+Associations of the `Hardware` class include a profile indicating the physical capabilities of the hardware, the devices that use them, and the resources that it contains. These associations directly influence the control and telemetry of the device to the [software-defined infrastructure layer - SDI](package--edgemere-sdi), thus enabling applications and services to be deployed to the device and its hardware.
+
+The `Hardware` class, due to its lowermost positioning in the architectural stack, largely integrates with the [Security](package--edgemere-sa) and [Identifying](package--edgemere-ia) aspects to establish hardware's root of trust, identity, and data encryption at the lowest levels. The `Hardware` class also interacts with the [Device](class-device) class as each device comprises several hardware elements which are controlled and maintained via this class.
+
+By storing, managing, and providing the means to interact with these elements, the `Hardware` class enhances overall efficiency and manages apps or services across traditional boundaries. It is a critical constituent of the CPL, enabling IT operations engineers to manage the complex array of IoT devices within the cloud and the data center.

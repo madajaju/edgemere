@@ -70,6 +70,24 @@ state "list" as dimldmldatastrategylist #ffcc88 {
 
     state "diml" as diml #ffcc88 {
 state "dml" as dimldml #ffcc88 {
+state "Data" as dimldmldata #ffcc88 {
+state "create" as dimldmldatacreate #ffcc88 {
+}
+}
+}
+}
+
+    state "cpl" as cpl #cccccc {
+state "pw" as cplpw #aaffff {
+state "Function" as cplpwfunction #aaffff {
+}
+}
+}
+
+        dimldmldatacreate ---> cplpwfunction
+       
+    state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
 state "DataReference" as dimldmldatareference #ffcc88 {
 state "provisioning" as dimldmldatareferenceprovisioning #ffcc88 {
 }
@@ -79,9 +97,9 @@ state "provisioning" as dimldmldatareferenceprovisioning #ffcc88 {
 
     state "diml" as diml #ffcc88 {
 state "dml" as dimldml #ffcc88 {
-state "do" as dimldmldo #lightblue {
-state "datainstance" as dimldmldodatainstance #lightblue {
-state "create" as dimldmldodatainstancecreate #lightblue {
+state "do" as dimldmldo ##aaffff {
+state "datainstance" as dimldmldodatainstance ##aaffff {
+state "create" as dimldmldodatainstancecreate ##aaffff {
 }
 }
 }

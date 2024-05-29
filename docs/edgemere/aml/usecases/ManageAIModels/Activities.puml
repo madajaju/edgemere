@@ -26,7 +26,7 @@ DataEngineer --> ManageAIModels
 json CreateAIModel #lightyellow {
     "Given": "An application developer or data scientist wants to create an AI model",
     "When": "They use the &#39;aimodel/create&#39; method and provide &#39;name1&#39; as the name parameter",
-    "Then": "The AI model with the provided name is created successfully"
+    "Then": "The AI model with the provided name is scanned for malware and viruses, validated for correctness with a pass rate specified in the SLA of the model, digitally signed and then created successfully."
 }
 
 ManageAIModels <|-- CreateAIModel

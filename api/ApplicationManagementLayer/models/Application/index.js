@@ -1,53 +1,176 @@
+
 class Application {
     static definition = {
         name: 'Application',
-        description: 'Application contains several SABRs stitched together to create capabilities',
+        description: 'The "Application" class, part of the "aml" package, represents an application that contains multiple SABRs, essentially creating capabilities, and provides methods for creation, destruction, updating, adding to, and removing from; it also contains attributes for name, version, and function bundle instance, and associations with workloads, stacks, data references, and application instances.',
         unique: (obj) => {
             return obj.name;
         },
+        extends: false,
+        
         attributes: {
-            name: {
-                type: 'string',
-                description: 'Name of the Application'
+    "name": {
+        "type": "string",
+        "description": "Unique identifier for the application"
+    },
+    "version": {
+        "type": "string",
+        "description": "Specific version of the application"
+    },
+    "fn": {
+        "type": "ref",
+        "description": "Function for bundle instance run"
+    }
+},
+        
+        associations: {
+    "workloads": {
+        "type": "Workload",
+        "cardinality": "n",
+        "composition": false,
+        "owner": false,
+        "via": "app",
+        "name": "workloads"
+    },
+    "stacks": {
+        "type": "Stack",
+        "cardinality": "n",
+        "composition": true,
+        "owner": true,
+        "via": "app",
+        "name": "stacks"
+    },
+    "data": {
+        "type": "DataReference",
+        "cardinality": "n",
+        "composition": false,
+        "owner": false,
+        "name": "data"
+    },
+    "instances": {
+        "type": "ApplicationInstance",
+        "cardinality": "n",
+        "composition": true,
+        "owner": true,
+        "via": "app",
+        "name": "instances"
+    }
+},
+        
+        statenet: {
+    "Init": {
+        "description": "Initial state of the application",
+        "events": {
+            "create": {
+                "Created": {}
+            }
+        }
+    },
+    "Created": {
+        "description": "State after application is created",
+        "events": {
+            "addTo": {
+                "AddedTo": {
+                    "condition": {
+                        "description": "Check space",
+                        "action": "hasSpaceToAdd"
+                    },
+                    "action": {
+                        "description": "Add item",
+                        "action": "addToItem"
+                    }
+                }
             },
-            version: {
-                type: 'string',
-                description: 'Version of the Application'
+            "update": {
+                "Updated": {
+                    "condition": {
+                        "description": "Need to update",
+                        "action": "needsUpdate",
+                        "fn": "function(obj) { return obj.needsUpdate(); }"
+                    },
+                    "action": {
+                        "description": "Update app.",
+                        "action": "updateItem",
+                        "fn": "function(obj) { obj.updateItem(); }"
+                    }
+                }
             },
-            fn: {
-                type: 'ref',
-                description: 'Function to call with the bundle instance when the bundle instance is run.',
+            "removeFrom": {
+                "RemovedFrom": {
+                    "condition": {
+                        "description": "Item to remove",
+                        "action": "hasItemToRemove",
+                        "fn": "function(obj) { return obj.hasItemToRemove(); }"
+                    },
+                    "action": {
+                        "description": "Remove item",
+                        "action": "removeItem",
+                        "fn": "function(obj) { obj.removeItem(); }"
+                    }
+                }
+            },
+            "destroy": {
+                "Destroyed": {
+                    "condition": {
+                        "description": "Can destroy",
+                        "action": "canBeDestroyed",
+                        "fn": "function(obj) { return obj.canBeDestroyed(); }"
+                    },
+                    "action": {
+                        "description": "Destroy app.",
+                        "action": "destroyApplication",
+                        "fn": "function(obj) { obj.destroyApplication(); }"
+                    }
+                }
             }
         },
-        associations: {
-            workloads: {
-                type: 'Workload',
-                cardinality: 'n',
-                composition: false,
-                owner: false,
-                via: 'app'
+        "actions": {
+            "entry": {
+                "entry1": {
+                    "description": "Initialize item",
+                    "action": "initializeItem",
+                    "fn": "function(obj) { obj.initializeItem(); }"
+                }
             },
-            stacks: {
-                type: 'Stack',
-                cardinality: 'n',
-                composition: true,
-                owner: true,
-                via: 'app'
-            },
-            data: {
-                type: 'DataReference',
-                cardinality: 'n',
-                composition: false,
-                owner: false,
-            },
-            instances: {
-                type: 'ApplicationInstance',
-                cardinality: 'n',
-                composition: true,
-                owner: true,
-                via: 'app'
-            },
-        },
+            "exit": {
+                "exit1": {
+                    "description": "Delete item",
+                    "action": "deleteItem",
+                    "fn": "function(obj) { obj.deleteItem(); }"
+                }
+            }
+        }
+    },
+    "AddedTo": {
+        "description": "State after something is added to the application",
+        "events": {
+            "missingMethod1": {
+                "MissingState": {}
+            }
+        }
+    },
+    "Updated": {
+        "description": "State after the application is updated",
+        "events": {
+            "missingMethod2": {
+                "MissingState": {}
+            }
+        }
+    },
+    "RemovedFrom": {
+        "description": "State after something is removed from the application",
+        "events": {
+            "missingMethod3": {
+                "MissingState": {}
+            }
+        }
+    },
+    "Destroyed": {
+        "description": "State after application is destroyed",
+        "events": {}
+    }
+},
+        
         view: {
             color: "#00aaff",
             object2d: (options) => {
@@ -73,10 +196,8 @@ class Application {
                         `</a-entity>`;
                 }
                 return retval;
-            }
+            },
         }
     }
 }
-
 module.exports = Application;
-

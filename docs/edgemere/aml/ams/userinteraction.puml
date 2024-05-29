@@ -1,6 +1,31 @@
 @startuml
 
-rectangle "TBD"
+
+actor "DataScientist" as datascientist
+
+
+
+
+datascientist -> "AI ML Services": addTo AIModel
+"AI ML Services" -> bin: undefined
+bin -> REST: undefined
+
+datascientist -> "AI ML Services": create AIModel
+"AI ML Services" -> bin: undefined
+bin -> REST: undefined
+
+datascientist -> "AI ML Services": destroy AIModel
+"AI ML Services" -> bin: undefined
+bin -> REST: undefined
+
+datascientist -> "AI ML Services": removeFrom AIModel
+"AI ML Services" -> bin: undefined
+bin -> REST: undefined
+
+datascientist -> "AI ML Services": update AIModel
+"AI ML Services" -> bin: undefined
+bin -> REST: undefined
+
 
 
 @enduml

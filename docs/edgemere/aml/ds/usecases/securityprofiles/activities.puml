@@ -1,0 +1,26 @@
+@startuml
+
+
+left to right direction
+
+usecase "Security Profiles" as SecurityProfiles #yellow
+
+Actor "System Administrator" as SystemAdministrator
+
+SystemAdministrator --> SecurityProfiles
+
+
+
+
+
+
+
+
+
+
+
+usecase "EnvironmentDeployments" as EnvironmentDeployments #white
+
+SecurityProfiles <.. EnvironmentDeployments : includes
+
+@enduml

@@ -1,10 +1,25 @@
 @startuml
 
 left to right direction
+Actor "Data Scientist" as DataScientist
+Actor "Data Scientist" as DataScientist
+Actor "Data Scientist" as DataScientist
+Actor "Data Scientist" as DataScientist
+Actor "Data Scientist" as DataScientist
 
 
 rectangle "AI ML Services" #88cccc {
-}
+usecase "addToAIModel" as addToAIModel
+    DataScientist --> addToAIModel
+    usecase "createAIModel" as createAIModel
+    DataScientist --> createAIModel
+    usecase "destroyAIModel" as destroyAIModel
+    DataScientist --> destroyAIModel
+    usecase "removeFromAIModel" as removeFromAIModel
+    DataScientist --> removeFromAIModel
+    usecase "updateAIModel" as updateAIModel
+    DataScientist --> updateAIModel
+    }
 
 
 @enduml

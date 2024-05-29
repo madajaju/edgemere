@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+<a-scene>
+    <!-- Step 1 -->
+    <a-box position="2 3 -10" width="2" rotation="0 0 0" color="#EE3E6D"></a-box>
+
+    <a-box position="2 -3 -10"  width="2" material="color:#FDA345"></a-box>
+
+    <!-- Action 1 - using octahedron -->
+    <a-entity position="2 0 -10" geometry="primitive: octahedron" material="color:#35CE8D"></a-entity>
+
+    <!-- Step 3 -->
+    <a-box position="-2 0 -10" width="2" rotation="0 0 0" color="#1D8EF2"></a-box>
+
+    <!-- Arrow from Step 1 to Decision -->
+    <a-cylinder position="0.5 0 -10" rotation="0 0 90" radius="0.1" height="2.5" color="#333"></a-cylinder>
+    <a-cone position="-0.85 0 -10" rotation="0 0 90" radius-top="0.0" radius-bottom="0.2" height="0.3"
+            color="#333"></a-cone>
+
+    <!-- Arrow from Decision to Action 1 -->
+    <a-cylinder position="2 2 -10" rotation="0 0 0" radius="0.1" height="1.90" color="#333"></a-cylinder>
+    <a-cone position="2 1.05 -10" rotation="0 0 -180" radius-top="0.0" radius-bottom="0.2" height="0.3" color="#333"></a-cone>
+
+    <a-cylinder position="2 -1.5 -10" rotation="0 0 0" radius="0.1" height="1.5" color="#333"></a-cylinder>
+    <a-cone position="2 -2.35 -10" rotation="0 0 -180" radius-top="0.0" radius-bottom="0.2" height="0.3"
+            color="#333"></a-cone>
+</a-scene>
+</body>
+</html>

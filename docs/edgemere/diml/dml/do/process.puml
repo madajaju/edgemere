@@ -4,21 +4,21 @@ left to right direction
 
 state "diml" as diml #ffcc88 {
 state "dml" as dimldml #ffcc88 {
-state "do" as dimldmldo #lightblue {
+state "do" as dimldmldo ##aaffff {
 }
 }
 }
 
 
-state "dimldmldo" as pstatename #lightblue {
+state "dimldmldo" as pstatename ##aaffff {
     state "Custom Function" as dofunction {
     }
 }
 
         state "diml" as diml #ffcc88 {
 state "dml" as dimldml #ffcc88 {
-state "do" as dimldmldo #lightblue {
-state "evaluate" as dimldmldoevaluate #lightblue {
+state "do" as dimldmldo ##aaffff {
+state "evaluate" as dimldmldoevaluate ##aaffff {
 }
 }
 }
@@ -27,8 +27,8 @@ state "evaluate" as dimldmldoevaluate #lightblue {
 
         state "diml" as diml #ffcc88 {
 state "dml" as dimldml #ffcc88 {
-state "do" as dimldmldo #lightblue {
-state "reserve" as dimldmldoreserve #lightblue {
+state "do" as dimldmldo ##aaffff {
+state "reserve" as dimldmldoreserve ##aaffff {
 }
 }
 }
@@ -37,21 +37,9 @@ state "reserve" as dimldmldoreserve #lightblue {
 
         state "diml" as diml #ffcc88 {
 state "dml" as dimldml #ffcc88 {
-state "do" as dimldmldo #lightblue {
-state "datainstance" as dimldmldodatainstance #lightblue {
-state "create" as dimldmldodatainstancecreate #lightblue {
-}
-}
-}
-}
-}
-
-
-        state "diml" as diml #ffcc88 {
-state "dml" as dimldml #ffcc88 {
-state "do" as dimldmldo #lightblue {
-state "datainstance" as dimldmldodatainstance #lightblue {
-state "destroy" as dimldmldodatainstancedestroy #lightblue {
+state "do" as dimldmldo ##aaffff {
+state "datainstance" as dimldmldodatainstance ##aaffff {
+state "create" as dimldmldodatainstancecreate ##aaffff {
 }
 }
 }
@@ -61,9 +49,9 @@ state "destroy" as dimldmldodatainstancedestroy #lightblue {
 
         state "diml" as diml #ffcc88 {
 state "dml" as dimldml #ffcc88 {
-state "do" as dimldmldo #lightblue {
-state "datainstance" as dimldmldodatainstance #lightblue {
-state "find" as dimldmldodatainstancefind #lightblue {
+state "do" as dimldmldo ##aaffff {
+state "datainstance" as dimldmldodatainstance ##aaffff {
+state "destroy" as dimldmldodatainstancedestroy ##aaffff {
 }
 }
 }
@@ -73,9 +61,21 @@ state "find" as dimldmldodatainstancefind #lightblue {
 
         state "diml" as diml #ffcc88 {
 state "dml" as dimldml #ffcc88 {
-state "do" as dimldmldo #lightblue {
-state "datainstance" as dimldmldodatainstance #lightblue {
-state "list" as dimldmldodatainstancelist #lightblue {
+state "do" as dimldmldo ##aaffff {
+state "datainstance" as dimldmldodatainstance ##aaffff {
+state "find" as dimldmldodatainstancefind ##aaffff {
+}
+}
+}
+}
+}
+
+
+        state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "do" as dimldmldo ##aaffff {
+state "datainstance" as dimldmldodatainstance ##aaffff {
+state "list" as dimldmldodatainstancelist ##aaffff {
 }
 }
 }
@@ -97,9 +97,9 @@ state "provisioning" as dimldmldatareferenceprovisioning #ffcc88 {
         
     state "diml" as diml #ffcc88 {
 state "dml" as dimldml #ffcc88 {
-state "do" as dimldmldo #lightblue {
-state "datainstance" as dimldmldodatainstance #lightblue {
-state "create" as dimldmldodatainstancecreate #lightblue {
+state "do" as dimldmldo ##aaffff {
+state "datainstance" as dimldmldodatainstance ##aaffff {
+state "create" as dimldmldodatainstancecreate ##aaffff {
 }
 }
 }
@@ -111,9 +111,9 @@ state "create" as dimldmldodatainstancecreate #lightblue {
 
         state "diml" as diml #ffcc88 {
 state "dml" as dimldml #ffcc88 {
-state "do" as dimldmldo #lightblue {
-state "DataRequest" as dimldmldodatarequest #lightblue {
-state "needed" as dimldmldodatarequestneeded #lightblue {
+state "do" as dimldmldo ##aaffff {
+state "DataRequest" as dimldmldodatarequest ##aaffff {
+state "needed" as dimldmldodatarequestneeded ##aaffff {
 }
 }
 }
@@ -123,8 +123,8 @@ state "needed" as dimldmldodatarequestneeded #lightblue {
         
     state "diml" as diml #ffcc88 {
 state "dml" as dimldml #ffcc88 {
-state "do" as dimldmldo #lightblue {
-state "reserve" as dimldmldoreserve #lightblue {
+state "do" as dimldmldo ##aaffff {
+state "reserve" as dimldmldoreserve ##aaffff {
 }
 }
 }
@@ -135,9 +135,9 @@ state "reserve" as dimldmldoreserve #lightblue {
 
         state "diml" as diml #ffcc88 {
 state "dml" as dimldml #ffcc88 {
-state "do" as dimldmldo #lightblue {
-state "DataRequest" as dimldmldodatarequest #lightblue {
-state "selected" as dimldmldodatarequestselected #lightblue {
+state "do" as dimldmldo ##aaffff {
+state "DataRequest" as dimldmldodatarequest ##aaffff {
+state "selected" as dimldmldodatarequestselected ##aaffff {
 }
 }
 }
@@ -147,8 +147,8 @@ state "selected" as dimldmldodatarequestselected #lightblue {
         
     state "diml" as diml #ffcc88 {
 state "dml" as dimldml #ffcc88 {
-state "do" as dimldmldo #lightblue {
-state "evaluate" as dimldmldoevaluate #lightblue {
+state "do" as dimldmldo ##aaffff {
+state "evaluate" as dimldmldoevaluate ##aaffff {
 }
 }
 }

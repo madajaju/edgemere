@@ -94,42 +94,55 @@ edgemereamldsemenvironment -- edgemereamldsemenvironmentupdate
 
     
 
+
+
+
+
+
         rectangle "Manage Environment" as ManageEnvironment #ffffaa {
             ("Create Environment")/ as ITOperationsManageEnvironmentCreateEnvironment
         }
     
     edgemereamldsemenvironmentcreate <-- ITOperationsManageEnvironmentCreateEnvironment
+    edgemereamldsemenvironmentcreate <-- ITOperationsManageEnvironmentCreateEnvironment
+        edgemereamldsemenvironmentaddpolicies <-- ITOperationsManageEnvironmentCreateEnvironment
+        edgemereamldsemenvironmentenable <-- ITOperationsManageEnvironmentCreateEnvironment
+        edgemereamldsemenvironmentlist <-- ITOperationsManageEnvironmentCreateEnvironment
     
         rectangle "Manage Environment" as ManageEnvironment #ffffaa {
             ("Delete Environment")/ as ITOperationsManageEnvironmentDeleteEnvironment
         }
     
     edgemereamldsemenvironmentdestroy <-- ITOperationsManageEnvironmentDeleteEnvironment
-    
+
         rectangle "Manage Environment" as ManageEnvironment #ffffaa {
             ("Disable Environment")/ as ITOperationsManageEnvironmentDisableEnvironment
         }
     
     edgemereamldsemenvironmentdisable <-- ITOperationsManageEnvironmentDisableEnvironment
-    
+
         rectangle "Manage Environment" as ManageEnvironment #ffffaa {
             ("Enable Environment")/ as ITOperationsManageEnvironmentEnableEnvironment
         }
     
     edgemereamldsemenvironmentenable <-- ITOperationsManageEnvironmentEnableEnvironment
-    
+
         rectangle "Manage Environment" as ManageEnvironment #ffffaa {
             ("Manage Policies in Environment")/ as ITOperationsManageEnvironmentManagePoliciesinEnvironment
         }
     
     edgemereamldsemenvironmentaddpolicies <-- ITOperationsManageEnvironmentManagePoliciesinEnvironment
-    
+
         rectangle "Manage Environment" as ManageEnvironment #ffffaa {
             ("Update Environment")/ as ITOperationsManageEnvironmentUpdateEnvironment
         }
     
     edgemereamldsemenvironmentupdate <-- ITOperationsManageEnvironmentUpdateEnvironment
-    
+
+
+
+
+
 
 
 

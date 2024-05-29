@@ -27,7 +27,7 @@ edgemeredimldmldo -- edgemeredimldmldoreserve
     package "edgemere" as edgemere {
 package "diml" as edgemerediml {
 package "dml" as edgemeredimldml {
-package "do" as edgemeredimldmldo #lightblue {
+package "do" as edgemeredimldmldo ##aaffff {
  component "datainstance" as edgemeredimldmldodatainstance
  interface "create" as edgemeredimldmldodatainstancecreate
 edgemeredimldmldodatainstance -- edgemeredimldmldodatainstancecreate
@@ -40,7 +40,7 @@ edgemeredimldmldodatainstance -- edgemeredimldmldodatainstancecreate
     package "edgemere" as edgemere {
 package "diml" as edgemerediml {
 package "dml" as edgemeredimldml {
-package "do" as edgemeredimldmldo #lightblue {
+package "do" as edgemeredimldmldo ##aaffff {
  component "datainstance" as edgemeredimldmldodatainstance
  interface "destroy" as edgemeredimldmldodatainstancedestroy
 edgemeredimldmldodatainstance -- edgemeredimldmldodatainstancedestroy
@@ -53,7 +53,7 @@ edgemeredimldmldodatainstance -- edgemeredimldmldodatainstancedestroy
     package "edgemere" as edgemere {
 package "diml" as edgemerediml {
 package "dml" as edgemeredimldml {
-package "do" as edgemeredimldmldo #lightblue {
+package "do" as edgemeredimldmldo ##aaffff {
  component "datainstance" as edgemeredimldmldodatainstance
  interface "find" as edgemeredimldmldodatainstancefind
 edgemeredimldmldodatainstance -- edgemeredimldmldodatainstancefind
@@ -66,7 +66,7 @@ edgemeredimldmldodatainstance -- edgemeredimldmldodatainstancefind
     package "edgemere" as edgemere {
 package "diml" as edgemerediml {
 package "dml" as edgemeredimldml {
-package "do" as edgemeredimldmldo #lightblue {
+package "do" as edgemeredimldmldo ##aaffff {
  component "datainstance" as edgemeredimldmldodatainstance
  interface "list" as edgemeredimldmldodatainstancelist
 edgemeredimldmldodatainstance -- edgemeredimldmldodatainstancelist
@@ -107,24 +107,33 @@ hexagon "datarequest.selected" as datarequestselected
 
 
 
+
+
+
+
+
+
+
+
+
         rectangle "Manage Data Instances" as ManageDataInstances #ffffaa {
             ("Create Data Instance")/ as ApplicationDeveloperManageDataInstancesCreateDataInstance
         }
     
     edgemeredimldmldodatainstancecreate <-- ApplicationDeveloperManageDataInstancesCreateDataInstance
-    
+
         rectangle "Manage Data Instances" as ManageDataInstances #ffffaa {
             ("Find Data Instance")/ as DataEngineerManageDataInstancesFindDataInstance
         }
     
     edgemeredimldmldodatainstancefind <-- DataEngineerManageDataInstancesFindDataInstance
-    
+
         rectangle "Manage Data Instances" as ManageDataInstances #ffffaa {
             ("Remove Data Instance")/ as DataEngineerManageDataInstancesRemoveDataInstance
         }
     
     edgemeredimldmldodatainstancedestroy <-- DataEngineerManageDataInstancesRemoveDataInstance
-    
+
 
 
 

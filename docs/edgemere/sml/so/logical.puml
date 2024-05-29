@@ -7,7 +7,7 @@ package "Service Controller" #88cc88 {
 package "Service Repository" #88cc88 {
     }
 
-package "Data Orchestrator" #lightblue {
+package "Data Orchestrator" ##aaffff {
     
         class DataInstance {
         }

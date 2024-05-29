@@ -2,7 +2,7 @@
 
 
 
-package "Insite Services" #lightblue {
+package "Insite Services" ##aaffff {
 
     interface "Insite Services" as i {
     
@@ -13,7 +13,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Insite Services" #lightblue {
+package "Insite Services" ##aaffff {
     
 }
 

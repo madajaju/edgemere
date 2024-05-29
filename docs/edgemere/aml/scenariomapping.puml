@@ -41,8 +41,35 @@ edgemereamlaimodel -- edgemereamlaimodellist
     package "edgemere" as edgemere {
 package "aml" as edgemereaml #88cccc {
  component "aimodel" as edgemereamlaimodel
+ interface "scan" as edgemereamlaimodelscan
+edgemereamlaimodel -- edgemereamlaimodelscan
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "aimodel" as edgemereamlaimodel
+ interface "sign" as edgemereamlaimodelsign
+edgemereamlaimodel -- edgemereamlaimodelsign
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "aimodel" as edgemereamlaimodel
  interface "update" as edgemereamlaimodelupdate
 edgemereamlaimodel -- edgemereamlaimodelupdate
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "aml" as edgemereaml #88cccc {
+ component "aimodel" as edgemereamlaimodel
+ interface "validate" as edgemereamlaimodelvalidate
+edgemereamlaimodel -- edgemereamlaimodelvalidate
 }
 }
 
@@ -164,6 +191,27 @@ edgemereamlworkload -- edgemereamlworkloadupdate
 }
 
     
+hexagon "aimodel.create" as aimodelcreate
+            edgemereaml <-- aimodelcreate
+        
+hexagon "aimodel.updated" as aimodelupdated
+            edgemereaml <-- aimodelupdated
+        
+hexagon "application.create" as applicationcreate
+            edgemereaml <-- applicationcreate
+        
+hexagon "application.updated" as applicationupdated
+            edgemereaml <-- applicationupdated
+        
+
+
+
+
+
+
+
+
+
 
 
         rectangle "Manage AI Models" as ManageAIModels #ffffaa {
@@ -171,60 +219,106 @@ edgemereamlworkload -- edgemereamlworkloadupdate
         }
     
     edgemereamlaimodelcreate <-- ApplicationDeveloperManageAIModelsCreateAIModel
+    edgemereamlaimodelcreate <-- ApplicationDeveloperManageAIModelsCreateAIModel
+        edgemereamlaimodelscan <-- ApplicationDeveloperManageAIModelsCreateAIModel
+        edgemereamlaimodelvalidate <-- ApplicationDeveloperManageAIModelsCreateAIModel
+        edgemereamlaimodelsign <-- ApplicationDeveloperManageAIModelsCreateAIModel
+        edgemereamlaimodelcreate <-- ApplicationDeveloperManageAIModelsCreateAIModel
     
         rectangle "Manage AI Models" as ManageAIModels #ffffaa {
             ("Create AI Model")/ as DataScientistManageAIModelsCreateAIModel
         }
     
     edgemereamlaimodelcreate <-- DataScientistManageAIModelsCreateAIModel
+    edgemereamlaimodelcreate <-- DataScientistManageAIModelsCreateAIModel
+        edgemereamlaimodelscan <-- DataScientistManageAIModelsCreateAIModel
+        edgemereamlaimodelvalidate <-- DataScientistManageAIModelsCreateAIModel
+        edgemereamlaimodelsign <-- DataScientistManageAIModelsCreateAIModel
+        edgemereamlaimodelcreate <-- DataScientistManageAIModelsCreateAIModel
     
         rectangle "Manage AI Models" as ManageAIModels #ffffaa {
             ("Deploy AI Model")/ as DevOpsEngineerManageAIModelsDeployAIModel
         }
     
     edgemereamlaimodeldeploy <-- DevOpsEngineerManageAIModelsDeployAIModel
+    edgemereamlaimodelcreate <-- DevOpsEngineerManageAIModelsDeployAIModel
+        edgemereamlaimodelsign <-- DevOpsEngineerManageAIModelsDeployAIModel
+        edgemereamlaimodelvalidate <-- DevOpsEngineerManageAIModelsDeployAIModel
+        edgemereamlaimodeldeploy <-- DevOpsEngineerManageAIModelsDeployAIModel
+        edgemereamlaimodelscan <-- DevOpsEngineerManageAIModelsDeployAIModel
     
         rectangle "Manage AI Models" as ManageAIModels #ffffaa {
             ("Deploy AI Model")/ as ApplicationDeveloperManageAIModelsDeployAIModel
         }
     
     edgemereamlaimodeldeploy <-- ApplicationDeveloperManageAIModelsDeployAIModel
+    edgemereamlaimodelcreate <-- ApplicationDeveloperManageAIModelsDeployAIModel
+        edgemereamlaimodelsign <-- ApplicationDeveloperManageAIModelsDeployAIModel
+        edgemereamlaimodelvalidate <-- ApplicationDeveloperManageAIModelsDeployAIModel
+        edgemereamlaimodeldeploy <-- ApplicationDeveloperManageAIModelsDeployAIModel
+        edgemereamlaimodelscan <-- ApplicationDeveloperManageAIModelsDeployAIModel
     
         rectangle "Manage AI Models" as ManageAIModels #ffffaa {
             ("Deploy AI Model")/ as DataEngineerManageAIModelsDeployAIModel
         }
     
     edgemereamlaimodeldeploy <-- DataEngineerManageAIModelsDeployAIModel
+    edgemereamlaimodelcreate <-- DataEngineerManageAIModelsDeployAIModel
+        edgemereamlaimodelsign <-- DataEngineerManageAIModelsDeployAIModel
+        edgemereamlaimodelvalidate <-- DataEngineerManageAIModelsDeployAIModel
+        edgemereamlaimodeldeploy <-- DataEngineerManageAIModelsDeployAIModel
+        edgemereamlaimodelscan <-- DataEngineerManageAIModelsDeployAIModel
     
         rectangle "Manage AI Models" as ManageAIModels #ffffaa {
             ("Destroy AI Model")/ as DataEngineerManageAIModelsDestroyAIModel
         }
     
     edgemereamlaimodeldestroy <-- DataEngineerManageAIModelsDestroyAIModel
+    edgemereamlaimodellist <-- DataEngineerManageAIModelsDestroyAIModel
+        edgemereamlaimodeldestroy <-- DataEngineerManageAIModelsDestroyAIModel
+        edgemereamlaimodellist <-- DataEngineerManageAIModelsDestroyAIModel
     
         rectangle "Manage AI Models" as ManageAIModels #ffffaa {
             ("Destroy AI Model")/ as ApplicationDeveloperManageAIModelsDestroyAIModel
         }
     
     edgemereamlaimodeldestroy <-- ApplicationDeveloperManageAIModelsDestroyAIModel
+    edgemereamlaimodellist <-- ApplicationDeveloperManageAIModelsDestroyAIModel
+        edgemereamlaimodeldestroy <-- ApplicationDeveloperManageAIModelsDestroyAIModel
+        edgemereamlaimodellist <-- ApplicationDeveloperManageAIModelsDestroyAIModel
     
         rectangle "Manage AI Models" as ManageAIModels #ffffaa {
             ("Update AI Model")/ as DataEngineerManageAIModelsUpdateAIModel
         }
     
     edgemereamlaimodelupdate <-- DataEngineerManageAIModelsUpdateAIModel
+    edgemereamlaimodellist <-- DataEngineerManageAIModelsUpdateAIModel
+        edgemereamlaimodelupdate <-- DataEngineerManageAIModelsUpdateAIModel
+        edgemereamlaimodelvalidate <-- DataEngineerManageAIModelsUpdateAIModel
+        edgemereamlaimodelsign <-- DataEngineerManageAIModelsUpdateAIModel
+        edgemereamlaimodeldeploy <-- DataEngineerManageAIModelsUpdateAIModel
     
         rectangle "Manage AI Models" as ManageAIModels #ffffaa {
             ("Update AI Model")/ as DevOpsEngineerManageAIModelsUpdateAIModel
         }
     
     edgemereamlaimodelupdate <-- DevOpsEngineerManageAIModelsUpdateAIModel
+    edgemereamlaimodellist <-- DevOpsEngineerManageAIModelsUpdateAIModel
+        edgemereamlaimodelupdate <-- DevOpsEngineerManageAIModelsUpdateAIModel
+        edgemereamlaimodelvalidate <-- DevOpsEngineerManageAIModelsUpdateAIModel
+        edgemereamlaimodelsign <-- DevOpsEngineerManageAIModelsUpdateAIModel
+        edgemereamlaimodeldeploy <-- DevOpsEngineerManageAIModelsUpdateAIModel
     
         rectangle "Manage AI Models" as ManageAIModels #ffffaa {
             ("Update AI Model")/ as ApplicationDeveloperManageAIModelsUpdateAIModel
         }
     
     edgemereamlaimodelupdate <-- ApplicationDeveloperManageAIModelsUpdateAIModel
+    edgemereamlaimodellist <-- ApplicationDeveloperManageAIModelsUpdateAIModel
+        edgemereamlaimodelupdate <-- ApplicationDeveloperManageAIModelsUpdateAIModel
+        edgemereamlaimodelvalidate <-- ApplicationDeveloperManageAIModelsUpdateAIModel
+        edgemereamlaimodelsign <-- ApplicationDeveloperManageAIModelsUpdateAIModel
+        edgemereamlaimodeldeploy <-- ApplicationDeveloperManageAIModelsUpdateAIModel
     
 
         rectangle "Manage Applications" as ManageApplications #ffffaa {
@@ -232,111 +326,120 @@ edgemereamlworkload -- edgemereamlworkloadupdate
         }
     
     edgemereamldatacreate <-- DevOpsEngineerManageApplicationsBuildApplication
+    edgemereamlapplicationcreate <-- DevOpsEngineerManageApplicationsBuildApplication
+        edgemereamlaimodelcreate <-- DevOpsEngineerManageApplicationsBuildApplication
+        edgemereamlapplicationlist <-- DevOpsEngineerManageApplicationsBuildApplication
+        edgemereamlaimodelupdate <-- DevOpsEngineerManageApplicationsBuildApplication
+        edgemereamlaimodeldeploy <-- DevOpsEngineerManageApplicationsBuildApplication
+        edgemereamlapplicationdeploy <-- DevOpsEngineerManageApplicationsBuildApplication
+        edgemereamlworkloadcreate <-- DevOpsEngineerManageApplicationsBuildApplication
+        edgemereamlworkloaddeploy <-- DevOpsEngineerManageApplicationsBuildApplication
+        edgemereamlapplicationlist <-- DevOpsEngineerManageApplicationsBuildApplication
     
         rectangle "Manage Applications" as ManageApplications #ffffaa {
             ("Create Application")/ as ApplicationDeveloperManageApplicationsCreateApplication
         }
     
     edgemereamlapplicationcreate <-- ApplicationDeveloperManageApplicationsCreateApplication
-    
+
         rectangle "Manage Applications" as ManageApplications #ffffaa {
             ("Deploy Application")/ as DevOpsEngineerManageApplicationsDeployApplication
         }
     
     edgemereamlapplicationdeploy <-- DevOpsEngineerManageApplicationsDeployApplication
-    
+
         rectangle "Manage Applications" as ManageApplications #ffffaa {
             ("Destroy Application")/ as DevOpsEngineerManageApplicationsDestroyApplication
         }
     
     edgemereamlapplicationdestroy <-- DevOpsEngineerManageApplicationsDestroyApplication
-    
+
         rectangle "Manage Applications" as ManageApplications #ffffaa {
             ("Monitor Application")/ as DevOpsEngineerManageApplicationsMonitorApplication
         }
     
     edgemereamlapplicationmonitor <-- DevOpsEngineerManageApplicationsMonitorApplication
-    
+
         rectangle "Manage Applications" as ManageApplications #ffffaa {
             ("Monitor Application")/ as ApplicationDeveloperManageApplicationsMonitorApplication
         }
     
     edgemereamlapplicationmonitor <-- ApplicationDeveloperManageApplicationsMonitorApplication
-    
+
         rectangle "Manage Applications" as ManageApplications #ffffaa {
             ("Update Application")/ as ApplicationDeveloperManageApplicationsUpdateApplication
         }
     
     edgemereamlapplicationupdate <-- ApplicationDeveloperManageApplicationsUpdateApplication
-    
+
         rectangle "Manage Applications" as ManageApplications #ffffaa {
             ("Update Application")/ as DevOpsEngineerManageApplicationsUpdateApplication
         }
     
     edgemereamlapplicationupdate <-- DevOpsEngineerManageApplicationsUpdateApplication
-    
+
 
         rectangle "Manage Workloads" as ManageWorkloads #ffffaa {
             ("Create Workload")/ as ApplicationDeveloperManageWorkloadsCreateWorkload
         }
     
     edgemereamlworkloadcreate <-- ApplicationDeveloperManageWorkloadsCreateWorkload
-    
+
         rectangle "Manage Workloads" as ManageWorkloads #ffffaa {
             ("Deploy Workload")/ as ApplicationDeveloperManageWorkloadsDeployWorkload
         }
     
     edgemereamlworkloaddeploy <-- ApplicationDeveloperManageWorkloadsDeployWorkload
-    
+
         rectangle "Manage Workloads" as ManageWorkloads #ffffaa {
             ("Deploy Workload")/ as DevOpsEngineerManageWorkloadsDeployWorkload
         }
     
     edgemereamlworkloaddeploy <-- DevOpsEngineerManageWorkloadsDeployWorkload
-    
+
         rectangle "Manage Workloads" as ManageWorkloads #ffffaa {
             ("Destroy Workload")/ as DevOpsEngineerManageWorkloadsDestroyWorkload
         }
     
     edgemereamlworkloaddestroy <-- DevOpsEngineerManageWorkloadsDestroyWorkload
-    
+
         rectangle "Manage Workloads" as ManageWorkloads #ffffaa {
             ("Monitor Workload")/ as ApplicationDeveloperManageWorkloadsMonitorWorkload
         }
     
     edgemereamlworkloadmonitor <-- ApplicationDeveloperManageWorkloadsMonitorWorkload
-    
+
         rectangle "Manage Workloads" as ManageWorkloads #ffffaa {
             ("Monitor Workload")/ as DevOpsEngineerManageWorkloadsMonitorWorkload
         }
     
     edgemereamlworkloadmonitor <-- DevOpsEngineerManageWorkloadsMonitorWorkload
-    
+
         rectangle "Manage Workloads" as ManageWorkloads #ffffaa {
             ("Update Workload")/ as ApplicationDeveloperManageWorkloadsUpdateWorkload
         }
     
     edgemereamlworkloadupdate <-- ApplicationDeveloperManageWorkloadsUpdateWorkload
-    
+
         rectangle "Manage Workloads" as ManageWorkloads #ffffaa {
             ("Update Workload")/ as DevOpsEngineerManageWorkloadsUpdateWorkload
         }
     
     edgemereamlworkloadupdate <-- DevOpsEngineerManageWorkloadsUpdateWorkload
-    
+
 
         rectangle "Change Physical World" as ChangePhysicalWorld #ffffaa {
             ("Adjust Temperature")/ as ActorChangePhysicalWorldAdjustTemperature
         }
     
     edgemereamldatacreate <-- ActorChangePhysicalWorldAdjustTemperature
-    
+
         rectangle "Change Physical World" as ChangePhysicalWorld #ffffaa {
             ("Toogle Switch")/ as ActorChangePhysicalWorldtoggleSwitch
         }
     
     edgemereamldatacreate <-- ActorChangePhysicalWorldtoggleSwitch
-    
+
 
 
         rectangle "Connect Physical Asset to a Device" as ConnectPhysicalAssettoaDevice #ffffaa {
@@ -344,7 +447,7 @@ edgemereamlworkload -- edgemereamlworkloadupdate
         }
     
     edgemereamldatacreate <-- ActorConnectPhysicalAssettoaDeviceAssetDigitalDeviceConnectivity
-    
+
 
 
 
@@ -353,7 +456,7 @@ edgemereamlworkload -- edgemereamlworkloadupdate
         }
     
     edgemereamldatacreate <-- ActorMonitorPhysicalWorldContinuousMonitoring
-    
+
 
 
 
@@ -370,13 +473,13 @@ edgemereamlworkload -- edgemereamlworkloadupdate
         }
     
     edgemereamldatacreate <-- DataEngineerManageMetaDataCaptureMetaData
-    
+
         rectangle "Manage Meta Data" as ManageMetaData #ffffaa {
             ("Capture Meta Data")/ as DataStewardManageMetaDataCaptureMetaData
         }
     
     edgemereamldatacreate <-- DataStewardManageMetaDataCaptureMetaData
-    
+
 
 
 
@@ -396,73 +499,73 @@ edgemereamlworkload -- edgemereamlworkloadupdate
         }
     
     edgemereamldatacreate <-- DevOpsEngineerManageStacksBuildStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Create Application Stack")/ as ApplicationDeveloperManageStacksCreateApplicationStack
         }
     
     edgemereamldatacreate <-- ApplicationDeveloperManageStacksCreateApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Create Application Stack")/ as StackDeveloperManageStacksCreateApplicationStack
         }
     
     edgemereamldatacreate <-- StackDeveloperManageStacksCreateApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Create Service Stack")/ as StackDeveloperManageStacksCreateServiceStack
         }
     
     edgemereamldatacreate <-- StackDeveloperManageStacksCreateServiceStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Modify Application Stack")/ as StackDeveloperManageStacksModifyApplicationStack
         }
     
     edgemereamldatacreate <-- StackDeveloperManageStacksModifyApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Modify Application Stack")/ as ApplicationDeveloperManageStacksModifyApplicationStack
         }
     
     edgemereamldatacreate <-- ApplicationDeveloperManageStacksModifyApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Modify Service Stack")/ as StackDeveloperManageStacksModifyServiceStack
         }
     
     edgemereamldatacreate <-- StackDeveloperManageStacksModifyServiceStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Test Application Stack")/ as StackDeveloperManageStacksTestApplicationStack
         }
     
     edgemereamldatacreate <-- StackDeveloperManageStacksTestApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Test Application Stack")/ as ApplicationDeveloperManageStacksTestApplicationStack
         }
     
     edgemereamldatacreate <-- ApplicationDeveloperManageStacksTestApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Test Service Stack")/ as StackDeveloperManageStacksTestServiceStack
         }
     
     edgemereamldatacreate <-- StackDeveloperManageStacksTestServiceStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Version Application Stack")/ as ApplicationDeveloperManageStacksVersionApplicationStack
         }
     
     edgemereamldatacreate <-- ApplicationDeveloperManageStacksVersionApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Version Service Stack")/ as StackDeveloperManageStacksVersionServiceStack
         }
     
     edgemereamldatacreate <-- StackDeveloperManageStacksVersionServiceStack
-    
+
 
 
 
@@ -471,7 +574,7 @@ edgemereamlworkload -- edgemereamlworkloadupdate
         }
     
     edgemereamldatacreate <-- StackDeveloperManageServicesBuildService
-    
+
 
 
 

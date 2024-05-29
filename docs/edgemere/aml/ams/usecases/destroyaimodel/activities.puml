@@ -1,0 +1,22 @@
+@startuml
+
+
+left to right direction
+
+usecase "destroy AIModel" as destroyAIModel #yellow
+
+Actor "Data Scientist" as DataScientist
+
+DataScientist --> destroyAIModel
+
+
+
+
+
+
+
+
+
+
+
+@enduml

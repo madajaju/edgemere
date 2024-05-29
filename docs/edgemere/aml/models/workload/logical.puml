@@ -3,6 +3,14 @@
 class "Workload" as Model {
  string name
 
+ assignApplication()
+ calculateSLABreach()
+ distributeLoad()
+ estimateResourceUsage()
+ optimizeQoS()
+ reviewWorkload()
+ simulation()
+ validateSLA()
  
 }
 

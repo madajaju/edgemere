@@ -11,6 +11,20 @@ state "ia" as pstatename #cc8888 {
     }
 }
 
+        state "ia" as ia #cc8888 {
+state "creategroup" as iacreategroup #cc8888 {
+}
+}
+
+
+        state "ia" as ia #cc8888 {
+state "group" as iagroup #cc8888 {
+state "create" as iagroupcreate #cc8888 {
+}
+}
+}
+
+
 
 
 

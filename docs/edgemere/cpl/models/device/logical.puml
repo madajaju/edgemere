@@ -7,12 +7,23 @@ class "Device" as Model {
  string type
 
  addToHardware()
+ archiveData()
  create()
  disable()
+ disableAllFunctions()
+ displayReservations()
  enable()
+ enableAllFunctions()
  getReservations()
+ initiateDevice()
+ logDeviceStatus()
  provision()
  reserve()
+ reserveResource()
+ setupHardware()
+ updateDeviceGroup()
+ updateHardware()
+ updateStatus()
  
 }
 

@@ -6,7 +6,7 @@ parent: All Actors
 ---
 # Application Developer
 
-The Application Developer work in coordination with DevOps to manage services, applications and workloads through the development pipeline.
+The Application Developer is responsible for defining, managing, deploying, and updating applications, AI models and workloads, as well as monitoring the performance of applications, using coordination with DevOps through the development pipeline.
 
 The Application Developer work in coordination with [DevOps](/doc/actor/devops) to  
 manage services, applications and workloads through the development pipeline

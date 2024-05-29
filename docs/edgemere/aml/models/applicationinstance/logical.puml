@@ -5,6 +5,12 @@ class "ApplicationInstance" as Model {
  string status
  string message
 
+ fail()
+ initialize()
+ kill()
+ provision()
+ stop()
+ terminate()
  
 }
 

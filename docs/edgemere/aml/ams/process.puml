@@ -16,5 +16,33 @@ state "amlams" as pstatename #88cccc {
 
 
 
+    state "aml" as aml #88cccc {
+state "ams" as amlams #88cccc {
+state "AIModel" as amlamsaimodel #88cccc {
+state "create" as amlamsaimodelcreate #88cccc {
+}
+}
+}
+}
+
+    state "aml" as aml #88cccc {
+state "Function" as amlfunction #88cccc {
+}
+}
+
+        amlamsaimodelcreate ---> amlfunction
+       
+    state "aml" as aml #88cccc {
+state "ams" as amlams #88cccc {
+state "AIModel" as amlamsaimodel #88cccc {
+state "updated" as amlamsaimodelupdated #88cccc {
+}
+}
+}
+}
+
+    
+        amlamsaimodelupdated ---> amlfunction
+       
 
 @enduml

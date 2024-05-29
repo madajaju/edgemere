@@ -4,13 +4,13 @@ left to right direction
 
 state "diml" as diml #ffcc88 {
 state "ddf" as dimlddf #ffcc88 {
-state "daf" as dimlddfdaf #lightblue {
+state "daf" as dimlddfdaf ##aaffff {
 }
 }
 }
 
 
-state "dimlddfdaf" as pstatename #lightblue {
+state "dimlddfdaf" as pstatename ##aaffff {
     state "Custom Function" as daffunction {
     }
 }

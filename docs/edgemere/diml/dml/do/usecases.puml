@@ -5,7 +5,7 @@ Actor "DataScientist" as DataScientist
 Actor "ApplicationDeveloper" as ApplicationDeveloper
 
 
-rectangle "Data Orchestrator" #lightblue {
+rectangle "Data Orchestrator" ##aaffff {
 usecase "ManageDataInstances" as ManageDataInstances
     DataScientist --> ManageDataInstances
     ApplicationDeveloper --> ManageDataInstances

@@ -1,15 +1,47 @@
-The Application Developer work in coordination with [DevOps](/doc/actor/devops) to  
-manage services, applications and workloads through the development pipeline
+# Application Developer
 
-The following arethe usecases for the Application Developer and how they interaction with other subsytstems.
+**Shortname:** applicationdeveloper
 
-![UseCase](./usecases.png)
+**Description:** The Application Developer's role is to define, manage, deploy, and update applications, AI models, and workloads. This role is also responsible for monitoring applications' performance in coordination with DevOps through the development pipeline.
 
-This diagram shows the activities of the Application Developer and how it interactions with Edgemeree and its 
-subsystems.
+## Overview
 
-![Activity](./activity.png)
+The Application Developer interacts with various layers of the architecture. These include the 'Application Management Layer' and the 'Service Management Layer'.
 
-This is a typical workflow of an application developer in edgemere.
+### Application Management Layer
 
-![Workflow](./workflow.png)
+The Application developer defines and manages applications via the Application Management Layer. Key responsibilities include:
+
+- Creating and updating applications
+- Deploying workloads related to each application
+- Monitoring the performance of each application
+- Managing AI models related to each application
+
+### Service Management Layer
+
+The Application developer interacts with this layer to manage services related to each application. This includes:
+
+- Creating and updating services
+- Monitoring the performance of each service
+
+## Interactions with Workflows
+
+Being part of the development team, the Application Developer significantly impacts the project’s workflows. Below are certain key workflow scenarios:
+
+1. **Testing:** Write code and test it in tandem with the Service Stack and the Application Stack.
+2. **Application Deployment:** Deploy the application, ensuring it works synergistically with the AI models and datasets. In case of updates or changes, all related services, applications and AI models are updated together.
+3. **Application Monitoring:** Routine checks to ensure the application is working as intended. This also includes checking any associated Service or AI model.
+
+## Use Cases
+
+Here are some of the key use cases covering the Application Developer role:
+
+1. **Manage AI Models:** Manage AI models and tie them to an application and dataset.
+2. **Manage Applications:** Manage applications across multiple environments, clouds, and types of infrastructure.
+3. **Manage Workloads:** Connect applications through workflows to automate complex data interactions.
+4. **Manage Data Instances:** Perform overall Data Instance management.
+5. **Manage Stacks:** Allows the stack developer to create, update, and delete stacks.
+6. **Manage Services:** Manage services related to each application and AI model.
+7. **Organize Solutions:** Organize various solutions that meet the organization needs.
+
+These use cases outline the Application Developer's responsibilities as they work within various architectural layers and coordinate with DevOps to ensure seamless application delivery and management.

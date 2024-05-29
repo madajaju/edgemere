@@ -15,18 +15,81 @@ box Application Management Layer #88cccc
 end box
 
 
+box Application Management Layer #88cccc
+    end box
+
 group Given [The AI model is trained and ready to be deployed]
 
 "DevOpsEngineer" --/ aml: The DevOps, Application Developer or Data Engineer triggers the deployment process
 "aml" -> aml: Deploy AI Model
 
+    aml -> "application management layer": create ()
+
+    "application management layer" --/ EventBus: aimodel.create
+
+    aml -> "application management layer": sign (appName: [object Object])
+
+    "application management layer" --/ EventBus: aimodel.sign
+
+    aml -> "application management layer": validate (appName: [object Object],SLA: [object Object])
+
+    "application management layer" --/ EventBus: aimodel.validate
+
+    aml -> "application management layer": deploy ()
+
+    "application management layer" --/ EventBus: aimodel.deploy
+
+    aml -> "application management layer": scan (appName: [object Object])
+
+    "application management layer" --/ EventBus: aimodel.scan
+
 
 "ApplicationDeveloper" --/ aml: The DevOps, Application Developer or Data Engineer triggers the deployment process
 "aml" -> aml: Deploy AI Model
 
+    aml -> "application management layer": create ()
+
+    "application management layer" --/ EventBus: aimodel.create
+
+    aml -> "application management layer": sign (appName: [object Object])
+
+    "application management layer" --/ EventBus: aimodel.sign
+
+    aml -> "application management layer": validate (appName: [object Object],SLA: [object Object])
+
+    "application management layer" --/ EventBus: aimodel.validate
+
+    aml -> "application management layer": deploy ()
+
+    "application management layer" --/ EventBus: aimodel.deploy
+
+    aml -> "application management layer": scan (appName: [object Object])
+
+    "application management layer" --/ EventBus: aimodel.scan
+
 
 "DataEngineer" --/ aml: The DevOps, Application Developer or Data Engineer triggers the deployment process
 "aml" -> aml: Deploy AI Model
+
+    aml -> "application management layer": create ()
+
+    "application management layer" --/ EventBus: aimodel.create
+
+    aml -> "application management layer": sign (appName: [object Object])
+
+    "application management layer" --/ EventBus: aimodel.sign
+
+    aml -> "application management layer": validate (appName: [object Object],SLA: [object Object])
+
+    "application management layer" --/ EventBus: aimodel.validate
+
+    aml -> "application management layer": deploy ()
+
+    "application management layer" --/ EventBus: aimodel.deploy
+
+    aml -> "application management layer": scan (appName: [object Object])
+
+    "application management layer" --/ EventBus: aimodel.scan
 
 
 

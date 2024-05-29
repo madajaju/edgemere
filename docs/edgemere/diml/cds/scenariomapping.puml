@@ -53,30 +53,39 @@ edgemeredimlcdsdatasource -- edgemeredimlcdsdatasourcename
 
 
 
+
+
+
+
+
+
+
+
+
         rectangle "Manage Data" as ManageData #ffffaa {
             ("Destroy Data")/ as DataStewardManageDataDestroyData
         }
     
     edgemeredimlcdsdatasourcename <-- DataStewardManageDataDestroyData
-    
+
         rectangle "Manage Data" as ManageData #ffffaa {
             ("Egress Data")/ as DataStewardManageDataEgressData
         }
     
     edgemeredimlcdsdatasourcename <-- DataStewardManageDataEgressData
-    
+
         rectangle "Manage Data" as ManageData #ffffaa {
             ("Ingest Data")/ as DataStewardManageDataIngestData
         }
     
     edgemeredimlcdsdatasourcename <-- DataStewardManageDataIngestData
-    
+
         rectangle "Manage Data" as ManageData #ffffaa {
             ("Move Data")/ as DataStewardManageDataMoveData
         }
     
     edgemeredimlcdsdatamove <-- DataStewardManageDataMoveData
-    
+
 
 
 

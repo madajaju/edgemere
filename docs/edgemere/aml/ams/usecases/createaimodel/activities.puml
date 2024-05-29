@@ -1,0 +1,34 @@
+@startuml
+
+
+left to right direction
+
+usecase "create AIModel" as createAIModel #yellow
+
+Actor "Data Scientist" as DataScientist
+
+DataScientist --> createAIModel
+
+
+
+
+
+
+
+
+
+
+
+usecase "addToAIModel" as addToAIModel #white
+
+createAIModel <.. addToAIModel : includes
+
+usecase "removeFromAIModel" as removeFromAIModel #white
+
+createAIModel <.. removeFromAIModel : includes
+
+usecase "updateAIModel" as updateAIModel #white
+
+createAIModel <.. updateAIModel : includes
+
+@enduml

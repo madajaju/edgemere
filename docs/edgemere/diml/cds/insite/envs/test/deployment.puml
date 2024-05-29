@@ -8,7 +8,7 @@ left to right direction
 
 
 
-node "insite" #lightblue {
+node "insite" ##aaffff {
 
 
     hexagon childrennet #black [

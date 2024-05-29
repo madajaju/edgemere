@@ -6,7 +6,7 @@ package "Security Aspect" #cc8888 {
 }
 
 
-package "Developer Services" #lightblue {
+package "Developer Services" #aaffff {
 
     interface "Developer Services" as i {
     
@@ -24,7 +24,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Developer Services" #lightblue {
+package "Developer Services" #aaffff {
 
 
 rectangle "Automation Framework" #white {

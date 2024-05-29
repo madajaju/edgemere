@@ -2,59 +2,68 @@
 class Hardware {
     static definition = {
         name: 'Hardware',
-        description: 'This represents physical hardware in a device',
+        description: 'The "Hardware" class, part of the "cpl" package, represents the physical hardware of a device, providing methods to manage attributes like its name and capabilities, and functions for addition of stats, enabling or disabling the hardware, and factory creation based on properties.',
+        unique: false,
+        extends: false,
+        
         attributes: {
-            name: {
-                type: 'string',
-                description: 'Name of the hardware'
-            },
-            ename: {
-                type: 'string',
-                description: 'Extended Name of the hardware'
-            },
-        },
+    "name": {
+        "type": "string",
+        "description": "Name of the hardware"
+    },
+    "ename": {
+        "type": "string",
+        "description": "Extended Name of the hardware"
+    }
+},
+        
         associations: {
-            profile: {
-                type: 'PhysicalProfile',
-                cardinality: 1,
-                composition: true,
-            },
-            device: {
-                type: 'Device',
-                cardinality: 1,
-                composition: false,
-                owner: false,
-            },
-            resources: {
-                type: 'Resource',
-                cardinality: 'n',
-                composition: false,
-                owner: false,
-            },
-        },
+    "profile": {
+        "type": "PhysicalProfile",
+        "cardinality": 1,
+        "composition": true,
+        "name": "profile"
+    },
+    "device": {
+        "type": "Device",
+        "cardinality": 1,
+        "composition": false,
+        "owner": false,
+        "name": "device"
+    },
+    "resources": {
+        "type": "Resource",
+        "cardinality": "n",
+        "composition": false,
+        "owner": false,
+        "name": "resources"
+    }
+},
+        
         statenet: {
-            Init: {
-                events: {
-                  create: {
-                      Enabled: {}
-                  }
-                }
-            },
-            Enabled: {
-                events: {
-                    disable: {
-                        Disabled: {}
-                    }
-                }
-            },
-            Disabled: {
-                events: {
-                    enable: {
-                        Enabled: {}
-                    }
-                }
+    "Init": {
+        "events": {
+            "create": {
+                "Enabled": {}
             }
-        },
+        }
+    },
+    "Enabled": {
+        "events": {
+            "disable": {
+                "Disabled": {}
+            }
+        }
+    },
+    "Disabled": {
+        "events": {
+            "enable": {
+                "Enabled": {}
+            }
+        }
+    }
+},
+        
         view: {
             color: "#cccccc",
             object2d: (options) => {
@@ -79,10 +88,8 @@ class Hardware {
                         `</a-entity>`;
                 }
                 return retval;
-            }
+            },
         }
     }
 }
-
 module.exports = Hardware;
-

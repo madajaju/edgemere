@@ -3,12 +3,12 @@ left to right direction
 
 
 state "aml" as aml #88cccc {
-state "ds" as amlds #lightblue {
+state "ds" as amlds #aaffff {
 }
 }
 
 
-state "amlds" as pstatename #lightblue {
+state "amlds" as pstatename #aaffff {
     state "Custom Function" as dsfunction {
     }
 }

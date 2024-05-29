@@ -41,18 +41,25 @@ DevOps Engineers and Application Developers need the ability to manage applicati
 
 ### Scenario Build Application
 
-Build Application is the description
+A DevOps Engineer initiates the build process using the &#39;data/create&#39; method and performs a series of actions, including creating and deploying an AI model, thereby successfully building the application &#39;helloWorldApp&#39;.
 
 ![Scenario BuildApplication](./BuildApplication.png)
 #### Criteria
 
-* Given - DevOpsEngineer has access to the application source code
-* When - DevOpsEngineer initiates the build process
-* Then - DevOpsEngineer has access to the application source code
+* Given - DevOps Engineer has access to the application source code
+* When - DevOps Engineer initiates the build process using the method &#39;data/create&#39;
+* Then - DevOps Engineer has access to the application source code
 
 #### Steps
-1. [data list --name hello --file ./templates/world.yml](#action-data-list)
-1. [data list --name hello --file ./templates/world.yml](#action-data-list)
+1. [ edgemere/aml/application/create ](#action--edgemere-aml-application-create)
+1. [ edgemere/aml/aimodel/create ](#action--edgemere-aml-aimodel-create)
+1. [ edgemere/aml/application/list ](#action--edgemere-aml-application-list)
+1. [ edgemere/aml/aimodel/update ](#action--edgemere-aml-aimodel-update)
+1. [ edgemere/aml/aimodel/deploy ](#action--edgemere-aml-aimodel-deploy)
+1. [ edgemere/aml/application/deploy ](#action--edgemere-aml-application-deploy)
+1. [ edgemere/aml/workload/create ](#action--edgemere-aml-workload-create)
+1. [ edgemere/aml/workload/deploy ](#action--edgemere-aml-workload-deploy)
+1. [ edgemere/aml/application/list ](#action--edgemere-aml-application-list)
 
 #### Actors
 

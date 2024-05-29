@@ -25,13 +25,13 @@ package "Data Definition Framework" #ffcc88 {
         }
     }
 
-package "Data Orchestrator" #lightblue {
+package "Data Orchestrator" ##aaffff {
     
         class DataInstance {
         }
     }
 
-package "Federated Meta Data Management" #lightblue {
+package "Federated Meta Data Management" ##aaffff {
     
         class LineageMetaData {
         }

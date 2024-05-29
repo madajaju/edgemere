@@ -2,7 +2,7 @@
 
 
 
-package "Data Repository" #lightblue {
+package "Data Repository" ##aaffff {
 
     interface "Data Repository" as i {
     
@@ -13,7 +13,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Data Repository" #lightblue {
+package "Data Repository" ##aaffff {
     
 }
 

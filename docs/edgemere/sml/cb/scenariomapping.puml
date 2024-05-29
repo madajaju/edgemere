@@ -144,24 +144,33 @@ edgemeresmlcbservice -- edgemeresmlcbservicemapresources
 
 
 
+
+
+
+
+
+
+
+
+
         rectangle "Manage Multi Cloud" as ManageMultiCloud #ffffaa {
             ("Add Cloud to Multi Cloud")/ as ITOperationsManageMultiCloudAddCloudtoMultiCloud
         }
     
     edgemeresmlcbmulticloudaddclouds <-- ITOperationsManageMultiCloudAddCloudtoMultiCloud
-    
+
         rectangle "Manage Multi Cloud" as ManageMultiCloud #ffffaa {
             ("Manage Policies for Multi Cloud")/ as ITOperationsManageMultiCloudManagePoliciesforMultiCloud
         }
     
     edgemeresmlcbmulticloudaddpolicies <-- ITOperationsManageMultiCloudManagePoliciesforMultiCloud
-    
+
         rectangle "Manage Multi Cloud" as ManageMultiCloud #ffffaa {
             ("Remove Cloud From Multi Cloud")/ as ITOperationsManageMultiCloudRemoveCloudfromMultiCloud
         }
     
     edgemeresmlcbmulticloudremovepolicies <-- ITOperationsManageMultiCloudRemoveCloudfromMultiCloud
-    
+
 
 
 

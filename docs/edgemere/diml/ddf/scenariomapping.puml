@@ -172,12 +172,21 @@ edgemeredimlddfmetadata -- edgemeredimlddfmetadatalist
 
 
 
+
+
+
+
+
+
+
+
+
         rectangle "Manage Applications" as ManageApplications #ffffaa {
             ("Build Application")/ as DevOpsEngineerManageApplicationsBuildApplication
         }
     
     edgemeredimlddfdatacreate <-- DevOpsEngineerManageApplicationsBuildApplication
-    
+
 
 
         rectangle "Change Physical World" as ChangePhysicalWorld #ffffaa {
@@ -185,13 +194,13 @@ edgemeredimlddfmetadata -- edgemeredimlddfmetadatalist
         }
     
     edgemeredimlddfdatacreate <-- ActorChangePhysicalWorldAdjustTemperature
-    
+
         rectangle "Change Physical World" as ChangePhysicalWorld #ffffaa {
             ("Toogle Switch")/ as ActorChangePhysicalWorldtoggleSwitch
         }
     
     edgemeredimlddfdatacreate <-- ActorChangePhysicalWorldtoggleSwitch
-    
+
 
 
         rectangle "Connect Physical Asset to a Device" as ConnectPhysicalAssettoaDevice #ffffaa {
@@ -199,7 +208,7 @@ edgemeredimlddfmetadata -- edgemeredimlddfmetadatalist
         }
     
     edgemeredimlddfdatacreate <-- ActorConnectPhysicalAssettoaDeviceAssetDigitalDeviceConnectivity
-    
+
 
 
 
@@ -208,7 +217,7 @@ edgemeredimlddfmetadata -- edgemeredimlddfmetadatalist
         }
     
     edgemeredimlddfdatacreate <-- ActorMonitorPhysicalWorldContinuousMonitoring
-    
+
 
 
 
@@ -220,45 +229,45 @@ edgemeredimlddfmetadata -- edgemeredimlddfmetadatalist
         }
     
     edgemeredimlddfdatasourcename <-- DataStewardManageDataDestroyData
-    
+
         rectangle "Manage Data" as ManageData #ffffaa {
             ("Egress Data")/ as DataStewardManageDataEgressData
         }
     
     edgemeredimlddfdatasourcename <-- DataStewardManageDataEgressData
-    
+
         rectangle "Manage Data" as ManageData #ffffaa {
             ("Ingest Data")/ as DataStewardManageDataIngestData
         }
     
     edgemeredimlddfdatasourcename <-- DataStewardManageDataIngestData
-    
+
 
         rectangle "Manage Data Adaptors" as ManageDataAdaptors #ffffaa {
             ("Attach Data Blue Print")/ as DataScientistManageDataAdaptorsAttachDataBluePrint
         }
     
     edgemeredimlddfblueprintattach <-- DataScientistManageDataAdaptorsAttachDataBluePrint
-    
+
         rectangle "Manage Data Adaptors" as ManageDataAdaptors #ffffaa {
             ("Create Data Adaptor")/ as DataEngineerManageDataAdaptorsCreateDataAdaptor
         }
     
     edgemeredimlddfdataadaptorcreate <-- DataEngineerManageDataAdaptorsCreateDataAdaptor
-    
+
         rectangle "Manage Data Adaptors" as ManageDataAdaptors #ffffaa {
             ("Update Data Adaptor")/ as DataEngineerManageDataAdaptorsUpdateDataAdaptor
         }
     
     edgemeredimlddfdataadaptorupdate <-- DataEngineerManageDataAdaptorsUpdateDataAdaptor
-    
+
 
         rectangle "Manage Data Blue Prints" as ManageDataBluePrints #ffffaa {
             ("Create Blue Print")/ as DataScientistManageDataBluePrintsCreateBluePrint
         }
     
     edgemeredimlddfdatablueprintcreate <-- DataScientistManageDataBluePrintsCreateBluePrint
-    
+
 
 
 
@@ -267,19 +276,19 @@ edgemeredimlddfmetadata -- edgemeredimlddfmetadatalist
         }
     
     edgemeredimlddfdatacreate <-- DataEngineerManageMetaDataCaptureMetaData
-    
+
         rectangle "Manage Meta Data" as ManageMetaData #ffffaa {
             ("Capture Meta Data")/ as DataStewardManageMetaDataCaptureMetaData
         }
     
     edgemeredimlddfdatacreate <-- DataStewardManageMetaDataCaptureMetaData
-    
+
         rectangle "Manage Meta Data" as ManageMetaData #ffffaa {
             ("Manage Data Catalog")/ as DataScientistManageMetaDataManageDataCatalog
         }
     
     edgemeredimlddfdatacataloglist <-- DataScientistManageMetaDataManageDataCatalog
-    
+
 
 
 
@@ -299,73 +308,73 @@ edgemeredimlddfmetadata -- edgemeredimlddfmetadatalist
         }
     
     edgemeredimlddfdatacreate <-- DevOpsEngineerManageStacksBuildStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Create Application Stack")/ as ApplicationDeveloperManageStacksCreateApplicationStack
         }
     
     edgemeredimlddfdatacreate <-- ApplicationDeveloperManageStacksCreateApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Create Application Stack")/ as StackDeveloperManageStacksCreateApplicationStack
         }
     
     edgemeredimlddfdatacreate <-- StackDeveloperManageStacksCreateApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Create Service Stack")/ as StackDeveloperManageStacksCreateServiceStack
         }
     
     edgemeredimlddfdatacreate <-- StackDeveloperManageStacksCreateServiceStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Modify Application Stack")/ as StackDeveloperManageStacksModifyApplicationStack
         }
     
     edgemeredimlddfdatacreate <-- StackDeveloperManageStacksModifyApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Modify Application Stack")/ as ApplicationDeveloperManageStacksModifyApplicationStack
         }
     
     edgemeredimlddfdatacreate <-- ApplicationDeveloperManageStacksModifyApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Modify Service Stack")/ as StackDeveloperManageStacksModifyServiceStack
         }
     
     edgemeredimlddfdatacreate <-- StackDeveloperManageStacksModifyServiceStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Test Application Stack")/ as StackDeveloperManageStacksTestApplicationStack
         }
     
     edgemeredimlddfdatacreate <-- StackDeveloperManageStacksTestApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Test Application Stack")/ as ApplicationDeveloperManageStacksTestApplicationStack
         }
     
     edgemeredimlddfdatacreate <-- ApplicationDeveloperManageStacksTestApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Test Service Stack")/ as StackDeveloperManageStacksTestServiceStack
         }
     
     edgemeredimlddfdatacreate <-- StackDeveloperManageStacksTestServiceStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Version Application Stack")/ as ApplicationDeveloperManageStacksVersionApplicationStack
         }
     
     edgemeredimlddfdatacreate <-- ApplicationDeveloperManageStacksVersionApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Version Service Stack")/ as StackDeveloperManageStacksVersionServiceStack
         }
     
     edgemeredimlddfdatacreate <-- StackDeveloperManageStacksVersionServiceStack
-    
+
 
 
 
@@ -374,7 +383,7 @@ edgemeredimlddfmetadata -- edgemeredimlddfmetadatalist
         }
     
     edgemeredimlddfdatacreate <-- StackDeveloperManageServicesBuildService
-    
+
 
 
 

@@ -11,9 +11,11 @@ if (global.ailtire.config.listenPort) {
 %>
 <head>
     <title>Edgemere</title>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
-    <link rel="stylesheet/less" type="text/css" href="styles/importer.less"/>
-    <base href="http://<%= hostURL %><%= global.ailtire.config.urlPrefix %>/">
+
+
+    <base href="http://<%= global.ailtire.config.host %>:<%= global.ailtire.config.listenPort%><%= global.ailtire.config.urlPrefix%>/">
+    <link rel="stylesheet/less" type="text/css" href="styles/top.less"/>
+    <script src="js/less.js"></script>
     <script type="module" src="js/ckeditor.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/w2ui.js"></script>
@@ -26,10 +28,17 @@ if (global.ailtire.config.listenPort) {
     <script src="js/d3-force-3d.js"></script>
     <script src="js/Graph3D.js"></script>
     <script src="/socket.io/socket.io.js"></script>
+
+    <script type="text/javascript">
+        document.write("<base href='" + window.location + "' />");
+        let basedir = window.location;
+        $.ajaxSetup({
+            beforeSend: function(xhr, options) {
+                options.url = `${basedir}/${options.url}`
+            }
+        })
+    </script>
 </head>
-<script type="text/javascript">
-    document.write("<base href='" + window.location + "' />");
-</script>
 <body style="overflow: hidden;">
 
 <!--This is a garden of 3DObjects for the graphing-->
@@ -45,7 +54,7 @@ if (global.ailtire.config.listenPort) {
                     let cls = global.classes[cname];
                 if(cls.definition.view) {
                 %>
-                    <%- cls.definition.view.object3d() %>
+                    <%- cls.definition.view?.object3d() %>
                 <% } } %>
             </a-entity>
         </a-scene>

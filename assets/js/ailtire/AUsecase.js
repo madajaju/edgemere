@@ -42,31 +42,11 @@ export default class AUsecase {
             url: 'usecase/list',
             success: function (results) {
                 let ucList = [];
-                for (let uname in results) {
+                let sortedUC = Object.keys(results).sort();
+                for (let i in sortedUC) {
+                    let uname = sortedUC[i];
                     let uc = results[uname];
-                    let ucItem = {
-                        id: uname, text: uc.name, img: 'icon-folder', nodes: [],
-                        link: `usecase/get?id=${uname}`,
-                        view: 'usecase'
-                    };
-                    let snum = 0;
-                    for (let sucname in uc.extended) {
-                        let suc = uc.extended[sucname];
-                        let node = addUseCaseListNode(suc, uname);
-                        ucItem.nodes.push(node);
-                        snum += node.count + 1;
-                    }
-                    for (let sname in uc.scenarios) {
-                        snum++;
-                        ucItem.nodes.push({
-                            id: uname + sname,
-                            text: sname,
-                            img: 'icon-page',
-                            link: `scenario/get?id=${uname}.${sname}`,
-                            view: 'scenario'
-                        });
-                    }
-                    ucItem.count = snum;
+                    let ucItem = addUseCaseListNode(uc);
                     ucList.push(ucItem);
                 }
                 w2ui[panel].add(parent, ucList);
@@ -559,7 +539,10 @@ export default class AUsecase {
         AUsecase.viewDeep3D(result, 'new');
         AUsecase.showDetail(result);
     }
-
+    static handle2d(result, object, div) {
+        _setGraphToolbar(object);
+        div.innerHTML = result;
+    }
     static handleList(result) {
         AUsecase.viewList3D(result, 'new');
         AUsecase.showListDetail(result);
@@ -583,33 +566,511 @@ export default class AUsecase {
         }
         w2ui['scenariolist'].refresh();
     }
+    static editDocs(results, setURL) {
+        let editForm = getEditForm(results, setURL);
+        w2popup.open({
+            height: 850,
+            width: 850,
+            title: `Edit ${results.name}`,
+            body: '<div id="editUseCaseDocDialog" style="width: 100%; height: 100%;"></div>',
+            showMax: true,
+            onToggle: function (event) {
+                $(w2ui.editUseCaseDialog.box).hide();
+                event.onComplete = function () {
+                    $(w2ui.UseCaseDialog.box).show();
+                    w2ui.UseCaseDialog.resize();
+                }
+            },
+            onOpen: function (event) {
+                event.onComplete = function () {
+                    // specifying an onOpen handler instead is equivalent to specifying an onBeforeOpen handler, which would make this code execute too early and hence not deliver.
+                    $('#editUseCaseDocDialog').w2render(editForm.name);
+                    w2ui.UseCaseEditTabs.click('docs');
+                }
+            }
+        })
+    }
+}
+function _createUseCaseEditDoc(record, setURL) {
+    if (!w2ui.UseCaseEditDoc) {
+        $().w2form({
+            name: 'UseCaseEditDoc',
+            saveURL: setURL,
+            style: 'border: 0px; background-color: transparent;overflow:hidden; ',
+            fields: [
+                {
+                    field: 'name',
+                    type: 'text',
+                    required: true,
+                    readonly: true,
+                    html: {
+                        attr: 'style="width: 450px;',
+                        caption: 'Name'
+                    }
+                },
+                {
+                    field: 'method',
+                    type: 'text',
+                    required: true,
+                    readonly: true,
+                    html: {
+                        attr: 'style="width: 450px;',
+                        caption: 'Method'
+                    }
+                },
+                {
+                    field: 'prefix',
+                    type: 'text',
+                    required: true,
+                    readonly: true,
+                    html: {
+                        attr: 'style="width: 450px;',
+                        caption: 'Prefix'
+                    }
+                },
+                {
+                    field: 'package',
+                    type: 'text',
+                    required: true,
+                    readonly: true,
+                    html: {
+                        attr: 'style="width: 450px;',
+                        caption: 'Package'
+                    }
+                },
+                {
+                    caption: 'Description',
+                    field: 'description',
+                    type: 'textarea',
+                    html: {
+                        attr: 'style="width: 450px; height: 50px;"',
+                        caption: "Description" +
+                            "<br><button class=AIButton id='generateDescription'></button>"
+                    }
+                },
+                {
+                    field: 'document',
+                    type: 'textarea',
+                    html: {
+                        attr: 'style="width: 450px; height: 500px;"',
+                        caption: "Details" +
+                            "<br><button class=AIButton id='generateDocumentation'></button>"
+                    }
+                },
+            ],
+            onRender: (event) => {
+                setTimeout(function () {
+                    let textArea = document.querySelector("#document");
+                    w2ui.UseCaseEditDoc.editors = {document: {}};
+                    ClassicEditor.create(textArea)
+                        .catch(error => {
+                            console.log(error)
+                        })
+                        .then(editor => {
+                            w2ui.UseCaseEditDoc.editors.document = editor;
+                        });
+                }, 10);
+            },
+            actions: {
+                Save: function () {
+
+                    let url = this.saveURL;
+                    for(let i in this.fields) {
+                        newRecord[this.fields[i].field] = this.record[this.fields[i].field]
+                        if(this.editors[this.fields[i].field]) {
+                            newRecord[this.fields[i].field] = this.editors[this.fields[i].field].getData();
+                        }
+                    }
+                    $.ajax({
+                        url: url, data: newRecord, success: function (results) {
+                            alert("Saved");
+                            w2popup.close();
+                        }, failure: function (results) {
+                            console.error(results);
+                        }
+                    });
+                },
+                Reset: function () {
+                    this.clear();
+                },
+                cancel: {
+                    caption: "Cancel", style: 'background: pink;', onClick(event) {
+                        w2popup.close();
+                    },
+                },
+            }
+        });
+        $(document).ready(function () {
+            $(document).on('click', "#generateDescription", function () {
+                let clsid = w2ui.UseCaseEditDoc.record.name;
+                let url = `package/generate?target=Description&id=${clsid}`;
+                w2ui.UseCaseEditDoc.lock('description', true);
+                w2ui.UseCaseEditDoc.refresh();
+                $('html').css('cursor', 'wait');
+                $.ajax({
+                    url: url,
+                    success: function (results) {
+                        $('html').css('cursor', 'auto');
+                        w2ui.UseCaseEditDoc.unlock('description', true);
+                        w2ui.UseCaseEditDoc.record.description = results;
+                        w2ui.UseCaseEditDoc.refresh();
+                        w2ui.UseCaseEditTabs.click('docs');
+                    },
+                    failure: function (results) {
+                        console.error(results);
+                    }
+                });
+            });
+            $(document).on('click', "#generateDocumentation", function () {
+                let clsid = w2ui.UseCaseEditDoc.record.name;
+                let url = `package/generate?target=Documentation&id=${clsid}`;
+                w2ui.UseCaseEditDoc.lock('Generating...', true);
+                w2ui.UseCaseEditDoc.refresh();
+                $('html').css('cursor', 'wait');
+                $.ajax({
+                    url: url,
+                    success: function (results) {
+                        w2ui.UseCaseEditDoc.unlock('document', true);
+                        w2ui.UseCaseEditDoc.record.document = results;
+                        w2ui.UseCaseEditDoc.refresh();
+                        $('html').css('cursor', 'auto');
+                        w2ui.UseCaseEditTabs.click('docs');
+                    },
+                    failure: function (results) {
+                        console.error(results);
+                    }
+                });
+            });
+        })
+    }
+}
+function getEditForm(record, setURL) {
+    if (!w2ui['UseCaseEditGeneral']) {
+        $().w2layout({
+            name: 'UseCaseEditGeneral',
+            panels: [
+                {type: 'left', size: 150, resizable: true, minSize: 35},
+                {type: 'main', overflow: 'hidden'}
+            ],
+            onRender: (event) => {
+                if (event.target === 'UseCaseEditGeneral') {
+                    if (w2ui.UseCaseEditGeneral.record) {
+                        w2ui.UseCaseEditGeneral.record = {};
+                    }
+                }
+            }
+        });
+    }
+    if (!w2ui['UseCaseEditTabs']) {
+        $().w2sidebar({
+            name: 'UseCaseEditTabs',
+            flatButton: true,
+            nodes: [
+                {id: 'docs', text: 'Docs', selected: true},
+                {id: 'actors', text: 'Actors'},
+                {id: 'scenarios', text: 'Scenarios'},
+            ],
+            onClick(event) {
+                switch (event.target) {
+                    case 'docs':
+                        w2ui['UseCaseEditGeneral'].html('main', w2ui.UseCaseEditDoc);
+                        break;
+                    case 'actors':
+                        w2ui['UseCaseEditGeneral'].html('main', w2ui.UseCaseEditActors);
+                        break;
+                    case 'scenarios':
+                        w2ui['UseCaseEditGeneral'].html('main', w2ui.UseCaseEditScenarios);
+                        break;
+                }
+            }
+        });
+    }
+    _createUseCaseEditDoc(record, setURL);
+    _createUseCaseEditActors(record, setURL);
+    _createUseCaseEditScenarios(record, setURL);
+
+    w2ui['UseCaseEditDoc'].record = record;
+    w2ui['UseCaseEditActors'].record = record;
+    w2ui['UseCaseEditScenarios'].record = record;
+
+    w2ui['UseCaseEditGeneral'].saveURL = setURL;
+    w2ui.UseCaseEditGeneral.html('left', w2ui.UseCaseEditTabs);
+    w2ui.UseCaseEditGeneral.html('main', w2ui.UseCaseEditDoc);
+    return w2ui['UseCaseEditGeneral'];
 }
 
+function _createUseCaseEditScenarios(record, setURL) {
+    let config = {
+        name: "UseCaseEditScenarios",
+        title: "scenarios",
+        generateURL: 'usecase/generate?target=scenarios',
+        tab: 'scenarios',
+        saveURL: "scenario/save",
+        attribute: 'scenarios',
+        columns: [
+            {
+                field: 'name',
+                caption: 'Name',
+                size: '25%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => {
+                    return name;
+                }
+            },
+            {
+                field: 'actor',
+                caption: 'Actors',
+                size: '25%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => {
+                    return Object.keys(value.actors).join(', ');
+                }
+            },
+            {
+                field: 'description',
+                caption: 'Description',
+                size: '50%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => {
+                    return value.description;
+                }
+            },
+
+        ]
+    };
+    _createCharacteristicGrid(config);
+}
+
+function _createUseCaseEditActors(record, setURL) {
+    let config = {
+        name: "UseCaseEditActors",
+        title: "Actors",
+        generateURL: 'usecase/generate?target=actors',
+        tab: 'actors',
+        saveURL: "actor/save",
+        edit: AActor.editDocs,
+        editURL: 'actor/get',
+        attribute: 'actors',
+        columns: [
+            {
+                field: 'name',
+                caption: 'Name',
+                size: '100%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => {
+                    return name;
+                }
+            },
+
+        ]
+    };
+    _createCharacteristicGrid(config);
+}
+
+function _createCharacteristicGrid(config) {
+    if (!w2ui[config.name]) {
+        $().w2grid({
+            name: config.name,
+            header: config.title,
+            show: {
+                header: true,
+                columnHeaders: true,
+                toolbar: true,
+                toolbarSave: true,
+                toolbarAdd: true,
+                toolbarEdit: true,
+                toolbarDelete: true
+            },
+            toolbar: {
+                items: [
+                    {id: 'generate', type: 'button', img: 'aibutton'}
+                ],
+                onClick(event) {
+                    if (event.target === 'generate') {
+                        let clsid = w2ui[config.name].record.name;
+                        let url = `${config.generateURL}&id=${clsid}`;
+                        w2ui[config.name].lock('Generating...', true);
+                        w2ui[config.name].refresh();
+                        $('html').css('cursor', 'wait');
+                        $.ajax({
+                            url: url,
+                            success: function (results) {
+                                w2ui[config.name].unlock();
+                                w2ui[config.name].record = results;
+                                $('html').css('cursor', 'auto');
+                                w2ui.PackageEditTabs.click(config.tab);
+                            },
+                            failure: function (results) {
+                                console.error(results);
+                            }
+                        });
+                    }
+                }
+            },
+            onAdd: (event) => {
+            },
+            onSave: (event) => {
+                let changes = w2ui[config.name].getChanges();
+                let records = w2ui[config.name].records;
+                for (let i in changes) {
+                    let change = changes[i];
+                    let rec = null;
+                    for (let j in records) {
+                        if (records[j].recid === change.recid) {
+                            rec = records[j];
+                            break;
+                        }
+                    }
+                    // Just updating the episode
+                    if (rec.id) {
+                        let url = `${config.saveURL}?id=${rec.id}`;
+                        for (let i in change) {
+                            url += `&${i}=${change[i]}`;
+                        }
+                        $.ajax({
+                            url: url,
+                            success: function (results) {
+                                console.log("results", results);
+                            }
+                        });
+                    } else {
+                    }
+                }
+            },
+            onEdit: (event) => {
+                // Open the Episode Edit Dialog
+                let records = w2ui[config.name].records;
+                let rec = null;
+                for (let j in records) {
+                    if (records[j].recid === change.recid) {
+                        rec = records[j];
+                        break;
+                    }
+                }
+            },
+            onDelete: (event) => {
+                let selected = w2ui[config.name].getSelection();
+                console.log("Delete", selected);
+            },
+            onRender: (event) => {
+                let records = [];
+                let count = 0;
+                for (let name in w2ui[config.name].record[config.attribute]) {
+                    let value = w2ui[config.name].record[config.attribute][name];
+                    let record = {
+                        recid: count++
+                    };
+                    for(let i in config.columns) {
+                        let col = config.columns[i];
+                        record[col.field] = col.fn(name,value);
+                    }
+                    records.push(record);
+                }
+                w2ui[config.name].records = records;
+                w2ui[config.name].sort('name', 'desc');
+                setTimeout(function () {
+                    w2ui[config.name].refreshBody();
+                }, 10);
+            },
+            columns: config.columns,
+        });
+        w2ui[config.name].on('dblClick', function(event) {
+            let record = this.get(event.recid);
+            // THis is where we need to open up another window to show details of what was clicked on.
+            if(config.edit && config.editURL) {
+                $.ajax({
+                    url: `${config.editURL}?id=${record.name}`,
+                    success: function(results) {
+                        config.edit(results, config.saveURL);
+                    }
+                });
+            }
+
+        });
+    }
+}
 function addUseCaseListNode(usecase, parent) {
     let uname = usecase.name.replace(/\s/g, '');
+    parent = parent || 'u';
+    parent = parent.replace(/\s/g, '');
     let snum = 0;
     let ucItem = {
-        id: `${parent}.${uname}`, text: usecase.name, img: 'icon-folder', nodes: [],
+        id: `${parent}.${uname}`, text: usecase.name, img: 'ailtire-usecase', nodes: [],
         link: `usecase/get?id=${uname}`,
+        link2d: `usecase/uml?id=${uname}`,
         view: 'usecase'
     };
-    for (let sucname in usecase.extended) {
+    let sortedSubs = Object.keys(usecase.extended).sort();
+    for (let i in sortedSubs) {
+        let sucname = sortedSubs[i]
         let suc = usecase.extended[sucname];
-        let node = addUseCaseListNode(suc);
+        let node = addUseCaseListNode(suc,ucItem.id);
         ucItem.nodes.push(node);
         // count the new use case added and all of the sub usecases and scenarios
         snum += node.count + 1;
     }
-    for (let sname in usecase.scenarios) {
+    let sortedScenarios = Object.keys(usecase.scenarios);
+
+    for (let i in sortedScenarios) {
+        let sname = sortedScenarios[i];
+
         snum++;
         ucItem.nodes.push({
-            id: uname + sname,
+            id: parent + uname + sname,
             text: sname,
-            img: 'icon-page',
+            img: 'ailtire-scenario',
             link: `scenario/get?id=${uname}.${sname}`,
+            link2d: `scenario/uml?id=${uname}.${sname}`,
             view: 'scenario'
         });
     }
     ucItem.count = snum;
     return ucItem;
+}
+
+function _setGraphToolbar(object) {
+    const distance = 1750;
+    const div = document.getElementById('preview2d');
+    window.graph.toolbar.setToolBar([
+        {
+            type: 'button', id: 'fit', text: 'Show All', img: 'w2ui-icon-zoom',
+            onClick: (event) => {
+                window.graph.graph.zoomToFit(1000);
+                // 2D
+                div.innerHTML = "Fetching UML diagrams";
+                $.ajax({
+                    url: object.link2d +"&diagram=Activities",
+                    success: (results) => {
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        },
+        {
+            type: 'button', id: 'activities', text: 'Activities', img: 'w2ui-icon-search', onClick: (event) => {
+                // 2D
+                div.innerHTML = "Fetching UML diagrams";
+                $.ajax({
+                    url: object.link2d +"&diagram=Activities",
+                    success: (results) => {
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        },
+    ]);
 }

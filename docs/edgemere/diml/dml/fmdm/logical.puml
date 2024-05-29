@@ -1,7 +1,7 @@
 @startuml
 
 
-package "Data Orchestrator" #lightblue {
+package "Data Orchestrator" ##aaffff {
     
         class DataInstance {
         }
@@ -14,7 +14,7 @@ package "Data Management Layer" #ffcc88 {
     }
 
 
-package "Federated Meta Data Management" #lightblue {
+package "Federated Meta Data Management" ##aaffff {
 
     interface "Federated Meta Data Management" as i {
             /edgemere/diml/dml/fmdm/query()
@@ -26,7 +26,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Federated Meta Data Management" #lightblue {
+package "Federated Meta Data Management" ##aaffff {
         class "LineageMetaData" {
                  string creationAction
                  string name

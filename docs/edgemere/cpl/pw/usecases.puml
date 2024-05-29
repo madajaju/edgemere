@@ -12,7 +12,7 @@ Actor "Actor" as Actor
 Actor "Actor" as Actor
 
 
-rectangle "PhysicalWorld" #lightblue {
+rectangle "PhysicalWorld" #aaffff {
 usecase "ChangePhysicalWorld" as ChangePhysicalWorld
     Actor --> ChangePhysicalWorld
     usecase "CommissionPhysicalAsset" as CommissionPhysicalAsset

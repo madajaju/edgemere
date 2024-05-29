@@ -2,73 +2,78 @@
 class WorkloadInstance {
     static definition = {
         name: 'WorkloadInstance',
-        description: 'Workload Instance that is running in the ecosystem',
+        description: 'The "WorkloadInstance" class in the "aml" package represents a running workload instance in the ecosystem with defined methods for creation, destruction, updating, and removing, with attributes indicating the name, status, and last message of the instance, and associated with a "Workload" type application.',
+        unique: false,
+        extends: false,
+        
         attributes: {
-            name: {
-                type: 'string',
-                description: 'Name of the application instance'
-            },
-            status: {
-                type: 'string',
-                description: 'Name of the application instance'
-            },
-            message: {
-                type: 'string',
-                description: 'Last message in the application instance'
-            }
-        },
+    "name": {
+        "type": "string",
+        "description": "Name of the application instance"
+    },
+    "status": {
+        "type": "string",
+        "description": "Name of the application instance"
+    },
+    "message": {
+        "type": "string",
+        "description": "Last message in the application instance"
+    }
+},
+        
         associations: {
-            app: {
-                type: 'Workload',
-                cardinality: 1,
-                composition: false,
-                owner: false,
-            },
-        },
+    "app": {
+        "type": "Workload",
+        "cardinality": 1,
+        "composition": false,
+        "owner": false,
+        "name": "app"
+    }
+},
+        
         statenet: {
-            Init: {
-                events: {
-                    create: {
-                        Initializing: {}
-                    }
-                }
-            },
-            Initializing: {
-                events: {
-                    provisoned: {
-                        Running: {}
-                    }
-                }
-            },
-            Running: {
-                events: {
-                    kill: {
-                        Stopping: {}
-                    }
-                }
-            },
-            Stopping: {
-                events: {
-                    stopped: {
-                        Stopped: {}
-                    }
-                }
-            },
-            Stopped: {
-                events: {
-                    exit: {
-                        Exit: {}
-                    },
-                    failed: {
-                        Failed: {}
-                    }
-                }
-            },
-            Exit: {
-            },
-            Failed: {
+    "Init": {
+        "events": {
+            "create": {
+                "Initializing": {}
             }
-        },
+        }
+    },
+    "Initializing": {
+        "events": {
+            "provisoned": {
+                "Running": {}
+            }
+        }
+    },
+    "Running": {
+        "events": {
+            "kill": {
+                "Stopping": {}
+            }
+        }
+    },
+    "Stopping": {
+        "events": {
+            "stopped": {
+                "Stopped": {}
+            }
+        }
+    },
+    "Stopped": {
+        "events": {
+            "exit": {
+                "Exit": {}
+            },
+            "failed": {
+                "Failed": {}
+            }
+        }
+    },
+    "Exit": {},
+    "Failed": {}
+},
+        
         view: {
             color: "#00aaff",
             object2d: (options) => {
@@ -97,10 +102,8 @@ class WorkloadInstance {
                         `</a-entity>`;
                 }
                 return retval;
-            }
+            },
         }
     }
 }
-
 module.exports = WorkloadInstance;
-

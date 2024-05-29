@@ -88,24 +88,33 @@ hexagon "resource.ready" as resourceready
 
 
 
+
+
+
+
+
+
+
+
+
         rectangle "Manage Resources" as ManageResources #ffffaa {
             ("Get Resources")/ as ITOperationsManageResourcesGetResources
         }
     
     edgemeresdiresourceget <-- ITOperationsManageResourcesGetResources
-    
+
         rectangle "Manage Resources" as ManageResources #ffffaa {
             ("List Resources")/ as ITOperationsManageResourcesListResources
         }
     
     edgemeresdiresourcelist <-- ITOperationsManageResourcesListResources
-    
+
         rectangle "Manage Resources" as ManageResources #ffffaa {
             ("Release Resources")/ as ITOperationsManageResourcesReleaseResources
         }
     
     edgemeresdiresourcerelease <-- ITOperationsManageResourcesReleaseResources
-    
+
 
 
 

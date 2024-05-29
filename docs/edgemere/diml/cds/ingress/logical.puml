@@ -2,7 +2,7 @@
 
 
 
-package "Ingress Services" #lightblue {
+package "Ingress Services" ##aaffff {
 
     interface "Ingress Services" as i {
     
@@ -13,7 +13,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Ingress Services" #lightblue {
+package "Ingress Services" ##aaffff {
     
 }
 

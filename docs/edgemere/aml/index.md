@@ -8,33 +8,23 @@ has_children: true
 
 # Application Management Layer
 
-Application Management Layer is responsible for managing applications and workflows and the development, test, deployment, and updates of those applications and workloads.
+The Application Management Layer (AML) is a comprehensive package that provides classes and workflows for managing AI models, applications and workloads, facilitating interaction between various IT professionals such as DevOps Engineers, Application Developers, Data Engineers, and Data Scientists.
 
-The Application Management Layer (AML) contains abstractions that help App Development,  
-DevOps and IT Operations manage complex workflows and applications through the application  
-development lifecycle. The AML sits at the top of the system stack and communicates directly with  
-the [Distributed Information Management Layer](package--edgemere-dml) and the  
-[Service Management Layer](package--edgemere-sml). It also leverages the  
-[Identity Aspect](package--edgemere-ia) and [Security Aspect](package--edgemere-sa) layers.
+The package documentation elaborates on the Application Management Layer (AML) which forms an important component in managing complex workflows and applications through the application development lifecycle. 
 
-![AML Overall](./aml.png)
+Based on the identified use cases, the AML contains key functionalities for managing AI models, applications, and workloads. IT professionals such as DevOps engineers, application developers, data engineers, and data scientists are the primary actors who interact with the AML, utilizing different methods to perform distinct use cases. 
 
-The AML contains sub-packages that group common-off-the-shelf tools integrated.  
-In the Analytics Services package, standard tools for analytics can be found, including collection,  
-analytics, and insight. AI/ML Services represent the myriad of tools and services that focus  
-on Artificial Intelligence and Machine Learning algorithms and solutions.
+The use case 'Manage AI Models' outlines how a Data Scientist manages AI models in coordination with DevOps to ensure that both the AI models and applications are updated together. The scenarios within this use case cover actions like creating, deploying, destroying, and updating AI models. 
 
-These two packages take advantage of the application and workflow services that allow  
-these solutions are to be orchestrated at the highest level of integration by providing a  
-framework and common definition framework to show how these applications and workflow  
-interact.
+In the 'Manage Applications' use case, DevOps Engineers and Application Developers collaborate to manage applications across multiple platforms. The operations within this use case include building, creating, deploying, destroying, monitoring, and updating the applications.
 
-Several tool suites have been built to aid SecDevOps. These tools are  
-grouped in the SecDevOps Services and include Automation Frameworks (Salt, Chef,  
-puppet, ansible), CICD tools (Gitlab, GitHub, Jenkins, etc...) and Environment Management.
+The use case 'Manage Workloads' enables Application Developers to interconnect applications through workflows, thereby automating complex data interactions between various applications across a hybrid infrastructure. The included operations are creating, deploying, destroying, monitoring, and updating the workloads. 
 
-![AML details](amldetail.png)
+Within the AML package, we have several key classes including Application, Application Instance, Application Template, Workload, Workload Instance, and Workload Template. Each of these classes provides methods for managing their instances, including operations like creating, destroying, adding to, updating, and removing from the instances. 
 
+Furthermore, there are defined workflows for managing AI models, applications, and workloads. These workflows illustrate the sequential actions, conditions, and transitions between different states for each operation, specifying the actors responsible for each action and the outcome of their activities. 
+
+Overall, the AML provides a comprehensive management system for AI models, applications, and workloads, connecting different users and their actions in an organized, modular manner.
 
 ## Use Cases
 
@@ -73,7 +63,10 @@ users interact with the system.
 * [ edgemere aml aimodel deploy](#action--edgemere-aml-aimodel-deploy)
 * [ edgemere aml aimodel destroy](#action--edgemere-aml-aimodel-destroy)
 * [ edgemere aml aimodel list](#action--edgemere-aml-aimodel-list)
+* [ edgemere aml aimodel scan](#action--edgemere-aml-aimodel-scan)
+* [ edgemere aml aimodel sign](#action--edgemere-aml-aimodel-sign)
 * [ edgemere aml aimodel update](#action--edgemere-aml-aimodel-update)
+* [ edgemere aml aimodel validate](#action--edgemere-aml-aimodel-validate)
 * [ edgemere aml application create](#action--edgemere-aml-application-create)
 * [ edgemere aml application deploy](#action--edgemere-aml-application-deploy)
 * [ edgemere aml application destroy](#action--edgemere-aml-application-destroy)
@@ -201,6 +194,19 @@ The Application Management Layer subsystem provides the following activities and
 cases and scenarios of the subsystem.
 
 
+### Messages Handled
+
+The Application Management Layer subsystem is an event driven architecture and handle several events. The following
+events are handled by this subsystem. Please note that this subsystem is not the only subsystem that handles
+these events.
+
+| Message | Action | Description |
+| --- | --- | --- |
+| aimodel.create | Custom Action |  |
+| aimodel.updated | Custom Action |  |
+| application.create | Custom Action |  |
+| application.updated | Custom Action |  |
+
 
 
 ### Messages Sent
@@ -237,75 +243,101 @@ subsystems and actors can access the system.
 
 
 
-* REST - /edgemere/aml/aimodel/create?attr1=string
-* bin -  edgemere aml aimodel create --attr1 string
-* js - .edgemere.aml.aimodel.create({ attr1:string })
+* REST - /edgemere/aml/aimodel/create?
+* bin -  edgemere aml aimodel create 
+* js - .edgemere.aml.aimodel.create({  })
 
 #### Description
-Description of the action
+Creates a new AI model
 
 #### Parameters
 
-| Name | Type | Required | Description |
-|---|---|---|---|
-| attr1 | string |false | Description for the parameter |
-
+No parameters
 
 
 ### Action  edgemere aml aimodel deploy
 
 
 
-* REST - /edgemere/aml/aimodel/deploy?attr1=string
-* bin -  edgemere aml aimodel deploy --attr1 string
-* js - .edgemere.aml.aimodel.deploy({ attr1:string })
+* REST - /edgemere/aml/aimodel/deploy?
+* bin -  edgemere aml aimodel deploy 
+* js - .edgemere.aml.aimodel.deploy({  })
 
 #### Description
-Description of the action
+Deploys a specified AI model
 
 #### Parameters
 
-| Name | Type | Required | Description |
-|---|---|---|---|
-| attr1 | string |false | Description for the parameter |
-
+No parameters
 
 
 ### Action  edgemere aml aimodel destroy
 
 
 
-* REST - /edgemere/aml/aimodel/destroy?attr1=string
-* bin -  edgemere aml aimodel destroy --attr1 string
-* js - .edgemere.aml.aimodel.destroy({ attr1:string })
+* REST - /edgemere/aml/aimodel/destroy?
+* bin -  edgemere aml aimodel destroy 
+* js - .edgemere.aml.aimodel.destroy({  })
 
 #### Description
-Description of the action
+Destroys a specified AI model
 
 #### Parameters
 
-| Name | Type | Required | Description |
-|---|---|---|---|
-| attr1 | string |false | Description for the parameter |
-
+No parameters
 
 
 ### Action  edgemere aml aimodel list
 
 
 
-* REST - /edgemere/aml/aimodel/list?attr1=string
-* bin -  edgemere aml aimodel list --attr1 string
-* js - .edgemere.aml.aimodel.list({ attr1:string })
+* REST - /edgemere/aml/aimodel/list?
+* bin -  edgemere aml aimodel list 
+* js - .edgemere.aml.aimodel.list({  })
 
 #### Description
-Description of the action
+Returns a list of AI models
+
+#### Parameters
+
+No parameters
+
+
+### Action  edgemere aml aimodel scan
+
+
+
+* REST - /edgemere/aml/aimodel/scan?appName=string
+* bin -  edgemere aml aimodel scan --appName string
+* js - .edgemere.aml.aimodel.scan({ appName:string })
+
+#### Description
+An interface designed to scan the AI model for potential malware or viruses.
 
 #### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
-| attr1 | string |false | Description for the parameter |
+| appName | string | | The name of the AI model to scan. |
+
+
+
+### Action  edgemere aml aimodel sign
+
+
+
+* REST - /edgemere/aml/aimodel/sign?appName=string
+* bin -  edgemere aml aimodel sign --appName string
+* js - .edgemere.aml.aimodel.sign({ appName:string })
+
+#### Description
+This interface is used to add a digital signature to the AI model to confirm its authenticity.
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| appName | string | | The name of the AI model that needs to be digitally signed. |
 
 
 
@@ -313,18 +345,35 @@ Description of the action
 
 
 
-* REST - /edgemere/aml/aimodel/update?attr1=string
-* bin -  edgemere aml aimodel update --attr1 string
-* js - .edgemere.aml.aimodel.update({ attr1:string })
+* REST - /edgemere/aml/aimodel/update?
+* bin -  edgemere aml aimodel update 
+* js - .edgemere.aml.aimodel.update({  })
 
 #### Description
-Description of the action
+Updates a specified AI model
+
+#### Parameters
+
+No parameters
+
+
+### Action  edgemere aml aimodel validate
+
+
+
+* REST - /edgemere/aml/aimodel/validate?appName=string&amp;SLA=string
+* bin -  edgemere aml aimodel validate --appName string --SLA string
+* js - .edgemere.aml.aimodel.validate({ appName:string,SLA:string })
+
+#### Description
+An interface to validate AI model based on SLA Pass Rate
 
 #### Parameters
 
 | Name | Type | Required | Description |
 |---|---|---|---|
-| attr1 | string |false | Description for the parameter |
+| appName | string | | The unique identifier for the AI model to be validated. |
+| SLA | string | | The Service Level Agreement details defining the expected performance and pass rates for the AI model |
 
 
 
@@ -332,76 +381,64 @@ Description of the action
 
 
 
-* REST - /edgemere/aml/application/create?attr1=string
-* bin -  edgemere aml application create --attr1 string
-* js - .edgemere.aml.application.create({ attr1:string })
+* REST - /edgemere/aml/application/create?
+* bin -  edgemere aml application create 
+* js - .edgemere.aml.application.create({  })
 
 #### Description
-Description of the action
+Creates a new application
 
 #### Parameters
 
-| Name | Type | Required | Description |
-|---|---|---|---|
-| attr1 | string |false | Description for the parameter |
-
+No parameters
 
 
 ### Action  edgemere aml application deploy
 
 
 
-* REST - /edgemere/aml/application/deploy?attr1=string
-* bin -  edgemere aml application deploy --attr1 string
-* js - .edgemere.aml.application.deploy({ attr1:string })
+* REST - /edgemere/aml/application/deploy?
+* bin -  edgemere aml application deploy 
+* js - .edgemere.aml.application.deploy({  })
 
 #### Description
-Description of the action
+Deploys a specified application
 
 #### Parameters
 
-| Name | Type | Required | Description |
-|---|---|---|---|
-| attr1 | string |false | Description for the parameter |
-
+No parameters
 
 
 ### Action  edgemere aml application destroy
 
 
 
-* REST - /edgemere/aml/application/destroy?attr1=string
-* bin -  edgemere aml application destroy --attr1 string
-* js - .edgemere.aml.application.destroy({ attr1:string })
+* REST - /edgemere/aml/application/destroy?
+* bin -  edgemere aml application destroy 
+* js - .edgemere.aml.application.destroy({  })
 
 #### Description
-Description of the action
+Destroys a specified application
 
 #### Parameters
 
-| Name | Type | Required | Description |
-|---|---|---|---|
-| attr1 | string |false | Description for the parameter |
-
+No parameters
 
 
 ### Action  edgemere aml application list
 
 
 
-* REST - /edgemere/aml/application/list?attr1=string
-* bin -  edgemere aml application list --attr1 string
-* js - .edgemere.aml.application.list({ attr1:string })
+* REST - /edgemere/aml/application/list?
+* bin -  edgemere aml application list 
+* js - .edgemere.aml.application.list({  })
 
 #### Description
-Description of the action
+Returns a list of applications
 
 #### Parameters
 
-| Name | Type | Required | Description |
-|---|---|---|---|
-| attr1 | string |false | Description for the parameter |
-
+No parameters
 
 
 ### Action  edgemere aml application monitor
@@ -427,19 +464,16 @@ Description of the action
 
 
 
-* REST - /edgemere/aml/application/update?attr1=string
-* bin -  edgemere aml application update --attr1 string
-* js - .edgemere.aml.application.update({ attr1:string })
+* REST - /edgemere/aml/application/update?
+* bin -  edgemere aml application update 
+* js - .edgemere.aml.application.update({  })
 
 #### Description
-Description of the action
+Updates a specified application
 
 #### Parameters
 
-| Name | Type | Required | Description |
-|---|---|---|---|
-| attr1 | string |false | Description for the parameter |
-
+No parameters
 
 
 ### Action  edgemere aml data create
@@ -465,76 +499,64 @@ Description of the action
 
 
 
-* REST - /edgemere/aml/workload/create?attr1=string
-* bin -  edgemere aml workload create --attr1 string
-* js - .edgemere.aml.workload.create({ attr1:string })
+* REST - /edgemere/aml/workload/create?
+* bin -  edgemere aml workload create 
+* js - .edgemere.aml.workload.create({  })
 
 #### Description
-Description of the action
+Creates a new workload
 
 #### Parameters
 
-| Name | Type | Required | Description |
-|---|---|---|---|
-| attr1 | string |false | Description for the parameter |
-
+No parameters
 
 
 ### Action  edgemere aml workload deploy
 
 
 
-* REST - /edgemere/aml/workload/deploy?attr1=string
-* bin -  edgemere aml workload deploy --attr1 string
-* js - .edgemere.aml.workload.deploy({ attr1:string })
+* REST - /edgemere/aml/workload/deploy?
+* bin -  edgemere aml workload deploy 
+* js - .edgemere.aml.workload.deploy({  })
 
 #### Description
-Description of the action
+Deploys a specified workload
 
 #### Parameters
 
-| Name | Type | Required | Description |
-|---|---|---|---|
-| attr1 | string |false | Description for the parameter |
-
+No parameters
 
 
 ### Action  edgemere aml workload destroy
 
 
 
-* REST - /edgemere/aml/workload/destroy?attr1=string
-* bin -  edgemere aml workload destroy --attr1 string
-* js - .edgemere.aml.workload.destroy({ attr1:string })
+* REST - /edgemere/aml/workload/destroy?
+* bin -  edgemere aml workload destroy 
+* js - .edgemere.aml.workload.destroy({  })
 
 #### Description
-Description of the action
+Destroys a specified workload
 
 #### Parameters
 
-| Name | Type | Required | Description |
-|---|---|---|---|
-| attr1 | string |false | Description for the parameter |
-
+No parameters
 
 
 ### Action  edgemere aml workload list
 
 
 
-* REST - /edgemere/aml/workload/list?attr1=string
-* bin -  edgemere aml workload list --attr1 string
-* js - .edgemere.aml.workload.list({ attr1:string })
+* REST - /edgemere/aml/workload/list?
+* bin -  edgemere aml workload list 
+* js - .edgemere.aml.workload.list({  })
 
 #### Description
-Description of the action
+Returns a list of workloads
 
 #### Parameters
 
-| Name | Type | Required | Description |
-|---|---|---|---|
-| attr1 | string |false | Description for the parameter |
-
+No parameters
 
 
 ### Action  edgemere aml workload monitor
@@ -560,19 +582,16 @@ Description of the action
 
 
 
-* REST - /edgemere/aml/workload/update?attr1=string
-* bin -  edgemere aml workload update --attr1 string
-* js - .edgemere.aml.workload.update({ attr1:string })
+* REST - /edgemere/aml/workload/update?
+* bin -  edgemere aml workload update 
+* js - .edgemere.aml.workload.update({  })
 
 #### Description
-Description of the action
+Updates a specified workload
 
 #### Parameters
 
-| Name | Type | Required | Description |
-|---|---|---|---|
-| attr1 | string |false | Description for the parameter |
-
+No parameters
 
 
 

@@ -3,7 +3,7 @@
 left to right direction
 
 
-rectangle "Blue Print Management" #lightblue {
+rectangle "Blue Print Management" ##aaffff {
 }
 
 

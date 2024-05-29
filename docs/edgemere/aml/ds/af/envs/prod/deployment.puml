@@ -8,7 +8,7 @@ left to right direction
 
 
 
-node "a_d_af" #lightblue {
+node "a_d_af" #aaffff {
 
 
     hexagon childrennet #black [

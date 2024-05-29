@@ -1,0 +1,25 @@
+# Data Scientist
+
+*Shortname:* datascientist
+
+The Data Scientist is a key actor in the data ecosystem, primarily responsible for the architecture and development of data analytic models and solutions. They play a key role in transforming raw data into meaningful and actionable insights.
+
+## Purpose and Responsibilities
+
+Data Scientists are invariably involved in the data processing pipeline, rendering crucial decisions about choice of models, their development and updates. 
+
+* **AI Model Management** - They create, add to, update, and sometimes discard AI models as per the requirements. 
+* **Data Management** - They manage data, data adaptors and data instances ensuring the right data is used in the models. 
+* **Blueprints and Metadata Management** - They are responsible for managing the data blueprints and metadata associated ensuring data processing is standardized and traceable
+* **Business Information Provision** - They are also responsible for providing invaluable business information, by virtue of their analytics.
+
+## Interaction with Workflows & Use cases
+
+The Data Scientist interacts with other actors within the system to streamline the data-processing and analytics pipeline. 
+
+* Work closely with the Data engineer to deliver solutions to the Data Analyst. They collaborate to ensure the quality and consistency of data for the analytical models.
+* Interface with DevOps to ensure coordinated updates to applications and AI models ensuring that all components are synchronized
+* Play a critical role in managing the data catalog, which contains all the data that is available for use by other actors
+* They often create blueprints to standardize data processing operations
+
+Overall, the Data Scientist is a crucial actor leveraging data for strategic decision-making and improving business operations via insights and analytics. This actor is a vital part of the system to ensure the best possible data-driven business strategies.

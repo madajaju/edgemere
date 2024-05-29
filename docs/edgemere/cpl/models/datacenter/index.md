@@ -7,7 +7,7 @@ parent: Classes
 
 # DataCenter
 
-This represent the physical data center and contains several devices
+The &#34;DataCenter&#34; class, belonging to the CPL package, facilitates the management of physical data centers, including operations such as creating, updating, disabling, enabling, and destroying data centers, managing devices within the data center, capacity planning, and handling device reservations.
 
 ![Logical Diagram](./logical.png)
 
@@ -46,9 +46,12 @@ The following diagram is the state net for this class.
 
 | Name | Description | Events |
 | --- | --- | --- |
-| Init |  | create-&gt;Enabled,  |
-| Enabled |  | disable-&gt;Disabled,  |
-| Disabled |  | enable-&gt;Enabled,  |
+| Init | Data Center is not created | create-&gt;Enabled,  |
+| Enabled | Data Center is enabled | disable-&gt;Disabled, destroy-&gt;Destroyed, update-&gt;Updated, reserve-&gt;Reserved,  |
+| Disabled | Data Center is disabled | enable-&gt;Enabled, destroy-&gt;Destroyed,  |
+| Destroyed | Data Center is destroyed |  |
+| Updated | Data Center is updated |  |
+| Reserved | Resource is reserved |  |
 
 
 
@@ -58,6 +61,12 @@ The following diagram is the state net for this class.
 * [create() - Create a Data Center](#action-create)
 * [disable() - Disable Device and its hardware](#action-disable)
 * [enable() - Enable Device to be used.](#action-enable)
+* [getAdevices() - Get all Aggregated Devices associated with the Data Center](#action-getAdevices)
+* [getDevice() - Get specific device details in the Data Center](#action-getDevice)
+* [getDevices() - Get all devices associated with the Data Center](#action-getDevices)
+* [getReservedResources() - Get List of all reserved resources in the Data Center](#action-getReservedResources)
+* [removeAdevices() - Remove Aggregated Devices from the data center](#action-removeAdevices)
+* [removeDevices() - Remove Devices from the data center](#action-removeDevices)
 * [reserve() - Reserve a resource](#action-reserve)
 
 
@@ -157,6 +166,129 @@ Enable Device to be used.
 #### Parameters
 
 No parameters
+
+
+
+### Action datacenter getAdevices
+
+
+
+* REST - datacenter/getAdevices?dataCenterName=string
+* bin - datacenter getAdevices --dataCenterName string
+* js - datacenter.getAdevices({ dataCenterName:string })
+
+#### Description
+Get all Aggregated Devices associated with the Data Center
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| dataCenterName | string | | Name of the Data Center |
+
+
+
+
+### Action datacenter getDevice
+
+
+
+* REST - datacenter/getDevice?dataCenterName=string&amp;deviceName=string
+* bin - datacenter getDevice --dataCenterName string --deviceName string
+* js - datacenter.getDevice({ dataCenterName:string,deviceName:string })
+
+#### Description
+Get specific device details in the Data Center
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| dataCenterName | string | | Name of the Data Center |
+| deviceName | string | | Name of the Device |
+
+
+
+
+### Action datacenter getDevices
+
+
+
+* REST - datacenter/getDevices?dataCenterName=string
+* bin - datacenter getDevices --dataCenterName string
+* js - datacenter.getDevices({ dataCenterName:string })
+
+#### Description
+Get all devices associated with the Data Center
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| dataCenterName | string | | Name of the Data Center |
+
+
+
+
+### Action datacenter getReservedResources
+
+
+
+* REST - datacenter/getReservedResources?dataCenterName=string
+* bin - datacenter getReservedResources --dataCenterName string
+* js - datacenter.getReservedResources({ dataCenterName:string })
+
+#### Description
+Get List of all reserved resources in the Data Center
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| dataCenterName | string | | Name of the Data Center |
+
+
+
+
+### Action datacenter removeAdevices
+
+
+
+* REST - datacenter/removeAdevices?dataCenterName=string&amp;adevices=array
+* bin - datacenter removeAdevices --dataCenterName string --adevices array
+* js - datacenter.removeAdevices({ dataCenterName:string,adevices:array })
+
+#### Description
+Remove Aggregated Devices from the data center
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| dataCenterName | string | | Name of the Data Center |
+| adevices | array | | List of aggregated device names to be removed |
+
+
+
+
+### Action datacenter removeDevices
+
+
+
+* REST - datacenter/removeDevices?dataCenterName=string&amp;devices=array
+* bin - datacenter removeDevices --dataCenterName string --devices array
+* js - datacenter.removeDevices({ dataCenterName:string,devices:array })
+
+#### Description
+Remove Devices from the data center
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| dataCenterName | string | | Name of the Data Center |
+| devices | array | | List of device names to be removed |
+
 
 
 

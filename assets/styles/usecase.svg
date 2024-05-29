@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     contentScriptType="application/ecmascript" contentStyleType="text/css" height="120px" preserveAspectRatio="none"
+     style="width:120px;height:120px;" version="1.1" viewBox="0 0 50 50" width="120" zoomAndPan="magnify">
+     <ellipse cx="25" cy="25" rx="23" ry="14" fill="yellow" stroke="black" stroke-width="2" />
+</svg>

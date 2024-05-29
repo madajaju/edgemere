@@ -11,9 +11,20 @@ class "AggregatedDevice" as Model {
  enable()
  reserve()
  addToHardware()
+ archiveData()
  create()
+ disableAllFunctions()
+ displayReservations()
+ enableAllFunctions()
  getReservations()
+ initiateDevice()
+ logDeviceStatus()
  provision()
+ reserveResource()
+ setupHardware()
+ updateDeviceGroup()
+ updateHardware()
+ updateStatus()
  
 }
 

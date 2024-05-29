@@ -2,10 +2,52 @@
 
 
 
-state PhysicalAsset #lightblue {
+state PhysicalAsset #aaffff {
+
+    state Init #aaffff {
+    }
+
+    state Active #aaffff {
+    }
+
+    state Inactive #aaffff {
+    }
+
+    state Monitoring #aaffff {
+    }
+
+    state Destroyed #aaffff {
+    }
 
 
 
+
+Init -[#black]--> Active : create
+
+state deactivateCondition <<choice>>
+Active -[#black]--> deactivateCondition : deactivate
+
+deactivateCondition -[#black]--> Inactive: [Check if inactive]
+
+state startMonitoringCondition <<choice>>
+Active -[#black]--> startMonitoringCondition : startMonitoring
+
+startMonitoringCondition -[#black]--> Monitoring: [Check for sensors]
+
+Active -[#black]--> Active : attachSensor
+
+Active -[#black]--> Active : attachPathway
+
+state activateCondition <<choice>>
+Inactive -[#black]--> activateCondition : activate
+
+activateCondition -[#black]--> Active: [Check if active]
+
+Inactive -[#black]--> Destroyed : destroy
+
+Monitoring -[#black]--> Active : stopMonitoring
+
+Monitoring -[#black]--> Monitoring : monitorCondition
 
 }
 

@@ -2,7 +2,7 @@
 
 
 
-package "Cyber" #lightblue {
+package "Cyber" #aaffff {
 
     interface "Cyber" as i {
     
@@ -20,7 +20,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Cyber" #lightblue {
+package "Cyber" #aaffff {
 
 
 }

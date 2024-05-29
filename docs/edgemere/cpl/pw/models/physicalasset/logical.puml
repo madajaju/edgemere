@@ -4,7 +4,14 @@ class "PhysicalAsset" as Model {
  string name
  string assetType
 
+ activate()
+ attachPathway()
+ attachSensor()
  control()
+ deactivate()
+ detachPathway()
+ detachSensor()
+ monitorCondition()
  startMonitoring()
  stopMonitoring()
  

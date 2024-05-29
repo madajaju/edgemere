@@ -51,7 +51,10 @@ IT Opererations create environments and assigns a Multi Cloud to the Environment
 * Then - IT Operations has access to create an environment
 
 #### Steps
-1. To Be Defined
+1. [ edgemere/aml/ds/em/environment/create --attr1 Provide The Description](#action--edgemere-aml-ds-em-environment-create)
+1. [ edgemere/aml/ds/em/environment/addpolicies --attr1 Assign a Multi Cloud Policy](#action--edgemere-aml-ds-em-environment-addpolicies)
+1. [ edgemere/aml/ds/em/environment/enable --attr1 Enable the Environment](#action--edgemere-aml-ds-em-environment-enable)
+1. [ edgemere/aml/ds/em/environment/list --attr1 List down the Environments](#action--edgemere-aml-ds-em-environment-list)
 
 #### Actors
 

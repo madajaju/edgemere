@@ -1,0 +1,17 @@
+# ApplicationInstance Class
+
+**Package:** aml
+
+The `ApplicationInstance` class belongs to the `aml` package, which is a component of the Application Management Layer (AML). This layer manages complex workflows and applications throughout the application development lifecycle.
+
+Specifically, the `ApplicationInstance` class represents a running instance of an application in the ecosystem. It is essentially a component of an application that has been instantiated, therefore indicating that it is currently active and in use. 
+
+The class provides methods to create, modify, and destroy these instances, which are vital functionalities in application lifecycle management. These methods include `create`, `update`, `destroy`, `addTo`, and `removeFrom`.
+
+Beyond its stand-alone functionalities, the `ApplicationInstance` class plays a significant role as it interacts with other classes in the system architecture, specifically with the `Application` class, defined as an association named `app`.
+
+In the broader architecture, the class interfaces directly with the Distributed Information Management Layer and the Service Management Layer, reinforcing its significance in managing the system's application instances. 
+
+Underneath `ApplicationInstance`, it also benefits from lower layers such as the Identity Aspect and Security Aspect, indicating that application instances will have associated identity and security features.
+
+In summary, the `ApplicationInstance` class is a key part of managing applications throughout their lifecycle, enabling the creation, updating, and termination of application instances within the system architecture.

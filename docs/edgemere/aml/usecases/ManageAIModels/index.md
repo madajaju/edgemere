@@ -41,7 +41,7 @@ Data Scientist manages AI models and ties them to and application and data set. 
 
 ### Scenario Create AI Model
 
-Create AI Model is the description
+In this scenario, an application developer or data scientist is using the &#34;Create AI Model&#34; utility to successfully create an AI model named &#39;name1&#39; by invoking the &#39;aimodel/create&#39; method.
 
 ![Scenario CreateAIModel](./CreateAIModel.png)
 #### Criteria
@@ -51,7 +51,11 @@ Create AI Model is the description
 * Then - An application developer or data scientist wants to create an AI model
 
 #### Steps
-1. [aimodel create --name name1](#action-aimodel-create)
+1. [ edgemere/aml/aimodel/create ](#action--edgemere-aml-aimodel-create)
+1. [ edgemere/aml/aimodel/scan --appName name1](#action--edgemere-aml-aimodel-scan)
+1. [ edgemere/aml/aimodel/validate --appName name1 --SLA specified SLA details](#action--edgemere-aml-aimodel-validate)
+1. [ edgemere/aml/aimodel/sign --appName name1](#action--edgemere-aml-aimodel-sign)
+1. [ edgemere/aml/aimodel/create --appName name1](#action--edgemere-aml-aimodel-create)
 
 #### Actors
 
@@ -72,7 +76,11 @@ Deploy AI Model is the description
 * Then - The AI model is trained and ready to be deployed
 
 #### Steps
-1. To Be Defined
+1. [ edgemere/aml/aimodel/create ](#action--edgemere-aml-aimodel-create)
+1. [ edgemere/aml/aimodel/sign --appName [object Object]](#action--edgemere-aml-aimodel-sign)
+1. [ edgemere/aml/aimodel/validate --appName [object Object] --SLA [object Object]](#action--edgemere-aml-aimodel-validate)
+1. [ edgemere/aml/aimodel/deploy ](#action--edgemere-aml-aimodel-deploy)
+1. [ edgemere/aml/aimodel/scan --appName [object Object]](#action--edgemere-aml-aimodel-scan)
 
 #### Actors
 
@@ -94,7 +102,9 @@ Destroy AI Model is the description
 * Then - A Data Engineer or Application Developer uses an AI model
 
 #### Steps
-1. To Be Defined
+1. [ edgemere/aml/aimodel/list ](#action--edgemere-aml-aimodel-list)
+1. [ edgemere/aml/aimodel/destroy --appName [object Object]](#action--edgemere-aml-aimodel-destroy)
+1. [ edgemere/aml/aimodel/list ](#action--edgemere-aml-aimodel-list)
 
 #### Actors
 
@@ -115,7 +125,11 @@ Update AI Model is the description
 * Then - A Data Engineer, DevOps Engineer, or Application Developer uses the AI model
 
 #### Steps
-1. To Be Defined
+1. [ edgemere/aml/aimodel/list ](#action--edgemere-aml-aimodel-list)
+1. [ edgemere/aml/aimodel/update --appName desired AI model name](#action--edgemere-aml-aimodel-update)
+1. [ edgemere/aml/aimodel/validate --appName desired AI model name --SLA provided Service Level Agreement](#action--edgemere-aml-aimodel-validate)
+1. [ edgemere/aml/aimodel/sign --appName desired AI model name](#action--edgemere-aml-aimodel-sign)
+1. [ edgemere/aml/aimodel/deploy ](#action--edgemere-aml-aimodel-deploy)
 
 #### Actors
 

@@ -1,0 +1,26 @@
+@startuml
+
+
+left to right direction
+
+usecase "Automation Framework" as AutomationFramework #yellow
+
+Actor "Developer" as Developer
+
+Developer --> AutomationFramework
+
+
+
+
+
+
+
+
+
+
+
+usecase "CICDPipeline" as CICDPipeline #white
+
+AutomationFramework <.. CICDPipeline : includes
+
+@enduml

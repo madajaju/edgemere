@@ -1,0 +1,30 @@
+@startuml
+
+
+left to right direction
+
+usecase "Environment Deployments" as EnvironmentDeployments #yellow
+
+Actor "Developer" as Developer
+
+Developer --> EnvironmentDeployments
+
+
+
+
+
+
+
+
+
+usecase "0" as 0 #white
+
+EnvironmentDeployments ..> 0 : includes
+
+usecase "1" as 1 #white
+
+EnvironmentDeployments ..> 1 : includes
+
+
+
+@enduml

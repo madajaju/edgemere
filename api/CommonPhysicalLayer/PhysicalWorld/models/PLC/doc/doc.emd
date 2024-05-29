@@ -1,0 +1,23 @@
+# Programmable Logic Controller (PLC) Class 
+
+A Programmable Logic Controller (PLC) plays an integral role in the Physical Asset Management package by acting as a bridge between digitally-controlled processes and real-world, physical assets.
+
+The PLC class in the Physical Asset Management package is responsible for controlling and coordinating the communication between the digital devices and physical assets. 
+
+## Purpose
+
+The primary purpose of the PLC class is to facilitate communication, data exchange, and control functions needed by other modules and classes within the Physical Asset Management package to track, manage, and control physical assets. 
+
+These functions are made possible through a set of methods within the PLC class, allowing it to perform a range of actions such as creating and updating assets, as well as adding to or removing from its associated elements. 
+
+Moreover, the PLC class takes charge of transmitting data from the physical assets to the digital devices, allowing real-time and accurate asset monitoring.
+
+## Interaction with Other Classes
+
+Within the Physical Asset Management package, the PLC interacts primarily with the PhysicalAsset and Device classes via defined associations.
+
+The PLC is responsible for coordinating and managing the data from PhysicalAsset instances via sensor input, and connecting this data in a comprehensive and operable format to Device instances. This interaction enables the full potential of real-time data transmission and analysis.
+
+It's worth noting that the PLC class doesn't fundamentally own these associated entities. Instead, it works with them, forming a crucial component in the digitalization of physical assets in operational setups.
+
+To conclude, the PLC is an essential part of the Physical Asset Management package in a way that it enables seamless communication between physical and digital components, allowing for efficient monitoring, management, and control of physical assets.

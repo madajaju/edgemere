@@ -3,18 +3,264 @@ left to right direction
 
 
 state "cpl" as cpl #cccccc {
-state "pw" as cplpw #lightblue {
+state "pw" as cplpw #aaffff {
 }
 }
 
 
-state "cplpw" as pstatename #lightblue {
+state "cplpw" as pstatename #aaffff {
     state "Custom Function" as pwfunction {
     }
 }
 
+        state "cpl" as cpl #cccccc {
+state "pw" as cplpw #aaffff {
+state "asset" as cplpwasset #aaffff {
+state "control" as cplpwassetcontrol #aaffff {
+}
+}
+}
+}
+
+
+        state "cpl" as cpl #cccccc {
+state "pw" as cplpw #aaffff {
+state "asset" as cplpwasset #aaffff {
+state "startmonitoring" as cplpwassetstartmonitoring #aaffff {
+}
+}
+}
+}
+
+
+        state "cpl" as cpl #cccccc {
+state "pw" as cplpw #aaffff {
+state "asset" as cplpwasset #aaffff {
+state "stopmonitoring" as cplpwassetstopmonitoring #aaffff {
+}
+}
+}
+}
+
+
+        state "cpl" as cpl #cccccc {
+state "pw" as cplpw #aaffff {
+state "communicationpathway" as cplpwcommunicationpathway #aaffff {
+state "transmitdata" as cplpwcommunicationpathwaytransmitdata #aaffff {
+}
+}
+}
+}
+
+
+        state "cpl" as cpl #cccccc {
+state "pw" as cplpw #aaffff {
+state "data" as cplpwdata #aaffff {
+state "create" as cplpwdatacreate #aaffff {
+}
+}
+}
+}
+
+
+        state "cpl" as cpl #cccccc {
+state "pw" as cplpw #aaffff {
+state "location" as cplpwlocation #aaffff {
+state "getlocationdetails" as cplpwlocationgetlocationdetails #aaffff {
+}
+}
+}
+}
+
+
+        state "cpl" as cpl #cccccc {
+state "pw" as cplpw #aaffff {
+state "location" as cplpwlocation #aaffff {
+state "setcoordinates" as cplpwlocationsetcoordinates #aaffff {
+}
+}
+}
+}
+
+
+        state "cpl" as cpl #cccccc {
+state "pw" as cplpw #aaffff {
+state "physicalasset" as cplpwphysicalasset #aaffff {
+state "manage" as cplpwphysicalassetmanage #aaffff {
+}
+}
+}
+}
+
+
+        state "cpl" as cpl #cccccc {
+state "pw" as cplpw #aaffff {
+state "plc" as cplpwplc #aaffff {
+state "communicatewithasset" as cplpwplccommunicatewithasset #aaffff {
+}
+}
+}
+}
+
+
+        state "cpl" as cpl #cccccc {
+state "pw" as cplpw #aaffff {
+state "sensor" as cplpwsensor #aaffff {
+state "getreading" as cplpwsensorgetreading #aaffff {
+}
+}
+}
+}
 
 
 
+
+        state "diml" as diml #ffcc88 {
+state "dml" as dimldml #ffcc88 {
+state "Data" as dimldmldata #ffcc88 {
+state "create" as dimldmldatacreate #ffcc88 {
+}
+}
+}
+}
+
+        
+    state "cpl" as cpl #cccccc {
+state "pw" as cplpw #aaffff {
+state "Function" as cplpwfunction #aaffff {
+}
+}
+}
+
+    dimldmldatacreate ---> cplpwfunction
+  
+
+        state "cpl" as cpl #cccccc {
+state "pw" as cplpw #aaffff {
+state "Location" as cplpwlocation #aaffff {
+state "create" as cplpwlocationcreate #aaffff {
+}
+}
+}
+}
+
+        
+    
+    cplpwlocationcreate ---> cplpwfunction
+  
+
+        state "cpl" as cpl #cccccc {
+state "pw" as cplpw #aaffff {
+state "Location" as cplpwlocation #aaffff {
+state "destroy" as cplpwlocationdestroy #aaffff {
+}
+}
+}
+}
+
+        
+    
+    cplpwlocationdestroy ---> cplpwfunction
+  
+
+        state "cpl" as cpl #cccccc {
+state "pw" as cplpw #aaffff {
+state "PhysicalAsset" as cplpwphysicalasset #aaffff {
+state "create" as cplpwphysicalassetcreate #aaffff {
+}
+}
+}
+}
+
+        
+    
+    cplpwphysicalassetcreate ---> cplpwfunction
+  
+
+        state "cpl" as cpl #cccccc {
+state "pw" as cplpw #aaffff {
+state "PhysicalAsset" as cplpwphysicalasset #aaffff {
+state "destroy" as cplpwphysicalassetdestroy #aaffff {
+}
+}
+}
+}
+
+        
+    
+    cplpwphysicalassetdestroy ---> cplpwfunction
+  
+
+        state "cpl" as cpl #cccccc {
+state "pw" as cplpw #aaffff {
+state "PhysicalAsset" as cplpwphysicalasset #aaffff {
+state "updated" as cplpwphysicalassetupdated #aaffff {
+}
+}
+}
+}
+
+        
+    
+    cplpwphysicalassetupdated ---> cplpwfunction
+  
+
+        state "cpl" as cpl #cccccc {
+state "pw" as cplpw #aaffff {
+state "PLC" as cplpwplc #aaffff {
+state "create" as cplpwplccreate #aaffff {
+}
+}
+}
+}
+
+        
+    
+    cplpwplccreate ---> cplpwfunction
+  
+
+        state "cpl" as cpl #cccccc {
+state "pw" as cplpw #aaffff {
+state "Sensor" as cplpwsensor #aaffff {
+state "updated" as cplpwsensorupdated #aaffff {
+}
+}
+}
+}
+
+        
+    
+    cplpwsensorupdated ---> cplpwfunction
+  
+
+
+    
+    
+        
+       
+    
+    
+        
+       
+    
+    
+        
+       
+    
+    
+        
+       
+    
+    
+        
+       
+    
+    
+        
+       
+    
+    
+        
+       
 
 @enduml

@@ -4,13 +4,13 @@ left to right direction
 
 state "diml" as diml #ffcc88 {
 state "cds" as dimlcds #ffcc88 {
-state "ingress" as dimlcdsingress #lightblue {
+state "ingress" as dimlcdsingress ##aaffff {
 }
 }
 }
 
 
-state "dimlcdsingress" as pstatename #lightblue {
+state "dimlcdsingress" as pstatename ##aaffff {
     state "Custom Function" as ingressfunction {
     }
 }

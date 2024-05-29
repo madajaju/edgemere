@@ -8,15 +8,30 @@ grand_parent: Package edgemere
 
 # AI ML Services
 
-AI ML Services is a package containing artificial intelligence and machine learning models and algorithms for the solution.
+The &#34;ams&#34; package provides an &#34;AIModel&#34; class with capabilities for creation, deletion, and updating, as well as adding or removing features in Artificial Intelligence and Machine Learning applications, supported by the encompassing descriptions and documentations on inference, learning, and various AI modes.
 
-Artificial Intelligence and Machine Learning contain inference, learning, and different modes of AI.
+Artificial Intelligence and Machine Learning (AI&ML)
+
+The AI&ML package provides a structured approach to implementing advanced machine learning algorithms and artificial intelligence models in different use cases. This package includes significant classes, workflows, and functions that help create, update, and destroy AI models. Rest assured, this package is designed to handle your AI models with utmost reliability and efficiency.
+
+The 'AIModel' class, represented by 'ams,' is the heart of this package. It's designed with your convenience in mind, packed with specific methods such as 'create,' 'destroy,' 'update,' 'addTo,' and 'remove from.' The 'create' method follows a default structure to establish a new AI model, while 'update' is there for modifying existing models. 'Destroy' is your go-to for discarding a model, and 'addTo' and 'removeFrom' are there to help you manage your AI models effortlessly. This user-friendly design ensures that you can navigate the complexities of AI and machine learning with ease.
+
+Apart from these methods, 'AIModel' has an attribute 'attr1,' serving as a string type variable with a long description. This attribute is designed to store additional information about your AI model, such as its purpose, data sources, or key features. You can use it to provide a comprehensive overview of your model, making it easier to manage and understand.
+
+The AI&ML package encourages using different use cases, such as sentiment analysis, image recognition, and anomaly detection, for running, testing, and experimenting with algorithms and AI models. The package documentation also includes an overview of the workflows in building and managing AI models, providing you with a comprehensive guide on how to use the package effectively in various scenarios.
+
+In summary, the AI&ML package is a comprehensive toolkit that equips you with everything you need to employ AI and machine learning algorithms in various use-case scenarios. It provides robust methods for handling AI models, a supportive workflow environment, all aimed towards facilitating a more in-depth exploration of the constantly evolving AI landscape. With this package, you can confidently navigate the complex world of AI and machine learning, opening up a world of exciting possibilities for your projects.
 
 ## Use Cases
 
 The following are the use cases of the AI ML Services subsystem. Each use case has primary and secondary scenarios
 that are elaborated in the use case descriptions.
 
+* [addTo AIModel](usecase-addToAIModel)
+* [create AIModel](usecase-createAIModel)
+* [destroy AIModel](usecase-destroyAIModel)
+* [removeFrom AIModel](usecase-removeFromAIModel)
+* [update AIModel](usecase-updateAIModel)
 
 
 ![UseCase Diagram](./usecases.png)
@@ -26,6 +41,7 @@ that are elaborated in the use case descriptions.
 The following are the actors of the AI ML Services subsystem. This can include people, other subsystems
 inside the solution and even external subsystems.
 
+* [DataScientist](actor-datascientist)
 
 
 ![User Interaction](./userinteraction.png)

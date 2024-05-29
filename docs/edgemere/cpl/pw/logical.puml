@@ -1,7 +1,7 @@
 @startuml
 
 
-package "PhysicalWorld" #lightblue {
+package "PhysicalWorld" #aaffff {
     
         class PhysicalAsset {
         }
@@ -23,9 +23,19 @@ package "Common Physical Layer" #cccccc {
     }
 
 
-package "PhysicalWorld" #lightblue {
+package "PhysicalWorld" #aaffff {
 
     interface "PhysicalWorld" as i {
+            /edgemere/cpl/pw/asset/control()
+            /edgemere/cpl/pw/asset/startmonitoring()
+            /edgemere/cpl/pw/asset/stopmonitoring()
+            /edgemere/cpl/pw/communicationpathway/transmitdata()
+            /edgemere/cpl/pw/data/create()
+            /edgemere/cpl/pw/location/getlocationdetails()
+            /edgemere/cpl/pw/location/setcoordinates()
+            /edgemere/cpl/pw/physicalasset/manage()
+            /edgemere/cpl/pw/plc/communicatewithasset()
+            /edgemere/cpl/pw/sensor/getreading()
     
     }
 }
@@ -34,7 +44,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "PhysicalWorld" #lightblue {
+package "PhysicalWorld" #aaffff {
         class "CommunicationPathway" {
                  string kind
                  string protocol
@@ -51,14 +61,26 @@ package "PhysicalWorld" #lightblue {
                  number alt
                  string address
                  string notes
-                    }
+                             addAsset()
+                     getCoordinates()
+                     getLocationDetails()
+                     removeAsset()
+                     setCoordinates()
+            }
                 Location *--> "n" Asset : assets
             
     
     class "PhysicalAsset" {
                  string name
                  string assetType
-                             control()
+                             activate()
+                     attachPathway()
+                     attachSensor()
+                     control()
+                     deactivate()
+                     detachPathway()
+                     detachSensor()
+                     monitorCondition()
                      startMonitoring()
                      stopMonitoring()
             }

@@ -7,7 +7,7 @@ parent: Classes
 
 # Hardware
 
-This represents physical hardware in a device
+The &#34;Hardware&#34; class, part of the &#34;cpl&#34; package, represents the physical hardware of a device, providing methods to manage attributes like its name and capabilities, and functions for addition of stats, enabling or disabling the hardware, and factory creation based on properties.
 
 ![Logical Diagram](./logical.png)
 

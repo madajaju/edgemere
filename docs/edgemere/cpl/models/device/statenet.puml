@@ -7,22 +7,91 @@ state Device #cccccc {
     state Init #cccccc {
     }
 
-    state Enabled #cccccc {
+    state DeviceCreated #cccccc {
+    }
+
+    state DeviceUpdated #cccccc {
+    }
+
+    state AddedTo #cccccc {
+    }
+
+    state RemovedFrom #cccccc {
+    }
+
+    state AddedToHardware #cccccc {
     }
 
     state Disabled #cccccc {
     }
 
+    state ReservationsRetrieved #cccccc {
+    }
+
+    state Provisioned #cccccc {
+    }
+
+    state Reserved #cccccc {
+    }
+
+    state Destroyed #cccccc {
+    }
+
+    state Enabled #cccccc {
+    }
 
 
 
-Init -[#black]--> Enabled : create
 
-Init -[#black]--> Enabled : reserve
+Init -[#black]--> DeviceCreated : create
 
-Enabled -[#black]--> Disabled : disable
+Init -[#black]--> Reserved : reserve
+
+DeviceCreated: entry/ Custom
+
+DeviceCreated: exit/ Custom
+
+DeviceCreated -[#black]--> DeviceUpdated : update
+
+DeviceCreated -[#black]--> AddedTo : addTo
+
+DeviceCreated -[#black]--> RemovedFrom : removeFrom
+
+DeviceCreated -[#black]--> AddedToHardware : addToHardware
+
+DeviceCreated -[#black]--> Disabled : disable
+
+DeviceCreated -[#black]--> ReservationsRetrieved : getReservations
+
+DeviceCreated -[#black]--> Provisioned : provision
+
+DeviceCreated -[#black]--> Reserved : reserve
+
+DeviceUpdated: entry/ Custom
+
+DeviceUpdated -[#black]--> Destroyed : destroy
+
+AddedTo: entry/ Custom
+
+RemovedFrom: entry/ Custom
+
+AddedToHardware: entry/ Custom
+
+Disabled: entry/ Custom
 
 Disabled -[#black]--> Enabled : enable
+
+ReservationsRetrieved: entry/ Custom
+
+Provisioned: entry/ Custom
+
+Reserved: entry/ Custom
+
+Destroyed: entry/ Custom
+
+Enabled: entry/ Custom
+
+Enabled -[#black]--> Disabled : disable
 
 }
 

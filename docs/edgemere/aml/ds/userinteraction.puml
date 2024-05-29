@@ -1,6 +1,29 @@
 @startuml
 
-rectangle "TBD"
+
+actor "Developer" as developer
+
+actor "SystemAdministrator" as systemadministrator
+
+
+
+
+developer -> "Developer Services": Automation Framework
+"Developer Services" -> bin: undefined
+bin -> REST: undefined
+
+developer -> "Developer Services": CICD Pipeline
+"Developer Services" -> bin: undefined
+bin -> REST: undefined
+
+developer -> "Developer Services": Environment Deployments
+"Developer Services" -> bin: undefined
+bin -> REST: undefined
+
+systemadministrator -> "Developer Services": Security Profiles
+"Developer Services" -> bin: undefined
+bin -> REST: undefined
+
 
 
 @enduml

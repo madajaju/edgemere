@@ -20,17 +20,21 @@ Version 0.4.1
 * [DataEngineer](actor-dataengineer)
 * [DataScientist](actor-datascientist)
 * [DataSteward](actor-datasteward)
+* [Developer](actor-developer)
 * [DevOpsEngineer](actor-devops)
 * [ITOperations](actor-itops)
 * [SecurityEngineer](actor-securityengineer)
 * [SecurityOperator](actor-securityoperator)
 * [StackDeveloper](actor-stackdev)
+* [SystemAdministrator](actor-systemadministrator)
 
 
 ### Use Cases
 * [Apply Security Profiles](usecase-ApplySecurityProfiles)
   * [Attach Profile](usecase-ApplySecurityProfiles#AttachProfile)
   * [Deploy Security Profile](usecase-ApplySecurityProfiles#DeploySecurityProfile)
+* [Automation Framework](usecase-AutomationFramework)
+* [CICD Pipeline](usecase-CICDPipeline)
 * [Change Physical World](usecase-ChangePhysicalWorld)
   * [Adjust Temperature](usecase-ChangePhysicalWorld#AdjustTemperature)
   * [Toogle Switch](usecase-ChangePhysicalWorld#toggleSwitch)
@@ -40,6 +44,7 @@ Version 0.4.1
 * [Control Virtual Infrastructure](usecase-ControlVirtualInfrastructure)
 * [Coordinate Services](usecase-CoordinateServices)
 * [Decommission Physical Asset](usecase-DecommissionPhysicalAsset)
+* [Environment Deployments](usecase-EnvironmentDeployments)
 * [Find Resources](usecase-FindResources)
 * [Govern Identities](usecase-GovernIdentities)
 * [Manage AI Models](usecase-ManageAIModels)
@@ -151,6 +156,12 @@ Version 0.4.1
 * [Secure Assets](usecase-SecureAssets)
 * [Secure Data from Physical Asset](usecase-SecureDatafromPhysicalAsset)
 * [Secure Physical Asset](usecase-SecurePhysicalAsset)
+* [Security Profiles](usecase-SecurityProfiles)
+* [addTo AIModel](usecase-addToAIModel)
+* [create AIModel](usecase-createAIModel)
+* [destroy AIModel](usecase-destroyAIModel)
+* [removeFrom AIModel](usecase-removeFromAIModel)
+* [update AIModel](usecase-updateAIModel)
 
 ## Logical View
 

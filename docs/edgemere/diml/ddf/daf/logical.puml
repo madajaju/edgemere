@@ -2,7 +2,7 @@
 
 
 
-package "Data Adaptor Framework" #lightblue {
+package "Data Adaptor Framework" ##aaffff {
 
     interface "Data Adaptor Framework" as i {
     
@@ -13,7 +13,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Data Adaptor Framework" #lightblue {
+package "Data Adaptor Framework" ##aaffff {
     
 }
 

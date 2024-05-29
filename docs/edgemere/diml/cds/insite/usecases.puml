@@ -3,7 +3,7 @@
 left to right direction
 
 
-rectangle "Insite Services" #lightblue {
+rectangle "Insite Services" ##aaffff {
 }
 
 

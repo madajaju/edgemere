@@ -2,73 +2,78 @@
 class ApplicationInstance {
     static definition = {
         name: 'ApplicationInstance',
-        description: 'Application Instance that is running in the ecosystem',
+        description: 'The "ApplicationInstance" class, part of the "aml" package, represents a running instance of an application in the ecosystem, providing methods to create, modify, and destroy these instances, as well as manage their associations with Applications.',
+        unique: false,
+        extends: false,
+        
         attributes: {
-            name: {
-                type: 'string',
-                description: 'Name of the application instance'
-            },
-            status: {
-                type: 'string',
-                description: 'Name of the application instance'
-            },
-            message: {
-                type: 'string',
-                description: 'Last message in the application instance'
-            }
-        },
+    "name": {
+        "type": "string",
+        "description": "Name of the application instance"
+    },
+    "status": {
+        "type": "string",
+        "description": "Name of the application instance"
+    },
+    "message": {
+        "type": "string",
+        "description": "Last message in the application instance"
+    }
+},
+        
         associations: {
-            app: {
-                type: 'Application',
-                cardinality: 1,
-                composition: false,
-                owner: false,
-            },
-        },
+    "app": {
+        "type": "Application",
+        "cardinality": 1,
+        "composition": false,
+        "owner": false,
+        "name": "app"
+    }
+},
+        
         statenet: {
-            Init: {
-                events: {
-                    create: {
-                        Initializing: {}
-                    }
-                }
-            },
-            Initializing: {
-                events: {
-                    provisoned: {
-                        Running: {}
-                    }
-                }
-            },
-            Running: {
-                events: {
-                    kill: {
-                        Stopping: {}
-                    }
-                }
-            },
-            Stopping: {
-                events: {
-                    stopped: {
-                        Stopped: {}
-                    }
-                }
-            },
-            Stopped: {
-                events: {
-                    exit: {
-                        Exit: {}
-                    },
-                    failed: {
-                        Failed: {}
-                    }
-                }
-            },
-            Exit: {
-            },
-            Failed: {
+    "Init": {
+        "events": {
+            "create": {
+                "Initializing": {}
             }
-        },
+        }
+    },
+    "Initializing": {
+        "events": {
+            "provisoned": {
+                "Running": {}
+            }
+        }
+    },
+    "Running": {
+        "events": {
+            "kill": {
+                "Stopping": {}
+            }
+        }
+    },
+    "Stopping": {
+        "events": {
+            "stopped": {
+                "Stopped": {}
+            }
+        }
+    },
+    "Stopped": {
+        "events": {
+            "exit": {
+                "Exit": {}
+            },
+            "failed": {
+                "Failed": {}
+            }
+        }
+    },
+    "Exit": {},
+    "Failed": {}
+},
+        
         view: {
             color: "#00aaff",
             object2d: (options) => {
@@ -97,10 +102,8 @@ class ApplicationInstance {
                         `</a-entity>`;
                 }
                 return retval;
-            }
+            },
         }
     }
 }
-
 module.exports = ApplicationInstance;
-

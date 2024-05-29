@@ -13,8 +13,7 @@ box Application Management Layer #88cccc
 end box
 
 
-box Software Defined Infrastructure #cccc88
-            participant storageresource
+box Application Management Layer #88cccc
     end box
 
 group Given [An application developer or data scientist wants to create an AI model]
@@ -22,23 +21,55 @@ group Given [An application developer or data scientist wants to create an AI mo
 "Application Developer" --/ aml: They use the &#39;aimodel/create&#39; method and provide &#39;name1&#39; as the name parameter
 "aml" -> aml: Create AI Model
 
-    aml -> "storageresource": create (name: name1)
+    aml -> "application management layer": create ()
 
-    "storageresource" --/ EventBus: aimodel.create
+    "application management layer" --/ EventBus: aimodel.create
+
+    aml -> "application management layer": scan (appName: name1)
+
+    "application management layer" --/ EventBus: aimodel.scan
+
+    aml -> "application management layer": validate (appName: name1,SLA: specified SLA details)
+
+    "application management layer" --/ EventBus: aimodel.validate
+
+    aml -> "application management layer": sign (appName: name1)
+
+    "application management layer" --/ EventBus: aimodel.sign
+
+    aml -> "application management layer": create (appName: name1)
+
+    "application management layer" --/ EventBus: aimodel.create
 
 
 "Data Scientist" --/ aml: They use the &#39;aimodel/create&#39; method and provide &#39;name1&#39; as the name parameter
 "aml" -> aml: Create AI Model
 
-    aml -> "storageresource": create (name: name1)
+    aml -> "application management layer": create ()
 
-    "storageresource" --/ EventBus: aimodel.create
+    "application management layer" --/ EventBus: aimodel.create
+
+    aml -> "application management layer": scan (appName: name1)
+
+    "application management layer" --/ EventBus: aimodel.scan
+
+    aml -> "application management layer": validate (appName: name1,SLA: specified SLA details)
+
+    "application management layer" --/ EventBus: aimodel.validate
+
+    aml -> "application management layer": sign (appName: name1)
+
+    "application management layer" --/ EventBus: aimodel.sign
+
+    aml -> "application management layer": create (appName: name1)
+
+    "application management layer" --/ EventBus: aimodel.create
 
 
 
-"Application Developer" /-- aml: The AI model with the provided name is created successfully
+"Application Developer" /-- aml: The AI model with the provided name is scanned for malware and viruses, validated for correctness with a pass rate specified in the SLA of the model, digitally signed and then created successfully.
 
-"Data Scientist" /-- aml: The AI model with the provided name is created successfully
+"Data Scientist" /-- aml: The AI model with the provided name is scanned for malware and viruses, validated for correctness with a pass rate specified in the SLA of the model, digitally signed and then created successfully.
 
 
 end

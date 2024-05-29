@@ -83,9 +83,20 @@ package "Common Physical Layer" #cccccc {
                      enable()
                      reserve()
                      addToHardware()
+                     archiveData()
                      create()
+                     disableAllFunctions()
+                     displayReservations()
+                     enableAllFunctions()
                      getReservations()
+                     initiateDevice()
+                     logDeviceStatus()
                      provision()
+                     reserveResource()
+                     setupHardware()
+                     updateDeviceGroup()
+                     updateHardware()
+                     updateStatus()
             }
                 AggregatedDevice *--> "n" Device : devices
                         AggregatedDevice o--> "1" PhysicalProfile : profile
@@ -119,6 +130,12 @@ package "Common Physical Layer" #cccccc {
                      create()
                      disable()
                      enable()
+                     getAdevices()
+                     getDevice()
+                     getDevices()
+                     getReservedResources()
+                     removeAdevices()
+                     removeDevices()
                      reserve()
             }
                 DataCenter o--> "1" PhysicalProfile : profile
@@ -132,12 +149,23 @@ package "Common Physical Layer" #cccccc {
                  string hostname
                  string type
                              addToHardware()
+                     archiveData()
                      create()
                      disable()
+                     disableAllFunctions()
+                     displayReservations()
                      enable()
+                     enableAllFunctions()
                      getReservations()
+                     initiateDevice()
+                     logDeviceStatus()
                      provision()
                      reserve()
+                     reserveResource()
+                     setupHardware()
+                     updateDeviceGroup()
+                     updateHardware()
+                     updateStatus()
             }
                 Device o--> "1" PhysicalProfile : profile
                         Device *--> "n" Hardware : hardware

@@ -8,7 +8,7 @@ left to right direction
 
 
 
-node "transform" #lightblue {
+node "transform" ##aaffff {
 
 
     hexagon childrennet #black [

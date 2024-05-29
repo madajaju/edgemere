@@ -8,7 +8,7 @@ left to right direction
 
 
 
-node "diml_ddf_daf" #lightblue {
+node "diml_ddf_daf" ##aaffff {
 
 
     hexagon parentnet #black [

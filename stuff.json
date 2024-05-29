@@ -1,0 +1,104 @@
+[
+  {
+    "name": "Application Build Process",
+    "description": "Application Build Process shows how the applications are built in the system",
+    "activities": {
+      "Init": {
+        "description": "Initial state for the workflow",
+        "actor": "Application Developer",
+        "next": {
+          "Build Application": {}
+        }
+      },
+      "Build Application": {
+        "description": "Build the application and all of its dependencies",
+        "package": "Application Management Layer",
+        "next": {
+          "Build Stack": {
+            "condition": {
+              "test": "Stacks Need Build",
+              "value": "true"
+            }
+          },
+          "Store Artifact": {
+            "condition": {
+              "test": "Stacks Need Build",
+              "value": "false"
+            }
+          }
+        },
+        "obj": {
+          "name": "Build Application",
+          "description": "Build Application is the description",
+          "method": "data/create",
+          "actors": {
+            "DevOps Engineer": "uses"
+          },
+          "steps": [
+            {
+              "action": "data/list",
+              "parameters": {
+                "name": "hello",
+                "file": "./templates/world.yml"
+              }
+            },
+            {
+              "action": "data/list",
+              "parameters": {
+                "name": "hello",
+                "file": "./templates/world.yml"
+              }
+            }
+          ],
+          "uid": "Manage Applications Build Application",
+          "given": "DevOps Engineer has access to the application source code",
+          "then": "The application should be built successfully"
+        },
+        "type": "scenario"
+      },
+      "Build Stack": {
+        "description": "Build a stack of services and all of its dependencies",
+        "package": "Service Management Layer",
+        "next": {
+          "Build Service": {
+            "condition": {
+              "test": "Services Need Build",
+              "value": "true"
+            }
+          },
+          "Store Artifact": {
+            "condition": {
+              "test": "Services Need Build",
+              "value": "false"
+            }
+          }
+        },
+        "type": "scenario"
+      },
+      "Build Service":{
+        "description":"Build a micro-services as a container image.",
+        "package":"Service Management Layer",
+        "next":{
+          "Build Service":{
+            "condition":{
+              "test":"Services Need Build",
+              "value":"true"
+            }
+          },
+          "Store Artifact":{
+            "condition":{
+              "test":"Services Need Build",
+              "value":"false"
+            }
+          }
+        },
+        "type":"scenario"
+      },
+      "Store Artifact": {
+        "description": "Store Artifact in the Repository",
+        "package": "Service Management Layer"
+      }
+    },
+    "pkg": "aml"
+  }
+]

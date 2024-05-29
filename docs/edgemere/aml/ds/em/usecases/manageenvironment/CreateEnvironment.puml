@@ -11,10 +11,29 @@ box Environment Management #88cc88
 end box
 
 
+box Environment Management #88cc88
+    end box
+
 group Given [IT Operations has access to create an environment]
 
 "IT Operations" --/ em: IT Operations creates an environment and assigns a Multi Cloud 
 "em" -> em: Create Environment
+
+    em -> "environment management": create (attr1: Provide The Description)
+
+    "environment management" --/ EventBus: environment.create
+
+    em -> "environment management": addpolicies (attr1: Assign a Multi Cloud Policy)
+
+    "environment management" --/ EventBus: environment.addpolicies
+
+    em -> "environment management": enable (attr1: Enable the Environment)
+
+    "environment management" --/ EventBus: environment.enable
+
+    em -> "environment management": list (attr1: List down the Environments)
+
+    "environment management" --/ EventBus: environment.list
 
 
 

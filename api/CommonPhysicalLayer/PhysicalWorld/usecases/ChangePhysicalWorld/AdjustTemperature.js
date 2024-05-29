@@ -1,16 +1,1 @@
-module.exports = {
-    name: 'Adjust Temperature',
-    description: 'Adjust Temperature is the description',
-    given: "Tempature control asset",
-    when: "Monitoring system is activated",
-    then: "Continuous data stream is received",
-    method: "data/create",
-    actors: {
-        'Actor': 'uses',
-    },
-    steps: [
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-        { action: 'data/list', parameters: {name:'hello', file:'./templates/world.yml'}},
-    ]
-};
-
+module.exports = {"name":"Adjust Temperature","description":"The \"Adjust Temperature\" scenario involves an actor using a temperature control asset, which, when the monitoring system is activated, manages, monitors, and transmits temperature data continuously.","given":"Actor has access to a temperature control asset","when":"Actor uses the temperature control asset and monitoring system is activated","then":"Continuous temperature data is received and transmitted","method":"data/create","actors":{"Actor":"uses"},"steps":[{"action":"/edgemere/cpl/pw/asset/control","parameters":{"assetID":"tempAssetID"},"description":"Actor utilizes temperature control asset"},{"action":"/edgemere/cpl/pw/asset/startmonitoring","parameters":{"assetID":"tempAssetID"},"description":"Start the monitoring of temperature control asset"},{"action":"/edgemere/cpl/pw/physicalasset/manage","parameters":{"assetID":"tempAssetID"},"description":"Manage the physical asset"},{"action":"/edgemere/cpl/pw/communicationpathway/transmitdata","parameters":{},"description":"Transmit data through a communication pathway"},{"action":"/edgemere/cpl/pw/data/create","parameters":{"attr1":"temperature"},"description":"Create data for temperature"},{"action":"/edgemere/cpl/pw/sensor/getreading","parameters":{"assetID":"tempSensorID"},"description":"Retrieve the current reading of a sensor"},{"action":"/edgemere/cpl/pw/communicationpathway/transmitdata","parameters":{},"description":"Transmit data through a communication pathway"},{"action":"/edgemere/cpl/pw/data/create","parameters":{"attr1":"temperature"},"description":"Create data for temperature"},{"action":"/edgemere/cpl/pw/asset/stopmonitoring","parameters":{"assetID":"tempAssetID"},"description":"Stop the monitoring of temperature control asset"},{"action":"/edgemere/cpl/pw/physicalasset/manage","parameters":{"assetID":"tempAssetID"},"description":"Manage the physical asset"}],"uid":"ChangePhysicalWorld.AdjustTemperature","id":"ChangePhysicalWorld.AdjustTemperature"};

@@ -1,24 +1,15 @@
-The Application Management Layer (AML) contains abstractions that help App Development,  
-DevOps and IT Operations manage complex workflows and applications through the application  
-development lifecycle. The AML sits at the top of the system stack and communicates directly with  
-the [Distributed Information Management Layer](package--edgemere-dml) and the  
-[Service Management Layer](package--edgemere-sml). It also leverages the  
-[Identity Aspect](package--edgemere-ia) and [Security Aspect](package--edgemere-sa) layers.
+The package documentation elaborates on the Application Management Layer (AML) which forms an important component in managing complex workflows and applications through the application development lifecycle. 
 
-![AML Overall](./aml.png)
+Based on the identified use cases, the AML contains key functionalities for managing AI models, applications, and workloads. IT professionals such as DevOps engineers, application developers, data engineers, and data scientists are the primary actors who interact with the AML, utilizing different methods to perform distinct use cases. 
 
-The AML contains sub-packages that group common-off-the-shelf tools integrated.  
-In the Analytics Services package, standard tools for analytics can be found, including collection,  
-analytics, and insight. AI/ML Services represent the myriad of tools and services that focus  
-on Artificial Intelligence and Machine Learning algorithms and solutions.
+The use case 'Manage AI Models' outlines how a Data Scientist manages AI models in coordination with DevOps to ensure that both the AI models and applications are updated together. The scenarios within this use case cover actions like creating, deploying, destroying, and updating AI models. 
 
-These two packages take advantage of the application and workflow services that allow  
-these solutions are to be orchestrated at the highest level of integration by providing a  
-framework and common definition framework to show how these applications and workflow  
-interact.
+In the 'Manage Applications' use case, DevOps Engineers and Application Developers collaborate to manage applications across multiple platforms. The operations within this use case include building, creating, deploying, destroying, monitoring, and updating the applications.
 
-Several tool suites have been built to aid SecDevOps. These tools are  
-grouped in the SecDevOps Services and include Automation Frameworks (Salt, Chef,  
-puppet, ansible), CICD tools (Gitlab, GitHub, Jenkins, etc...) and Environment Management.
+The use case 'Manage Workloads' enables Application Developers to interconnect applications through workflows, thereby automating complex data interactions between various applications across a hybrid infrastructure. The included operations are creating, deploying, destroying, monitoring, and updating the workloads. 
 
-![AML details](amldetail.png)
+Within the AML package, we have several key classes including Application, Application Instance, Application Template, Workload, Workload Instance, and Workload Template. Each of these classes provides methods for managing their instances, including operations like creating, destroying, adding to, updating, and removing from the instances. 
+
+Furthermore, there are defined workflows for managing AI models, applications, and workloads. These workflows illustrate the sequential actions, conditions, and transitions between different states for each operation, specifying the actors responsible for each action and the outcome of their activities. 
+
+Overall, the AML provides a comprehensive management system for AI models, applications, and workloads, connecting different users and their actions in an organized, modular manner.

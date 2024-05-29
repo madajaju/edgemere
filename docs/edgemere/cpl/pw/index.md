@@ -93,6 +93,16 @@ users interact with the system.
 
 ![Scenario Mappings Diagram](./scenariomapping.png)
 
+* [ edgemere cpl pw asset control](#action--edgemere-cpl-pw-asset-control)
+* [ edgemere cpl pw asset startmonitoring](#action--edgemere-cpl-pw-asset-startmonitoring)
+* [ edgemere cpl pw asset stopmonitoring](#action--edgemere-cpl-pw-asset-stopmonitoring)
+* [ edgemere cpl pw communicationpathway transmitdata](#action--edgemere-cpl-pw-communicationpathway-transmitdata)
+* [ edgemere cpl pw data create](#action--edgemere-cpl-pw-data-create)
+* [ edgemere cpl pw location getlocationdetails](#action--edgemere-cpl-pw-location-getlocationdetails)
+* [ edgemere cpl pw location setcoordinates](#action--edgemere-cpl-pw-location-setcoordinates)
+* [ edgemere cpl pw physicalasset manage](#action--edgemere-cpl-pw-physicalasset-manage)
+* [ edgemere cpl pw plc communicatewithasset](#action--edgemere-cpl-pw-plc-communicatewithasset)
+* [ edgemere cpl pw sensor getreading](#action--edgemere-cpl-pw-sensor-getreading)
 
 
 ## Logical Artifacts
@@ -202,6 +212,23 @@ The PhysicalWorld subsystem provides the following activities and flows that hel
 cases and scenarios of the subsystem.
 
 
+### Messages Handled
+
+The PhysicalWorld subsystem is an event driven architecture and handle several events. The following
+events are handled by this subsystem. Please note that this subsystem is not the only subsystem that handles
+these events.
+
+| Message | Action | Description |
+| --- | --- | --- |
+| data.create | Custom Action |  |
+| location.create | Custom Action |  |
+| location.destroy | Custom Action |  |
+| physicalasset.create | Custom Action |  |
+| physicalasset.destroy | Custom Action |  |
+| physicalasset.updated | Custom Action |  |
+| plc.create | Custom Action |  |
+| sensor.updated | Custom Action |  |
+
 
 
 ### Messages Sent
@@ -230,5 +257,168 @@ cases and scenarios of the subsystem.
 The PhysicalWorld subsystem has a well defined interface. This interface can be accessed using a
 command line interface (CLI), REST interface, and Web user interface. This interface is how all other
 subsystems and actors can access the system.
+
+### Action  edgemere cpl pw asset control
+
+
+
+* REST - /edgemere/cpl/pw/asset/control?
+* bin -  edgemere cpl pw asset control 
+* js - .edgemere.cpl.pw.asset.control({  })
+
+#### Description
+Controls the state of a physical asset
+
+#### Parameters
+
+No parameters
+
+
+### Action  edgemere cpl pw asset startmonitoring
+
+
+
+* REST - /edgemere/cpl/pw/asset/startmonitoring?
+* bin -  edgemere cpl pw asset startmonitoring 
+* js - .edgemere.cpl.pw.asset.startmonitoring({  })
+
+#### Description
+Starts the monitoring of a physical asset
+
+#### Parameters
+
+No parameters
+
+
+### Action  edgemere cpl pw asset stopmonitoring
+
+
+
+* REST - /edgemere/cpl/pw/asset/stopmonitoring?
+* bin -  edgemere cpl pw asset stopmonitoring 
+* js - .edgemere.cpl.pw.asset.stopmonitoring({  })
+
+#### Description
+Stops the monitoring of a physical asset
+
+#### Parameters
+
+No parameters
+
+
+### Action  edgemere cpl pw communicationpathway transmitdata
+
+
+
+* REST - /edgemere/cpl/pw/communicationpathway/transmitdata?
+* bin -  edgemere cpl pw communicationpathway transmitdata 
+* js - .edgemere.cpl.pw.communicationpathway.transmitdata({  })
+
+#### Description
+Transmit data through a communication pathway
+
+#### Parameters
+
+No parameters
+
+
+### Action  edgemere cpl pw data create
+
+
+
+* REST - /edgemere/cpl/pw/data/create?attr1=string
+* bin -  edgemere cpl pw data create --attr1 string
+* js - .edgemere.cpl.pw.data.create({ attr1:string })
+
+#### Description
+Description of the action
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| attr1 | string |false | Description for the parameter |
+
+
+
+### Action  edgemere cpl pw location getlocationdetails
+
+
+
+* REST - /edgemere/cpl/pw/location/getlocationdetails?
+* bin -  edgemere cpl pw location getlocationdetails 
+* js - .edgemere.cpl.pw.location.getlocationdetails({  })
+
+#### Description
+Retrieves the details of a location
+
+#### Parameters
+
+No parameters
+
+
+### Action  edgemere cpl pw location setcoordinates
+
+
+
+* REST - /edgemere/cpl/pw/location/setcoordinates?
+* bin -  edgemere cpl pw location setcoordinates 
+* js - .edgemere.cpl.pw.location.setcoordinates({  })
+
+#### Description
+Set the coordinates of a location
+
+#### Parameters
+
+No parameters
+
+
+### Action  edgemere cpl pw physicalasset manage
+
+
+
+* REST - /edgemere/cpl/pw/physicalasset/manage?
+* bin -  edgemere cpl pw physicalasset manage 
+* js - .edgemere.cpl.pw.physicalasset.manage({  })
+
+#### Description
+Interface for managing physical assets
+
+#### Parameters
+
+No parameters
+
+
+### Action  edgemere cpl pw plc communicatewithasset
+
+
+
+* REST - /edgemere/cpl/pw/plc/communicatewithasset?
+* bin -  edgemere cpl pw plc communicatewithasset 
+* js - .edgemere.cpl.pw.plc.communicatewithasset({  })
+
+#### Description
+Communicates with a physical asset through a Programmable Logic Controller (PLC)
+
+#### Parameters
+
+No parameters
+
+
+### Action  edgemere cpl pw sensor getreading
+
+
+
+* REST - /edgemere/cpl/pw/sensor/getreading?
+* bin -  edgemere cpl pw sensor getreading 
+* js - .edgemere.cpl.pw.sensor.getreading({  })
+
+#### Description
+Retrieves the current reading of a sensor
+
+#### Parameters
+
+No parameters
+
 
 

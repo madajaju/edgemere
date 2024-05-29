@@ -1,0 +1,16 @@
+@startuml
+
+left to right direction
+
+
+Actor "System Administrator" as SystemAdministrator
+
+
+rectangle "Developer Services" as ds #aaffff {
+        usecase "Security Profiles" as SecurityProfiles
+    SystemAdministrator --> SecurityProfiles
+
+}
+
+
+@enduml

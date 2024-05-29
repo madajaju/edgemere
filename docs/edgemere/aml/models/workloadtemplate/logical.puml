@@ -4,6 +4,9 @@ class "WorkloadTemplate" as Model {
  string name
  json args
 
+ getArgs()
+ getWorkloads()
+ setArgs()
  
 }
 

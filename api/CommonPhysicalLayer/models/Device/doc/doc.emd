@@ -1,0 +1,26 @@
+# Device Class
+
+The Device class, part of the Common Physical Layer (CPL) package, forms the basis for device management across various ecosystems such as data centers, cloud environments, and edge devices. This class serves the primary purpose of providing a unified system for the comprehensive management of physical devices across various environments.
+
+## Overview
+
+The Device class focuses on simplifying operations and enhancing interoperability among diverse hardware configurations, aiming for a common control plane for device management. It stands central to the establishment of standardized taxonomies and operating models for devices. Given the hierarchy and taxonomy established by the class, it provides IT professionals and automated IT management systems with the tools necessary to effectively manage, deploy, and reconfigure IT operations.
+
+## Purpose
+
+The purpose of the Device class is to offer necessary abstractions for efficient control of devices, ranging from on-premise servers to edge devices. It encapsulates critical hardware components and provides a seamless interaction with other components of the system, leading to improved physical management of devices across multiple environments.
+
+## Interactions
+
+A key feature of the Device class is its interaction with various other components of the system. Notably:
+
+- **Hardware class**: Accurate representation of the hardware components of a device is possible through the incorporation of elements from the Hardware class.
+- **PhysicalProfile class**: Association with the PhysicalProfile class allows the Device class to track the capabilities and capacities of each device.
+- **AggregatedDevice class**: Collaboration with the AggregatedDevice class leads to efficient strategies for managing device groupings.
+- **DataCenter class**: The Device class marks its operational domain and location through interaction with the DataCenter class.
+
+## Operations
+
+Device class supports various operations, such as creation, destruction, updating, reservations, provision, enabling and disabling of devices, and addition and removal from hardware or device groups. Each operation triggers a transition into different states, serving to manage the lifecycle of the device effectively.
+
+To conclude, the Device class plays a critical role in defining standard operating models for devices and managing their lifecycle. Its systematic interaction with various components of the system allows it to efficiently channel the management of physical devices and their operations.

@@ -75,24 +75,33 @@ edgemeredimldmldatastrategy -- edgemeredimldmldatastrategylist
 
 
 
+
+
+
+
+
+
+
+
+
         rectangle "Manage Data" as ManageData #ffffaa {
             ("Destroy Data")/ as DataStewardManageDataDestroyData
         }
     
     edgemeredimldmldatasourcename <-- DataStewardManageDataDestroyData
-    
+
         rectangle "Manage Data" as ManageData #ffffaa {
             ("Egress Data")/ as DataStewardManageDataEgressData
         }
     
     edgemeredimldmldatasourcename <-- DataStewardManageDataEgressData
-    
+
         rectangle "Manage Data" as ManageData #ffffaa {
             ("Ingest Data")/ as DataStewardManageDataIngestData
         }
     
     edgemeredimldmldatasourcename <-- DataStewardManageDataIngestData
-    
+
 
 
 
@@ -107,13 +116,13 @@ edgemeredimldmldatastrategy -- edgemeredimldmldatastrategylist
         }
     
     edgemeredimldmldatasourcelist <-- DataEngineerManageDataSourcesDeregisterDataSource
-    
+
         rectangle "Manage Data Sources" as ManageDataSources #ffffaa {
             ("Register Data Source")/ as DataEngineerManageDataSourcesRegisterDataSource
         }
     
     edgemeredimldmldatasourcelist <-- DataEngineerManageDataSourcesRegisterDataSource
-    
+
 
 
 

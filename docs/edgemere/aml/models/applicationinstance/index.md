@@ -7,7 +7,7 @@ parent: Classes
 
 # ApplicationInstance
 
-Application Instance that is running in the ecosystem
+The &#34;ApplicationInstance&#34; class, part of the &#34;aml&#34; package, represents a running instance of an application in the ecosystem, providing methods to create, modify, and destroy these instances, as well as manage their associations with Applications.
 
 ![Logical Diagram](./logical.png)
 
@@ -55,8 +55,135 @@ The following diagram is the state net for this class.
 
 
 ## Methods
+* [fail() - Method to change the state of the application instance to Failed from Stopped as per state net](#action-fail)
+* [initialize() - Method to initialize the application instance from the Init state as per the state net](#action-initialize)
+* [kill() - Method to initiate a stop action on the running application instance as per the state net](#action-kill)
+* [provision() - Method to provision the application instance from the Initializing state to the Running state as per the state net](#action-provision)
+* [stop() - Method to stop the application instance from the Stopping state to the Stopped state as per the state net](#action-stop)
+* [terminate() - Method to terminate the application instance from Stopped state to Exit as per state net](#action-terminate)
 
 
 <h2>Method Details</h2>
     
+### Action applicationinstance fail
+
+
+
+* REST - applicationinstance/fail?appInstanceName=string&amp;errorMessage=string
+* bin - applicationinstance fail --appInstanceName string --errorMessage string
+* js - applicationinstance.fail({ appInstanceName:string,errorMessage:string })
+
+#### Description
+Method to change the state of the application instance to Failed from Stopped as per state net
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| appInstanceName | string | | Name of the application instance to be moved to Failed state |
+| errorMessage | string | | Error message when moving to failed state |
+
+
+
+
+### Action applicationinstance initialize
+
+
+
+* REST - applicationinstance/initialize?appName=string
+* bin - applicationinstance initialize --appName string
+* js - applicationinstance.initialize({ appName:string })
+
+#### Description
+Method to initialize the application instance from the Init state as per the state net
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| appName | string | | Name of the application to initialize |
+
+
+
+
+### Action applicationinstance kill
+
+
+
+* REST - applicationinstance/kill?appInstanceName=string
+* bin - applicationinstance kill --appInstanceName string
+* js - applicationinstance.kill({ appInstanceName:string })
+
+#### Description
+Method to initiate a stop action on the running application instance as per the state net
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| appInstanceName | string | | Name of the application instance to be stopped |
+
+
+
+
+### Action applicationinstance provision
+
+
+
+* REST - applicationinstance/provision?appInstanceName=string
+* bin - applicationinstance provision --appInstanceName string
+* js - applicationinstance.provision({ appInstanceName:string })
+
+#### Description
+Method to provision the application instance from the Initializing state to the Running state as per the state net
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| appInstanceName | string | | Name of the application instance for which the provisioning has been done |
+
+
+
+
+### Action applicationinstance stop
+
+
+
+* REST - applicationinstance/stop?appInstanceName=string
+* bin - applicationinstance stop --appInstanceName string
+* js - applicationinstance.stop({ appInstanceName:string })
+
+#### Description
+Method to stop the application instance from the Stopping state to the Stopped state as per the state net
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| appInstanceName | string | | Name of the application instance to be stopped |
+
+
+
+
+### Action applicationinstance terminate
+
+
+
+* REST - applicationinstance/terminate?appInstanceName=string
+* bin - applicationinstance terminate --appInstanceName string
+* js - applicationinstance.terminate({ appInstanceName:string })
+
+#### Description
+Method to terminate the application instance from Stopped state to Exit as per state net
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| appInstanceName | string | | Name of the application instance to be terminated |
+
+
+
+
 

@@ -74,12 +74,21 @@ hexagon "datareference.provisioned" as datareferenceprovisioned
 
 
 
+
+
+
+
+
+
+
+
+
         rectangle "Manage Applications" as ManageApplications #ffffaa {
             ("Build Application")/ as DevOpsEngineerManageApplicationsBuildApplication
         }
     
     edgemeresmlsodatacreate <-- DevOpsEngineerManageApplicationsBuildApplication
-    
+
 
 
         rectangle "Change Physical World" as ChangePhysicalWorld #ffffaa {
@@ -87,13 +96,13 @@ hexagon "datareference.provisioned" as datareferenceprovisioned
         }
     
     edgemeresmlsodatacreate <-- ActorChangePhysicalWorldAdjustTemperature
-    
+
         rectangle "Change Physical World" as ChangePhysicalWorld #ffffaa {
             ("Toogle Switch")/ as ActorChangePhysicalWorldtoggleSwitch
         }
     
     edgemeresmlsodatacreate <-- ActorChangePhysicalWorldtoggleSwitch
-    
+
 
 
         rectangle "Connect Physical Asset to a Device" as ConnectPhysicalAssettoaDevice #ffffaa {
@@ -101,7 +110,7 @@ hexagon "datareference.provisioned" as datareferenceprovisioned
         }
     
     edgemeresmlsodatacreate <-- ActorConnectPhysicalAssettoaDeviceAssetDigitalDeviceConnectivity
-    
+
 
 
 
@@ -110,7 +119,7 @@ hexagon "datareference.provisioned" as datareferenceprovisioned
         }
     
     edgemeresmlsodatacreate <-- ActorMonitorPhysicalWorldContinuousMonitoring
-    
+
 
 
 
@@ -127,13 +136,13 @@ hexagon "datareference.provisioned" as datareferenceprovisioned
         }
     
     edgemeresmlsodatacreate <-- DataEngineerManageMetaDataCaptureMetaData
-    
+
         rectangle "Manage Meta Data" as ManageMetaData #ffffaa {
             ("Capture Meta Data")/ as DataStewardManageMetaDataCaptureMetaData
         }
     
     edgemeresmlsodatacreate <-- DataStewardManageMetaDataCaptureMetaData
-    
+
 
 
 
@@ -153,91 +162,91 @@ hexagon "datareference.provisioned" as datareferenceprovisioned
         }
     
     edgemeresmlsodatacreate <-- DevOpsEngineerManageStacksBuildStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Create Application Stack")/ as ApplicationDeveloperManageStacksCreateApplicationStack
         }
     
     edgemeresmlsodatacreate <-- ApplicationDeveloperManageStacksCreateApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Create Application Stack")/ as StackDeveloperManageStacksCreateApplicationStack
         }
     
     edgemeresmlsodatacreate <-- StackDeveloperManageStacksCreateApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Create Service Stack")/ as StackDeveloperManageStacksCreateServiceStack
         }
     
     edgemeresmlsodatacreate <-- StackDeveloperManageStacksCreateServiceStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Deploy Stack")/ as DevOpsEngineerManageStacksDeployStack
         }
     
     edgemeresmlsostackdeploy <-- DevOpsEngineerManageStacksDeployStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Modify Application Stack")/ as StackDeveloperManageStacksModifyApplicationStack
         }
     
     edgemeresmlsodatacreate <-- StackDeveloperManageStacksModifyApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Modify Application Stack")/ as ApplicationDeveloperManageStacksModifyApplicationStack
         }
     
     edgemeresmlsodatacreate <-- ApplicationDeveloperManageStacksModifyApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Modify Service Stack")/ as StackDeveloperManageStacksModifyServiceStack
         }
     
     edgemeresmlsodatacreate <-- StackDeveloperManageStacksModifyServiceStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Test Application Stack")/ as StackDeveloperManageStacksTestApplicationStack
         }
     
     edgemeresmlsodatacreate <-- StackDeveloperManageStacksTestApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Test Application Stack")/ as ApplicationDeveloperManageStacksTestApplicationStack
         }
     
     edgemeresmlsodatacreate <-- ApplicationDeveloperManageStacksTestApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Test Service Stack")/ as StackDeveloperManageStacksTestServiceStack
         }
     
     edgemeresmlsodatacreate <-- StackDeveloperManageStacksTestServiceStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Uninstall Stack")/ as DevOpsEngineerManageStacksUninstallStack
         }
     
     edgemeresmlsostackuninstall <-- DevOpsEngineerManageStacksUninstallStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Update Stack")/ as DevOpsEngineerManageStacksUpdateStack
         }
     
     edgemeresmlsostackupdate <-- DevOpsEngineerManageStacksUpdateStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Version Application Stack")/ as ApplicationDeveloperManageStacksVersionApplicationStack
         }
     
     edgemeresmlsodatacreate <-- ApplicationDeveloperManageStacksVersionApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Version Service Stack")/ as StackDeveloperManageStacksVersionServiceStack
         }
     
     edgemeresmlsodatacreate <-- StackDeveloperManageStacksVersionServiceStack
-    
+
 
 
 
@@ -246,7 +255,7 @@ hexagon "datareference.provisioned" as datareferenceprovisioned
         }
     
     edgemeresmlsodatacreate <-- StackDeveloperManageServicesBuildService
-    
+
 
 
 

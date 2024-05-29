@@ -15,6 +15,8 @@ export default class APackage {
         this.config = config;
     }
 
+    es
+
     static showList(panel, parent) {
         $.ajax({
             url: 'package/list',
@@ -106,6 +108,7 @@ export default class APackage {
         const theta = Math.PI / 2; // 90 degrees
         let data = {nodes: {}, links: []};
         const size = APackage.calculateDeepBox(pkg);
+        pkg.size = size;
 
         window.graph.clearObjects();
 
@@ -142,7 +145,7 @@ export default class APackage {
                 name: name,
                 description: pkg.interface[iname].description,
                 view: AInterface.view3D,
-                orientation: {x:0,y:2, z:0}
+                orientation: {x: 0, y: 2, z: 0}
             };
             data.nodes[iname] = node;
             inodes.push(node);
@@ -157,7 +160,7 @@ export default class APackage {
                 name: handler.name,
                 description: pkg.handlers[hname].description,
                 view: AHandler.view3D,
-                orientation: {x:1,y:0, z:0}
+                orientation: {x: 1, y: 0, z: 0}
             };
 
             data.nodes[hname] = node;
@@ -183,7 +186,7 @@ export default class APackage {
                 fontSize: 15,
                 view: AUsecase.view3D,
                 rotate: {x: theta},
-                orientation: {x:0,y:-1, z:0}
+                orientation: {x: 0, y: -1, z: 0}
             }
             data.nodes[uname] = node;
             ucnodes.push(node);
@@ -211,7 +214,7 @@ export default class APackage {
                 },
                 rotate: {y: 2 * theta},
                 view: AModel.view3D,
-                orientation: {x:0,y:0, z:-1}
+                orientation: {x: 0, y: 0, z: -1}
             }
             data.nodes[cname] = node;
             cnodes.push(node);
@@ -227,7 +230,7 @@ export default class APackage {
                 rotate: {y: -theta},
                 color: spkg.color,
                 view: APackage.view3D,
-                orientation: {x:-1,y:0, z:0}
+                orientation: {x: -1, y: 0, z: 0}
             }
             data.nodes[pname] = node;
             spnodes.push(node);
@@ -250,7 +253,7 @@ export default class APackage {
                 color: spkg.color,
                 rotate: {y: -theta},
                 view: APackage.view3D,
-                orientation: {x:-1,y:0, z:0}
+                orientation: {x: -1, y: 0, z: 0}
             }
             data.nodes[pname] = node;
             data.links.push({source: pkg.shortname, target: pname, color: '#ffffbb', value: 1.0, width: 2});
@@ -267,80 +270,16 @@ export default class APackage {
             3000  // ms transition duration.
         );
         window.graph.showLinks();
-
-        window.graph.toolbar.setToolBar([
-            {
-                type: 'button', id: 'classes', text: 'Classes', img: 'w2ui-icon-search',
-                onClick: (event) => {
-                    let distance = Math.sqrt((size.w ) ** 2 + (size.h) ** 2) * 2;
-                    window.graph.graph.cameraPosition(
-                        {x: 0, y: -0, z: -distance}, // new position
-                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                        1000
-                    );
-                }
-            },
-            {
-                type: 'button', id: 'subpackage', text: 'Sub Packages', img: 'w2ui-icon-search',
-                onClick: (event) => {
-                    let distance = Math.sqrt((size.w) ** 2 + (size.d ) ** 2) * 2;
-                    window.graph.graph.cameraPosition(
-                        {x: 0, y: -distance, z: 0}, // new position
-                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                        1000
-                    );
-                }
-            },
-            {
-                type: 'button', id: 'interface', text: 'Interface', img: 'w2ui-icon-search',
-                onClick: (event) => {
-                    let distance = Math.sqrt((size.w) ** 2 + (size.d ) ** 2) * 2;
-                    window.graph.graph.cameraPosition(
-                        {x: 0, y: distance, z: 0}, // new position
-                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                        1000
-                    );
-                }
-            },
-            {
-                type: 'button', id: 'handlers', text: 'Handlers', img: 'w2ui-icon-search',
-                onClick: (event) => {
-                    let distance = Math.sqrt((size.h ) ** 2 + (size.d) ** 2) * 2;
-                    window.graph.graph.cameraPosition(
-                        {x: distance, y: 0, z: 0}, // new position
-                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                        1000
-                    );
-                }
-            },
-            {
-                type: 'button', id: 'usecases', text: 'UseCases', img: 'w2ui-icon-search',
-                onClick: (event) => {
-                    let distance = Math.sqrt((size.w ) ** 2 + (size.h ) ** 2) * 2;
-                    window.graph.graph.cameraPosition(
-                        {x: 0, y: -distance, z: 0}, // new position
-                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                        1000
-                    );
-                }
-            },
-            {
-                type: 'button', id: 'dependents', text: 'Dependents', img: 'w2ui-icon-search',
-                onClick: (event) => {
-                    let distance = Math.sqrt((size.d ) ** 2 + (size.h ) ** 2) * 2;
-                    window.graph.graph.cameraPosition(
-                        {x: -distance, y: 0, z: 0}, // new position
-                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                        1000
-                    );
-                }
-            },
-        ]);
+        _setGraphToolbar(pkg);
     }
 
     static handle(result) {
         APackage.viewDeep3D(result, 'new');
         APackage.showDetail(result);
+    }
+    static handle2d(result, object, div) {
+        _setGraphToolbar(object);
+        div.innerHTML = result;
     }
 
     static handleList(result) {
@@ -542,6 +481,724 @@ export default class APackage {
         }
         w2ui['objlist'].refresh();
     }
+
+    static editDocs(results, setURL) {
+        let editForm = getEditForm(results, setURL);
+        w2popup.open({
+            height: 850,
+            width: 850,
+            title: `Edit ${results.name}`,
+            body: '<div id="editPackageDocDialog" style="width: 100%; height: 100%;"></div>',
+            showMax: true,
+            onToggle: function (event) {
+                $(w2ui.editPackageDialog.box).hide();
+                event.onComplete = function () {
+                    $(w2ui.PackageDialog.box).show();
+                    w2ui.PackageDialog.resize();
+                }
+            },
+            onOpen: function (event) {
+                event.onComplete = function () {
+                    // specifying an onOpen handler instead is equivalent to specifying an onBeforeOpen handler, which would make this code execute too early and hence not deliver.
+                    $('#editPackageDocDialog').w2render(editForm.name);
+                    w2ui.PackageEditTabs.click('docs');
+                }
+            }
+        })
+    }
+}
+
+function getEditForm(record, setURL) {
+    if (!w2ui['PackageEditGeneral']) {
+        $().w2layout({
+            name: 'PackageEditGeneral',
+            panels: [
+                {type: 'left', size: 150, resizable: true, minSize: 35},
+                {type: 'main', overflow: 'hidden'}
+            ],
+            onRender: (event) => {
+                if (event.target === 'PackageEditGeneral') {
+                    if (w2ui.PackageEditGeneral.record) {
+                        w2ui.PackageEditGeneral.record = {};
+                    }
+                }
+            }
+        });
+    }
+    if (!w2ui['PackageEditTabs']) {
+        $().w2sidebar({
+            name: 'PackageEditTabs',
+            flatButton: true,
+            nodes: [
+                {id: 'docs', text: 'Docs', selected: true},
+                {id: 'interfaces', text: 'Interfaces'},
+                {id: 'handlers', text: 'Handlers'},
+                {id: 'models', text: 'Models'},
+                {id: 'subpackages', text: 'Sub Packages'},
+                {id: 'usecases', text: 'Use Cases'},
+                {id: 'workflows', text: 'Workflows'},
+            ],
+            onClick(event) {
+                switch (event.target) {
+                    case 'docs':
+                        w2ui['PackageEditGeneral'].html('main', w2ui.PackageEditDoc);
+                        break;
+                    case 'models':
+                        w2ui['PackageEditGeneral'].html('main', w2ui.PackageEditModels);
+                        break;
+                    case 'usecases':
+                        w2ui['PackageEditGeneral'].html('main', w2ui.PackageEditUseCases);
+                        break;
+                    case 'interfaces':
+                        w2ui['PackageEditGeneral'].html('main', w2ui.PackageEditInterfaces);
+                        break;
+                    case 'handlers':
+                        w2ui['PackageEditGeneral'].html('main', w2ui.PackageEditHandlers);
+                        break;
+                    case 'subpackages':
+                        w2ui['PackageEditGeneral'].html('main', w2ui.PackageEditSubPackages);
+                        break;
+                    case 'workflows':
+                        w2ui['PackageEditGeneral'].html('main', w2ui.PackageEditWorkflows);
+                        break;
+                }
+            }
+        });
+    }
+    _createPackageEditDoc(record, setURL);
+    _createPackageEditModels(record, setURL);
+    _createPackageEditUseCases(record, setURL);
+    _createPackageEditInterfaces(record, setURL);
+    _createPackageEditHandlers(record, setURL);
+    _createPackageEditSubPackages(record, setURL);
+    _createPackageEditWorkflows(record, setURL);
+
+    w2ui['PackageEditDoc'].record = record;
+    w2ui['PackageEditModels'].record = record;
+    w2ui['PackageEditUseCases'].record = record;
+    w2ui['PackageEditInterfaces'].record = record;
+    w2ui['PackageEditHandlers'].record = record;
+    w2ui['PackageEditSubPackages'].record = record;
+    w2ui['PackageEditWorkflows'].record = record;
+
+    w2ui['PackageEditGeneral'].saveURL = setURL;
+    w2ui.PackageEditGeneral.html('left', w2ui.PackageEditTabs);
+    w2ui.PackageEditGeneral.html('main', w2ui.PackageEditDoc);
+    return w2ui['PackageEditGeneral'];
+}
+
+function _createPackageEditDoc(record, setURL) {
+    if (!w2ui.PackageEditDoc) {
+        $().w2form({
+            name: 'PackageEditDoc',
+            saveURL: setURL,
+            style: 'border: 0px; background-color: transparent;overflow:hidden; ',
+            fields: [
+                {
+                    field: 'name',
+                    type: 'text',
+                    required: true,
+                    readonly: true,
+                    html: {
+                        attr: 'style="width: 450px;',
+                        caption: 'Name'
+                    }
+                },
+                {
+                    caption: 'Description',
+                    field: 'description',
+                    type: 'textarea',
+                    html: {
+                        attr: 'style="width: 450px; height: 50px;"',
+                        caption: "Description" +
+                            "<br><button class=AIButton id='packagegenerateDescription'></button>"
+                    }
+                },
+                {
+                    field: 'document',
+                    type: 'textarea',
+                    html: {
+                        attr: 'style="width: 450px; height: 500px;"',
+                        caption: "Details" +
+                            "<br><button class=AIButton id='packagegenerateDocumentation'></button>"
+                    }
+                },
+            ],
+            onRender: (event) => {
+                setTimeout(function () {
+                    let textArea = document.querySelector("#document");
+                    w2ui.PackageEditDoc.editors = {document: {}};
+                    ClassicEditor.create(textArea)
+                        .catch(error => {
+                            console.log(error)
+                        })
+                        .then(editor => {
+                            w2ui.PackageEditDoc.editors.document = editor;
+                        });
+                }, 10);
+            },
+            actions: {
+                Save: function () {
+                    let url = this.saveURL;
+                    let newRecord = {};
+                    for(let i in this.fields) {
+                       newRecord[this.fields[i].field] = this.record[this.fields[i].field]
+                        if(this.editors[this.fields[i].field]) {
+                            newRecord[this.fields[i].field] = this.editors[this.fields[i].field].getData();
+                        }
+                    }
+
+                    $.ajax({
+                        url: url, data: newRecord, success: function (results) {
+                            alert("Saved");
+                            // w2popup.close();
+                        }, failure: function (results) {
+                            console.error(results);
+                        }
+                    });
+                },
+                Reset: function () {
+                    this.clear();
+                },
+                cancel: {
+                    caption: "Cancel", style: 'background: pink;', onClick(event) {
+                        w2popup.close();
+                    },
+                },
+            }
+        });
+        $(document).ready(function () {
+            $(document).on('click', "#packagegenerateDescription", function () {
+                let clsid = w2ui.PackageEditDoc.record.name;
+                let url = `package/generate?target=Description&id=${clsid}`;
+                w2ui.PackageEditDoc.lock('description', true);
+                w2ui.PackageEditDoc.refresh();
+                $('html').css('cursor', 'wait');
+                $.ajax({
+                    url: url,
+                    success: function (results) {
+                        $('html').css('cursor', 'auto');
+                        w2ui.PackageEditDoc.unlock('description', true);
+                        w2ui.PackageEditDoc.record.description = results;
+                        w2ui.PackageEditDoc.refresh();
+                        w2ui.PackageEditTabs.click('docs');
+                    },
+                    failure: function (results) {
+                        console.error(results);
+                    }
+                });
+            });
+            $(document).on('click', "#packagegenerateDocumentation", function () {
+                let clsid = w2ui.PackageEditDoc.record.name;
+                let url = `package/generate?target=Documentation&id=${clsid}`;
+                w2ui.PackageEditDoc.lock('Generating...', true);
+                w2ui.PackageEditDoc.refresh();
+                $('html').css('cursor', 'wait');
+                $.ajax({
+                    url: url,
+                    success: function (results) {
+                        w2ui.PackageEditDoc.unlock('document', true);
+                        w2ui.PackageEditDoc.record.document = results;
+                        w2ui.PackageEditDoc.refresh();
+                        $('html').css('cursor', 'auto');
+                        w2ui.PackageEditTabs.click('docs');
+                    },
+                    failure: function (results) {
+                        console.error(results);
+                    }
+                });
+            });
+        })
+    }
+}
+
+function _createPackageEditModels(record, setURL) {
+    if (!w2ui.PackageEditModels) {
+        $().w2grid({
+            name: 'PackageEditModels',
+            header: 'Models',
+            show: {
+                header: true,
+                columnHeaders: true,
+                toolbar: true,
+                toolbarSave: true,
+                toolbarAdd: true,
+                toolbarEdit: true,
+                toolbarDelete: true
+            },
+            toolbar: {
+                items: [
+                    {id: 'generate', type: 'button', img: 'aibutton'}
+                ],
+                onClick(event) {
+                    if (event.target === 'generate') {
+                        let clsid = w2ui.PackageEditModels.record.name;
+                        let url = `package/generateModels?id=${clsid}`;
+                        w2ui.PackageEditModels.lock('Generating...', true);
+                        w2ui.PackageEditModels.refresh();
+                        $('html').css('cursor', 'wait');
+                        $.ajax({
+                            url: url,
+                            success: function (results) {
+                                w2ui.PackageEditModels.unlock();
+                                w2ui.PackageEditModels.record.usecases = results;
+                                $('html').css('cursor', 'auto');
+                                w2ui.PackageEditTabs.click('usecases');
+                            },
+                            failure: function (results) {
+                                console.error(results);
+                            }
+                        });
+                    }
+                }
+            },
+            onAdd: (event) => {
+            },
+            onSave: (event) => {
+                let changes = w2ui['ModelEditStateNet'].getChanges();
+                let records = w2ui['ModelEditStateNet'].records
+                for (let i in changes) {
+                    let change = changes[i];
+                    let rec = null;
+                    for (let j in records) {
+                        if (records[j].recid === change.recid) {
+                            rec = records[j];
+                            break;
+                        }
+                    }
+                    // Just updating the episode
+                    if (rec.id) {
+                        let url = `episode/save?id=${rec.id}`;
+                        for (let i in change) {
+                            if (i === "date") {
+                                url += `&releaseDate=${change[i]}`;
+                            } else {
+                                url += `&${i}=${change[i]}`;
+                            }
+                        }
+                        $.ajax({
+                            url: url,
+                            success: function (results) {
+                                console.log("results", results);
+                            }
+                        });
+                    } else {
+                    }
+                }
+            },
+            onEdit: (event) => {
+                // Open the Episode Edit Dialog
+
+                let record = w2ui['ModelEditStateNet'].records[event.recid];
+                if (record.recid != event.recid) {
+                    for (let i in w2ui.ModelEditStateNet.records) {
+                        if (w2ui.ModelEditStateNet.records[i].recid === event.recid) {
+                            record = w2ui.ModelEditStateNet.records[i];
+                            break;
+                        }
+                    }
+                }
+                record._id = record.id;
+//                EpisodeView.openDialog(record, "PodcastEdit");
+            },
+            onDelete: (event) => {
+                let selected = w2ui['ModelEditStateNet'].getSelection();
+                console.log("Delete", selected);
+            },
+            onRender: (event) => {
+                let records = [];
+                let count = 0;
+                for (let name in w2ui.PackageEditModels.record.classes) {
+                    let usecase = w2ui.PackageEditModels.record.classes[name];
+                    records.push({
+                        recid: count++,
+                        name: usecase.name,
+                        description: usecase.description,
+                    });
+                }
+                w2ui.PackageEditModels.records = records;
+                w2ui.PackageEditModels.sort('name', 'desc');
+                setTimeout(function () {
+                    w2ui.PackageEditModels.refreshBody();
+                }, 10);
+            },
+            onSelect: (event) => {
+                let selected = null;
+                for (let i in w2ui.ModelEditStateNet.records) {
+                    let record = w2ui.ModelEditStateNet.records[i];
+                    if (record.recid === parseInt(event.recid)) {
+                        selected = record;
+                    }
+                }
+                // Now set the toolbar with the right states.
+            },
+            columns: [
+                {
+                    field: 'name',
+                    caption: 'Name',
+                    size: '30%',
+                    resizable: true,
+                    editable: {type: 'text'},
+                    sortable: true,
+                },
+                {
+                    field: 'description',
+                    caption: 'Description',
+                    size: '70%',
+                    resizable: true,
+                    editable: {type: 'text'},
+                    sortable: true,
+                },
+
+            ]
+        });
+    }
+}
+
+function _createPackageEditUseCases(record, setURL) {
+    let config = {
+        name: "PackageEditUseCases",
+        title: "Use Cases",
+        generateURL: 'package/generate?target=UseCases',
+        tab: 'usecases',
+        saveURL: "package/save",
+        attribute: 'usecases',
+        columns: [
+            {
+                field: 'name',
+                caption: 'Name',
+                size: '30%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => { return value.name; }
+            },
+            {
+                field: 'actors',
+                caption: 'Actors',
+                size: '15%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => { return Object.keys(value.actors).join(', '); }
+            },
+            {
+                field: 'scenarios',
+                caption: 'Scenarios',
+                size: '5%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => { return Object.keys(value.scenarios).length; }
+            },
+            {
+                field: 'description',
+                caption: 'Description',
+                size: '50%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => { return value.description; }
+            },
+
+        ]
+    }
+    _createCharacteristicGrid(config);
+}
+
+function _createPackageEditInterfaces(record, setURL) {
+    let config = {
+        name: "PackageEditInterfaces",
+        title: "Interface",
+        generateURL: 'package/generate?target=Interfaces',
+        tab: 'interface',
+        saveURL: "package/save",
+        attribute: 'interface',
+        columns: [
+            {
+                field: 'friendly',
+                caption: 'Name',
+                size: '15%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => {
+                    return value.friendlyName;
+                }
+            },
+            {
+                field: 'name',
+                caption: 'Path',
+                size: '25%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => {
+                    return name;
+                }
+            },
+            {
+                field: 'description',
+                caption: 'Description',
+                size: '60%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => {
+                    return value.description;
+                }
+            },
+
+        ]
+    };
+    _createCharacteristicGrid(config);
+}
+
+function _createPackageEditHandlers(record, setURL) {
+    let config = {
+        name: "PackageEditHandlers",
+        title: "Handlers",
+        generateURL: 'package/generate?target=Handlers',
+        tab: 'handlers',
+        saveURL: "package/save",
+        attribute: 'handlers',
+        columns: [
+            {
+                field: 'name',
+                caption: 'Event',
+                size: '20%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => {
+                    return name;
+                }
+            },
+            {
+                field: 'emitter',
+                caption: 'Emitter',
+                size: '20%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => {
+                    return value.emitter?.name || "N/A";
+                }
+            },
+            {
+                field: 'handlers',
+                caption: 'Handlers',
+                size: '60%',
+                resizable: true,
+                editable: false,
+                sortable: false,
+                fn: (name, value) => {
+                    let handlers = [];
+                    for(let i in value.handlers) {
+                        if(value.handlers[i].action) {
+                            handlers.push(value.handlers[i].action);
+                        } else { handlers.push("Custom")}
+                    }
+                    return handlers.join(',');
+                }
+            },
+
+        ]
+    };
+    _createCharacteristicGrid(config);
+}
+
+function _createPackageEditSubPackages(record, setURL) {
+        let config = {
+            name: "PackageEditSubPackages",
+            title: "Sub Packages",
+            generateURL: 'package/generate?target=SubPackages',
+            tab: 'subpackages',
+            saveURL: "package/save",
+            attribute: 'subpackages',
+            columns: [
+                {
+                    field: 'name',
+                    caption: 'Name',
+                    size: '20%',
+                    resizable: true,
+                    editable: {type: 'text'},
+                    sortable: true,
+                    fn: (name, value) => {
+                        return value.name;
+                    }
+                },
+                {
+                    field: 'short',
+                    caption: 'Short',
+                    size: '10%',
+                    resizable: true,
+                    editable: {type: 'text'},
+                    sortable: true,
+                    fn: (name, value) => {
+                        return value.shortname;
+                    }
+                },
+                {
+                    field: 'description',
+                    caption: 'Description',
+                    size: '60%',
+                    resizable: true,
+                    editable: {type: 'text'},
+                    sortable: true,
+                    fn: (name, value) => {
+                        return value.description;
+                    }
+                },
+
+            ]
+        };
+        _createCharacteristicGrid(config);
+}
+function _createPackageEditWorkflows(record, setURL) {
+    let config = {
+        name: "PackageEditWorkflows",
+        title: "Workflows",
+        generateURL: 'package/generate?target=Workflows',
+        tab: 'workflows',
+        saveURL: "package/save",
+        attribute: 'workflows',
+        columns: [
+            {
+                field: 'name',
+                caption: 'Name',
+                size: '30%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => {
+                    return name;
+                }
+            },
+            {
+                field: 'description',
+                caption: 'Description',
+                size: '70%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => {
+                    return value.description;
+                }
+            },
+
+        ]
+    };
+    _createCharacteristicGrid(config);
+}
+function _createCharacteristicGrid(config) {
+    if (!w2ui[config.name]) {
+        $().w2grid({
+            name: config.name,
+            header: config.title,
+            show: {
+                header: true,
+                columnHeaders: true,
+                toolbar: true,
+                toolbarSave: true,
+                toolbarAdd: true,
+                toolbarEdit: true,
+                toolbarDelete: true
+            },
+            toolbar: {
+                items: [
+                    {id: 'generate', type: 'button', img: 'aibutton'}
+                ],
+                onClick(event) {
+                    if (event.target === 'generate') {
+                        let clsid = w2ui[config.name].record.name;
+                        let url = `${config.generateURL}&id=${clsid}`;
+                        w2ui[config.name].lock('Generating...', true);
+                        w2ui[config.name].refresh();
+                        $('html').css('cursor', 'wait');
+                        $.ajax({
+                            url: url,
+                            success: function (results) {
+                                w2ui[config.name].unlock();
+                                w2ui[config.name].record = results;
+                                $('html').css('cursor', 'auto');
+                                w2ui.PackageEditTabs.click(config.tab);
+                            },
+                            failure: function (results) {
+                                console.error(results);
+                            }
+                        });
+                    }
+                }
+            },
+            onAdd: (event) => {
+            },
+            onSave: (event) => {
+                let changes = w2ui[config.name].getChanges();
+                let records = w2ui[config.name].records;
+                for (let i in changes) {
+                    let change = changes[i];
+                    let rec = null;
+                    for (let j in records) {
+                        if (records[j].recid === change.recid) {
+                            rec = records[j];
+                            break;
+                        }
+                    }
+                    // Just updating the episode
+                    if (rec.id) {
+                        let url = `${config.saveURL}?id=${rec.id}`;
+                        for (let i in change) {
+                            url += `&${i}=${change[i]}`;
+                        }
+                        $.ajax({
+                            url: url,
+                            success: function (results) {
+                                console.log("results", results);
+                            }
+                        });
+                    } else {
+                    }
+                }
+            },
+            onEdit: (event) => {
+                // Open the Episode Edit Dialog
+                let records = w2ui[config.name].records;
+                let rec = null;
+                for (let j in records) {
+                    if (records[j].recid === change.recid) {
+                        rec = records[j];
+                        break;
+                    }
+                }
+            },
+            onDelete: (event) => {
+                let selected = w2ui[config.name].getSelection();
+                console.log("Delete", selected);
+            },
+            onRender: (event) => {
+                let records = [];
+                let count = 0;
+                for (let name in w2ui[config.name].record[config.attribute]) {
+                    let value = w2ui[config.name].record[config.attribute][name];
+                    let record = {
+                        recid: count++
+                    };
+                    for(let i in config.columns) {
+                        let col = config.columns[i];
+                        record[col.field] = col.fn(name,value);
+                    }
+                    records.push(record);
+                }
+                w2ui[config.name].records = records;
+                w2ui[config.name].sort('name', 'desc');
+                setTimeout(function () {
+                    w2ui[config.name].refreshBody();
+                }, 10);
+            },
+            columns: config.columns,
+        });
+    }
 }
 
 function getDetails(objs, idfn) {
@@ -650,6 +1307,146 @@ function layoutRowColumn(parentNode, nodes, size, direction) {
     return;
 }
 
+
+function _setGraphToolbar(object) {
+    const distance = 1750;
+    window.graph.toolbar.setToolBar([
+        {
+            type: 'button', id: 'classes', text: 'Classes', img: 'w2ui-icon-search',
+            onClick: (event) => {
+                // 3D stuff;
+                window.graph.graph.cameraPosition(
+                    {x: 0, y: -0, z: -distance}, // new position
+                    {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                    1000
+                );
+                // 2D Stuff
+                let div = document.getElementById('preview2d');
+                div.innerHTML = "Fetching UML diagram";
+                $.ajax({
+                    url: object.link2d +"&diagram=Logical",
+                    success: (results) => {
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        },
+        {
+            type: 'button', id: 'subpackage', text: 'Sub Packages', img: 'w2ui-icon-search',
+            onClick: (event) => {
+                window.graph.graph.cameraPosition(
+                    {x: 0, y: -distance, z: 0}, // new position
+                    {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                    1000
+                );
+                // 2D Stuff
+                let div = document.getElementById('preview2d');
+                div.innerHTML = "Fetching UML diagram";
+                $.ajax({
+                    url: object.link2d +"&diagram=SubPackage",
+                    success: (results) => {
+                        let div = document.getElementById('preview2d');
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        },
+        {
+            type: 'button', id: 'interface', text: 'Interface', img: 'w2ui-icon-search',
+            onClick: (event) => {
+                window.graph.graph.cameraPosition(
+                        {x: 0, y: distance, z: 0}, // new position
+                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                        1000
+                    );
+                // 2D
+                let div = document.getElementById('preview2d');
+                div.innerHTML = "Fetching UML diagram";
+                $.ajax({
+                    url: object.link2d +"&diagram=ScenarioMapping",
+                    success: (results) => {
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        },
+        {
+            type: 'button', id: 'handlers', text: 'Handlers', img: 'w2ui-icon-search',
+            onClick: (event) => {
+                window.graph.graph.cameraPosition(
+                    {x: distance, y: 0, z: 0}, // new position
+                    {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                    1000
+                );
+                // 2D
+                let div = document.getElementById('preview2d');
+                div.innerHTML = "Fetching UML diagram";
+                $.ajax({
+                    url: object.link2d +"&diagram=Handlers",
+                    success: (results) => {
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        },
+        {
+            type: 'button', id: 'usecases', text: 'UseCases', img: 'w2ui-icon-search',
+            onClick: (event) => {
+                window.graph.graph.cameraPosition(
+                    {x: 0, y: -distance, z: 0}, // new position
+                    {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                    1000
+                );
+                // 2D
+                let div = document.getElementById('preview2d');
+                div.innerHTML = "Fetching UML diagram";
+                $.ajax({
+                    url: object.link2d +"&diagram=UseCases",
+                    success: (results) => {
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        },
+        {
+            type: 'button', id: 'dependents', text: 'Dependents', img: 'w2ui-icon-search',
+            onClick: (event) => {
+                window.graph.graph.cameraPosition(
+                    {x: -distance, y: 0, z: 0}, // new position
+                    {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                    1000
+                );
+                // 2D
+                let div = document.getElementById('preview2d');
+                div.innerHTML = "Fetching UML diagram";
+                $.ajax({
+                    url: object.link2d +"&diagram=SubPackage",
+                    success: (results) => {
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        },
+    ]);
+}
 function getPackageNodes(pkg) {
     let sitems = [];
     for (let pname in pkg.subpackages) {
@@ -659,6 +1456,7 @@ function getPackageNodes(pkg) {
             text: spkg.name,
             img: 'icon-folder',
             link: `package/get?id=${pname}`,
+            link2d: `package/uml?id=${pname}`,
             view: 'package'
         };
         if (spkg.subpackages) {
@@ -675,6 +1473,7 @@ function getPackageNodes(pkg) {
             text: cls.name,
             img: 'icon-page',
             link: `model/get?id=${cname}`,
+            link2d: `model/uml?id=${cname}`,
             view: 'model'
         };
         sitems.push(citem);

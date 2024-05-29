@@ -5,7 +5,7 @@ package "Data Management Layer" #ffcc88 {
 
 }
 
-package "Data Orchestrator" #lightblue {
+package "Data Orchestrator" ##aaffff {
 
 }
 
@@ -14,7 +14,7 @@ package "Data Definition Framework" #ffcc88 {
 }
 
 
-package "Data Orchestrator" #lightblue {
+package "Data Orchestrator" ##aaffff {
 
     interface "Data Orchestrator" as i {
             ^datareference.provisioning
@@ -41,7 +41,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Data Orchestrator" #lightblue {
+package "Data Orchestrator" ##aaffff {
 
 
 }

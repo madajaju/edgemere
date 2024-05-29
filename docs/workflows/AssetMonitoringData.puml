@@ -1,0 +1,32 @@
+@startuml
+
+state "Init" as S1 #ffffcc
+
+state "Adjust Controls" as S2 #ffffcc
+S1 --> S2
+
+json "inputs" as inputs1 {
+    "asset" : "string"
+}
+
+inputs1 -right[dashed]-> S1
+
+json "outputs" as outputs1 {
+
+}
+
+S1 -right[dashed]-> outputs1
+
+json "inputs" as inputs2 {
+    "asset" : "string"
+}
+
+inputs2 -right[dashed]-> S2
+
+json "outputs" as outputs2 {
+    "result" : "undefined"
+}
+
+S2 -right[dashed]-> outputs2
+
+@enduml

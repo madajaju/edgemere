@@ -2,7 +2,7 @@
 
 
 
-package "Ingress Services" #lightblue {
+package "Ingress Services" ##aaffff {
 
     interface "Ingress Services" as i {
     
@@ -20,7 +20,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Ingress Services" #lightblue {
+package "Ingress Services" ##aaffff {
 
 
 }

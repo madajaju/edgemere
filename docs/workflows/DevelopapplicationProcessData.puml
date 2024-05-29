@@ -2,22 +2,76 @@
 
 state "Init" as S1 #ffffcc
 
-state "Create Application" as S2 #88cccc
+state "Adjust Controls" as S2 #ffffcc
 
-state "Write Code" as S3 #ffffcc
+state "Configure Alerts for Asset" as S3 #ffffcc
 
-state "Check In Code" as S4 #88cccc
+state "Monitor QoS" as S4 #ffffcc
 
-state "Application Build Process" as S5 #dddddd
+state "Poll Asset Status" as S5 #ffffcc
+S1 --> S3
 
-state "Deploy Application" as S6 #88cccc
-S1 --> S2
-S2 --> S3
+json "inputs" as inputs1 {
+    "asset" : "string"
+}
+
+inputs1 -right[dashed]-> S1
+
+json "outputs" as outputs1 {
+
+}
+
+S1 -right[dashed]-> outputs1
+
+json "inputs" as inputs2 {
+    "asset" : "string"
+}
+
+inputs2 -right[dashed]-> S2
+
+json "outputs" as outputs2 {
+    "result" : "undefined"
+}
+
+S2 -right[dashed]-> outputs2
 S3 --> S4
+
+json "inputs" as inputs3 {
+    "asset" : "string",
+    "threshold" : "json"
+}
+
+inputs3 -right[dashed]-> S3
+
+json "outputs" as outputs3 {
+
+}
+
+S3 -right[dashed]-> outputs3
 S4 --> S5
-state C5 <<choice>>
-S5 --> C5
-            C5 --> S6 : Build Test Pass\n[true]
-C5 --> S3 : Build Test Pass\n[false]
+
+json "inputs" as inputs4 {
+    "asset" : "string"
+}
+
+inputs4 -right[dashed]-> S4
+
+json "outputs" as outputs4 {
+
+}
+
+S4 -right[dashed]-> outputs4
+
+json "inputs" as inputs5 {
+    "asset" : "string"
+}
+
+inputs5 -right[dashed]-> S5
+
+json "outputs" as outputs5 {
+    "assetStatus" : "undefined"
+}
+
+S5 -right[dashed]-> outputs5
 
 @enduml

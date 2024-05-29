@@ -6,7 +6,7 @@ actor "DataEngineer"
 
 entity EventBus
 
-box Data Orchestrator #lightblue
+box Data Orchestrator #aaffff
     boundary do #white
 end box
 

@@ -6,6 +6,20 @@ left to right direction
 Actor "Data Scientist" as DataScientist
 
 
+rectangle "AI ML Services" as ams #88cccc {
+        usecase "addTo AIModel" as addToAIModel
+    DataScientist --> addToAIModel
+    usecase "create AIModel" as createAIModel
+    DataScientist --> createAIModel
+    usecase "destroy AIModel" as destroyAIModel
+    DataScientist --> destroyAIModel
+    usecase "removeFrom AIModel" as removeFromAIModel
+    DataScientist --> removeFromAIModel
+    usecase "update AIModel" as updateAIModel
+    DataScientist --> updateAIModel
+
+}
+
 rectangle "Application Management Layer" as aml #88cccc {
         usecase "Manage AI Models" as ManageAIModels
     DataScientist --> ManageAIModels
@@ -28,7 +42,7 @@ rectangle "Data Definition Framework" as ddf #ffcc88 {
 
 }
 
-rectangle "Data Orchestrator" as do #lightblue {
+rectangle "Data Orchestrator" as do ##aaffff {
         usecase "Manage Data Instances" as ManageDataInstances
     DataScientist --> ManageDataInstances
 

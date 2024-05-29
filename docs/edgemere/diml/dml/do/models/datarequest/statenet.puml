@@ -2,27 +2,27 @@
 
 
 
-state DataRequest #lightblue {
+state DataRequest ##aaffff {
 
-    state Init #lightblue {
+    state Init ##aaffff {
     }
 
-    state Needed #lightblue {
+    state Needed ##aaffff {
     }
 
-    state Failed #lightblue {
+    state Failed ##aaffff {
     }
 
-    state Selected #lightblue {
+    state Selected ##aaffff {
     }
 
-    state Satisfied #lightblue {
+    state Satisfied ##aaffff {
     }
 
-    state Evaluated #lightblue {
+    state Evaluated ##aaffff {
     }
 
-    state Completed #lightblue {
+    state Completed ##aaffff {
     }
 
 

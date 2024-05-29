@@ -2,7 +2,7 @@
   interface CLI
   interface Web
   interface WebSocket
-node "Data Orchestrator" #lightblue {
+node "Data Orchestrator" ##aaffff {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {

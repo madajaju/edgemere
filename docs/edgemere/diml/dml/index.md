@@ -158,7 +158,7 @@ cases and scenarios of the subsystem.
 
 | Event | Description | Emitter |
 |-------|-------------|---------|
-| data.create |  When an object of type Data is created. | Data
+|  |   | Data
 | data.destroy |  When an object of type Data is destroyed. | Data
 | data.updated |  When an object of type Data has an attribute or association updated. | Data
 | datareference.create |  When an object of type DataReference is created. | DataReference

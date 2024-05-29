@@ -1,0 +1,17 @@
+# ApplicationTemplate Class 
+
+The `ApplicationTemplate` is a class within the Application Management Layer (AML) package, which helps in effectively managing complex workflows and applications throughout their lifecycle. This class provides a template to facilitate the creation of applications based on the parameters passed when utilizing the template. 
+
+## Overview 
+
+The class serves a key role in application development, DevOps and IT Operations by providing a consistent blueprint for application creation. This facilitates a clear, replicable path to application creation, easing the task of developers, and ensuring consistency across various applications being developed.
+
+It does this in concert with other components of the AML, interacting directly with the Distributed Information Management Layer and the Service Management Layer, and leveraging the Identity Aspect and Security Aspect layers.
+
+## Class Interactions 
+
+The `ApplicationTemplate` class has associations with the `Application` class, with the cardinality stating that one `ApplicationTemplate` can be associated with multiple `Application` objects. However, the `ApplicationTemplate` does not own these `Application` elements, implying a compositional relationship rather than a hierarchical one.
+
+## Role in the System
+
+While the AML houses various services and tools for application and workflow orchestration, the `ApplicationTemplate` stands out as an agent for creating standardized workflows and applications, cementing its key contribution to the Application Management Layer's larger goal of streamlining the application development process.

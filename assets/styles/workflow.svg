@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+
+     <g transform="translate(-5,0)">
+<!-- Step 1 -->
+<rect x="20" y="2" width="10" height="5" fill="#EE3E6D"/>
+
+<!-- Arrow from Step 1 to Decision -->
+<line x1="25" y1="7" x2="25" y2="12" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+
+<!-- Decision Diamond -->
+<path d="M 25 12 L 20 14.5 L 25 17 L 30 14.5 Z" fill="#008800"/>
+
+<!-- Arrow from Decision to Action 1 -->
+<line x1="25" y1="17" x2="25" y2="22" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+
+<!-- Action 1 -->
+<rect x="20" y="22" width="10" height="5" fill="#ff8844"/>
+
+<!-- Arrow from Decision to Step 3 -->
+<line x1="20" y1="14.5" x2="15" y2="14.5" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+
+<!-- Step 3 -->
+<rect x="7" y="12" width="10" height="5" fill="#1D8EF2"/>
+
+<!-- Arrow marker definition -->
+<defs>
+     <marker id="arrow" viewBox="0 0 1 1" refX=".5" refY=".5" markerWidth="0.6" markerHeight="0.6"
+             orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="black" />
+     </marker>
+</defs>
+     </g>
+
+</svg>

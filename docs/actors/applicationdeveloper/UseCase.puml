@@ -16,7 +16,7 @@ rectangle "Application Management Layer" as aml #88cccc {
 
 }
 
-rectangle "Data Orchestrator" as do #lightblue {
+rectangle "Data Orchestrator" as do ##aaffff {
         usecase "Manage Data Instances" as ManageDataInstances
     ApplicationDeveloper --> ManageDataInstances
 

@@ -8,7 +8,7 @@
  *
  */
 
-import {AScenario, AText, AUsecase, A3DGraph, ASelectedHUD} from './index.js';
+import {AScenario, AWorkFlow, AText, AUsecase, A3DGraph, ASelectedHUD} from './index.js';
 
 export default class AActor {
     constructor(config) {
@@ -40,8 +40,9 @@ export default class AActor {
                     let actorItem = {
                         id: actor.shortname,
                         text: actor.name,
-                        img: 'icon-folder',
+                        img: 'ailtire-actor',
                         link: `actor/get?id=${actor.shortname}`,
+                        link2d: `actor/uml?id=${actor.shortname}`,
                         nodes: [],
                         view: 'actor'
                     };
@@ -52,7 +53,7 @@ export default class AActor {
                         let ucItem = {
                             id: actor.shortname + ucname,
                             text: ucase.name,
-                            img: 'icon-folder',
+                            img: 'ailtire-usecase',
                             link: `usecase/get?id=${ucname}`,
                             nodes: [],
                             view: 'usecase'
@@ -65,7 +66,7 @@ export default class AActor {
                                 let sItem = {
                                     id: actor.shortname + ucname + sname,
                                     text: sname,
-                                    img: 'icon-page',
+                                    img: 'ailtire-scenario',
                                     link: `scenario/get?id=${ucname}.${sname}`,
                                     method: `${scenario.method}`,
                                     view: 'scenario'
@@ -85,7 +86,7 @@ export default class AActor {
                             let sItem = {
                                 id: actor.shortname + sname,
                                 text: sname,
-                                img: 'icon-page',
+                                img: 'ailtire-scenario',
                                 method: `${scenario.method}`
                             };
                             actorItem.nodes.push(sItem);
@@ -154,12 +155,36 @@ export default class AActor {
         group.aid = node.id;
         node.box = size.r;
         node.expandLink = node.expandLink || `actor/get?id=${node.id}`;
+        node.link2d = `actor/uml?id=${node.id}`;
         node.expandView = node.expandView || AActor.handle;
         node.getDetail = AActor.getDetail;
 
         return group;
     }
-
+    static editDocs(results, setURL) {
+        let editForm = getEditForm(results, setURL);
+        w2popup.open({
+            height: 850,
+            width: 850,
+            title: `Edit ${results.name}`,
+            body: '<div id="editActorDocDialog" style="width: 100%; height: 100%;"></div>',
+            showMax: true,
+            onToggle: function (event) {
+                $(w2ui.editActorDialog.box).hide();
+                event.onComplete = function () {
+                    $(w2ui.ActorDialog.box).show();
+                    w2ui.ActorDialog.resize();
+                }
+            },
+            onOpen: function (event) {
+                event.onComplete = function () {
+                    // specifying an onOpen handler instead is equivalent to specifying an onBeforeOpen handler, which would make this code execute too early and hence not deliver.
+                    $('#editActorDocDialog').w2render(editForm.name);
+                    w2ui.ActorEditTabs.click('docs');
+                }
+            }
+        })
+    }
     static viewList3D(objs) {
         let data = {nodes: {}, links: []};
 
@@ -172,7 +197,8 @@ export default class AActor {
                 name: actor.name.replace(/\s/g, '\n'),
                 view: AActor.view3D,
                 expandView: AActor.handle,
-                expandLink: `actor/get?id=${actor.shortname}`
+                expandLink: `actor/get?id=${actor.shortname}`,
+                link2d: `actor/uml?id=${actor.shortname}`
             };
 
             data.nodes[actor.shortname] = node;
@@ -218,6 +244,7 @@ export default class AActor {
             view: AActor.view3D,
             expandView: AActor.handle,
             expandLink: `actor/get?id=${actor.shortname}`,
+            link2d: `actor/uml?id=${actor.shortname}`,
             fx: 0,
             fy: 0,
             fz: 0
@@ -255,6 +282,20 @@ export default class AActor {
                     data.links.push({source: j, target: id, value: 0.1});
                 }
             }
+        }
+        i = 0;
+        for (let j in actor.workflows) {
+            let wf = actor.workflows[j];
+            let node = {
+                id: j, name: wf.name.replace(/\s/g, '\n'),
+                view: AWorkFlow.view3D,
+                expandView: AWorkFlow.handle,
+                expandLink: `workflow/get?id=${j}`,
+                link2d: `workflow/uml?id=${j}`,
+            }
+            data.nodes[j] = node;
+            i++;
+            data.links.push({source: actor.shortname, target: j, value: 0.1});
         }
         window.graph.graph.cameraPosition(
             {x: 0, y: 0, z: 1000}, // new position
@@ -354,6 +395,10 @@ export default class AActor {
         ASelectedHUD.update("Actor", records);
         w2ui['objlist'].refresh();
     }
+    static handle2d(result, object, div) {
+        _setGraphToolbar(object);
+        div.innerHTML = result;
+    }
     static handle(result) {
         AActor.viewDeep3D(result, "new");
         AActor.showDetail(result);
@@ -370,4 +415,224 @@ function getDetails(objs) {
         items.push(`<span onclick="expandObject('${item.link}');">${name}</span>^${item.description}`);
     }
     return items;
+}
+
+function getEditForm(record, setURL) {
+    if (!w2ui['ActorEditGeneral']) {
+        $().w2layout({
+            name: 'ActorEditGeneral',
+            panels: [
+                {type: 'left', size: 150, resizable: true, minSize: 35},
+                {type: 'main', overflow: 'hidden'}
+            ],
+            onRender: (event) => {
+                if (event.target === 'ActorEditGeneral') {
+                    if (w2ui.ActorEditGeneral.record) {
+                        w2ui.ActorEditGeneral.record = {};
+                    }
+                }
+            }
+        });
+    }
+    if (!w2ui['ActorEditTabs']) {
+        $().w2sidebar({
+            name: 'ActorEditTabs',
+            flatButton: true,
+            nodes: [
+                {id: 'docs', text: 'Docs', selected: true},
+            ],
+            onClick(event) {
+                switch (event.target) {
+                    case 'docs':
+                        w2ui['ActorEditGeneral'].html('main', w2ui.ActorEditDoc);
+                        break;
+                }
+            }
+        });
+    }
+    _createActorEditDoc(record, setURL);
+
+    w2ui['ActorEditGeneral'].record = record;
+    w2ui['ActorEditDoc'].record = record;
+    w2ui['ActorEditGeneral'].saveURL = setURL;
+    w2ui.ActorEditGeneral.html('left', w2ui.ActorEditTabs);
+    w2ui.ActorEditGeneral.html('main', w2ui.ActorEditDoc);
+    return w2ui['ActorEditGeneral'];
+}
+
+function _createActorEditDoc(record, setURL) {
+    if (!w2ui.ActorEditDoc) {
+        $().w2form({
+            name: 'ActorEditDoc',
+            saveURL: setURL,
+            style: 'border: 0px; background-color: transparent;overflow:hidden; ',
+            fields: [
+                {
+                    field: 'name',
+                    type: 'text',
+                    required: true,
+                    readonly: true,
+                    html: {
+                        attr: 'style="width: 450px;',
+                        caption: 'Name'
+                    }
+                },
+                {
+                    caption: 'Description',
+                    field: 'description',
+                    type: 'textarea',
+                    html: {
+                        attr: 'style="width: 450px; height: 50px;"',
+                        caption: "Description" +
+                            "<br><button class=AIButton id='actorgenerateDescription'></button>"
+                    }
+                },
+                {
+                    field: 'document',
+                    type: 'textarea',
+                    html: {
+                        attr: 'style="width: 450px; height: 500px;"',
+                        caption: "Details" +
+                            "<br><button class=AIButton id='actorgenerateDocumentation'></button>"
+                    }
+                },
+            ],
+            onRender: (event) => {
+                setTimeout(function () {
+                    let textArea = document.querySelector("#document");
+                    w2ui.ActorEditDoc.editors = {document: {}};
+                    ClassicEditor.create(textArea)
+                        .catch(error => {
+                            console.log(error)
+                        })
+                        .then(editor => {
+                            w2ui.ActorEditDoc.editors.document = editor;
+                        });
+                }, 10);
+            },
+            actions: {
+                Save: function () {
+                    let url = this.saveURL;
+                    let newRecord = {};
+                    for(let i in this.fields) {
+                        newRecord[this.fields[i].field] = this.record[this.fields[i].field]
+                        if(this.editors[this.fields[i].field]) {
+                            newRecord[this.fields[i].field] = this.editors[this.fields[i].field].getData();
+                        }
+                    }
+
+                    $.ajax({
+                        url: url, data: newRecord, success: function (results) {
+                            alert("Saved");
+                        }, failure: function (results) {
+                            console.error(results);
+                        }
+                    });
+                },
+                Reset: function () {
+                    this.clear();
+                },
+                cancel: {
+                    caption: "Cancel", style: 'background: pink;', onClick(event) {
+                        w2popup.close();
+                    },
+                },
+            }
+        });
+        $(document).ready(function () {
+            $(document).on('click', "#actorgenerateDescription", function () {
+                let clsid = w2ui.ActorEditDoc.record.name;
+                let url = `actor/generate?target=Description&id=${clsid}`;
+                w2ui.ActorEditDoc.lock('description', true);
+                w2ui.ActorEditDoc.refresh();
+                $('html').css('cursor', 'wait');
+                $.ajax({
+                    url: url,
+                    success: function (results) {
+                        $('html').css('cursor', 'auto');
+                        w2ui.ActorEditDoc.unlock('description', true);
+                        w2ui.ActorEditDoc.record.description = results;
+                        w2ui.ActorEditDoc.refresh();
+                        w2ui.ActorEditTabs.click('docs');
+                    },
+                    failure: function (results) {
+                        console.error(results);
+                    }
+                });
+            });
+            $(document).on('click', "#actorgenerateDocumentation", function () {
+                let clsid = w2ui.ActorEditDoc.record.name;
+                let url = `actor/generate?target=Documentation&id=${clsid}`;
+                w2ui.ActorEditDoc.lock('Generating...', true);
+                w2ui.ActorEditDoc.refresh();
+                $('html').css('cursor', 'wait');
+                $.ajax({
+                    url: url,
+                    success: function (results) {
+                        w2ui.ActorEditDoc.unlock('document', true);
+                        w2ui.ActorEditDoc.record.document = results;
+                        w2ui.ActorEditDoc.refresh();
+                        $('html').css('cursor', 'auto');
+                        w2ui.ActorEditTabs.click('docs');
+                    },
+                    failure: function (results) {
+                        console.error(results);
+                    }
+                });
+            });
+        })
+    }
+}
+function _setGraphToolbar(object) {
+    const distance = 1750;
+    const div = document.getElementById('preview2d');
+    window.graph.toolbar.setToolBar([
+        {
+            type: 'button', id: 'fit', text: 'Show All', img: 'w2ui-icon-zoom',
+            onClick: (event) => {
+                window.graph.graph.zoomToFit(1000);
+                // 2D
+                div.innerHTML = "Fetching UML diagrams";
+                $.ajax({
+                    url: object.link2d +"&diagram=UseCase",
+                    success: (results) => {
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        },
+        {
+            type: 'button', id: 'usecases', text: 'UseCases', img: 'w2ui-icon-search', onClick: (event) => {
+                // 2D
+                div.innerHTML = "Fetching UML diagrams";
+                $.ajax({
+                    url: object.link2d +"&diagram=UseCase",
+                    success: (results) => {
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        },
+        {
+            type: 'button', id: 'workflows', text: 'Workflows', img: 'w2ui-icon-search', onClick: (event) => {
+                // 2D
+                div.innerHTML = "Fetching UML diagrams";
+                $.ajax({
+                    url: object.link2d +"&diagram=Workflows",
+                    success: (results) => {
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        },
+    ]);
 }

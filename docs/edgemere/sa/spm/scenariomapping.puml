@@ -126,12 +126,21 @@ edgemeresaspmsecurityprofile -- edgemeresaspmsecurityprofiletest
 
 
 
+
+
+
+
+
+
+
+
+
         rectangle "Manage Applications" as ManageApplications #ffffaa {
             ("Build Application")/ as DevOpsEngineerManageApplicationsBuildApplication
         }
     
     edgemeresaspmdatacreate <-- DevOpsEngineerManageApplicationsBuildApplication
-    
+
 
 
         rectangle "Change Physical World" as ChangePhysicalWorld #ffffaa {
@@ -139,13 +148,13 @@ edgemeresaspmsecurityprofile -- edgemeresaspmsecurityprofiletest
         }
     
     edgemeresaspmdatacreate <-- ActorChangePhysicalWorldAdjustTemperature
-    
+
         rectangle "Change Physical World" as ChangePhysicalWorld #ffffaa {
             ("Toogle Switch")/ as ActorChangePhysicalWorldtoggleSwitch
         }
     
     edgemeresaspmdatacreate <-- ActorChangePhysicalWorldtoggleSwitch
-    
+
 
 
         rectangle "Connect Physical Asset to a Device" as ConnectPhysicalAssettoaDevice #ffffaa {
@@ -153,7 +162,7 @@ edgemeresaspmsecurityprofile -- edgemeresaspmsecurityprofiletest
         }
     
     edgemeresaspmdatacreate <-- ActorConnectPhysicalAssettoaDeviceAssetDigitalDeviceConnectivity
-    
+
 
 
 
@@ -162,7 +171,7 @@ edgemeresaspmsecurityprofile -- edgemeresaspmsecurityprofiletest
         }
     
     edgemeresaspmdatacreate <-- ActorMonitorPhysicalWorldContinuousMonitoring
-    
+
 
 
 
@@ -179,13 +188,13 @@ edgemeresaspmsecurityprofile -- edgemeresaspmsecurityprofiletest
         }
     
     edgemeresaspmdatacreate <-- DataEngineerManageMetaDataCaptureMetaData
-    
+
         rectangle "Manage Meta Data" as ManageMetaData #ffffaa {
             ("Capture Meta Data")/ as DataStewardManageMetaDataCaptureMetaData
         }
     
     edgemeresaspmdatacreate <-- DataStewardManageMetaDataCaptureMetaData
-    
+
 
 
 
@@ -197,50 +206,50 @@ edgemeresaspmsecurityprofile -- edgemeresaspmsecurityprofiletest
         }
     
     edgemeresaspmsecurityprofileattach <-- SecurityEngineerApplySecurityProfilesAttachProfile
-    
+
         rectangle "Apply Security Profiles" as ApplySecurityProfiles #ffffaa {
             ("Deploy Security Profile")/ as SecurityEngineerApplySecurityProfilesDeploySecurityProfile
         }
     
     edgemeresaspmsecurityprofiledeploy <-- SecurityEngineerApplySecurityProfilesDeploySecurityProfile
-    
+
 
         rectangle "Manage Security Profiles" as ManageSecurityProfiles #ffffaa {
             ("Create Security Profile")/ as SecurityEngineerManageSecurityProfilesCreateSecurityProfile
         }
     
     edgemeresaspmsecurityprofilecreate <-- SecurityEngineerManageSecurityProfilesCreateSecurityProfile
-    
+
         rectangle "Manage Security Profiles" as ManageSecurityProfiles #ffffaa {
             ("Disable Security Profile")/ as SecurityEngineerManageSecurityProfilesDisableSecurityProfile
         }
     
     edgemeresaspmsecurityprofiledisable <-- SecurityEngineerManageSecurityProfilesDisableSecurityProfile
-    
+
         rectangle "Manage Security Profiles" as ManageSecurityProfiles #ffffaa {
             ("Enable Security Profile")/ as SecurityEngineerManageSecurityProfilesEnableSecurityProfile
         }
     
     edgemeresaspmsecurityprofileenable <-- SecurityEngineerManageSecurityProfilesEnableSecurityProfile
-    
+
         rectangle "Manage Security Profiles" as ManageSecurityProfiles #ffffaa {
             ("Monitor Security Profile")/ as SecurityEngineerManageSecurityProfilesMonitorSecurityProfile
         }
     
     edgemeresaspmsecurityprofilestatus <-- SecurityEngineerManageSecurityProfilesMonitorSecurityProfile
-    
+
         rectangle "Manage Security Profiles" as ManageSecurityProfiles #ffffaa {
             ("Remove Security Profile")/ as SecurityEngineerManageSecurityProfilesRemoveSecurityProfile
         }
     
     edgemeresaspmsecurityprofiledestroy <-- SecurityEngineerManageSecurityProfilesRemoveSecurityProfile
-    
+
         rectangle "Manage Security Profiles" as ManageSecurityProfiles #ffffaa {
             ("Test Security Profile")/ as SecurityEngineerManageSecurityProfilesTestSecurityProfile
         }
     
     edgemeresaspmsecurityprofiletest <-- SecurityEngineerManageSecurityProfilesTestSecurityProfile
-    
+
 
 
 
@@ -253,73 +262,73 @@ edgemeresaspmsecurityprofile -- edgemeresaspmsecurityprofiletest
         }
     
     edgemeresaspmdatacreate <-- DevOpsEngineerManageStacksBuildStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Create Application Stack")/ as ApplicationDeveloperManageStacksCreateApplicationStack
         }
     
     edgemeresaspmdatacreate <-- ApplicationDeveloperManageStacksCreateApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Create Application Stack")/ as StackDeveloperManageStacksCreateApplicationStack
         }
     
     edgemeresaspmdatacreate <-- StackDeveloperManageStacksCreateApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Create Service Stack")/ as StackDeveloperManageStacksCreateServiceStack
         }
     
     edgemeresaspmdatacreate <-- StackDeveloperManageStacksCreateServiceStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Modify Application Stack")/ as StackDeveloperManageStacksModifyApplicationStack
         }
     
     edgemeresaspmdatacreate <-- StackDeveloperManageStacksModifyApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Modify Application Stack")/ as ApplicationDeveloperManageStacksModifyApplicationStack
         }
     
     edgemeresaspmdatacreate <-- ApplicationDeveloperManageStacksModifyApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Modify Service Stack")/ as StackDeveloperManageStacksModifyServiceStack
         }
     
     edgemeresaspmdatacreate <-- StackDeveloperManageStacksModifyServiceStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Test Application Stack")/ as StackDeveloperManageStacksTestApplicationStack
         }
     
     edgemeresaspmdatacreate <-- StackDeveloperManageStacksTestApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Test Application Stack")/ as ApplicationDeveloperManageStacksTestApplicationStack
         }
     
     edgemeresaspmdatacreate <-- ApplicationDeveloperManageStacksTestApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Test Service Stack")/ as StackDeveloperManageStacksTestServiceStack
         }
     
     edgemeresaspmdatacreate <-- StackDeveloperManageStacksTestServiceStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Version Application Stack")/ as ApplicationDeveloperManageStacksVersionApplicationStack
         }
     
     edgemeresaspmdatacreate <-- ApplicationDeveloperManageStacksVersionApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Version Service Stack")/ as StackDeveloperManageStacksVersionServiceStack
         }
     
     edgemeresaspmdatacreate <-- StackDeveloperManageStacksVersionServiceStack
-    
+
 
 
 
@@ -328,7 +337,7 @@ edgemeresaspmsecurityprofile -- edgemeresaspmsecurityprofiletest
         }
     
     edgemeresaspmdatacreate <-- StackDeveloperManageServicesBuildService
-    
+
 
 
 

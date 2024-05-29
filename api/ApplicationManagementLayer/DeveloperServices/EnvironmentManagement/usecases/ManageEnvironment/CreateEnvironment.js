@@ -1,11 +1,1 @@
-module.exports = {
-    "name": "Create Environment",
-    "description": "IT Opererations create environments and assigns a Multi Cloud to the" +
-        " Environment",
-    "method": "environment/create",
-    "actors": {"IT Operations": "uses"},
-    "uid": "ManageEnvironment.CreateEnvironment",
-    "given": "IT Operations has access to create an environment",
-    "when": "IT Operations creates an environment and assigns a Multi Cloud ",
-    "then": "The environment should be successfully created with the assigned Multi Cloud"
-};
+module.exports = {"name":"Create Environment","description":"IT Opererations create environments and assigns a Multi Cloud to the Environment","method":"environment/create","actors":{"IT Operations":"uses"},"uid":"ManageEnvironment.CreateEnvironment","given":"IT Operations has access to create an environment","when":"IT Operations creates an environment and assigns a Multi Cloud ","then":"The environment should be successfully created with the assigned Multi Cloud","steps":[{"action":"/edgemere/aml/ds/em/environment/create","parameters":{"attr1":"Provide The Description"},"description":"IT Operations creates a new environment"},{"action":"/edgemere/aml/ds/em/environment/addpolicies","parameters":{"attr1":"Assign a Multi Cloud Policy"},"description":"IT Operations assigns a Multi Cloud to the created environment"},{"action":"/edgemere/aml/ds/em/environment/enable","parameters":{"attr1":"Enable the Environment"},"description":"The new environment with the assigned Multi Cloud is enabled"},{"action":"/edgemere/aml/ds/em/environment/list","parameters":{"attr1":"List down the Environments"},"description":"List down all environments to validate the newly created one"}]};

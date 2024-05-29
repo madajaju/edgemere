@@ -1,0 +1,26 @@
+@startuml
+
+
+left to right direction
+
+usecase "removeFrom AIModel" as removeFromAIModel #yellow
+
+Actor "Data Scientist" as DataScientist
+
+DataScientist --> removeFromAIModel
+
+
+
+
+
+
+
+
+
+usecase "0" as 0 #white
+
+removeFromAIModel ..> 0 : includes
+
+
+
+@enduml

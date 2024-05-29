@@ -13,14 +13,41 @@ box Application Management Layer #88cccc
 end box
 
 
+box Application Management Layer #88cccc
+    end box
+
 group Given [A Data Engineer or Application Developer uses an AI model]
 
 "DataEngineer" --/ aml: They decide to destroy the AI model
 "aml" -> aml: Destroy AI Model
 
+    aml -> "application management layer": list ()
+
+    "application management layer" --/ EventBus: aimodel.list
+
+    aml -> "application management layer": destroy (appName: [object Object])
+
+    "application management layer" --/ EventBus: aimodel.destroy
+
+    aml -> "application management layer": list ()
+
+    "application management layer" --/ EventBus: aimodel.list
+
 
 "ApplicationDeveloper" --/ aml: They decide to destroy the AI model
 "aml" -> aml: Destroy AI Model
+
+    aml -> "application management layer": list ()
+
+    "application management layer" --/ EventBus: aimodel.list
+
+    aml -> "application management layer": destroy (appName: [object Object])
+
+    "application management layer" --/ EventBus: aimodel.destroy
+
+    aml -> "application management layer": list ()
+
+    "application management layer" --/ EventBus: aimodel.list
 
 
 

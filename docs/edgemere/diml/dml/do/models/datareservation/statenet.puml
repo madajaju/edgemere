@@ -2,18 +2,18 @@
 
 
 
-state DataReservation #lightblue {
+state DataReservation ##aaffff {
 
-    state Init #lightblue {
+    state Init ##aaffff {
     }
 
-    state Created #lightblue {
+    state Created ##aaffff {
     }
 
-    state Confirmed #lightblue {
+    state Confirmed ##aaffff {
     }
 
-    state Rejected #lightblue {
+    state Rejected ##aaffff {
     }
 
 

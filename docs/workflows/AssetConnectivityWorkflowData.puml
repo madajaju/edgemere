@@ -1,0 +1,28 @@
+@startuml
+
+state "Init" as S1 #ffffcc
+
+state "AssetDigitalDeviceConnectivity" as S2 #dddddd
+S1 --> S2
+
+json "inputs" as inputs1 {
+    "asset" : "ref",
+    "device" : "ref"
+}
+
+inputs1 -right[dashed]-> S1
+
+json "outputs" as outputs1 {
+    "status" : "undefined"
+}
+
+S1 -right[dashed]-> outputs1
+
+json "inputs" as inputs2 {
+    "asset" : "ref",
+    "device" : "ref"
+}
+
+inputs2 -right[dashed]-> S2
+
+@enduml

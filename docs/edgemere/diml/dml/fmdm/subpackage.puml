@@ -1,7 +1,7 @@
 @startuml
 
 
-package "Data Orchestrator" #lightblue {
+package "Data Orchestrator" ##aaffff {
 
 }
 
@@ -10,7 +10,7 @@ package "Data Management Layer" #ffcc88 {
 }
 
 
-package "Federated Meta Data Management" #lightblue {
+package "Federated Meta Data Management" ##aaffff {
 
     interface "Federated Meta Data Management" as i {
     
@@ -29,7 +29,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Federated Meta Data Management" #lightblue {
+package "Federated Meta Data Management" ##aaffff {
 
 
 }

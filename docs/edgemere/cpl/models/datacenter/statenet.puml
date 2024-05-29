@@ -13,14 +13,68 @@ state DataCenter #cccccc {
     state Disabled #cccccc {
     }
 
+    state Destroyed #cccccc {
+    }
+
+    state Updated #cccccc {
+    }
+
+    state Reserved #cccccc {
+    }
 
 
 
-Init -[#black]--> Enabled : create
+
+state createCondition <<choice>>
+Init -[#black]--> createCondition : create
+
+createCondition -[#black]--> Enabled: [Checks file existence]
+
+Enabled: entry/ Custom
+
+Enabled: entry/ Custom
 
 Enabled -[#black]--> Disabled : disable
 
+Enabled -[#black]--> Destroyed : destroy
+
+state updateCondition <<choice>>
+Enabled -[#black]--> updateCondition : update
+
+updateCondition -[#black]--> Updated: [Checks for updates]
+
+state reserveCondition <<choice>>
+Enabled -[#black]--> reserveCondition : reserve
+
+reserveCondition -[#black]--> Reserved: [Checks resource availability]
+
+Disabled: entry/ Custom
+
+Disabled: entry/ Custom
+
 Disabled -[#black]--> Enabled : enable
+
+Disabled -[#black]--> Destroyed : destroy
+
+Destroyed: entry/ Custom
+
+Destroyed: entry/ Custom
+
+Updated: entry/ Custom
+
+Updated: entry/ Custom
+
+Updated: exit/ Custom
+
+Updated: exit/ Custom
+
+Reserved: entry/ Custom
+
+Reserved: entry/ Custom
+
+Reserved: exit/ Custom
+
+Reserved: exit/ Custom
 
 }
 

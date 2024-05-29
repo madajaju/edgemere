@@ -1,0 +1,5 @@
+@startuml
+json "This is something" as ThisisSomething {
+    "Given": "This is text"
+}
+@enduml

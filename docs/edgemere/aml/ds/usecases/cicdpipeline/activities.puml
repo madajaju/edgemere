@@ -1,0 +1,30 @@
+@startuml
+
+
+left to right direction
+
+usecase "CICD Pipeline" as CICDPipeline #yellow
+
+Actor "Developer" as Developer
+
+Developer --> CICDPipeline
+
+
+
+
+
+
+
+
+
+usecase "0" as 0 #white
+
+CICDPipeline ..> 0 : includes
+
+
+
+usecase "EnvironmentDeployments" as EnvironmentDeployments #white
+
+CICDPipeline <.. EnvironmentDeployments : includes
+
+@enduml

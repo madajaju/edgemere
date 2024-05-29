@@ -15,18 +15,81 @@ box Application Management Layer #88cccc
 end box
 
 
+box Application Management Layer #88cccc
+    end box
+
 group Given [A Data Engineer, DevOps Engineer, or Application Developer uses the AI model]
 
 "DataEngineer" --/ aml: The AI model needs an update
 "aml" -> aml: Update AI Model
 
+    aml -> "application management layer": list ()
+
+    "application management layer" --/ EventBus: aimodel.list
+
+    aml -> "application management layer": update (appName: desired AI model name)
+
+    "application management layer" --/ EventBus: aimodel.update
+
+    aml -> "application management layer": validate (appName: desired AI model name,SLA: provided Service Level Agreement)
+
+    "application management layer" --/ EventBus: aimodel.validate
+
+    aml -> "application management layer": sign (appName: desired AI model name)
+
+    "application management layer" --/ EventBus: aimodel.sign
+
+    aml -> "application management layer": deploy ()
+
+    "application management layer" --/ EventBus: aimodel.deploy
+
 
 "DevOpsEngineer" --/ aml: The AI model needs an update
 "aml" -> aml: Update AI Model
 
+    aml -> "application management layer": list ()
+
+    "application management layer" --/ EventBus: aimodel.list
+
+    aml -> "application management layer": update (appName: desired AI model name)
+
+    "application management layer" --/ EventBus: aimodel.update
+
+    aml -> "application management layer": validate (appName: desired AI model name,SLA: provided Service Level Agreement)
+
+    "application management layer" --/ EventBus: aimodel.validate
+
+    aml -> "application management layer": sign (appName: desired AI model name)
+
+    "application management layer" --/ EventBus: aimodel.sign
+
+    aml -> "application management layer": deploy ()
+
+    "application management layer" --/ EventBus: aimodel.deploy
+
 
 "ApplicationDeveloper" --/ aml: The AI model needs an update
 "aml" -> aml: Update AI Model
+
+    aml -> "application management layer": list ()
+
+    "application management layer" --/ EventBus: aimodel.list
+
+    aml -> "application management layer": update (appName: desired AI model name)
+
+    "application management layer" --/ EventBus: aimodel.update
+
+    aml -> "application management layer": validate (appName: desired AI model name,SLA: provided Service Level Agreement)
+
+    "application management layer" --/ EventBus: aimodel.validate
+
+    aml -> "application management layer": sign (appName: desired AI model name)
+
+    "application management layer" --/ EventBus: aimodel.sign
+
+    aml -> "application management layer": deploy ()
+
+    "application management layer" --/ EventBus: aimodel.deploy
 
 
 

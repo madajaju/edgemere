@@ -2,6 +2,221 @@
 left to right direction
 
 
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+package "pw" as edgemerecplpw #aaffff {
+ component "asset" as edgemerecplpwasset
+ interface "control" as edgemerecplpwassetcontrol
+edgemerecplpwasset -- edgemerecplpwassetcontrol
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+package "pw" as edgemerecplpw #aaffff {
+ component "asset" as edgemerecplpwasset
+ interface "startmonitoring" as edgemerecplpwassetstartmonitoring
+edgemerecplpwasset -- edgemerecplpwassetstartmonitoring
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+package "pw" as edgemerecplpw #aaffff {
+ component "asset" as edgemerecplpwasset
+ interface "stopmonitoring" as edgemerecplpwassetstopmonitoring
+edgemerecplpwasset -- edgemerecplpwassetstopmonitoring
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+package "pw" as edgemerecplpw #aaffff {
+ component "communicationpathway" as edgemerecplpwcommunicationpathway
+ interface "transmitdata" as edgemerecplpwcommunicationpathwaytransmitdata
+edgemerecplpwcommunicationpathway -- edgemerecplpwcommunicationpathwaytransmitdata
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+package "pw" as edgemerecplpw #aaffff {
+ component "data" as edgemerecplpwdata
+ interface "create" as edgemerecplpwdatacreate
+edgemerecplpwdata -- edgemerecplpwdatacreate
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+package "pw" as edgemerecplpw #aaffff {
+ component "location" as edgemerecplpwlocation
+ interface "getlocationdetails" as edgemerecplpwlocationgetlocationdetails
+edgemerecplpwlocation -- edgemerecplpwlocationgetlocationdetails
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+package "pw" as edgemerecplpw #aaffff {
+ component "location" as edgemerecplpwlocation
+ interface "setcoordinates" as edgemerecplpwlocationsetcoordinates
+edgemerecplpwlocation -- edgemerecplpwlocationsetcoordinates
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+package "pw" as edgemerecplpw #aaffff {
+ component "physicalasset" as edgemerecplpwphysicalasset
+ interface "manage" as edgemerecplpwphysicalassetmanage
+edgemerecplpwphysicalasset -- edgemerecplpwphysicalassetmanage
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+package "pw" as edgemerecplpw #aaffff {
+ component "plc" as edgemerecplpwplc
+ interface "communicatewithasset" as edgemerecplpwplccommunicatewithasset
+edgemerecplpwplc -- edgemerecplpwplccommunicatewithasset
+}
+}
+}
+
+    
+    package "edgemere" as edgemere {
+package "cpl" as edgemerecpl {
+package "pw" as edgemerecplpw #aaffff {
+ component "sensor" as edgemerecplpwsensor
+ interface "getreading" as edgemerecplpwsensorgetreading
+edgemerecplpwsensor -- edgemerecplpwsensorgetreading
+}
+}
+}
+
+    
+hexagon "data.create" as datacreate
+            edgemerecplpw <-- datacreate
+        
+hexagon "location.create" as locationcreate
+            edgemerecplpw <-- locationcreate
+        
+hexagon "location.destroy" as locationdestroy
+            edgemerecplpw <-- locationdestroy
+        
+hexagon "physicalasset.create" as physicalassetcreate
+            edgemerecplpw <-- physicalassetcreate
+        
+hexagon "physicalasset.destroy" as physicalassetdestroy
+            edgemerecplpw <-- physicalassetdestroy
+        
+hexagon "physicalasset.updated" as physicalassetupdated
+            edgemerecplpw <-- physicalassetupdated
+        
+hexagon "plc.create" as plccreate
+            edgemerecplpw <-- plccreate
+        
+hexagon "sensor.updated" as sensorupdated
+            edgemerecplpw <-- sensorupdated
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        rectangle "Manage Applications" as ManageApplications #ffffaa {
+            ("Build Application")/ as DevOpsEngineerManageApplicationsBuildApplication
+        }
+    
+    edgemerecplpwdatacreate <-- DevOpsEngineerManageApplicationsBuildApplication
+
+
+
+        rectangle "Change Physical World" as ChangePhysicalWorld #ffffaa {
+            ("Adjust Temperature")/ as ActorChangePhysicalWorldAdjustTemperature
+        }
+    
+    edgemerecplpwdatacreate <-- ActorChangePhysicalWorldAdjustTemperature
+    edgemerecplpwassetcontrol <-- ActorChangePhysicalWorldAdjustTemperature
+        edgemerecplpwassetstartmonitoring <-- ActorChangePhysicalWorldAdjustTemperature
+        edgemerecplpwphysicalassetmanage <-- ActorChangePhysicalWorldAdjustTemperature
+        edgemerecplpwcommunicationpathwaytransmitdata <-- ActorChangePhysicalWorldAdjustTemperature
+        edgemerecplpwdatacreate <-- ActorChangePhysicalWorldAdjustTemperature
+        edgemerecplpwsensorgetreading <-- ActorChangePhysicalWorldAdjustTemperature
+        edgemerecplpwcommunicationpathwaytransmitdata <-- ActorChangePhysicalWorldAdjustTemperature
+        edgemerecplpwdatacreate <-- ActorChangePhysicalWorldAdjustTemperature
+        edgemerecplpwassetstopmonitoring <-- ActorChangePhysicalWorldAdjustTemperature
+        edgemerecplpwphysicalassetmanage <-- ActorChangePhysicalWorldAdjustTemperature
+    
+        rectangle "Change Physical World" as ChangePhysicalWorld #ffffaa {
+            ("Toogle Switch")/ as ActorChangePhysicalWorldtoggleSwitch
+        }
+    
+    edgemerecplpwdatacreate <-- ActorChangePhysicalWorldtoggleSwitch
+
+
+
+        rectangle "Connect Physical Asset to a Device" as ConnectPhysicalAssettoaDevice #ffffaa {
+            ("Asset Digital Device Connectivity")/ as ActorConnectPhysicalAssettoaDeviceAssetDigitalDeviceConnectivity
+        }
+    
+    edgemerecplpwdatacreate <-- ActorConnectPhysicalAssettoaDeviceAssetDigitalDeviceConnectivity
+
+
+
+
+        rectangle "Monitor Physical World" as MonitorPhysicalWorld #ffffaa {
+            ("Continuous Monitoring")/ as ActorMonitorPhysicalWorldContinuousMonitoring
+        }
+    
+    edgemerecplpwdatacreate <-- ActorMonitorPhysicalWorldContinuousMonitoring
+
+
+
+
+
+
+
+
+
+
+
+
+        rectangle "Manage Meta Data" as ManageMetaData #ffffaa {
+            ("Capture Meta Data")/ as DataEngineerManageMetaDataCaptureMetaData
+        }
+    
+    edgemerecplpwdatacreate <-- DataEngineerManageMetaDataCaptureMetaData
+
+        rectangle "Manage Meta Data" as ManageMetaData #ffffaa {
+            ("Capture Meta Data")/ as DataStewardManageMetaDataCaptureMetaData
+        }
+    
+    edgemerecplpwdatacreate <-- DataStewardManageMetaDataCaptureMetaData
 
 
 
@@ -17,28 +232,86 @@ left to right direction
 
 
 
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Build Stack")/ as DevOpsEngineerManageStacksBuildStack
+        }
+    
+    edgemerecplpwdatacreate <-- DevOpsEngineerManageStacksBuildStack
+
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Create Application Stack")/ as ApplicationDeveloperManageStacksCreateApplicationStack
+        }
+    
+    edgemerecplpwdatacreate <-- ApplicationDeveloperManageStacksCreateApplicationStack
+
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Create Application Stack")/ as StackDeveloperManageStacksCreateApplicationStack
+        }
+    
+    edgemerecplpwdatacreate <-- StackDeveloperManageStacksCreateApplicationStack
+
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Create Service Stack")/ as StackDeveloperManageStacksCreateServiceStack
+        }
+    
+    edgemerecplpwdatacreate <-- StackDeveloperManageStacksCreateServiceStack
+
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Modify Application Stack")/ as StackDeveloperManageStacksModifyApplicationStack
+        }
+    
+    edgemerecplpwdatacreate <-- StackDeveloperManageStacksModifyApplicationStack
+
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Modify Application Stack")/ as ApplicationDeveloperManageStacksModifyApplicationStack
+        }
+    
+    edgemerecplpwdatacreate <-- ApplicationDeveloperManageStacksModifyApplicationStack
+
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Modify Service Stack")/ as StackDeveloperManageStacksModifyServiceStack
+        }
+    
+    edgemerecplpwdatacreate <-- StackDeveloperManageStacksModifyServiceStack
+
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Test Application Stack")/ as StackDeveloperManageStacksTestApplicationStack
+        }
+    
+    edgemerecplpwdatacreate <-- StackDeveloperManageStacksTestApplicationStack
+
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Test Application Stack")/ as ApplicationDeveloperManageStacksTestApplicationStack
+        }
+    
+    edgemerecplpwdatacreate <-- ApplicationDeveloperManageStacksTestApplicationStack
+
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Test Service Stack")/ as StackDeveloperManageStacksTestServiceStack
+        }
+    
+    edgemerecplpwdatacreate <-- StackDeveloperManageStacksTestServiceStack
+
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Version Application Stack")/ as ApplicationDeveloperManageStacksVersionApplicationStack
+        }
+    
+    edgemerecplpwdatacreate <-- ApplicationDeveloperManageStacksVersionApplicationStack
+
+        rectangle "Manage Stacks" as ManageStacks #ffffaa {
+            ("Version Service Stack")/ as StackDeveloperManageStacksVersionServiceStack
+        }
+    
+    edgemerecplpwdatacreate <-- StackDeveloperManageStacksVersionServiceStack
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        rectangle "Manage Services" as ManageServices #ffffaa {
+            ("Build Service")/ as StackDeveloperManageServicesBuildService
+        }
+    
+    edgemerecplpwdatacreate <-- StackDeveloperManageServicesBuildService
 
 
 

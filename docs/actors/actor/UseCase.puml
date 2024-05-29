@@ -6,7 +6,7 @@ left to right direction
 Actor "Actor" as Actor
 
 
-rectangle "PhysicalWorld" as pw #lightblue {
+rectangle "PhysicalWorld" as pw #aaffff {
         usecase "Change Physical World" as ChangePhysicalWorld
     Actor --> ChangePhysicalWorld
     usecase "Commission Physical Asset" as CommissionPhysicalAsset

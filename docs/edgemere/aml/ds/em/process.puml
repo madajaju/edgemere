@@ -3,7 +3,7 @@ left to right direction
 
 
 state "aml" as aml #88cccc {
-state "ds" as amlds #lightblue {
+state "ds" as amlds #aaffff {
 state "em" as amldsem #88cc88 {
 }
 }
@@ -16,7 +16,7 @@ state "amldsem" as pstatename #88cc88 {
 }
 
         state "aml" as aml #88cccc {
-state "ds" as amlds #lightblue {
+state "ds" as amlds #aaffff {
 state "em" as amldsem #88cc88 {
 state "environment" as amldsemenvironment #88cc88 {
 state "addpolicies" as amldsemenvironmentaddpolicies #88cc88 {
@@ -28,7 +28,7 @@ state "addpolicies" as amldsemenvironmentaddpolicies #88cc88 {
 
 
         state "aml" as aml #88cccc {
-state "ds" as amlds #lightblue {
+state "ds" as amlds #aaffff {
 state "em" as amldsem #88cc88 {
 state "environment" as amldsemenvironment #88cc88 {
 state "create" as amldsemenvironmentcreate #88cc88 {
@@ -40,7 +40,7 @@ state "create" as amldsemenvironmentcreate #88cc88 {
 
 
         state "aml" as aml #88cccc {
-state "ds" as amlds #lightblue {
+state "ds" as amlds #aaffff {
 state "em" as amldsem #88cc88 {
 state "environment" as amldsemenvironment #88cc88 {
 state "destroy" as amldsemenvironmentdestroy #88cc88 {
@@ -52,7 +52,7 @@ state "destroy" as amldsemenvironmentdestroy #88cc88 {
 
 
         state "aml" as aml #88cccc {
-state "ds" as amlds #lightblue {
+state "ds" as amlds #aaffff {
 state "em" as amldsem #88cc88 {
 state "environment" as amldsemenvironment #88cc88 {
 state "disable" as amldsemenvironmentdisable #88cc88 {
@@ -64,7 +64,7 @@ state "disable" as amldsemenvironmentdisable #88cc88 {
 
 
         state "aml" as aml #88cccc {
-state "ds" as amlds #lightblue {
+state "ds" as amlds #aaffff {
 state "em" as amldsem #88cc88 {
 state "environment" as amldsemenvironment #88cc88 {
 state "enable" as amldsemenvironmentenable #88cc88 {
@@ -76,7 +76,7 @@ state "enable" as amldsemenvironmentenable #88cc88 {
 
 
         state "aml" as aml #88cccc {
-state "ds" as amlds #lightblue {
+state "ds" as amlds #aaffff {
 state "em" as amldsem #88cc88 {
 state "environment" as amldsemenvironment #88cc88 {
 state "list" as amldsemenvironmentlist #88cc88 {
@@ -88,7 +88,7 @@ state "list" as amldsemenvironmentlist #88cc88 {
 
 
         state "aml" as aml #88cccc {
-state "ds" as amlds #lightblue {
+state "ds" as amlds #aaffff {
 state "em" as amldsem #88cc88 {
 state "environment" as amldsemenvironment #88cc88 {
 state "update" as amldsemenvironmentupdate #88cc88 {

@@ -7,7 +7,7 @@ parent: Classes
 
 # AIModel
 
-Description long description
+The AIModel is a class within the ams package that provides methods for creating, updating, removing, and adding to AI models, with a specific attribute &#34;attr1&#34; of string type.
 
 ![Logical Diagram](./logical.png)
 

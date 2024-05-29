@@ -18,6 +18,8 @@ Actor "Data Scientist" as DataScientist
 
 Actor "Data Steward" as DataSteward
 
+Actor "Developer" as Developer
+
 Actor "DevOps Engineer" as DevOpsEngineer
 
 Actor "IT Operations" as ITOperations
@@ -27,6 +29,8 @@ Actor "SecurityEngineer" as SecurityEngineer
 Actor "Security Operator" as SecurityOperator
 
 Actor "Stack Developer" as StackDeveloper
+
+Actor "System Administrator" as SystemAdministrator
 
 
 
@@ -236,6 +240,50 @@ rectangle "Distributed Information Management Layer" as diml  #ffcc88 {
         DataAnalyst ---> ManageData
         
         DataEngineer ---> ManageData
+        
+
+}
+
+rectangle "Application Management Layer" as aml  #88cccc {
+        usecase "addTo AIModel" as addToAIModel
+    
+        DataScientist --> addToAIModel
+        
+    usecase "create AIModel" as createAIModel
+    
+        DataScientist --> createAIModel
+        
+    usecase "destroy AIModel" as destroyAIModel
+    
+        DataScientist --> destroyAIModel
+        
+    usecase "removeFrom AIModel" as removeFromAIModel
+    
+        DataScientist --> removeFromAIModel
+        
+    usecase "update AIModel" as updateAIModel
+    
+        DataScientist --> updateAIModel
+        
+
+}
+
+rectangle "Application Management Layer" as aml  #88cccc {
+        usecase "Automation Framework" as AutomationFramework
+    
+        Developer ---> AutomationFramework
+        
+    usecase "CICD Pipeline" as CICDPipeline
+    
+        Developer ---> CICDPipeline
+        
+    usecase "Environment Deployments" as EnvironmentDeployments
+    
+        Developer ---> EnvironmentDeployments
+        
+    usecase "Security Profiles" as SecurityProfiles
+    
+        SystemAdministrator ---> SecurityProfiles
         
 
 }

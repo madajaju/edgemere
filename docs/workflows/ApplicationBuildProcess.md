@@ -5,7 +5,7 @@ parent: Workflows
 ---
 # Application Build Process
 
-Application Build Process shows how the applications are built in the system
+The &#39;Application Build Process&#39; begins with an application developer in the initial state. The developer enters the build application stage addressed by the package &#39;Application Management Layer&#39;. The Application may need its stack built or the artifact stored depending on conditions. The building of the stack is handled by the &#39;Service Management Layer&#39; package, similarly with the micro-service build. Finally, the artifact is stored marking the end of the workflow.
 
 ![Workflow Diagram](./ApplicationBuildProcess.png)
 

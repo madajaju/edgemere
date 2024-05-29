@@ -10,7 +10,7 @@ package "Data Management Layer" #ffcc88 {
         }
     }
 
-package "Data Orchestrator" #lightblue {
+package "Data Orchestrator" ##aaffff {
     
         class DataReservation {
         }
@@ -29,7 +29,7 @@ package "Data Definition Framework" #ffcc88 {
     }
 
 
-package "Data Orchestrator" #lightblue {
+package "Data Orchestrator" ##aaffff {
 
     interface "Data Orchestrator" as i {
             /edgemere/diml/dml/do/evaluate()
@@ -46,7 +46,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Data Orchestrator" #lightblue {
+package "Data Orchestrator" ##aaffff {
         class "DataInstance" {
                  string name
                     }

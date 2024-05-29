@@ -8,6 +8,11 @@ class "Location" as Model {
  string address
  string notes
 
+ addAsset()
+ getCoordinates()
+ getLocationDetails()
+ removeAsset()
+ setCoordinates()
  
 }
 

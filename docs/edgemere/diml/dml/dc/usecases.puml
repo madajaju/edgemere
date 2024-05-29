@@ -3,7 +3,7 @@
 left to right direction
 
 
-rectangle "Data Controller" #lightblue {
+rectangle "Data Controller" ##aaffff {
 }
 
 

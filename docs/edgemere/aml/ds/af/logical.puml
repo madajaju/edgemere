@@ -2,7 +2,7 @@
 
 
 
-package "Automation Framework" #lightblue {
+package "Automation Framework" #aaffff {
 
     interface "Automation Framework" as i {
     
@@ -13,7 +13,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Automation Framework" #lightblue {
+package "Automation Framework" #aaffff {
     
 }
 

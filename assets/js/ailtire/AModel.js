@@ -41,10 +41,10 @@ export default class AModel {
 
     static popup(myForm) {
         $().w2popup('open', {
-            title: 'Edit',
+            title: 'Edit Class',
             body: '<div id="editModelDialog" style="width: 100%; height: 100%;"></div>',
             style: 'padding: 15px 0px 0px 0px',
-            width: 600,
+            width: 950,
             height: 800,
             showMax: true,
             onToggle: function (event) {
@@ -137,6 +137,7 @@ export default class AModel {
         retval.add(label)
         node.box = node.box || size.r;
         node.expandLink = `model/get?id=${node.id}`;
+        node.link2d= `model/uml?id=${node.id}`,
         node.expandView = AModel.handle;
         node.getDetail = AModel.getDetail;
         return retval;
@@ -167,7 +168,8 @@ export default class AModel {
             box: 0.1, // Prevents contention with the collide force.
             view: AModel.view3D,
             expandView: AModel.handle,
-            expandLink: `model/get?id=${cls.id}`
+            expandLink: `model/get?id=${cls.id}`,
+            link2d: `model/uml?id=${cls.id}`
         };
 
         let anodes = [];
@@ -181,6 +183,7 @@ export default class AModel {
                     view: AModel.view3D,
                     expandView: AModel.handle,
                     expandLink: `model/get?id=${clsid}`,
+                    link2d: `model/uml?id=${clsid}`,
                     rbox: {
                         parent: cls.id,
                         fx: -size.w / 2 - 20,
@@ -261,75 +264,7 @@ export default class AModel {
         );
         window.graph.showLinks();
 
-        window.graph.toolbar.setToolBar([
-            {
-                type: 'button', id: 'fit', text: 'Show All', img: 'w2ui-icon-zoom',
-                onClick: (event) => {
-                    window.graph.graph.zoomToFit(1000);
-                }
-            },
-            {
-                type: 'button', id: 'states', text: 'States', img: 'w2ui-icon-search', onClick: (event) => {
-                    window.graph.graph.cameraPosition({x: 0, y: 0, z: size.d * 2}, // new position
-                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                        1000);
-                    setTimeout(() => {
-                        window.graph.graph.cameraPosition({x: 0, y: -size.h * 2, z: 0}, // new position
-                            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                            1000);
-                    }, 500);
-                    setTimeout(() => {
-                        window.graph.graph.zoomToFit(1000)
-                    }, 1500);
-                }
-            }, {
-                type: 'button', id: 'attributes', text: 'Attributes', img: 'w2ui-icon-search', onClick: (event) => {
-                    window.graph.graph.cameraPosition({x: 0, y: 0, z: size.d * 2}, // new position
-                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                        1000);
-                    setTimeout(() => {
-                        window.graph.graph.cameraPosition({x: 0, y: size.h * 2, z: 0}, // new position
-                            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                            1000);
-                    }, 500);
-                    setTimeout(() => {
-                        window.graph.graph.zoomToFit(1000)
-                    }, 1500);
-                }
-            }, {
-                type: 'button', id: 'methods', text: 'Method', img: 'w2ui-icon-search', onClick: (event) => {
-                    window.graph.graph.cameraPosition({x: 0, y: 0, z: size.d * 2}, // new position
-                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                        1000);
-                    setTimeout(() => {
-                        window.graph.graph.cameraPosition({x: size.w * 2, y: 0, z: 0}, // new position
-                            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                            1000);
-                    }, 500);
-                    setTimeout(() => {
-                        window.graph.graph.zoomToFit(1000)
-                    }, 1500);
-                }
-            }, {
-                type: 'button',
-                id: 'associations',
-                text: 'Associations',
-                img: 'w2ui-icon-search',
-                onClick: (event) => {
-                    window.graph.graph.cameraPosition({x: 0, y: 0, z: size.d * 2}, // new position
-                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                        1000);
-                    setTimeout(() => {
-                        window.graph.graph.cameraPosition({x: -size.w * 2, y: size.h * 1.25, z: 0}, // new position
-                            {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
-                            1000);
-                    }, 500);
-                    setTimeout(() => {
-                        window.graph.graph.zoomToFit(1000)
-                    }, 1500);
-                }
-            }
-        ]);
+        _setGraphToolbar(cls);
     }
 
     static objectList(result) {
@@ -536,7 +471,7 @@ export default class AModel {
                     name = record.name;
                 }
                 k++;
-                drecords.push({recid: k, name: name, value: value, id:id});
+                drecords.push({recid: k, name: name, value: value, id: id});
             }
             w2ui['objdetail'].add(drecords);
             window.graph.selectNodeByID(event.recid);
@@ -544,9 +479,9 @@ export default class AModel {
         w2ui['objdetail'].onClick = (event) => {
             let records = w2ui['objdetail'].records;
             let record = undefined;
-            for(let i in records)  {
+            for (let i in records) {
                 let rec = records[i];
-                if(`${rec.recid}` === `${event.recid}`) {
+                if (`${rec.recid}` === `${event.recid}`) {
                     record = records[i];
                     break;
                 }
@@ -767,43 +702,13 @@ export default class AModel {
         return w2ui[formName];
     }
 
-    static editDocumentation(results) {
-        let text = results.document || "Enter Details Here";
-        let setURL = AMainWindow.selectedObject.link.replace('get', 'set');
-        let fields = [{field: 'summary', type: 'textarea'}, {field: 'documentation', type: 'textarea'},];
-        let editForm = getEditForm(fields, setURL);
-        w2popup.open({
-            height: 850,
-            width: 850,
-            title: 'Edit Documentation',
-            body: '<div id="editModelDocDialog" style="width: 100%; height: 100%;"></div>',
-            showMax: true,
-            onToggle: function (event) {
-                $(w2ui.editModelDialog.box).hide();
-                event.onComplete = function () {
-                    $(w2ui.editModelDocDialog.box).show();
-                    w2ui.editModelDocDialog.resize();
-                }
-            },
-            onOpen: function (event) {
-                event.onComplete = function () {
-                    // specifying an onOpen handler instead is equivalent to specifying an onBeforeOpen handler, which would make this code execute too early and hence not deliver.
-                    $('#editModelDialog').w2render(myForm.name);
-                }
-            }
-        });
-    }
 
     static editDocs(results, setURL) {
-        let text = results.document || "Enter Details Here";
-        let record = {
-            summary: results.description, documentation: text
-        }
-        let editForm = getEditForm(record, setURL);
+        let editForm = getEditForm(results, setURL);
         w2popup.open({
             height: 850,
             width: 850,
-            title: 'Edit Documentation',
+            title: 'Edit ',
             body: '<div id="editModelDocDialog" style="width: 100%; height: 100%;"></div>',
             showMax: true,
             onToggle: function (event) {
@@ -817,15 +722,6 @@ export default class AModel {
                 event.onComplete = function () {
                     // specifying an onOpen handler instead is equivalent to specifying an onBeforeOpen handler, which would make this code execute too early and hence not deliver.
                     $('#editModelDocDialog').w2render(editForm.name);
-                    editForm.editors = {documentation: null, summary: null}
-                    ClassicEditor.create(document.querySelector('#documentation'), {})
-                        .then(editor => {
-                            editForm.editors.documentation = editor;
-                        });
-                    ClassicEditor.create(document.querySelector('#summary'), {})
-                        .then(editor => {
-                            editForm.editors.summary = editor;
-                        });
                 }
             }
         })
@@ -835,7 +731,10 @@ export default class AModel {
         AModel.viewDeep3D(result, 'new');
         AModel.showDetail(result);
     }
-
+    static handle2d(result, object, div) {
+        _setGraphToolbar(object);
+        div.innerHTML = result;
+    }
     static calculateGroupBox(items, fn) {
         let asize = {
             stats: {
@@ -947,7 +846,7 @@ function getMethodDetails(cls, methods) {
         let item = methods[j];
         i++;
         let name = `${j}`;
-        let id =`${cls.id}-${j}`;
+        let id = `${cls.id}-${j}`;
         items.push(`${id}^${name}^${item.description}`);
     }
     return items;
@@ -967,43 +866,828 @@ function getAssocDetails(cls, assocs) {
 }
 
 function getEditForm(record, setURL) {
-    if (!w2ui['editModelDoc']) {
-        let fields = [{field: 'summary', type: 'textarea',}, {field: 'documentation', type: 'textarea'},];
-        $().w2form({
-            name: 'editModelDoc',
-            saveURL: setURL,
-            style: 'border: 0px; background-color: transparent;',
-            fields: fields,
-            actions: {
-                Save: function () {
-                    let url = this.saveURL;
-                    let newRecord = {
-                        summary: this.editors.summary.getData(),
-                        documentation: this.editors.documentation.getData()
+    if (!w2ui['ModelEditGeneral']) {
+        $().w2layout({
+            name: 'ModelEditGeneral',
+            panels: [
+                {type: 'left', size: 150, resizable: true, minSize: 35},
+                {type: 'main', overflow: 'hidden'}
+            ],
+            onRender: (event) => {
+                // Add the record to the form and the assoication tabs
+                if (event.target === 'ModelEditGeneral') {
+                    if (w2ui.ModelEditGeneral.record) {
+                        // General Panel
+                        w2ui.ModelEditGeneral.record = {};
+                        // w2ui.ModelEditGeneral.refresh();
+                        // w2ui.refresh();
                     }
-                    $.ajax({
-                        url: url, data: newRecord, success: function (results) {
-                            // $(w2ui.editModelDialog.box).hide();
-                            w2popup.close();
-                        }, failure: function (results) {
-                            console.error(results);
-                        }
-                    });
-                }, Reset: function () {
-                    this.clear();
-                }, custom: {
-                    caption: "Cancel", style: 'background: pink;', onClick(event) {
-                        w2popup.close();
-                    }
+                }
+                // w2ui.ModelEditGeneral.render("#main");
+                // w2ui.ModelEditGeneral.html('left', w2ui.ModelEdtiTabs);
+                //  w2ui.ModelEditGeneral.html('main', w2ui.ModelEditDocumentation);
+            }
+        });
+    }
+    if (!w2ui['ModelEditTabs']) {
+        $().w2sidebar({
+            name: 'ModelEditTabs',
+            flatButton: true,
+            nodes: [
+                {id: 'docs', text: 'Docs', selected: true},
+                {id: 'attributes', text: 'Attributes'},
+                {id: 'associations', text: 'Associations'},
+                {id: 'methods', text: 'Methods'},
+                {id: 'statenet', text: 'State Net'},
+            ],
+            onClick(event) {
+                switch (event.target) {
+                    case 'docs':
+                        w2ui['ModelEditGeneral'].html('main', w2ui.ModelEditDoc);
+                        break;
+                    case 'attributes':
+                        w2ui['ModelEditGeneral'].html('main', w2ui.ModelEditAttributes);
+                        break;
+                    case 'associations':
+                        w2ui['ModelEditGeneral'].html('main', w2ui.ModelEditAssociations);
+                        break;
+                    case 'methods':
+                        w2ui['ModelEditGeneral'].html('main', w2ui.ModelEditMethods);
+                        break;
+                    case 'statenet':
+                        w2ui['ModelEditGeneral'].html('main', w2ui.ModelEditStateNet);
+                        break;
                 }
             }
         });
     }
-    w2ui['editModelDoc'].record = record;
-    w2ui['editModelDoc'].saveURL = setURL;
-    return w2ui['editModelDoc'];
+    if (!w2ui['ModelEditAttributes']) {
+        $().w2grid({
+            name: 'ModelEditAttributes',
+            header: 'Attributes',
+            show: {
+                header: true,
+                columnHeaders: true,
+                toolbar: true,
+                toolbarSave: true,
+                toolbarAdd: true,
+                toolbarEdit: true,
+                toolbarDelete: true
+            },
+            toolbar: {
+                items: [
+                    {id: 'generate', type: 'button', img: 'aibutton'}
+                ],
+                onClick(event) {
+                    if (event.target === 'generate') {
+                        let clsid = w2ui.ModelEditAttributes.record.name;
+                        let url = `model/generateAttributes?id=${clsid}`;
+                        w2ui.ModelEditAttributes.lock('Generating...', true);
+                        w2ui.ModelEditAttributes.refresh();
+                        $('html').css('cursor', 'wait');
+                        $.ajax({
+                            url: url,
+                            success: function (results) {
+                                w2ui.ModelEditAttributes.unlock();
+                                w2ui.ModelEditAttributes.record = results;
+                                w2ui.ModelEditAttributes.refresh();
+                                $('html').css('cursor', 'auto');
+                                w2ui.ModelEditTabs.click('attributes');
+                            },
+                            failure: function (results) {
+                                console.error(results);
+                            }
+                        });
+                    }
+                }
+            },
+            onAdd: (event) => {
+            },
+            onSave: (event) => {
+                let changes = w2ui['ModelEditAttributes'].getChanges();
+                let records = w2ui['ModelEditAttributes'].records
+                for (let i in changes) {
+                    let change = changes[i];
+                    let rec = null;
+                    for (let j in records) {
+                        if (records[j].recid === change.recid) {
+                            rec = records[j];
+                            break;
+                        }
+                    }
+                    // Just updating the episode
+                    if (rec.id) {
+                        let url = `episode/save?id=${rec.id}`;
+                        for (let i in change) {
+                            if (i === "date") {
+                                url += `&releaseDate=${change[i]}`;
+                            } else {
+                                url += `&${i}=${change[i]}`;
+                            }
+                        }
+                        $.ajax({
+                            url: url,
+                            success: function (results) {
+                                console.log("results", results);
+                            }
+                        });
+                    } else {
+                    }
+                }
+            },
+            onEdit: (event) => {
+                // Open the Episode Edit Dialog
+
+                let record = w2ui['ModelEditAttributes'].records[event.recid];
+                if (record.recid != event.recid) {
+                    for (let i in w2ui.ModelEditAttributes.records) {
+                        if (w2ui.ModelEditAttributes.records[i].recid === event.recid) {
+                            record = w2ui.ModelEditAttributes.records[i];
+                            break;
+                        }
+                    }
+                }
+                record._id = record.id;
+//                EpisodeView.openDialog(record, "PodcastEdit");
+            },
+            onDelete: (event) => {
+                let selected = w2ui['ModelEditAttributes'].getSelection();
+                console.log("Delete", selected);
+            },
+            onRender: (event) => {
+                let records = [];
+                let count = 0;
+                for (let aname in w2ui.ModelEditAttributes.record._attributes) {
+                    let attr = w2ui.ModelEditAttributes.record._attributes[aname];
+                    records.push({
+                        recid: count++,
+                        name: aname,
+                        type: attr.type,
+                        description: attr.description,
+                    });
+                }
+                w2ui.ModelEditAttributes.records = records;
+                w2ui.ModelEditAttributes.sort('name', 'desc');
+                setTimeout(function () {
+                    w2ui.ModelEditAttributes.refreshBody();
+                }, 10);
+            },
+            onSelect: (event) => {
+                let selected = null;
+                for (let i in w2ui.ModelEditAttributes.records) {
+                    let record = w2ui.ModelEditAttributes.records[i];
+                    if (record.recid === parseInt(event.recid)) {
+                        selected = record;
+                    }
+                }
+                // Now set the toolbar with the right states.
+                if (selected.state === 'Published') {
+                    w2ui.ModelEditAttributes.toolbar.enable('promote');
+                    w2ui.ModelEditAttributes.toolbar.disable('publish');
+                } else {
+                    w2ui.ModelEditAttributes.toolbar.disable('promote');
+                    w2ui.ModelEditAttributes.toolbar.enable('publish');
+                }
+            },
+            columns: [
+                {
+                    field: 'name',
+                    caption: 'Name',
+                    size: '20%',
+                    resizable: true,
+                    editable: {type: 'text'},
+                    sortable: true,
+                },
+                {
+                    field: 'type', caption: 'Type',
+                    size: '10%',
+                    resizable: true,
+                    sortable: true,
+                    editable: {type: 'text'}
+                },
+                {
+                    field: 'description', caption: 'Description',
+                    size: '70%',
+                    resizable: true,
+                    sortable: true,
+                    editable: {type: 'text'}
+                },
+            ]
+        });
+    }
+    if (!w2ui['ModelEditMethods']) {
+        $().w2grid({
+            name: 'ModelEditMethods',
+            header: 'Methods',
+            show: {
+                header: true,
+                columnHeaders: true,
+                toolbar: true,
+                toolbarSave: true,
+                toolbarAdd: true,
+                toolbarEdit: true,
+                toolbarDelete: true
+            },
+            toolbar: {
+                items: [
+                    {id: 'generate', type: 'button', img: 'aibutton'}
+                ],
+                onClick(event) {
+                    if (event.target === 'generate') {
+                        let clsid = w2ui.ModelEditMethods.record.name;
+                        let url = `model/generateMethods?id=${clsid}`;
+                        w2ui.ModelEditMethods.lock('Generating...', true);
+                        w2ui.ModelEditMethods.refresh();
+                        $('html').css('cursor', 'wait');
+                        $.ajax({
+                            url: url,
+                            success: function (results) {
+                                w2ui.ModelEditMethods.unlock();
+                                w2ui.ModelEditMethods.record = results;
+                                $('html').css('cursor', 'auto');
+                                w2ui.ModelEditTabs.click('methods');
+                            },
+                            failure: function (results) {
+                                console.error(results);
+                            }
+                        });
+                    }
+                }
+            },
+            onAdd: (event) => {
+            },
+            onSave: (event) => {
+                let changes = w2ui['ModelEditMethods'].getChanges();
+                let records = w2ui['ModelEditMethods'].records
+                for (let i in changes) {
+                    let change = changes[i];
+                    let rec = null;
+                    for (let j in records) {
+                        if (records[j].recid === change.recid) {
+                            rec = records[j];
+                            break;
+                        }
+                    }
+                    // Just updating the episode
+                    if (rec.id) {
+                        let url = `episode/save?id=${rec.id}`;
+                        for (let i in change) {
+                            if (i === "date") {
+                                url += `&releaseDate=${change[i]}`;
+                            } else {
+                                url += `&${i}=${change[i]}`;
+                            }
+                        }
+                        $.ajax({
+                            url: url,
+                            success: function (results) {
+                                console.log("results", results);
+                            }
+                        });
+                    } else {
+                    }
+                }
+            },
+            onEdit: (event) => {
+                // Open the Episode Edit Dialog
+
+                let record = w2ui['ModelEditMethods'].records[event.recid];
+                if (record.recid != event.recid) {
+                    for (let i in w2ui.ModelEditMethods.records) {
+                        if (w2ui.ModelEditMethods.records[i].recid === event.recid) {
+                            record = w2ui.ModelEditMethods.records[i];
+                            break;
+                        }
+                    }
+                }
+                record._id = record.id;
+//                EpisodeView.openDialog(record, "PodcastEdit");
+            },
+            onDelete: (event) => {
+                let selected = w2ui['ModelEditMethods'].getSelection();
+                console.log("Delete", selected);
+            },
+            onRender: (event) => {
+                _reloadMethods(event);
+            },
+            onSelect: (event) => {
+                let selected = null;
+                for (let i in w2ui.ModelEditMethods.records) {
+                    let record = w2ui.ModelEditMethods.records[i];
+                    if (record.recid === parseInt(event.recid)) {
+                        selected = record;
+                    }
+                }
+                // Now set the toolbar with the right states.
+                if (selected.state === 'Published') {
+                    w2ui.ModelEditMethods.toolbar.enable('promote');
+                    w2ui.ModelEditMethods.toolbar.disable('publish');
+                } else {
+                    w2ui.ModelEditMethods.toolbar.disable('promote');
+                    w2ui.ModelEditMethods.toolbar.enable('publish');
+                }
+            },
+            columns: [
+                {
+                    field: 'name',
+                    caption: 'Name',
+                    size: '15%',
+                    resizable: true,
+                    editable: {type: 'text'},
+                    sortable: true,
+                },
+                {
+                    field: 'inputs', caption: 'Parameters',
+                    size: '30%',
+                    resizable: true,
+                    sortable: true,
+                    editable: {type: 'text'}
+                },
+                {
+                    field: 'description', caption: 'Description',
+                    size: '45%',
+                    resizable: true,
+                    sortable: true,
+                    editable: {type: 'text'}
+                },
+            ]
+        });
+
+    }
+    if (!w2ui['ModelEditAssociations']) {
+        $().w2grid({
+            name: 'ModelEditAssociations',
+            header: 'Associations',
+            show: {
+                header: true,
+                columnHeaders: true,
+                toolbar: true,
+                toolbarSave: true,
+                toolbarAdd: true,
+                toolbarEdit: true,
+                toolbarDelete: true
+            },
+            toolbar: {
+                items: [
+                    {id: 'generate', type: 'button', img: 'aibutton'}
+                ],
+                onClick(event) {
+                    if (event.target === 'generate') {
+                        let clsid = w2ui.ModelEditAssociations.record.name;
+                        let url = `model/generateAssociations?id=${clsid}`;
+                        w2ui.ModelEditAssociations.lock('Generating...', true);
+                        $('html').css('cursor', 'wait');
+                        $.ajax({
+                            url: url,
+                            success: function (results) {
+                                w2ui.ModelEditAssociations.unlock();
+                                w2ui.ModelEditAssociations.record = results;
+                                w2ui.ModelEditAssociations.refresh();
+                                $('html').css('cursor', 'auto');
+                                w2ui.ModelEditTabs.click('associations');
+                            },
+                            failure: function (results) {
+                                console.error(results);
+                            }
+                        });
+                    }
+                }
+            },
+            onAdd: (event) => {
+            },
+            onSave: (event) => {
+                let changes = w2ui['ModelEditAssociations'].getChanges();
+                let records = w2ui['ModelEditAssociations'].records
+                for (let i in changes) {
+                    let change = changes[i];
+                    let rec = null;
+                    for (let j in records) {
+                        if (records[j].recid === change.recid) {
+                            rec = records[j];
+                            break;
+                        }
+                    }
+                    // Just updating the episode
+                    if (rec.id) {
+                        let url = `episode/save?id=${rec.id}`;
+                        for (let i in change) {
+                            if (i === "date") {
+                                url += `&releaseDate=${change[i]}`;
+                            } else {
+                                url += `&${i}=${change[i]}`;
+                            }
+                        }
+                        $.ajax({
+                            url: url,
+                            success: function (results) {
+                                console.log("results", results);
+                            }
+                        });
+                    } else {
+                    }
+                }
+            },
+            onEdit: (event) => {
+                // Open the Episode Edit Dialog
+
+                let record = w2ui['ModelEditAssociations'].records[event.recid];
+                if (record.recid != event.recid) {
+                    for (let i in w2ui.ModelEditAssociations.records) {
+                        if (w2ui.ModelEditAssociations.records[i].recid === event.recid) {
+                            record = w2ui.ModelEditAssociations.records[i];
+                            break;
+                        }
+                    }
+                }
+                record._id = record.id;
+//                EpisodeView.openDialog(record, "PodcastEdit");
+            },
+            onDelete: (event) => {
+                let selected = w2ui['ModelEditAssociations'].getSelection();
+                console.log("Delete", selected);
+            },
+            onRender: (event) => {
+                let records = [];
+                let count = 0;
+                for (let name in w2ui.ModelEditAssociations.record._associations) {
+                    let assoc = w2ui.ModelEditAssociations.record._associations[name];
+                    records.push({
+                        recid: count++,
+                        name: assoc.name,
+                        type: assoc.type,
+                        cardinality: assoc.cardinality,
+                        composition: assoc.composition,
+                        owner: assoc.owner,
+                        description: assoc.description,
+                    });
+                }
+                w2ui.ModelEditAssociations.records = records;
+                w2ui.ModelEditAssociations.sort('name', 'desc');
+                setTimeout(function () {
+                    w2ui.ModelEditAssociations.refreshBody();
+                }, 10);
+            },
+            onSelect: (event) => {
+                let selected = null;
+                for (let i in w2ui.ModelEditAssociations.records) {
+                    let record = w2ui.ModelEditAssociations.records[i];
+                    if (record.recid === parseInt(event.recid)) {
+                        selected = record;
+                    }
+                }
+            },
+            columns: [
+                {
+                    field: 'name',
+                    caption: 'Name',
+                    size: '10%',
+                    resizable: true,
+                    editable: {type: 'text'},
+                    sortable: true,
+                },
+                {
+                    field: 'type', caption: 'Type',
+                    size: '15%',
+                    resizable: true,
+                    sortable: true,
+                    editable: {type: 'text'}
+                },
+                {
+                    field: 'cardinality', caption: 'Card',
+                    size: '10%',
+                    resizable: true,
+                    sortable: true,
+                    editable: {type: 'text'}
+                },
+                {
+                    field: 'composition', caption: 'Comp',
+                    size: '10%',
+                    resizable: true,
+                    sortable: true,
+                    editable: {type: 'boolean'}
+                },
+                {
+                    field: 'owner', caption: 'Owner',
+                    size: '10%',
+                    resizable: true,
+                    sortable: true,
+                    editable: {type: 'boolean'}
+                },
+                {
+                    field: 'description', caption: 'Description',
+                    size: '45%',
+                    resizable: true,
+                    sortable: true,
+                    editable: {type: 'text'}
+                },
+            ]
+        });
+    }
+    if (!w2ui['ModelEditStateNet']) {
+        $().w2grid({
+            name: 'ModelEditStateNet',
+            header: 'State Net',
+            show: {
+                header: true,
+                columnHeaders: true,
+                toolbar: true,
+                toolbarSave: true,
+                toolbarAdd: true,
+                toolbarEdit: true,
+                toolbarDelete: true
+            },
+            toolbar: {
+                items: [
+                    {id: 'generate', type: 'button', img: 'aibutton'}
+                ],
+                onClick(event) {
+                    if (event.target === 'generate') {
+                        let clsid = w2ui.ModelEditStateNet.record.name;
+                        let url = `model/generateStateNet?id=${clsid}`;
+                        w2ui.ModelEditStateNet.lock('Generating...', true);
+                        w2ui.ModelEditStateNet.refresh();
+                        $('html').css('cursor', 'wait');
+                        $.ajax({
+                            url: url,
+                            success: function (results) {
+                                w2ui.ModelEditStateNet.unlock();
+                                w2ui.ModelEditStateNet.record = results;
+                                $('html').css('cursor', 'auto');
+                                w2ui.ModelEditTabs.click('statenet');
+                            },
+                            failure: function (results) {
+                                console.error(results);
+                            }
+                        });
+                    }
+                }
+            },
+            onAdd: (event) => {
+            },
+            onSave: (event) => {
+                let changes = w2ui['ModelEditStateNet'].getChanges();
+                let records = w2ui['ModelEditStateNet'].records
+                for (let i in changes) {
+                    let change = changes[i];
+                    let rec = null;
+                    for (let j in records) {
+                        if (records[j].recid === change.recid) {
+                            rec = records[j];
+                            break;
+                        }
+                    }
+                    // Just updating the episode
+                    if (rec.id) {
+                        let url = `episode/save?id=${rec.id}`;
+                        for (let i in change) {
+                            if (i === "date") {
+                                url += `&releaseDate=${change[i]}`;
+                            } else {
+                                url += `&${i}=${change[i]}`;
+                            }
+                        }
+                        $.ajax({
+                            url: url,
+                            success: function (results) {
+                                console.log("results", results);
+                            }
+                        });
+                    } else {
+                    }
+                }
+            },
+            onEdit: (event) => {
+                // Open the Episode Edit Dialog
+
+                let record = w2ui['ModelEditStateNet'].records[event.recid];
+                if (record.recid != event.recid) {
+                    for (let i in w2ui.ModelEditStateNet.records) {
+                        if (w2ui.ModelEditStateNet.records[i].recid === event.recid) {
+                            record = w2ui.ModelEditStateNet.records[i];
+                            break;
+                        }
+                    }
+                }
+                record._id = record.id;
+//                EpisodeView.openDialog(record, "PodcastEdit");
+            },
+            onDelete: (event) => {
+                let selected = w2ui['ModelEditStateNet'].getSelection();
+                console.log("Delete", selected);
+            },
+            onRender: (event) => {
+                let records = [];
+                let count = 0;
+                for (let name in w2ui.ModelEditStateNet.record.statenet) {
+                    let state = w2ui.ModelEditStateNet.record.statenet[name];
+                    records.push({
+                        recid: count++,
+                        name: name,
+                        description: state.description,
+                    });
+                }
+                w2ui.ModelEditStateNet.records = records;
+                w2ui.ModelEditStateNet.sort('name', 'desc');
+                setTimeout(function () {
+                    w2ui.ModelEditStateNet.refreshBody();
+                }, 10);
+            },
+            onSelect: (event) => {
+                let selected = null;
+                for (let i in w2ui.ModelEditStateNet.records) {
+                    let record = w2ui.ModelEditStateNet.records[i];
+                    if (record.recid === parseInt(event.recid)) {
+                        selected = record;
+                    }
+                }
+                // Now set the toolbar with the right states.
+                if (selected.state === 'Published') {
+                    w2ui.ModelEditStateNet.toolbar.enable('promote');
+                    w2ui.ModelEditStateNet.toolbar.disable('publish');
+                } else {
+                    w2ui.ModelEditStateNet.toolbar.disable('promote');
+                    w2ui.ModelEditStateNet.toolbar.enable('publish');
+                }
+            },
+            columns: [
+                {
+                    field: 'name',
+                    caption: 'Name',
+                    size: '30%',
+                    resizable: true,
+                    editable: {type: 'text'},
+                    sortable: true,
+                },
+                {
+                    field: 'description',
+                    caption: 'Description',
+                    size: '70%',
+                    resizable: true,
+                    editable: {type: 'text'},
+                    sortable: true,
+                },
+
+            ]
+        });
+    }
+    if (!w2ui['ModelEditDoc']) {
+        $().w2form({
+            name: 'ModelEditDoc',
+            saveURL: setURL,
+            style: 'border: 0px; background-color: transparent;overflow:hidden; ',
+            fields: [
+                {
+                    field: 'name',
+                    type: 'text',
+                    required: true,
+                    readonly: true
+                },
+                {
+                    field: 'package',
+                    type: 'text',
+                    required: true,
+                    readonly: true
+                },
+                {
+                    caption: 'Description',
+                    field: 'description',
+                    type: 'textarea',
+                    html: {
+                        attr: 'style="width: 450px; height: 50px;"',
+                        caption: "Description" +
+                        "<br><button class=AIButton id='modelgenerateDescription'></button>"
+                    }
+                },
+                {
+                    field: 'document',
+                    type: 'textarea',
+                    html: {
+                        attr: 'style="width: 450px; height: 500px;"',
+                        caption: "Details" +
+                            "<br><button class=AIButton id='modelgenerateDocumentation'></button>"
+                    }
+                },
+            ],
+            onRender: (event) => {
+                setTimeout(function () {
+                    w2ui.ModelEditAttributes.refreshBody();
+                    let textArea = document.querySelector("#document");
+                    w2ui.ModelEditDoc.editors = {document: {}};
+                    ClassicEditor.create(textArea)
+                        .catch(error => { console.log(error)})
+                        .then(editor => {
+                            w2ui.ModelEditDoc.editors.document = editor;
+                        });
+                }, 10);
+            },
+            actions: {
+                Save: function () {
+                    let url = this.saveURL;
+                    let newRecord = {};
+                    for(let i in this.fields) {
+                        newRecord[this.fields[i].field] = this.record[this.fields[i].field]
+                        if(this.editors[this.fields[i].field]) {
+                            newRecord[this.fields[i].field] = this.editors[this.fields[i].field].getData();
+                        }
+                    }
+
+                    $.ajax({
+                        url: url, data: newRecord, success: function (results) {
+                            alert("Saved");
+                        }, failure: function (results) {
+                            console.error(results);
+                        }
+                    });
+                },
+                Reset: function () {
+                    this.clear();
+                },
+                cancel: {
+                    caption: "Cancel", style: 'background: pink;', onClick(event) {
+                        w2popup.close();
+                    },
+                },
+            }
+        });
+        $(document).ready(function() {
+            $(document).on('click', "#modelgenerateDescription", function() {
+                let clsid = w2ui.ModelEditDoc.record.name;
+                let url = `model/generateDescription?id=${clsid}`;
+                w2ui.ModelEditDoc.lock('description',true);
+                w2ui.ModelEditDoc.refresh();
+                $('html').css('cursor', 'wait');
+                $.ajax({
+                    url: url,
+                    success: function (results) {
+                        $('html').css('cursor', 'auto');
+                        w2ui.ModelEditDoc.unlock('description',true);
+                        w2ui.ModelEditDoc.record.description = results;
+                        w2ui.ModelEditDoc.refresh();
+                        w2ui.ModelEditTabs.click('docs');
+                    },
+                    failure: function (results) {
+                        console.error(results);
+                    }
+                });
+            });
+            $(document).on('click', "#modelgenerateDocumentation", function() {
+                let clsid = w2ui.ModelEditDoc.record.name;
+                let url = `model/generateDocumentation?id=${clsid}`;
+                w2ui.ModelEditDoc.lock('Generating...',true);
+                w2ui.ModelEditDoc.refresh();
+                $('html').css('cursor', 'wait');
+                $.ajax({
+                    url: url,
+                    success: function (results) {
+                        w2ui.ModelEditDoc.unlock('document',true);
+                        w2ui.ModelEditDoc.record.document = results;
+                        w2ui.ModelEditDoc.refresh();
+                        $('html').css('cursor', 'auto');
+                        w2ui.ModelEditTabs.click('docs');
+                    },
+                    failure: function (results) {
+                        console.error(results);
+                    }
+                });
+            });
+        })
+    }
+    w2ui['ModelEditDoc'].record = record;
+    w2ui['ModelEditAttributes'].record = record;
+    w2ui['ModelEditMethods'].record = record;
+    w2ui['ModelEditAssociations'].record = record;
+    w2ui['ModelEditStateNet'].record = record;
+    w2ui['ModelEditGeneral'].record = record;
+
+    w2ui['ModelEditGeneral'].saveURL = setURL;
+    w2ui.ModelEditGeneral.html('left', w2ui.ModelEditTabs);
+    w2ui.ModelEditGeneral.html('main', w2ui.ModelEditDoc);
+    return w2ui['ModelEditGeneral'];
 }
 
+function _reloadMethods(event) {
+    let records = [];
+    let count = 0;
+    for (let name in w2ui.ModelEditMethods.record.methods) {
+        let method = w2ui.ModelEditMethods.record.methods[name];
+        let inputs = [];
+        for (let iname in method.inputs) {
+            inputs.push(`${iname}: ${method.inputs[iname].type}`);
+        }
+        records.push({
+            recid: count++,
+            name: method.name,
+            description: method.description,
+            inputs: inputs.join(', '),
+        });
+    }
+    w2ui.ModelEditMethods.records = records;
+    w2ui.ModelEditMethods.sort('name', 'desc');
+
+    setTimeout(function () {
+        w2ui.ModelEditMethods.refreshBody();
+    }, 1);
+}
 function layoutRowColumn(parentNode, nodes, size, direction) {
     let prevNode = parentNode;
     let row = 0;
@@ -1081,4 +1765,133 @@ function layoutRowColumn(parentNode, nodes, size, direction) {
         row++;
     }
     return;
+}
+
+function _setGraphToolbar(object) {
+    const distance = 1750;
+    const div = document.getElementById('preview2d');
+    window.graph.toolbar.setToolBar([
+        {
+            type: 'button', id: 'fit', text: 'Show All', img: 'w2ui-icon-zoom',
+            onClick: (event) => {
+                window.graph.graph.zoomToFit(1000);
+                // 2D
+                div.innerHTML = "Fetching UML diagrams";
+                $.ajax({
+                        url: object.link2d +"&diagram=Logical",
+                        success: (results) => {
+                            div.innerHTML = results;
+                        },
+                        error: (req, text, err) => {
+                            console.error(text);
+                        }
+                });
+            }
+        },
+        {
+            type: 'button', id: 'states', text: 'States', img: 'w2ui-icon-search', onClick: (event) => {
+                window.graph.graph.cameraPosition({x: 0, y: 0, z: distance}, // new position
+                    {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                    1000);
+                setTimeout(() => {
+                    window.graph.graph.cameraPosition({x: 0, y: -distance, z: 0}, // new position
+                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                        1000);
+                }, 500);
+                setTimeout(() => {
+                    window.graph.graph.zoomToFit(1000)
+                }, 1500);
+                // 2D
+                div.innerHTML = "Fetching UML diagrams";
+                $.ajax({
+                    url: object.link2d +"&diagram=StateNet",
+                    success: (results) => {
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        }, {
+            type: 'button', id: 'attributes', text: 'Attributes', img: 'w2ui-icon-search', onClick: (event) => {
+                window.graph.graph.cameraPosition({x: 0, y: 0, z: distance}, // new position
+                    {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                    1000);
+                setTimeout(() => {
+                    window.graph.graph.cameraPosition({x: 0, y: distance, z: 0}, // new position
+                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                        1000);
+                }, 500);
+                setTimeout(() => {
+                    window.graph.graph.zoomToFit(1000)
+                }, 1500);
+                // 2D
+                div.innerHTML = "Fetching UML diagrams";
+                $.ajax({
+                    url: object.link2d +"&diagram=Logical",
+                    success: (results) => {
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        }, {
+            type: 'button', id: 'methods', text: 'Method', img: 'w2ui-icon-search', onClick: (event) => {
+                window.graph.graph.cameraPosition({x: 0, y: 0, z: distance}, // new position
+                    {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                    1000);
+                setTimeout(() => {
+                    window.graph.graph.cameraPosition({x: distance, y: 0, z: 0}, // new position
+                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                        1000);
+                }, 500);
+                setTimeout(() => {
+                    window.graph.graph.zoomToFit(1000)
+                }, 1500);
+                // 2D
+                div.innerHTML = "Fetching UML diagrams";
+                $.ajax({
+                    url: object.link2d +"&diagram=Logical",
+                    success: (results) => {
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        }, {
+            type: 'button',
+            id: 'associations',
+            text: 'Associations',
+            img: 'w2ui-icon-search',
+            onClick: (event) => {
+                window.graph.graph.cameraPosition({x: 0, y: 0, z: distance}, // new position
+                    {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                    1000);
+                setTimeout(() => {
+                    window.graph.graph.cameraPosition({x: -distance, y: distance, z: 0}, // new position
+                        {x: 0, y: 0, z: 0}, // lookAt ({ x, y, z })
+                        1000);
+                }, 500);
+                setTimeout(() => {
+                    window.graph.graph.zoomToFit(1000)
+                }, 1500);
+                // 2D
+                div.innerHTML = "Fetching UML diagrams";
+                $.ajax({
+                    url: object.link2d +"&diagram=Logical",
+                    success: (results) => {
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        }
+    ]);
 }

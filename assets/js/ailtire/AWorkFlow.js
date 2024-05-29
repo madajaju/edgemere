@@ -132,7 +132,10 @@ export default class AWorkFlow {
             }
         });
     }
-
+    static handle2d(result, object, div) {
+        _setGraphToolbar(object);
+        div.innerHTML = result;
+    }
     static handle(results, event, config) {
         if (!config || !config.mode) {
             config = {mode: "new"}
@@ -362,8 +365,9 @@ export default class AWorkFlow {
                     let node = {
                         id: wname,
                         text: workflow.name,
-                        img: 'icon-page',
+                        img: 'ailtire-workflow',
                         link: `workflow/get?id=${wname}`,
+                        link2d: `workflow/uml?id=${wname}`,
                         view: 'workflow',
                     };
                     items.push(node);
@@ -816,5 +820,418 @@ export default class AWorkFlow {
             }
         });
     }
+    static editDocs(results, setURL) {
+        let editForm = getEditForm(results, setURL);
+        w2popup.open({
+            height: 850,
+            width: 850,
+            title: `Edit ${results.name}`,
+            body: '<div id="editWorkflowDocDialog" style="width: 100%; height: 100%;"></div>',
+            showMax: true,
+            onToggle: function (event) {
+                $(w2ui.editWorkflowDialog.box).hide();
+                event.onComplete = function () {
+                    $(w2ui.WorkflowDialog.box).show();
+                    w2ui.WorkflowDialog.resize();
+                }
+            },
+            onOpen: function (event) {
+                event.onComplete = function () {
+                    // specifying an onOpen handler instead is equivalent to specifying an onBeforeOpen handler, which would make this code execute too early and hence not deliver.
+                    $('#editWorkflowDocDialog').w2render(editForm.name);
+                    w2ui.WorkflowEditTabs.click('docs');
+                }
+            }
+        })
+    }
 }
 
+function getEditForm(record, setURL) {
+    if (!w2ui['WorkflowEditGeneral']) {
+        $().w2layout({
+            name: 'WorkflowEditGeneral',
+            panels: [
+                {type: 'left', size: 150, resizable: true, minSize: 35},
+                {type: 'main', overflow: 'hidden'}
+            ],
+            onRender: (event) => {
+                if (event.target === 'WorkflowEditGeneral') {
+                    if (w2ui.WorkflowEditGeneral.record) {
+                        w2ui.WorkflowEditGeneral.record = {};
+                    }
+                }
+            }
+        });
+    }
+    if (!w2ui['WorkflowEditTabs']) {
+        $().w2sidebar({
+            name: 'WorkflowEditTabs',
+            flatButton: true,
+            nodes: [
+                {id: 'docs', text: 'Docs', selected: true},
+                {id: 'activities', text: 'Activities'},
+            ],
+            onClick(event) {
+                switch (event.target) {
+                    case 'docs':
+                        w2ui['WorkflowEditGeneral'].html('main', w2ui.WorkflowEditDoc);
+                        break;
+                    case 'activities':
+                        w2ui['WorkflowEditGeneral'].html('main', w2ui.WorkflowEditActivities);
+                        break;
+                }
+            }
+        });
+    }
+    _createWorkflowEditDoc(record, setURL);
+    _createWorkflowEditActivities(record, setURL);
+
+    w2ui['WorkflowEditDoc'].record = record;
+    w2ui['WorkflowEditActivities'].record = record;
+
+    w2ui['WorkflowEditGeneral'].saveURL = setURL;
+    w2ui.WorkflowEditGeneral.html('left', w2ui.WorkflowEditTabs);
+    w2ui.WorkflowEditGeneral.html('main', w2ui.WorkflowEditDoc);
+    return w2ui['WorkflowEditGeneral'];
+}
+
+function _createWorkflowEditDoc(record, setURL) {
+    if (!w2ui.WorkflowEditDoc) {
+        $().w2form({
+            name: 'WorkflowEditDoc',
+            saveURL: setURL,
+            style: 'border: 0px; background-color: transparent;overflow:hidden; ',
+            fields: [
+                {
+                    field: 'name',
+                    type: 'text',
+                    required: true,
+                    readonly: true,
+                    html: {
+                        attr: 'style="width: 450px;',
+                        caption: 'Name'
+                    }
+                },
+                {
+                    field: 'pkg',
+                    type: 'text',
+                    required: true,
+                    readonly: true,
+                    html: {
+                        attr: 'style="width: 450px;',
+                        caption: 'Package'
+                    }
+                },
+                {
+                    caption: 'Description',
+                    field: 'description',
+                    type: 'textarea',
+                    html: {
+                        attr: 'style="width: 450px; height: 150px;"',
+                        caption: "Description" +
+                            "<br><button class=AIButton id='workflowgenerateDescription'></button>"
+                    }
+                },
+                {
+                    caption: 'Pre Condition',
+                    field: 'precondition',
+                    type: 'textarea',
+                    html: {
+                        attr: 'style="width: 450px; height: 150px;"',
+                        caption: "Pre Condition" +
+                            "<br><button class=AIButton id='workflowgenerateDescription'></button>"
+                    }
+                },
+                {
+                    caption: 'Post Condition',
+                    field: 'postcondition',
+                    type: 'textarea',
+                    html: {
+                        attr: 'style="width: 450px; height: 150px;"',
+                        caption: "Post Condition" +
+                            "<br><button class=AIButton id='workflowgenerateDescription'></button>"
+                    }
+                },
+            ],
+            onRender: (event) => {
+            },
+            actions: {
+                Save: function () {
+                    let url = this.saveURL;
+                    let newRecord = {};
+                    for(let i in this.fields) {
+                        newRecord[this.fields[i].field] = this.record[this.fields[i].field]
+                    }
+
+                    $.ajax({
+                        url: url, data: newRecord, success: function (results) {
+                            alert("Saved");
+                            // w2popup.close();
+                        }, failure: function (results) {
+                            console.error(results);
+                        }
+                    });
+                },
+                Reset: function () {
+                    this.clear();
+                },
+                cancel: {
+                    caption: "Cancel", style: 'background: pink;', onClick(event) {
+                        w2popup.close();
+                    },
+                },
+            }
+        });
+        $(document).ready(function () {
+            $(document).on('click', "#workflowgenerateDescription", function () {
+                let clsid = w2ui.WorkflowEditDoc.record.name;
+                let url = `workflow/generate?target=Description&id=${clsid}`;
+                w2ui.WorkflowEditDoc.lock('Generating...', true);
+                w2ui.WorkflowEditDoc.refresh();
+                $('html').css('cursor', 'wait');
+                $.ajax({
+                    url: url,
+                    success: function (results) {
+                        $('html').css('cursor', 'auto');
+                        w2ui.WorkflowEditDoc.unlock('Generated', true);
+                        w2ui.WorkflowEditDoc.record = results;
+                        w2ui.WorkflowEditDoc.refresh();
+                        w2ui.WorkflowEditTabs.click('docs');
+                    },
+                    failure: function (results) {
+                        console.error(results);
+                    }
+                });
+            });
+        })
+    }
+}
+
+
+function _createWorkflowEditActivities(record, setURL) {
+    let config = {
+        name: "WorkflowEditActivities",
+        title: "Activities",
+        generateURL: 'workflow/generate?target=Activities',
+        tab: 'activities',
+        saveURL: "workflow/save",
+        attribute: 'activities',
+        columns: [
+            {
+                field: 'name',
+                caption: 'Name',
+                size: '20%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => { return value.name || name; }
+            },
+            {
+                field: 'actor',
+                caption: 'Actor',
+                size: '10%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => { return value.actor; }
+            },
+            {
+                field: 'package',
+                caption: 'Package',
+                size: '10%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => { return value.actor; }
+            },
+            {
+                field: 'next',
+                caption: 'Next',
+                size: '20%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => {
+                    if(value.next) {
+                        return Object.keys(value.next).join(', ');
+                    }
+                    return '';
+                }
+            },
+            {
+                field: 'description',
+                caption: 'Description',
+                size: '40%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => { return value.description; }
+            },
+
+        ]
+    }
+    _createCharacteristicGrid(config);
+}
+
+function _createCharacteristicGrid(config) {
+    if (!w2ui[config.name]) {
+        $().w2grid({
+            name: config.name,
+            header: config.title,
+            show: {
+                header: true,
+                columnHeaders: true,
+                toolbar: true,
+                toolbarSave: true,
+                toolbarAdd: true,
+                toolbarEdit: true,
+                toolbarDelete: true
+            },
+            toolbar: {
+                items: [
+                    {id: 'generate', type: 'button', img: 'aibutton'}
+                ],
+                onClick(event) {
+                    if (event.target === 'generate') {
+                        let clsid = w2ui[config.name].record.name;
+                        let url = `${config.generateURL}&id=${clsid}`;
+                        w2ui[config.name].lock('Generating...', true);
+                        w2ui[config.name].refresh();
+                        $('html').css('cursor', 'wait');
+                        $.ajax({
+                            url: url,
+                            success: function (results) {
+                                w2ui[config.name].unlock();
+                                w2ui[config.name].record = results;
+                                $('html').css('cursor', 'auto');
+                                w2ui.WorkflowEditTabs.click(config.tab);
+                            },
+                            failure: function (results) {
+                                console.error(results);
+                            }
+                        });
+                    }
+                }
+            },
+            onAdd: (event) => {
+            },
+            onSave: (event) => {
+                let changes = w2ui[config.name].getChanges();
+                let records = w2ui[config.name].records;
+                for (let i in changes) {
+                    let change = changes[i];
+                    let rec = null;
+                    for (let j in records) {
+                        if (records[j].recid === change.recid) {
+                            rec = records[j];
+                            break;
+                        }
+                    }
+                    // Just updating the episode
+                    if (rec.id) {
+                        let url = `${config.saveURL}?id=${rec.id}`;
+                        for (let i in change) {
+                            url += `&${i}=${change[i]}`;
+                        }
+                        $.ajax({
+                            url: url,
+                            success: function (results) {
+                                console.log("results", results);
+                            }
+                        });
+                    } else {
+                    }
+                }
+            },
+            onEdit: (event) => {
+                // Open the Episode Edit Dialog
+                let records = w2ui[config.name].records;
+                let rec = null;
+                for (let j in records) {
+                    if (records[j].recid === change.recid) {
+                        rec = records[j];
+                        break;
+                    }
+                }
+            },
+            onDelete: (event) => {
+                let selected = w2ui[config.name].getSelection();
+                console.log("Delete", selected);
+            },
+            onRender: (event) => {
+                let records = [];
+                let count = 0;
+                for (let name in w2ui[config.name].record[config.attribute]) {
+                    let value = w2ui[config.name].record[config.attribute][name];
+                    let record = {
+                        recid: count++
+                    };
+                    for(let i in config.columns) {
+                        let col = config.columns[i];
+                        record[col.field] = col.fn(name,value);
+                    }
+                    records.push(record);
+                }
+                w2ui[config.name].records = records;
+                w2ui[config.name].sort('name', 'desc');
+                setTimeout(function () {
+                    w2ui[config.name].refreshBody();
+                }, 10);
+            },
+            columns: config.columns,
+        });
+    }
+}
+function _setGraphToolbar(object) {
+    const distance = 1750;
+    const div = document.getElementById('preview2d');
+    window.graph.toolbar.setToolBar([
+        {
+            type: 'button', id: 'fit', text: 'Show All', img: 'w2ui-icon-zoom',
+            onClick: (event) => {
+                window.graph.graph.zoomToFit(1000);
+                // 2D
+                div.innerHTML = "Fetching UML diagrams";
+                $.ajax({
+                    url: object.link2d +"&diagram=workflow",
+                    success: (results) => {
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        },
+        {
+            type: 'button', id: 'workflow', text: 'All', img: 'w2ui-icon-search', onClick: (event) => {
+                // 2D
+                div.innerHTML = "Fetching UML diagrams";
+                $.ajax({
+                    url: object.link2d +"&diagram=workflow",
+                    success: (results) => {
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        },
+        {
+            type: 'button', id: 'data', text: 'Data Flow', img: 'w2ui-icon-search', onClick: (event) => {
+                // 2D
+                div.innerHTML = "Fetching UML diagrams";
+                $.ajax({
+                    url: object.link2d +"&diagram=dataflow",
+                    success: (results) => {
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        },
+    ]);
+}

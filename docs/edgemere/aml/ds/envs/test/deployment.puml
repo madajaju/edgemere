@@ -8,7 +8,7 @@ left to right direction
 
 
 
-node "aml_ds" #lightblue {
+node "aml_ds" #aaffff {
 
 
     hexagon parentnet #black [

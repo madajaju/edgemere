@@ -5,9 +5,15 @@ if(!fs.existsSync('./node_modules')) {
    return;
 }
 const server = require('ailtire');
+const OpenAI = require('openai');
+
 let host = process.env.AILTIRE_HOST || 'localhost'
-let port = process.env.AILTIRE_PORT || 80
+let port = process.env.AILTIRE_PORT || 3000
 let urlPrefix = process.env.AITIRE_BASEURL || '/web'
+
+global.openai = new OpenAI({
+    apiKey: process.env.OPENAI_KEY
+});
 
 
 server.listen( {

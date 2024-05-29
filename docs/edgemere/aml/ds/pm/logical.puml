@@ -1,7 +1,7 @@
 @startuml
 
 
-package "Pipeline Manager" #lightblue {
+package "Pipeline Manager" #aaffff {
     
         class LedgerEntry {
         }
@@ -50,7 +50,7 @@ package "Environment Management" #88cc88 {
     }
 
 
-package "Pipeline Manager" #lightblue {
+package "Pipeline Manager" #aaffff {
 
     interface "Pipeline Manager" as i {
     
@@ -61,7 +61,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Pipeline Manager" #lightblue {
+package "Pipeline Manager" #aaffff {
         class "Artifact" {
                  string name
                     }

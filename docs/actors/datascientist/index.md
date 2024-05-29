@@ -12,6 +12,11 @@ Responsible for the architecture and development of data analytic models and sol
 
 ## Use Cases
 
+* [addTo AIModel](usecase-addToAIModel)
+* [create AIModel](usecase-createAIModel)
+* [destroy AIModel](usecase-destroyAIModel)
+* [removeFrom AIModel](usecase-removeFromAIModel)
+* [update AIModel](usecase-updateAIModel)
 * [Manage AI Models](usecase-ManageAIModels)
 * [Manage Data](usecase-ManageData)
 * [Manage Data Adaptors](usecase-ManageDataAdaptors)
@@ -27,6 +32,11 @@ Responsible for the architecture and development of data analytic models and sol
 TBD
 
 ## Command Line Interface
+* [ edgemere aml ams undefined](action--edgemere-aml-ams-undefined) - Use case for adding to an AIModel
+* [ edgemere aml ams undefined](action--edgemere-aml-ams-undefined) - Use case for creating new AIModel
+* [ edgemere aml ams undefined](action--edgemere-aml-ams-undefined) - Use case for discarding an AIModel
+* [ edgemere aml ams undefined](action--edgemere-aml-ams-undefined) - Use case for removing from an AIModel
+* [ edgemere aml ams undefined](action--edgemere-aml-ams-undefined) - Use case for updating an existing AIModel
 * [ edgemere aml aimodel list](action--edgemere-aml-aimodel-list) - Data Scientist manages AI models and ties them to and application and data set. DevOps will make sure when applications and AI models are updated that they are updatedtogether.
 * [ edgemere diml cds data list](action--edgemere-diml-cds-data-list) - Manage Data is the description
 * [ edgemere diml ddf datadaptor list](action--edgemere-diml-ddf-datadaptor-list) - Manage Data Adaptors is the description

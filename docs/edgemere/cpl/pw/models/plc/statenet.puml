@@ -2,10 +2,62 @@
 
 
 
-state PLC #lightblue {
+state PLC #aaffff {
+
+    state Init #aaffff {
+    }
+
+    state Active #aaffff {
+    }
+
+    state Updated #aaffff {
+    }
+
+    state Adding #aaffff {
+    }
+
+    state Removed #aaffff {
+    }
+
+    state Communication #aaffff {
+    }
+
+    state DataTransmit #aaffff {
+    }
 
 
 
+
+Init -[#black]--> Active : create
+
+Active: entry/ init
+
+Active: exit/ finalize
+
+state updateCondition <<choice>>
+Active -[#black]--> updateCondition : update
+
+updateCondition -[#black]--> Updated: [If update is valid]
+
+state addToCondition <<choice>>
+Active -[#black]--> addToCondition : addTo
+
+addToCondition -[#black]--> Adding: [If addition is valid]
+
+state removeFromCondition <<choice>>
+Active -[#black]--> removeFromCondition : removeFrom
+
+removeFromCondition -[#black]--> Removed: [If removal is valid]
+
+state communicateWithAssetCondition <<choice>>
+Active -[#black]--> communicateWithAssetCondition : communicateWithAsset
+
+communicateWithAssetCondition -[#black]--> Communication: [If Communication is valid]
+
+state transmitDataCondition <<choice>>
+Active -[#black]--> transmitDataCondition : transmitData
+
+transmitDataCondition -[#black]--> DataTransmit: [If DataTransmit is valid]
 
 }
 

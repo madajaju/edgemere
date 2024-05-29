@@ -1,4 +1,4 @@
-import {AMainWindow, AText, APackage, AModel, AAction, AObject, ASelectedHUD} from "./index.js";
+import {AMainWindow, AText, APackage, AModel, AAction, AObject, ASelectedHUD, AActor} from "./index.js";
 
 const scolor = {
     started: "#00ffff",
@@ -395,7 +395,10 @@ export default class AScenario {
         window.graph.showLinks();
         return data.nodes[scenario.id];
     }
-
+    static handle2d(result, object, div) {
+        _setGraphToolbar(object);
+        div.innerHTML = result;
+    }
     static handle(result) {
         AScenario.viewDeep3D(result, 'new');
         AScenario.showDetail(result);
@@ -599,8 +602,434 @@ export default class AScenario {
         };
         return w2ui['ScenarioStdio'];
     }
+    static editDocs(results, setURL) {
+        let editForm = getEditForm(results, setURL);
+        w2popup.open({
+            height: 850,
+            width: 850,
+            title: `Edit ${results.name}`,
+            body: '<div id="editScenarioDocDialog" style="width: 100%; height: 100%;"></div>',
+            showMax: true,
+            onToggle: function (event) {
+                $(w2ui.editScenarioDialog.box).hide();
+                event.onComplete = function () {
+                    $(w2ui.ScenarioDialog.box).show();
+                    w2ui.ScenarioDialog.resize();
+                }
+            },
+            onOpen: function (event) {
+                event.onComplete = function () {
+                    // specifying an onOpen handler instead is equivalent to specifying an onBeforeOpen handler, which would make this code execute too early and hence not deliver.
+                    $('#editScenarioDocDialog').w2render(editForm.name);
+                    w2ui.ScenarioEditTabs.click('docs');
+                }
+            }
+        })
+    }
+
 }
 
+function getEditForm(record, setURL) {
+    if (!w2ui['ScenarioEditGeneral']) {
+        $().w2layout({
+            name: 'ScenarioEditGeneral',
+            panels: [
+                {type: 'left', size: 150, resizable: true, minSize: 35},
+                {type: 'main', overflow: 'hidden'}
+            ],
+            onRender: (event) => {
+                if (event.target === 'ScenarioEditGeneral') {
+                    if (w2ui.ScenarioEditGeneral.record) {
+                        w2ui.ScenarioEditGeneral.record = {};
+                    }
+                }
+            }
+        });
+    }
+    if (!w2ui['ScenarioEditTabs']) {
+        $().w2sidebar({
+            name: 'ScenarioEditTabs',
+            flatButton: true,
+            nodes: [
+                {id: 'docs', text: 'Docs', selected: true},
+                {id: 'actors', text: 'Actors'},
+                {id: 'steps', text: 'Steps'},
+            ],
+            onClick(event) {
+                switch (event.target) {
+                    case 'docs':
+                        w2ui['ScenarioEditGeneral'].html('main', w2ui.ScenarioEditDoc);
+                        break;
+                    case 'actors':
+                        w2ui['ScenarioEditGeneral'].html('main', w2ui.ScenarioEditActors);
+                        break;
+                    case 'steps':
+                        w2ui['ScenarioEditGeneral'].html('main', w2ui.ScenarioEditSteps);
+                        break;
+                }
+            }
+        });
+    }
+    _createScenarioEditDoc(record, setURL);
+    _createScenarioEditActors(record, setURL);
+    _createScenarioEditSteps(record, setURL);
+
+    w2ui['ScenarioEditDoc'].record = record;
+    w2ui['ScenarioEditActors'].record = record;
+    w2ui['ScenarioEditSteps'].record = record;
+
+    w2ui['ScenarioEditGeneral'].saveURL = setURL;
+    w2ui.ScenarioEditGeneral.html('left', w2ui.ScenarioEditTabs);
+    w2ui.ScenarioEditGeneral.html('main', w2ui.ScenarioEditDoc);
+    return w2ui['ScenarioEditGeneral'];
+}
+
+function _createScenarioEditActors(record, setURL) {
+    let config = {
+        name: "ScenarioEditActors",
+        title: "Actors",
+        tab: 'actors',
+        saveURL: "actor/save",
+        edit: AActor.editDocs,
+        editURL: 'actor/get',
+        attribute: 'actors',
+        columns: [
+            {
+                field: 'name',
+                caption: 'Name',
+                size: '100%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => {
+                    return name;
+                }
+            },
+
+        ]
+    };
+    _createCharacteristicGrid(config);
+}
+function _createScenarioEditSteps(record, setURL) {
+    let config = {
+        name: "ScenarioEditSteps",
+        title: "Steps",
+        generateURL: 'scenario/generate?target=Steps',
+        tab: 'steps',
+        saveURL: "scenario/save",
+        attribute: 'steps',
+        columns: [
+            {
+                field: 'action',
+                caption: 'Action',
+                size: '30%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => {
+                    return value.action.name || value.action;
+                }
+            },
+            {
+                field: 'parameters',
+                caption: 'Parameters',
+                size: '30%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => {
+                    let params = value.parameters;
+                    let retval ="";
+                    for(let pname in params ) {
+                        let pvalue = params[pname];
+                        retval += `${pname}: ${pvalue},`;
+                    }
+                    return retval;
+                }
+            },
+            {
+                field: 'description',
+                caption: 'Description',
+                size: '40%',
+                resizable: true,
+                editable: {type: 'text'},
+                sortable: true,
+                fn: (name, value) => {
+                    return value.description;
+                }
+            },
+        ]
+    };
+    _createCharacteristicGrid(config);
+}
+function _createCharacteristicGrid(config) {
+    if (!w2ui[config.name]) {
+        $().w2grid({
+            name: config.name,
+            header: config.title,
+            show: {
+                header: true,
+                columnHeaders: true,
+                toolbar: true,
+                toolbarSave: true,
+                toolbarAdd: true,
+                toolbarEdit: true,
+                toolbarDelete: true
+            },
+            toolbar: {
+                items: [
+                    {id: 'generate', type: 'button', img: 'aibutton'}
+                ],
+                onClick(event) {
+                    if (event.target === 'generate') {
+                        let clsid = w2ui[config.name].record.uid || w2ui[config.name].record.id;
+                        let url = `${config.generateURL}&id=${clsid}`;
+                        w2ui[config.name].lock('Generating...', true);
+                        w2ui[config.name].refresh();
+                        $('html').css('cursor', 'wait');
+                        $.ajax({
+                            url: url,
+                            success: function (results) {
+                                w2ui[config.name].unlock();
+                                w2ui[config.name].record = results;
+                                $('html').css('cursor', 'auto');
+                                w2ui.ScenarioEditTabs.click(config.tab);
+                            },
+                            failure: function (results) {
+                                console.error(results);
+                            }
+                        });
+                    }
+                }
+            },
+            onAdd: (event) => {
+            },
+            onSave: (event) => {
+                let changes = w2ui[config.name].getChanges();
+                let records = w2ui[config.name].records;
+                for (let i in changes) {
+                    let change = changes[i];
+                    let rec = null;
+                    for (let j in records) {
+                        if (records[j].recid === change.recid) {
+                            rec = records[j];
+                            break;
+                        }
+                    }
+                    // Just updating the episode
+                    if (rec.id) {
+                        let url = `${config.saveURL}?id=${rec.id}`;
+                        for (let i in change) {
+                            url += `&${i}=${change[i]}`;
+                        }
+                        $.ajax({
+                            url: url,
+                            success: function (results) {
+                                console.log("results", results);
+                            }
+                        });
+                    } else {
+                    }
+                }
+            },
+            onEdit: (event) => {
+                // Open the Episode Edit Dialog
+                let records = w2ui[config.name].records;
+                let rec = null;
+                for (let j in records) {
+                    if (records[j].recid === change.recid) {
+                        rec = records[j];
+                        break;
+                    }
+                }
+            },
+            onDelete: (event) => {
+                let selected = w2ui[config.name].getSelection();
+                console.log("Delete", selected);
+            },
+            onRender: (event) => {
+                let records = [];
+                let count = 0;
+                for (let name in w2ui[config.name].record[config.attribute]) {
+                    let value = w2ui[config.name].record[config.attribute][name];
+                    let record = {
+                        recid: count++
+                    };
+                    for(let i in config.columns) {
+                        let col = config.columns[i];
+                        record[col.field] = col.fn(name,value);
+                    }
+                    records.push(record);
+                }
+                w2ui[config.name].records = records;
+                w2ui[config.name].sort('name', 'desc');
+                setTimeout(function () {
+                    w2ui[config.name].refreshBody();
+                }, 10);
+            },
+            columns: config.columns,
+        });
+        w2ui[config.name].on('dblClick', function(event) {
+            let record = this.get(event.recid);
+            // THis is where we need to open up another window to show details of what was clicked on.
+            if(config.edit && config.editURL) {
+                $.ajax({
+                    url: `${config.editURL}?id=${record.name}`,
+                    success: function(results) {
+                        config.edit(results, config.saveURL);
+                    }
+                });
+            }
+        });
+    }
+}
+function _createScenarioEditDoc(record, setURL) {
+    if (!w2ui.ScenarioEditDoc) {
+        $().w2form({
+            name: 'ScenarioEditDoc',
+            saveURL: setURL,
+            style: 'border: 0px; background-color: transparent;overflow:hidden; ',
+            fields: [
+                {
+                    field: 'name',
+                    type: 'text',
+                    required: true,
+                    readonly: true,
+                    html: {
+                        attr: 'style="width: 450px;',
+                        caption: 'Name'
+                    }
+                },
+                {
+                    caption: 'Description',
+                    field: 'description',
+                    type: 'textarea',
+                    html: {
+                        attr: 'style="width: 450px; height: 50px;"',
+                        caption: "Description" +
+                            "<br><button class=AIButton id='scenariogenerateDescription'></button>"
+                    }
+                },
+                {
+                    field: 'given',
+                    type: 'textarea',
+                    required: true,
+                    html: {
+                        attr: 'style="width: 450px; height: 50px;',
+                        caption: 'Given' +
+                            "<br><button class=AIButton id='scenariogenerateGWT'></button>"
+                    }
+                },
+                {
+                    field: 'when',
+                    type: 'textarea',
+                    required: true,
+                    html: {
+                        attr: 'style="width: 450px; height: 50px;',
+                        caption: 'When' +
+                            "<br><button class=AIButton id='scenariogenerateGWT'></button>"
+                    }
+                },
+                {
+                    field: 'then',
+                    type: 'textarea',
+                    required: true,
+                    readonly: true,
+                    html: {
+                        attr: 'style="width: 450px; height: 50px;',
+                        caption: 'Then' +
+                        "<br><button class=AIButton id='scenariogenerateGWT'></button>"
+                    }
+                },
+            ],
+            onRender: (event) => {
+                setTimeout(function () {
+                    let textArea = document.querySelector("#document");
+                    w2ui.ScenarioEditDoc.editors = {document: {}};
+                    ClassicEditor.create(textArea)
+                        .catch(error => {
+                            console.log(error)
+                        })
+                        .then(editor => {
+                            w2ui.ScenarioEditDoc.editors.document = editor;
+                        });
+                }, 10);
+            },
+            actions: {
+                Save: function () {
+                    let url = this.saveURL;
+                    let newRecord = {};
+                    for (let i in this.fields) {
+                        newRecord[this.fields[i].field] = this.record[this.fields[i].field]
+                        if (this.editors[this.fields[i].field]) {
+                            newRecord[this.fields[i].field] = this.editors[this.fields[i].field].getData();
+                        }
+                    }
+
+                    $.ajax({
+                        url: url, data: newRecord, success: function (results) {
+                            alert("Saved");
+                        }, failure: function (results) {
+                            console.error(results);
+                        }
+                    });
+                },
+                Reset: function () {
+                    this.clear();
+                },
+                cancel: {
+                    caption: "Cancel", style: 'background: pink;', onClick(event) {
+                        w2popup.close();
+                    },
+                },
+            }
+        });
+        $(document).ready(function () {
+            $(document).on('click', "#scenariogenerateDescription", function () {
+                let clsid = w2ui.ScenarioEditDoc.record.id;
+                let url = `scenario/generate?target=Description&id=${clsid}`;
+                w2ui.ScenarioEditDoc.lock('description', true);
+                w2ui.ScenarioEditDoc.refresh();
+                $('html').css('cursor', 'wait');
+                $.ajax({
+                    url: url,
+                    success: function (results) {
+                        $('html').css('cursor', 'auto');
+                        w2ui.ScenarioEditDoc.unlock('description', true);
+                        w2ui.ScenarioEditDoc.record.description = results;
+                        w2ui.ScenarioEditDoc.refresh();
+                        w2ui.ScenarioEditTabs.click('docs');
+                    },
+                    failure: function (results) {
+                        console.error(results);
+                    }
+                });
+            });
+            $(document).on('click', "#scenariogenerateGWT", function () {
+                let clsid = w2ui.ScenarioEditDoc.record.id;
+                let url = `scenario/generate?target=GWT&id=${clsid}`;
+                w2ui.ScenarioEditDoc.lock('Generating...', true);
+                w2ui.ScenarioEditDoc.refresh();
+                $('html').css('cursor', 'wait');
+                $.ajax({
+                    url: url,
+                    success: function (results) {
+                        w2ui.ScenarioEditDoc.unlock('document', true);
+                        w2ui.ScenarioEditDoc.record.given = results.given;
+                        w2ui.ScenarioEditDoc.record.when = results.when;
+                        w2ui.ScenarioEditDoc.record.then = results.then;
+                        w2ui.ScenarioEditDoc.refresh();
+                        $('html').css('cursor', 'auto');
+                        w2ui.ScenarioEditTabs.click('docs');
+                    },
+                    failure: function (results) {
+                        console.error(results);
+                    }
+                });
+            });
+        })
+    }
+}
 function detailList(result) {
 }
 
@@ -608,4 +1037,42 @@ function showParameters(params) {
     return Object.keys(params).map(name => {
         return `--${name}=${params[name]}`;
     }).join(' ');
+}
+function _setGraphToolbar(object) {
+    const distance = 1750;
+    const div = document.getElementById('preview2d');
+    window.graph.toolbar.setToolBar([
+        {
+            type: 'button', id: 'fit', text: 'Show All', img: 'w2ui-icon-zoom',
+            onClick: (event) => {
+                window.graph.graph.zoomToFit(1000);
+                // 2D
+                div.innerHTML = "Fetching UML diagrams";
+                $.ajax({
+                    url: object.link2d +"&diagram=Scenario",
+                    success: (results) => {
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        },
+        {
+            type: 'button', id: 'activities', text: 'Activities', img: 'w2ui-icon-search', onClick: (event) => {
+                // 2D
+                div.innerHTML = "Fetching UML diagrams";
+                $.ajax({
+                    url: object.link2d +"&diagram=Scenario",
+                    success: (results) => {
+                        div.innerHTML = results;
+                    },
+                    error: (req, text, err) => {
+                        console.error(text);
+                    }
+                });
+            }
+        },
+    ]);
 }

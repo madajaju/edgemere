@@ -2,7 +2,7 @@
 
 
 
-package "Cyber" #lightblue {
+package "Cyber" #aaffff {
 
     interface "Cyber" as i {
     
@@ -13,7 +13,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Cyber" #lightblue {
+package "Cyber" #aaffff {
     
 }
 

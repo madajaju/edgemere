@@ -11,26 +11,53 @@ box Application Management Layer #88cccc
 end box
 
 
-box Software Defined Infrastructure #cccc88
-            participant storageresource
+box Application Management Layer #88cccc
     end box
 
-group Given [DevOpsEngineer has access to the application source code]
+group Given [DevOps Engineer has access to the application source code]
 
-"DevOpsEngineer" --/ aml: DevOpsEngineer initiates the build process
+"DevOpsEngineer" --/ aml: DevOps Engineer initiates the build process using the method &#39;data/create&#39;
 "aml" -> aml: Build Application
 
-    aml -> "storageresource": list (name: hello,file: ./templates/world.yml)
+    aml -> "application management layer": create ()
 
-    "storageresource" --/ EventBus: data.list
+    "application management layer" --/ EventBus: application.create
 
-    aml -> "storageresource": list (name: hello,file: ./templates/world.yml)
+    aml -> "application management layer": create ()
 
-    "storageresource" --/ EventBus: data.list
+    "application management layer" --/ EventBus: aimodel.create
+
+    aml -> "application management layer": list ()
+
+    "application management layer" --/ EventBus: application.list
+
+    aml -> "application management layer": update ()
+
+    "application management layer" --/ EventBus: aimodel.update
+
+    aml -> "application management layer": deploy ()
+
+    "application management layer" --/ EventBus: aimodel.deploy
+
+    aml -> "application management layer": deploy ()
+
+    "application management layer" --/ EventBus: application.deploy
+
+    aml -> "application management layer": create ()
+
+    "application management layer" --/ EventBus: workload.create
+
+    aml -> "application management layer": deploy ()
+
+    "application management layer" --/ EventBus: workload.deploy
+
+    aml -> "application management layer": list ()
+
+    "application management layer" --/ EventBus: application.list
 
 
 
-"DevOpsEngineer" /-- aml: The application should be built successfully
+"DevOpsEngineer" /-- aml: The application is built successfully
 
 
 end

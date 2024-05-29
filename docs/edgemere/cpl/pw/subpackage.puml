@@ -1,7 +1,7 @@
 @startuml
 
 
-package "PhysicalWorld" #lightblue {
+package "PhysicalWorld" #aaffff {
 
 }
 
@@ -10,10 +10,28 @@ package "Common Physical Layer" #cccccc {
 }
 
 
-package "PhysicalWorld" #lightblue {
+package "PhysicalWorld" #aaffff {
 
     interface "PhysicalWorld" as i {
+            ^data.create
+            ^location.create
+            ^location.destroy
+            ^physicalasset.create
+            ^physicalasset.destroy
+            ^physicalasset.updated
+            ^plc.create
+            ^sensor.updated
     
+            /edgemere/cpl/pw/asset/control()
+            /edgemere/cpl/pw/asset/startmonitoring()
+            /edgemere/cpl/pw/asset/stopmonitoring()
+            /edgemere/cpl/pw/communicationpathway/transmitdata()
+            /edgemere/cpl/pw/data/create()
+            /edgemere/cpl/pw/location/getlocationdetails()
+            /edgemere/cpl/pw/location/setcoordinates()
+            /edgemere/cpl/pw/physicalasset/manage()
+            /edgemere/cpl/pw/plc/communicatewithasset()
+            /edgemere/cpl/pw/sensor/getreading()
     
     }
 }
@@ -28,7 +46,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "PhysicalWorld" #lightblue {
+package "PhysicalWorld" #aaffff {
 
 
 }

@@ -42,7 +42,10 @@ package "Application Management Layer" #88cccc {
             /edgemere/aml/aimodel/deploy()
             /edgemere/aml/aimodel/destroy()
             /edgemere/aml/aimodel/list()
+            /edgemere/aml/aimodel/scan()
+            /edgemere/aml/aimodel/sign()
             /edgemere/aml/aimodel/update()
+            /edgemere/aml/aimodel/validate()
             /edgemere/aml/application/create()
             /edgemere/aml/application/deploy()
             /edgemere/aml/application/destroy()
@@ -80,20 +83,44 @@ package "Application Management Layer" #88cccc {
                  string name
                  string status
                  string message
-                    }
+                             fail()
+                     initialize()
+                     kill()
+                     provision()
+                     stop()
+                     terminate()
+            }
                 ApplicationInstance o--> "1" Application : app
             
     
     class "ApplicationTemplate" {
                  string name
                  json args
-                    }
+                             allocateResources()
+                     deleteApplication()
+                     duplicateApplication()
+                     getApplication()
+                     getApplicationTemplate()
+                     getApplicationUsage()
+                     listApplications()
+                     setTemplate()
+                     updateApplication()
+                     validateParameters()
+            }
                 ApplicationTemplate o--> "n" Application : app
             
     
     class "Workload" {
                  string name
-                    }
+                             assignApplication()
+                     calculateSLABreach()
+                     distributeLoad()
+                     estimateResourceUsage()
+                     optimizeQoS()
+                     reviewWorkload()
+                     simulation()
+                     validateSLA()
+            }
                 Workload o--> "n" Application : applications
             
     
@@ -101,14 +128,25 @@ package "Application Management Layer" #88cccc {
                  string name
                  string status
                  string message
-                    }
+                             exit()
+                     failed()
+                     kill()
+                     provision()
+                     provisioned()
+                     start()
+                     stop()
+                     stopped()
+            }
                 WorkloadInstance o--> "1" Workload : app
             
     
     class "WorkloadTemplate" {
                  string name
                  json args
-                    }
+                             getArgs()
+                     getWorkloads()
+                     setArgs()
+            }
                 WorkloadTemplate o--> "n" Workload : workloads
             
     

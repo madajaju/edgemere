@@ -5,18 +5,17 @@ parent: Workflows
 ---
 # Develop application Process
 
-This process describes how t odevelop an application in the Edgemere system
+This workflow describes the development process of an application from the initial state to the deployment using the Edgemere system. The process includes the creation of the application in the Edgemere environment, the development of codes by the Application Developer, the process of checking the codes into the Repository, and the build testing phase. If the build test is passed, the application is deployed to the production environment by the DevOps Engineer.
 
 ![Workflow Diagram](./DevelopapplicationProcess.png)
 
 ## Activities
 
-* Init - Initial state for the workflow
-* [Create Application](scenario-CreateApplication) - Create an application to be developed in the edgemere architecture
-* Write Code - The Application Developer Write Codes for the application
-* Check In Code - The Application Developer Checks Code into the Repository
-* Application Build Process - Process to build and test the application
-* [Deploy Application](scenario-DeployApplication) - Deploy Application to the Production Environment
+* Init - Start monitoring of a particular physical asset.
+* Adjust Controls - Allows the actor to adjust controls of the physical asset based on the monitoring feedback.
+* Configure Alerts for Asset - Set up alerts for the asset using threshold values for telemetry.
+* Monitor QoS - Monitor the Quality of Service (QoS) values for the asset and trigger alerts when they exceed thresholds.
+* Poll Asset Status - Periodically check the status of the physical asset to ensure it is operating as expected.
 
 
 
@@ -25,94 +24,106 @@ This process describes how t odevelop an application in the Edgemere system
 
 ### Init
 
-Initial state for the workflow
+Start monitoring of a particular physical asset.
 
 
 
-*Actor* - Application Developer
+*Actor* - System Admininstrator
 
+#### Inputs
 
-#### Next Activities
-
-* Create Application 
-
-
-![DataFlow Diagram](./DevelopapplicationProcessData.png)
-
-### Create Application
-
-Create an application to be developed in the edgemere architecture
-
-
-*Type* - scenario
-
-*Package* - Application Management Layer
-
+* asset : string - Name or ID of the physical asset to be monitored
+#### Outputs
 
 
 #### Next Activities
 
-* Write Code 
+* Configure Alerts for Asset 
 
 
 ![DataFlow Diagram](./DevelopapplicationProcessData.png)
 
-### Write Code
+### Adjust Controls
 
-The Application Developer Write Codes for the application
+Allows the actor to adjust controls of the physical asset based on the monitoring feedback.
+
+
+*Package* - Change Physical World
+
+*Actor* - Actor
+
+#### Inputs
+
+* asset : string - Name or ID of the physical asset being controlled
+#### Outputs
+
+* result :  - A status message indicating if the control adjustment was successful.
+
+#### Next Activities
 
 
 
-*Actor* - Application Developer
+![DataFlow Diagram](./DevelopapplicationProcessData.png)
+
+### Configure Alerts for Asset
+
+Set up alerts for the asset using threshold values for telemetry.
+
+
+*Package* - Manage Physical Assets
+
+*Actor* - System Administrator
+
+#### Inputs
+
+* asset : string - Name or ID of the physical asset for setting up alerts
+* threshold : json - Threshold values for telemetry data
+#### Outputs
 
 
 #### Next Activities
 
-* Check In Code 
+* Monitor QoS 
 
 
 ![DataFlow Diagram](./DevelopapplicationProcessData.png)
 
-### Check In Code
+### Monitor QoS
 
-The Application Developer Checks Code into the Repository
+Monitor the Quality of Service (QoS) values for the asset and trigger alerts when they exceed thresholds.
 
 
-*Package* - Application Management Layer
+*Package* - Monitor Physical World
 
+*Actor* - System Administrator
+
+#### Inputs
+
+* asset : string - Name or ID of the physical asset to be monitored for QoS
+#### Outputs
 
 
 #### Next Activities
 
-* Application Build Process 
+* Poll Asset Status 
 
 
 ![DataFlow Diagram](./DevelopapplicationProcessData.png)
 
-### Application Build Process
+### Poll Asset Status
 
-Process to build and test the application
-
-
-*Package* - Edgemere
+Periodically check the status of the physical asset to ensure it is operating as expected.
 
 
+
+*Actor* - System Administrator
+
+#### Inputs
+
+* asset : string - Name or ID of the physical asset whose status is being polled
+#### Outputs
+
+* assetStatus :  - The current status of the physical asset, including any deviations from expected performance.
 
 #### Next Activities
-
-* Deploy Application  [ Build Test Pass === true ] 
-* Write Code  [ Build Test Pass === false ] 
-
-
-![DataFlow Diagram](./DevelopapplicationProcessData.png)
-
-### Deploy Application
-
-Deploy Application to the Production Environment
-
-
-*Type* - scenario
-
-*Package* - Application Management Layer
-
 

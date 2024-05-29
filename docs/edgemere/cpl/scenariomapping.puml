@@ -136,67 +136,76 @@ hexagon "resource.provisioning" as resourceprovisioning
 
 
 
+
+
+
+
+
+
+
+
+
         rectangle "Manage Data Center" as ManageDataCenter #ffffaa {
             ("Create Data Center")/ as ITOperationsManageDataCenterCreateDataCenter
         }
     
     edgemerecpldatacentercreate <-- ITOperationsManageDataCenterCreateDataCenter
-    
+
         rectangle "Manage Data Center" as ManageDataCenter #ffffaa {
             ("Disable Data Center")/ as ITOperationsManageDataCenterDisableDataCenter
         }
     
     edgemerecpldatacenterdisable <-- ITOperationsManageDataCenterDisableDataCenter
-    
+
         rectangle "Manage Data Center" as ManageDataCenter #ffffaa {
             ("Enable Data Center")/ as ITOperationsManageDataCenterEnableDataCenter
         }
     
     edgemerecpldatacenterenable <-- ITOperationsManageDataCenterEnableDataCenter
-    
+
         rectangle "Manage Data Center" as ManageDataCenter #ffffaa {
             ("Remove Data Center")/ as ITOperationsManageDataCenterRemoveDataCenter
         }
     
     edgemerecpldatacenterremove <-- ITOperationsManageDataCenterRemoveDataCenter
-    
+
         rectangle "Manage Data Center" as ManageDataCenter #ffffaa {
             ("Update Data Center")/ as ITOperationsManageDataCenterUpdateDataCenter
         }
     
     edgemerecpldatacenterupdate <-- ITOperationsManageDataCenterUpdateDataCenter
-    
+
 
         rectangle "Manage Infrastructure" as ManageInfrastructure #ffffaa {
             ("Add Device")/ as ITOperationsManageInfrastructureAddDevice
         }
     
     edgemerecpldatasource <-- ITOperationsManageInfrastructureAddDevice
-    
+
         rectangle "Manage Infrastructure" as ManageInfrastructure #ffffaa {
             ("Manage Aggregated Devices")/ as ITOperationsManageInfrastructureManageAggregatedDevices
         }
     
     edgemerecpldatasource <-- ITOperationsManageInfrastructureManageAggregatedDevices
-    
+
         rectangle "Manage Infrastructure" as ManageInfrastructure #ffffaa {
             ("Manage Data Center")/ as ITOperationsManageInfrastructureManageDataCenter
         }
     
     edgemerecpldatasource <-- ITOperationsManageInfrastructureManageDataCenter
-    
+
         rectangle "Manage Infrastructure" as ManageInfrastructure #ffffaa {
             ("Remove Device")/ as ITOperationsManageInfrastructureRemoveDevice
         }
     
     edgemerecpldatasource <-- ITOperationsManageInfrastructureRemoveDevice
-    
+
         rectangle "Manage Infrastructure" as ManageInfrastructure #ffffaa {
             ("Update Device")/ as ITOperationsManageInfrastructureUpdateDevice
         }
     
     edgemerecpldatasource <-- ITOperationsManageInfrastructureUpdateDevice
-    
+
 
 
 

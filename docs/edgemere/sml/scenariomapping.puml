@@ -158,36 +158,45 @@ edgemeresmlstack -- edgemeresmlstacklist
 
     
 
+
+
+
+
+
         rectangle "Manage Environment" as ManageEnvironment #ffffaa {
             ("Create Environment")/ as ITOperationsManageEnvironmentCreateEnvironment
         }
     
     edgemeresmlenvironmentcreate <-- ITOperationsManageEnvironmentCreateEnvironment
-    
+
         rectangle "Manage Environment" as ManageEnvironment #ffffaa {
             ("Delete Environment")/ as ITOperationsManageEnvironmentDeleteEnvironment
         }
     
     edgemeresmlenvironmentdestroy <-- ITOperationsManageEnvironmentDeleteEnvironment
-    
+
         rectangle "Manage Environment" as ManageEnvironment #ffffaa {
             ("Disable Environment")/ as ITOperationsManageEnvironmentDisableEnvironment
         }
     
     edgemeresmlenvironmentdisable <-- ITOperationsManageEnvironmentDisableEnvironment
-    
+
         rectangle "Manage Environment" as ManageEnvironment #ffffaa {
             ("Enable Environment")/ as ITOperationsManageEnvironmentEnableEnvironment
         }
     
     edgemeresmlenvironmentenable <-- ITOperationsManageEnvironmentEnableEnvironment
-    
+
         rectangle "Manage Environment" as ManageEnvironment #ffffaa {
             ("Update Environment")/ as ITOperationsManageEnvironmentUpdateEnvironment
         }
     
     edgemeresmlenvironmentupdate <-- ITOperationsManageEnvironmentUpdateEnvironment
-    
+
+
+
+
+
 
 
         rectangle "Manage Applications" as ManageApplications #ffffaa {
@@ -195,7 +204,7 @@ edgemeresmlstack -- edgemeresmlstacklist
         }
     
     edgemeresmldatacreate <-- DevOpsEngineerManageApplicationsBuildApplication
-    
+
 
 
         rectangle "Change Physical World" as ChangePhysicalWorld #ffffaa {
@@ -203,13 +212,13 @@ edgemeresmlstack -- edgemeresmlstacklist
         }
     
     edgemeresmldatacreate <-- ActorChangePhysicalWorldAdjustTemperature
-    
+
         rectangle "Change Physical World" as ChangePhysicalWorld #ffffaa {
             ("Toogle Switch")/ as ActorChangePhysicalWorldtoggleSwitch
         }
     
     edgemeresmldatacreate <-- ActorChangePhysicalWorldtoggleSwitch
-    
+
 
 
         rectangle "Connect Physical Asset to a Device" as ConnectPhysicalAssettoaDevice #ffffaa {
@@ -217,7 +226,7 @@ edgemeresmlstack -- edgemeresmlstacklist
         }
     
     edgemeresmldatacreate <-- ActorConnectPhysicalAssettoaDeviceAssetDigitalDeviceConnectivity
-    
+
 
 
 
@@ -226,7 +235,7 @@ edgemeresmlstack -- edgemeresmlstacklist
         }
     
     edgemeresmldatacreate <-- ActorMonitorPhysicalWorldContinuousMonitoring
-    
+
 
 
 
@@ -238,19 +247,19 @@ edgemeresmlstack -- edgemeresmlstacklist
         }
     
     edgemeresmldatasourcename <-- DataStewardManageDataDestroyData
-    
+
         rectangle "Manage Data" as ManageData #ffffaa {
             ("Egress Data")/ as DataStewardManageDataEgressData
         }
     
     edgemeresmldatasourcename <-- DataStewardManageDataEgressData
-    
+
         rectangle "Manage Data" as ManageData #ffffaa {
             ("Ingest Data")/ as DataStewardManageDataIngestData
         }
     
     edgemeresmldatasourcename <-- DataStewardManageDataIngestData
-    
+
 
 
 
@@ -261,13 +270,13 @@ edgemeresmlstack -- edgemeresmlstacklist
         }
     
     edgemeresmldatacreate <-- DataEngineerManageMetaDataCaptureMetaData
-    
+
         rectangle "Manage Meta Data" as ManageMetaData #ffffaa {
             ("Capture Meta Data")/ as DataStewardManageMetaDataCaptureMetaData
         }
     
     edgemeresmldatacreate <-- DataStewardManageMetaDataCaptureMetaData
-    
+
 
 
 
@@ -284,19 +293,19 @@ edgemeresmlstack -- edgemeresmlstacklist
         }
     
     edgemeresmlmulticloudaddclouds <-- ITOperationsManageMultiCloudAddCloudtoMultiCloud
-    
+
         rectangle "Manage Multi Cloud" as ManageMultiCloud #ffffaa {
             ("Manage Policies for Multi Cloud")/ as ITOperationsManageMultiCloudManagePoliciesforMultiCloud
         }
     
     edgemeresmlmulticloudaddpolicies <-- ITOperationsManageMultiCloudManagePoliciesforMultiCloud
-    
+
         rectangle "Manage Multi Cloud" as ManageMultiCloud #ffffaa {
             ("Remove Cloud From Multi Cloud")/ as ITOperationsManageMultiCloudRemoveCloudfromMultiCloud
         }
     
     edgemeresmlmulticloudremovepolicies <-- ITOperationsManageMultiCloudRemoveCloudfromMultiCloud
-    
+
 
 
 
@@ -305,73 +314,73 @@ edgemeresmlstack -- edgemeresmlstacklist
         }
     
     edgemeresmldatacreate <-- DevOpsEngineerManageStacksBuildStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Create Application Stack")/ as ApplicationDeveloperManageStacksCreateApplicationStack
         }
     
     edgemeresmldatacreate <-- ApplicationDeveloperManageStacksCreateApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Create Application Stack")/ as StackDeveloperManageStacksCreateApplicationStack
         }
     
     edgemeresmldatacreate <-- StackDeveloperManageStacksCreateApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Create Service Stack")/ as StackDeveloperManageStacksCreateServiceStack
         }
     
     edgemeresmldatacreate <-- StackDeveloperManageStacksCreateServiceStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Modify Application Stack")/ as StackDeveloperManageStacksModifyApplicationStack
         }
     
     edgemeresmldatacreate <-- StackDeveloperManageStacksModifyApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Modify Application Stack")/ as ApplicationDeveloperManageStacksModifyApplicationStack
         }
     
     edgemeresmldatacreate <-- ApplicationDeveloperManageStacksModifyApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Modify Service Stack")/ as StackDeveloperManageStacksModifyServiceStack
         }
     
     edgemeresmldatacreate <-- StackDeveloperManageStacksModifyServiceStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Test Application Stack")/ as StackDeveloperManageStacksTestApplicationStack
         }
     
     edgemeresmldatacreate <-- StackDeveloperManageStacksTestApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Test Application Stack")/ as ApplicationDeveloperManageStacksTestApplicationStack
         }
     
     edgemeresmldatacreate <-- ApplicationDeveloperManageStacksTestApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Test Service Stack")/ as StackDeveloperManageStacksTestServiceStack
         }
     
     edgemeresmldatacreate <-- StackDeveloperManageStacksTestServiceStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Version Application Stack")/ as ApplicationDeveloperManageStacksVersionApplicationStack
         }
     
     edgemeresmldatacreate <-- ApplicationDeveloperManageStacksVersionApplicationStack
-    
+
         rectangle "Manage Stacks" as ManageStacks #ffffaa {
             ("Version Service Stack")/ as StackDeveloperManageStacksVersionServiceStack
         }
     
     edgemeresmldatacreate <-- StackDeveloperManageStacksVersionServiceStack
-    
+
 
 
 
@@ -380,7 +389,7 @@ edgemeresmlstack -- edgemeresmlstacklist
         }
     
     edgemeresmldatacreate <-- StackDeveloperManageServicesBuildService
-    
+
 
 
 

@@ -16,9 +16,9 @@ ApplicationDeveloper --> ManageApplications
 
 
 json BuildApplication #lightyellow {
-    "Given": "DevOpsEngineer has access to the application source code",
-    "When": "DevOpsEngineer initiates the build process",
-    "Then": "The application should be built successfully"
+    "Given": "DevOps Engineer has access to the application source code",
+    "When": "DevOps Engineer initiates the build process using the method &#39;data/create&#39;",
+    "Then": "The application is built successfully"
 }
 
 ManageApplications <|-- BuildApplication

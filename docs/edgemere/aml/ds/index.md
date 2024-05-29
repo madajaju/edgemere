@@ -48,6 +48,10 @@ Public Clouds, Private Clouds, and Legacy infrastructure this is part of the
 The following are the use cases of the Developer Services subsystem. Each use case has primary and secondary scenarios
 that are elaborated in the use case descriptions.
 
+* [Automation Framework](usecase-AutomationFramework)
+* [CICD Pipeline](usecase-CICDPipeline)
+* [Environment Deployments](usecase-EnvironmentDeployments)
+* [Security Profiles](usecase-SecurityProfiles)
 
 
 ![UseCase Diagram](./usecases.png)
@@ -57,6 +61,8 @@ that are elaborated in the use case descriptions.
 The following are the actors of the Developer Services subsystem. This can include people, other subsystems
 inside the solution and even external subsystems.
 
+* [Developer](actor-developer)
+* [SystemAdministrator](actor-systemadministrator)
 
 
 ![User Interaction](./userinteraction.png)

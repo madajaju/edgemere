@@ -2,7 +2,7 @@
   interface CLI
   interface Web
   interface WebSocket
-node "Data Adaptor Framework" #lightblue {
+node "Data Adaptor Framework" ##aaffff {
   component express as REST
   component socket.io as socket
   folder bin #ffffff {

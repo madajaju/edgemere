@@ -4,6 +4,16 @@ class "ApplicationTemplate" as Model {
  string name
  json args
 
+ allocateResources()
+ deleteApplication()
+ duplicateApplication()
+ getApplication()
+ getApplicationTemplate()
+ getApplicationUsage()
+ listApplications()
+ setTemplate()
+ updateApplication()
+ validateParameters()
  
 }
 

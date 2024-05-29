@@ -2,7 +2,7 @@
 
 
 
-package "Storage Services" #lightblue {
+package "Storage Services" ##aaffff {
 
     interface "Storage Services" as i {
     
@@ -13,7 +13,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Storage Services" #lightblue {
+package "Storage Services" ##aaffff {
     
 }
 

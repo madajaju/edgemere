@@ -4,21 +4,21 @@ left to right direction
 
 state "diml" as diml #ffcc88 {
 state "dml" as dimldml #ffcc88 {
-state "fmdm" as dimldmlfmdm #lightblue {
+state "fmdm" as dimldmlfmdm ##aaffff {
 }
 }
 }
 
 
-state "dimldmlfmdm" as pstatename #lightblue {
+state "dimldmlfmdm" as pstatename ##aaffff {
     state "Custom Function" as fmdmfunction {
     }
 }
 
         state "diml" as diml #ffcc88 {
 state "dml" as dimldml #ffcc88 {
-state "fmdm" as dimldmlfmdm #lightblue {
-state "query" as dimldmlfmdmquery #lightblue {
+state "fmdm" as dimldmlfmdm ##aaffff {
+state "query" as dimldmlfmdmquery ##aaffff {
 }
 }
 }

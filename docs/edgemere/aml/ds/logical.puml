@@ -5,7 +5,7 @@ package "Security Aspect" #cc8888 {
     }
 
 
-package "Developer Services" #lightblue {
+package "Developer Services" #aaffff {
 
     interface "Developer Services" as i {
     
@@ -16,7 +16,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Developer Services" #lightblue {
+package "Developer Services" #aaffff {
     
 }
 

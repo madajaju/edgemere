@@ -5,7 +5,7 @@ left to right direction
 
 
 
-node "diml_dml_do" as diml_dml_doStack #lightblue {
+node "diml_dml_do" as diml_dml_doStack ##aaffff {
     portin "parent" as diml_dml_doStackPortIn #blue
 }
 node "sa_pe" as sa_peStack #cc8888 {

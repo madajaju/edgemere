@@ -1,0 +1,11 @@
+# WorkloadInstance Class 
+
+The `WorkloadInstance` class is a part of the Application Management Layer (AML), which sits atop the system stack and facilitates the management of complex workflows and applications throughout the development lifecycle. 
+
+This class provides a representation of a workload instance in the running ecosystem, essentially encapsulating an application instance in operation. Its interaction with other classes and subsystems is principally through the `Workload`, for which it serves a pivotal function in management and orchestration.
+
+The primary purpose of the `WorkloadInstance` class encompasses a set of default methods including `create`, `update`, `destroy`, `addTo`, and `removeFrom`, which define its behavior and related transitions. 
+
+It provides significant control over the lifecycle of running applications, serving as a fundamental asset in the management of complicated workflows and application interactions. Understanding and using this class not only assists in smooth application deployment but also aids in the monitoring aspects contributing to superior application performance. 
+
+Overall, the `WorkloadInstance` class helps achieve a high level of integration in application and workflow orchestration in the AML, leveraging the Distributed Information Management Layer and the Service Management Layer to deliver effective workflow and application management.

@@ -6,31 +6,62 @@ actor "Actor"
 
 entity EventBus
 
-box PhysicalWorld #lightblue
+box PhysicalWorld #aaffff
     boundary pw #white
 end box
 
 
-box Software Defined Infrastructure #cccc88
-            participant storageresource
+box PhysicalWorld #aaffff
     end box
 
-group Given [Tempature control asset]
+group Given [Actor has access to a temperature control asset]
 
-"Actor" --/ pw: Monitoring system is activated
+"Actor" --/ pw: Actor uses the temperature control asset and monitoring system is activated
 "pw" -> pw: Adjust Temperature
 
-    pw -> "storageresource": list (name: hello,file: ./templates/world.yml)
+    pw -> "physicalworld": control (assetID: tempAssetID)
 
-    "storageresource" --/ EventBus: data.list
+    "physicalworld" --/ EventBus: asset.control
 
-    pw -> "storageresource": list (name: hello,file: ./templates/world.yml)
+    pw -> "physicalworld": startmonitoring (assetID: tempAssetID)
 
-    "storageresource" --/ EventBus: data.list
+    "physicalworld" --/ EventBus: asset.startmonitoring
+
+    pw -> "physicalworld": manage (assetID: tempAssetID)
+
+    "physicalworld" --/ EventBus: physicalasset.manage
+
+    pw -> "physicalworld": transmitdata ()
+
+    "physicalworld" --/ EventBus: communicationpathway.transmitdata
+
+    pw -> "physicalworld": create (attr1: temperature)
+
+    "physicalworld" --/ EventBus: data.create
+
+    pw -> "physicalworld": getreading (assetID: tempSensorID)
+
+    "physicalworld" --/ EventBus: sensor.getreading
+
+    pw -> "physicalworld": transmitdata ()
+
+    "physicalworld" --/ EventBus: communicationpathway.transmitdata
+
+    pw -> "physicalworld": create (attr1: temperature)
+
+    "physicalworld" --/ EventBus: data.create
+
+    pw -> "physicalworld": stopmonitoring (assetID: tempAssetID)
+
+    "physicalworld" --/ EventBus: asset.stopmonitoring
+
+    pw -> "physicalworld": manage (assetID: tempAssetID)
+
+    "physicalworld" --/ EventBus: physicalasset.manage
 
 
 
-"Actor" /-- pw: Continuous data stream is received
+"Actor" /-- pw: Continuous temperature data is received and transmitted
 
 
 end

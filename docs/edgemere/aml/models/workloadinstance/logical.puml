@@ -5,6 +5,14 @@ class "WorkloadInstance" as Model {
  string status
  string message
 
+ exit()
+ failed()
+ kill()
+ provision()
+ provisioned()
+ start()
+ stop()
+ stopped()
  
 }
 

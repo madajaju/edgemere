@@ -19,6 +19,8 @@
   "license": "MIT",
   "dependencies": {
     "ailtire": "latest",
+    "node-plantuml": "latest",
+    "stream-buffers": "latest",
     "mocha": "^10.0.0",
     "openai": "^4.47.1",
     "systeminformation": "latest"

@@ -1,0 +1,6 @@
+@startuml
+partition "PhysicalWorld" #aaffff {
+(*) --> "AssetDigitalDeviceConnectivity"
+}
+
+@enduml

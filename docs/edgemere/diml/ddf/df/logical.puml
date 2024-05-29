@@ -2,7 +2,7 @@
 
 
 
-package "Data Flow" #lightblue {
+package "Data Flow" ##aaffff {
 
     interface "Data Flow" as i {
     
@@ -13,7 +13,7 @@ CLI ()-- i
 REST ()-- i
 Web ()-- i
 
-package "Data Flow" #lightblue {
+package "Data Flow" ##aaffff {
     
 }
 

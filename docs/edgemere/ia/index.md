@@ -53,6 +53,8 @@ users interact with the system.
 
 ![Scenario Mappings Diagram](./scenariomapping.png)
 
+* [ edgemere ia creategroup](#action--edgemere-ia-creategroup)
+* [ edgemere ia group create](#action--edgemere-ia-group-create)
 
 
 ## Logical Artifacts
@@ -174,5 +176,37 @@ cases and scenarios of the subsystem.
 The Identity Aspect subsystem has a well defined interface. This interface can be accessed using a
 command line interface (CLI), REST interface, and Web user interface. This interface is how all other
 subsystems and actors can access the system.
+
+### Action  edgemere ia creategroup
+
+
+
+* REST - /edgemere/ia/creategroup?
+* bin -  edgemere ia creategroup 
+* js - .edgemere.ia.creategroup({  })
+
+#### Description
+Interface to create new group in the system
+
+#### Parameters
+
+No parameters
+
+
+### Action  edgemere ia group create
+
+
+
+* REST - /edgemere/ia/group/create?
+* bin -  edgemere ia group create 
+* js - .edgemere.ia.group.create({  })
+
+#### Description
+Allows to create a new group
+
+#### Parameters
+
+No parameters
+
 
 

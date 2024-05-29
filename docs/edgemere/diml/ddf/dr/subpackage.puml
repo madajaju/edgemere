@@ -2,7 +2,7 @@
 
 
 
-package "Data Repository" #lightblue {
+package "Data Repository" ##aaffff {
 
     interface "Data Repository" as i {
     
@@ -20,7 +20,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Data Repository" #lightblue {
+package "Data Repository" ##aaffff {
 
 
 }

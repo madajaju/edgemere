@@ -4,10 +4,63 @@
 
 state Application #88cccc {
 
+    state Init #88cccc {
+    }
+
+    state Created #88cccc {
+    }
+
+    state AddedTo #88cccc {
+    }
+
+    state Updated #88cccc {
+    }
+
+    state RemovedFrom #88cccc {
+    }
+
+    state Destroyed #88cccc {
+    }
 
 
+
+
+Init -[#black]--> Created : create
+
+Created: entry/ initializeItem
+
+Created: exit/ deleteItem
+
+state addToCondition <<choice>>
+Created -[#black]--> addToCondition : addTo
+
+addToCondition -[#black]--> AddedTo: [Check space]
+
+state updateCondition <<choice>>
+Created -[#black]--> updateCondition : update
+
+updateCondition -[#black]--> Updated: [Need to update]
+
+state removeFromCondition <<choice>>
+Created -[#black]--> removeFromCondition : removeFrom
+
+removeFromCondition -[#black]--> RemovedFrom: [Item to remove]
+
+state destroyCondition <<choice>>
+Created -[#black]--> destroyCondition : destroy
+
+destroyCondition -[#black]--> Destroyed: [Can destroy]
+
+AddedTo -[#black]--> MissingState : missingMethod1
+
+Updated -[#black]--> MissingState : missingMethod2
+
+RemovedFrom -[#black]--> MissingState : missingMethod3
 
 }
 
+ 
+ Updated -[#black]--> Null
+ 
 
 @enduml

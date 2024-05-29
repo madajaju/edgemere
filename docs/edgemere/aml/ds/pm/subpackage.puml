@@ -1,7 +1,7 @@
 @startuml
 
 
-package "Pipeline Manager" #lightblue {
+package "Pipeline Manager" #aaffff {
 
 }
 
@@ -14,7 +14,7 @@ package "Environment Management" #88cc88 {
 }
 
 
-package "Pipeline Manager" #lightblue {
+package "Pipeline Manager" #aaffff {
 
     interface "Pipeline Manager" as i {
     
@@ -32,7 +32,7 @@ i -down- CLI
 i -down- REST
 WebSocket -left- i: events >
 
-package "Pipeline Manager" #lightblue {
+package "Pipeline Manager" #aaffff {
 
 
 }

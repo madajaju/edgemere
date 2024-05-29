@@ -1,0 +1,20 @@
+@startuml
+
+left to right direction
+
+
+Actor "Developer" as Developer
+
+
+rectangle "Developer Services" as ds #aaffff {
+        usecase "Automation Framework" as AutomationFramework
+    Developer --> AutomationFramework
+    usecase "CICD Pipeline" as CICDPipeline
+    Developer --> CICDPipeline
+    usecase "Environment Deployments" as EnvironmentDeployments
+    Developer --> EnvironmentDeployments
+
+}
+
+
+@enduml

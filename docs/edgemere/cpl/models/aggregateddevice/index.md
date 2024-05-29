@@ -64,9 +64,20 @@ The following diagram is the state net for this class.
 * [enable() - Enable Device to be used.](#action-enable)
 * [reserve() - Reserve a resource](#action-reserve)
 * [addToHardware() - Create a Device](#action-addToHardware)
+* [archiveData() - Archive all data related to this device](#action-archiveData)
 * [create() - Create a Device](#action-create)
+* [disableAllFunctions() - Disable all functions of this device](#action-disableAllFunctions)
+* [displayReservations() - Display all the reservations for this device](#action-displayReservations)
+* [enableAllFunctions() - Enable all functions of this device](#action-enableAllFunctions)
 * [getReservations() - Get reservation from the requirements](#action-getReservations)
+* [initiateDevice() - Initiate the device after creation](#action-initiateDevice)
+* [logDeviceStatus() - Log the status of the device when moving from this state](#action-logDeviceStatus)
 * [provision() - Provision Hardware to meet the requirements](#action-provision)
+* [reserveResource() - Reserve a resource through this device](#action-reserveResource)
+* [setupHardware() - Setup the hardware according to the provision](#action-setupHardware)
+* [updateDeviceGroup() - Update the device group after a new device is added or removed](#action-updateDeviceGroup)
+* [updateHardware() - Update the hardware after a device is added](#action-updateHardware)
+* [updateStatus() - Update the status of device after an update](#action-updateStatus)
 
 
 <h2>Method Details</h2>
@@ -162,6 +173,26 @@ No parameters
 
 
 
+### Action aggregateddevice archiveData
+
+
+
+* REST - aggregateddevice/archiveData?deviceName=string
+* bin - aggregateddevice archiveData --deviceName string
+* js - aggregateddevice.archiveData({ deviceName:string })
+
+#### Description
+Archive all data related to this device
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| deviceName | string | | Name of the device |
+
+
+
+
 ### Action aggregateddevice create
 
 
@@ -180,6 +211,60 @@ Create a Device
 | name | string |true | name of the device |
 | file | YAML |false | file with the definition |
 
+
+
+
+### Action aggregateddevice disableAllFunctions
+
+
+
+* REST - aggregateddevice/disableAllFunctions?
+* bin - aggregateddevice disableAllFunctions 
+* js - aggregateddevice.disableAllFunctions({  })
+
+#### Description
+Disable all functions of this device
+
+#### Parameters
+
+No parameters
+
+
+
+### Action aggregateddevice displayReservations
+
+
+
+* REST - aggregateddevice/displayReservations?deviceName=string
+* bin - aggregateddevice displayReservations --deviceName string
+* js - aggregateddevice.displayReservations({ deviceName:string })
+
+#### Description
+Display all the reservations for this device
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| deviceName | string | | Name of the device |
+
+
+
+
+### Action aggregateddevice enableAllFunctions
+
+
+
+* REST - aggregateddevice/enableAllFunctions?
+* bin - aggregateddevice enableAllFunctions 
+* js - aggregateddevice.enableAllFunctions({  })
+
+#### Description
+Enable all functions of this device
+
+#### Parameters
+
+No parameters
 
 
 
@@ -203,6 +288,46 @@ Get reservation from the requirements
 
 
 
+### Action aggregateddevice initiateDevice
+
+
+
+* REST - aggregateddevice/initiateDevice?deviceName=string
+* bin - aggregateddevice initiateDevice --deviceName string
+* js - aggregateddevice.initiateDevice({ deviceName:string })
+
+#### Description
+Initiate the device after creation
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| deviceName | string | | Name of the device |
+
+
+
+
+### Action aggregateddevice logDeviceStatus
+
+
+
+* REST - aggregateddevice/logDeviceStatus?deviceName=string
+* bin - aggregateddevice logDeviceStatus --deviceName string
+* js - aggregateddevice.logDeviceStatus({ deviceName:string })
+
+#### Description
+Log the status of the device when moving from this state
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| deviceName | string | | Name of the device |
+
+
+
+
 ### Action aggregateddevice provision
 
 
@@ -219,6 +344,109 @@ Provision Hardware to meet the requirements
 | Name | Type | Required | Description |
 |---|---|---|---|
 | requirements | json |true | Requirements for the Provision |
+
+
+
+
+### Action aggregateddevice reserveResource
+
+
+
+* REST - aggregateddevice/reserveResource?deviceName=string&amp;resource=string
+* bin - aggregateddevice reserveResource --deviceName string --resource string
+* js - aggregateddevice.reserveResource({ deviceName:string,resource:string })
+
+#### Description
+Reserve a resource through this device
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| deviceName | string | | Name of the device |
+| resource | string | | Resource to reserve |
+
+
+
+
+### Action aggregateddevice setupHardware
+
+
+
+* REST - aggregateddevice/setupHardware?deviceName=string&amp;hardwareConfig=json
+* bin - aggregateddevice setupHardware --deviceName string --hardwareConfig json
+* js - aggregateddevice.setupHardware({ deviceName:string,hardwareConfig:json })
+
+#### Description
+Setup the hardware according to the provision
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| deviceName | string | | Name of the device |
+| hardwareConfig | json | | Hardware configuration |
+
+
+
+
+### Action aggregateddevice updateDeviceGroup
+
+
+
+* REST - aggregateddevice/updateDeviceGroup?deviceName=string&amp;groupName=string
+* bin - aggregateddevice updateDeviceGroup --deviceName string --groupName string
+* js - aggregateddevice.updateDeviceGroup({ deviceName:string,groupName:string })
+
+#### Description
+Update the device group after a new device is added or removed
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| deviceName | string | | Name of the device |
+| groupName | string | | Name of the device group |
+
+
+
+
+### Action aggregateddevice updateHardware
+
+
+
+* REST - aggregateddevice/updateHardware?deviceName=string
+* bin - aggregateddevice updateHardware --deviceName string
+* js - aggregateddevice.updateHardware({ deviceName:string })
+
+#### Description
+Update the hardware after a device is added
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| deviceName | string | | Name of the device |
+
+
+
+
+### Action aggregateddevice updateStatus
+
+
+
+* REST - aggregateddevice/updateStatus?deviceName=string
+* bin - aggregateddevice updateStatus --deviceName string
+* js - aggregateddevice.updateStatus({ deviceName:string })
+
+#### Description
+Update the status of device after an update
+
+#### Parameters
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| deviceName | string | | Name of the device |
 
 
 

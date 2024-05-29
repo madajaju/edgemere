@@ -1,0 +1,23 @@
+# `ComputeHardware` Class
+
+The `ComputeHardware` class, a key component of the Common Physical Layer (CPL) package, serves as a pivotal interface for the representation and management of compute or CPU hardware within varied ecosystem configurations—like the data center, the cloud, or edge devices.
+
+This class principally offers core functions that cope with the creation, updating, disabling, and enabling of CPU hardware. Additionally, utilities like adding stats and adding or removing the hardware from designated groups are also part of its suite of functionalities.
+
+## Purpose and Interactions
+
+The `ComputeHardware` class is effectively utilized to identify, manage, and optimize hardware performances in diverse settings, thus providing a common taxonomy for creating standard services and operating models for devices.
+
+Essentially, the `ComputeHardware` plays a vital role in the management and performance optimization of physical assets within the CPL ecosystem. Its functionalities further extend to tasks like monitoring, control, connectivity, management, and security.
+
+This class intricately interacts with the `Device` class, signaling that each `ComputeHardware` is part of a device with a unique set of capabilities. Additionally, data derived from `ComputeHardware` is fed into the `PhysicalProfile` to allow a comprehensive representation of device capabilities and capacities, aiding in the system's telemetry and control decision-making.
+
+Moreover, `ComputeHardware` is designed with diverse associations that interact with other classified elements like `PhysicalProfile`, `Device` and `Resource`.
+
+## Overall Impact
+
+With its flexible design, the `ComputeHardware` class offers a foundation for managing highly variable hardware configurations. Thus, making it an integral part of the CPL infrastructure.
+
+Conventionally, the `ComputeHardware` class amalgamates with the broader CPL package to manage hardware and its capabilities. This essential layer of CPL sitting at the bottom of the architectural stack forms the backbone of higher levels of the architecture.
+
+In essence, `ComputeHardware` class efficiently interlocks compute hardware within the CPL, contributing critically to managing hardware and its capabilities in different configurations. Consequently, it plays a foundational role in asset management within the CPL package.

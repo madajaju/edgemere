@@ -1,0 +1,6 @@
+@startuml
+partition "Actor" #ffffcc {
+(*) --> "Adjust Controls"
+}
+
+@enduml

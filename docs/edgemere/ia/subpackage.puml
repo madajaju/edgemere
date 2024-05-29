@@ -14,6 +14,8 @@ package "Identity Aspect" #cc8888 {
 
     interface "Identity Aspect" as i {
     
+            /edgemere/ia/creategroup()
+            /edgemere/ia/group/create()
     
     }
 }

@@ -1,0 +1,26 @@
+@startuml
+
+
+left to right direction
+
+usecase "update AIModel" as updateAIModel #yellow
+
+Actor "Data Scientist" as DataScientist
+
+DataScientist --> updateAIModel
+
+
+
+
+
+
+
+
+
+usecase "0" as 0 #white
+
+updateAIModel ..> 0 : includes
+
+
+
+@enduml

@@ -3,7 +3,7 @@
 left to right direction
 
 
-rectangle "Federated Meta Data Management" #lightblue {
+rectangle "Federated Meta Data Management" ##aaffff {
 }
 
 

@@ -12,9 +12,9 @@ Actor --> ChangePhysicalWorld
 
 
 json AdjustTemperature #lightyellow {
-    "Given": "Tempature control asset",
-    "When": "Monitoring system is activated",
-    "Then": "Continuous data stream is received"
+    "Given": "Actor has access to a temperature control asset",
+    "When": "Actor uses the temperature control asset and monitoring system is activated",
+    "Then": "Continuous temperature data is received and transmitted"
 }
 
 ChangePhysicalWorld <|-- AdjustTemperature

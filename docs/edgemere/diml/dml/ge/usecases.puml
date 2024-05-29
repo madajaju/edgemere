@@ -3,7 +3,7 @@
 left to right direction
 
 
-rectangle "Governance Engine" #lightblue {
+rectangle "Governance Engine" ##aaffff {
 }
 
 

@@ -8,7 +8,7 @@ left to right direction
 node "aml_as" as aml_asStack #88cccc {
     portin "parent" as aml_asStackPortIn #blue
 }
-node "aml_ds" as aml_dsStack #lightblue {
+node "aml_ds" as aml_dsStack #aaffff {
     portin "parent" as aml_dsStackPortIn #blue
 }
 node "aml_ws" as aml_wsStack #88cccc {

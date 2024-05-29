@@ -1,0 +1,17 @@
+# Data Center Class
+
+## Overview
+The `DataCenter` class is a key component within the **Common Physical Layer (CPL)** architectural stack, primarily responsible for the representation and management of physical data centers in the system.
+
+This class provides a necessary abstraction for interacting with and managing devices within a physical data center. The main purpose of the `DataCenter` class is to create, update, disable, enable, and destroy data centers within the system. Moreover, it interacts with devices, either individually or in a group (aggregated devices), to add or remove them from the data center.
+
+## Purpose
+Given the class description, the `DataCenter` class is intended to serve as an interface for managing the various resources within the data center, and maintaining secure and efficient operations of those resources. This includes managing the lifecycle of devices within the data center, capacity planning, and handling device reservations.
+
+## Interaction and Associations
+This class interacts with other classes and subsystems within the Common Physical Layer architecture. It has associations with physical profiles, devices, and aggregated devices. These associations enable the `DataCenter` class to seamlessly coordinate, manage, and control the data center's devices and their combined capabilities.
+
+The `DataCenter` class depends on the `Device`, `AggregatedDevice`, and `PhysicalProfile` classes to perform its functions. In particular, it utilizes these classes to add devices to data centers, enable or disable certain devices, manage hardware resources, and reserve resources.
+
+## Conclusion
+In conclusion, the `DataCenter` class plays a vital role in the Common Physical Layer Architecture. It provides the necessary abstraction and control over a physical data center, facilitating easier management and control over a highly variable hardware configuration. This supports the CPL's overarching goal of enabling standard services and operating models across a range of devices within complex hardware configurations in the data center cloud, and edge environments.
