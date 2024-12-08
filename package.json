@@ -21,7 +21,7 @@
     "ailtire": "latest",
     "node-plantuml": "latest",
     "stream-buffers": "latest",
-    "mocha": "^10.0.0",
+    "mocha": "^11.0.1",
     "openai": "^4.47.1",
     "systeminformation": "latest"
   }
