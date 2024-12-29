@@ -23,6 +23,6 @@
     "stream-buffers": "latest",
     "mocha": "^10.0.0",
     "openai": "^4.47.1",
-    "systeminformation": "latest"
+    "systeminformation": "5.23.8"
   }
 }
